@@ -1,0 +1,7 @@
+\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
+\beamer@sectionintoc {2}{Item Response Theory and information functions}{11}{0}{2}
+\beamer@sectionintoc {3}{IRT procedures for shortening tests}{21}{0}{3}
+\beamer@subsectionintoc {3}{1}{Benchmark procedure}{22}{0}{3}
+\beamer@subsectionintoc {3}{2}{Procedures based on $\theta $ targets}{25}{0}{3}
+\beamer@sectionintoc {4}{Simulation study}{37}{0}{4}
+\beamer@sectionintoc {5}{Some final remarks}{43}{0}{5}

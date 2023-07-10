@@ -1,0 +1,6 @@
+\babel@toc {english}{}
+\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
+\beamer@sectionintoc {2}{Generating rules}{16}{0}{2}
+\beamer@sectionintoc {3}{The mat\texttt {R}iks package}{18}{0}{3}
+\beamer@sectionintoc {4}{Why?}{36}{0}{4}
+\beamer@sectionintoc {5}{Final remarks}{45}{0}{5}
