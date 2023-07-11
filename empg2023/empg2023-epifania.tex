@@ -1,6 +1,6 @@
 \documentclass{beamer}
 \usetheme[compressed]{Singapore}
-\useinnertheme{circles}
+\useinnertheme{rounded}
 \usepackage{graphicx}
 \usepackage{setspace}
 \usepackage{tikzsymbols}
@@ -14,7 +14,7 @@
 \usepackage{tabularx}
 \usepackage{booktabs}
 \usepackage{tikzsymbols}
-\usetikzlibrary{mindmap,calc,patterns,decorations.pathmorphing,decorations.markings, arrows, shapes.arrows, shapes, backgrounds,positioning,shadows.blur, positioning, fit, tikzmark}
+\usetikzlibrary{mindmap,calc,patterns,decorations.pathmorphing,decorations.markings, arrows, shapes.arrows, shapes, backgrounds,positioning,shadows.blur, positioning, fit, tikzmark, shadows}
 \usepackage[absolute,overlay]{textpos}
 \newcommand\Factor{1.2}
 \setbeamerfont{subtitle}{family=\scshape}
@@ -109,6 +109,33 @@
 }
 
 
+%pop up
+  \newcommand<>{\PutAt}[3][0pt]{%
+	{\only#4{\begin{textblock*}{#1}#2%
+				#3
+	\end{textblock*}}}%
+}
+\newcommand<>{\NormalBox}[2][]{%
+	\only#3{\tikz[#1, every node/.style={shape=rectangle,draw,fill=white, drop shadow, #1}]\node []{#2};}
+}
+
+% griglia pop up 
+  \newcommand{\ShowPutAtGrid}{
+	\begin{textblock*}{128mm}(0cm,0cm)
+		\tikz[color=red!20!white]\draw[very thin, step=5mm] (0mm,0mm) grid (130mm,100mm);
+	\end{textblock*}
+	\begin{textblock*}{128mm}(0cm,0cm)
+		\begin{tikzpicture}[color=red]
+			\draw[step=1cm] (0,0mm) grid (130mm,100mm);   
+			\foreach \n in {0,...,12}
+			\draw[xshift=.5mm,yshift=-1.5mm, inner sep=0pt, anchor=west] (\n,10) node {\scriptsize{\textbf{\n}}};
+			\foreach \n in {1,...,9}
+			\draw[xshift=.5mm,yshift=-1.5mm, inner sep=0pt, anchor=west] (0,10-\n) node {\scriptsize{\textbf{\n}}};
+		\end{tikzpicture}
+	\end{textblock*}
+}
+
+
 \tikzset{type1/.style={circle, fill=blue},
 	type2/.style={circle, fill=red},
 	type3/.style={circle, fill=olive},
@@ -152,18 +179,39 @@
 \section{Introduction}
 
 \begin{frame}
+
 	Assessment of fluid intelligence or abstract reasoning 
 	
 	
-	\begin{textblock*}{2cm}(2cm,5cm)
-		\includegraphics[width =\linewidth]{img/think1.png}
-	\end{textblock*}
-	
-	\begin{textblock*}{2cm}(8cm,2cm)
+
+	\begin{textblock*}{2cm}(9cm,1.5cm)
 		\includegraphics[width =\linewidth]{img/think2.png}
 	\end{textblock*}
 	
-	Job recruitment, clinical assessment
+		\begin{textblock*}{2cm}(1.5cm,7.5cm)
+		\includegraphics[width =\linewidth]{img/think1.png}
+	\end{textblock*}
+	
+	
+	Beyond clinical assessment $\rightarrow$ Job recruitment 
+	
+	\pause
+	\begin{alertblock}{Issue}
+		
+		\begin{itemize}
+			\item Can only be administered once (o after a long time period)
+			
+			\item Difficulty in the generation of  ``true'' parallel forms
+		\end{itemize}
+	\end{alertblock}
+	
+	\pause
+	
+	\begin{exampleblock}{Aim}
+		
+		Development of an open-source easy-to-use tool for the automatic (and reproducible) generation of Raven-like matrices
+	\end{exampleblock}
+	
 \end{frame}
 
 \begin{frame}{An example}
@@ -171,11 +219,11 @@
 	\begin{tikzpicture}
 		\imagenode[0.5]{img/completeExample.png}
 		
-		   %   \imagegrid{10}{\tiny}{1}
+		%     \imagegrid{10}{\tiny}{1}
 		
-		
-		\highlightbox[red,very thick]{0.12}{0.49}{0.85}{0.98}{red}{}{2}
-		\highlightbox[green,very thick]{0.03}{0.01}{0.98}{0.45}{red}{}{3}
+		\highlightbox[red,very thick]{0.12}{0.49}{0.85}{0.98}{red}{}{2-3}
+		\highlightbox[myGreen,very thick]{0.56}{0.50}{0.76}{.67}{myGreen}{}{3}
+		\highlightbox[green,very thick]{0.03}{0.01}{0.98}{0.45}{red}{}{4}
 	\end{tikzpicture}
 	
 \end{frame}
@@ -197,7 +245,7 @@
 \begin{frame}{An example: The response list}
 	
 \onslide<1->
-	\begin{textblock*}{3cm}(9cm,0.5cm)
+	\begin{textblock*}{4cm}(8.5cm,1cm)
 	\includegraphics[width =\linewidth]{img/matrix.png}
 \end{textblock*}
 
@@ -205,7 +253,6 @@
 \begin{tikzpicture}
 	\imagenode[0.4]{img/responses.png}
 	
-	 %     \imagegrid{10}{\tiny}{1}
 
 	\highlightbox[myGreen,very thick]{0.52}{0.02}{0.73}{.4}{circle,myGreen}{}{2-}
 	\highlightbox[repetition,very thick]{0.52}{0.52}{0.73}{.86}{circle,myGreen}{}{3-}
@@ -218,16 +265,17 @@
 \end{tikzpicture}
 
 \small 
-
+\vspace{5mm}
 	
+	\onslide<2->
 	\centering
-	\scalebox{.90}{
-		\begin{tabular}{p{3cm}p{8cm}}
+	\scalebox{.95}{
+		\begin{tabular}{p{3cm}p{10cm}}
 		
-		\onslide<3->\textcolor{repetition}{Repetition} & \onslide<3-> Repetition of a cell \textbf{adjacent} to the blank space \\ 
-		\onslide<4->\textcolor{difference}{Difference} & \onslide<4-> Different in appearance from every element of the matrix\\
-		\onslide<5->\textcolor{wp}{Wrong Principle} & \onslide<5-> Copy of a cell or combination of cells \\
-		\onslide<6->\textcolor{ic}{Incomplete Correlate} & \onslide<6-> \textbf{Almost} the correct response \\
+		\textcolor<3->{repetition}{Repetition} &  Repetition of a cell \textbf{adjacent} to the blank space \\ 
+		\textcolor<4->{difference}{Difference} &  Different in appearance from every element of the matrix\\
+		\textcolor<5->{wp}{Wrong Principle} &  Copy of a cell or combination of cells \\
+		\textcolor<6->{ic}{Incomplete Correlate} &  \textbf{Almost} the correct response \\
 		
 		
 	\end{tabular}
@@ -268,8 +316,12 @@
 \section{The mat\texttt{R}iks package}
 
 \begin{frame}
-	
+		\begin{textblock*}{2cm}(5.5cm,1cm)
+		\includegraphics[width =.7\linewidth]{img/github.png}
+	\end{textblock*}
 \begin{center}
+	
+	
 	\small{	\texttt{devtools::install\_github("https://github.com/OttaviaE/matRiks")}}
 
 \end{center}
@@ -293,13 +345,104 @@
 	
 \end{frame}
 
+\begin{frame}{(Some) of the available figures}
+	\centering
+	
+	
+	\begin{tabular}{c c c c}
+		\includegraphics[width=0.2\linewidth]{img/pacman.pdf} & 
+		\includegraphics[width=0.2\linewidth]{img/triangle.pdf} & 
+		\includegraphics[width=0.2\linewidth]{img/malta.pdf} & 
+		\includegraphics[width=0.2\linewidth]{img/maxi.pdf} \\
+		\includegraphics[width=0.2\linewidth]{img/square.pdf} & 
+		\includegraphics[width=0.2\linewidth]{img/lily.pdf} & 
+		\includegraphics[width=0.2\linewidth]{img/hexagon.pdf} & 
+		\includegraphics[width=0.2\linewidth]{img/luck.pdf} \\
+		\includegraphics[width=0.2\linewidth]{img/bowtie.pdf} & 
+		\includegraphics[width=0.2\linewidth]{img/ellipse.pdf} & 
+		\includegraphics[width=0.2\linewidth]{img/ninja.pdf} & 
+		\includegraphics[width=0.2\linewidth]{img/biscuit.pdf} \\
+	\end{tabular}
+	
+	\vspace{5mm}
+	\centering
+	\Large
+	$\ldots$
+	
+\end{frame}
+
+
+\begin{frame}{Visuospatial rules}
+	\begin{columns}[T]
+		\begin{column}{.50\linewidth}
+			\centering
+			Rotate 
+			
+			\includegraphics[width=.7\linewidth]{img/rotate.pdf}
+			
+			Shade
+			
+			\includegraphics[width=.7\linewidth]{img/shade.pdf}
+		\end{column}
+		
+		\begin{column}{.50\linewidth}
+			\centering
+			Shape 
+			
+			\includegraphics[width=.7\linewidth]{img/shape.pdf}
+			
+			Size
+			
+			\includegraphics[width=.7\linewidth]{img/size.pdf}
+		\end{column}
+	\end{columns}
+	
+	\vspace{5mm}
+	\centering
+	\Large
+	
+	$\ldots$
+	
+\end{frame}
+
+\begin{frame}{Logical rules}
+	\begin{columns}[T]
+		\begin{column}{.50\linewidth}
+			\centering
+			AND ($\cap$)
+			
+			\includegraphics[width=.7\linewidth]{img/and.pdf}
+		\end{column}
+		
+		\begin{column}{.50\linewidth}
+			\centering
+			OR ($\cup$)
+			
+			\includegraphics[width=.7\linewidth]{img/or.pdf}
+		\end{column}
+	\end{columns}
+	
+	\vspace{5mm}
+	\centering
+	
+	XOR ($\Delta$)
+	
+	\includegraphics[width=.5\linewidth]{img/xor.pdf}
+	
+\end{frame}
 
 \begin{frame}{The mat\texttt{R}iks  architecture: Matriks generator}
+	
 
-	\begin{figure}
+
+		\begin{figure}
 		\begin{tikzpicture}[node distance=1.5cm]
 			\onslide<3->
 			\node (start) [startstop] {Matrix generator};
+			\node [xshift =+0.3cm, text width=4cm,font=\footnotesize, below of = start]
+			{
+			\centering	Directional logic: \\ Horizontal, vertical, diagonal
+			};
 			\onslide<1->
 			\node (ob) [process, left of = start, yshift=1.5cm, xshift = -2cm] {Object};
 			\onslide<2->
@@ -309,14 +452,20 @@
 				\begin{tabular}{p{0.8cm} p{0.8cm} p{0.8cm}}
 					Cell1 & Cell2 & Cell3  \\
 					Cell4 & Cell5 & Cell6  \\
-					Cell7 & Cell8 & Cell9  \\
+					Cell7 & Cell8 & \multicolumn{1}{c}{?} \\
 			\end{tabular}};
-			\onslide<3->	\path [->] (ob.east) edge (start.west);
-			\onslide<3-> \path [->] (rule.east) edge (start.west);
+			\onslide<3->	\path [->, shorten >= +3pt] (ob.east) edge (start.west);
+			\onslide<3-> \path [->, shorten >= +3pt] (rule.east) edge (start.west);
 			\onslide<4-> \path [->] (start.east) edge (matrix.west);
 		\end{tikzpicture}
 	\end{figure}
+%	\onslide<2->
+%\PutAt{(4.5cm,6cm)}{
+%	\NormalBox[text width=4cm, font=\footnotesize]{Directional logic: \\ horizontal, vertical, diagonal}
+%}
 \end{frame}
+
+
 
 
 
@@ -326,14 +475,18 @@
 		\begin{tikzpicture}[node distance=1.5cm]
 			\onslide<3->
 			\node (start) [startstop] {\texttt{mat\_apply()}};
+					\node [xshift =+0.3cm, text width=4cm,font=\footnotesize, below of = start]
+			{
+				Directional logic:  \centering \\ Horizontal
+			};
 			\onslide<1->
 			\node (ob) [process, left of = start, yshift=1.5cm, xshift = -2cm] {\includegraphics[width=\linewidth]{img/pacman.pdf}};
 			\onslide<2->
 			\node (rule) [process, left of = start, yshift=-1.5cm, xshift = -2cm] {\texttt{rotate}};
 			\onslide<4->
 			\node (matrix) [rectangle ,right of = start, xshift = 3cm] {\includegraphics[width=.40\linewidth]{img/pacmanMatrix.pdf}};
-			\onslide<3->	\path [->] (ob.east) edge (start.west);
-			\onslide<3-> \path [->] (rule.east) edge (start.west);
+			\onslide<3->	\path [->, shorten >= +3pt] (ob.east) edge (start.west);
+			\onslide<3-> \path [->, shorten >= +3pt] (rule.east) edge (start.west);
 			\onslide<4-> \path [->] (start.east) edge (matrix.west);
 		\end{tikzpicture}
 	\end{figure}
@@ -348,26 +501,22 @@
 			\onslide<1->
 			\node (matrix) [rectangle ,above of = start] {%
 				\begin{tabular}{p{0.8cm} p{0.8cm} p{0.8cm}}
-					Sq1 & Sq2 & Sq3  \\
-					Sq4 & Sq5 & Sq6  \\
-					Sq7 & Sq8 & Sq9  \\
-			\end{tabular}};
+					Cell1 & Cell2 & Cell3  \\
+					Cell4 & Cell5 & Cell6  \\
+					Cell7 & Cell8 & \multicolumn{1}{c}{?}  \\
+					\end{tabular}};
 		\onslide<3->
 					\node (response) [rectangle ,below of = start, yshift=-2.5] {%
 			\scalebox{.70}{
 				\centering
 				\begin{tabular}{p{2.5cm} p{2.5cm}  p{2.5cm}p{2.5cm}}
-				\multicolumn{4}{c}{correct}  \\
-				IC-Flip & IC-Size & IC-Neg & IC-Inc\\
-				R-Left & R-Diag & R-top & \\
-				\multicolumn{2}{c}{WP-Copy} & \multicolumn{2}{c}{WP-Matrix} \\
-				\multicolumn{4}{c}{Difference} 
-				
+				\multicolumn{4}{c}{Correct}  \\
+				Incomplete Correlate & Repetition & Wrong Principle & Difference\\
 			\end{tabular}
 			}
 		};
-			\onslide<2-> \path [->] (matrix.south) edge (start.north);
-			\onslide<3-> \path [->] (start.south) edge (response.north);
+			\onslide<2-> \path [->,shorten >= +3pt] (matrix.south) edge (start.north);
+			\onslide<3-> \path [->, shorten >= +2pt] (start.south) edge (response.north);
 		\end{tikzpicture}
 	\end{figure}
 \end{frame}
@@ -393,168 +542,100 @@
 	\end{figure}
 \end{frame}
 
-\begin{frame}{(Some) of the available figures}
-	\centering
 
-		
-			\begin{tabular}{c c c c}
-			\includegraphics[width=0.2\linewidth]{img/pacman.pdf} & 
-			\includegraphics[width=0.2\linewidth]{img/triangle.pdf} & 
-			\includegraphics[width=0.2\linewidth]{img/malta.pdf} & 
-			\includegraphics[width=0.2\linewidth]{img/maxi.pdf} \\
-			\includegraphics[width=0.2\linewidth]{img/square.pdf} & 
-			\includegraphics[width=0.2\linewidth]{img/lily.pdf} & 
-			\includegraphics[width=0.2\linewidth]{img/hexagon.pdf} & 
-			\includegraphics[width=0.2\linewidth]{img/luck.pdf} \\
-			\includegraphics[width=0.2\linewidth]{img/bowtie.pdf} & 
-			\includegraphics[width=0.2\linewidth]{img/ellipse.pdf} & 
-			\includegraphics[width=0.2\linewidth]{img/ninja.pdf} & 
-			\includegraphics[width=0.2\linewidth]{img/biscuit.pdf} \\
-		\end{tabular}
-
-
-\end{frame}
-
-
-\begin{frame}{Visuospatial rules}
-\begin{columns}[T]
-	\begin{column}{.50\linewidth}
-		\centering
-		Rotate 
-		
-		\includegraphics[width=.7\linewidth]{img/rotate.pdf}
-		
-		Shade
-		
-		\includegraphics[width=.7\linewidth]{img/shade.pdf}
-	\end{column}
-	
-	\begin{column}{.50\linewidth}
-		\centering
-		Shape 
-		
-		\includegraphics[width=.7\linewidth]{img/shape.pdf}
-		
-		Size
-		
-		\includegraphics[width=.7\linewidth]{img/size.pdf}
-	\end{column}
-\end{columns}
-	
-	\vspace{5mm}
-	\centering
-	\Large
-
-$\ldots$
-	
-\end{frame}
-
-\begin{frame}{Logical rules}
-	\begin{columns}[T]
-		\begin{column}{.50\linewidth}
-			\centering
-		AND ($\cap$)
-		
-		\includegraphics[width=.7\linewidth]{img/and.pdf}
-		\end{column}
-		
-		\begin{column}{.50\linewidth}
-			\centering
-			OR ($\cup$)
-			
-				\includegraphics[width=.7\linewidth]{img/or.pdf}
-		\end{column}
-	\end{columns}
-	
-	\vspace{5mm}
-	\centering
-	
-	XOR ($\Delta$)
-	
-		\includegraphics[width=.5\linewidth]{img/xor.pdf}
-	
-\end{frame}
 
 \section{Why?}
 
 \begin{frame}{PsycAssist}
+	
+	\vspace*{-3mm}
+	
 	\begin{figure}
 		\centering
 		\includegraphics[width=.6\linewidth]{img/psyc.png}
 	\end{figure}
 	
 	\pause
-	
-	\begin{exampleblock}{Sample}
+		\vspace{-3mm}
+	\begin{columns}[T]
+		\begin{column}{.50\linewidth}
+			\begin{exampleblock}{Sample}
+				
+				\footnotesize
+				$n = 600$ children aged 4-11, recruited in Italian schools 
+				
+				$F = 48$\%
+				
+				$30$\% preschoolers
+				
+			\end{exampleblock}
+			
+			\pause
+		\vspace{-2mm}
+			\begin{exampleblock}{Stimuli}
+				\footnotesize
+				40 Raven-like matrices: 
+				
+				\begin{itemize}
+					\item 5 Mono images 
+					\item $2 \times 2$ matrices
+					\item $3 \times 3$ matrices
+				\end{itemize}
+				
+			\end{exampleblock}
+		\end{column}
 		
-		\footnotesize
-		$n = 600$ children aged 4-11, recruited in Italian schools 
-		
-		$F = 48$\%
-		
-		$30$\% preschoolers
+		\begin{column}{.50\linewidth}
+			\begin{exampleblock}{Rasch validation}
+				
+				\begin{itemize}
+					\item Monotonicity check
+					
+					\item Fit the Rasch model: 
+					
+					\begin{enumerate}
+						\item Item infit and outfit
+						\item Local dependence
+					\end{enumerate}
+				\end{itemize}
+				
+			\end{exampleblock}
+			
+		\end{column}
+	\end{columns}
 	
-	\end{exampleblock}
 	
-	\pause
-	
-		\begin{exampleblock}{Stimuli}
-		\footnotesize
-		40 Raven-like matrices: 
-
-		\begin{itemize}
-			\item 5 Mono images 
-			\item $2 \times 2$ matrices
-			\item $3 \times 3$ matrices
-		\end{itemize}
-		
-	\end{exampleblock}
 \end{frame}
 
 \begin{frame}{Rasch validation}
-	
-	\begin{itemize}
-	\item Monotonicity check
-	
-	\item Fit the Rasch model: 
-	
-	\begin{enumerate}
-		\item Item infit and outfit
-		\item Local dependence
-	\end{enumerate}
-	\end{itemize}
-	
-	\pause
+	\small
+
 	
 	\begin{block}{Note}
 		
+		\small
 		2 matrices were eliminated because of technical issues 
 		
-		4 matrices were eliminated because a lack of monotonicity 
+		4 matrices were eliminated because of a lack of monotonicity 
 	
 	\end{block}
 	
+	\pause
 	
-\end{frame}
+		The starting model included 34 matrices: 
+	
+\begin{center}
+			\begin{tabular}[t]{c cc cc}
+		\hline
+		Madcov & SRMR & $p$-value\\
+		\hline
+		0.97 & 0.06 &   $<0.001$\\
+		\hline
+	\end{tabular}
+\end{center}
 
-\begin{frame}{Starting model}
 
-	
-	The starting model included 34 matrices: 
-	
-	\begin{table}
-		\centering
-		\begin{tabular}[t]{c cc cc}
-			\hline
-			Madcov & SRMR & SRMSR & MADaQ3 & $p$-value\\
-			\hline
-			0.97 & 0.06 & 0.08 & 0.05 & $<0.001$\\
-			\hline
-		\end{tabular}
-	\end{table}
-	
-	\vspace{10mm}
-Oufit statistic suggested the underfit of one matrix (item 21) $\rightarrow$ removed and refitted the model 
+	Oufit statistic suggested the underfit of one matrix (item 21) $\rightarrow$ removed and refitted the model 
 	
 	
 	\begin{itemize}
@@ -568,7 +649,6 @@ Oufit statistic suggested the underfit of one matrix (item 21) $\rightarrow$ rem
 		\end{itemize}
 	\end{itemize}
 \end{frame}
-
 
 \begin{frame}{The final model}
 
@@ -614,7 +694,7 @@ Oufit statistic suggested the underfit of one matrix (item 21) $\rightarrow$ rem
 	
 \end{frame}
 
-\begin{frame}
+\begin{frame}[plain]
 	\begin{columns}[T]
 		\begin{column}{.50\linewidth}
 			
@@ -649,6 +729,10 @@ Oufit statistic suggested the underfit of one matrix (item 21) $\rightarrow$ rem
 	
 	\Large
 	Thank you!
+	\normalsize
+	
+	\vspace{3mm}
+	ottavia.epifania@unipd.it
 	
 		\begin{textblock*}{2cm}(10cm,8cm)
 		\includegraphics[width =\linewidth]{img/user.png}
