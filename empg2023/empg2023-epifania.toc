@@ -2,5 +2,5 @@
 \beamer@sectionintoc {1}{Introduction}{2}{0}{1}
 \beamer@sectionintoc {2}{Generating rules}{19}{0}{2}
 \beamer@sectionintoc {3}{The mat\texttt {R}iks package}{21}{0}{3}
-\beamer@sectionintoc {4}{Why?}{40}{0}{4}
-\beamer@sectionintoc {5}{Final remarks}{48}{0}{5}
+\beamer@sectionintoc {4}{Why?}{42}{0}{4}
+\beamer@sectionintoc {5}{Final remarks}{49}{0}{5}

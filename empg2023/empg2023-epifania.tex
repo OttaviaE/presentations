@@ -14,12 +14,14 @@
 \usepackage{tabularx}
 \usepackage{booktabs}
 \usepackage{tikzsymbols}
+\usepackage{array,colortbl}
 \usetikzlibrary{mindmap,calc,patterns,decorations.pathmorphing,decorations.markings, arrows, shapes.arrows, shapes, backgrounds,positioning,shadows.blur, positioning, fit, tikzmark, shadows}
 \usepackage[absolute,overlay]{textpos}
 \newcommand\Factor{1.2}
 \setbeamerfont{subtitle}{family=\scshape}
 \setbeamerfont{title}{family=\scshape}
-\definecolor{template}{RGB}{54, 114, 89}
+%\definecolor{template}{RGB}{54, 114, 89}
+\definecolor{template}{RGB}{155, 0, 20}
 \definecolor{background}{RGB}{250, 250, 250}
 \setbeamercolor{frametitle}{bg=background}
 \setbeamercolor{section in toc}{fg=template}
@@ -84,6 +86,8 @@
 {   \only<#8>{\path[#1] (#2*\myimagewidth, #3*\myimageheight) rectangle node[#6] {#7} (#4*\myimagewidth, #5*\myimageheight);}
 }
 %colonne 
+
+
 
 \newenvironment{cols}[1][]{}{}
 
@@ -161,6 +165,15 @@
 	stat/.style = {rectangle, rounded corners, minimum width=2.5cm, minimum height=0.1cm, text centered, draw=white,  text width=2.5cm}
 }
 
+%bordini colorati alle celle 
+
+\def\highlight#1{%
+	\fboxrule2pt %
+	\hsize=\dimexpr\hsize-2\fboxrule-2\fboxsep\relax
+	#1%
+	\@endpbox\unskip\setbox0\lastbox\bgroup
+	\fboxrule2pt %
+	\fcolorbox{red}{lightgray}{\box0}\hfill}
 
 \title{mat\texttt{R}iks}
 \subtitle{An \texttt{R} package for the automatic generation of Raven-like matrices}
@@ -199,7 +212,7 @@
 	\begin{alertblock}{Issue}
 		
 		\begin{itemize}
-			\item Can only be administered once (o after a long time period)
+			\item Can only be administered once (or after a long time period)
 			
 			\item Difficulty in the generation of  ``true'' parallel forms
 		\end{itemize}
@@ -209,7 +222,7 @@
 	
 	\begin{exampleblock}{Aim}
 		
-		Development of an open-source easy-to-use tool for the automatic (and reproducible) generation of Raven-like matrices
+		Development of an open-source easy-to-use tool for the automatic and  rule-based generation of Raven-like matrices
 	\end{exampleblock}
 	
 \end{frame}
@@ -235,10 +248,10 @@
 		\imagenode[0.5]{img/matrix.png}
 		
 		
-		\highlighttext{0.2}{0.9}{0.8}{1}{red}{Change shapes \& numeric progression}{2}
+		\highlighttext{0.2}{0.9}{0.8}{1}{red}{Change shapes \& numerical progression}{2}
 		\highlightbox[red,very thick]{0.18}{0.65}{0.85}{0.9}{red}{}{2}
 		\highlightbox[red,very thick]{0.18}{0.1}{0.38}{0.9}{red}{}{3}
-		\highlighttext{0.1}{0.9}{0.4}{1}{red}{Numeric progression}{3}
+		\highlighttext{0.1}{0.9}{0.4}{1}{red}{Numerical progression}{3}
 	\end{tikzpicture}
 \end{frame}
 
@@ -257,25 +270,27 @@
 	\highlightbox[myGreen,very thick]{0.52}{0.02}{0.73}{.4}{circle,myGreen}{}{2-}
 	\highlightbox[repetition,very thick]{0.52}{0.52}{0.73}{.86}{circle,myGreen}{}{3-}
 	\highlightbox[repetition,very thick]{0.78}{0.02}{0.98}{.4}{circle,myGreen}{}{3-}
-	\highlightbox[difference,very thick]{0.26}{0.52}{0.48}{.86}{circle,myGreen}{}{4-}
-	\highlightbox[difference,very thick]{0.01}{0.02}{0.21}{.4}{circle,myGreen}{}{4-}
+	\highlightbox[difference,very thick]{0.26}{0.52}{0.48}{.86}{circle,myGreen}{}{6-}
+	\highlightbox[wp,very thick]{0.01}{0.02}{0.21}{.4}{circle,myGreen}{}{5-}
 	\highlightbox[wp,very thick]{0.78}{0.52}{0.98}{.86}{circle,myGreen}{}{5-}
 	\highlightbox[wp,very thick]{0.28}{0.02}{0.48}{.4}{circle,myGreen}{}{5-}
-	\highlightbox[ic,very thick]{0.01}{0.52}{0.21}{.86}{circle,myGreen}{}{6-}
+	\highlightbox[ic,very thick]{0.01}{0.52}{0.21}{.86}{circle,myGreen}{}{4-}
 \end{tikzpicture}
 
 \small 
 \vspace{5mm}
 	
-	\onslide<2->
+	\onslide<3->
 	\centering
 	\scalebox{.95}{
 		\begin{tabular}{p{3cm}p{10cm}}
 		
-		\textcolor<3->{repetition}{Repetition} &  Repetition of a cell \textbf{adjacent} to the blank space \\ 
-		\textcolor<4->{difference}{Difference} &  Different in appearance from every element of the matrix\\
-		\textcolor<5->{wp}{Wrong Principle} &  Copy of a cell or combination of cells \\
-		\textcolor<6->{ic}{Incomplete Correlate} &  \textbf{Almost} the correct response \\
+		\textcolor<3->{repetition}{Repetition} &  Repetition of a cell adjacent to the blank space \\ 
+				\textcolor<4->{ic}{Incomplete Correlate} &  Almost the correct response \\
+						\textcolor<5->{wp}{Wrong Principle} &  Copy of a non adjacent cell or combination of cells \\
+		\textcolor<6->{difference}{Difference} &  Different in appearance from every element of the matrix\\
+
+
 		
 		
 	\end{tabular}
@@ -291,24 +306,24 @@
 \begin{frame}
 	
 	\scalebox{.70}{
-	\begin{tabular}{p{2cm}p{4cm} p{10cm}}
+	\begin{tabular}{p{2cm}p{4cm} p{8cm}}
 		\hline
-		Rules Category	&	Rule name	&	Definition	\\
+		Category	&	Rule name	&	Definition	\\
 		\hline
-		Visuospatial	&	Object addition/subtraction	&	Visually merge two elements 	\\
-		&	Movement	&	With a steady background, the movement is created by changing the position of an object across the cells	\\
-		&	Rotation	&	The spatial orientation of the figure changes across the cells	\\
-		&	Mental transformation	&	The third cell results from the application of the characteristics in the second cell to the figures in the first cell.	\\
-		&	Numeric progression	&	Quantitative increase or decrease in the number of features from cell to cell	\\
-		&	Changes in shape	&	The figures change across cells 	\\
-		&	Changes in shade	&	The shading of the figures changes across cells 	\\
-		&	Changes in size	&	The size of the figures changes across cells 	\\
-		&	Changes in margins	&	The margins of the figures change across cells 	\\
+		Visuospatial	&	Object addition	&	Visually merge two objects 	\\
+		&	Movement	&	Change the position of an object across the cells	\\
+		&	Rotation	&	Change the spatial orientation of the objects across the cells	\\
+		&	Mental transformation	& Apply the characteristics of the objects  in the second cell to the objects in the first cell to obtain the object in the third cell.	\\
+		&	Numerical progression	&	Quantitative increase or decrease in the number of objects from cell to cell	\\
+		&	Changes in shape	&	Change objects across cells 	\\
+		&	Changes in shade	&	Change the shade of the objects across cells 	\\
+		&	Changes in size	&Change the size of the objects across cells 	\\
+		&	Changes in outline	&	Change the outline of the objects  across cells 	\\
 		
 		\hline
-		Logical	&	AND	&	The third cell contains ONLY the elements that appeared in both the first and second cells 	\\
-		&	OR	&	The third cell contains ALL the elements in the first and second cells	\\
-		&	XOR	&	The third cell contains the elements in the first cell not present in the second cell and viceversa	\\
+		Logical	&	AND	&	The third cell contains only the elements that appeared in both the first and second cells ($\cap$)	\\
+		&	OR	&	The third cell contains all the elements in the first and second cells ($\cup$)	\\
+		&	XOR	&	The third cell contains the elements in the first cell not present in the second cell and vice-versa ($\Delta$)	\\
 		\hline
 	\end{tabular}}
 \end{frame}
@@ -337,7 +352,7 @@
 	
 	\vspace{3mm}
 	\begin{quote}
-		Objects \hspace{2mm} Rules \hspace{2mm} Matrix generator \hspace{2mm} Response options generator
+		\textcolor<2->{myGreen}{Objects} \hspace{2mm} \textcolor<2->{myGreen}{Rules} \hspace{2mm} \textcolor<3->{template}{Matrix generator} \hspace{2mm} \textcolor<3->{template}{Response options generator}
 	\end{quote}
 	\end{itemize}
 
@@ -345,7 +360,7 @@
 	
 \end{frame}
 
-\begin{frame}{(Some) of the available figures}
+\begin{frame}{(Some) of the available objects}
 	\centering
 	
 	
@@ -439,7 +454,7 @@
 		\begin{tikzpicture}[node distance=1.5cm]
 			\onslide<3->
 			\node (start) [startstop] {Matrix generator};
-			\node [xshift =+0.3cm, text width=4cm,font=\footnotesize, below of = start]
+			\node [xshift =+0.1cm, text width=4cm,font=\footnotesize, below of = start]
 			{
 			\centering	Directional logic: \\ Horizontal, vertical, diagonal
 			};
@@ -475,9 +490,9 @@
 		\begin{tikzpicture}[node distance=1.5cm]
 			\onslide<3->
 			\node (start) [startstop] {\texttt{mat\_apply()}};
-					\node [xshift =+0.3cm, text width=4cm,font=\footnotesize, below of = start]
+					\node [text width=4cm,font=\footnotesize, below of = start]
 			{
-				Directional logic:  \centering \\ Horizontal
+				Directional logic:  \centering \\ Horizontal \\
 			};
 			\onslide<1->
 			\node (ob) [process, left of = start, yshift=1.5cm, xshift = -2cm] {\includegraphics[width=\linewidth]{img/pacman.pdf}};
@@ -492,12 +507,16 @@
 	\end{figure}
 \end{frame}
 
+
+
 \begin{frame}{The mat\texttt{R}iks  architecture: Response options generator}
 	
-	\begin{figure}
+
+		
 		\begin{tikzpicture}[node distance=2cm]
-			\onslide<2->
-			\node (start) [startstop] {Response options generator};
+							\onslide<2->
+%			\node[startstop] at (0, 0)   (start) {Response options generator};
+	\node[startstop] at (0, 1)   (start) {Response options generator};
 			\onslide<1->
 			\node (matrix) [rectangle ,above of = start] {%
 				\begin{tabular}{p{0.8cm} p{0.8cm} p{0.8cm}}
@@ -506,103 +525,140 @@
 					Cell7 & Cell8 & \multicolumn{1}{c}{?}  \\
 					\end{tabular}};
 		\onslide<3->
-					\node (response) [rectangle ,below of = start, yshift=-2.5] {%
-			\scalebox{.70}{
-				\centering
-				\begin{tabular}{p{2.5cm} p{2.5cm}  p{2.5cm}p{2.5cm}}
-				\multicolumn{4}{c}{Correct}  \\
-				Incomplete Correlate & Repetition & Wrong Principle & Difference\\
+		\node (response) [xshift =+4cm, text width=6cm,font=\large, right of = start]
+		{  
+			\centering
+			\begin{tabular}{p{4cm}p{1cm}}
+		\multicolumn{1}{c}{\textcolor{myGreen}{Correct}}		& $\times 1$  \\
+			\multicolumn{1}{c}{\textcolor{repetition}{ Repetition}} & $\times 3$  \\
+			\multicolumn{1}{c}{\textcolor{ic}{ Incomplete Correlate}} & $\times 4$  \\
+					
+		\multicolumn{1}{c}{	\textcolor{wp}{Wrong Principle} } &$\times 2$  \\
+	\multicolumn{1}{c}{	\textcolor{difference}{Difference}} & $\times 1$ \\ 
 			\end{tabular}
-			}
+%			\centering		\textcolor{myGreen}{Correct} \normalsize{ (1)}\\ \vspace{3mm} \textcolor{ic}{ Incomplete Correlate}  \normalsize{ (4)} \\ \vspace{3mm} \textcolor{wp}{Wrong Principle} \normalsize{ (2)} \\  \vspace{3mm} \textcolor{difference}{Difference} \normalsize{ (1)}\\
 		};
+					
 			\onslide<2-> \path [->,shorten >= +3pt] (matrix.south) edge (start.north);
-			\onslide<3-> \path [->, shorten >= +2pt] (start.south) edge (response.north);
+			\onslide<3-> \path [->, shorten >= +2pt] (start.east) edge (response.west);
 		\end{tikzpicture}
-	\end{figure}
+
 \end{frame}
 
 
 \begin{frame}{}
 	
-	\begin{figure}
-		\begin{tikzpicture}[node distance=2.5cm]
-			\onslide<2->
-			\node (start) [startstop] {\texttt{response\_list()}};
-			\onslide<1->
-			\node (matrix) [rectangle ,above of = start] {%
-			\includegraphics[width=.40\linewidth]{img/pacmanMatrix.pdf}
-				};
-			\onslide<3->
-			\node (response) [rectangle ,below of = start, yshift=-4] {%
-			\includegraphics[width=.40\linewidth]{img/pacmanResponses.pdf}
+			\begin{tikzpicture}[node distance=3cm]
+		\onslide<2->
+		%			\node[startstop] at (0, 0)   (start) {Response options generator};
+		\node[startstop] at (0, 0)   (start) {\texttt{response\_list()}};
+		\onslide<1->
+		\node (matrix) [rectangle ,above of = start, yshift = 1.5] {%
+				\includegraphics[width=.40\linewidth]{img/pacmanMatrix.pdf}
 			};
-			\onslide<2-> \path [->] (matrix.south) edge (start.north);
-			\onslide<3-> \path [->] (start.south) edge (response.north);
-		\end{tikzpicture}
-	\end{figure}
+		\onslide<3->
+		\node (response) [xshift =+4cm,  text width=6cm,font=\large, right of = start]
+		{  
+			\centering
+%\includegraphics[width=\linewidth]{img/pacmanResponses.pdf}
+\scalebox{.70}{
+\begin{tabular}{c c }
+\cellcolor{myGreen!70}\includegraphics[width=.4\linewidth]{img/correct.pdf} &  \cellcolor{repetition!70}\includegraphics[width=.4\linewidth]{img/rleft.pdf}\\
+\cellcolor{repetition!70}\includegraphics[width=.4\linewidth]{img/rdiag.pdf} & \cellcolor{repetition!70}\includegraphics[width=.4\linewidth]{img/rtop.pdf}\\ 
+\cellcolor{ic!70}	\includegraphics[width=.4\linewidth]{img/icneg.pdf} &  \cellcolor{ic!70}\includegraphics[width=.4\linewidth]{img/icflip.pdf} \\
+\cellcolor{ic!70}	\includegraphics[width=.4\linewidth]{img/icsize.pdf} &  \cellcolor{ic!70} \includegraphics[width=.4\linewidth]{img/icinc.pdf} \\
+\cellcolor{wp!70}	\includegraphics[width=.4\linewidth]{img/wpcopy.pdf} &  \cellcolor{wp!70} \includegraphics[width=.4\linewidth]{img/wpmatrix.pdf} \\
+\cellcolor{difference!70}	\includegraphics[width=.4\linewidth]{img/difference.pdf} & \\
+\end{tabular}
+}
+		};
+		
+		\onslide<2-> \path [->,shorten >= +3pt] (matrix.south) edge (start.north);
+		\onslide<3-> \path [->, shorten >= +2pt, shorten <= +2pt] (start.east) edge (response.west);
+	\end{tikzpicture}
+	
+%	\begin{figure}
+%		\begin{tikzpicture}[node distance=2.5cm]
+%			\onslide<2->
+%			\node (start) [startstop] {\texttt{response\_list()}};
+%			\onslide<1->
+%			\node (matrix) [rectangle ,above of = start] {%
+%			\includegraphics[width=.40\linewidth]{img/pacmanMatrix.pdf}
+%				};
+%			\onslide<3->
+%			\node (response) [rectangle ,below of = start, yshift=-4] {%
+%			\includegraphics[width=.40\linewidth]{img/pacmanResponses.pdf}
+%			};
+%			\onslide<2-> \path [->] (matrix.south) edge (start.north);
+%			\onslide<3-> \path [->] (start.south) edge (response.north);
+%		\end{tikzpicture}
+%	\end{figure}
 \end{frame}
 
 
 
 \section{Why?}
-
 \begin{frame}{PsycAssist}
-	
-	\vspace*{-3mm}
-	
 	\begin{figure}
 		\centering
-		\includegraphics[width=.6\linewidth]{img/psyc.png}
+		\includegraphics[width=\linewidth]{img/psyc}
 	\end{figure}
 	
-	\pause
+\end{frame}
+
+
+\begin{frame}
+	
+%	\vspace*{-3mm}
+%	
+%	\begin{figure}
+%		\centering
+%		\includegraphics[width=.6\linewidth]{img/psyc.png}
+%	\end{figure}
+	
 		\vspace{-3mm}
-	\begin{columns}[T]
-		\begin{column}{.50\linewidth}
-			\begin{exampleblock}{Sample}
-				
-				\footnotesize
-				$n = 600$ children aged 4-11, recruited in Italian schools 
-				
-				$F = 48$\%
-				
-				$30$\% preschoolers
-				
-			\end{exampleblock}
-			
-			\pause
-		\vspace{-2mm}
-			\begin{exampleblock}{Stimuli}
+				\begin{exampleblock}{Stimuli}
 				\footnotesize
 				40 Raven-like matrices: 
 				
 				\begin{itemize}
-					\item 5 Mono images 
-					\item $2 \times 2$ matrices
-					\item $3 \times 3$ matrices
+					\item $1 \times 1$ matrices (jigsaw puzzle) , \small{$n = 5$}
+					\item $2 \times 2$ matrices, \small{$n = 20$}
+					\item $3 \times 3$ matrices, \small{$n = 15$}
 				\end{itemize}
 				
 			\end{exampleblock}
-		\end{column}
 		
-		\begin{column}{.50\linewidth}
-			\begin{exampleblock}{Rasch validation}
-				
-				\begin{itemize}
-					\item Monotonicity check
-					
-					\item Fit the Rasch model: 
-					
-					\begin{enumerate}
-						\item Item infit and outfit
-						\item Local dependence
-					\end{enumerate}
-				\end{itemize}
-				
-			\end{exampleblock}
 			
-		\end{column}
-	\end{columns}
+			\pause
+		\vspace{-2mm}
+		
+			\begin{exampleblock}{Sample}
+			
+			\footnotesize
+			$n = 600$ children aged 4-11 ($M = 8.39\pm 2.17$), recruited in Italian schools 
+			
+			$F = 48$\%
+			
+			$30$\% preschoolers
+			
+		\end{exampleblock}
+
+			\begin{exampleblock}{Rasch validation}
+			
+			\begin{itemize}
+				\item Monotonicity check
+				
+				\item Fit the Rasch model: 
+				
+				\begin{enumerate}
+					\item Check for item with infit and/or outfit statistics $\geq 2$ (underfit)
+					\item Local dependence (Yeun's $Q3 \geq .20$)
+				\end{enumerate}
+			\end{itemize}
+			
+		\end{exampleblock}
+			
 	
 	
 \end{frame}
@@ -619,8 +675,7 @@
 		4 matrices were eliminated because of a lack of monotonicity 
 	
 	\end{block}
-	
-	\pause
+
 	
 		The starting model included 34 matrices: 
 	
@@ -629,7 +684,7 @@
 		\hline
 		Madcov & SRMR & $p$-value\\
 		\hline
-		0.97 & 0.06 &   $<0.001$\\
+		0.95 & 0.06 &   $0.001$\\
 		\hline
 	\end{tabular}
 \end{center}
@@ -643,9 +698,10 @@
 		\item Check for local dependence: 
 		
 		\begin{itemize}
-			\item Matrix $37 - 36$ $\rightarrow$ Matrix 37 eliminated
-			\item Matrix $28 -  40$ $\rightarrow$ Matrix 40 eliminated
-			
+			\item Matrix $37 - 40$ 
+			\item Matrix $37 -  28$ 
+			 \hspace{3mm}\makebox(0,0){\put(0,2.0\normalbaselineskip){%
+					$\left. \rule{0pt}{1.1\normalbaselineskip}\right\}$ \scriptsize{$\rightarrow$ Matrix 37 has been eliminated}}}
 		\end{itemize}
 	\end{itemize}
 \end{frame}
@@ -657,13 +713,14 @@
 	\centering
 	\begin{tabular}[t]{ccccc}
 		\hline
-			Madcov & SRMR & SRMSR & MADaQ3 & $p$-value\\
+			Madcov & SRMR & $p$-value\\
 		\hline
-		0.96 & 0.06 & 0.08 & 0.05 & $<0.001$\\
+		0.94 & 0.06 & $ 0.001$\\
 		\hline
 	\end{tabular}
 \end{table}
 
+\vspace{-3mm}
 \pause
 
 \vspace{5mm}
@@ -722,7 +779,7 @@
 		\end{column}
 	\end{columns}
 	
-	\pause
+	\onslide<2->
 	
 	\vspace{8mm}
 	\centering
@@ -734,7 +791,11 @@
 	\vspace{3mm}
 	ottavia.epifania@unipd.it
 	
+	
+
+	\onslide<2->
 		\begin{textblock*}{2cm}(10cm,8cm)
+				\onslide<2->
 		\includegraphics[width =\linewidth]{img/user.png}
 	\end{textblock*}
 	
