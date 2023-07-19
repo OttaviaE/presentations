@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2023.5.14)  19 JUL 2023 12:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2023.5.14)  19 JUL 2023 19:06
 entering extended mode
 **./empg2023-epifania.tex
 (empg2023-epifania.tex
@@ -1479,29 +1479,7 @@ thkerncmss.
 ) [3
 
  <./img/think2.png> <./img/think1.png>]
-File: img/think2.png Graphic file (type png)
-<use img/think2.png>
-Package pdftex.def Info: img/think2.png  used on input line 230.
-(pdftex.def)             Requested size: 56.9055pt x 56.90482pt.
-File: img/think1.png Graphic file (type png)
-<use img/think1.png>
-Package pdftex.def Info: img/think1.png  used on input line 230.
-(pdftex.def)             Requested size: 56.9055pt x 56.90482pt.
- [4
-
-]
-File: img/think2.png Graphic file (type png)
-<use img/think2.png>
-Package pdftex.def Info: img/think2.png  used on input line 230.
-(pdftex.def)             Requested size: 56.9055pt x 56.90482pt.
-File: img/think1.png Graphic file (type png)
-<use img/think1.png>
-Package pdftex.def Info: img/think1.png  used on input line 230.
-(pdftex.def)             Requested size: 56.9055pt x 56.90482pt.
- [5
-
-]
-<img/completeExample.png, id=384, 344.03531pt x 360.59718pt>
+<img/completeExample.png, id=271, 344.03531pt x 360.59718pt>
 File: img/completeExample.png Graphic file (type png)
 <use img/completeExample.png>
 Package pdftex.def Info: img/completeExample.png  used on input line 244.
@@ -1511,9 +1489,23 @@ Package pdftex.def Info: img/completeExample.png  used on input line 244.
 LaTeX Font Warning: Font shape `OT1/cmss/bx/sc' undefined
 (Font)              using `OT1/cmss/bx/n' instead on input line 244.
 
-[6
+[4
 
  <./img/completeExample.png>]
+File: img/completeExample.png Graphic file (type png)
+<use img/completeExample.png>
+Package pdftex.def Info: img/completeExample.png  used on input line 244.
+(pdftex.def)             Requested size: 172.01723pt x 180.29814pt.
+ [5
+
+]
+File: img/completeExample.png Graphic file (type png)
+<use img/completeExample.png>
+Package pdftex.def Info: img/completeExample.png  used on input line 244.
+(pdftex.def)             Requested size: 172.01723pt x 180.29814pt.
+ [6
+
+]
 File: img/completeExample.png Graphic file (type png)
 <use img/completeExample.png>
 Package pdftex.def Info: img/completeExample.png  used on input line 244.
@@ -1521,39 +1513,57 @@ Package pdftex.def Info: img/completeExample.png  used on input line 244.
  [7
 
 ]
-File: img/completeExample.png Graphic file (type png)
-<use img/completeExample.png>
-Package pdftex.def Info: img/completeExample.png  used on input line 244.
-(pdftex.def)             Requested size: 172.01723pt x 180.29814pt.
- [8
-
-]
-File: img/completeExample.png Graphic file (type png)
-<use img/completeExample.png>
-Package pdftex.def Info: img/completeExample.png  used on input line 244.
-(pdftex.def)             Requested size: 172.01723pt x 180.29814pt.
- [9
-
-]
-<img/matrix.png, id=603, 462.97969pt x 353.82187pt>
+<img/matrix.png, id=490, 462.97969pt x 353.82187pt>
 File: img/matrix.png Graphic file (type png)
 <use img/matrix.png>
 Package pdftex.def Info: img/matrix.png  used on input line 258.
 (pdftex.def)             Requested size: 231.48927pt x 176.91049pt.
- [10
+ [8
 
  <./img/matrix.png>]
 File: img/matrix.png Graphic file (type png)
 <use img/matrix.png>
 Package pdftex.def Info: img/matrix.png  used on input line 258.
 (pdftex.def)             Requested size: 231.48927pt x 176.91049pt.
- [11
+ [9
 
 ]
 File: img/matrix.png Graphic file (type png)
 <use img/matrix.png>
 Package pdftex.def Info: img/matrix.png  used on input line 258.
 (pdftex.def)             Requested size: 231.48927pt x 176.91049pt.
+ [10
+
+]
+File: img/matrix.png Graphic file (type png)
+<use img/matrix.png>
+Package pdftex.def Info: img/matrix.png  used on input line 304.
+(pdftex.def)             Requested size: 113.81102pt x 86.97595pt.
+<img/responses.png, id=653, 483.30562pt x 243.91125pt>
+File: img/responses.png Graphic file (type png)
+<use img/responses.png>
+Package pdftex.def Info: img/responses.png  used on input line 304.
+(pdftex.def)             Requested size: 193.31882pt x 97.56276pt.
+
+Overfull \hbox (44.78099pt too wide) in paragraph at lines 304--304
+ [][] 
+ []
+
+[11
+
+ <./img/responses.png>]
+File: img/matrix.png Graphic file (type png)
+<use img/matrix.png>
+Package pdftex.def Info: img/matrix.png  used on input line 304.
+(pdftex.def)             Requested size: 113.81102pt x 86.97595pt.
+File: img/responses.png Graphic file (type png)
+<use img/responses.png>
+Package pdftex.def Info: img/responses.png  used on input line 304.
+(pdftex.def)             Requested size: 193.31882pt x 97.56276pt.
+
+Overfull \hbox (44.78099pt too wide) in paragraph at lines 304--304
+ [][] 
+ []
 
 [12
 
@@ -1562,7 +1572,6 @@ File: img/matrix.png Graphic file (type png)
 <use img/matrix.png>
 Package pdftex.def Info: img/matrix.png  used on input line 304.
 (pdftex.def)             Requested size: 113.81102pt x 86.97595pt.
-<img/responses.png, id=766, 483.30562pt x 243.91125pt>
 File: img/responses.png Graphic file (type png)
 <use img/responses.png>
 Package pdftex.def Info: img/responses.png  used on input line 304.
@@ -1574,7 +1583,7 @@ Overfull \hbox (44.78099pt too wide) in paragraph at lines 304--304
 
 [13
 
- <./img/responses.png>]
+]
 File: img/matrix.png Graphic file (type png)
 <use img/matrix.png>
 Package pdftex.def Info: img/matrix.png  used on input line 304.
@@ -1622,166 +1631,134 @@ Overfull \hbox (44.78099pt too wide) in paragraph at lines 304--304
 
 [16
 
-]
-File: img/matrix.png Graphic file (type png)
-<use img/matrix.png>
-Package pdftex.def Info: img/matrix.png  used on input line 304.
-(pdftex.def)             Requested size: 113.81102pt x 86.97595pt.
-File: img/responses.png Graphic file (type png)
-<use img/responses.png>
-Package pdftex.def Info: img/responses.png  used on input line 304.
-(pdftex.def)             Requested size: 193.31882pt x 97.56276pt.
+] (empg2023-epifania.toc) [17
 
-Overfull \hbox (44.78099pt too wide) in paragraph at lines 304--304
- [][] 
- []
-
-[17
-
-]
-File: img/matrix.png Graphic file (type png)
-<use img/matrix.png>
-Package pdftex.def Info: img/matrix.png  used on input line 304.
-(pdftex.def)             Requested size: 113.81102pt x 86.97595pt.
-File: img/responses.png Graphic file (type png)
-<use img/responses.png>
-Package pdftex.def Info: img/responses.png  used on input line 304.
-(pdftex.def)             Requested size: 193.31882pt x 97.56276pt.
-
-Overfull \hbox (44.78099pt too wide) in paragraph at lines 304--304
- [][] 
- []
-
-[18
+] [18
 
 ] (empg2023-epifania.toc) [19
 
-] [20
-
-] (empg2023-epifania.toc) [21
-
 ]
-<img/github.png, id=1262, 385.44pt x 385.44pt>
+<img/github.png, id=1149, 385.44pt x 385.44pt>
 File: img/github.png Graphic file (type png)
 <use img/github.png>
 Package pdftex.def Info: img/github.png  used on input line 363.
 (pdftex.def)             Requested size: 39.83366pt x 39.82838pt.
- [22
+ [20
 
  <./img/github.png>]
 File: img/github.png Graphic file (type png)
 <use img/github.png>
 Package pdftex.def Info: img/github.png  used on input line 363.
 (pdftex.def)             Requested size: 39.83366pt x 39.82838pt.
- [23
+ [21
 
 ]
 File: img/github.png Graphic file (type png)
 <use img/github.png>
 Package pdftex.def Info: img/github.png  used on input line 363.
 (pdftex.def)             Requested size: 39.83366pt x 39.82838pt.
- [24
+ [22
 
 ]
-<img/pacman.pdf, id=1426, 1011.78pt x 614.295pt>
+<img/pacman.pdf, id=1315, 1011.78pt x 614.295pt>
 File: img/pacman.pdf Graphic file (type pdf)
 <use img/pacman.pdf>
 Package pdftex.def Info: img/pacman.pdf  used on input line 389.
 (pdftex.def)             Requested size: 67.14749pt x 40.7648pt.
-<img/triangle.pdf, id=1427, 1011.78pt x 614.295pt>
+<img/triangle.pdf, id=1316, 1011.78pt x 614.295pt>
 File: img/triangle.pdf Graphic file (type pdf)
 <use img/triangle.pdf>
 Package pdftex.def Info: img/triangle.pdf  used on input line 389.
 (pdftex.def)             Requested size: 67.14749pt x 40.7648pt.
-<img/malta.pdf, id=1428, 1011.78pt x 614.295pt>
+<img/malta.pdf, id=1317, 1011.78pt x 614.295pt>
 File: img/malta.pdf Graphic file (type pdf)
 <use img/malta.pdf>
 Package pdftex.def Info: img/malta.pdf  used on input line 389.
 (pdftex.def)             Requested size: 67.14749pt x 40.7648pt.
-<img/maxi.pdf, id=1429, 1011.78pt x 614.295pt>
+<img/maxi.pdf, id=1318, 1011.78pt x 614.295pt>
 File: img/maxi.pdf Graphic file (type pdf)
 <use img/maxi.pdf>
 Package pdftex.def Info: img/maxi.pdf  used on input line 389.
 (pdftex.def)             Requested size: 67.14749pt x 40.7648pt.
-<img/square.pdf, id=1430, 1011.78pt x 614.295pt>
+<img/square.pdf, id=1319, 1011.78pt x 614.295pt>
 File: img/square.pdf Graphic file (type pdf)
 <use img/square.pdf>
 Package pdftex.def Info: img/square.pdf  used on input line 389.
 (pdftex.def)             Requested size: 67.14749pt x 40.7648pt.
-<img/lily.pdf, id=1431, 1011.78pt x 614.295pt>
+<img/lily.pdf, id=1320, 1011.78pt x 614.295pt>
 File: img/lily.pdf Graphic file (type pdf)
 <use img/lily.pdf>
 Package pdftex.def Info: img/lily.pdf  used on input line 389.
 (pdftex.def)             Requested size: 67.14749pt x 40.7648pt.
-<img/hexagon.pdf, id=1432, 1011.78pt x 614.295pt>
+<img/hexagon.pdf, id=1321, 1011.78pt x 614.295pt>
 File: img/hexagon.pdf Graphic file (type pdf)
 <use img/hexagon.pdf>
 Package pdftex.def Info: img/hexagon.pdf  used on input line 389.
 (pdftex.def)             Requested size: 67.14749pt x 40.7648pt.
-<img/luck.pdf, id=1433, 1011.78pt x 614.295pt>
+<img/luck.pdf, id=1322, 1011.78pt x 614.295pt>
 File: img/luck.pdf Graphic file (type pdf)
 <use img/luck.pdf>
 Package pdftex.def Info: img/luck.pdf  used on input line 389.
 (pdftex.def)             Requested size: 67.14749pt x 40.7648pt.
-<img/bowtie.pdf, id=1434, 1011.78pt x 614.295pt>
+<img/bowtie.pdf, id=1323, 1011.78pt x 614.295pt>
 File: img/bowtie.pdf Graphic file (type pdf)
 <use img/bowtie.pdf>
 Package pdftex.def Info: img/bowtie.pdf  used on input line 389.
 (pdftex.def)             Requested size: 67.14749pt x 40.7648pt.
-<img/ellipse.pdf, id=1435, 1011.78pt x 614.295pt>
+<img/ellipse.pdf, id=1324, 1011.78pt x 614.295pt>
 File: img/ellipse.pdf Graphic file (type pdf)
 <use img/ellipse.pdf>
 Package pdftex.def Info: img/ellipse.pdf  used on input line 389.
 (pdftex.def)             Requested size: 67.14749pt x 40.7648pt.
-<img/ninja.pdf, id=1436, 1011.78pt x 614.295pt>
+<img/ninja.pdf, id=1325, 1011.78pt x 614.295pt>
 File: img/ninja.pdf Graphic file (type pdf)
 <use img/ninja.pdf>
 Package pdftex.def Info: img/ninja.pdf  used on input line 389.
 (pdftex.def)             Requested size: 67.14749pt x 40.7648pt.
-<img/biscuit.pdf, id=1437, 1011.78pt x 614.295pt>
+<img/biscuit.pdf, id=1326, 1011.78pt x 614.295pt>
 File: img/biscuit.pdf Graphic file (type pdf)
 <use img/biscuit.pdf>
 Package pdftex.def Info: img/biscuit.pdf  used on input line 389.
 (pdftex.def)             Requested size: 67.14749pt x 40.7648pt.
- [25
+ [23
 
  <./img/pacman.pdf> <./img/triangle.pdf> <./img/malta.pdf> <./img/maxi.pdf> <./
 img/square.pdf> <./img/lily.pdf> <./img/hexagon.pdf> <./img/luck.pdf> <./img/bo
 wtie.pdf> <./img/ellipse.pdf> <./img/ninja.pdf> <./img/biscuit.pdf>]
-<img/rotate.pdf, id=1529, 1011.78pt x 614.295pt>
+<img/rotate.pdf, id=1417, 1011.78pt x 614.295pt>
 File: img/rotate.pdf Graphic file (type pdf)
 <use img/rotate.pdf>
 Package pdftex.def Info: img/rotate.pdf  used on input line 423.
 (pdftex.def)             Requested size: 117.5094pt x 71.34074pt.
-<img/shade.pdf, id=1530, 1011.78pt x 614.295pt>
+<img/shade.pdf, id=1418, 1011.78pt x 614.295pt>
 File: img/shade.pdf Graphic file (type pdf)
 <use img/shade.pdf>
 Package pdftex.def Info: img/shade.pdf  used on input line 423.
 (pdftex.def)             Requested size: 117.5094pt x 71.34074pt.
-<img/shape.pdf, id=1531, 1011.78pt x 614.295pt>
+<img/shape.pdf, id=1419, 1011.78pt x 614.295pt>
 File: img/shape.pdf Graphic file (type pdf)
 <use img/shape.pdf>
 Package pdftex.def Info: img/shape.pdf  used on input line 423.
 (pdftex.def)             Requested size: 117.5094pt x 71.34074pt.
-<img/size.pdf, id=1532, 1011.78pt x 614.295pt>
+<img/size.pdf, id=1420, 1011.78pt x 614.295pt>
 File: img/size.pdf Graphic file (type pdf)
 <use img/size.pdf>
 Package pdftex.def Info: img/size.pdf  used on input line 423.
 (pdftex.def)             Requested size: 117.5094pt x 71.34074pt.
- [26
+ [24
 
  <./img/rotate.pdf> <./img/shade.pdf> <./img/shape.pdf> <./img/size.pdf>]
-<img/and.pdf, id=1598, 1011.78pt x 614.295pt>
+<img/and.pdf, id=1486, 1011.78pt x 614.295pt>
 File: img/and.pdf Graphic file (type pdf)
 <use img/and.pdf>
 Package pdftex.def Info: img/and.pdf  used on input line 449.
 (pdftex.def)             Requested size: 117.5094pt x 71.34074pt.
-<img/or.pdf, id=1599, 1011.78pt x 614.295pt>
+<img/or.pdf, id=1487, 1011.78pt x 614.295pt>
 File: img/or.pdf Graphic file (type pdf)
 <use img/or.pdf>
 Package pdftex.def Info: img/or.pdf  used on input line 449.
 (pdftex.def)             Requested size: 117.5094pt x 71.34074pt.
-<img/xor.pdf, id=1600, 1011.78pt x 614.295pt>
+<img/xor.pdf, id=1488, 1011.78pt x 614.295pt>
 File: img/xor.pdf Graphic file (type pdf)
 <use img/xor.pdf>
 Package pdftex.def Info: img/xor.pdf  used on input line 449.
@@ -1790,7 +1767,7 @@ Package pdftex.def Info: img/xor.pdf  used on input line 449.
 Overfull \vbox (5.56764pt too high) detected at line 449
  []
 
-[27
+[25
 
  <./img/and.pdf> <./img/or.pdf> <./img/xor.pdf>]
 
@@ -1799,23 +1776,23 @@ LaTeX Font Warning: Font shape `OT1/cmtt/bx/sc' undefined
 
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 483.
-[28
+[26
 
 ]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/sc' in size <14.4> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 483.
- [29
+ [27
 
-] [30
+] [28
 
-] [31
+] [29
 
 ]
 File: img/pacman.pdf Graphic file (type pdf)
 <use img/pacman.pdf>
 Package pdftex.def Info: img/pacman.pdf  used on input line 510.
 (pdftex.def)             Requested size: 71.13188pt x 43.18314pt.
-<img/pacmanMatrix.pdf, id=1881, 723.70375pt x 479.7925pt>
+<img/pacmanMatrix.pdf, id=1769, 723.70375pt x 479.7925pt>
 File: img/pacmanMatrix.pdf Graphic file (type pdf)
 <use img/pacmanMatrix.pdf>
 Package pdftex.def Info: img/pacmanMatrix.pdf  used on input line 510.
@@ -1825,7 +1802,7 @@ Overfull \hbox (2.09203pt too wide) in paragraph at lines 510--510
  [] 
  []
 
-[32
+[30
 
  <./img/pacmanMatrix.pdf>]
 File: img/pacman.pdf Graphic file (type pdf)
@@ -1841,102 +1818,102 @@ Overfull \hbox (2.09203pt too wide) in paragraph at lines 510--510
  [] 
  []
 
+[31
+
+]
+File: img/pacman.pdf Graphic file (type pdf)
+<use img/pacman.pdf>
+Package pdftex.def Info: img/pacman.pdf  used on input line 510.
+(pdftex.def)             Requested size: 71.13188pt x 43.18314pt.
+File: img/pacmanMatrix.pdf Graphic file (type pdf)
+<use img/pacmanMatrix.pdf>
+Package pdftex.def Info: img/pacmanMatrix.pdf  used on input line 510.
+(pdftex.def)             Requested size: 134.295pt x 89.0311pt.
+
+Overfull \hbox (2.09203pt too wide) in paragraph at lines 510--510
+ [] 
+ []
+
+[32
+
+]
+File: img/pacman.pdf Graphic file (type pdf)
+<use img/pacman.pdf>
+Package pdftex.def Info: img/pacman.pdf  used on input line 510.
+(pdftex.def)             Requested size: 71.13188pt x 43.18314pt.
+File: img/pacmanMatrix.pdf Graphic file (type pdf)
+<use img/pacmanMatrix.pdf>
+Package pdftex.def Info: img/pacmanMatrix.pdf  used on input line 510.
+(pdftex.def)             Requested size: 134.295pt x 89.0311pt.
+
+Overfull \hbox (2.09203pt too wide) in paragraph at lines 510--510
+ [] 
+ []
+
 [33
 
-]
-File: img/pacman.pdf Graphic file (type pdf)
-<use img/pacman.pdf>
-Package pdftex.def Info: img/pacman.pdf  used on input line 510.
-(pdftex.def)             Requested size: 71.13188pt x 43.18314pt.
-File: img/pacmanMatrix.pdf Graphic file (type pdf)
-<use img/pacmanMatrix.pdf>
-Package pdftex.def Info: img/pacmanMatrix.pdf  used on input line 510.
-(pdftex.def)             Requested size: 134.295pt x 89.0311pt.
+] [34
 
-Overfull \hbox (2.09203pt too wide) in paragraph at lines 510--510
- [] 
- []
-
-[34
-
-]
-File: img/pacman.pdf Graphic file (type pdf)
-<use img/pacman.pdf>
-Package pdftex.def Info: img/pacman.pdf  used on input line 510.
-(pdftex.def)             Requested size: 71.13188pt x 43.18314pt.
-File: img/pacmanMatrix.pdf Graphic file (type pdf)
-<use img/pacmanMatrix.pdf>
-Package pdftex.def Info: img/pacmanMatrix.pdf  used on input line 510.
-(pdftex.def)             Requested size: 134.295pt x 89.0311pt.
-
-Overfull \hbox (2.09203pt too wide) in paragraph at lines 510--510
- [] 
- []
-
-[35
+] [35
 
 ] [36
-
-] [37
-
-] [38
 
 ]
 File: img/pacmanMatrix.pdf Graphic file (type pdf)
 <use img/pacmanMatrix.pdf>
 Package pdftex.def Info: img/pacmanMatrix.pdf  used on input line 598.
 (pdftex.def)             Requested size: 134.295pt x 89.0311pt.
-<img/correct.pdf, id=2262, 578.16pt x 433.62pt>
+<img/correct.pdf, id=2151, 578.16pt x 433.62pt>
 File: img/correct.pdf Graphic file (type pdf)
 <use img/correct.pdf>
 Package pdftex.def Info: img/correct.pdf  used on input line 598.
 (pdftex.def)             Requested size: 68.28555pt x 51.2117pt.
-<img/rleft.pdf, id=2263, 578.16pt x 433.62pt>
+<img/rleft.pdf, id=2152, 578.16pt x 433.62pt>
 File: img/rleft.pdf Graphic file (type pdf)
 <use img/rleft.pdf>
 Package pdftex.def Info: img/rleft.pdf  used on input line 598.
 (pdftex.def)             Requested size: 68.28555pt x 51.2117pt.
-<img/rdiag.pdf, id=2264, 578.16pt x 433.62pt>
+<img/rdiag.pdf, id=2153, 578.16pt x 433.62pt>
 File: img/rdiag.pdf Graphic file (type pdf)
 <use img/rdiag.pdf>
 Package pdftex.def Info: img/rdiag.pdf  used on input line 598.
 (pdftex.def)             Requested size: 68.28555pt x 51.2117pt.
-<img/rtop.pdf, id=2265, 578.16pt x 433.62pt>
+<img/rtop.pdf, id=2154, 578.16pt x 433.62pt>
 File: img/rtop.pdf Graphic file (type pdf)
 <use img/rtop.pdf>
 Package pdftex.def Info: img/rtop.pdf  used on input line 598.
 (pdftex.def)             Requested size: 68.28555pt x 51.2117pt.
-<img/icneg.pdf, id=2266, 578.16pt x 433.62pt>
+<img/icneg.pdf, id=2155, 578.16pt x 433.62pt>
 File: img/icneg.pdf Graphic file (type pdf)
 <use img/icneg.pdf>
 Package pdftex.def Info: img/icneg.pdf  used on input line 598.
 (pdftex.def)             Requested size: 68.28555pt x 51.2117pt.
-<img/icflip.pdf, id=2267, 578.16pt x 433.62pt>
+<img/icflip.pdf, id=2156, 578.16pt x 433.62pt>
 File: img/icflip.pdf Graphic file (type pdf)
 <use img/icflip.pdf>
 Package pdftex.def Info: img/icflip.pdf  used on input line 598.
 (pdftex.def)             Requested size: 68.28555pt x 51.2117pt.
-<img/icsize.pdf, id=2268, 578.16pt x 433.62pt>
+<img/icsize.pdf, id=2157, 578.16pt x 433.62pt>
 File: img/icsize.pdf Graphic file (type pdf)
 <use img/icsize.pdf>
 Package pdftex.def Info: img/icsize.pdf  used on input line 598.
 (pdftex.def)             Requested size: 68.28555pt x 51.2117pt.
-<img/icinc.pdf, id=2269, 578.16pt x 433.62pt>
+<img/icinc.pdf, id=2158, 578.16pt x 433.62pt>
 File: img/icinc.pdf Graphic file (type pdf)
 <use img/icinc.pdf>
 Package pdftex.def Info: img/icinc.pdf  used on input line 598.
 (pdftex.def)             Requested size: 68.28555pt x 51.2117pt.
-<img/wpcopy.pdf, id=2270, 578.16pt x 433.62pt>
+<img/wpcopy.pdf, id=2159, 578.16pt x 433.62pt>
 File: img/wpcopy.pdf Graphic file (type pdf)
 <use img/wpcopy.pdf>
 Package pdftex.def Info: img/wpcopy.pdf  used on input line 598.
 (pdftex.def)             Requested size: 68.28555pt x 51.2117pt.
-<img/wpmatrix.pdf, id=2271, 578.16pt x 433.62pt>
+<img/wpmatrix.pdf, id=2160, 578.16pt x 433.62pt>
 File: img/wpmatrix.pdf Graphic file (type pdf)
 <use img/wpmatrix.pdf>
 Package pdftex.def Info: img/wpmatrix.pdf  used on input line 598.
 (pdftex.def)             Requested size: 68.28555pt x 51.2117pt.
-<img/difference.pdf, id=2272, 578.16pt x 433.62pt>
+<img/difference.pdf, id=2161, 578.16pt x 433.62pt>
 File: img/difference.pdf Graphic file (type pdf)
 <use img/difference.pdf>
 Package pdftex.def Info: img/difference.pdf  used on input line 598.
@@ -1950,7 +1927,7 @@ Overfull \hbox (23.23163pt too wide) in paragraph at lines 598--598
 Overfull \vbox (4.15019pt too high) detected at line 598
  []
 
-[39
+[37
 
  <./img/correct.pdf> <./img/rleft.pdf> <./img/rdiag.pdf> <./img/rtop.pdf> <./im
 g/icneg.pdf> <./img/icflip.pdf> <./img/icsize.pdf> <./img/icinc.pdf> <./img/wpc
@@ -2012,7 +1989,7 @@ Overfull \hbox (23.23163pt too wide) in paragraph at lines 598--598
 Overfull \vbox (4.15019pt too high) detected at line 598
  []
 
-[40
+[38
 
 ]
 File: img/pacmanMatrix.pdf Graphic file (type pdf)
@@ -2072,26 +2049,26 @@ Overfull \hbox (23.23163pt too wide) in paragraph at lines 598--598
 Overfull \vbox (4.15019pt too high) detected at line 598
  []
 
-[41
+[39
 
-] (empg2023-epifania.toc) [42
+] (empg2023-epifania.toc) [40
 
 ]
-<img/psyc.png, id=2524, 1317.42188pt x 765.6103pt>
+<img/psyc.png, id=2414, 1317.42188pt x 765.6103pt>
 File: img/psyc.png Graphic file (type png)
 <use img/psyc.png>
 Package pdftex.def Info: img/psyc.png  used on input line 609.
 (pdftex.def)             Requested size: 335.74263pt x 195.10538pt.
- [43
+ [41
 
- <./img/psyc.png>] [44
+ <./img/psyc.png>] [42
 
-] [45
+] [43
 
-] [46
+] [44
 
 ]
-<img/icc.pdf, id=2749, 827.09pt x 547.04375pt>
+<img/icc.pdf, id=2641, 827.09pt x 547.04375pt>
 File: img/icc.pdf Graphic file (type pdf)
 <use img/icc.pdf>
 Package pdftex.def Info: img/icc.pdf  used on input line 734.
@@ -2100,17 +2077,17 @@ Package pdftex.def Info: img/icc.pdf  used on input line 734.
 Overfull \vbox (4.18268pt too high) detected at line 734
  []
 
-[47
+[45
 
- <./img/icc.pdf>] (empg2023-epifania.toc) [48
+ <./img/icc.pdf>] (empg2023-epifania.toc) [46
 
 ]
-<img/soon.png, id=2867, 27.10786pt x 27.10786pt>
+<img/soon.png, id=2759, 27.10786pt x 27.10786pt>
 File: img/soon.png Graphic file (type png)
 <use img/soon.png>
 Package pdftex.def Info: img/soon.png  used on input line 755.
 (pdftex.def)             Requested size: 10.66673pt x 10.66663pt.
- [49
+ [47
 
  <./img/soon.png>]
 File: img/soon.png Graphic file (type png)
@@ -2118,15 +2095,15 @@ File: img/soon.png Graphic file (type png)
 Package pdftex.def Info: img/soon.png  used on input line 755.
 (pdftex.def)             Requested size: 10.66673pt x 10.66663pt.
 
-[50
+[48
 
 ]
-<img/matriks.png, id=2977, 1026.83624pt x 1026.83624pt>
+<img/matriks.png, id=2868, 1026.83624pt x 1026.83624pt>
 File: img/matriks.png Graphic file (type png)
 <use img/matriks.png>
 Package pdftex.def Info: img/matriks.png  used on input line 805.
 (pdftex.def)             Requested size: 100.7238pt x 100.71544pt.
-<img/presentation.png, id=2979, 1018.80624pt x 1018.80624pt>
+<img/presentation.png, id=2870, 1018.80624pt x 1018.80624pt>
 File: img/presentation.png Graphic file (type png)
 <use img/presentation.png>
 Package pdftex.def Info: img/presentation.png  used on input line 805.
@@ -2136,12 +2113,12 @@ Overfull \hbox (139.41856pt too wide) detected at line 805
 [][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][] 
  []
 
-<img/user.png, id=2980, 231.94418pt x 105.08908pt>
+<img/user.png, id=2871, 231.94418pt x 105.08908pt>
 File: img/user.png Graphic file (type png)
 <use img/user.png>
 Package pdftex.def Info: img/user.png  used on input line 805.
 (pdftex.def)             Requested size: 56.9055pt x 25.78152pt.
-[51
+[49
 
  <./img/matriks.png> <./img/presentation.png> <./img/user.png>]
 File: img/matriks.png Graphic file (type png)
@@ -2161,7 +2138,7 @@ File: img/user.png Graphic file (type png)
 <use img/user.png>
 Package pdftex.def Info: img/user.png  used on input line 805.
 (pdftex.def)             Requested size: 56.9055pt x 25.78152pt.
-[52
+[50
 
 ]
 \tf@nav=\write6
@@ -2182,10 +2159,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 28702 strings out of 480236
- 613176 string characters out of 2880083
- 1016472 words of memory out of 3000000
- 44410 multiletter control sequences out of 15000+200000
+ 28673 strings out of 480236
+ 612323 string characters out of 2880083
+ 1016285 words of memory out of 3000000
+ 44385 multiletter control sequences out of 15000+200000
  553626 words of font info for 98 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  111i,19n,112p,456b,903s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2211,9 +2188,9 @@ rs/huawei/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtcsc10
 /cm/cmtt10.pfb><C:/Users/huawei/AppData/Local/Programs/MiKTeX/fonts/type1/publi
 c/amsfonts/cm/cmtt12.pfb><C:/Users/huawei/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/public/amsfonts/cm/cmtt8.pfb>
-Output written on empg2023-epifania.pdf (52 pages, 2231184 bytes).
+Output written on empg2023-epifania.pdf (50 pages, 2205976 bytes).
 PDF statistics:
- 3121 PDF objects out of 3580 (max. 8388607)
- 110 named destinations out of 1000 (max. 500000)
+ 3011 PDF objects out of 3580 (max. 8388607)
+ 106 named destinations out of 1000 (max. 500000)
  447 words of extra memory for PDF output out of 10000 (max. 10000000)
 
