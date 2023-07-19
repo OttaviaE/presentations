@@ -1,5 +1,6 @@
 \documentclass{beamer}
 \usetheme[compressed]{Singapore}
+%\usetheme{Montpellier}
 \useinnertheme{rounded}
 \usepackage{graphicx}
 \usepackage{setspace}
@@ -22,20 +23,21 @@
 \setbeamerfont{title}{family=\scshape}
 %\definecolor{template}{RGB}{54, 114, 89}
 \definecolor{template}{RGB}{155, 0, 20}
-\definecolor{background}{RGB}{250, 250, 250}
+%\definecolor{background}{RGB}{250, 250, 250}
+\definecolor{background}{RGB}{253, 253, 253}
 \setbeamercolor{frametitle}{bg=background}
 \setbeamercolor{section in toc}{fg=template}
 \setbeamercolor{subsection in toc}{fg=black}
-\setbeamerfont{section in toc}{series=\bfseries,size=\normalsize}
-\setbeamertemplate{frametitle}{\color{template}\bfseries\scshape\insertframetitle\par\vskip2pt\hrulefill}
+\setbeamerfont{section in toc}{size=\normalsize}
+\setbeamertemplate{frametitle}{\color{myGreen}\bfseries\scshape\insertframetitle\par\vskip2pt\hrulefill}
 \setbeamercolor{section name}{fg=white}
 \setbeamercolor{title}{fg=template, bg=background}
 \setbeamercolor{section title}{fg=template}
 \setbeamercolor{frame subtitle}{fg=template}
-\setbeamercolor{title}{fg=template}
+\setbeamercolor{title}{fg=myGreen}
 \setbeamercolor{background canvas}{bg=background}
 \setbeamersize{text margin left=5mm,text margin right=5mm}
-\setbeamercolor{section in head/foot}{bg=background, fg=template}
+\setbeamercolor{section in head/foot}{bg=background, fg=myGreen}
 \setbeamercolor{subsection in head/foot}{fg=template, bg=template!20}
 \usepackage[english]{babel}
 \usepackage{tikz}
@@ -47,7 +49,7 @@
 \definecolor{wp}{RGB}{197, 151, 0}
 \definecolor{difference}{RGB}{181, 18, 27}
 \definecolor{ic}{RGB}{106, 81, 163}
-\setbeamercolor{item}{fg=myGreen}
+\setbeamercolor{item}{fg=myGreen!30}
 %\setbeamersize{text margin left=3cm,text margin right=1.5cm} 
 \AtBeginSection[]
 {
@@ -178,8 +180,8 @@
 \title{mat\texttt{R}iks}
 \subtitle{An \texttt{R} package for the automatic generation of Raven-like matrices}
 \author{Ottavia M. Epifania, Andrea Brancaccio, Debora de Chiusole, Pasquale Anselmi, Luca Stefautti}
-\institute{Universty of Padova, IT}
-\date{Meeting of the European Mathematical Psychology Group, 2023}
+\institute{University of Padova, IT}
+\date{MathPsych, ICCM, EMPG, July 2023}
 \titlegraphic{%
 	\includegraphics[width=1.8cm,height=1.8cm,keepaspectratio]{img/unipd.png}
 }
@@ -721,7 +723,6 @@
 \end{table}
 
 \vspace{-3mm}
-\pause
 
 \vspace{5mm}
 \begin{figure}
@@ -736,9 +737,11 @@
 
 \begin{frame}
 	\begin{itemize}
+				\item Formalization of the matrix generation 
+		
 		\item Generate similar but different matrices $\rightarrow$ parallel forms 
 		
-		\item Formalization of the matrix generation and response options generation processes
+
 		
 		\item Reproducibility of the stimuli
 		
