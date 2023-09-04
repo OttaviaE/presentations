@@ -2,7 +2,7 @@
 \usetheme{Montpellier}       % or try default, 
 %  \setbeamertemplate{navigation symbols}{}
 %\usetheme[compressed]{Singapore}
-\useinnertheme{circles}
+\useinnertheme{rounded}
 %\useoutertheme{miniframes}
 \setbeamertemplate{caption}[numbered]
 \setbeamersize{text margin left=5mm,text margin right=10mm}
@@ -102,6 +102,8 @@
 \definecolor{uip}{RGB}{199,124,255}
 \definecolor{eip}{RGB}{121,172,0}
 \definecolor{rp}{RGB}{0,187,192}
+\definecolor{myGreen}{RGB}{54, 114, 89}
+\definecolor{but}{RGB}{181, 18, 27}
 
 
 %\setbeamertemplate{frametitle}[default][center]
@@ -177,7 +179,7 @@
 	\includegraphics[width=2.5cm,height=2.5cm,keepaspectratio]{img/psicostat.png}%
 	\includegraphics[width=1.8cm,height=1.8cm,keepaspectratio]{img/unicatt.png}%
 }
-\institute[]{NUOVA DATA, BOLOGNA}
+\institute[]{September 7\textsuperscript{th}, Bologna (IT)}
 \author[O.M.E., P.A., E.R.]{\texorpdfstring{Ottavia M. Epifania\textsuperscript{1,2}, Pasquale Anselmi\textsuperscript{1}, Egidio Robusto\textsuperscript{1}\newline\url{ottavia.epifania@unipd.it} \newline \textsuperscript{1}Univerisity of  Padova\newline\textsuperscript{2}Catholic University of the Sacred Heart}{Author}}
 
 \newcommand\high{\cellcolor{template!20}}
@@ -191,27 +193,83 @@
 
 \section[Intro]{Introduction}
 
-\begin{frame}{The struggle}
-	
-	Rule of thumb $\rightarrow$  more questions more reliability 
-	
-	Drawback $\rightarrow$ too many questions, too many questionnaire $\rightarrow$ assessment precision might be compromised by the length of the assessment 
-	
-	Esempio che mi manda Andrea per l'indagine dei giovani, tantissimi quetsionari, indagine lunghissima 
-	
-	
+\begin{frame}
 	\begin{center}
-		\large \textcolor{template}{The Ideal Solution}
-	\end{center}
-	
-	A short test form (STF) as informative as the full-length test
-	
-	
+	\Large	Many items/questions in a questionnaire 
+\end{center}
+\vspace{5mm}
+\begin{columns}[T] % align columns
+	\begin{column}{.50\textwidth}
+		\color{myGreen}\rule{\linewidth}{4pt}
+		\begin{center}
+			\large{Good}
+		\end{center}
+		\normalcolor
+		
+		High assessment precision
+		
+		
+		\vspace{1.8mm}
+		
+		High information/reliability 
+		
+	\end{column}%
+	\hfill%
+	\begin{column}{.50\textwidth}
+		
+		\color{but}\rule{\linewidth}{4pt}
+		\begin{center}
+			\large{But}
+		\end{center}
+		\normalcolor
+		
+		Respondent's fatigue
+		
+		\vspace{1.8mm}
+		
+		Response quality might be compromised
+		\end{column}%
+\end{columns}  
+
+\vspace{5mm}
+\begin{center}
+	\color{template} A viable solution \\
+	\normalcolor 
+	A short test form (STF) with few items but high reliability 
+\end{center}
+
+\end{frame}
+
+\begin{frame}{European Social Surveys}
+
+Cross-national survey carried on every two years since 2001 
+
+\vspace{1.5mm}
+
+Assessment of attitudes, beliefs, and behavior patterns of diverse populations in different countries. Main focus $\rightarrow$ change/stability of:
+ 
+\begin{itemize}
+\item Living conditions
+\item Social structure 
+\item Public opinion	
+\end{itemize}
+
+\vspace{1.8mm}
+\begin{center}
+	Round 10:  \\\vspace{1.5mm} Socio-demographic information \\\vspace{1.5mm} $+$ \\\vspace{1.5mm} \color<2->{template} Well being, social exclusion, human values
+\end{center}
+
+
+
+
+
+
+
 \end{frame}
 
 \begin{frame}{Focus on the item}
 
-The information at the item level is crucial $\rightarrow$ each item taps on  a specific location of the latent trait 
+The information at the item level is crucial $\rightarrow$ Each item taps on  a specific location of the latent trait 
 
 \begin{center}
 Item Response Theory 
@@ -232,14 +290,14 @@ Item Response Theory
 		\vspace{3mm}
 			where: 
 		
-			$P(x_{pj} = 1)$: Probability of a correct response to item $j$ by respondent $p$
+			$P(x_{pj} = 1)$: Probability of  endorsing item $j$ by respondent $p$
 			
 				\vspace{1.5mm}
 				
 			$\theta_p$: Ability of respondent $p$
 			
 				\vspace{1.5mm}
-			$b_j$: Difficulty of item $j$
+			$b_j$: Difficulty \small(location on the latent trait)\normalsize of item $j$
 			
 				\vspace{1.5mm}
 			$a_j$: Discrimination of item $j$
@@ -461,25 +519,19 @@ Item Response Theory
 \begin{frame}
 
 
-\begin{exampleblock}{Good!}
-	
-	There's no ``one-fits-all'' solution
-	
-		\vspace{2mm}
-		
-		 The $\theta$ distribution is a key element
-\end{exampleblock}
+\begin{itemize}
 
-\pause
-\begin{alertblock}{..but work is still needed}
-		
-				\vspace{2mm}
-		Real life applications are missing
-		
-				\vspace{2mm}
-		The CAT is missing
-\end{alertblock}
+\item Item response theory provides a valid framework fro shorteing tests without losing information and reliability 
 
+\vspace{1.5mm}
+
+\item Targeting vs. ordering: There is no ``one-fits-all'' solution 
+
+\vspace{1.5mm}
+
+\item In the future $\rightarrow$ Which is the ideal number of item? 
+
+\end{itemize}
 \end{frame}
 
 \begin{frame}[plain]
@@ -490,11 +542,11 @@ Item Response Theory
 		\vspace{3mm}
 		\texttt{ottavia.epifania@unipd.it}
 		
-		VA CAMBIATO IL QR CODE DELLE SLIDE 
-	\begin{figure}
-		\centering
-		\includegraphics[width=0.4\linewidth]{img/codeSlide}
-	\end{figure}
+%		VA CAMBIATO IL QR CODE DELLE SLIDE 
+%	\begin{figure}
+%		\centering
+%		\includegraphics[width=0.4\linewidth]{img/codeSlide}
+%	\end{figure}
 	
 	
 	\end{center}

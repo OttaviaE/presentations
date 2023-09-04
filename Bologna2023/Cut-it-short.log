@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2023.5.14)  19 JUL 2023 12:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2023.5.14)  28 AUG 2023 14:30
 entering extended mode
 **./Cut-it-short.tex
 (Cut-it-short.tex
@@ -817,7 +817,7 @@ pellier.sty
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerouterthem
 etree.sty))
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerinnerthem
-ecircles.sty)
+erounded.sty)
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2020/08/01 v1.3d Input encoding file
 \inpenc@prehook=\toks44
@@ -1383,7 +1383,7 @@ kz/libraries\tikzlibrarymatrix.code.tex
 File: tikzlibrarymatrix.code.tex 2020/10/01 v3.1.6a (3.1.6a)
 )
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-185.
+187.
 
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmss.fd
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1391,22 +1391,22 @@ File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 (Cut-it-short.aux)
 \openout1 = `Cut-it-short.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 187.
+LaTeX Font Info:    ... okay on input line 187.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 187.
+LaTeX Font Info:    ... okay on input line 187.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 187.
+LaTeX Font Info:    ... okay on input line 187.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 187.
+LaTeX Font Info:    ... okay on input line 187.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 187.
+LaTeX Font Info:    ... okay on input line 187.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 187.
+LaTeX Font Info:    ... okay on input line 187.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 187.
+LaTeX Font Info:    ... okay on input line 187.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 187.
+LaTeX Font Info:    ... okay on input line 187.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1464,7 +1464,7 @@ Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
-Package hyperref Info: Link coloring OFF on input line 185.
+Package hyperref Info: Link coloring OFF on input line 187.
 
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -1478,71 +1478,71 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count377
 )
-LaTeX Info: Redefining \ref on input line 185.
-LaTeX Info: Redefining \pageref on input line 185.
-LaTeX Info: Redefining \nameref on input line 185.
+LaTeX Info: Redefining \ref on input line 187.
+LaTeX Info: Redefining \pageref on input line 187.
+LaTeX Info: Redefining \nameref on input line 187.
  (Cut-it-short.out) (Cut-it-short.out)
 \@outlinefile=\write5
 \openout5 = `Cut-it-short.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 185.
+(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 187.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 185.
+(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 187.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 185.
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 187.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 185.
+(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 187.
 \symnumbers=\mathgroup11
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 185.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 187.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
 (Font)                  OT1/mathkerncmss/m/sl --> OT1/lmss/m/it on input line 1
-85.
+87.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/bx/sl --> OT1/lmss/m/it on input line 
-185.
+187.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmss/m/n --> OT1/lmr/m/n on input line 185.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 185.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 185.
+(Font)                  OT1/lmss/m/n --> OT1/lmr/m/n on input line 187.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 187.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 187.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> OT1/lmss/m/n on input line 185.
+(Font)                  OT1/lmss/m/n --> OT1/lmss/m/n on input line 187.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> OT1/lmss/m/n on input line 185.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 185.
+(Font)                  OT1/lmss/bx/n --> OT1/lmss/m/n on input line 187.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 187.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> OT1/lmss/m/it on input line 185.
+(Font)                  OT1/lmr/m/it --> OT1/lmss/m/it on input line 187.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmr/bx/it --> OT1/lmss/m/it on input line 185.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 185.
+(Font)                  OT1/lmr/bx/it --> OT1/lmss/m/it on input line 187.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 187.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 185.
+(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 187.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 185.
+(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 187.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/lmss/m/n --> OT1/lmss/b/n on input line 185.
+(Font)                  OT1/lmss/m/n --> OT1/lmss/b/n on input line 187.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/lmss/m/it --> OT1/lmss/b/it on input line 185.
+(Font)                  OT1/lmss/m/it --> OT1/lmss/b/it on input line 187.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/lmss/b/n --> OT1/lmr/b/n on input line 185.
+(Font)                  OT1/lmss/b/n --> OT1/lmr/b/n on input line 187.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/lmss/b/n --> OT1/lmss/b/n on input line 185.
+(Font)                  OT1/lmss/b/n --> OT1/lmss/b/n on input line 187.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/m/n --> OT1/lmss/b/n on input line 185.
+(Font)                  OT1/lmss/m/n --> OT1/lmss/b/n on input line 187.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmss/m/it --> OT1/lmss/b/it on input line 185.
+(Font)                  OT1/lmss/m/it --> OT1/lmss/b/it on input line 187.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> OT1/lmtt/b/n on input line 185.
-LaTeX Font Info:    Redeclaring symbol font `boldpureletters' on input line 185
+(Font)                  OT1/lmtt/m/n --> OT1/lmtt/b/n on input line 187.
+LaTeX Font Info:    Redeclaring symbol font `boldpureletters' on input line 187
 .
 LaTeX Font Info:    Overwriting symbol font `boldpureletters' in version `norma
 l'
 (Font)                  OT1/mathkerncmss/bx/sl --> OT1/lmss/bx/it on input line
- 185.
+ 187.
 LaTeX Font Info:    Overwriting symbol font `boldpureletters' in version `bold'
 
 (Font)                  OT1/mathkerncmss/bx/sl --> OT1/lmss/bx/it on input line
- 185.
+ 187.
 
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator-
 basic-dictionary-English.dict
@@ -1573,14 +1573,14 @@ Package caption Info: listings package is loaded.
 Package caption Info: threeparttable package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count378
-LaTeX Info: Redefining \microtypecontext on input line 185.
+LaTeX Info: Redefining \microtypecontext on input line 187.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `basictext'.
-LaTeX Info: Redefining \showhyphens on input line 185.
+LaTeX Info: Redefining \showhyphens on input line 187.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1590,44 +1590,44 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
  (Cut-it-short.nav)
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-90.
+92.
 
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 
 LaTeX Font Warning: Font shape `OT1/lmss/m/sc' in size <14.4> not available
-(Font)              Font shape `OT1/lmr/m/sc' tried instead on input line 190.
+(Font)              Font shape `OT1/lmr/m/sc' tried instead on input line 192.
 
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-90.
+92.
 
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-190.
+192.
 
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-190.
+192.
 
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 190.
+(Font)              <10.95> on input line 192.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 190.
+(Font)              <8> on input line 192.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 190.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 190
+(Font)              <6> on input line 192.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 192
 .
 
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
@@ -1636,7 +1636,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 190
+LaTeX Font Info:    Trying to load font information for U+msb on input line 192
 .
 
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -1646,25 +1646,25 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 190.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 192.
 
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <8> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 190.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 192.
 
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 190.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 192.
 
 LaTeX Font Info:    Font shape `OT1/lmss/bx/it' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 190
+(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 192
 .
 LaTeX Font Info:    Font shape `OT1/lmss/bx/it' in size <8> not available
-(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 190
+(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 192
 .
 LaTeX Font Info:    Font shape `OT1/lmss/bx/it' in size <6> not available
-(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 190
+(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 192
 .
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
-190.
+192.
 
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmtt.fd
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1673,20 +1673,28 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 192.
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <5> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 192.
+
+LaTeX Font Info:    Font shape `OT1/lmss/bx/it' in size <5> not available
+(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 192
+.
 <img/unipd.png, id=77, 943.525pt x 949.5475pt>
 File: img/unipd.png Graphic file (type png)
 <use img/unipd.png>
-Package pdftex.def Info: img/unipd.png  used on input line 190.
+Package pdftex.def Info: img/unipd.png  used on input line 192.
 (pdftex.def)             Requested size: 50.87904pt x 51.2038pt.
 <img/psicostat.png, id=78, 3635.79607pt x 2727.03926pt>
 File: img/psicostat.png Graphic file (type png)
 <use img/psicostat.png>
-Package pdftex.def Info: img/psicostat.png  used on input line 190.
+Package pdftex.def Info: img/psicostat.png  used on input line 192.
 (pdftex.def)             Requested size: 71.12242pt x 53.34557pt.
 <img/unicatt.png, id=80, 225.84375pt x 225.84375pt>
 File: img/unicatt.png Graphic file (type png)
 <use img/unicatt.png>
-Package pdftex.def Info: img/unicatt.png  used on input line 190.
+Package pdftex.def Info: img/unicatt.png  used on input line 192.
 (pdftex.def)             Requested size: 51.21239pt x 51.21239pt.
 
 [1
@@ -1698,319 +1706,306 @@ pdfTeX warning: pdflatex (file ./img/psicostat.png): large interlaced PNG might
  cause out of memory (use non-interlaced PNG to fix this)
 > <./img/unicatt.png>] (Cut-it-short.toc) [2
 
+] [3
+
 ]
 
 LaTeX Font Warning: Font shape `OT1/lmss/bx/sc' undefined
-(Font)              using `OT1/lmss/bx/n' instead on input line 210.
+(Font)              using `OT1/lmss/bx/n' instead on input line 268.
 
-[3
+[4
 
-] [4
-
-] (Cut-it-short.toc) [5
+] [5
 
 ] [6
 
+] (Cut-it-short.toc) [7
+
+] [8
+
 ]
-<img/item.pdf, id=293, 1011.78pt x 614.295pt>
+<img/item.pdf, id=360, 1011.78pt x 614.295pt>
 File: img/item.pdf Graphic file (type pdf)
 <use img/item.pdf>
-Package pdftex.def Info: img/item.pdf  used on input line 263.
+Package pdftex.def Info: img/item.pdf  used on input line 321.
 (pdftex.def)             Requested size: 321.51625pt x 195.2099pt.
-<img/itemA.pdf, id=294, 1011.78pt x 614.295pt>
+<img/itemA.pdf, id=361, 1011.78pt x 614.295pt>
 File: img/itemA.pdf Graphic file (type pdf)
 <use img/itemA.pdf>
-Package pdftex.def Info: img/itemA.pdf  used on input line 263.
+Package pdftex.def Info: img/itemA.pdf  used on input line 321.
 (pdftex.def)             Requested size: 321.51625pt x 195.2099pt.
-<img/itemB.pdf, id=295, 1011.78pt x 614.295pt>
+<img/itemB.pdf, id=362, 1011.78pt x 614.295pt>
 File: img/itemB.pdf Graphic file (type pdf)
 <use img/itemB.pdf>
-Package pdftex.def Info: img/itemB.pdf  used on input line 263.
+Package pdftex.def Info: img/itemB.pdf  used on input line 321.
 (pdftex.def)             Requested size: 321.51625pt x 195.2099pt.
-<img/itemC.pdf, id=296, 1011.78pt x 614.295pt>
+<img/itemC.pdf, id=363, 1011.78pt x 614.295pt>
 File: img/itemC.pdf Graphic file (type pdf)
 <use img/itemC.pdf>
-Package pdftex.def Info: img/itemC.pdf  used on input line 263.
+Package pdftex.def Info: img/itemC.pdf  used on input line 321.
 (pdftex.def)             Requested size: 321.51625pt x 195.2099pt.
- [7
+ [9
 
  <./img/item.pdf>]
 File: img/item.pdf Graphic file (type pdf)
 <use img/item.pdf>
-Package pdftex.def Info: img/item.pdf  used on input line 263.
+Package pdftex.def Info: img/item.pdf  used on input line 321.
 (pdftex.def)             Requested size: 321.51625pt x 195.2099pt.
 File: img/itemA.pdf Graphic file (type pdf)
 <use img/itemA.pdf>
-Package pdftex.def Info: img/itemA.pdf  used on input line 263.
+Package pdftex.def Info: img/itemA.pdf  used on input line 321.
 (pdftex.def)             Requested size: 321.51625pt x 195.2099pt.
 File: img/itemB.pdf Graphic file (type pdf)
 <use img/itemB.pdf>
-Package pdftex.def Info: img/itemB.pdf  used on input line 263.
+Package pdftex.def Info: img/itemB.pdf  used on input line 321.
 (pdftex.def)             Requested size: 321.51625pt x 195.2099pt.
 File: img/itemC.pdf Graphic file (type pdf)
 <use img/itemC.pdf>
-Package pdftex.def Info: img/itemC.pdf  used on input line 263.
+Package pdftex.def Info: img/itemC.pdf  used on input line 321.
 (pdftex.def)             Requested size: 321.51625pt x 195.2099pt.
- [8
+ [10
 
  <./img/itemA.pdf>]
 File: img/item.pdf Graphic file (type pdf)
 <use img/item.pdf>
-Package pdftex.def Info: img/item.pdf  used on input line 263.
+Package pdftex.def Info: img/item.pdf  used on input line 321.
 (pdftex.def)             Requested size: 321.51625pt x 195.2099pt.
 File: img/itemA.pdf Graphic file (type pdf)
 <use img/itemA.pdf>
-Package pdftex.def Info: img/itemA.pdf  used on input line 263.
+Package pdftex.def Info: img/itemA.pdf  used on input line 321.
 (pdftex.def)             Requested size: 321.51625pt x 195.2099pt.
 File: img/itemB.pdf Graphic file (type pdf)
 <use img/itemB.pdf>
-Package pdftex.def Info: img/itemB.pdf  used on input line 263.
+Package pdftex.def Info: img/itemB.pdf  used on input line 321.
 (pdftex.def)             Requested size: 321.51625pt x 195.2099pt.
 File: img/itemC.pdf Graphic file (type pdf)
 <use img/itemC.pdf>
-Package pdftex.def Info: img/itemC.pdf  used on input line 263.
+Package pdftex.def Info: img/itemC.pdf  used on input line 321.
 (pdftex.def)             Requested size: 321.51625pt x 195.2099pt.
-
-[9
+ [11
 
  <./img/itemB.pdf>]
 File: img/item.pdf Graphic file (type pdf)
 <use img/item.pdf>
-Package pdftex.def Info: img/item.pdf  used on input line 263.
+Package pdftex.def Info: img/item.pdf  used on input line 321.
 (pdftex.def)             Requested size: 321.51625pt x 195.2099pt.
 File: img/itemA.pdf Graphic file (type pdf)
 <use img/itemA.pdf>
-Package pdftex.def Info: img/itemA.pdf  used on input line 263.
+Package pdftex.def Info: img/itemA.pdf  used on input line 321.
 (pdftex.def)             Requested size: 321.51625pt x 195.2099pt.
 File: img/itemB.pdf Graphic file (type pdf)
 <use img/itemB.pdf>
-Package pdftex.def Info: img/itemB.pdf  used on input line 263.
+Package pdftex.def Info: img/itemB.pdf  used on input line 321.
 (pdftex.def)             Requested size: 321.51625pt x 195.2099pt.
 File: img/itemC.pdf Graphic file (type pdf)
 <use img/itemC.pdf>
-Package pdftex.def Info: img/itemC.pdf  used on input line 263.
+Package pdftex.def Info: img/itemC.pdf  used on input line 321.
 (pdftex.def)             Requested size: 321.51625pt x 195.2099pt.
- [10
+ [12
 
  <./img/itemC.pdf>]
-<img/iifs.pdf, id=476, 1011.78pt x 614.295pt>
+<img/iifs.pdf, id=542, 1011.78pt x 614.295pt>
 File: img/iifs.pdf Graphic file (type pdf)
 <use img/iifs.pdf>
-Package pdftex.def Info: img/iifs.pdf  used on input line 305.
+Package pdftex.def Info: img/iifs.pdf  used on input line 363.
 (pdftex.def)             Requested size: 160.75812pt x 97.59557pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 305.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 305.
+(Font)              <9> on input line 363.
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <9> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 305.
-
-LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <5> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 305.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 363.
 
 LaTeX Font Info:    Font shape `OT1/lmss/bx/it' in size <9> not available
-(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 305
+(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 363
 .
-LaTeX Font Info:    Font shape `OT1/lmss/bx/it' in size <5> not available
-(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 305
-.
-<img/tif.pdf, id=477, 1011.78pt x 614.295pt>
+<img/tif.pdf, id=543, 1011.78pt x 614.295pt>
 File: img/tif.pdf Graphic file (type pdf)
 <use img/tif.pdf>
-Package pdftex.def Info: img/tif.pdf  used on input line 305.
+Package pdftex.def Info: img/tif.pdf  used on input line 363.
 (pdftex.def)             Requested size: 160.75812pt x 97.59557pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 305.
+(Font)              <10> on input line 363.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 305.
+(Font)              <7> on input line 363.
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 305.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 363.
 
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <7> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 305.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 363.
 
 LaTeX Font Info:    Font shape `OT1/lmss/bx/it' in size <10> not available
-(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 305
+(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 363
 .
 LaTeX Font Info:    Font shape `OT1/lmss/bx/it' in size <7> not available
-(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 305
+(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 363
 .
- [11
+ [13
 
  <./img/iifs.pdf> <./img/tif.pdf>]
 File: img/iifs.pdf Graphic file (type pdf)
 <use img/iifs.pdf>
-Package pdftex.def Info: img/iifs.pdf  used on input line 305.
+Package pdftex.def Info: img/iifs.pdf  used on input line 363.
 (pdftex.def)             Requested size: 160.75812pt x 97.59557pt.
 File: img/tif.pdf Graphic file (type pdf)
 <use img/tif.pdf>
-Package pdftex.def Info: img/tif.pdf  used on input line 305.
-(pdftex.def)             Requested size: 160.75812pt x 97.59557pt.
- [12
-
-]
-File: img/iifs.pdf Graphic file (type pdf)
-<use img/iifs.pdf>
-Package pdftex.def Info: img/iifs.pdf  used on input line 305.
-(pdftex.def)             Requested size: 160.75812pt x 97.59557pt.
-File: img/tif.pdf Graphic file (type pdf)
-<use img/tif.pdf>
-Package pdftex.def Info: img/tif.pdf  used on input line 305.
-(pdftex.def)             Requested size: 160.75812pt x 97.59557pt.
- [13
-
-]
-File: img/iifs.pdf Graphic file (type pdf)
-<use img/iifs.pdf>
-Package pdftex.def Info: img/iifs.pdf  used on input line 305.
-(pdftex.def)             Requested size: 160.75812pt x 97.59557pt.
-File: img/tif.pdf Graphic file (type pdf)
-<use img/tif.pdf>
-Package pdftex.def Info: img/tif.pdf  used on input line 305.
+Package pdftex.def Info: img/tif.pdf  used on input line 363.
 (pdftex.def)             Requested size: 160.75812pt x 97.59557pt.
  [14
 
-] (Cut-it-short.toc) [15
-
-] (Cut-it-short.toc) [16
+]
+File: img/iifs.pdf Graphic file (type pdf)
+<use img/iifs.pdf>
+Package pdftex.def Info: img/iifs.pdf  used on input line 363.
+(pdftex.def)             Requested size: 160.75812pt x 97.59557pt.
+File: img/tif.pdf Graphic file (type pdf)
+<use img/tif.pdf>
+Package pdftex.def Info: img/tif.pdf  used on input line 363.
+(pdftex.def)             Requested size: 160.75812pt x 97.59557pt.
+ [15
 
 ]
-Overfull \vbox (7.19855pt too high) detected at line 368
+File: img/iifs.pdf Graphic file (type pdf)
+<use img/iifs.pdf>
+Package pdftex.def Info: img/iifs.pdf  used on input line 363.
+(pdftex.def)             Requested size: 160.75812pt x 97.59557pt.
+File: img/tif.pdf Graphic file (type pdf)
+<use img/tif.pdf>
+Package pdftex.def Info: img/tif.pdf  used on input line 363.
+(pdftex.def)             Requested size: 160.75812pt x 97.59557pt.
+ [16
+
+] (Cut-it-short.toc) [17
+
+] (Cut-it-short.toc) [18
+
+]
+Overfull \vbox (7.19855pt too high) detected at line 426
  []
 
-[17
+[19
 
 ]
-Overfull \vbox (7.19855pt too high) detected at line 368
- []
-
-[18
-
-]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 372.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\theta' on input line 372.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 372.
-
-(Cut-it-short.toc) [19
-
-]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 427.
-LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <12> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 427.
-
-LaTeX Font Info:    Font shape `OT1/lmss/bx/it' in size <12> not available
-(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 427
-.
-
-Overfull \vbox (10.02582pt too high) detected at line 427
+Overfull \vbox (7.19855pt too high) detected at line 426
  []
 
 [20
 
 ]
-Overfull \vbox (10.02582pt too high) detected at line 427
- []
 
-[21
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 430.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\theta' on input line 430.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 430.
+
+(Cut-it-short.toc) [21
 
 ]
-Overfull \vbox (10.02582pt too high) detected at line 427
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 485.
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <12> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 485.
+
+LaTeX Font Info:    Font shape `OT1/lmss/bx/it' in size <12> not available
+(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 485
+.
+
+Overfull \vbox (10.02582pt too high) detected at line 485
  []
 
 [22
 
 ]
-Overfull \vbox (10.02582pt too high) detected at line 427
+Overfull \vbox (10.02582pt too high) detected at line 485
  []
 
 [23
 
 ]
-Overfull \vbox (10.02582pt too high) detected at line 427
+Overfull \vbox (10.02582pt too high) detected at line 485
  []
 
 [24
 
 ]
-Overfull \vbox (10.02582pt too high) detected at line 427
+Overfull \vbox (10.02582pt too high) detected at line 485
  []
 
 [25
 
 ]
-Overfull \vbox (10.02582pt too high) detected at line 427
+Overfull \vbox (10.02582pt too high) detected at line 485
  []
 
 [26
 
 ]
-Overfull \vbox (10.02582pt too high) detected at line 427
+Overfull \vbox (10.02582pt too high) detected at line 485
  []
 
 [27
 
-] (Cut-it-short.toc) [28
+]
+Overfull \vbox (10.02582pt too high) detected at line 485
+ []
+
+[28
 
 ]
-<img/info.pdf, id=1082, 1011.78pt x 614.295pt>
-File: img/info.pdf Graphic file (type pdf)
-<use img/info.pdf>
-Package pdftex.def Info: img/info.pdf  used on input line 441.
-(pdftex.def)             Requested size: 289.36266pt x 175.68515pt.
-
-Overfull \vbox (3.54723pt too high) detected at line 441
+Overfull \vbox (10.02582pt too high) detected at line 485
  []
 
 [29
 
- <./img/info.pdf>]
-<img/infoDetails.pdf, id=1118, 1011.78pt x 614.295pt>
-File: img/infoDetails.pdf Graphic file (type pdf)
-<use img/infoDetails.pdf>
-Package pdftex.def Info: img/infoDetails.pdf  used on input line 449.
+] (Cut-it-short.toc) [30
+
+]
+<img/info.pdf, id=1148, 1011.78pt x 614.295pt>
+File: img/info.pdf Graphic file (type pdf)
+<use img/info.pdf>
+Package pdftex.def Info: img/info.pdf  used on input line 499.
 (pdftex.def)             Requested size: 289.36266pt x 175.68515pt.
 
-Overfull \vbox (3.54723pt too high) detected at line 449
- []
-
-[30
-
- <./img/infoDetails.pdf>]
-<img/BIAS.pdf, id=1153, 1011.78pt x 614.295pt>
-File: img/BIAS.pdf Graphic file (type pdf)
-<use img/BIAS.pdf>
-Package pdftex.def Info: img/BIAS.pdf  used on input line 457.
-(pdftex.def)             Requested size: 289.36266pt x 175.68515pt.
-
-Overfull \vbox (4.5917pt too high) detected at line 457
+Overfull \vbox (3.54723pt too high) detected at line 499
  []
 
 [31
 
- <./img/BIAS.pdf>] (Cut-it-short.toc) [32
+ <./img/info.pdf>]
+<img/infoDetails.pdf, id=1185, 1011.78pt x 614.295pt>
+File: img/infoDetails.pdf Graphic file (type pdf)
+<use img/infoDetails.pdf>
+Package pdftex.def Info: img/infoDetails.pdf  used on input line 507.
+(pdftex.def)             Requested size: 289.36266pt x 175.68515pt.
 
-] [33
+Overfull \vbox (3.54723pt too high) detected at line 507
+ []
 
-] [34
+[32
+
+ <./img/infoDetails.pdf>]
+<img/BIAS.pdf, id=1220, 1011.78pt x 614.295pt>
+File: img/BIAS.pdf Graphic file (type pdf)
+<use img/BIAS.pdf>
+Package pdftex.def Info: img/BIAS.pdf  used on input line 515.
+(pdftex.def)             Requested size: 289.36266pt x 175.68515pt.
+
+Overfull \vbox (4.5917pt too high) detected at line 515
+ []
+
+[33
+
+ <./img/BIAS.pdf>] (Cut-it-short.toc) [34
+
+] [35
+
+] [36
 
 ]
-<img/codeSlide.png, id=1282, 1151.30125pt x 1151.30125pt>
-File: img/codeSlide.png Graphic file (type png)
-<use img/codeSlide.png>
-Package pdftex.def Info: img/codeSlide.png  used on input line 501.
-(pdftex.def)             Requested size: 128.60452pt x 128.5935pt.
- [35
-
- <./img/codeSlide.png>]
 \tf@nav=\write6
 \openout6 = `Cut-it-short.nav'.
 
@@ -2022,20 +2017,20 @@ Package pdftex.def Info: img/codeSlide.png  used on input line 501.
 
  (Cut-it-short.aux)
 Package rerunfilecheck Info: File `Cut-it-short.out' has not changed.
-(rerunfilecheck)             Checksum: 5812434C8B2ADDFA3AAB4ACCB5CC3FE7;588.
+(rerunfilecheck)             Checksum: 5D7BB5EFF32988267B35C9E3BD4F8289;588.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 32039 strings out of 480236
- 667237 string characters out of 2880083
- 1084487 words of memory out of 3000000
- 47652 multiletter control sequences out of 15000+200000
+ 32044 strings out of 480236
+ 667153 string characters out of 2880083
+ 1084794 words of memory out of 3000000
+ 47656 multiletter control sequences out of 15000+200000
  663466 words of font info for 138 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 111i,17n,112p,465b,1012s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 111i,17n,112p,465b,1000s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/huawei/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc
 }{C:/Users/huawei/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.en
 c}{C:/Users/huawei/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.e
@@ -2061,9 +2056,9 @@ lm/lmsso9.pfb><C:/Users/huawei/AppData/Local/Programs/MiKTeX/fonts/type1/public
 c/lm/lmsy8.pfb><C:/Users/huawei/AppData/Local/Programs/MiKTeX/fonts/type1/publi
 c/lm/lmtt10.pfb><C:/Users/huawei/AppData/Local/Programs/MiKTeX/fonts/type1/publ
 ic/lm/lmtt12.pfb>
-Output written on Cut-it-short.pdf (35 pages, 2509707 bytes).
+Output written on Cut-it-short.pdf (36 pages, 2460759 bytes).
 PDF statistics:
- 1392 PDF objects out of 1440 (max. 8388607)
- 85 named destinations out of 1000 (max. 500000)
- 34080 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 1428 PDF objects out of 1440 (max. 8388607)
+ 87 named destinations out of 1000 (max. 500000)
+ 34099 words of extra memory for PDF output out of 35830 (max. 10000000)
 
