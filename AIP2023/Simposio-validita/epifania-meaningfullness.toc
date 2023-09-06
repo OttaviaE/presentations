@@ -1,0 +1,7 @@
+\babel@toc {italian}{}
+\babel@toc {italian}{}
+\beamer@sectionintoc {1}{La significanza}{2}{0}{1}
+\beamer@sectionintoc {2}{Il caso}{4}{0}{2}
+\beamer@subsectionintoc {2}{1}{La Torre di Londra}{5}{0}{2}
+\beamer@subsectionintoc {2}{2}{I metodi di scoring}{9}{0}{2}
+\beamer@sectionintoc {3}{Lo studio}{11}{0}{3}
