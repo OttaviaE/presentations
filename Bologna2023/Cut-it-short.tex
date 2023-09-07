@@ -510,7 +510,37 @@ Item Response Theory
 	
 
 
-\section[Practical Implications]{Practical Implications}
+\section[Practical Implications]{Simulation study}
+
+\begin{frame}{Simulation}
+
+Create STFs (10-item, 30-item, 50-item, 70-item, 90-item) from a full-length test of 100 items:
+
+		\begin{columns}[T]
+		\begin{column}{.50\linewidth}
+			\begin{center}
+				100 items $j$:
+			\end{center}
+			\begin{itemize}
+				\item $b \sim \mathcal{U}(-3,3)$
+				\item  $a \sim \mathcal{U}(0.40,2)$
+			\end{itemize}
+			
+		\end{column}
+		
+		\begin{column}{.50\linewidth}
+		\begin{center}
+				1000 respondents $p$
+			\end{center}
+			\begin{enumerate}
+				\item Normal distribution $p \sim \mathcal{N}(0,1)$
+				\item Positive skewed distribution $p \sim Beta(1, 100)$ \tiny (linearly transformed to obtain negative values) 
+				\item \normalsize Uniform distribution $p \sim \mathcal{U}(-3,3)$
+			\end{enumerate}
+			
+		\end{column}
+	\end{columns}
+\end{frame}
 
 \begin{frame}{An overall look}
 \begin{figure}
