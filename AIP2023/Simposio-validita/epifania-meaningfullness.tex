@@ -1,6 +1,6 @@
 \documentclass{beamer}
 \usetheme{Montpellier}
-%\usecolortheme{rose}
+\usecolortheme{dove}
 \useinnertheme{rounded}
 \setbeamersize{text margin left=5mm,text margin right=10mm}
 \usefonttheme{serif}
@@ -14,17 +14,25 @@
 \usepackage{multicol}
 \definecolor{myGreen}{RGB}{54, 114, 89}
 \definecolor{unipd}{RGB}{155, 0, 20}
+\definecolor{sbj1}{HTML}{77AC30}
+\definecolor{sbj2}{HTML}{EDB120}
+\definecolor{sbj3}{HTML}{0072BD}
+\definecolor{sbj4}{HTML}{1F78B4}
+\definecolor{sbj5}{HTML}{33A02C}
+\definecolor{sbj6}{HTML}{E31A1C}
 % Per il tema Montpellier
-\setbeamercolor{separation line}{bg=myGreen!20}
-\setbeamercolor{title in head/foot}{bg=white, fg=myGreen}
-\setbeamercolor{section in head/foot}{bg=white, fg=myGreen}
-\setbeamercolor{subsection in head/foot}{bg=white, fg=myGreen}
-\setbeamercolor{background canvas}{bg=white}
-\setbeamercolor{title}{fg=unipd}
-\setbeamercolor{item}{fg =myGreen}
-\setbeamercolor{frametitle}{fg = myGreen}
-\setbeamercolor{section in toc}{fg=myGreen!80}
-\setbeamercolor{subsection in toc}{fg=black}
+%\setbeamercolor{separation line}{bg=myGreen!20}
+\setbeamercolor{separation line}{bg=black!20}
+%\setbeamercolor{title in head/foot}{bg=white, fg=myGreen}
+\setbeamercolor{title in head/foot}{bg=white, fg=black}
+%\setbeamercolor{section in head/foot}{bg=white, fg=myGreen}
+%\setbeamercolor{subsection in head/foot}{bg=white, fg=myGreen}
+%\setbeamercolor{background canvas}{bg=white}
+%\setbeamercolor{title}{fg=myGreen}
+%\setbeamercolor{item}{fg =myGreen}
+%\setbeamercolor{frametitle}{fg = myGreen}
+%\setbeamercolor{section in toc}{fg=myGreen!80}
+%\setbeamercolor{subsection in toc}{fg=black}
 \setbeamerfont{section in toc}{series=\bfseries,size=\normalsize}
 \setbeamerfont{frametitle}{series=\bfseries}
 %\setbeamerfont{title}{family=\scshape}
@@ -82,7 +90,7 @@
 }
 
 
-\title[Meaningfullness]{Le misure in psicologia sono significanti?\\ Il caso del test della Torre di Londra.}
+\title[Meaningfulness]{Le misure in psicologia sono significanti?\\ Il caso del test della Torre di Londra.}
 \author[Epifania et al.]{\textbf{Ottavia M. Epifania}, Luca Stefanutti, Pasquale Anselmi,  Andrea Brancaccio, Debora de Chiusole}
 \institute [UniPd] {
 	\includegraphics[width=10mm]{unipd.png}\\ 
@@ -97,25 +105,33 @@ Dipartimento di Filosofia, Sociologia, Pedagogia e Psicologia Applicata,\\	Unive
 		\maketitle
 	\end{frame}
 
-\section{La significanza}
+\section{Meaningfulness}
 
 \begin{frame}
 	
+	In the measurement of lengths, the ratio between the measures of two fixed lengths $a$ and $b$ is constant and independent of the measurement unit:
+	\[
+	\frac{\varphi(a)}{\varphi(b)} = \frac{\varphi'(a)}{\varphi'(b)},
+	\]
+	where $\varphi$ and $\varphi'$ are two different scales of measurement of length.
 	
+	
+	\begin{block}{Meaningful comparisons}
+		
+		The comparison between \emph{a} and \emph{b} is meaningful if it is invariant under all the unit transformations. 
+			
+	\end{block}
 \end{frame}
 
-\section{Il caso}
-\subsection{La Torre di Londra}
+\section{The case in point}
+\subsection{Tower of London}
 \begin{frame}
 	
-	L'obietivo della Torre di Londra (ToL) è di raggiungere lo \emph{stato obiettivo} da uno \emph{stato iniziale} nel minimo numero di mosse.\\
-	\vspace{.1cm}
-	\vspace{.2cm}
 	\begin{columns}
 		\column{0.45\textwidth}
 		\begin{center}
 			\begin{tikzpicture}[scale=1.2]
-				\node[mark=diamond,inner sep = 0pt, minimum size = 4pt] (23) at (  -1.5,  3.5*1.73) {
+				\node (start) [mark=diamond,inner sep = 0pt, minimum size = 4pt] (23) at (  -1.5,  3.5*1.73) {
 					\begin{tikzpicture}[scale=.6]
 						\draw[draw=black!20,fill=black!20] (0,5) rectangle (6,5.3);
 						\draw[draw=black!20,fill=black!20] (0.85,5) rectangle (1.15,8.5);
@@ -127,12 +143,12 @@ Dipartimento di Filosofia, Sociologia, Pedagogia e Psicologia Applicata,\\	Unive
 					\end{tikzpicture}
 				};
 			\end{tikzpicture}\\
-			Stato iniziale
+			Starting configuration
 		\end{center}
 		\column{0.45\textwidth}
 		\begin{center}
 			\begin{tikzpicture}[scale=1.2]
-				\node[mark=diamond,inner sep = 0pt, minimum size = 4pt] (23) at (  -1.5,  3.5*1.73) {
+				\node (goal) [mark=diamond,inner sep = 0pt, minimum size = 4pt] (23) at (  -1.5,  3.5*1.73) {
 					\begin{tikzpicture}[scale=.6]
 						\draw[draw=black!20,fill=black!20] (0,5) rectangle (6,5.3);
 						\draw[draw=black!20,fill=black!20] (0.85,5) rectangle (1.15,8.5);
@@ -143,78 +159,78 @@ Dipartimento di Filosofia, Sociologia, Pedagogia e Psicologia Applicata,\\	Unive
 						\draw[fill=blue] (3,5.8) circle (15pt);
 					\end{tikzpicture}
 				};
+				
 			\end{tikzpicture}\\
-			Stato obiettivo
+			Goal configuration 
 		\end{center}
 	\end{columns}
+	\pause
+	\vspace{3mm}
 	
-\end{frame}
-
-\begin{frame}{Caratteristiche delle Torre di Londra}{Kaller, Unterrainer, Rahm, \& Halsband (2004)}
-	Le caratteristiche strutturali che influenzano le performance di pianificazione hai problem della TOL sono:\\
-	\vspace{.3cm}
+	\begin{small}
+		Problem difficulty influenced by:
+	
 	\begin{itemize}
-		\item Il numero di mosse minimo per risolvere il problema\\
-		\vspace{.2cm}
-		\item Il numero di soluzioni alternative \\
-		\vspace{.2cm}
-		\item La gerarchia dello stato iniziale e/o finale\\
+		\item Number of minimum moves to reach the goal configuration
+		\item Number of  alternative paths for reaching the goal configuration
+		\item Hierarchy of the starting/goal configuration
 	\end{itemize}
-	\vspace{.2cm}
-	\hspace{.5cm}
+	\end{small}
+
+	
 	\begin{tikzpicture}[scale=1.2]
-		\node[mark=diamond,inner sep = 0pt, minimum size = 4pt] (23) at (  -1.5,  3.5*1.73) {
-			\begin{tikzpicture}[scale=.4]
-				\draw[draw=black!20,fill=black!20] (0,5) rectangle (6,5.3);
-				\draw[draw=black!20,fill=black!20] (0.85,5) rectangle (1.15,8.5);
-				\draw[draw=black!20,fill=black!20] (2.85,5) rectangle (3.15,7.5);
-				\draw[draw=black!20,fill=black!20] (4.85,5) rectangle (5.15,6.5);
-				\draw[fill=yellow] (1,5.8) circle (15pt);
-				\draw[fill=red] (1,6.85) circle (15pt);
-				\draw[fill=blue] (3,5.8) circle (15pt);
-			\end{tikzpicture}
-		};
-		
-		\node[mark=diamond,inner sep = 0pt, minimum size = 4pt] (23) at (  2,  3.5*1.73) {
-			\begin{tikzpicture}[scale=.4]
-				\draw[draw=black!20,fill=black!20] (0,5) rectangle (6,5.3);
-				\draw[draw=black!20,fill=black!20] (0.85,5) rectangle (1.15,8.5);
-				\draw[draw=black!20,fill=black!20] (2.85,5) rectangle (3.15,7.5);
-				\draw[draw=black!20,fill=black!20] (4.85,5) rectangle (5.15,6.5);
-				\draw[fill=yellow] (1,5.8) circle (15pt);
-				\draw[fill=red] (5,5.8) circle (15pt);
-				\draw[fill=blue] (3,5.8) circle (15pt);
-			\end{tikzpicture}
-		};
-		
-		\node[mark=diamond,inner sep = 0pt, minimum size = 4pt] (23) at (  5.5,  3.5*1.73) {
-			\begin{tikzpicture}[scale=.4]
-				\draw[draw=black!20,fill=black!20] (0,5) rectangle (6,5.3);
-				\draw[draw=black!20,fill=black!20] (0.85,5) rectangle (1.15,8.5);
-				\draw[draw=black!20,fill=black!20] (2.85,5) rectangle (3.15,7.5);
-				\draw[draw=black!20,fill=black!20] (4.85,5) rectangle (5.15,6.5);
-				\draw[fill=yellow] (1,5.8) circle (15pt);
-				\draw[fill=red] (1,6.85) circle (15pt);
-				\draw[fill=blue] (1,7.9) circle (15pt);
-			\end{tikzpicture}
-		};
-		
-	\end{tikzpicture}
+	\node[mark=diamond,inner sep = 0pt, minimum size = 4pt] (23) at (  -1.5,  3.5*1.73) {
+		\begin{tikzpicture}[scale=.4]
+			\draw[draw=black!20,fill=black!20] (0,5) rectangle (6,5.3);
+			\draw[draw=black!20,fill=black!20] (0.85,5) rectangle (1.15,8.5);
+			\draw[draw=black!20,fill=black!20] (2.85,5) rectangle (3.15,7.5);
+			\draw[draw=black!20,fill=black!20] (4.85,5) rectangle (5.15,6.5);
+			\draw[fill=yellow] (1,5.8) circle (15pt);
+			\draw[fill=red] (1,6.85) circle (15pt);
+			\draw[fill=blue] (3,5.8) circle (15pt);
+		\end{tikzpicture}
+	};
+	
+	\node[mark=diamond,inner sep = 0pt, minimum size = 4pt] (23) at (  2,  3.5*1.73) {
+		\begin{tikzpicture}[scale=.4]
+			\draw[draw=black!20,fill=black!20] (0,5) rectangle (6,5.3);
+			\draw[draw=black!20,fill=black!20] (0.85,5) rectangle (1.15,8.5);
+			\draw[draw=black!20,fill=black!20] (2.85,5) rectangle (3.15,7.5);
+			\draw[draw=black!20,fill=black!20] (4.85,5) rectangle (5.15,6.5);
+			\draw[fill=yellow] (1,5.8) circle (15pt);
+			\draw[fill=red] (5,5.8) circle (15pt);
+			\draw[fill=blue] (3,5.8) circle (15pt);
+		\end{tikzpicture}
+	};
+	
+	\node[mark=diamond,inner sep = 0pt, minimum size = 4pt] (23) at (  5.5,  3.5*1.73) {
+		\begin{tikzpicture}[scale=.4]
+			\draw[draw=black!20,fill=black!20] (0,5) rectangle (6,5.3);
+			\draw[draw=black!20,fill=black!20] (0.85,5) rectangle (1.15,8.5);
+			\draw[draw=black!20,fill=black!20] (2.85,5) rectangle (3.15,7.5);
+			\draw[draw=black!20,fill=black!20] (4.85,5) rectangle (5.15,6.5);
+			\draw[fill=yellow] (1,5.8) circle (15pt);
+			\draw[fill=red] (1,6.85) circle (15pt);
+			\draw[fill=blue] (1,7.9) circle (15pt);
+		\end{tikzpicture}
+	};
+	
+\end{tikzpicture}
 \end{frame}
 
 
-\begin{frame}{Il Test della Torre di Londra (ToL test)}{Shallice (1982)}
-	\begin{columns}
+
+
+\begin{frame}{The Tower of London Test (ToL Test) }{Shallice (1982)}
+	\begin{columns}[T]
 		\column{0.45\textwidth}
 		
 		\begin{center}
 			\small
 			\begin{itemize}
-				\item Nello spazio problema della ToL è possibile definire $36\times 35=1260$ problemi
-				\vspace{.2cm}   
-				\item Shallice nel 1982 ha scelto 12 problemi   
+				\item 12 problems    
 				\vspace{.2cm}
-				\item Il ToL test ha lo stato iniziale fissato e gli stati obiettivo che variano 
+				\item Same starting configuration
 			\end{itemize}
 			
 			\vspace{.3cm}
@@ -237,14 +253,13 @@ Dipartimento di Filosofia, Sociologia, Pedagogia e Psicologia Applicata,\\	Unive
 		\vspace{- .5cm}
 		\begin{center}    
 			\scriptsize
-			I dodici problemi di Shallice \\
 			
-			\vspace{ .2cm}
-			\begin{tabular}{ccc}
+			\scalebox{.80}{
+				\begin{tabular}{ccc}
 				\hline
-				Problemi	&	N di mosse	&	N di percorsi	\\
+				Problem	&	Minimum moves	&	Alternative paths	\\
 				\hline
-				Esempio	&	2	&	1	\\
+				Example	&	2	&	1	\\
 				1	&	2	&	1	\\
 				2	&	2	&	1	\\
 				3	&	3	&	2	\\
@@ -259,82 +274,129 @@ Dipartimento di Filosofia, Sociologia, Pedagogia e Psicologia Applicata,\\	Unive
 				12	&	5	&	2	\\
 				\hline
 			\end{tabular}
+			}
+
+		
 		\end{center}
 	\end{columns}
 \end{frame}
 
-\subsection{I metodi di scoring}
+\subsection{Scoring systems}
 
 \begin{frame}
 
-		\begin{alertblock}{Shallice scoring 1 (SH1)}
-\small{
-	\begin{tabular}{c c c c}
-	\hline
-	\multicolumn{2}{c}{Tempi di risposta} & \multicolumn{2}{c}{Accuratezze} \\
-	\hline
-	Scoring & Se \emph{tr} & Scoring & Se \\\hline
-	1 & $< 60$ \emph{s} & 1 & Corretto al primo tentativo \\
-	0 & $> 60$ \emph{s} & 0 & Più di un tentativo \\ \hline
+
+\centering
+\scalebox{.80}{
+
+\begin{tabular}{l c c c c}
+\hline
+Scoring & Attempts & Response times & Item score & Total score \\\hline
+Shallice 1 & $\checkmark$ & $\checkmark$ & 0-1 & 0-12 \\
+Shallice 2 & $\times$ & $\checkmark$ &0-3 & 0-36\\
+Anderson et al. & $\checkmark$ & $\checkmark$ & 0-9& 0-108 \\
+Kirkorian et al. & $\checkmark$ & $\times$ & 0-3& 0-36 \\\hline
+
+
 \end{tabular}
 }
-					
-			
-			Punteggio di ogni item: $0$ -- $1$
-			
-			Punteggio massimo: 12
+\visible<2> {
+\begin{tikzpicture}[overlay]
+\draw[red,ultra thick,rounded corners] (-5.5,0.5) rectangle (6,1.3);
+\end{tikzpicture}
+}
 
-		
-		
+\vspace{-2mm}
+\onslide<2->
+\begin{columns}[T]
+	\begin{column}{.50\linewidth}
+		\begin{center}
+			Shallice 2 -- SH2
+		\end{center}
+		\small
+			 For each of the 12 items:
+			\bigskip
 			
-					\end{alertblock}
-		
-				\begin{exampleblock}{Shallice scoring 2}
-		\scriptsize
-		
-\begin{tabular}{c c}
-	\hline
-	Scoring & Tempo di risposta \\ \hline
-	3 & $< 15$ \emph{s} \\
-	2 & $< 30$ \emph{s} \\
-	1 & $< 60$ \emph{s} \\
-	0 & $< 60$ \emph{s} \\
-	\hline
-\end{tabular}
-				\end{exampleblock}
-		
-
-				\begin{exampleblock}{AN}
+			\centering
+			\begin{tabular}{cc}
+				\hline
+				Assign & if time is\\
+				\hline
+				3 & $<15$ s \\
+				2 & $<30$ s \\
+				1 & $<60$ s \\
+				0 & $\ge60$ s \\
+				\hline
+			\end{tabular}
+			\bigskip
 			
-		\end{exampleblock}
-		
-		\begin{alertblock}{KR}
+	\end{column}
+	
+		\begin{column}{.50\linewidth}
+			\begin{center}
+			Anderson et al. -- AN
+		\end{center}
+		\small
+		\centering
+			 For each of the 12 items:
+				\bigskip			
+				
+			\begin{tabular}{cl}
+				\hline
+				Assign & if time is\\
+				\hline
+				9 & $<6$ s \\
+				8 & $6-10$ s \\
+				7 & $11-20$ s \\
+				6 & $21-40$ s \\
+				5 & $41-60$ s \\
+				0 & $>60$ s \\
+				\hline
+			\end{tabular}
+			\vspace{1.5mm}
 			
-		\end{alertblock}
-
-
+			Subtract the number of unsuccessful attempts
+	\end{column}
+\end{columns}
 \end{frame}
 
-\section{Lo studio}
+
+
+\section{Real data application}
 	
-	\begin{frame}{Il campione}
+	\begin{frame}{Raw data}
+	
+	\begin{columns}
+	
+	\begin{column}{.50\linewidth}
+	
+	\begin{center}
+	Accuracy score
+	\end{center}
+		\centering
+	\includegraphics[width=\linewidth]{img/descrittive_accuratezze.pdf}
 		
-		\begin{itemize}
-			\item Dettagli sulla composizione del campione (genere per fasce di età che ho definito)
-			
-			\item Dettagli sulla loro performance ``grezza'' su accuratezze e tempi per maschi e femmine $\rightarrow$ In realtà non è così semplice. Considero solo il primo tentativo? Considero il tempo della somma dei tre tentativi? come considero la rispsita corretta? Io sarei per: 
-			
-			\begin{itemize}
-				\item Considero solo il tempo al primo tentativo
-				\item Considero l'item corretto solo se risolto al primo tentativo
-			\end{itemize}
-			
-		\end{itemize}
+	\end{column}
+	
+		\begin{column}{.50\linewidth}
+		
+			\begin{center}
+	Response times
+	\end{center}
+		\centering
+		
+			\includegraphics[width=\linewidth]{img/descrittive_tempi.pdf}
+	\end{column}
+	\end{columns}
+	
+
+		
+		
 		
 			\end{frame}
 
 
-\begin{frame}{Le correlazioni}
+\begin{frame}
 	
 	\begin{figure}
 		\centering
@@ -344,24 +406,32 @@ Dipartimento di Filosofia, Sociologia, Pedagogia e Psicologia Applicata,\\	Unive
 \end{frame}
 
 
-\begin{frame}{Quanto è realmente grave?}
+\begin{frame}{Is it really bad...?}
 	
+Respondent  $i,j \in \{1, \ldots N\}$ 
 
-		
-Ogni soggetto viene confrontato contro tutti gli altri: 
+ 
 
 \vspace{3mm}
 
 \begin{itemize}
-\item  Confronto SH2 ($\Delta_{\text{SH2}}$): calcolata la differenza tra i punteggi standardizzati di SH2 tra coppie di soggetti 
+	
+	\item  AN Comparison ($\Delta_{\text{AN}}$): The standardized AN score of each subject $i$ is compared against the standardized AN score of every other subject $j$
 
-\item  Confronto AN ($\Delta_{\text{AN}}$): calcolata la differenza tra i punteggi standardizzati di AN tra coppie di soggetti (ogni soggetto confrontato con tutti gli altri)
+\begin{equation*}
+ \Delta_{\text{AN}_{ij}} = z_{\text{AN}_i} - z_{\text{AN}_j}
+\end{equation*}
+
+	\item  SH2 Comparison ($\Delta_{\text{SH2}}$): The standardized SH2 score of each subject $i$ is compared against the standardized SH2 score of every other subject $j$
+
+\begin{equation*}
+\Delta_{\text{SH2}_{ij}} = z_{\text{SH2}_i} - z_{\text{SH2}_j}
+\end{equation*}
+
 \end{itemize}
 
 
-\begin{center}
-	$\Delta_{\text{SH2}}$ vs. $\Delta_{\text{AN}}$
-\end{center}
+
 
 
 \end{frame}
@@ -378,5 +448,80 @@ Ogni soggetto viene confrontato contro tutti gli altri:
 	\end{overprint}
 \end{frame}
 
+
+\begin{frame}
+	\begin{columns}[T]
+		\begin{column}{.50\linewidth}
+			\begin{center}
+				$\Delta_{\text{AN}} > 2$ \& $\Delta_{\text{SH2}} 	\approx 0$ 
+			\end{center}
+		\begin{figure}
+			\includegraphics[width=\linewidth]{img/time_an_group_4_8.pdf}
+		\end{figure}
+		
+		\scalebox{.55}{
+					\begin{tabular}{c c c c c}
+						\hline
+			& $z_{\text{AN}}$ & $z_{\text{SH2}}$ & Accuracy & Time (sd) \\ \hline
+			\textbf{\textcolor{sbj3}{sbj1}}	 & $-1.55$ & $0.43$ & 0.75 & $24.10$ ($15.60$) \\
+			\textbf{\textcolor{sbj2}{sbj2}} & $0.55$ & $0.20$ & 0.75& $10.51$ ($3.36$)\\				
+			\hline
+			& & & & \\\hline
+			& \multicolumn{2}{c}{$\Delta_{\text{AN}}$ } & \multicolumn{2}{c}{$\Delta_{\text{SH2}}$ } \\ \hline
+			\textbf{\textcolor{sbj2}{sbj2}} $-$ \textbf{\textcolor{sbj3}{sbj1}}& \multicolumn{2}{c}{$2.10$} & \multicolumn{2}{c}{$-0.23$}\\\hline
+
+		\end{tabular}
+		}
+			\centering
+
+		\end{column}
+			\begin{column}{.50\linewidth}
+			\begin{center}
+			$\Delta_{\text{AN}} \approx 0$ \& $\Delta_{\text{SH2}}  > 2 $ 
+		\end{center}
+		\begin{figure}
+			\includegraphics[width=\linewidth]{img/time_sh_group_4_8.pdf}
+		\end{figure}
+		\scalebox{.55}{
+			\begin{tabular}{c c c c c}
+				\hline
+				& $z_{\text{AN}}$ & $z_{\text{SH2}}$ & Accuracy & Time (sd) \\ \hline
+				\textbf{\textcolor{sbj6}{sbj3}}	 & $-0.15$ & $1.55$ & 0.75 & $11.14$ ($4.96$) \\
+				\textbf{\textcolor{sbj5}{sbj4}} & $0.20$ & $-0.70$ & 0.58& $10.72$ ($8.60$)\\				
+				\hline
+				& & & & \\\hline
+				& \multicolumn{2}{c}{$\Delta_{\text{AN}}$ } & \multicolumn{2}{c}{$\Delta_{\text{SH2}}$ } \\ \hline
+				\textbf{\textcolor{sbj6}{sbj3}} $-$ \textbf{\textcolor{sbj5}{sbj4}}& \multicolumn{2}{c}{$-0.15$} & \multicolumn{2}{c}{$2.25$}\\\hline
+				
+			\end{tabular}
+		}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\section{Final remarks}
+
+\begin{frame}
+	
+	\begin{block}{Highlights}
+		
+		\begin{itemize}
+			\item Different scoring systems $\rightarrow$ The focus is shifted: Fast and furious or slow and steady?
+			\item Different scoring systems might favor a cognitive theory over a contrasting one (raising also replicability issues)
+		\end{itemize}
+	\end{block}
+	
+	
+	\begin{alertblock}{But}
+		
+		
+		What if the performance of the respondents could suggest the most appropriate scoring system? Currently underway
+	\end{alertblock}
+	
+\end{frame}
+
+\begin{frame}
+	Live long and prosper
+\end{frame}
  
 \end{document}
