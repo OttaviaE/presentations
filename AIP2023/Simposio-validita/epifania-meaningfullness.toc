@@ -5,4 +5,4 @@
 \beamer@subsectionintoc {2}{1}{Tower of London}{7}{0}{2}
 \beamer@subsectionintoc {2}{2}{Scoring systems}{11}{0}{2}
 \beamer@sectionintoc {3}{Real data application}{14}{0}{3}
-\beamer@sectionintoc {4}{Final remarks}{21}{0}{4}
+\beamer@sectionintoc {4}{Final remarks}{20}{0}{4}

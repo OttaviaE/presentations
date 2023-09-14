@@ -1,4 +1,4 @@
-\documentclass[aspectratio=149]{beamer}
+\documentclass[aspectratio=149, xcolor=table]{beamer}
 \usetheme{Montpellier}
 \usecolortheme{dove}
 \useinnertheme{rounded}
@@ -75,6 +75,36 @@
 \tikzstyle{item} = [rectangle, rounded corners, minimum width=0.5cm, minimum height=1cm, text width =1.5cm, text centered, draw=black]
 \tikzstyle{arrow} = [thick,->,>=stealth]
 
+% allegedly, il codice che viene dopo permette di cambiare colore alle celle 
+
+\makeatletter
+\def\rowcolor{\noalign{\ifnum0=`}\fi\bmr@rowcolor}
+\newcommand<>{\bmr@rowcolor}{%
+	\alt#1%
+	{\global\let\CT@do@color\CT@@do@color\@ifnextchar[\CT@rowa\CT@rowb}% 
+	{\ifnum0=`{\fi}\@gooble@rowcolor}% 
+}
+
+\newcommand{\@gooble@rowcolor}[2][]{\@gooble@rowcolor@}
+\newcommand{\@gooble@rowcolor@}[1][]{\@gooble@rowcolor@@}
+\newcommand{\@gooble@rowcolor@@}[1][]{\ignorespaces}
+\makeatother
+
+
+
+\makeatletter
+\def\cellcolor{{\ifnum0=`}\fi\bmr@cellcolor}
+\newcommand<>{\bmr@cellcolor}{%
+	\alt#1%
+	{\global\let\CT@do@color\CT@@do@color\@ifnextchar[\CT@rowa\CT@rowb}% 
+	{\ifnum0=`{\fi}\@gooble@cellcolor}% 
+}
+
+\newcommand{\@gooble@cellcolor}[2][]{\@gooble@cellcolor@}
+\newcommand{\@gooble@cellcolor@}[1][]{\@gooble@cellcolor@@}
+\newcommand{\@gooble@cellcolor@@}[1][]{\ignorespaces}
+\makeatother
+
 \AtBeginSection[]
 {
 	\begin{frame}
@@ -106,6 +136,7 @@ Dipartimento di Filosofia, Sociologia, Pedagogia e Psicologia Applicata,\\	Unive
 	\end{frame}
 
 \section{Meaningfulness}
+
 
 \begin{frame}
 	
@@ -310,19 +341,15 @@ Dipartimento di Filosofia, Sociologia, Pedagogia e Psicologia Applicata,\\	Unive
 \begin{tabular}{l c c c c}
 \hline
 Scoring & Attempts & Response times & Item score & Total score \\\hline
-Shallice 1 & $\checkmark$ & $\checkmark$ & 0-1 & 0-12 \\
-Shallice 2 & $\times$ & $\checkmark$ &0-3 & 0-36\\
-Anderson et al. & $\checkmark$ & $\checkmark$ & 0-9& 0-108 \\
-Kirkorian et al. & $\checkmark$ & $\times$ & 0-3& 0-36 \\\hline
+\textcolor<2->{black!15}{Shallice 1} & \textcolor<2->{black!15}{$\checkmark$} & \textcolor<2->{black!15}{$\checkmark$} & \textcolor<2->{black!15}{0-1} & \textcolor<2->{black!15}{0-12} \\
+ \cellcolor<2>{black!20}Shallice 2 & $\times$ & $\checkmark$ &0-3 & 0-36\\
+ \cellcolor<2>{black!20}Anderson et al. & $\checkmark$ & $\checkmark$ & 0-9& 0-108 \\
+\textcolor<2->{black!15}{Kirkorian et al.} & \textcolor<2->{black!15}{$\checkmark$} & \textcolor<2->{black!15}{$\times$} & \textcolor<2->{black!15}{0-3}& \textcolor<2->{black!15}{0-36} \\\hline
 
 
 \end{tabular}
 }
-\visible<2> {
-\begin{tikzpicture}[overlay]
-\draw[red,ultra thick,rounded corners] (-5.5,0.5) rectangle (6,1.3);
-\end{tikzpicture}
-}
+
 
 \vspace{-2mm}
 \onslide<2->
@@ -382,40 +409,35 @@ Kirkorian et al. & $\checkmark$ & $\times$ & 0-3& 0-36 \\\hline
 
 \section{Real data application}
 	
-	\begin{frame}
-		
-		$n = 343$, F $= 49$\%
-		
-		 
-	
-	\begin{columns}
-	
-	\begin{column}{.50\linewidth}
-	
-	\begin{center}
-	Accuracy score
-	\end{center}
-		\centering
-	\includegraphics[width=\linewidth]{img/descrittive_accuratezze.pdf}
-		
-	\end{column}
-	
-		\begin{column}{.50\linewidth}
-		
-			\begin{center}
-	Response times
-	\end{center}
-		\centering
-		
-			\includegraphics[width=\linewidth]{img/descrittive_tempi.pdf}
-	\end{column}
-	\end{columns}
-	
-
-		
-		
-		
-			\end{frame}
+%	\begin{frame}
+%		
+%		$n = 343$, F $= 49$\%
+%		
+%		 
+%	
+%	\begin{columns}
+%	
+%	\begin{column}{.50\linewidth}
+%	
+%	\begin{center}
+%	Accuracy score
+%	\end{center}
+%		\centering
+%	\includegraphics[width=\linewidth]{img/descrittive_accuratezze.pdf}
+%		
+%	\end{column}
+%	
+%		\begin{column}{.50\linewidth}
+%		
+%			\begin{center}
+%	Response times
+%	\end{center}
+%		\centering
+%		
+%			\includegraphics[width=\linewidth]{img/descrittive_tempi.pdf}
+%	\end{column}
+%	\end{columns}
+%			\end{frame}
 
 
 \begin{frame}

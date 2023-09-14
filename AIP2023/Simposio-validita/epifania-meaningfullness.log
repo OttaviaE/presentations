@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2023.5.14)  14 SEP 2023 13:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2023.5.14)  14 SEP 2023 16:24
 entering extended mode
 **./epifania-meaningfullness.tex
 (epifania-meaningfullness.tex
@@ -218,6 +218,24 @@ Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+
+(C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen176
+\ar@mcellbox=\box57
+\extrarowheight=\dimen177
+\NC@list=\toks24
+\extratabsurround=\skip50
+\backup@length=\skip51
+\ar@cellbox=\box58
+)
+\everycr=\toks25
+\minrowclearance=\skip52
+)
+\rownum=\count276
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
@@ -240,12 +258,12 @@ e.tex
 .code.tex)
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathpars
 er.code.tex
-\pgfmath@dimen=\dimen176
-\pgfmath@count=\count276
-\pgfmath@box=\box57
-\pgfmath@toks=\toks24
-\pgfmath@stack@operand=\toks25
-\pgfmath@stack@operation=\toks26
+\pgfmath@dimen=\dimen178
+\pgfmath@count=\count277
+\pgfmath@box=\box59
+\pgfmath@toks=\toks26
+\pgfmath@stack@operand=\toks27
+\pgfmath@stack@operation=\toks28
 )
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
 tions.code.tex
@@ -267,59 +285,59 @@ tions.misc.code.tex)
 tions.integerarithmetics.code.tex)))
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloa
 t.code.tex
-\c@pgfmathroundto@lastzeros=\count277
+\c@pgfmathroundto@lastzeros=\count278
 ))
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code
 .tex)
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
 repoints.code.tex
 File: pgfcorepoints.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-\pgf@picminx=\dimen177
-\pgf@picmaxx=\dimen178
-\pgf@picminy=\dimen179
-\pgf@picmaxy=\dimen180
-\pgf@pathminx=\dimen181
-\pgf@pathmaxx=\dimen182
-\pgf@pathminy=\dimen183
-\pgf@pathmaxy=\dimen184
-\pgf@xx=\dimen185
-\pgf@xy=\dimen186
-\pgf@yx=\dimen187
-\pgf@yy=\dimen188
-\pgf@zx=\dimen189
-\pgf@zy=\dimen190
+\pgf@picminx=\dimen179
+\pgf@picmaxx=\dimen180
+\pgf@picminy=\dimen181
+\pgf@picmaxy=\dimen182
+\pgf@pathminx=\dimen183
+\pgf@pathmaxx=\dimen184
+\pgf@pathminy=\dimen185
+\pgf@pathmaxy=\dimen186
+\pgf@xx=\dimen187
+\pgf@xy=\dimen188
+\pgf@yx=\dimen189
+\pgf@yy=\dimen190
+\pgf@zx=\dimen191
+\pgf@zy=\dimen192
 )
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
 repathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-\pgf@path@lastx=\dimen191
-\pgf@path@lasty=\dimen192
+\pgf@path@lastx=\dimen193
+\pgf@path@lasty=\dimen194
 )
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
 repathusage.code.tex
 File: pgfcorepathusage.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-\pgf@shorten@end@additional=\dimen193
-\pgf@shorten@start@additional=\dimen194
+\pgf@shorten@end@additional=\dimen195
+\pgf@shorten@start@additional=\dimen196
 )
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
 rescopes.code.tex
 File: pgfcorescopes.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-\pgfpic=\box58
-\pgf@hbox=\box59
-\pgf@layerbox@main=\box60
-\pgf@picture@serial@count=\count278
+\pgfpic=\box60
+\pgf@hbox=\box61
+\pgf@layerbox@main=\box62
+\pgf@picture@serial@count=\count279
 )
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
 regraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-\pgflinewidth=\dimen195
+\pgflinewidth=\dimen197
 )
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
 retransformations.code.tex
 File: pgfcoretransformations.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-\pgf@pt@x=\dimen196
-\pgf@pt@y=\dimen197
-\pgf@pt@temp=\dimen198
+\pgf@pt@x=\dimen198
+\pgf@pt@y=\dimen199
+\pgf@pt@temp=\dimen256
 )
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
 requick.code.tex
@@ -336,14 +354,14 @@ File: pgfcorepathprocessing.code.tex 2020/10/01 v3.1.6a (3.1.6a)
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
 rearrows.code.tex
 File: pgfcorearrows.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-\pgfarrowsep=\dimen199
+\pgfarrowsep=\dimen257
 )
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
 reshade.code.tex
 File: pgfcoreshade.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-\pgf@max=\dimen256
-\pgf@sys@shading@range@num=\count279
-\pgf@shadingcount=\count280
+\pgf@max=\dimen258
+\pgf@sys@shading@range@num=\count280
+\pgf@shadingcount=\count281
 )
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
 reimage.code.tex
@@ -352,7 +370,7 @@ File: pgfcoreimage.code.tex 2020/10/01 v3.1.6a (3.1.6a)
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
 reexternal.code.tex
 File: pgfcoreexternal.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-\pgfexternal@startupbox=\box61
+\pgfexternal@startupbox=\box63
 ))
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
 relayers.code.tex
@@ -373,8 +391,8 @@ File: pgfcorerdf.code.tex 2020/10/01 v3.1.6a (3.1.6a)
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\xxcolor.
 sty
 Package: xxcolor 2003/10/24 ver 0.1
-\XC@nummixins=\count281
-\XC@countmixins=\count282
+\XC@nummixins=\count282
+\XC@countmixins=\count283
 )
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.sty
 Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
@@ -425,9 +443,9 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 y
 Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
 )
-\@linkdim=\dimen257
-\Hy@linkcounter=\count283
-\Hy@pagecounter=\count284
+\@linkdim=\dimen259
+\Hy@linkcounter=\count284
+\Hy@pagecounter=\count285
  (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -440,7 +458,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 y
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count285
+\Hy@SavedSpaceFactor=\count286
 Package hyperref Info: Option `bookmarks' set `true' on input line 4338.
 Package hyperref Info: Option `bookmarksopen' set `true' on input line 4338.
 Package hyperref Info: Option `implicit' set `false' on input line 4338.
@@ -451,13 +469,13 @@ Package hyperref Info: Plain pages OFF on input line 4479.
 Package hyperref Info: Backreferencing OFF on input line 4484.
 Package hyperref Info: Implicit mode OFF; no redefinition of LaTeX internals.
 Package hyperref Info: Bookmarks ON on input line 4717.
-\c@Hy@tempcnt=\count286
+\c@Hy@tempcnt=\count287
  (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5076.
-\XeTeXLinkMargin=\dimen258
+\XeTeXLinkMargin=\dimen260
 
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -467,9 +485,9 @@ c.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count287
-\Field@Width=\dimen259
-\Fld@charsize=\dimen260
+\Fld@menulength=\count288
+\Field@Width=\dimen261
+\Fld@charsize=\dimen262
 Package hyperref Info: Hyper figures OFF on input line 6347.
 Package hyperref Info: Link nesting OFF on input line 6352.
 Package hyperref Info: Hyper index ON on input line 6355.
@@ -479,7 +497,7 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6372.
 Package hyperref Info: PDF/A mode OFF on input line 6377.
 LaTeX Info: Redefining \ref on input line 6417.
 LaTeX Info: Redefining \pageref on input line 6421.
-\Hy@abspage=\count288
+\Hy@abspage=\count289
 
 
 Package hyperref Message: Stopped early.
@@ -494,8 +512,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
 e
 with kernel methods
 )
-\Fld@listcount=\count289
-\c@bookmark@seq@number=\count290
+\Fld@listcount=\count290
+\c@bookmark@seq@number=\count291
 
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfi
 lecheck.sty
@@ -519,7 +537,7 @@ Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks27
+\@emptytoks=\toks29
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
@@ -633,36 +651,36 @@ sty)
 reens.sty)
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbaseoverl
 ay.sty
-\beamer@argscount=\count291
-\beamer@lastskipcover=\skip50
-\beamer@trivlistdepth=\count292
+\beamer@argscount=\count292
+\beamer@lastskipcover=\skip53
+\beamer@trivlistdepth=\count293
 )
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasetitle
 .sty)
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasesecti
 on.sty
-\c@lecture=\count293
-\c@part=\count294
-\c@section=\count295
-\c@subsection=\count296
-\c@subsubsection=\count297
+\c@lecture=\count294
+\c@part=\count295
+\c@section=\count296
+\c@subsection=\count297
+\c@subsubsection=\count298
 )
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbaseframe
 .sty
-\beamer@framebox=\box62
-\beamer@frametitlebox=\box63
-\beamer@zoombox=\box64
-\beamer@zoomcount=\count298
-\beamer@zoomframecount=\count299
-\beamer@frametextheight=\dimen261
-\c@subsectionslide=\count300
-\beamer@frametopskip=\skip51
-\beamer@framebottomskip=\skip52
-\beamer@frametopskipautobreak=\skip53
-\beamer@framebottomskipautobreak=\skip54
-\beamer@envbody=\toks28
-\framewidth=\dimen262
-\c@framenumber=\count301
+\beamer@framebox=\box64
+\beamer@frametitlebox=\box65
+\beamer@zoombox=\box66
+\beamer@zoomcount=\count299
+\beamer@zoomframecount=\count300
+\beamer@frametextheight=\dimen263
+\c@subsectionslide=\count301
+\beamer@frametopskip=\skip54
+\beamer@framebottomskip=\skip55
+\beamer@frametopskipautobreak=\skip56
+\beamer@framebottomskipautobreak=\skip57
+\beamer@envbody=\toks30
+\framewidth=\dimen264
+\c@framenumber=\count302
 )
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbaseverba
 tim.sty
@@ -670,64 +688,64 @@ tim.sty
 )
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbaseframe
 size.sty
-\beamer@splitbox=\box65
-\beamer@autobreakcount=\count302
-\beamer@autobreaklastheight=\dimen263
-\beamer@frametitletoks=\toks29
-\beamer@framesubtitletoks=\toks30
+\beamer@splitbox=\box67
+\beamer@autobreakcount=\count303
+\beamer@autobreaklastheight=\dimen265
+\beamer@frametitletoks=\toks31
+\beamer@framesubtitletoks=\toks32
 )
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbaseframe
 components.sty
-\beamer@footins=\box66
+\beamer@footins=\box68
 )
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasecolor
 .sty)
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasenotes
 .sty
-\beamer@frameboxcopy=\box67
+\beamer@frameboxcopy=\box69
 )
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasetoc.s
 ty)
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasetempl
 ates.sty
-\beamer@sbttoks=\toks31
+\beamer@sbttoks=\toks33
 
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbaseauxte
 mplates.sty
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbaseboxes
 .sty
-\bmb@box=\box68
-\bmb@colorbox=\box69
-\bmb@boxwidth=\dimen264
-\bmb@boxheight=\dimen265
-\bmb@prevheight=\dimen266
-\bmb@temp=\dimen267
-\bmb@dima=\dimen268
-\bmb@dimb=\dimen269
-\bmb@prevheight=\dimen270
+\bmb@box=\box70
+\bmb@colorbox=\box71
+\bmb@boxwidth=\dimen266
+\bmb@boxheight=\dimen267
+\bmb@prevheight=\dimen268
+\bmb@temp=\dimen269
+\bmb@dima=\dimen270
+\bmb@dimb=\dimen271
+\bmb@prevheight=\dimen272
 )
-\beamer@blockheadheight=\dimen271
+\beamer@blockheadheight=\dimen273
 ))
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbaselocal
 structure.sty
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/tools\enumerate.sty
 Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
-\@enLab=\toks32
+\@enLab=\toks34
 )
-\c@figure=\count303
-\c@table=\count304
-\abovecaptionskip=\skip55
-\belowcaptionskip=\skip56
+\c@figure=\count304
+\c@table=\count305
+\abovecaptionskip=\skip58
+\belowcaptionskip=\skip59
 )
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasenavig
 ation.sty
-\beamer@section@min@dim=\dimen272
+\beamer@section@min@dim=\dimen274
 )
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasetheor
 ems.sty
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2020/09/23 v2.17i AMS math features
-\@mathmargin=\skip57
+\@mathmargin=\skip60
 
 For additional information on amsmath, use the `?' option.
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
@@ -735,67 +753,67 @@ Package: amstext 2000/06/29 v2.01 AMS text
 
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks33
-\ex@=\dimen273
+\@emptytoks=\toks35
+\ex@=\dimen275
 ))
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen274
+\pmbraise@=\dimen276
 )
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count305
+\inf@bad=\count306
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count306
-\leftroot@=\count307
+\uproot@=\count307
+\leftroot@=\count308
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count308
-\DOTSCASE@=\count309
+\classnum@=\count309
+\DOTSCASE@=\count310
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box70
-\strutbox@=\box71
-\big@size=\dimen275
+\Mathstrutbox@=\box72
+\strutbox@=\box73
+\big@size=\dimen277
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count310
-\c@MaxMatrixCols=\count311
+\macc@depth=\count311
+\c@MaxMatrixCols=\count312
 \dotsspace@=\muskip17
-\c@parentequation=\count312
-\dspbrk@lvl=\count313
-\tag@help=\toks34
-\row@=\count314
-\column@=\count315
-\maxfields@=\count316
-\andhelp@=\toks35
-\eqnshift@=\dimen276
-\alignsep@=\dimen277
-\tagshift@=\dimen278
-\tagwidth@=\dimen279
-\totwidth@=\dimen280
-\lineht@=\dimen281
-\@envbody=\toks36
-\multlinegap=\skip58
-\multlinetaggap=\skip59
-\mathdisplay@stack=\toks37
+\c@parentequation=\count313
+\dspbrk@lvl=\count314
+\tag@help=\toks36
+\row@=\count315
+\column@=\count316
+\maxfields@=\count317
+\andhelp@=\toks37
+\eqnshift@=\dimen278
+\alignsep@=\dimen279
+\tagshift@=\dimen280
+\tagwidth@=\dimen281
+\totwidth@=\dimen282
+\lineht@=\dimen283
+\@envbody=\toks38
+\multlinegap=\skip61
+\multlinetaggap=\skip62
+\mathdisplay@stack=\toks39
 LaTeX Info: Redefining \[ on input line 2923.
 LaTeX Info: Redefining \] on input line 2924.
 )
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
-\thm@style=\toks38
-\thm@bodyfont=\toks39
-\thm@headfont=\toks40
-\thm@notefont=\toks41
-\thm@headpunct=\toks42
-\thm@preskip=\skip60
-\thm@postskip=\skip61
-\thm@headsep=\skip62
-\dth@everypar=\toks43
+\thm@style=\toks40
+\thm@bodyfont=\toks41
+\thm@headfont=\toks42
+\thm@notefont=\toks43
+\thm@headpunct=\toks44
+\thm@preskip=\skip63
+\thm@postskip=\skip64
+\thm@headsep=\skip65
+\dth@everypar=\toks45
 )
-\c@theorem=\count317
+\c@theorem=\count318
 )
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasetheme
 s.sty))
@@ -807,8 +825,8 @@ default.sty)
 edefault.sty)
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerinnerthem
 edefault.sty
-\beamer@dima=\dimen282
-\beamer@dimb=\dimen283
+\beamer@dima=\dimen284
+\beamer@dimb=\dimen285
 )
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerouterthem
 edefault.sty)))
@@ -827,15 +845,15 @@ Package: babel 2020/10/06 3.50 The Babel package
 
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.def
 File: babel.def 2020/10/06 3.50 Babel common definitions
-\babel@savecnt=\count318
-\U@D=\dimen284
+\babel@savecnt=\count319
+\U@D=\dimen286
 \l@babelnohyphens=\language79
 
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read3
 )
 LaTeX Info: Redefining \textlatin on input line 709.
-\bbl@dirlevel=\count319
+\bbl@dirlevel=\count320
 *************************************
 * Local config file bblopts.cfg used
 *
@@ -846,35 +864,24 @@ File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/babel-italian\italian.
 ldf
 Language: italian 2020/05/21 v.1.4.04 Italian support for the babel system
-\it@lettering=\count320
-\it@doublequoteactive=\count321
-\it@ISOcompliance=\count322
+\it@lettering=\count321
+\it@doublequoteactive=\count322
+\it@ISOcompliance=\count323
 ))
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2020/08/01 v1.3d Input encoding file
-\inpenc@prehook=\toks44
-\inpenc@posthook=\toks45
+\inpenc@prehook=\toks46
+\inpenc@posthook=\toks47
 )
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
 Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
-
-(C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
-Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
-\col@sep=\dimen285
-\ar@mcellbox=\box72
-\extrarowheight=\dimen286
-\NC@list=\toks46
-\extratabsurround=\skip63
-\backup@length=\skip64
-\ar@cellbox=\box73
-)
 \TX@col@width=\dimen287
 \TX@old@table=\dimen288
 \TX@old@col=\dimen289
 \TX@target=\dimen290
 \TX@delta=\dimen291
-\TX@cols=\count323
-\TX@ftn=\toks47
+\TX@cols=\count324
+\TX@ftn=\toks48
 )
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz
 .sty
@@ -917,8 +924,8 @@ Package: pgffor 2020/10/01 v3.1.6a (3.1.6a)
 e.tex)
 \pgffor@iter=\dimen294
 \pgffor@skip=\dimen295
-\pgffor@stack=\toks48
-\pgffor@toks=\toks49
+\pgffor@stack=\toks49
+\pgffor@toks=\toks50
 ))
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
 kz\tikz.code.tex
@@ -927,7 +934,7 @@ Package: tikz 2020/10/01 v3.1.6a (3.1.6a)
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflib
 raryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-\pgf@plot@mark@count=\count324
+\pgf@plot@mark@count=\count325
 \pgfplotmarksize=\dimen296
 )
 \tikz@lastx=\dimen297
@@ -942,19 +949,19 @@ File: pgflibraryplothandlers.code.tex 2020/10/01 v3.1.6a (3.1.6a)
 \tikz@figbox@bg=\box76
 \tikz@tempbox=\box77
 \tikz@tempbox@bg=\box78
-\tikztreelevel=\count325
-\tikznumberofchildren=\count326
-\tikznumberofcurrentchild=\count327
-\tikz@fig@count=\count328
+\tikztreelevel=\count326
+\tikznumberofchildren=\count327
+\tikznumberofcurrentchild=\count328
+\tikz@fig@count=\count329
 
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodul
 ematrix.code.tex
 File: pgfmodulematrix.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-\pgfmatrixcurrentrow=\count329
-\pgfmatrixcurrentcolumn=\count330
-\pgf@matrix@numberofcolumns=\count331
+\pgfmatrixcurrentrow=\count330
+\pgfmatrixcurrentcolumn=\count331
+\pgf@matrix@numberofcolumns=\count332
 )
-\tikz@expandcount=\count332
+\tikz@expandcount=\count333
 
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
 kz/libraries\tikzlibrarytopaths.code.tex
@@ -975,24 +982,24 @@ Grid set 16 x 16 = 24.89615pt x 16.00467pt
 \TPboxrulesize=\dimen309
 \TP@ox=\dimen310
 \TP@oy=\dimen311
-\TP@tbargs=\toks50
+\TP@tbargs=\toks51
 TextBlockOrigin set to 0pt x 0pt
 ) (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
 Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
-\c@tracingmulticols=\count333
+\c@tracingmulticols=\count334
 \mult@box=\box81
 \multicol@leftmargin=\dimen312
-\c@unbalance=\count334
-\c@collectmore=\count335
-\doublecol@number=\count336
-\multicoltolerance=\count337
-\multicolpretolerance=\count338
+\c@unbalance=\count335
+\c@collectmore=\count336
+\doublecol@number=\count337
+\multicoltolerance=\count338
+\multicolpretolerance=\count339
 \full@width=\dimen313
 \page@free=\dimen314
 \premulticols=\dimen315
 \postmulticols=\dimen316
-\multicolsep=\skip65
-\multicolbaselineskip=\skip66
+\multicolsep=\skip66
+\multicolbaselineskip=\skip67
 \partial@page=\box82
 \last@line=\box83
 \maxbalancingoverflow=\dimen317
@@ -1037,15 +1044,15 @@ Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
 \@tempa=\box122
 \@tempa=\box123
 \@tempa=\box124
-\c@minrows=\count339
-\c@columnbadness=\count340
-\c@finalcolumnbadness=\count341
+\c@minrows=\count340
+\c@columnbadness=\count341
+\c@finalcolumnbadness=\count342
 \last@try=\dimen318
 \multicolovershoot=\dimen319
 \multicolundershoot=\dimen320
 \mult@nat@firstbox=\box125
 \colbreak@box=\box126
-\mc@col@check@num=\count342
+\mc@col@check@num=\count343
 )
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
 kz/libraries\tikzlibraryshapes.geometric.code.tex
@@ -1067,27 +1074,27 @@ File: pgflibraryarrows.code.tex 2020/10/01 v3.1.6a (3.1.6a)
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pd
 ftex.def
 File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
-\l__kernel_color_stack_int=\count343
+\l__kernel_color_stack_int=\count344
 \l__pdf_internal_box=\box127
 ) (epifania-meaningfullness.aux)
 \openout1 = `epifania-meaningfullness.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1127,17 +1134,17 @@ LaTeX Font Info:    ... okay on input line 102.
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.m
 kii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count344
+\scratchcounter=\count345
 \scratchdimen=\dimen322
 \scratchbox=\box128
-\nofMPsegments=\count345
-\nofMParguments=\count346
-\everyMPshowfont=\toks51
-\MPscratchCnt=\count347
+\nofMPsegments=\count346
+\nofMParguments=\count347
+\everyMPshowfont=\toks52
+\MPscratchCnt=\count348
 \MPscratchDim=\dimen323
-\MPnumerator=\count348
-\makeMPintoPDFobject=\count349
-\everyMPtoPDFconversion=\toks52
+\MPnumerator=\count349
+\makeMPintoPDFobject=\count350
+\everyMPtoPDFconversion=\toks53
 )
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-
 base.sty
@@ -1145,7 +1152,7 @@ Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
-Package hyperref Info: Link coloring OFF on input line 102.
+Package hyperref Info: Link coloring OFF on input line 132.
 
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -1157,11 +1164,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 tlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count350
+\c@section@level=\count351
 )
-LaTeX Info: Redefining \ref on input line 102.
-LaTeX Info: Redefining \pageref on input line 102.
-LaTeX Info: Redefining \nameref on input line 102.
+LaTeX Info: Redefining \ref on input line 132.
+LaTeX Info: Redefining \pageref on input line 132.
+LaTeX Info: Redefining \nameref on input line 132.
  (epifania-meaningfullness.out) (epifania-meaningfullness.out)
 \@outlinefile=\write5
 \openout5 = `epifania-meaningfullness.out'.
@@ -1191,8 +1198,8 @@ Dictionary: translator-numbers-dictionary, Language: English
 theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \it@ocap on input line 102.
-LaTeX Info: Redefining \it@ccap on input line 102.
+LaTeX Info: Redefining \it@ocap on input line 132.
+LaTeX Info: Redefining \it@ccap on input line 132.
 
 
 File italian.ldf warning: 
@@ -1200,13 +1207,13 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
-italian.ldf    on input line 102.
+italian.ldf    on input line 132.
 
 (epifania-meaningfullness.nav)
 <unipd.png, id=37, 943.525pt x 949.5475pt>
 File: unipd.png Graphic file (type png)
 <use unipd.png>
-Package pdftex.def Info: unipd.png  used on input line 106.
+Package pdftex.def Info: unipd.png  used on input line 136.
 (pdftex.def)             Requested size: 28.45274pt x 28.63008pt.
  [1
 
@@ -1214,13 +1221,13 @@ Package pdftex.def Info: unipd.png  used on input line 106.
 (epifania-meaningfullness.toc) [2
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 124
+LaTeX Font Info:    Trying to load font information for U+msa on input line 155
 .
 
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 124
+LaTeX Font Info:    Trying to load font information for U+msb on input line 155
 .
 
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -1232,15 +1239,15 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <img/time.png, id=152, 572.904pt x 206.517pt>
 File: img/time.png Graphic file (type png)
 <use img/time.png>
-Package pdftex.def Info: img/time.png  used on input line 142.
+Package pdftex.def Info: img/time.png  used on input line 173.
 (pdftex.def)             Requested size: 355.65947pt x 128.20937pt.
 <img/jt.png, id=154, 726.861pt x 344.049pt>
 File: img/jt.png Graphic file (type png)
 <use img/jt.png>
-Package pdftex.def Info: img/jt.png  used on input line 142.
+Package pdftex.def Info: img/jt.png  used on input line 173.
 (pdftex.def)             Requested size: 248.96054pt x 117.84131pt.
 
-Overfull \hbox (7.29921pt too wide) in paragraph at lines 142--142
+Overfull \hbox (7.29921pt too wide) in paragraph at lines 173--173
 [][]  
  []
 
@@ -1249,14 +1256,14 @@ Overfull \hbox (7.29921pt too wide) in paragraph at lines 142--142
  <./img/time.png> <./img/jt.png>]
 File: img/time.png Graphic file (type png)
 <use img/time.png>
-Package pdftex.def Info: img/time.png  used on input line 142.
+Package pdftex.def Info: img/time.png  used on input line 173.
 (pdftex.def)             Requested size: 355.65947pt x 128.20937pt.
 File: img/jt.png Graphic file (type png)
 <use img/jt.png>
-Package pdftex.def Info: img/jt.png  used on input line 142.
+Package pdftex.def Info: img/jt.png  used on input line 173.
 (pdftex.def)             Requested size: 248.96054pt x 117.84131pt.
 
-Overfull \hbox (7.29921pt too wide) in paragraph at lines 142--142
+Overfull \hbox (7.29921pt too wide) in paragraph at lines 173--173
 [][]  
  []
 
@@ -1283,86 +1290,68 @@ Overfull \hbox (7.29921pt too wide) in paragraph at lines 142--142
 (epifania-meaningfullness.toc) [14
 
 ]
-<img/descrittive_accuratezze.pdf, id=507, 1011.78pt x 614.295pt>
-File: img/descrittive_accuratezze.pdf Graphic file (type pdf)
-<use img/descrittive_accuratezze.pdf>
-Package pdftex.def Info: img/descrittive_accuratezze.pdf  used on input line 41
-8.
-(pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
-<img/descrittive_tempi.pdf, id=508, 1011.78pt x 614.295pt>
-File: img/descrittive_tempi.pdf Graphic file (type pdf)
-<use img/descrittive_tempi.pdf>
-Package pdftex.def Info: img/descrittive_tempi.pdf  used on input line 418.
-(pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
- [15
-
- <./img/descrittive_accuratezze.pdf> <./img/descrittive_tempi.pdf
-
-pdfTeX warning: pdflatex (file ./img/descrittive_tempi.pdf): PDF inclusion: mul
-tiple pdfs with page group included in a single page
->]
-<img/correlazioni_gruppi.pdf, id=552, 1011.78pt x 614.295pt>
+<img/correlazioni_gruppi.pdf, id=507, 1011.78pt x 614.295pt>
 File: img/correlazioni_gruppi.pdf Graphic file (type pdf)
 <use img/correlazioni_gruppi.pdf>
-Package pdftex.def Info: img/correlazioni_gruppi.pdf  used on input line 428.
+Package pdftex.def Info: img/correlazioni_gruppi.pdf  used on input line 450.
 (pdftex.def)             Requested size: 355.65947pt x 215.93443pt.
 
-Overfull \vbox (6.95314pt too high) detected at line 428
+Overfull \vbox (6.95314pt too high) detected at line 450
  []
 
-[16
+[15
 
- <./img/correlazioni_gruppi.pdf>] [17
+ <./img/correlazioni_gruppi.pdf>] [16
 
 ]
-<img/farfalle_gruppi.pdf, id=624, 1011.78pt x 614.295pt>
+<img/farfalle_gruppi.pdf, id=579, 1011.78pt x 614.295pt>
 File: img/farfalle_gruppi.pdf Graphic file (type pdf)
 <use img/farfalle_gruppi.pdf>
-Package pdftex.def Info: img/farfalle_gruppi.pdf  used on input line 471.
+Package pdftex.def Info: img/farfalle_gruppi.pdf  used on input line 493.
 (pdftex.def)             Requested size: 355.65947pt x 215.93443pt.
-<img/farfalle_gruppi_colored.pdf, id=625, 1011.78pt x 614.295pt>
+<img/farfalle_gruppi_colored.pdf, id=580, 1011.78pt x 614.295pt>
 File: img/farfalle_gruppi_colored.pdf Graphic file (type pdf)
 <use img/farfalle_gruppi_colored.pdf>
-Package pdftex.def Info: img/farfalle_gruppi_colored.pdf  used on input line 47
-1.
+Package pdftex.def Info: img/farfalle_gruppi_colored.pdf  used on input line 49
+3.
 (pdftex.def)             Requested size: 355.65947pt x 215.93443pt.
- [18
+ [17
 
  <./img/farfalle_gruppi.pdf>]
 File: img/farfalle_gruppi.pdf Graphic file (type pdf)
 <use img/farfalle_gruppi.pdf>
-Package pdftex.def Info: img/farfalle_gruppi.pdf  used on input line 471.
+Package pdftex.def Info: img/farfalle_gruppi.pdf  used on input line 493.
 (pdftex.def)             Requested size: 355.65947pt x 215.93443pt.
 File: img/farfalle_gruppi_colored.pdf Graphic file (type pdf)
 <use img/farfalle_gruppi_colored.pdf>
-Package pdftex.def Info: img/farfalle_gruppi_colored.pdf  used on input line 47
-1.
+Package pdftex.def Info: img/farfalle_gruppi_colored.pdf  used on input line 49
+3.
 (pdftex.def)             Requested size: 355.65947pt x 215.93443pt.
 
-[19
+[18
 
  <./img/farfalle_gruppi_colored.pdf>]
-<img/time_an_group_4_8.pdf, id=722, 1011.78pt x 614.295pt>
+<img/time_an_group_4_8.pdf, id=676, 1011.78pt x 614.295pt>
 File: img/time_an_group_4_8.pdf Graphic file (type pdf)
 <use img/time_an_group_4_8.pdf>
-Package pdftex.def Info: img/time_an_group_4_8.pdf  used on input line 525.
+Package pdftex.def Info: img/time_an_group_4_8.pdf  used on input line 547.
 (pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
-<img/time_sh_group_4_8.pdf, id=723, 1011.78pt x 614.295pt>
+<img/time_sh_group_4_8.pdf, id=677, 1011.78pt x 614.295pt>
 File: img/time_sh_group_4_8.pdf Graphic file (type pdf)
 <use img/time_sh_group_4_8.pdf>
-Package pdftex.def Info: img/time_sh_group_4_8.pdf  used on input line 525.
+Package pdftex.def Info: img/time_sh_group_4_8.pdf  used on input line 547.
 (pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
- [20
+ [19
 
  <./img/time_an_group_4_8.pdf> <./img/time_sh_group_4_8.pdf
 
 pdfTeX warning: pdflatex (file ./img/time_sh_group_4_8.pdf): PDF inclusion: mul
 tiple pdfs with page group included in a single page
->] (epifania-meaningfullness.toc) [21
+>] (epifania-meaningfullness.toc) [20
+
+] [21
 
 ] [22
-
-] [23
 
 ]
 \tf@nav=\write6
@@ -1380,13 +1369,13 @@ d.
 (rerunfilecheck)             Checksum: E68063786320335D25BB967C1FC6945C;334.
  ) 
 Here is how much of TeX's memory you used:
- 23466 strings out of 480236
- 477051 string characters out of 2880083
- 816784 words of memory out of 3000000
- 39401 multiletter control sequences out of 15000+200000
+ 23520 strings out of 480236
+ 477657 string characters out of 2880083
+ 820129 words of memory out of 3000000
+ 39455 multiletter control sequences out of 15000+200000
  544814 words of font info for 66 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 111i,17n,112p,453b,1296s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 111i,18n,112p,453b,1296s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/huawei/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
 /cmbx10.pfb><C:/Users/huawei/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
 msfonts/cm/cmbx12.pfb><C:/Users/huawei/AppData/Local/Programs/MiKTeX/fonts/type
@@ -1403,9 +1392,9 @@ s/cm/cmr8.pfb><C:/Users/huawei/AppData/Local/Programs/MiKTeX/fonts/type1/public
 pe1/public/amsfonts/cm/cmsy8.pfb><C:/Users/huawei/AppData/Local/Programs/MiKTeX
 /fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/huawei/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on epifania-meaningfullness.pdf (23 pages, 9490979 bytes).
+Output written on epifania-meaningfullness.pdf (22 pages, 9401215 bytes).
 PDF statistics:
- 912 PDF objects out of 1000 (max. 8388607)
- 53 named destinations out of 1000 (max. 500000)
- 171 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 867 PDF objects out of 1000 (max. 8388607)
+ 51 named destinations out of 1000 (max. 500000)
+ 161 words of extra memory for PDF output out of 10000 (max. 10000000)
 
