@@ -159,14 +159,9 @@ Dipartimento di Filosofia, Sociologia, Pedagogia e Psicologia Applicata,\\	Unive
 	\begin{tikzpicture}
 		% load the first image nature1.png as a node called img1
 		\node (img1) {\includegraphics[width=\linewidth]{img/time.png}};
-		% insert a pause so that two slides are created:
-		% the first containing only nature1.png and the second with
-		% nature2.png overlapping the first image
 		\pause
-		% create a new node with the image nature2.png,
-		% that is ubicated at the south east of the first node
 		\node[opacity=0.8]  (img2) at (img1.center)
-		{\includegraphics[width=.70\linewidth]{img/jt.png}};
+		{\includegraphics[width=.70\linewidth]{img/jt_axe.jpg}};
 	\end{tikzpicture}
 	
 	
@@ -216,55 +211,10 @@ Dipartimento di Filosofia, Sociologia, Pedagogia e Psicologia Applicata,\\	Unive
 	\pause
 	\vspace{3mm}
 	
-	\begin{small}
-		Problem difficulty influenced by:
 	
-	\begin{itemize}
-		\item Number of minimum moves to reach the goal configuration
-		\item Number of  alternative paths for reaching the goal configuration
-		\item Hierarchy of the starting/goal configuration
-	\end{itemize}
-	\end{small}
 
 	
-	\begin{tikzpicture}[scale=1.2]
-	\node[mark=diamond,inner sep = 0pt, minimum size = 4pt] (23) at (  -1.5,  3.5*1.73) {
-		\begin{tikzpicture}[scale=.4]
-			\draw[draw=black!20,fill=black!20] (0,5) rectangle (6,5.3);
-			\draw[draw=black!20,fill=black!20] (0.85,5) rectangle (1.15,8.5);
-			\draw[draw=black!20,fill=black!20] (2.85,5) rectangle (3.15,7.5);
-			\draw[draw=black!20,fill=black!20] (4.85,5) rectangle (5.15,6.5);
-			\draw[fill=yellow] (1,5.8) circle (15pt);
-			\draw[fill=red] (1,6.85) circle (15pt);
-			\draw[fill=blue] (3,5.8) circle (15pt);
-		\end{tikzpicture}
-	};
-	
-	\node[mark=diamond,inner sep = 0pt, minimum size = 4pt] (23) at (  2,  3.5*1.73) {
-		\begin{tikzpicture}[scale=.4]
-			\draw[draw=black!20,fill=black!20] (0,5) rectangle (6,5.3);
-			\draw[draw=black!20,fill=black!20] (0.85,5) rectangle (1.15,8.5);
-			\draw[draw=black!20,fill=black!20] (2.85,5) rectangle (3.15,7.5);
-			\draw[draw=black!20,fill=black!20] (4.85,5) rectangle (5.15,6.5);
-			\draw[fill=yellow] (1,5.8) circle (15pt);
-			\draw[fill=red] (5,5.8) circle (15pt);
-			\draw[fill=blue] (3,5.8) circle (15pt);
-		\end{tikzpicture}
-	};
-	
-	\node[mark=diamond,inner sep = 0pt, minimum size = 4pt] (23) at (  5.5,  3.5*1.73) {
-		\begin{tikzpicture}[scale=.4]
-			\draw[draw=black!20,fill=black!20] (0,5) rectangle (6,5.3);
-			\draw[draw=black!20,fill=black!20] (0.85,5) rectangle (1.15,8.5);
-			\draw[draw=black!20,fill=black!20] (2.85,5) rectangle (3.15,7.5);
-			\draw[draw=black!20,fill=black!20] (4.85,5) rectangle (5.15,6.5);
-			\draw[fill=yellow] (1,5.8) circle (15pt);
-			\draw[fill=red] (1,6.85) circle (15pt);
-			\draw[fill=blue] (1,7.9) circle (15pt);
-		\end{tikzpicture}
-	};
-	
-\end{tikzpicture}
+
 \end{frame}
 
 
@@ -351,7 +301,7 @@ Scoring & Attempts & Response times & Item score & Total score \\\hline
 }
 
 
-\vspace{-2mm}
+\vspace{-1.5mm}
 \onslide<2->
 \begin{columns}[T]
 	\begin{column}{.50\linewidth}
@@ -399,6 +349,7 @@ Scoring & Attempts & Response times & Item score & Total score \\\hline
 				\hline
 			\end{tabular}
 			\vspace{1.5mm}
+			\footnotesize \normalfont
 			
 			Subtract the number of unsuccessful attempts
 	\end{column}

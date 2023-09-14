@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2023.5.14)  14 SEP 2023 16:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2023.5.14)  14 SEP 2023 17:33
 entering extended mode
 **./epifania-meaningfullness.tex
 (epifania-meaningfullness.tex
@@ -1239,31 +1239,31 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <img/time.png, id=152, 572.904pt x 206.517pt>
 File: img/time.png Graphic file (type png)
 <use img/time.png>
-Package pdftex.def Info: img/time.png  used on input line 173.
+Package pdftex.def Info: img/time.png  used on input line 168.
 (pdftex.def)             Requested size: 355.65947pt x 128.20937pt.
-<img/jt.png, id=154, 726.861pt x 344.049pt>
-File: img/jt.png Graphic file (type png)
-<use img/jt.png>
-Package pdftex.def Info: img/jt.png  used on input line 173.
-(pdftex.def)             Requested size: 248.96054pt x 117.84131pt.
+<img/jt_axe.jpg, id=154, 728.7225pt x 542.025pt>
+File: img/jt_axe.jpg Graphic file (type jpg)
+<use img/jt_axe.jpg>
+Package pdftex.def Info: img/jt_axe.jpg  used on input line 168.
+(pdftex.def)             Requested size: 248.96054pt x 185.171pt.
 
-Overfull \hbox (7.29921pt too wide) in paragraph at lines 173--173
+Overfull \hbox (7.29921pt too wide) in paragraph at lines 168--168
 [][]  
  []
 
 [4
 
- <./img/time.png> <./img/jt.png>]
+ <./img/time.png> <./img/jt_axe.jpg>]
 File: img/time.png Graphic file (type png)
 <use img/time.png>
-Package pdftex.def Info: img/time.png  used on input line 173.
+Package pdftex.def Info: img/time.png  used on input line 168.
 (pdftex.def)             Requested size: 355.65947pt x 128.20937pt.
-File: img/jt.png Graphic file (type png)
-<use img/jt.png>
-Package pdftex.def Info: img/jt.png  used on input line 173.
-(pdftex.def)             Requested size: 248.96054pt x 117.84131pt.
+File: img/jt_axe.jpg Graphic file (type jpg)
+<use img/jt_axe.jpg>
+Package pdftex.def Info: img/jt_axe.jpg  used on input line 168.
+(pdftex.def)             Requested size: 248.96054pt x 185.171pt.
 
-Overfull \hbox (7.29921pt too wide) in paragraph at lines 173--173
+Overfull \hbox (7.29921pt too wide) in paragraph at lines 168--168
 [][]  
  []
 
@@ -1293,10 +1293,10 @@ Overfull \hbox (7.29921pt too wide) in paragraph at lines 173--173
 <img/correlazioni_gruppi.pdf, id=507, 1011.78pt x 614.295pt>
 File: img/correlazioni_gruppi.pdf Graphic file (type pdf)
 <use img/correlazioni_gruppi.pdf>
-Package pdftex.def Info: img/correlazioni_gruppi.pdf  used on input line 450.
+Package pdftex.def Info: img/correlazioni_gruppi.pdf  used on input line 401.
 (pdftex.def)             Requested size: 355.65947pt x 215.93443pt.
 
-Overfull \vbox (6.95314pt too high) detected at line 450
+Overfull \vbox (6.95314pt too high) detected at line 401
  []
 
 [15
@@ -1307,25 +1307,25 @@ Overfull \vbox (6.95314pt too high) detected at line 450
 <img/farfalle_gruppi.pdf, id=579, 1011.78pt x 614.295pt>
 File: img/farfalle_gruppi.pdf Graphic file (type pdf)
 <use img/farfalle_gruppi.pdf>
-Package pdftex.def Info: img/farfalle_gruppi.pdf  used on input line 493.
+Package pdftex.def Info: img/farfalle_gruppi.pdf  used on input line 444.
 (pdftex.def)             Requested size: 355.65947pt x 215.93443pt.
 <img/farfalle_gruppi_colored.pdf, id=580, 1011.78pt x 614.295pt>
 File: img/farfalle_gruppi_colored.pdf Graphic file (type pdf)
 <use img/farfalle_gruppi_colored.pdf>
-Package pdftex.def Info: img/farfalle_gruppi_colored.pdf  used on input line 49
-3.
+Package pdftex.def Info: img/farfalle_gruppi_colored.pdf  used on input line 44
+4.
 (pdftex.def)             Requested size: 355.65947pt x 215.93443pt.
  [17
 
  <./img/farfalle_gruppi.pdf>]
 File: img/farfalle_gruppi.pdf Graphic file (type pdf)
 <use img/farfalle_gruppi.pdf>
-Package pdftex.def Info: img/farfalle_gruppi.pdf  used on input line 493.
+Package pdftex.def Info: img/farfalle_gruppi.pdf  used on input line 444.
 (pdftex.def)             Requested size: 355.65947pt x 215.93443pt.
 File: img/farfalle_gruppi_colored.pdf Graphic file (type pdf)
 <use img/farfalle_gruppi_colored.pdf>
-Package pdftex.def Info: img/farfalle_gruppi_colored.pdf  used on input line 49
-3.
+Package pdftex.def Info: img/farfalle_gruppi_colored.pdf  used on input line 44
+4.
 (pdftex.def)             Requested size: 355.65947pt x 215.93443pt.
 
 [18
@@ -1334,12 +1334,12 @@ Package pdftex.def Info: img/farfalle_gruppi_colored.pdf  used on input line 49
 <img/time_an_group_4_8.pdf, id=676, 1011.78pt x 614.295pt>
 File: img/time_an_group_4_8.pdf Graphic file (type pdf)
 <use img/time_an_group_4_8.pdf>
-Package pdftex.def Info: img/time_an_group_4_8.pdf  used on input line 547.
+Package pdftex.def Info: img/time_an_group_4_8.pdf  used on input line 498.
 (pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
 <img/time_sh_group_4_8.pdf, id=677, 1011.78pt x 614.295pt>
 File: img/time_sh_group_4_8.pdf Graphic file (type pdf)
 <use img/time_sh_group_4_8.pdf>
-Package pdftex.def Info: img/time_sh_group_4_8.pdf  used on input line 547.
+Package pdftex.def Info: img/time_sh_group_4_8.pdf  used on input line 498.
 (pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
  [19
 
@@ -1369,11 +1369,11 @@ d.
 (rerunfilecheck)             Checksum: E68063786320335D25BB967C1FC6945C;334.
  ) 
 Here is how much of TeX's memory you used:
- 23520 strings out of 480236
- 477657 string characters out of 2880083
- 820129 words of memory out of 3000000
+ 23522 strings out of 480236
+ 477694 string characters out of 2880083
+ 798643 words of memory out of 3000000
  39455 multiletter control sequences out of 15000+200000
- 544814 words of font info for 66 fonts, out of 3000000 for 9000
+ 545113 words of font info for 67 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  111i,18n,112p,453b,1296s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/huawei/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
@@ -1388,13 +1388,14 @@ uawei/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C
 :/Users/huawei/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr
 6.pfb><C:/Users/huawei/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
 s/cm/cmr8.pfb><C:/Users/huawei/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmsy10.pfb><C:/Users/huawei/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmsy8.pfb><C:/Users/huawei/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/huawei/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on epifania-meaningfullness.pdf (22 pages, 9401215 bytes).
+/amsfonts/cm/cmr9.pfb><C:/Users/huawei/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmsy10.pfb><C:/Users/huawei/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/huawei/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/huawei/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on epifania-meaningfullness.pdf (22 pages, 887429 bytes).
 PDF statistics:
- 867 PDF objects out of 1000 (max. 8388607)
+ 870 PDF objects out of 1000 (max. 8388607)
  51 named destinations out of 1000 (max. 500000)
  161 words of extra memory for PDF output out of 10000 (max. 10000000)
 
