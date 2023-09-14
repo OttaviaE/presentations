@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2023.5.14)  13 SEP 2023 17:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2023.5.14)  14 SEP 2023 11:08
 entering extended mode
 **./epifania-meaningfullness.tex
 (epifania-meaningfullness.tex
@@ -1228,107 +1228,142 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 [3
 
-] (epifania-meaningfullness.toc) [4
+]
+<img/time.png, id=152, 572.904pt x 206.517pt>
+File: img/time.png Graphic file (type png)
+<use img/time.png>
+Package pdftex.def Info: img/time.png  used on input line 142.
+(pdftex.def)             Requested size: 321.51625pt x 115.90082pt.
+<img/jt.png, id=154, 726.861pt x 344.049pt>
+File: img/jt.png Graphic file (type png)
+<use img/jt.png>
+Package pdftex.def Info: img/jt.png  used on input line 142.
+(pdftex.def)             Requested size: 289.36266pt x 136.96619pt.
 
-] (epifania-meaningfullness.toc) [5
+Overfull \hbox (7.29921pt too wide) in paragraph at lines 142--142
+[][]  
+ []
+
+[4
+
+ <./img/time.png> <./img/jt.png>]
+File: img/time.png Graphic file (type png)
+<use img/time.png>
+Package pdftex.def Info: img/time.png  used on input line 142.
+(pdftex.def)             Requested size: 321.51625pt x 115.90082pt.
+File: img/jt.png Graphic file (type png)
+<use img/jt.png>
+Package pdftex.def Info: img/jt.png  used on input line 142.
+(pdftex.def)             Requested size: 289.36266pt x 136.96619pt.
+
+Overfull \hbox (7.29921pt too wide) in paragraph at lines 142--142
+[][]  
+ []
+
+[5
+
+] (epifania-meaningfullness.toc) [6
+
+] (epifania-meaningfullness.toc) [7
 
 ]
-[6
+[8
 
-] [7
+] [9
 
 ]
-Overfull \hbox (15.55788pt too wide) in paragraph at lines 282--282
+Overfull \hbox (15.55788pt too wide) in paragraph at lines 300--300
  [] 
  []
 
-[8
+[10
 
-] (epifania-meaningfullness.toc) [9
+] (epifania-meaningfullness.toc) [11
 
-] [10
+] [12
 
-] [11
-
-] (epifania-meaningfullness.toc) [12
+] [13
 
 ]
-<img/descrittive_accuratezze.pdf, id=445, 1011.78pt x 614.295pt>
+(epifania-meaningfullness.toc) [14
+
+]
+<img/descrittive_accuratezze.pdf, id=507, 1011.78pt x 614.295pt>
 File: img/descrittive_accuratezze.pdf Graphic file (type pdf)
 <use img/descrittive_accuratezze.pdf>
-Package pdftex.def Info: img/descrittive_accuratezze.pdf  used on input line 39
-6.
+Package pdftex.def Info: img/descrittive_accuratezze.pdf  used on input line 41
+4.
 (pdftex.def)             Requested size: 160.75812pt x 97.59557pt.
-<img/descrittive_tempi.pdf, id=446, 1011.78pt x 614.295pt>
+<img/descrittive_tempi.pdf, id=508, 1011.78pt x 614.295pt>
 File: img/descrittive_tempi.pdf Graphic file (type pdf)
 <use img/descrittive_tempi.pdf>
-Package pdftex.def Info: img/descrittive_tempi.pdf  used on input line 396.
+Package pdftex.def Info: img/descrittive_tempi.pdf  used on input line 414.
 (pdftex.def)             Requested size: 160.75812pt x 97.59557pt.
- [13
+ [15
 
  <./img/descrittive_accuratezze.pdf> <./img/descrittive_tempi.pdf
 
 pdfTeX warning: pdflatex (file ./img/descrittive_tempi.pdf): PDF inclusion: mul
 tiple pdfs with page group included in a single page
 >]
-<img/correlazioni_gruppi.pdf, id=491, 1011.78pt x 614.295pt>
+<img/correlazioni_gruppi.pdf, id=552, 1011.78pt x 614.295pt>
 File: img/correlazioni_gruppi.pdf Graphic file (type pdf)
 <use img/correlazioni_gruppi.pdf>
-Package pdftex.def Info: img/correlazioni_gruppi.pdf  used on input line 406.
-(pdftex.def)             Requested size: 321.51625pt x 195.2099pt.
- [14
-
- <./img/correlazioni_gruppi.pdf>] [15
-
-]
-<img/farfalle_gruppi.pdf, id=563, 1011.78pt x 614.295pt>
-File: img/farfalle_gruppi.pdf Graphic file (type pdf)
-<use img/farfalle_gruppi.pdf>
-Package pdftex.def Info: img/farfalle_gruppi.pdf  used on input line 449.
-(pdftex.def)             Requested size: 321.51625pt x 195.2099pt.
-<img/farfalle_gruppi_colored.pdf, id=564, 1011.78pt x 614.295pt>
-File: img/farfalle_gruppi_colored.pdf Graphic file (type pdf)
-<use img/farfalle_gruppi_colored.pdf>
-Package pdftex.def Info: img/farfalle_gruppi_colored.pdf  used on input line 44
-9.
+Package pdftex.def Info: img/correlazioni_gruppi.pdf  used on input line 424.
 (pdftex.def)             Requested size: 321.51625pt x 195.2099pt.
  [16
+
+ <./img/correlazioni_gruppi.pdf>] [17
+
+]
+<img/farfalle_gruppi.pdf, id=624, 1011.78pt x 614.295pt>
+File: img/farfalle_gruppi.pdf Graphic file (type pdf)
+<use img/farfalle_gruppi.pdf>
+Package pdftex.def Info: img/farfalle_gruppi.pdf  used on input line 467.
+(pdftex.def)             Requested size: 321.51625pt x 195.2099pt.
+<img/farfalle_gruppi_colored.pdf, id=625, 1011.78pt x 614.295pt>
+File: img/farfalle_gruppi_colored.pdf Graphic file (type pdf)
+<use img/farfalle_gruppi_colored.pdf>
+Package pdftex.def Info: img/farfalle_gruppi_colored.pdf  used on input line 46
+7.
+(pdftex.def)             Requested size: 321.51625pt x 195.2099pt.
+ [18
 
  <./img/farfalle_gruppi.pdf>]
 File: img/farfalle_gruppi.pdf Graphic file (type pdf)
 <use img/farfalle_gruppi.pdf>
-Package pdftex.def Info: img/farfalle_gruppi.pdf  used on input line 449.
+Package pdftex.def Info: img/farfalle_gruppi.pdf  used on input line 467.
 (pdftex.def)             Requested size: 321.51625pt x 195.2099pt.
 File: img/farfalle_gruppi_colored.pdf Graphic file (type pdf)
 <use img/farfalle_gruppi_colored.pdf>
-Package pdftex.def Info: img/farfalle_gruppi_colored.pdf  used on input line 44
-9.
+Package pdftex.def Info: img/farfalle_gruppi_colored.pdf  used on input line 46
+7.
 (pdftex.def)             Requested size: 321.51625pt x 195.2099pt.
 
-[17
+[19
 
  <./img/farfalle_gruppi_colored.pdf>]
-<img/time_an_group_4_8.pdf, id=660, 1011.78pt x 614.295pt>
+<img/time_an_group_4_8.pdf, id=722, 1011.78pt x 614.295pt>
 File: img/time_an_group_4_8.pdf Graphic file (type pdf)
 <use img/time_an_group_4_8.pdf>
-Package pdftex.def Info: img/time_an_group_4_8.pdf  used on input line 500.
+Package pdftex.def Info: img/time_an_group_4_8.pdf  used on input line 518.
 (pdftex.def)             Requested size: 160.75812pt x 97.59557pt.
-<img/time_sh_group_4_8.pdf, id=661, 1011.78pt x 614.295pt>
+<img/time_sh_group_4_8.pdf, id=723, 1011.78pt x 614.295pt>
 File: img/time_sh_group_4_8.pdf Graphic file (type pdf)
 <use img/time_sh_group_4_8.pdf>
-Package pdftex.def Info: img/time_sh_group_4_8.pdf  used on input line 500.
+Package pdftex.def Info: img/time_sh_group_4_8.pdf  used on input line 518.
 (pdftex.def)             Requested size: 160.75812pt x 97.59557pt.
- [18
+ [20
 
  <./img/time_an_group_4_8.pdf> <./img/time_sh_group_4_8.pdf
 
 pdfTeX warning: pdflatex (file ./img/time_sh_group_4_8.pdf): PDF inclusion: mul
 tiple pdfs with page group included in a single page
->] (epifania-meaningfullness.toc) [19
+>] (epifania-meaningfullness.toc) [21
 
-] [20
+] [22
 
-] [21
+] [23
 
 ]
 \tf@nav=\write6
@@ -1343,13 +1378,13 @@ tiple pdfs with page group included in a single page
  (epifania-meaningfullness.aux)
 Package rerunfilecheck Info: File `epifania-meaningfullness.out' has not change
 d.
-(rerunfilecheck)             Checksum: E0DF668CA7D1ED817E03C44730B85116;333.
+(rerunfilecheck)             Checksum: E68063786320335D25BB967C1FC6945C;334.
  ) 
 Here is how much of TeX's memory you used:
- 23433 strings out of 480236
- 476595 string characters out of 2880083
- 816120 words of memory out of 3000000
- 39373 multiletter control sequences out of 15000+200000
+ 23464 strings out of 480236
+ 477015 string characters out of 2880083
+ 816698 words of memory out of 3000000
+ 39399 multiletter control sequences out of 15000+200000
  544814 words of font info for 66 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  111i,17n,112p,453b,1296s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1369,9 +1404,9 @@ s/cm/cmr8.pfb><C:/Users/huawei/AppData/Local/Programs/MiKTeX/fonts/type1/public
 pe1/public/amsfonts/cm/cmsy8.pfb><C:/Users/huawei/AppData/Local/Programs/MiKTeX
 /fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/huawei/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on epifania-meaningfullness.pdf (21 pages, 788307 bytes).
+Output written on epifania-meaningfullness.pdf (23 pages, 9493744 bytes).
 PDF statistics:
- 851 PDF objects out of 1000 (max. 8388607)
- 49 named destinations out of 1000 (max. 500000)
- 161 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 912 PDF objects out of 1000 (max. 8388607)
+ 53 named destinations out of 1000 (max. 500000)
+ 171 words of extra memory for PDF output out of 10000 (max. 10000000)
 

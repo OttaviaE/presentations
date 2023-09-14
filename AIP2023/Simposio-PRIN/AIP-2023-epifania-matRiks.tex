@@ -180,14 +180,15 @@
 
 \title{mat\texttt{R}iks}
 \subtitle{An \texttt{R} package for the automatic generation of Raven-like matrices}
-\author{\textbf{Ottavia M. Epifania}, Andrea Brancaccio, Debora de Chiusole, Pasquale Anselmi, Luca Stefanutti}
-\institute{Department of Philosophy, Sociology, Education and Applied Psychology, \\University of Padova, IT}
-\date{Symposium: New frontiers for the adaptive assessment of executive functions
-
-and fluid intelligence\\ Conference of the Italian Association of Psychology, \\ Lucca, September 2023}
-\titlegraphic{%
-	\includegraphics[width=1.8cm,height=1.8cm,keepaspectratio]{img/unipd.png}
-}
+\author{Andrea Brancaccio, \textbf{Ottavia M. Epifania},  Debora de Chiusole, Pasquale Anselmi, Luca Stefanutti}
+\date{Department of Philosophy, Sociology, Education and Applied Psychology, \\University of Padova, IT}
+\institute [UniPd] {
+	\includegraphics[width=10mm]{img/unipd.png}\\ 
+Dipartimento di Filosofia, Sociologia, Pedagogia e Psicologia Applicata,\\	Università di Padova}
+	
+	\date [AIP2023] {%\vspace{0.6cm}\\
+		Convegno AIP-Sezione Sperimentale 2023\\Symposium: \\New frontiers for the adaptive assessment of executive functions\\ \vspace{3mm}
+		18 Settembre 2023}
 \begin{document}
 	
 \begin{frame}[plain]
@@ -251,13 +252,13 @@ and fluid intelligence\\ Conference of the Italian Association of Psychology, \\
 	\centering
 	\begin{tikzpicture}
 		\imagenode[0.5]{img/matrix.png}
-	\imagegrid{10}{\tiny}{1}	
+	%\imagegrid{10}{\tiny}{1}	
 		\highlighttext{0.2}{0.9}{0.8}{1}{red}{Change shapes \& numerical progression}{2}
 		\highlightbox[red,very thick]{0.18}{0.65}{0.85}{0.9}{red}{}{2}
 		\highlightbox[red,very thick]{0.18}{0.37}{0.85}{0.62}{red}{}{2}
 		\highlightbox[red,very thick]{0.18}{0.11}{0.85}{0.35}{red}{}{2}
 		\highlightbox[red,very thick]{0.18}{0.1}{0.36}{0.9}{red}{}{3}
-			\highlightbox[red,very thick]{0.40}{0.1}{0.59}{0.9}{red}{}{3}
+			\highlightbox[red,very thick]{0.40}{0.1}{0.60}{0.9}{red}{}{3}
 		\highlightbox[red,very thick]{0.64}{0.1}{0.83}{0.9}{red}{}{3}
 		\highlighttext{0.1}{0.9}{0.4}{1}{red}{Numerical progression}{3}
 	\end{tikzpicture}
@@ -310,7 +311,7 @@ and fluid intelligence\\ Conference of the Italian Association of Psychology, \\
 \section{Generating rules}
 
 \begin{frame}
-	
+	\centering
 	\scalebox{.60}{
 	\begin{tabular}{p{2cm}p{4cm} p{8cm}}
 		\hline
@@ -327,14 +328,14 @@ and fluid intelligence\\ Conference of the Italian Association of Psychology, \\
 		&	Changes in outline	&	Change the outline of the objects  across cells 	\\
 		&&\\
 		\hline
-		Logical:	&	AND	&	The third cell contains only the elements that appeared in both the first and second cells ($\cap$)	\\
+		Logical	&	AND	&	The third cell contains only the elements that appeared in both the first and second cells ($\cap$)	\\
 		&	OR	&	The third cell contains all the elements in the first and second cells ($\cup$)	\\
 		&	XOR	&	The third cell contains the elements in the first cell not present in the second cell and vice-versa ($\Delta$)	\\
 		&&\\
 		\hline
 		Directional Logic & Horizontal & The objects are modified across columns \\
 		& Vertical & The objects are modified across rows \\
-		& Diagonal & The objects are modified horizontally and diagonally\\ 
+		& Diagonal & The objects are modified horizontally and diagonally\\ \hline
 	\end{tabular}}
 \end{frame}
 
@@ -639,8 +640,7 @@ and fluid intelligence\\ Conference of the Italian Association of Psychology, \\
 				
 			\end{exampleblock}
 		
-			
-			\pause
+	
 		\vspace{-2mm}
 		
 			\begin{exampleblock}{Sample}
@@ -745,7 +745,7 @@ and fluid intelligence\\ Conference of the Italian Association of Psychology, \\
 
 \begin{frame}
 	\begin{itemize}
-				\item Formalization of the matrix generation 
+				\item Formalization of the matrix generation process
 		
 		\item Generate similar but different matrices $\rightarrow$  Equivalent matrices (?) 
 		

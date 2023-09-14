@@ -123,6 +123,24 @@ Dipartimento di Filosofia, Sociologia, Pedagogia e Psicologia Applicata,\\	Unive
 	\end{block}
 \end{frame}
 
+\begin{frame}
+	
+	\begin{tikzpicture}
+		% load the first image nature1.png as a node called img1
+		\node (img1) {\includegraphics[width=\linewidth]{img/time.png}};
+		% insert a pause so that two slides are created:
+		% the first containing only nature1.png and the second with
+		% nature2.png overlapping the first image
+		\pause
+		% create a new node with the image nature2.png,
+		% that is ubicated at the south east of the first node
+		\node (img2) at (img1.south)
+		{\includegraphics[width=.90\linewidth]{img/jt.png}};
+	\end{tikzpicture}
+	
+	
+\end{frame}
+
 \section{The case in point}
 \subsection{Tower of London}
 \begin{frame}
@@ -437,7 +455,7 @@ Respondent  $i,j \in \{1, \ldots N\}$
 \end{frame}
 
 
-\begin{frame}
+\begin{frame}{Yes}
 	\begin{overprint}
 		
 		\onslide<1>\includegraphics[width=\linewidth]{img/farfalle_gruppi.pdf}
