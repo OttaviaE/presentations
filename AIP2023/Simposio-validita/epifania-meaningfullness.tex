@@ -1,4 +1,4 @@
-\documentclass{beamer}
+\documentclass[aspectratio=149]{beamer}
 \usetheme{Montpellier}
 \usecolortheme{dove}
 \useinnertheme{rounded}
@@ -134,8 +134,8 @@ Dipartimento di Filosofia, Sociologia, Pedagogia e Psicologia Applicata,\\	Unive
 		\pause
 		% create a new node with the image nature2.png,
 		% that is ubicated at the south east of the first node
-		\node (img2) at (img1.south)
-		{\includegraphics[width=.90\linewidth]{img/jt.png}};
+		\node[opacity=0.8]  (img2) at (img1.center)
+		{\includegraphics[width=.70\linewidth]{img/jt.png}};
 	\end{tikzpicture}
 	
 	
@@ -382,7 +382,11 @@ Kirkorian et al. & $\checkmark$ & $\times$ & 0-3& 0-36 \\\hline
 
 \section{Real data application}
 	
-	\begin{frame}{Raw data}
+	\begin{frame}
+		
+		$n = 343$, F $= 49$\%
+		
+		 
 	
 	\begin{columns}
 	
@@ -455,7 +459,7 @@ Respondent  $i,j \in \{1, \ldots N\}$
 \end{frame}
 
 
-\begin{frame}{Yes}
+\begin{frame}
 	\begin{overprint}
 		
 		\onslide<1>\includegraphics[width=\linewidth]{img/farfalle_gruppi.pdf}
@@ -468,8 +472,10 @@ Respondent  $i,j \in \{1, \ldots N\}$
 
 
 \begin{frame}
+		\vspace*{-3mm}
 	\begin{columns}[T]
 		\begin{column}{.50\linewidth}
+		
 			\begin{center}
 				$\Delta_{\text{AN}} > 2$ \& $\Delta_{\text{SH2}} 	\approx 0$ 
 			\end{center}
@@ -481,12 +487,13 @@ Respondent  $i,j \in \{1, \ldots N\}$
 					\begin{tabular}{c c c c c}
 						\hline
 			& $z_{\text{AN}}$ & $z_{\text{SH2}}$ & Accuracy & Time (sd) \\ \hline
-			\textbf{\textcolor{sbj3}{sbj1}}	 & $-1.55$ & $0.43$ & 0.75 & $24.10$ ($15.60$) \\
-			\textbf{\textcolor{sbj2}{sbj2}} & $0.55$ & $0.20$ & 0.75& $10.51$ ($3.36$)\\				
+						\textbf{\textcolor{sbj3}{sbj1}} & $-1.55$ & $0.43$ & 0.75&$24.10$ ($15.60$) \\	
+			\textbf{\textcolor{sbj2}{sbj2}}	 & $0.72$ & $0.43$ & 0.75 &  $14.51$ ($9.22$) \\
+			
 			\hline
 			& & & & \\\hline
 			& \multicolumn{2}{c}{$\Delta_{\text{AN}}$ } & \multicolumn{2}{c}{$\Delta_{\text{SH2}}$ } \\ \hline
-			\textbf{\textcolor{sbj2}{sbj2}} $-$ \textbf{\textcolor{sbj3}{sbj1}}& \multicolumn{2}{c}{$2.10$} & \multicolumn{2}{c}{$-0.23$}\\\hline
+			\textbf{\textcolor{sbj3}{sbj1}} $-$ \textbf{\textcolor{sbj2}{sbj2}}& \multicolumn{2}{c}{$2.27$} & \multicolumn{2}{c}{$0.00$}\\\hline
 
 		\end{tabular}
 		}
@@ -509,7 +516,7 @@ Respondent  $i,j \in \{1, \ldots N\}$
 				\hline
 				& & & & \\\hline
 				& \multicolumn{2}{c}{$\Delta_{\text{AN}}$ } & \multicolumn{2}{c}{$\Delta_{\text{SH2}}$ } \\ \hline
-				\textbf{\textcolor{sbj6}{sbj3}} $-$ \textbf{\textcolor{sbj5}{sbj4}}& \multicolumn{2}{c}{$-0.15$} & \multicolumn{2}{c}{$2.25$}\\\hline
+				\textbf{\textcolor{sbj6}{sbj3}} $-$ \textbf{\textcolor{sbj5}{sbj4}}& \multicolumn{2}{c}{$-0.35$} & \multicolumn{2}{c}{$2.25$}\\\hline
 				
 			\end{tabular}
 		}
