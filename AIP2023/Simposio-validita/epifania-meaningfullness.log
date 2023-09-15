@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2023.5.14)  14 SEP 2023 17:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2023.5.14)  15 SEP 2023 15:38
 entering extended mode
 **./epifania-meaningfullness.tex
 (epifania-meaningfullness.tex
@@ -834,12 +834,12 @@ edefault.sty)))
 pellier.sty
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerouterthem
 etree.sty))
+(C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerfonttheme
+serif.sty)
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamercolorthem
 edove.sty)
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerinnerthem
 erounded.sty)
-(C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerfonttheme
-serif.sty)
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
 Package: babel 2020/10/06 3.50 The Babel package
 
@@ -1079,22 +1079,22 @@ File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
 ) (epifania-meaningfullness.aux)
 \openout1 = `epifania-meaningfullness.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1152,7 +1152,7 @@ Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
-Package hyperref Info: Link coloring OFF on input line 132.
+Package hyperref Info: Link coloring OFF on input line 133.
 
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -1166,9 +1166,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count351
 )
-LaTeX Info: Redefining \ref on input line 132.
-LaTeX Info: Redefining \pageref on input line 132.
-LaTeX Info: Redefining \nameref on input line 132.
+LaTeX Info: Redefining \ref on input line 133.
+LaTeX Info: Redefining \pageref on input line 133.
+LaTeX Info: Redefining \nameref on input line 133.
  (epifania-meaningfullness.out) (epifania-meaningfullness.out)
 \@outlinefile=\write5
 \openout5 = `epifania-meaningfullness.out'.
@@ -1198,8 +1198,8 @@ Dictionary: translator-numbers-dictionary, Language: English
 theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \it@ocap on input line 132.
-LaTeX Info: Redefining \it@ccap on input line 132.
+LaTeX Info: Redefining \it@ocap on input line 133.
+LaTeX Info: Redefining \it@ccap on input line 133.
 
 
 File italian.ldf warning: 
@@ -1207,13 +1207,13 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
-italian.ldf    on input line 132.
+italian.ldf    on input line 133.
 
 (epifania-meaningfullness.nav)
 <unipd.png, id=37, 943.525pt x 949.5475pt>
 File: unipd.png Graphic file (type png)
 <use unipd.png>
-Package pdftex.def Info: unipd.png  used on input line 136.
+Package pdftex.def Info: unipd.png  used on input line 137.
 (pdftex.def)             Requested size: 28.45274pt x 28.63008pt.
  [1
 
@@ -1221,13 +1221,13 @@ Package pdftex.def Info: unipd.png  used on input line 136.
 (epifania-meaningfullness.toc) [2
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 155
+LaTeX Font Info:    Trying to load font information for U+msa on input line 156
 .
 
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 155
+LaTeX Font Info:    Trying to load font information for U+msb on input line 156
 .
 
 (C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -1239,15 +1239,15 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <img/time.png, id=152, 572.904pt x 206.517pt>
 File: img/time.png Graphic file (type png)
 <use img/time.png>
-Package pdftex.def Info: img/time.png  used on input line 168.
+Package pdftex.def Info: img/time.png  used on input line 169.
 (pdftex.def)             Requested size: 355.65947pt x 128.20937pt.
 <img/jt_axe.jpg, id=154, 728.7225pt x 542.025pt>
 File: img/jt_axe.jpg Graphic file (type jpg)
 <use img/jt_axe.jpg>
-Package pdftex.def Info: img/jt_axe.jpg  used on input line 168.
+Package pdftex.def Info: img/jt_axe.jpg  used on input line 169.
 (pdftex.def)             Requested size: 248.96054pt x 185.171pt.
 
-Overfull \hbox (7.29921pt too wide) in paragraph at lines 168--168
+Overfull \hbox (7.29921pt too wide) in paragraph at lines 169--169
 [][]  
  []
 
@@ -1256,14 +1256,14 @@ Overfull \hbox (7.29921pt too wide) in paragraph at lines 168--168
  <./img/time.png> <./img/jt_axe.jpg>]
 File: img/time.png Graphic file (type png)
 <use img/time.png>
-Package pdftex.def Info: img/time.png  used on input line 168.
+Package pdftex.def Info: img/time.png  used on input line 169.
 (pdftex.def)             Requested size: 355.65947pt x 128.20937pt.
 File: img/jt_axe.jpg Graphic file (type jpg)
 <use img/jt_axe.jpg>
-Package pdftex.def Info: img/jt_axe.jpg  used on input line 168.
+Package pdftex.def Info: img/jt_axe.jpg  used on input line 169.
 (pdftex.def)             Requested size: 248.96054pt x 185.171pt.
 
-Overfull \hbox (7.29921pt too wide) in paragraph at lines 168--168
+Overfull \hbox (7.29921pt too wide) in paragraph at lines 169--169
 [][]  
  []
 
@@ -1293,10 +1293,10 @@ Overfull \hbox (7.29921pt too wide) in paragraph at lines 168--168
 <img/correlazioni_gruppi.pdf, id=507, 1011.78pt x 614.295pt>
 File: img/correlazioni_gruppi.pdf Graphic file (type pdf)
 <use img/correlazioni_gruppi.pdf>
-Package pdftex.def Info: img/correlazioni_gruppi.pdf  used on input line 401.
+Package pdftex.def Info: img/correlazioni_gruppi.pdf  used on input line 410.
 (pdftex.def)             Requested size: 355.65947pt x 215.93443pt.
 
-Overfull \vbox (6.95314pt too high) detected at line 401
+Overfull \vbox (6.95314pt too high) detected at line 410
  []
 
 [15
@@ -1307,25 +1307,25 @@ Overfull \vbox (6.95314pt too high) detected at line 401
 <img/farfalle_gruppi.pdf, id=579, 1011.78pt x 614.295pt>
 File: img/farfalle_gruppi.pdf Graphic file (type pdf)
 <use img/farfalle_gruppi.pdf>
-Package pdftex.def Info: img/farfalle_gruppi.pdf  used on input line 444.
+Package pdftex.def Info: img/farfalle_gruppi.pdf  used on input line 453.
 (pdftex.def)             Requested size: 355.65947pt x 215.93443pt.
 <img/farfalle_gruppi_colored.pdf, id=580, 1011.78pt x 614.295pt>
 File: img/farfalle_gruppi_colored.pdf Graphic file (type pdf)
 <use img/farfalle_gruppi_colored.pdf>
-Package pdftex.def Info: img/farfalle_gruppi_colored.pdf  used on input line 44
-4.
+Package pdftex.def Info: img/farfalle_gruppi_colored.pdf  used on input line 45
+3.
 (pdftex.def)             Requested size: 355.65947pt x 215.93443pt.
  [17
 
  <./img/farfalle_gruppi.pdf>]
 File: img/farfalle_gruppi.pdf Graphic file (type pdf)
 <use img/farfalle_gruppi.pdf>
-Package pdftex.def Info: img/farfalle_gruppi.pdf  used on input line 444.
+Package pdftex.def Info: img/farfalle_gruppi.pdf  used on input line 453.
 (pdftex.def)             Requested size: 355.65947pt x 215.93443pt.
 File: img/farfalle_gruppi_colored.pdf Graphic file (type pdf)
 <use img/farfalle_gruppi_colored.pdf>
-Package pdftex.def Info: img/farfalle_gruppi_colored.pdf  used on input line 44
-4.
+Package pdftex.def Info: img/farfalle_gruppi_colored.pdf  used on input line 45
+3.
 (pdftex.def)             Requested size: 355.65947pt x 215.93443pt.
 
 [18
@@ -1334,12 +1334,12 @@ Package pdftex.def Info: img/farfalle_gruppi_colored.pdf  used on input line 44
 <img/time_an_group_4_8.pdf, id=676, 1011.78pt x 614.295pt>
 File: img/time_an_group_4_8.pdf Graphic file (type pdf)
 <use img/time_an_group_4_8.pdf>
-Package pdftex.def Info: img/time_an_group_4_8.pdf  used on input line 498.
+Package pdftex.def Info: img/time_an_group_4_8.pdf  used on input line 507.
 (pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
 <img/time_sh_group_4_8.pdf, id=677, 1011.78pt x 614.295pt>
 File: img/time_sh_group_4_8.pdf Graphic file (type pdf)
 <use img/time_sh_group_4_8.pdf>
-Package pdftex.def Info: img/time_sh_group_4_8.pdf  used on input line 498.
+Package pdftex.def Info: img/time_sh_group_4_8.pdf  used on input line 507.
 (pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
  [19
 
@@ -1371,7 +1371,7 @@ d.
 Here is how much of TeX's memory you used:
  23522 strings out of 480236
  477694 string characters out of 2880083
- 798643 words of memory out of 3000000
+ 799867 words of memory out of 3000000
  39455 multiletter control sequences out of 15000+200000
  545113 words of font info for 67 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1393,7 +1393,7 @@ s/cm/cmr8.pfb><C:/Users/huawei/AppData/Local/Programs/MiKTeX/fonts/type1/public
 fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/huawei/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/huawei/AppData/Loc
 al/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on epifania-meaningfullness.pdf (22 pages, 887429 bytes).
+Output written on epifania-meaningfullness.pdf (22 pages, 888719 bytes).
 PDF statistics:
  870 PDF objects out of 1000 (max. 8388607)
  51 named destinations out of 1000 (max. 500000)
