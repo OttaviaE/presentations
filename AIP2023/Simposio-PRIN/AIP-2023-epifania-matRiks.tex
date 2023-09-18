@@ -20,8 +20,8 @@
 \usetikzlibrary{mindmap,calc,patterns,decorations.pathmorphing,decorations.markings, arrows, shapes.arrows, shapes, backgrounds,positioning,shadows.blur, positioning, fit, tikzmark, shadows}
 \usepackage[absolute,overlay]{textpos}
 \newcommand\Factor{1.2}
-\setbeamerfont{subtitle}{family=\scshape}
-\setbeamerfont{title}{family=\scshape}
+%\setbeamerfont{subtitle}{family=\scshape}
+%\setbeamerfont{title}{family=\scshape}
 %\definecolor{template}{RGB}{54, 114, 89}
 \definecolor{template}{RGB}{155, 0, 20}
 %\definecolor{background}{RGB}{250, 250, 250}
@@ -208,17 +208,16 @@
 	\fboxrule2pt %
 	\fcolorbox{red}{lightgray}{\box0}\hfill}
 
-\title{mat\texttt{R}iks}
-\subtitle{An \texttt{R} package for the automatic generation of Raven-like matrices}
-\author{Andrea Brancaccio, \textbf{Ottavia M. Epifania},  Debora de Chiusole, Pasquale Anselmi, Luca Stefanutti}
+\title{mat\texttt{R}iks: \\ An \texttt{R} package for the automatic generation of Raven-like matrices}
+\author{\textbf{Ottavia M. Epifania}, \textbf{Andrea Brancaccio}, Debora de Chiusole, Pasquale Anselmi, Luca Stefanutti}
 \date{Department of Philosophy, Sociology, Education and Applied Psychology, \\University of Padova, IT}
 \institute [UniPd] {
 	\includegraphics[width=10mm]{img/unipd.png}\\ 
-Dipartimento di Filosofia, Sociologia, Pedagogia e Psicologia Applicata,\\	Università di Padova}
+FISPPA Department,\\ University of Padova}
 	
 	\date [AIP2023] {%\vspace{0.6cm}\\
-		Convegno AIP-Sezione Sperimentale 2023\\Symposium: \\New frontiers for the adaptive assessment of executive functions\\ \vspace{3mm}
-		18 Settembre 2023}
+		 AIP-Sezione Sperimentale Conference 2023\\Symposium: New frontiers for the adaptive assessment of executive functions\\ \vspace{3mm}
+		18\textsuperscript{th} September 2023}
 \begin{document}
 	
 \begin{frame}[plain]
@@ -244,6 +243,12 @@ Dipartimento di Filosofia, Sociologia, Pedagogia e Psicologia Applicata,\\	Unive
 	\vspace{5mm}
 	Beyond clinical assessment $\rightarrow$ Job recruitment 
 	
+	\pause 
+	
+	\begin{alertblock}{}
+	
+	Only once in a lifetime (or after  a very looooooong time)
+	\end{alertblock}
 %	\pause
 %	\begin{alertblock}{Issue}
 %		
@@ -609,7 +614,7 @@ Dipartimento di Filosofia, Sociologia, Pedagogia e Psicologia Applicata,\\	Unive
 \cellcolor{ic!70}	\includegraphics[width=.4\linewidth]{img/icneg.pdf} &  \cellcolor{ic!70}\includegraphics[width=.4\linewidth]{img/icflip.pdf} \\
 \cellcolor{ic!70}	\includegraphics[width=.4\linewidth]{img/icsize.pdf} &  \cellcolor{ic!70} \includegraphics[width=.4\linewidth]{img/icinc.pdf} \\
 \cellcolor{wp!70}	\includegraphics[width=.4\linewidth]{img/wpcopy.pdf} &  \cellcolor{wp!70} \includegraphics[width=.4\linewidth]{img/wpmatrix.pdf} \\
-\cellcolor{difference!70}	\includegraphics[width=.4\linewidth]{img/difference.pdf} & \\
+\cellcolor{difference!70}	\includegraphics[width=.4\linewidth]{img/difference.pdf} & \cellcolor{white}\\
 \end{tabular}
 }
 		};
@@ -751,6 +756,7 @@ Dipartimento di Filosofia, Sociologia, Pedagogia e Psicologia Applicata,\\	Unive
 \begin{table}
 	\vspace*{-2mm}
 	\centering
+	\footnotesize
 	\begin{tabular}[t]{ccccc}
 		\hline
 			Madcov & SRMR & $p$-value\\
@@ -764,7 +770,7 @@ Dipartimento di Filosofia, Sociologia, Pedagogia e Psicologia Applicata,\\	Unive
 \begin{figure}
 \centering
 
-\includegraphics[width=.7\linewidth]{img/icc.pdf}
+\includegraphics[width=.65\linewidth]{img/icc.pdf}
 \end{figure}
 	
 \end{frame}
@@ -773,20 +779,25 @@ Dipartimento di Filosofia, Sociologia, Pedagogia e Psicologia Applicata,\\	Unive
 
 \begin{frame}
 	\begin{itemize}
-				\item Formalization of the matrix generation process
+				\item Formalization of the matrix generation process $\rightarrow$ Modulate the stimulus difficulty by varying its elements 
 		
 		\item Generate similar but different matrices $\rightarrow$  Equivalent matrices (?) 
 		
-
+		\vspace{2mm}
 		
 		\item Reproducibility of the stimuli
 		
+				\vspace{2mm}
 		\item Ease of use (for use\texttt{R})
 		
-		\pause
 		\vspace{2mm}
 		\item[{\small\includegraphics[height=2.4ex]{img/soon.png}}] A shiny app
 	\end{itemize}
+	
+	\begin{figure}
+	\includegraphics[width=.30\linewidth]{img/theMatrix_real.jpg}
+	\end{figure}
+	
 	
 \end{frame}
 
@@ -797,7 +808,7 @@ Dipartimento di Filosofia, Sociologia, Pedagogia e Psicologia Applicata,\\	Unive
 			\large mat\texttt{R}iks
 			
 			\vspace{3mm}
-			\includegraphics[width=.6\linewidth]{img/matriks.png}
+			\includegraphics[width=.4\linewidth]{img/matriks.png}
 			
 			\footnotesize
 			\href{https://github.com/OttaviaE/matRiks}{https://github.com/OttaviaE/matRiks}
@@ -805,7 +816,7 @@ Dipartimento di Filosofia, Sociologia, Pedagogia e Psicologia Applicata,\\	Unive
 		
 	\onslide<2->
 	
-	\vspace{8mm}
+	\vspace{3mm}
 	\centering
 	
 	\Large
@@ -816,10 +827,7 @@ Dipartimento di Filosofia, Sociologia, Pedagogia e Psicologia Applicata,\\	Unive
 	ottavia.epifania@unipd.it
 	
 	
-
-	\onslide<2->
-		\begin{textblock*}{2cm}(10cm,8cm)
-				\onslide<2->
+		\begin{textblock*}{2cm}(11.5cm,7cm)
 		\includegraphics[width =\linewidth]{img/user.png}
 	\end{textblock*}
 	
