@@ -148,7 +148,7 @@ Dipartimento di Filosofia, Sociologia, Pedagogia e Psicologia Applicata,\\	Unive
 	
 	where $\varphi$ and $\varphi'$ are two different scales of measurement of the same variable.
 	
-	
+	\pause
 	\begin{block}{Meaningful comparisons}
 		
 		The comparison between \emph{a} and \emph{b} is meaningful if it is invariant under all the unit transformations. 
@@ -329,10 +329,10 @@ Scoring & Attempts & Response times & Item score & Total score \\\hline
 				\hline
 				Assign & if time is\\
 				\hline
-				3 & $<15$ s \\
-				2 & $<30$ s \\
-				1 & $<60$ s \\
-				0 & $\ge60$ s \\
+				3 & $\leq 15$ s \\
+				2 & $15 \dashv 30$ s \\
+				1 & $30 \dashv 60$ s \\
+				0 & $>60$ s \\
 				\hline
 			\end{tabular}
 			\bigskip
@@ -352,28 +352,25 @@ Scoring & Attempts & Response times & Item score & Total score \\\hline
 				\hline
 				Assign & if time is\\
 				\hline
-				9 & $<6$ s \\
-				8 & $6-10$ s \\
-				7 & $11-20$ s \\
-				6 & $21-40$ s \\
-				5 & $41-60$ s \\
+				9 & $\leq6$ s \\
+				8 & $6\dashv10$ s \\
+				7 & $11\dashv20$ s \\
+				6 & $21\dashv40$ s \\
+				5 & $41\dashv60$ s \\
 				0 & $>60$ s \\
 				\hline
 			\end{tabular}
 			\vspace{1.5mm}
 			\footnotesize \normalfont 
+			\flushleft
 			
 			Subtract the number of unsuccessful attempts
 	\end{column}
 \end{columns}
 \end{frame}
 
-
-
-\section{Real data application}
-	
-	\begin{frame}{The expectation}
-	Both scoring are based on the discretization of the response times  $\rightarrow$ There should not be differences in the \textbf{order} of the total score of the respondents according to the scoring method 
+\begin{frame}
+	Both scorings are based on the discretization of the response times  $\rightarrow$ There should not be differences in the \textbf{order} of the total score of the respondents according to the scoring method 
 	
 	%\begin{center}
 	%\includegraphics[width=.03\linewidth]{img/arrowDown.png}
@@ -385,10 +382,26 @@ Scoring & Attempts & Response times & Item score & Total score \\\hline
 	
 	\begin{figure}
 	\centering
-	\includegraphics[width=.50\linewidth]{img/exp.pdf}
+	\includegraphics[width=.70\linewidth]{img/exp.pdf}
 	\end{figure}
 	
 	\end{frame}
+
+
+
+\section{Real data application}
+	
+
+	
+	\begin{frame}
+	
+		$n = 343$
+	\begin{figure}
+	\centering
+	\includegraphics[width=.85\linewidth]{img/descrittive_gender.pdf}
+	\end{figure}
+	\end{frame}
+	
 	
 %	\begin{frame}
 %		
@@ -433,7 +446,7 @@ Scoring & Attempts & Response times & Item score & Total score \\\hline
 
 \begin{frame}{Is it really bad...?}
 	
-Respondent  $i,j \in \{1, \ldots N\}$ 
+Respondents  $i,j \in \{1, \ldots N\}$ 
 
  
 
