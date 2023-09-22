@@ -1,0 +1,17 @@
+\contentsline {chapter}{Preface}{vii}{}%
+\contentsline {chapter}{\numberline {1}In the end}{1}{}%
+\contentsline {chapter}{\numberline {A}Appendix A}{21}{}%
+\contentsline {section}{\numberline {A.1}Accuracy models specification}{23}{}%
+\contentsline {subsection}{\numberline {A.1.1}Model estimation}{23}{}%
+\contentsline {subsubsection}{Model comparison}{24}{}%
+\contentsline {subsection}{\numberline {A.1.2}Rasch model parameters}{24}{}%
+\contentsline {section}{\numberline {A.2}Log-time models specification}{25}{}%
+\contentsline {subsection}{\numberline {A.2.1}Log-normal model parameters}{26}{}%
+\contentsline {chapter}{\numberline {B}Appendix B}{27}{}%
+\contentsline {section}{\numberline {B.1}Accuracy models specification}{29}{}%
+\contentsline {subsection}{\numberline {B.1.1}Model estimation}{29}{}%
+\contentsline {subsection}{\numberline {B.1.2}Model comparison}{30}{}%
+\contentsline {subsection}{\numberline {B.1.3}Rasch model parameters}{30}{}%
+\contentsline {section}{\numberline {B.2}Log-time models specification}{31}{}%
+\contentsline {subsection}{\numberline {B.2.1}Log-normal model parameters}{32}{}%
+\contentsline {chapter}{References}{33}{}%

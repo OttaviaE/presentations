@@ -1,0 +1,71 @@
+\babel@toc {english}{}
+\contentsline {chapter}{Preface}{v}{chapter*.2}
+\contentsline {chapter}{\numberline {1}Theories, Processes, Measurement}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Automatic and controlled processes}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}The Implicit Association Test}{4}{section.1.2}
+\contentsline {section}{\numberline {1.3}Fields of application}{5}{section.1.3}
+\contentsline {paragraph}{IAT in Social psychology.}{7}{section*.6}
+\contentsline {paragraph}{IAT in Clinical and dynamic psychology.}{8}{section*.7}
+\contentsline {paragraph}{IAT in Addiction research.}{9}{section*.8}
+\contentsline {paragraph}{IAT in Food research.}{9}{section*.9}
+\contentsline {paragraph}{The IAT in marketing research.}{9}{section*.10}
+\contentsline {paragraph}{The IAT in macro-area Other.}{9}{section*.11}
+\contentsline {section}{\numberline {1.4}The Single-Category Implicit Association Test}{10}{section.1.4}
+\contentsline {section}{\numberline {1.5}Fully-crossed design}{13}{section.1.5}
+\contentsline {subsection}{\numberline {1.5.1}More than one implicit measure}{15}{subsection.1.5.1}
+\contentsline {chapter}{\numberline {2}Classic scoring of implicit measures}{17}{chapter.2}
+\contentsline {section}{\numberline {2.1}IAT D-score}{18}{section.2.1}
+\contentsline {section}{\numberline {2.2}SC-IAT D-score}{20}{section.2.2}
+\contentsline {section}{\numberline {2.3}A fairer comparison}{20}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Method}{22}{subsection.2.3.1}
+\contentsline {paragraph}{Participants.}{22}{section*.14}
+\contentsline {paragraph}{Materials and Procedure.}{23}{section*.15}
+\contentsline {paragraph}{Scoring.}{24}{section*.16}
+\contentsline {subsection}{\numberline {2.3.2}Results}{26}{subsection.2.3.2}
+\contentsline {paragraph}{Behavioral outcome.}{30}{section*.19}
+\contentsline {subsection}{\numberline {2.3.3}Discussion and Conclusions}{34}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}R development}{37}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}\texttt {implicitMeasures}}{37}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}DscoreApp}{40}{subsection.2.4.2}
+\contentsline {chapter}{\numberline {3}Formal modeling}{45}{chapter.3}
+\contentsline {section}{\numberline {3.1}Multionomial Models}{46}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Quad Model.}{46}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}ReAL Model}{47}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Time and Accuracy models}{48}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Diffusion Model}{48}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Discrimination-Association Model}{50}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Rasch Modeling}{51}{section.3.3}
+\contentsline {chapter}{\numberline {4}Rasch model model and log-normal model}{53}{chapter.4}
+\contentsline {section}{\numberline {4.1}Rasch Model}{54}{section.4.1}
+\contentsline {section}{\numberline {4.2}Log-normal Model}{54}{section.4.2}
+\contentsline {section}{\numberline {4.3}Linear Mixed Effects Models}{55}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}(Generalized) Linear Model and Rasch Model}{56}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Extending to Multidimensional data}{57}{subsection.4.3.2}
+\contentsline {chapter}{\numberline {5}Models specification}{59}{chapter.5}
+\contentsline {section}{\numberline {5.1}Maximal Model}{60}{section.5.1}
+\contentsline {section}{\numberline {5.2}Models random structure}{62}{section.5.2}
+\contentsline {chapter}{\numberline {6}Empirical application to IAT data}{67}{chapter.6}
+\contentsline {section}{\numberline {6.1}Rasch gone mixed}{68}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Method}{68}{subsection.6.1.1}
+\contentsline {paragraph}{Participants.}{68}{section*.26}
+\contentsline {paragraph}{Materials and procedure.}{68}{section*.27}
+\contentsline {paragraph}{Data cleaning and \emph {D-score}.}{68}{section*.28}
+\contentsline {subsection}{\numberline {6.1.2}Race IAT: Results}{69}{subsection.6.1.2}
+\contentsline {paragraph}{Accuracy models.}{69}{section*.29}
+\contentsline {paragraph}{Log-normal models.}{72}{section*.31}
+\contentsline {paragraph}{Regression model: \emph {D-score}.}{72}{section*.32}
+\contentsline {section}{\numberline {6.2}Filling the Gap}{73}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Method}{73}{subsection.6.2.1}
+\contentsline {paragraph}{Participants.}{73}{section*.33}
+\contentsline {paragraph}{Materials and procedure.}{73}{section*.34}
+\contentsline {subsection}{\numberline {6.2.2}Chocolate IAT: Results}{74}{subsection.6.2.2}
+\contentsline {paragraph}{Accuracy models.}{74}{section*.35}
+\contentsline {paragraph}{Log-normal models.}{77}{section*.37}
+\contentsline {paragraph}{Regression model: \emph {D-score}.}{77}{section*.38}
+\contentsline {paragraph}{Regression model: Behavioral outcome.}{78}{section*.39}
+\contentsline {section}{\numberline {6.3}Discussion and Conclusions}{79}{section.6.3}
+\contentsline {chapter}{\numberline {7}Make it comprehensive}{83}{chapter.7}
+\contentsline {chapter}{\numberline {8}The feedback effect on implicit measures performance}{85}{chapter.8}
+\contentsline {chapter}{\numberline {9}General discussion}{87}{chapter.9}
+\contentsline {chapter}{Last note}{89}{chapter*.40}
+\contentsline {chapter}{References}{91}{chapter*.41}

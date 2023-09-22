@@ -1,0 +1,274 @@
+\documentclass{book}
+\usepackage{standalone}
+\usepackage{apacite}
+\usepackage{etoolbox}% for the \patchcmd
+\makeatletter
+% Patch after apacite got loaded!
+\patchcmd{\nocite}{\@onlypreamble\document}{\documentclass\sa@documentclass}{}{}
+\makeatother
+\usepackage{graphicx}
+\usepackage{subcaption}
+\graphicspath{{C:/Users/huawei/Desktop/images/}} 
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{pdflscape}
+\usepackage[margin=3cm]{geometry}
+\usepackage{multirow}
+\usepackage{times}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{dcolumn}
+\usepackage{siunitx}
+\usepackage{array}
+\usepackage{longtable}
+
+\raggedbottom
+
+\renewcommand\baselinestretch{2}
+
+
+\newcolumntype{d}[1]{D{.}{.}{#1}}
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+
+\begin{document}
+\chapter{Models specification}\label{chap:modelsIAT}
+
+This chapter illustrates the random structures of the GLMMs and the LMMs used for estimating Rasch model and log-normal estimates from IAT accuracy and log-time data, respectively. 
+
+Three random structures for accuracy responses (Rasch model), as well as three random structures for log-time responses (log-normal model) are introduced. The first one is the simplest one, and it is considered the Null model against which the models with the other two random structures are compared. The second and third model have the same level of complexity. They differentiate each other according to whether the multidimensionality is allowed on the respondents (Model 2) or on the stimuli (Model 3). Therefore, the best fitting model and the estimation of the Rasch model and log-normal model estimates depend on the variability in the data. 
+
+
+\newpage
+
+\section{Random structures}
+The random structures of the GLMMs and that of the LMMs are the same. The features differentiating the models are the assumptions on the error term $\epsilon$ and the dependent variable. 
+In the GLMMs, the error term is supposed to follow a logistic distribution (i.e., $\epsilon \sim \mathcal{L}(0, \sigma^2)$) and the dependent variable is the accuracy response to each trial of the IAT. 
+In the LMMs, the error term is supposed to follow a normal distribution (i.e., $\epsilon \sim \mathcal{N}(0, \sigma^2)$), and the dependent variable $y$ is the log transformation of the time response to each trial of the IAT, regardless of whether the answer is correct or not.
+
+The expected response $y$ for each observation $i = 1, \ldots, n$  for participant $j = 1,\ldots, J$ on stimulus $k = 1,\ldots, K$ in condition $l= 1,\ldots, L$ can hence be either the \emph{log-odds} of the probability of a correct response (GLMMs) or the log-time of the response (LMMs).
+
+In both GLMMs and LMMs, the fixed intercept $alpha$ is set at $0$. IAT associative conditions $l$ are specified as fixed effect $\beta_ili$. Since the intercept is set at $0$, none of the level of the fixed effect is taken as reference value. Consequently, the marginal \emph{log-odds} of a correct response for each condition (GLMMs) and the marginal average log-time for each condition (LMMs) are estimated.
+The fixed part of the models is kept constant, only the random structures change across models.
+
+GLMMs applied on accuracy responses are identified by a capital ``A''. LMMs applied on log-time responses are identified by a capital ``T''. 
+
+
+\subsection[GLMMs]{Generalized Linear Mixed Effect Models}
+
+Model A1 presents the simplest random structure, where only the between--respondents across-conditions variability and the between--stimuli across--conditions variability are considered by specifying both respondents and stimuli as random intercepts across associative conditions: 
+
+\begin{equation}\label{AccuracyMin}
+	y_{i} = logit^{-1}(\alpha + \beta_il_i + \alpha_{j[i]} +  \alpha_{k[i]} + \epsilon_{i}),
+\end{equation}
+with
+\begin{align}
+	\alpha_{j} \sim  \mathcal{N} ( 0, \sigma_{\alpha_j}^2) \, \text{and} \, \alpha_{k}  \sim  \mathcal{N} (0,\sigma_{\alpha_k}^2)
+\end{align}
+%\begin{align}
+%	\alpha_{k}  \sim  \mathcal{N} (0,\sigma_{\alpha_k}^2)
+%\end{align}
+
+Model A1 should be preferred when a low within--respondents between--conditions variability, as well as a low within--stimuli between--conditions variability, are observed. This lack of variability at both respondents and stimuli levels might indicate a lack of the IAT effect at both levels. 
+Nonetheless, the random structure of Model A1 results in the estimation of overall respondents' ability estimates $\theta_{j}$ and overall stimuli easiness estimates $b_k$. 
+
+Respondents' ability estimates inform about the overall ability they showed in performing the categorization task, and they can be used as a measure of individual differences for further analysis. 
+
+Stimuli overall easiness estimates provide information on the stimuli functioning in respect to their own category. Stimuli belonging to the same category are supposed to be prototypical exemplars of that specific category, and, as such, to be easily recognized and correctly assigned to their category. Consequently, they should have similar easiness estimates.
+If a stimulus is not recognized as a prototypical exemplar of its alleged category, it will have a higher chance of getting incorrect responses (i.e., being assigned to the incorrect category), from which a lower easiness estimate follows. By comparing the easiness estimates of the stimuli belonging to the same category between each other, it is possible to investigate whether the stimuli belonging to the same category are all easily recognizable as prototypical exemplars or not.
+
+Model A2 accounts for the within--stimuli between--conditions variability and the between--respondents across--conditions variability. Stimuli are specified as random slopes in the associative conditions, respondents are specified as random intercepts across associative conditions, as follows: 
+%
+\begin{equation}\label{Accuracy2}
+	y_{i} = logit^{-1}(\alpha + \beta_il_i + \alpha_{j[i]} +  \beta_{k[i]}l_{i} + \epsilon_{i}),
+\end{equation}
+with:
+\begin{align}
+	\beta_{k} \sim  \mathcal{N}
+	\begin{pmatrix}
+		0,&
+		\begin{pmatrix}
+			\sigma_{\beta_{kl_1}}^2 & \sigma_{\beta_ {kl_1}, \beta_{kl_2}}^2 \\
+			\sigma_{{\beta_{kl_1}}, \beta_{kl_2}}^2& \sigma_{\beta_{kl_2}}^2
+		\end{pmatrix}
+	\end{pmatrix},
+\end{align}
+\begin{align}
+	\alpha_{j} \sim  \mathcal{N} (0, \sigma_{\alpha_j}^2). 
+\end{align}
+
+Model A2 should result as the best fitting model when a high within--stimuli between--conditions variability is observed and respondents have a low between--conditions variability. This model results in condition--specific stimuli easiness estimates $b_{kl}$ and overall ability estimates $\theta_{j}$.
+
+The low variability at the respondents' level might already indicate a lack of the IAT effect on their accuracy performance (i.e., ability remains constant across conditions). In other words, the IAT associative condition do not have an effect on the respondents' ability to sort stimuli. As for the overall ability estimates obtained with Model A1, these estimates can be used as a measure of individual differences in performing the categorization task for further analysis.
+
+Conversely, the high within--stimuli between--conditions variability indicate that the stimuli functioning is in some way affected by the specific associative condition and that stimuli characteristics (i.e., the category to which they belong) make them more easily categorizable in one condition than in the opposite one. Thus, condition--specific stimuli easiness estimates allow for investigating whether stimuli functioning differs between conditions. 
+Consider a stimulus representing a can of coke in the Coke IAT example. If the stimulus presents a higher easiness estimate in the Coke-Good/Pepsi-Bad condition than in the opposite one, it implies that it was more easily sorted when it shared the response key with \emph{Good} rather than \emph{Bad} attributes. Consequently, the differential measures computed on the condition--specific stimuli estimates inform about the contribution of each stimulus to the IAT effect, which in turn lead to a better understanding of the automatic associations driving the effect. 
+
+The random structure of Model A3 has the same level of complexity as that of Model A2. However, the multidimensionality of the error term is specified for the respondents and not for the stimuli. 
+Model A3 accounts for the within--respondents between--conditions variability and between--stimuli across--conditions variability by specifying respondents as random slopes in the associative conditions and stimuli as random intercepts across associative conditions: 
+%
+\begin{equation}\label{Accuracy1}
+	y_{i} = logit^{-1}(\alpha + \beta_il_i + \alpha_{k[i]} +  \beta_{j[i]}l_{i} + \epsilon_{i}),
+\end{equation}
+with:
+\begin{align}
+	\beta_{j} \sim  \mathcal{N}
+	\begin{pmatrix}
+		0,&
+		\begin{pmatrix}
+			\sigma_{\beta_{jl_1}}^2 & \sigma_{\beta_ {jl_1}, \beta_{jl_2}}^2 \\
+			\sigma_{{\beta_{jl_1}}, \beta_{jl_2}}^2& \sigma_{\beta_{jl_2}}^2
+		\end{pmatrix}
+	\end{pmatrix},
+\end{align}
+\begin{align}
+	\alpha_k \sim \mathcal{N} (0, \alpha_k^2).
+\end{align}
+%
+Model A3 should result as the best fitting model when a low within--stimuli between--conditions variability and a high within--respondents between--conditions variability are observed. This model results in condition--specific respondents' ability estimates $\theta_{jl}$ and overall easiness estimates $b_k$. 
+
+As in Model A1, the lack of within--stimuli between--conditions variability might indicate that the stimuli functioning is not affected by the associative condition in which they are presented. The overall easiness estimates can still inform about the stimuli functioning in respect to their own category. 
+
+The high within--respondents between--conditions variability at the respondents level indicate that the IAT associative conditions affect the accuracy performance of the respondents, or, in other words, that their ability level is in some way hindered by one of the associative conditions.
+A measure of the bias due to the associative conditions can be obtained by computing the difference between each respondent condition--specific ability estimate. 
+
+A summary of the Rasch model estimates that can be obtained from the three random structures is reported in Table \ref{tab:paroverview}
+
+%
+\begin{table}[h!]
+	\centering\doublespacing
+	\caption{Rasch model and log-normal model estimates.}
+	\label{tab:paroverview} 
+	\begin{tabularx}{\textwidth}{l p{3cm} p{3cm} l p{3cm} p{3cm} }
+		\toprule
+		&\multicolumn{2}{c}{Rasch model}
+		& & 
+		\multicolumn{2}{c}{Log-normal}\\ 
+		\cline{2-3}\cline{5-6} 
+		Model & \multicolumn{1}{c}{Respondents} & \multicolumn{1}{c}{Stimuli} & & \multicolumn{1}{c}{Respondents} & \multicolumn{1}{c}{Stimuli} \\
+		\midrule
+				1 & Overall ($\theta_i$) & Overall ($b_j$) & & Overall  ($\tau_i$) & Overall ($\delta_j$) \\ 
+
+		2 & Overall ($\theta_i$) & Condition--specific ($b_{jk}$) &  & Overall  ($\tau_i$)  & Condition--specific  ($\delta_{jk}$)  \\
+		3 & Condition--specific ($\theta_{ik}$) & Overall ($b_j$) & & Condition--specific ($\tau_{ik}$)   & Overall  ($\delta_{j}$) \\
+		\bottomrule
+		\multicolumn{6}{p{\textwidth}}{\emph{Note:} Respondent $j = 1, \ldots, J$,  Stimulus $k = 1,\ldots, K$, Condition $l = 1,\ldots, L$, where $J$, $K$, and $L$, are the number of respondents, stimuli, and conditions, respectively.}
+	\end{tabularx}
+\end{table}
+
+\subsection[LMMs]{Linear Mixed Effect Models}
+
+Model T1 presents the simplest random structure. Only the between--respondents across-conditions variability and the between--stimuli across--conditions variability are considered by specifying both respondents and stimuli as random intercepts across associative conditions: 
+
+\begin{equation}\label{LogtimeMin}
+	y_{i} = \alpha + \beta_il_i + \alpha_{j[i]} +  \alpha_{k[i]} + \epsilon_{i},
+\end{equation}
+with
+\begin{align}
+	\alpha_{j} \sim  \mathcal{N} ( 0, \sigma_{\alpha_j}^2) \, \text{and} \, \alpha_{k}  \sim  \mathcal{N} (0,\sigma_{\alpha_k}^2)
+\end{align}
+%\begin{align}
+%	\alpha_{k}  \sim  \mathcal{N} (0,\sigma_{\alpha_k}^2)
+%\end{align}
+
+Model T1 should be preferred when a low within--respondents between--conditions variability and a low within--stimuli between--conditions variability are observed. 
+The lack of variability at both respondents and stimuli levels might indicate that there is no IAT effect at both levels. 
+Model T1 allows for estimating overall respondents' speed estimates $\tau_{j}$ and overall stimuli time intensity estimates $\delta_k$. 
+
+Respondents' speed estimates inform about the overall speed with which they have been performing the categorization task. As the ability estimates obtained from Model A1, the overall speed estimates can be used as a measure of individual differences in further analysis. 
+
+As overall easiness estimates, stimuli overall time intensity estimates inform about the stimuli functioning in respect to their own category. 
+If the stimuli belonging to the same category are equally recognized as prototypical exemplars of their category, they should require a similar amount of time for getting a response, and hence they should have a similar time intensity. 
+If a stimulus presents characteristics that make it less recognizable as prototypical of a specific category (e.g., a picture of a can of soda that is not immediately recognizable as either Coke or Pepsi), it might require more time for being identified and sorted. Consequently, it should have a higher time intensity estimate. 
+ By comparing the easiness estimates of the stimuli belonging to the same category between each other, it is possible to investigate whether the stimuli belonging to the same category require a similar time for getting a response. 
+ In doing so, other stimuli characteristics should be taken into account, especially when attributes stimuli are considered. While mages stimuli are almost immediately processed and sorted, attribute stimuli need to be read and understood before they can be assigned to a category. Consequently, the familiarity with a specific term might play an import role in its recognition and sorting, hence positively (if it is a familiar term) or negatively (if it is an unfamiliar term) affecting its time intensity. Also the length of the word itself might influence stimuli time intensity. 
+
+
+Model T2 accounts for the within--stimuli between--conditions variability and the between--respondents across--conditions variability. 
+The random slopes of the stimuli in the associative conditions and the random intercepts of the respondents across associative conditions are specified:  
+%
+\begin{equation}\label{Logtime2}
+	y_{i} = \alpha + \beta_il_i + \alpha_{j[i]} +  \beta_{k[i]}l_{i} + \epsilon_{i},
+\end{equation}
+with:
+\begin{align}
+	\beta_{k} \sim  \mathcal{N}
+	\begin{pmatrix}
+		0,&
+		\begin{pmatrix}
+			\sigma_{\beta_{kl_1}}^2 & \sigma_{\beta_ {kl_1}, \beta_{kl_2}}^2 \\
+			\sigma_{{\beta_{kl_1}}, \beta_{kl_2}}^2& \sigma_{\beta_{kl_2}}^2
+		\end{pmatrix}
+	\end{pmatrix},
+\end{align}
+\begin{align}
+	\alpha_{j} \sim  \mathcal{N} (0, \sigma_{\alpha_j}^2). 
+\end{align}
+
+Model T2 should result as the best fitting model when a high within--stimuli between--conditions variability is observed and respondents have a low between--conditions variability. This model results in condition--specific stimuli time intensity estimates $\delta_{kl}$ and overall speed estimates $\tau_{j}$.
+
+The low variability at the respondents' level might already indicate a lack of the IAT effect on their speed performance (i.e., speed remains constant across conditions). In other words, respondents are not adjusting their speed to the specific associative condition. As for the overall speed estimates obtained with Model T1, these estimates can be used as a measure of individual differences in performing the categorization task for further analysis.
+
+Conversely, the high within--stimuli between--conditions variability indicate that the stimuli do require a different amount of time to be sorted according to the associative condition in which they are presented. Their functioning is hence affected by the associative conditions, and the condition--specific time intensity allow for investigating how and how much. 
+The differential measure computed between the condition--specific time intensity estimates provide a measure of the bias on the time each stimulus require for getting a response due to the associative conditions. Consequently, the contribution of each stimulus to the IAT effect can be investigated. 
+
+The random structure of Model T3 has the same level of complexity as that of Model T2. However, the multidimensionality of the error term is specified for the respondents and not for the stimuli. 
+Model T3 accounts for the within--respondents between--conditions variability and between--stimuli across--conditions variability by specifying the respondents as random slopes in the associative conditions and the stimuli as random intercepts across associative conditions: 
+%
+\begin{equation}\label{logtime3}
+	y_{i} = \alpha + \beta_il_i + \alpha_{k[i]} +  \beta_{j[i]}l_{i} + \epsilon_{i},
+\end{equation}
+with:
+\begin{align}
+	\beta_{j} \sim  \mathcal{N}
+	\begin{pmatrix}
+		0,&
+		\begin{pmatrix}
+			\sigma_{\beta_{jl_1}}^2 & \sigma_{\beta_ {jl_1}, \beta_{jl_2}}^2 \\
+			\sigma_{{\beta_{jl_1}}, \beta_{jl_2}}^2& \sigma_{\beta_{jl_2}}^2
+		\end{pmatrix}
+	\end{pmatrix},
+\end{align}
+\begin{align}
+	\alpha_k \sim \mathcal{N} (0, \alpha_k^2).
+\end{align}
+%
+Model T3 should result as the best fitting model when a low within--stimuli between--conditions variability and a high within--respondents between--conditions variability are observed. This model results in condition--specific respondents' speed estimates $\theta_{jl}$ and overall time intensity estimates $b_k$. 
+
+As in Model T1, the lack of within--stimuli between--conditions variability might indicate that the stimuli functioning is not affected by the associative condition in which they are presented. The overall time intensity estimates can still inform about the stimuli functioning in respect to their own category. 
+
+The high within--respondents between--conditions variability at the respondents level indicate that the IAT associative conditions affect the speed performance of the respondents, or, in other words, that their speed is lower in one of the associative conditions.
+A measure of the bias due to the associative conditions can be obtained by computing the difference between each respondent condition--specific speed estimate. 
+
+
+\section{Other random structures}
+
+The random structures presented in the previous sections are just some of the possible random structures that can be specified for analyzing IAT data. 
+Indeed, since IAT data has a specific structure (illustrated in Section \ref{sec:cross} of Chapter \ref{chap:intro}), a model with a random structure that decomposes the error variance into each of the sources or variation can be specified \cite<Maximal Model, MM;>{Barr2013}. 
+
+In the MM, both between--respondents across--conditions variability and within--respondents between--conditions variability as accounted for by specifying respondents both as random intercept across conditions and their random slopes in the associative conditions. 
+The same can be done for the stimuli, so that they are specified as both random intercepts across conditions and as random slopes in the associative conditions. 
+Moreover, the variability due to the interaction between the stimuli and the respondents variability (i.e., respondents' individual reactions to each stimulus) can be accounted for by specifying the interaction effect between respondents and stimuli random intercepts.
+
+Besides the estimates of the fixed effects, this model should estimate the parameter of the population to which the respondent and the stimuli belongs (i.e., the variance of each population), as well their covariances when the multidimensionality is allowed (i.e., random slopes). Consequently, a model of this complexity, regardless of whether it is applied on the accuracy responses or the log-time responses, would need an extremely high variability at each level of the random structure to converge. Beyond being at risk of convergence failure, it is also at risk of over-fitting the data \cite{Bates2015}, hence resulting in biased and somewhat meaningless estimates. 
+
+Moreover, a model like MM is not needed if the final aim of the analysis is to obtain the Rasch (log-normal) model estimates for different reasons. 
+Firstly, it is not necessary to obtain both overall and condition--specific respondents (stimuli) estimates. Consequently, the estimation of the random intercepts of the respondents or the stimuli can de dropped when their multidimensionality is allowed (i.e., when they are specified as random slopes in the associative conditions). 
+
+Moreover, either respondents or stimuli have to be centered around $0$ for the estimation of the Rasch (log-normal) model. It implies that either the respondents or the stimuli have to be specified as random intercepts for the model to be identified \cite{Anselmi2011,Gelman2007}. By specifying either the respondents or the stimuli as random intercepts around the fixed intercept set at $0$, each BLUP defines the deviation of each level (of either the respondents or the stimuli) from the fixed intercept, that is, the mean. 
+
+Consequently, only either the respondents or stimuli can be specified as random slopes in the associative conditions, while the other must be specified as random intercepts. 
+The decision on which of the two levels, either the respondents or the stimuli, should be specified as random slopes or random intercepts should be driven by the variability observed in the data. 
+
+Finally, the estimation of the interaction effect between stimuli and respondents random intercepts do require an high respondents $\times$ stimuli variability to provide reliable estimate and do not result in convergence failure. Consequently, it can be dropped and added to the model only in those cases in which the error variance is still high after the estimation of all the other parameters \cite{Westfall2014}.
+
+
+
+
+\newpage
+%\bibliographystyle{apacite} 
+%\bibliography{biblioTesi}
+\end{document}

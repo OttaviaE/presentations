@@ -1,0 +1,130 @@
+\contentsline {chapter}{Preface}{ix}{chapter*.2}%
+\contentsline {chapter}{\numberline {1}Psychological implicit assessment}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Automatic and controlled processes}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}The Implicit Association Test}{5}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Fields of application}{7}{subsection.1.2.1}%
+\contentsline {paragraph}{The IAT in the macro-area Social psychology.}{9}{figure.caption.6}%
+\contentsline {paragraph}{The IAT in the macro-ares Clinical and personality psychology.}{10}{figure.caption.6}%
+\contentsline {paragraph}{The IAT in the macro-area Addiction.}{10}{figure.caption.6}%
+\contentsline {paragraph}{The IAT in the macro-area Food research.}{10}{figure.caption.6}%
+\contentsline {paragraph}{The IAT in the macro-area Marketing.}{11}{figure.caption.6}%
+\contentsline {paragraph}{The IAT in the macro-area Other.}{11}{figure.caption.6}%
+\contentsline {section}{\numberline {1.3}The Single-Category Implicit Association Test}{11}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Fully-crossed design}{14}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}More than one implicit measure}{21}{subsection.1.4.1}%
+\contentsline {chapter}{\numberline {2}Typical scoring of implicit measures}{23}{chapter.2}%
+\contentsline {section}{\numberline {2.1}The IAT \emph {D} score}{23}{section.2.1}%
+\contentsline {section}{\numberline {2.2}The SC-IAT \emph {D} score}{25}{section.2.2}%
+\contentsline {section}{\numberline {2.3}A fairer comparison between the IAT and the SC-IAT}{26}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Method}{28}{subsection.2.3.1}%
+\contentsline {paragraph}{Participants.}{28}{subsection.2.3.1}%
+\contentsline {paragraph}{Materials and Procedure.}{29}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Data analysis}{30}{subsection.2.3.2}%
+\contentsline {subsubsection}{Data cleaning and \emph {D} score}{30}{subsection.2.3.2}%
+\contentsline {subsubsection}{Consistency between modified and typical scores, and relationship with explicit measures}{32}{table.caption.11}%
+\contentsline {subsubsection}{Prediction of the behavioral outcome}{32}{table.caption.11}%
+\contentsline {subsection}{\numberline {2.3.3}Results}{33}{subsection.2.3.3}%
+\contentsline {subsubsection}{Relationship with explicit measures}{34}{subsection.2.3.3}%
+\contentsline {subsubsection}{Consistency between typical scores, modified scores, and explicit measures}{36}{table.caption.12}%
+\contentsline {subsubsection}{Behavioral outcome}{37}{table.caption.12}%
+\contentsline {subsection}{\numberline {2.3.4}Final remarks}{40}{subsection.2.3.4}%
+\contentsline {section}{\numberline {2.4}\texttt {R} development}{42}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}DscoreApp}{42}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}The \texttt {implicitMeasures} package}{49}{subsection.2.4.2}%
+\contentsline {chapter}{\numberline {3}Formal modeling}{53}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Multinomial Models}{53}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}The Quad Model}{53}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}The ReAL Model}{60}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Time and Accuracy models}{65}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}The Diffusion Model}{65}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}The Discrimination-Association Model}{69}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Rasch Modeling}{72}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Common features, advantages, and drawbacks}{74}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Rasch, Log-normal, and Linear Mixed-Effects models}{79}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Modeling dichotomous responses}{80}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}The Rasch model}{84}{subsection.4.1.1}%
+\contentsline {paragraph}{Linearity of the scores.}{88}{equation.4.1.10}%
+\contentsline {paragraph}{Comparison invariance.}{89}{equation.4.1.10}%
+\contentsline {paragraph}{Local independence.}{89}{equation.4.1.10}%
+\contentsline {section}{\numberline {4.2}Modeling time responses}{91}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}The log-normal model}{92}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.3}Linear Mixed-Effects Models}{94}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Generalized Linear Mixed-Effects Model and Rasch Model}{95}{subsection.4.3.1}%
+\contentsline {paragraph}{Log-normal model estimates.}{98}{equation.4.3.15}%
+\contentsline {section}{\numberline {4.4}Random structures}{99}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Generalized Linear Mixed-Effects Models}{100}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Linear Mixed-Effects Models}{103}{subsection.4.4.2}%
+\contentsline {section}{\numberline {4.5}Other random structures}{107}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Applications of (G)LMMs to IAT data}{111}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Race IAT}{112}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Method}{112}{subsection.5.1.1}%
+\contentsline {paragraph}{Participants.}{112}{subsection.5.1.1}%
+\contentsline {paragraph}{Materials and procedure.}{112}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Data analysis}{113}{subsection.5.1.2}%
+\contentsline {subsubsection}{Data cleaning and \emph {D} score}{113}{subsection.5.1.2}%
+\contentsline {subsubsection}{Outfit Statistics}{113}{subsection.5.1.2}%
+\contentsline {paragraph}{Rasch model.}{113}{subsection.5.1.2}%
+\contentsline {paragraph}{Log-normal model.}{115}{equation.5.1.5}%
+\contentsline {subsubsection}{Relationship between model estimates and typical scoring}{116}{equation.5.1.5}%
+\contentsline {subsection}{\numberline {5.1.3}Results}{116}{subsection.5.1.3}%
+\contentsline {subsubsection}{Accuracy models}{117}{subsection.5.1.3}%
+\contentsline {subsubsection}{Log-time models}{119}{table.caption.23}%
+\contentsline {subsubsection}{Relationship between model estimates and typical scoring}{120}{table.caption.23}%
+\contentsline {subsection}{\numberline {5.1.4}Final remarks}{121}{subsection.5.1.4}%
+\contentsline {section}{\numberline {5.2}Chocolate IAT}{122}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Method}{123}{subsection.5.2.1}%
+\contentsline {paragraph}{Participants.}{123}{subsection.5.2.1}%
+\contentsline {paragraph}{Materials and procedure.}{123}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Data analysis}{124}{subsection.5.2.2}%
+\contentsline {subsubsection}{Data cleaning and \emph {D} score computation}{124}{subsection.5.2.2}%
+\contentsline {subsubsection}{Oufit statistics}{124}{subsection.5.2.2}%
+\contentsline {subsubsection}{Relationship between model estimates, typical scoring, and explicit measures}{124}{subsection.5.2.2}%
+\contentsline {subsubsection}{Predictive ability of a behavioral outcome}{124}{subsection.5.2.2}%
+\contentsline {paragraph}{Predictive ability of the reduced data sets.}{125}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Results}{125}{subsection.5.2.3}%
+\contentsline {subsubsection}{Accuracy models}{126}{subsection.5.2.3}%
+\contentsline {subsubsection}{Log-time models}{128}{table.caption.24}%
+\contentsline {subsubsection}{Relationship between model estimates, typical scoring, and explicit measures}{129}{table.caption.24}%
+\contentsline {subsubsection}{Predictive ability of a behavioral outcome}{130}{table.caption.25}%
+\contentsline {subsection}{\numberline {5.2.4}Final remarks}{132}{subsection.5.2.4}%
+\contentsline {chapter}{\numberline {6}Multiple implicit measures: Models specification}{135}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Single measures models}{136}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Comprehensive models}{137}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Comprehensive GLMMs}{138}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Comprehensive LMMs}{140}{subsection.6.2.2}%
+\contentsline {chapter}{\numberline {7}Multiple implicit measures: Empirical applications}{145}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Method}{145}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Data analysis}{146}{section.7.2}%
+\contentsline {subsubsection}{Data cleaning and typical scoring of implicit measures}{146}{section.7.2}%
+\contentsline {subsubsection}{Relationship between model estimates and typical scoring}{147}{section.7.2}%
+\contentsline {subsubsection}{Prediction of a behavioral outcome}{147}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Results}{148}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Single measures models}{149}{subsection.7.3.1}%
+\contentsline {subsubsection}{Accuracy models}{149}{subsection.7.3.1}%
+\contentsline {subsubsection}{Log-time models}{152}{table.caption.29}%
+\contentsline {subsection}{\numberline {7.3.2}Comprehensive models}{153}{subsection.7.3.2}%
+\contentsline {subsubsection}{Accuracy models}{153}{subsection.7.3.2}%
+\contentsline {subsubsection}{Log-time models}{154}{table.caption.30}%
+\contentsline {subsection}{\numberline {7.3.3}Relationship between model estimates and typical scoring}{156}{subsection.7.3.3}%
+\contentsline {subsection}{\numberline {7.3.4}Prediction of a behavioral outcome}{160}{subsection.7.3.4}%
+\contentsline {section}{\numberline {7.4}Final remarks}{162}{section.7.4}%
+\contentsline {chapter}{\numberline {8}In the end}{165}{chapter.8}%
+\contentsline {section}{\numberline {8.1}The sound path}{165}{section.8.1}%
+\contentsline {section}{\numberline {8.2}The fair path}{176}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Limitations and future directions}{177}{section.8.3}%
+\contentsline {section}{\numberline {8.4}In the end}{180}{section.8.4}%
+\contentsline {chapter}{\numberline {A}Appendix A}{183}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Accuracy models specification}{184}{section.A.1}%
+\contentsline {subsection}{\numberline {A.1.1}Model estimation}{185}{subsection.A.1.1}%
+\contentsline {subsubsection}{Model comparison}{186}{lstnumber.-4.5}%
+\contentsline {subsection}{\numberline {A.1.2}Rasch model parameters}{186}{subsection.A.1.2}%
+\contentsline {section}{\numberline {A.2}Log-time models specification}{187}{section.A.2}%
+\contentsline {subsection}{\numberline {A.2.1}Log-normal model parameters}{188}{subsection.A.2.1}%
+\contentsline {chapter}{\numberline {B}Appendix B}{189}{appendix.B}%
+\contentsline {section}{\numberline {B.1}Accuracy models specification}{191}{section.B.1}%
+\contentsline {subsection}{\numberline {B.1.1}Model estimation}{191}{subsection.B.1.1}%
+\contentsline {subsubsection}{Model comparison}{192}{lstnumber.-17.5}%
+\contentsline {subsection}{\numberline {B.1.2}Rasch model parameters}{192}{subsection.B.1.2}%
+\contentsline {section}{\numberline {B.2}Log-time models specification}{193}{section.B.2}%
+\contentsline {subsection}{\numberline {B.2.1}Log-normal model parameters}{194}{subsection.B.2.1}%
+\contentsline {chapter}{References}{195}{appendix*.32}%

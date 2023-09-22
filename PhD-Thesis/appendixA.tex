@@ -1,0 +1,242 @@
+\documentclass[12pt]{book}
+\usepackage{standalone}
+\usepackage{apacite}
+\usepackage{etoolbox}% for the \patchcmd
+\makeatletter
+% Patch after apacite got loaded!
+\patchcmd{\nocite}{\@onlypreamble\document}{\documentclass\sa@documentclass}{}{}
+\makeatother
+\usepackage{graphicx}
+\usepackage{subcaption}
+\graphicspath{{C:/Users/huawei/Desktop/images/}} 
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{pdflscape}
+\usepackage[margin=3cm]{geometry}
+\usepackage{multirow}
+\usepackage{times}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{dcolumn}
+\usepackage{siunitx}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{listings}
+
+\lstset{language=R,
+	basicstyle=\small\ttfamily,
+	stringstyle=\color{black},
+	%otherkeywords={0,1,2,3,4,5,6,7,8,9},
+	morekeywords={TRUE,FALSE, glmer, lmer},
+	deletekeywords={data,frame,length,as,character},
+	keywordstyle=\color{black}\bfseries,
+	commentstyle=\color{black},
+}
+
+
+\raggedbottom
+
+\renewcommand\baselinestretch{2}
+
+
+\newcolumntype{d}[1]{D{.}{.}{#1}}
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+
+\begin{document}
+\chapter[Appendix A]{\texttt{R} code for estimating Rasch model and log-normal model from IAT and SC-IAT data.} \label{chap:appendixA}
+
+This appendix presents the \verb*|R| code used for obtaining the Rasch model and the log-normal model estimates from (Generalized) Linear Mixed-Effect models, respectively.
+
+The example is based on the Coke-Pepsi IAT example of Chapter \ref{chap:intro}. 
+The estimation of the Rasch model and log-normal model from the SC-IAT data follows the same procedure. 
+Consequently, the illustration is solely based on IAT data, but it can easily be implemented on SC-IAT data without any further changes besides the name of the data set.
+
+
+This code can be copied and pasted in an \texttt{R} script, and it can be executed without changes as long as the data set on which the models are applied has the following characteristics: 
+
+\begin{itemize}
+	\item \texttt{subject}: Column containing the respondents' IDs (can be numeric, a factor, or a string, as long as it is unique for each respondent).
+	\item\texttt{condition}: Column containing the labels for the two associative conditions of the IAT (SC-IAT) (factor with two levels such as \texttt{mappingA} and \texttt{mappingB}).
+	\item \texttt{stimuli}: Column containing the labels identifying each stimulus (e.g., \texttt{good}, \texttt{bad}, \texttt{coke1}, \texttt{pepsi1}).
+	\item \texttt{latency}: Column containing the latency of the IAT (SC-IAT) responses. Latency can be expressed in seconds or milliseconds. In case the IAT (SC-IAT) included a built-in correction for the error responses, the raw response times should be used instead of the corrected ones.
+	\item \texttt{correct}: Column containing the accuracy of the IAT (SC-IAT) responses, where 0 is the incorrect response and 1 is the correct response.
+\end{itemize}
+
+The data set must be in a long format. This means that the response of each respondent on each stimulus in each associative condition must be on a separate row, and the total number of observations (rows) for each subject must correspond to the total number of trials in the two associative conditions. 
+For instance, in the IATs reported in Chapter \ref{chap:IATempirical}, respondents were presented with 60 trials in each associative condition, so that we had 120 trials for each respondent, and consequently 120 rows for each participant. 
+In both the SC-IATs reported in Chapter \ref{chap:comprehensiveApplications}, respondents were presented with 72 trials in each associative condition, hence 144 observations (rows) for each respondent (in each SC-IAT) were obtained.
+
+In both accuracy and log-time responses, the fixed intercept is set at 0, so that the estimates of the fixed effect of the IAT associative conditions can be interpreted as the expected \emph{log-odds} of the probability of a correct response in each condition or the expected average log-response time in each condition, respectively.
+
+For both accuracy and log-time responses, in Model 2 (Table \ref{tab:paroverview} of Chapter \ref{chap:modelsIAT}) the estimates of the stimuli are centered at 0 (argument \texttt{(1|stimuli})), while in Model 3 (Table \ref{tab:paroverview} of Chapter \ref{chap:modelsIAT}) respondents estimates are centered at 0 (argument \texttt{(1|subject)}). 
+In Model 1, the Null model, both stimuli and respondents are centered around 0. 
+
+The Rasch and log-normal estimates were obtained by means of the \texttt{lme4} package \cite{lme4}  in \texttt{R}. 
+The \texttt{lme4} package can be installed and loaded with the following code: 
+%
+\begin{lstlisting}
+	install.packages("lme4") # install package
+	library(lme4) # upload the package for the estimation of 
+	# the models
+\end{lstlisting}
+
+
+\section{Accuracy models specification}
+
+
+The code for the specification of the accuracy models is illustrated. 
+
+\subsection{Model estimation}
+
+\paragraph*{Model 1:} 
+
+The between--subjects variability is specified as random intercepts (i.e., \texttt{(1|subject)}). 
+The between--stimuli variability is specified as random intercepts (i.e., \texttt{(1|stimuli)}) as well.
+%
+\begin{lstlisting}
+	a1 <- glmer(correct ~ 0 + condition + (1|stimuli) + (1|subject), 
+		data = data, # IAT (SC-IAT) data in long format
+		family = "binomial")
+	summary(a1) # summary of the results  
+\end{lstlisting}
+
+\paragraph*{Model 2:} The between--subjects variability is specified as random intercepts centered at 0 (i.e., \texttt{(1|subject)}). The within--stimuli between--conditions variability is specified as the random slopes of the stimuli in the conditions (i.e., \texttt{(0 + condition|stimuli)}).
+%
+\begin{lstlisting}
+	a2 <- glmer(correct ~ 0 + condition + (1|subject) + 
+		(0 + condition|stimuli), 
+		data = data, 
+		family = "binomial")
+	summary(a2) # summary of the results  
+\end{lstlisting}
+
+
+\paragraph*{Model 3:}  
+The between--stimuli variability is specified as random intercepts, centered at 0 (i.e., \texttt{(1|stimuli)}). 
+The within--subjects between-conditions variability is specified as the random slopes of the respondents in the conditions (i.e., \texttt{(0 + condition|subject)}).
+%
+\begin{lstlisting}
+	a3 <- glmer(correct ~ 0 + condition + (1|stimuli) + 
+		(0 + condition|subject), 
+		data = data, 
+		family = "binomial")
+	summary(a3) # summary of the results  
+\end{lstlisting}
+
+
+\subsubsection{Model comparison}
+
+Once the three models have been estimated, they can be compared with each other. 
+%
+\begin{lstlisting}
+	anova(a1, a2, a3)
+\end{lstlisting}
+Since Model \texttt{a2} and Model \texttt{a3} have the same degrees of freedom, the $\chi^2$ statistics obtained from their comparison is  meaningless and cannot be used as a means for choosing the best fitting model. Comparative fit indexes should be used instead. 
+The use of function \texttt{anova()} is just for the convenience of having all models comparative fit indexes, deviance, log-likelihood and degree of freedom on the same page.
+
+\subsection{Rasch model parameters}
+Grounding on the results of model comparison, the best fitting model can be selected for extracting the estimates of the Rasch model parameters. 
+
+\textbf{Model 1} results in overall respondents' parameters and overall stimuli parameters. Respondents overall ability parameters can be extracted and stored in a data frame: 
+%
+\begin{lstlisting}
+	ability <- data.frame(
+		subject = rownames(coef(a1)$subject), # Respondents' ID
+		ability = coef(a1)$subject[, 1] # Select the first column
+	)		
+\end{lstlisting}
+
+Stimuli overall easiness parameters can be extracted and stored as well: 
+%
+\begin{lstlisting}
+	easiness <- data.frame(
+		stimuli = rownames(coef(a1)$stimuli), # Stimuli labels
+		easiness = coef(a1)$stimuli[, 1] # Select the first column
+	)
+\end{lstlisting}
+
+
+\textbf{Model 2} results in condition--specific stimuli parameters and overall respondents' parameters. 
+Stimuli condition--specific parameters can be extracted as follows: 
+%
+\begin{lstlisting}
+	easiness_cond <- coef(a2)$stimuli[, -1] # drop the first column 
+				# (fixed intercept set at 0)
+\end{lstlisting}
+
+Respondents overall ability parameters can be extracted and stored in a data frame: 
+%
+\begin{lstlisting}
+	ability <- data.frame(
+		subject = rownames(coef(a2)$subject),
+		ability = coef(a2)$subject[, 1] # select only the random 
+	)                               # intercept estimates
+	
+\end{lstlisting}
+
+\textbf{Model 3} results in condition--specific respondents parameters and overall stimuli parameters. Respondents' condition--specific ability parameters can be extracted as follows: 
+%
+\begin{lstlisting}
+	cond_ability <- coef(a3)$subject[, -1] # drop the first column 
+				# (fixed intercept set at 0)
+				# rownames are the subjects' IDs
+\end{lstlisting}
+
+Stimuli easiness parameters can be extracted and stored in a data frame as well: 
+%
+\begin{lstlisting}
+	easiness <- data.frame(
+		stimuli = rownames(coef(a3)$stimuli),
+		easiness = coef(a3)$stimuli[, 1] # select only the random 
+	)                                # intercept estimates
+	
+\end{lstlisting}
+
+\section{Log-time models specification}
+
+The code for the estimation of the log-normal models is the same as the one used for the Rasch models. The changes concern the name of the specific function to use (from \texttt{glmer()} to \texttt{lmer()}) and the dependent variable (from \texttt{correct} to \texttt{log(latency)}). 
+For this reason, only the code for the estimation of Model 3 and the code for extracting the log-normal model estimates is reported.
+
+Model 3 can be estimated as follows: 
+%
+\begin{lstlisting}
+	t3 <- lmer(log(seconds) ~ 0 + condition + (1|stimuli) + 
+		(0 + condition|subject),
+		data = data,
+		REML = FALSE) # Maximum Likelihood estimation
+	summary(t3) # summary of the results
+\end{lstlisting}
+%
+For the comparison of the log-time models, the same code as the one used for the comparison of the accuracy models can be used. 
+The names of the models have to be changed accordingly, in this case from \texttt{a} to \texttt{t}.
+
+\subsection{Log-normal model parameters}
+	
+We report the code for extracting the log-normal model parameters for log-time Model 3, assuming it was the best fitting model according to model comparison. The same code used for extracting the parameters for the accuracy models can be used for extracting the parameters of the log-normal models. The changes regard the name of the objects containing the models, from \texttt{a} to \texttt{t}, and the names of the new objects created for the parameters (e.g., from \texttt{easiness} to \texttt{intensity}).
+
+Respondents' condition--specific parameters can be obtained as follows: 
+%
+\begin{lstlisting}
+	cond_speed <- coef(t3)$subject[, -1] # drop the first column 
+				# (fixed intercept set at 0)
+				# rownames are the subjects' IDs
+\end{lstlisting}
+
+Stimuli overall time intensity parameters can be obtained as follows: 
+%
+\begin{lstlisting}
+	intensity <- data.frame(
+	stimuli = rownames(coef(t3)$stimuli),
+	intensity = coef(t3)$stimuli[, 1] # select only the random
+	)			# intercept estimates	
+\end{lstlisting}	
+
+
+\newpage
+%\bibliographystyle{apacite} 
+%\bibliography{biblioTesi}
+\end{document}

@@ -1,0 +1,548 @@
+\documentclass[12pt]{book}
+\usepackage{standalone}
+\usepackage{apacite}
+\usepackage{etoolbox}% for the \patchcmd
+\makeatletter
+% Patch after apacite got loaded!
+\patchcmd{\nocite}{\@onlypreamble\document}{\documentclass\sa@documentclass}{}{}
+\makeatother
+\usepackage{graphicx}
+\usepackage{subcaption}
+\graphicspath{{C:/Users/huawei/Desktop/images/}} 
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{pdflscape}
+\usepackage[margin=3cm]{geometry}
+\usepackage{multirow}
+\usepackage{times}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{dcolumn}
+\usepackage{siunitx}
+\usepackage{array}
+\usepackage{longtable}
+
+\raggedbottom
+
+\renewcommand\baselinestretch{2}
+
+
+\newcolumntype{d}[1]{D{.}{.}{#1}}
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+
+\begin{document}
+\chapter[Multiple implicit measures: Empirical applications]{Multiple implicit measures: Empirical applications} \label{chap:comprehensiveApplications}
+
+In this chapter, the accuracy and log-time responses of the IAT and the SC-IAT have been analyzed following both a single measures approach, as described in Section \ref{sec:singleModels} of Chapter \ref{chap:comprehensiveModels}, and  the comprehensive modeling approach presented in Section \ref{sec:modelType} of Chapter \ref{chap:comprehensiveModels}.
+
+
+Table~\ref{tab:overviewC} summarizes the Rasch model parameters and the log-normal model parameters that can be obtained from the random structures specification in Chapter \ref{chap:comprehensiveModels}.  
+The specific fixed effects for each model are illustrated as well.
+
+\begin{table}[h!]
+	\centering\onehalfspacing
+	\caption{Overview of the accuracy and log-time models.}
+	\label{tab:overviewC} 
+	\begin{tabularx}{\linewidth}{p{1.5cm} p{4cm} p{4.5cm} p{4.5cm} }
+		\toprule
+		Model & Fixed effect & Respondents & Stimuli\\
+		\midrule
+		\multicolumn{4}{c}{Single measures models}\\
+		A1a  & Associative condition &  Overall  ($\theta_{pm}$)  &  Overall ($b_{sm}$)  \\
+		T1a  & Associative condition &  Overall ($\tau_{pm}$)  &  Overall ($\delta_{sm}$)\\
+		A2  & Associative condition &  Overall ($\theta_{pm}$)  &  Condition--specific ($b_{scm}$) \\
+		T2  & Associative condition &  Overall ($\tau_{pm}$)  &  Condition--specific ($\delta_{scm}$)\\
+		A3  & Associative condition &  Condition--specific ($\theta_{pcm}$)  &  Overall ($b_{sm}$) \\
+		T3  & Associative condition &  Condition--specific ($\tau_{pcm}$)  &  Overall ($\delta_{s}$)\\
+		\midrule
+		\multicolumn{4}{c}{Comprehensive models}\\
+		A1b  & Implicit measure &  Overall  ($\theta_p^\text{C}$)  &  Overall ($b_s^\text{C}$)  \\
+		T1b  & Implicit measure &  Overall ($\tau_p^\text{C}$)  &  Overall ($\delta_s^\text{C}$)\\
+		A4  & Implicit measure &  Measure--specific ($\theta_{pm}^\text{C}$) &   Overall ($b_s^\text{C}$)  \\
+		T4   & Implicit measure &  Measure--specific ($\tau_{pm}^\text{C}$)  &  Overall ($\delta_{s}^\text{C}$)\\
+		A5  & Associative condition &   Condition--specific ($\theta_{pcm}^\text{C}$)  &   Overall ($b_s^\text{C}$)  \\
+		T5  & Associative condition &  Condition--specific ($\tau_{pcm}^\text{C}$)  &  Overall ($\delta_{s}^\text{C}$)\\
+		
+		\bottomrule
+		\multicolumn{4}{p{15cm}}{\footnotesize{\emph{Note:} $p \in \{1, \ldots, P\}$, $s \in \{1,\ldots, S\}$, $c \in \{1,\ldots, C\}$, $m \in \{1, \ldots, M\}$, denote any respondent, stimulus, condition, implicit measure, where $P$, $S$, $C$, and $M$ are the number of respondents, stimuli, conditions, and implicit measures respectively, C: Estimates obtained with a comprehensive modeling of IAT and SC-IAT responses.}}
+	\end{tabularx}
+\end{table}
+
+Accuracy and log-time models  were fitted with the \verb*!lme4! package \cite{lme4} in \verb*|R| \cite<Version 3.5.1,>{rsoft} (\verb*|bobyqa| Optimizer). 
+The \emph{D} scores of the IAT and the SC-IATs were computed with the \verb!implicitMeasures! package \cite{implicitMeasures}.  
+
+\section{Method}
+A Chocolate IAT, a Milk Chocolate SC-IAT, and a Dark Chocolate SC-IAT were  used. Data are the same as those in \citeA{fairer}, that have been presented in Chapter \ref{chap:classicscore}.
+
+For the description of the sample, the stimuli and materials employed please refer to Section \ref{sub:fairerMethod} of Chapter \ref{chap:classicscore}.
+
+\subsection{Data analysis}
+
+\subsubsection{Data cleaning and typical scoring of implicit measures}
+
+The  \emph{D4} algorithm in \citeA{Greenwald2003} was used for computing the IAT \emph{D} score (i.e., trials $>$ 10,000 ms were discarded, error responses were replaced by the average response time inflated by a 600 ms penalty). The difference was taken between the average response time in the Milk/Good-Dark-Bad condition (MGDB) and that in the Dark-Good/Milk-Bad condition (DGMB). Positive scores stand for a possible preference for Dark chocolate over Milk chocolate. 
+
+The procedure in \citeA{karpinski2006} was followed for computing the SC-IATs \emph{D} score (i.e., trials $<$ 350 ms were discarded, error responses were replaced by the average response time inflated by a 450 ms penalty). The difference was computed between the average response time in the condition where the target chocolate was associated with negative attributes and that where it was associated with positive attributes. Positive scores stand for a positive evaluation of the target chocolate.
+
+The raw log-times of both correct and incorrect responses were used for the estimation of the log-normal models. No correction on the incorrect responses was applied. 
+
+\subsubsection{Relationship between model estimates and typical scoring}
+
+The relationship between the Rasch model and the log-normal model estimates and the typical scores of implicit measures are investigated. 
+Both the estimates obtained from the separate modeling of each implicit measure (i.e., single measure models) and those obtained from the comprehensive modeling (i.e., comprehensive model) are used. 
+
+Regardless of the dependent variable (either accuracy responses or log-time responses) and the type of modeling (single measure vs comprehensive), if the best fitting model is a model resulting in condition--specific respondents' estimates, differential measures are computed by taking the difference between the condition--specific estimates. 
+The differential measures (i.e., \emph{ability-differential} and/or \emph{speed-differential}) express the bias on respondents' accuracy or speed performance due to the effect of the associative conditions. 
+
+The model estimates are used to predict their respective typical scoring for each implicit measure. 
+A stepwise approach with forward selection is followed to select the predictors best accounting for the dependent variable. 
+All full models are compared against the same Null model, which included only the estimation of the intercept. The estimate of the intercept is the expected average of the typical score.
+
+\subsubsection{Prediction of a behavioral outcome}
+
+The predictive ability of the Rasch model and the log-normal model estimates are compared with that of the typical scoring methods of implicit measures. 
+In case the best fitting model allows for the multidimensionality at the respondents' level, the differential measures (i.e., \emph{ability-differential} and/or \emph{speed-differential}) are used for the prediction of the behavioral outcome as well.
+Dark chocolate choice (DCC) is labeled as 0 and Milk chocolate choice (MCC) is labeled as 1.
+The predictive ability of the linear combination of the IAT \emph{D} with the single SC-IAT scores (i.e., \emph{D-Dark} and \emph{D-milk}) and that of the linear combination of the IAT \emph{D} with a differential SC-IAT score (i.e., \emph{D-Sciat}, difference between \emph{D-Dark} and \emph{D-Milk}) are investigated.
+The linear combinations of the single components of each typical scoring (i.e., the average response time computed on the corrected latencies in each associative conditions) are considered as well for predicting the choice. 
+
+A stepwise approach with forward selection is followed, and \emph{Nagelkerke's R}\textsuperscript{2} \cite{nagel} is computed as a \emph{Pseudo R}\textsuperscript{2}. 
+To investigate the linear combination of the predictors that best accounts for the choice, model general accuracy (i.e., the ratio between the choices correctly identified by the model and the total number of choices), DCCs accuracy (i.e., the ratio between the DCCs correctly identified by the model and the number of observed DCCs), and MCCs accuracy (i.e., the ratio between the MCCs correctly identified by the model and the number of observed MCCs) are computed. 
+
+\section{Results}
+Data from nine participants were discarded. Eight of them explicitly reported not understanding the tasks they were asked to perform in either the IAT or one of the SC-IATs. One participant showed too many fast responses, specifically in the Dark SC-IAT (more than $30$\% of responses with a latency lower than 350 ms) and was removed. The final sample was composed of $152$ participants (F $= 63.82$\%, Age = $24.03 \pm 2.82$). Milk chocolate was chosen by $48.03$\% of the participants.
+
+The descriptive statistics of the response times for each implicit measure (and their associative conditions) are reported in Section \ref{fairer:results} of Chapter \ref{chap:comprehensiveApplications}. The descriptive statistics of the log-response times are here reported.
+
+In the IAT, the overall average log-response time was $-0.26$ log-seconds (\emph{sd} $= 0.43$, \emph{skewness} $= 0.90$, \emph{kurtosis} $= 2.34$). The average log-response time in the DGMB condition was $-0.14$ log-seconds (\emph{sd} $= 0.45$, \emph{skewness} $= 0.56$, \emph{kurtosis} $= 2.72$) and that in the MGDB condition was $-0.37$ log-seconds (\emph{sd} $= 0.37$, \emph{skewness} $= 1.32$, \emph{kurtosis} $= 2.69$). 
+
+The overall average log-response time in the Dark SC-IAT was $-0.46$ log-seconds (\emph{sd} $= 0.35$, \emph{skewness} $= 1.33$, \emph{kurtosis} $= 3.21$). The average log-response time in the DB condition was $-0.47$ log-seconds (\emph{sd} $= 0.35$, \emph{skewness} $= 1.31$, \emph{kurtosis} $= 3.17$) and that in the DG condition was $-0.45$ log-seconds (\emph{sd} $= 0.35$, \emph{skewness} $= 1.36$, \emph{kurtosis} $= 3.25$). 
+
+The overall average log-response time in the Milk SC-IAT was $-0.46$ log-seconds (\emph{sd} $= 0.34$, \emph{skewness} $= 1.18$, \emph{kurtosis} $= 4.03$). The average log-response time in the MB condition was $-0.44$ log-seconds (\emph{sd} $= 0.34$, \emph{skewness} $= 1.78$, \emph{kurtosis} $= 4.03$) and that in the MG condition was $-0.48$ log-seconds (\emph{sd} $= 0.33$, \emph{skewness} $= 1.18$, \emph{kurtosis} $= 4.09$).
+
+
+\subsection{Single measures models} 
+
+\subsubsection{Rasch models}
+
+Model comparison is reported in Table \ref{tab:single-comparison}. 
+\begin{table}[h!]
+	\caption{Model comparison - Single measures.}
+	\label{tab:single-comparison} 
+	\centering\onehalfspacing %\small
+	%\resizebox{\textwidth}{!}{
+	\begin{tabular}{l l d{7.2} d{7.2} d{7.2} d{7.2}}
+		\toprule
+		\multicolumn{1}{l}{} & \multicolumn{1}{c}{Model} & \multicolumn{1}{l}{AIC} & \multicolumn{1}{l}{BIC} & \multicolumn{1}{l}{Log-Likelihood} & \multicolumn{1}{l}{Deviance}\\
+		\midrule
+		IAT & A1 & 6733.40 & 6764.60 & -3362.70 & 6725.40\\
+		&T1& 16258.00 & 16297.00 & -8123.90 & 16248.00 \\
+		& A2& 6719.20 & 6766.00 & -3353.60 & 6707.20 \\
+		& T2 & \multicolumn{4}{c}{Aberrant estimates}\\
+		& A3& 6631.10 & 6678.00 & -3309.60 & 6619.10 \\ 
+		&T3& 14903.00 & 14957.00 & -7444.30 & 14889.00 \\
+		\midrule
+		Dark SC-IAT & A1 & 8122.90 & 8154.90 & -4057.40 & 8114.90\\
+		&T1& 12160.00 & 12200.00 & -6075.10 & 12150 \\
+		&A2& 8125.70 & 8173.70 & -4056.90 & 8113.70 \\
+		&T2& \multicolumn{4}{c}{Aberrant estimates}\\
+		& A3& 8013.10 & 8061.10 & -4000.60 & 8001.10\\ 
+		&T3& 11973.00 & 12029.00 & -5979.70 & 11959.00 \\ 
+		\midrule
+		Milk SC-IAT & A1 & 8074.50 & 8106.40 & -4033.20 & 8066.50 \\
+		&T1 & 12362.00 & 12402.00 & -6176.20 & 12352 \\
+		& A2& 8045.30 & 8093.20 & -4016.60 & 8033.30 \\
+		&T2& \multicolumn{4}{c}{Aberrant estimates} \\
+		& A3& 7925.20 & 7973.10 & -3956.60 & 7913.20 \\
+		&T3& 12120.00 & 12176.00 & -6052.80 & 12106.00 \\
+		\bottomrule
+		\multicolumn{6}{p{10cm}}{\emph{Note:} ``A'': Accuracy Models, ``T'': Log-time models}
+	\end{tabular}%}
+\end{table}
+Model A3 resulted as the best fitting model for all implicit measures. 
+Condition--specific ability estimates ($\theta_{\text{DGMB}}$, $\theta_{\text{MGDB}}$, $\theta_{\text{DG}}$, $\theta_{\text{DB}}$, $\theta_{\text{MG}}$, $\theta_{\text{MB}}$), and overall stimuli easiness estimates $b_{sm}$   for each implicit measure  were obtained.
+
+A higher probability of a correct response was observed in the MGDB condition (\emph{log-odds} $= 4.00$, \emph{se}  $= 0.13$), in the DB condition (\emph{log-odds} $= 3.49$, \emph{se}  $= 0.12$), and in the MG condition (\emph{log-odds} $= 3.49$, \emph{se}  $= 0.11$), than in their respective contrasting ones (\emph{log-odds} $= 2.87$, \emph{se}  $= 0.08$, \emph{log-odds} $=3.28$, \emph{se}  $= 0.11$, and \emph{log-odds} $=3.30$, \emph{se}  $= 0.11$, for DGMB, the DG, and the MB conditions, respectively).
+Respondents' showed a higher variability in the MGDB condition ($\sigma^2 = 1.05$), in the  DB condition ($\sigma^2 = 0.83$), and in the MB condition ($\sigma^2 = 0.76$) than in their respective contrasting conditions ($\sigma_{\text{DGMB}}^2 = 0.46$, $\sigma_{\text{DG}}^2 = 0.65$, and $\sigma_{\text{MG}}^2 = 0.69$). 
+Variability at the stimuli level was $0.04$, $0.17$, and $0.16$ for the IAT, the Dark SC-IAT, and the Milk SC-IAT, respectively.
+
+The stimuli easiness estimates for the IAT, the Dark SC-IAT, and the Milk SC-IAT are reported in Table \ref{tab:singlestim-parameters}.
+
+\begin{landscape}
+	\begin{table}[h!]
+		\centering\doublespacing
+		\caption{Single measure model: Stimuli easiness estimates ($b_{km}$) and time intensity estimates ($\delta_{km}$).}
+		\label{tab:singlestim-parameters} 
+		\resizebox{\linewidth}{!}{
+			%\small
+			\begin{tabular}{l d{2.2} d{2.2} d{2.2} l d{2.2}d{2.2}d{2.2} l d{2.2}d{2.2}d{2.2} l d{2.2}d{2.2}d{2.2}}
+				\toprule
+				\multicolumn{1}{l}{}  & \multicolumn{3}{c}{$b$} &  & \multicolumn{3}{c}{$\delta$} & & \multicolumn{3}{c}{$b$} & & \multicolumn{3}{c}{$\delta$} \\
+				\cline{2-4} \cline{6-8} \cline{10-12} \cline{14-16} 
+				\multicolumn{1}{l}{} & \multicolumn{1}{c}{IAT} & \multicolumn{1}{c}{Dark SC-IAT} & \multicolumn{1}{c}{Milk SC-IAT} && \multicolumn{1}{c}{IAT} & \multicolumn{1}{c}{Dark SC-IAT} & \multicolumn{1}{c}{Milk SC-IAT} && \multicolumn{1}{c}{IAT} & \multicolumn{1}{c}{Dark SC-IAT} & \multicolumn{1}{c}{Milk SC-IAT} && \multicolumn{1}{c}{IAT} & \multicolumn{1}{c}{Dark SC-IAT} & \multicolumn{1}{c}{Milk SC-IAT} \\
+				%	\cline{2-8} \cline{10-16}
+				\midrule
+				\multicolumn{8}{l}{\emph{Bad} attributes}
+				
+				
+				&
+				
+				\multicolumn{8}{l}{\emph{Good} attributes}\\
+				%	\midrule 
+				agony		  & -0.14 & -1.06 & -1.03 &  & 0.09 & 0.08 & 0.08 &  beautiful  & -0.01 & -0.36 & -0.02& & 0.01 & -0.01 & 0.01 \\
+				annoying 	  & -0.30 & -0.92 & -0.70 &  & 0.11 & 0.12 & 0.12 &  excellent  & 0.12 & -0.06 & 0.03& & 0.02 & 0.05 & 0.07 \\
+				bad 		  & -0.21 & 0.04 & 0.07 &  & 0.04 & 0.01 & 0.01 &  glory        & -0.18 & 0.44 & 0.37& & 0.04 & 0.02 & 0.03 \\
+				disaster     & 0.23 & 0.17 & 0.52 &  & 0.05 & 0.05 & 0.02 &  good          & 0.18 & -0.26 & -0.22& & 0.01 & 0.04 & 0.01 \\
+				disgust      & -0.05 & 0.07 & 0.15 &  & 0.03 & 0.02 & 0.01 &  happiness  & 0.09 & 0.57 & 0.53& & 0.02 & -0.01 & 0.01 \\
+				evil 		 & 0.04 & 0.01 & -0.14 &  & 0.05 & 0.02 & 0.01 &  heaven  & 0.01 & -0.02 & -0.11& & 0.05 & 0.04 & 0.03 \\
+				failure 		 & 0.04 & 0.14 & -0.12 &  & 0.07 & 0.06 & 0.05 &  joy  & 0.13 & 0.52 & 0.23& & 0.02 & -0.02 & -0.01 \\
+				hate 		 & -0.07 & -0.18 & 0.06 &  & 0.02 & -0.02 & -0.01 &  laughter  & 0.18 & 0.23 & 0.26& & 0.05 & 0.02 & 0.03 \\
+				horrible 	 & -0.03 & -0.05 & 0.45 &  & 0.05 & 0.03 & 0.01 &  love  & 0.10 & 0.43 & 0.21& & 0.02 & -0.05 & -0.03 \\
+				nasty 		 & 0.01 & 0.45 & 0.60 &  & 0.02 & 0.01 & 0.01 &  marvelous  & -0.01 & -0.19 & -0.32& & 0.07 & 0.08 & 0.08 \\
+				pain 		 & -0.14 & -0.26 & -0.35 &  & 0.06 & 0.06 & 0.03 &  peace  & 0.04 & 0.43 & 0.08& & 0.02 & -0.01 & -0.03 \\
+				terrible 	 & 0.12 & -0.05 & 0.21 &  & 0.04 & 0.03 & 0.03 &  pleasure  & 0.01 & 0.41 & -0.01& & 0.01 & 0.01 & -0.01 \\
+				ugly 		 & -0.09 & -0.07 & 0.06 &  & 0.01 & 0.02 & 0.01 &  wonderful  & 0.12 & -0.37 & -0.56& & 0.04 & 0.08 & 0.06 \\
+				\multicolumn{1}{l}{\emph{M} \emph{(SD)}} &\multicolumn{1}{r}{$-0.05$ $(0.14)$} & \multicolumn{1}{r}{$-0.13$ $(0.42)$} & \multicolumn{1}{r}{$-0.02$ $(0.47)$} & &  \multicolumn{1}{l}{$0.05$ $(0.03)$} & \multicolumn{1}{l}{$0.04$ $(0.04)$} & \multicolumn{1}{l}{$0.03$ $(0.04)$} & & \multicolumn{1}{r}{$0.06$ $(0.10)$} & \multicolumn{1}{r}{$0.14$ $(0.36)$} & \multicolumn{1}{r}{$0.03$ $(0.30)$} && \multicolumn{1}{l}{$0.03$ $(0.02)$} & \multicolumn{1}{l}{$0.02$ $(0.04)$} & \multicolumn{1}{l}{$0.02$ $(0.04)$} \\
+				\midrule
+				\multicolumn{8}{l}{\emph{Dark} chocolate}
+				
+				
+				&
+				
+				\multicolumn{8}{l}{\emph{Milk} chocolate}\\
+				Dark 1  & -0.44 & -0.41 &  &  & -0.10 & -0.11 &  &  Milk 1  & -0.10 &  & -0.30 &  & -0.04 &  & -0.07 \\
+				Dark 2  & 0.10 & -0.36 &  &  & -0.10 & -0.11 &  &  Milk 2  & 0.01 &  & -0.28 &  & -0.07 &  & -0.08 \\
+				Dark 3  & -0.10 & -0.14 &  &  & -0.07 & -0.08 &  &  Milk 3  & -0.08 &  & -0.31 &  & -0.06 &  & -0.07 \\
+				Dark 4  & -0.15 & -0.23 &  &  & -0.07 & -0.10 &  &  Milk 4  & -0.17 &  & -0.38 &  & -0.05 &  & -0.10 \\
+				Dark 5  & -0.15 & -0.41 &  &  & -0.11 & -0.10 &  &  Milk 5  & 0.16 &  & -0.37 &  & -0.06 &  & -0.08 \\
+				Dark 6  & -0.13 & -0.18 &  &  & -0.09 & -0.11 &  &  Milk 6  & 0.17 &  & -0.38 &  & -0.05 &  & -0.10 \\
+				Dark 7  & -0.18 & -0.27 &  &  & -0.10 & -0.11 &  &  Milk 7  & -0.03 &  & -0.22 &  & -0.05 &  & -0.08 \\
+				\multicolumn{1}{l}{\emph{M} \emph{(SD)}} & \multicolumn{1}{r}{$-0.15$ $(0.16)$} & \multicolumn{1}{r}{$-0.29$ $(0.10)$} & \multicolumn{1}{r}{} & & \multicolumn{1}{r}{$-0.09$ $(0.02)$} & \multicolumn{1}{r}{$-0.10$ $(0.01)$} & \multicolumn{1}{r}{} & & \multicolumn{1}{r}{$-0.01$ $(0.13)$} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{$-0.32$ $(0.06)$} & & \multicolumn{1}{r}{$-0.05$ $(0.01)$} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{$-0.08$ $(0.01)$}\\
+				\bottomrule
+			\end{tabular}
+		}
+	\end{table}
+\end{landscape}
+
+\textcolor{blue}{A significant effect of the categories of the stimuli on the easiness estimates was found in the IAT ($F(4,36)=3.40$, $p = 0.02$), while in both the SC-IATs this effect was not significant (Dark SC-IAT: $F(3,30)=2.81$, $p = 0.06$ and Milk SC-IAT: $F(3,30)=1.98$, $p = 0.14$).}
+
+\textcolor{blue}{In the IAT, the target object \emph{Dark} was the most difficult category ($B=-0.15$, \emph{se}  $=0.05$, $p <.001$). No significant effects were found for all the other categories of stimuli ($B_{\text{Milk}} =-0.01$, \emph{se}  $= 0.05$, $p = 0.89$, $B_{\text{Bad}} = -0.05$, \emph{se}  $= 0.04$, $p = 0.20$, and $B_{\text{Good}} = 0.06$, \emph{se}  $=0.04$, $p = 0.11$).
+}
+
+\textcolor{blue}{Despite in both the SC-IATs the overall effect of the categories of the stimuli was not significant, a significant effect of the target object categories was found in both the Dark SC-IAT ($B_{\text{Dark}} = -0.29$, \emph{se}  $= 0.13$, $p =  0.03$) and in the Milk SC-IAT ($B_{\text{Milk}} = -0.31$, \emph{se}  $= 0.13$, $p = 0.02$). In both cases, the target objects tended to be the most difficult stimuli. 
+	The effect of the evaluative dimensions was significant in neither the Dark SC-IAT ($B_{\text{Bad}} = -0.13$, \emph{se}  $=0.10$, $p = 0.19$, and $B_{\text{Good}} = 0.14$, \emph{se}  $= 0.10$, $p = 0.17$), nor in the Milk SC-IAT ($B_{\text{Bad}} = -0.02$, \emph{se}  $=0.10$, $p = 0.87$, and $B_{\text{Good}} = 0.03$, \emph{se}  $=0.10$, $p =0.72$).}
+
+In all implicit measures, there were stimuli showing easiness estimates far away from the estimates of the stimuli belonging to the same category, although the pattern was not consistent between implicit measures.
+take for example the stimulus \emph{glory} (category \emph{Good}). 
+In the IAT, it resulted to be a particularly difficult stimulus, also in respect to the average level of
+easiness of the stimuli belonging to the same category. 
+In both SC-IATs, it resulted to be a particularly easy stimulus.
+
+\subsubsection{Log-normal models}
+
+Model comparison is reported in Table \ref{tab:single-comparison} (i.e., Model identified by capital ``T''). 
+Model T2 produced aberrant estimates (i.e., correlation between stimuli random slopes equal to one) in all implicit measures, suggesting a low within--stimuli between--conditions variability. 
+Model T3 was the best fitting model for all implicit measures. 
+Consequently, condition--specific respondents' speed estimates ($\tau_{\text{DGMB}}$, $\tau_{\text{MGDB}}$, $\tau_{\text{DG}}$, $\tau_{\text{DB}}$, $\tau_{\text{MG}}, $$\tau_{\text{MB}}$) and overall stimuli estimates $\delta_{sm}$ of the log-normal model were obtained for each implicit measure. 
+
+Faster responses were observed in the MGDB condition ($B = -0.35$, \emph{se} $= 0.01$), in the DB condition ($B = -0.45$, \emph{se}  $= 0.02$), and in the MG condition ($B = -0.48$, \emph{se}  $= 0.01$), than in their respective contrasting conditions ($B_{\text{DGMB}} = -0.11$, \emph{se}   $= 0.02$, $B_{\text{DG}} = -0.44$, \emph{se}  $= 0.03$, and $B_{\text{MB}} = -0.43$, \emph{se}  $= 0.01$, for the IAT, the Dark SC-IAT, and the Milk SC-IAT, respectively).
+Respondents showed similar variability in the two IAT conditions ($\sigma_{\text{DGMB}}^2 = 0.05$ and $\sigma_{\text{MGDB}}^2 = 0.03$), as well as similar variability in the two Milk SC-IAT conditions ($\sigma_{\text{MB}}^2 =0.02$ and $\sigma_{\text{MG}}^2 =0.01$). The variability in the two Dark SC-IAT conditions was the same ($\sigma^2 =0.02$). Stimuli variability was extremely low for all three measures ($0.004$, $0.004$, and $0.003$ for the IAT, the Dark SC-IAT, and the Milk SC-IAT, respectively).
+
+The estimates of the stimuli time intensity for the IAT, the Dark SC-IAT, and the Milk SC-IAT are reported in Table \ref{tab:singlestim-parameters}.
+\textcolor{blue}{A significant effect of the categories of the stimuli on the stimuli time intensity was found in all implicit measures (IAT: $F(4,36) = 63.49$, $p<.001$, Dark SC-IAT: $F(3,30) =28.05$, $p<.001$, and Milk SC-IAT: $F(3,30) =20.57$, $p<.001$). }
+
+\textcolor{blue}{In the IAT, the target object \emph{Dark} was the category requiring less time for getting a response ($B = -0.09$, \emph{se}  $= 0.01$, $p <. 001$), immediately followed by the target object \emph{Milk} ($B = -0.05$, \emph{se}  $= 0.01$, $p <. 001$). 
+	Both evaluative dimensions tended to require more time for getting a response ($B_{\text{Bad}} = 0.05$, \emph{se}  $= 0.01$, $p <. 001$, and $B_{\text{Good}} = 0.03$, \emph{se}  $= 0.01$, $p <. 001$).
+}
+
+\textcolor{blue}{In both the SC-IATs, significant effects were found for the corresponding target objects ($B_{\text{Dark}} = -0.10$, \emph{se}  $= 0.01$, $p <.001$ and $B_{\text{Milk}} = -0.08$, \emph{se}  $= 0.01$, $p <.001$) and on the evaluative dimension \emph{Bad} (Dark SC-IAT: $B = 0.04$, \emph{se}  $= 0.01$, $p <.001$ and Milk SC-IAT: $B = 0.03$, \emph{se}  $= 0.01$, $p <.001$). The target objects required less time for getting a response, while the evaluative dimension \emph{Bad} required more time.
+	The effect of the evaluative dimension \emph{Good} was significant in neither the Dark SC-IAT  ($B = 0.02$, \emph{se}  $= 0.01$, $p = .05$) nor in the Milk SC-IAT ($B =0.02$, \emph{se}  $= 0.01$, $p=.07$).}
+
+\subsection{Comprehensive models} 
+
+\subsubsection{Rasch models}
+
+Models A1\textsuperscript{C}, A2\textsuperscript{C}, and A3\textsuperscript{C} were compared between each other. Model A3\textsuperscript{C} (AIC $=$ 22,365, BIC $=$ 22,618, Log-likelihood $= -11$,154, Deviance $=$ 22,309) resulted as the best fitting one (Model A1\textsuperscript{C}: AIC $=$ 22,991, BIC $=$ 23,036, Log-likelihood $= -11$,490, Deviance $=$ 22,981, Model A2\textsuperscript{C}: AIC $=$ 22,906, BIC $=$ 22,996, Log-likelihood $= -11$,223, Deviance $=$ 22,886), providing condition--specific respondents' ability estimates for each implicit measure ($\theta_{\text{DGMB}}^\text{C}$, $\theta_{\text{MGDB}}^\text{C}$, $\theta_{\text{DG}}^\text{C}$, $\theta_{\text{DB}}^\text{C}$, $\theta_{\text{MG}}^\text{C}$, and $\theta_{\text{MB}}^\text{C}$), as well as overall stimuli easiness estimates across implicit measures ($b_s^C$).
+
+The highest probability of a correct response was observed in the MGDB condition (\emph{log-odds} $= 4.05$, \emph{se}  $= 0.13$), followed by that in the DB condition (\emph{log-odds} $= 3.45$, \emph{se}  $= 0.11$) and that in the MG condition (\emph{log-odds} $= 3.41$, \emph{se}  $= 0.10$). 
+The probability of a correct response in the DG condition and that of a correct response in the MB condition were similar (DG: \emph{log-odds} $= 3.23$, \emph{se}  $= 0.10$ and MB \emph{log-odds} $= 3.21$, \emph{se}  $= 0.10$). The lowest probability of a correct response was observed in the DGMB condition (\emph{log-odds} $= 2.92$, \emph{se}  $= 0.09$). 
+The MGDB condition was the one showing the highest respondents' variability ($\sigma^2 = 1.05$), followed by that in the DG condition ($\sigma^2 = 0.84$), and that in the MB condition ($\sigma^2 = 0.75$).
+Respondents' variability in the DG condition and that in the MG condition were similar ($\sigma_{\text{DG}}^2 = 0.63$ and $\sigma_{\text{MG}}^2 = 0.64$). The DGMB condition showed the lowest variability ($\sigma^2 = 0.47$).
+Variability at the stimuli level was $0.11$.
+
+The estimates of the easiness parameters from Model A5 are reported in Table \ref{tab:imp-stim-parameters}.  
+
+\begin{table}[h!]
+	\centering\onehalfspacing
+	\caption{Stimuli easiness estimates ($b_s$) and time intensity estimates ($\delta_{s}$) for the Comprehensive model.}
+	\label{tab:imp-stim-parameters} 
+	%		\resizebox{\linewidth}{!}{
+	\begin{tabular}{p{2.5cm} d{3.3} d{3.3} p{2.5cm} d{3.3} d{3.3} }
+		\toprule
+		\multicolumn{1}{l}{}  & \multicolumn{1}{c}{$b$} &   \multicolumn{1}{c}{$\delta$} & & \multicolumn{1}{c}{$b$} &  \multicolumn{1}{c}{$\delta$} \\
+		%	\cline{2-3} \cline{5-6}
+		\midrule
+		\multicolumn{3}{l}{\emph{Bad} attributes}
+		
+		
+		&
+		
+		\multicolumn{3}{l}{\emph{Good} attributes}\\
+		agony  & -0.89 & 0.10 & beautiful  & -0.13 & 0.01 \\
+		annoying  & -0.74 & 0.13 & excellent  & 0.10 & 0.06 \\
+		bad  & -0.02 & 0.03 & glory  & 0.26 & 0.04 \\
+		disaster  & 0.47 & 0.05 & good  & -0.07 & 0.03 \\
+		disgust  & 0.11 & 0.03 & happiness  & 0.55 & 0.01 \\
+		evil  & 0.01 & 0.04 & heaven  & -0.01 & 0.05 \\
+		failure  & 0.07 & 0.08 & joy  & 0.44 & 0.01 \\
+		hate  & -0.05 & 0.01 & laughter  & 0.36 & 0.04 \\
+		horrible  & 0.18 & 0.04 & love  & 0.37 & -0.02 \\
+		nasty  & 0.47 & 0.02 & marvelous  & -0.17 & 0.09 \\
+		pain  & -0.27 & 0.06 & peace  & 0.27 & 0.01 \\
+		terrible  & 0.17 & 0.05 & pleasure  & 0.20 & 0.01 \\
+		ugly  & 0.01 & 0.03 & wonderful  & -0.30 & 0.08 \\
+		\multicolumn{1}{l}{\emph{M} \emph{(SD)}}  &  \multicolumn{1}{l}{$-0.04$ $(0.40)$}  &  \multicolumn{1}{l}{$0.05$ $(0.03)$}  &   &  \multicolumn{1}{l}{$0.14$ $(0.26)$}  &  \multicolumn{1}{l}{$0.03$ $(0.03)$} \\
+		\midrule
+		\multicolumn{3}{l}{\emph{Dark} Chocolate}
+		
+		&
+		
+		\multicolumn{3}{l}{\emph{Milk} Chocolate}\\
+		Dark 1  & -0.49 & -0.10 & Milk 1  & -0.22 & -0.04 \\
+		Dark 2   & -0.14 & -0.10 & Milk 2  & -0.14 & -0.07 \\
+		Dark 3  & -0.13 & -0.07 & Milk 3  & -0.21 & -0.06 \\
+		Dark 4  & -0.21 & -0.08 & Milk 4  & -0.30 & -0.07 \\
+		Dark 5  & -0.32 & -0.10 & Milk 5  & -0.09 & -0.06 \\
+		Dark 6  & -0.17 & -0.10 & Milk 6  & -0.10 & -0.07 \\
+		Dark 7  & -0.25 & -0.10 & Milk 7  & -0.12 & -0.06 \\
+		\multicolumn{1}{l}{\emph{M} \emph{(SD)}}  &  \multicolumn{1}{l}{$-0.24$ $(0.13)$}  &  \multicolumn{1}{l}{$-0.09$ $(0.01)$}  &   &  \multicolumn{1}{l}{$-0.17$ $(0.08)$}  &  \multicolumn{1}{l}{$-0.06$ $(0.01)$} \\
+		\bottomrule
+	\end{tabular}
+	%	}
+\end{table}
+\textcolor{blue}{A significant effect of the categories of the stimuli on their easiness estimates was found ($F(4,36)=2.83$, $p =0.04$). 
+	The target object \emph{Dark} was the most difficult category ($B = -0.24$, \emph{se}  $= 0.11$, $p = 0.03$). The target object \emph{Milk} was fairly difficult as well, although its effect was not significant ($B = -0.17$, \emph{se}  $= 0.11$, $p = 0.13$). 
+	Neither the effect of the category \emph{Bad} ($B = -0.03$, \emph{se}  $= 0.08$, $p = 0.63$) nor that of the category \emph{Good} ($B = 0.14$, \emph{se}  $= 0.08$, $p = 0.07$) were significant, although stimuli of the latter category tended to be the easiest ones.}
+
+
+\subsubsection{Log-normal models}
+
+Models T1\textsuperscript{C}, T2\textsuperscript{C}, and T3\textsuperscript{C}  were compared between each other. 
+Model T3\textsuperscript{C} (AIC $=$ 38,933, BIC $=$ 39,195, Log-likelihood $= -19$,437, Deviance $=$ 38,875) resulted as the best fitting one (Model T1\textsuperscript{C}: AIC $=$ 44,624, BIC $=$ 44,678, Log-likelihood $=$ -22,306, Deviance $=$ 44,612, and Model T2\textsuperscript{C}: AIC $=$ 43,448, BIC $=$ 43,548, Log-likelihood $= -22$,306, Deviance $=$ 44,612).
+
+The responses in the IAT associative conditions tended to be slower ($B_{\text{DGMB}} = -0.12$, \emph{se}  $= 0.02$ and $B_{\text{MGDB}} = -0.35$, \emph{se}  $= 0.02$) than in the Dark SC-IAT associative conditions ($B_{\text{DB}} = -0.47$, \emph{se}  $= 0.02$ and $B_{\text{DG}} = -0.45$, \emph{se}  $= 0.02$) and in the Milk SC-IAT associative conditions ($B_{\text{MB}} = -0.45$, \emph{se}  $= 0.02$ and $B_{\text{MG}} = -0.50$, \emph{se}  $= 0.01$).
+
+Respondents' variability was slightly higher in the IAT conditions ($\sigma_{\text{DGMB}}^ 2 = 0.05$ and $\sigma_{\text{MGDB}}^2 = 0.03$) than in both the associative conditions of the SC-IATs. 
+Respondents showed the same variability in the Dark SC-IAT associative conditions ($\sigma^2 = 0.02$), and a slightly different variability in the Milk SC-IAT associative conditions ($\sigma_{\text{MB}}^2 = 0.02$ and $\sigma_{\text{MG}}^2 = 0.01$). 
+Stimuli variability was extremely low ($\sigma^2 = 0.004$).
+
+Time intensity estimates of Model T3\textsuperscript{C} are reported in Table~\ref{tab:imp-stim-parameters}.  
+\textcolor{blue}{A significant effect of the categories of the stimuli on their time intensity estimates was found ($F(4,36)= 42.93$, $p < .001$). 
+	The target objects categories required the least amount of time for getting a response ($B_{\text{Dark}} = -0.09$, \emph{se}  $= 0.01$, $p < .001$ and $B_{\text{Milk}} = -0.06$, \emph{se}  $= 0.01$, $p < .001$) than both the evaluative dimensions  ($B_{\text{Bad}} = 0.05$, \emph{se}  $= 0.01$, $p < .001$ and $B_{\text{Good}} = -0.09$, \emph{se}  $= 0.01$, $p < .001$).
+}
+
+\subsection{Relationship between model estimates and typical scoring}
+
+Since condition--specific respondents' estimates were available for both the Rasch model and the log-normal model, differential measures for ability and speed estimates were computed.
+These measures express the bias on respondents' accuracy or speed performance due to the effect of the associative conditions. 
+Ability differential measures were computed so that positive scores stood for a higher ability in the DGMB condition than in the MGDB condition, or a higher ability in the associative condition where the target chocolate was associated with positive exemplars in both SC-IATs (the DG condition and the MG condition). 
+Speed differential measures were computed so that positive scores stood for higher speed in the DGMB condition than in the opposite one, or  higher speed in the condition where the target chocolate was associated with positive attributes rather than with negative attributes.
+
+A stepwise approach with forward selection was followed. The differential measures and their respective single estimates components were entered in different models to avoid collinearity. 
+The Null model against which all full models were compared included only the intercept (i.e., expected average of the typical score). The predictors included in the Full models for each implicit measure are summarized in Table~\ref{tab:regD}, as well as the predictors resulting from stepwise forward selection.
+
+
+\begin{landscape}
+	\begin{onehalfspacing}
+			\footnotesize
+		\begin{longtable}{p{1.8cm} l d{3.6} d{0.2} d{1.2} l d{3.6} d{0.2} d{1.2}}
+			\caption{\label{tab:regD} Relations between typical scoring and model estimates.} \\
+			\toprule
+			\multicolumn{1}{c}{} & \multicolumn{1}{l}{Predictors} & \multicolumn{1}{c}{\emph{B}} & \multicolumn{1}{c}{\emph{se} } &\multicolumn{1}{c}{\emph{Adjusted R}\textsuperscript{2}}  & \multicolumn{1}{c}{Predictors} & \multicolumn{1}{c}{\emph{B}} & \multicolumn{1}{c}{\emph{se} } &\multicolumn{1}{c}{\emph{Adjusted R}\textsuperscript{2}} \\
+			\midrule
+			\endhead 
+			\multicolumn{9}{c}{Estimates of Single measure models}\\
+			IAT&Full model&\multicolumn{3}{l}{\emph{D} score $\sim$ $\theta_{\text{DGMB}} + \theta_{\text{MGDB}} + \tau_{\text{DGMB}} + \tau_{\text{MGDB}}$} & & \multicolumn{3}{l}{\emph{D} score $\sim$ $(\theta_{\text{DGMB}} - \theta_{\text{MGDB}}) + (\tau_{\text{MGDB}} - \tau_{\text{DGMB}})$}  \\
+			&Null - Intercept&-0.58\, \sym{***}&0.04&0.00 & & & & \\
+			& Intercept  &0.07&0.10&0.89  & Intercept &0.05  \, \sym{*}&0.03&0.89 \\
+			& $\theta_{\text{MGDB}}$ & -0.14\, \sym{***}&0.03& & $(\tau_{\text{MGDB}} - \tau_{\text{DGMB}})$ &2.02\, \sym{***}&0.08 \\
+			& $\theta_{\text{DGMB}}$   &0.16\, \sym{***}&0.04& & $(\theta_{\text{DGMB}} - \theta_{\text{MGDB}})$ &0.15\, \sym{***}&0.03 \\
+			& $\tau_{\text{DGMB}}$  &-1.94\, \sym{***}&0.09& & & &  \\
+			& $\tau_{\text{MGDB}}$ &2.16\, \sym{***}&0.10& & & &  \\
+			Dark SC-IAT&  Full model&\multicolumn{3}{l}{\emph{D-Dark} $\sim$ $\theta_{\text{DG}} + \theta_{\text{DB}} + \tau_{\text{DG}} + \tau_{\text{DB}}$} & & \multicolumn{3}{l}{ \emph{D-Dark} $\sim$ $(\theta_{\text{DG}} - \theta_{\text{DB}}) + (\tau_{\text{DB}} - \tau_{\text{DG}})$ } \\
+			& Null - Intercept  &-0.05\, \sym{**}&0.02&0.00 & & & & \\
+			& Intercept  &0.11&0.07&0.82 & Intercept  &0.03\, \sym{**}&0.01&0.82 \\
+			&  $\tau_{\text{DB}}$  &3.51\, \sym{***}&0.15 & & $(\tau_{\text{DB}} - \tau_{\text{DG}})$  &3.46\, \sym{***}&0.15& \\
+			& $\tau_{\text{DG}}$ &-3.35\, \sym{***}&0.16& &$(\theta_{\text{DG}} - \theta_{\text{DB}})$ &0.18\, \sym{***}&0.02& \\
+			& $\tau_{\text{DG}}$ &0.18\, \sym{***}&0.02& & & &\\
+			& $\tau_{\text{DB}}$ &-0.18\, \sym{***}&0.02& & & & \\
+			Milk SC-IAT& Full model&\multicolumn{3}{l}{\emph{D-Milk} $\sim$ $\theta_{\text{MG}} + \theta_{\text{MB}} + \tau_{\text{MG}} + \tau_{\text{MB}}$} & & \multicolumn{3}{l}{\emph{D-Milk} $\sim$ $(\theta_{\text{MG}} - \theta_{\text{MB}}) + (\tau_{\text{MB}} - \tau_{\text{MG}})$  } \\
+			& Null - Intercept  &0.32\, \sym{***}&0.03&0.00& & & &  \\
+			& Intercept  &-0.31\, \sym{*}&0.16&0.30 & Intercept  &0.21\, \sym{***}&0.03&0.25 \\
+			& $\tau_{\text{MB}}$ &1.66\, \sym{***}&0.27&& $(\tau_{\text{MB}} - \tau_{\text{MG}})$ &1.77\, \sym{***}&0.28& \\
+			& $\tau_{\text{MG}}$ &-2.23\, \sym{***}&0.31&& $(\theta_{\text{MG}} - \theta_{\text{MB}})$ &0.13\, \sym{***}&0.03& \\
+			& $\theta_{\text{MG}}$ &0.16\, \sym{*}&0.03& & & & \\
+			& $\theta_{\text{MB}}$  &-0.09\, \sym{*}&0.02& & & & \\
+			\midrule
+			\multicolumn{9}{c}{Estimates of Comprehensive models}\\
+			IAT& Full model&\multicolumn{3}{l}{\emph{D} score $\sim$ $\theta_{\text{DGMB}}^\text{C} + \theta_{\text{MGDB}}^\text{C} + \tau_{\text{DGMB}} + \tau_{\text{MGDB}}^\text{C}$} & & \multicolumn{3}{l}{\emph{D} score $\sim$  $(\theta_{\text{DGMB}}^\text{C} - \theta_{\text{MGDB}}^\text{C}) + (\tau_{\text{MGDB}}^\text{C} - \tau_{\text{DGMB}}^\text{C})$} \\
+			& Intercept  &0.05&0.10 &0.88&Intercept&0.03&0.03&0.88 \\
+			& $\tau_{\text{MGDB}}^\text{C}$  &2.18\, \sym{***}&0.10&& $(\tau_{\text{MGDB}}^\text{C} - \tau_{\text{DGMB}}^\text{C})$
+			&2.04\, \sym{***}&0.08& \\
+			& $\tau_{\text{DGMB}}^\text{C}$  &-1.95\, \sym{***}&0.09&& $(\theta_{\text{DGMB}}^\text{C} - \theta_{\text{MGDB}}^\text{C})$ &0.11\, \sym{***}&0.02& \\
+			& $\theta_{\text{DGMB}}^\text{C}$  &0.13\, \sym{***}&0.04& & & & \\
+			& $\theta_{\text{MGDB}}^\text{C}$ &-0.12\, \sym{***}&0.02& & & & \\
+			Dark SC-IAT&  Full model&\multicolumn{3}{l}{\emph{D-Dark} $\sim$ $\theta_{\text{DG}}^\text{C} + \theta_{\text{DB}}^\text{C} + \tau_{\text{DG}}^\text{C} + \tau_{\text{DB}}^\text{C}$} & & \multicolumn{3}{l}{ \emph{D-Dark} $\sim$ $(\theta_{\text{DG}}^\text{C} - \theta_{\text{DB}}^\text{C}) + (\tau_{\text{DB}}^\text{C} - \tau_{\text{DG}})^\text{C}$ } \\
+			&  Intercept  &0.04&0.08&0.78 & Intercept  &0.03\, \sym{**}&0.01&0.78 \\
+			& $\tau_{\text{DB}}^\text{C}$ &3.52\, \sym{***}&0.18&& $(\tau_{\text{DB}}^\text{C} - \tau_{\text{DG}})^\text{C})$ &3.49\, \sym{***}&0.17& \\
+			& $\tau_{\text{DG}}^\text{C}$ &-3.40\, \sym{***}&0.19&& $(\theta_{\text{DG}}^\text{C} - \theta_{\text{DB}}^\text{C})$  &0.14\, \sym{***}&0.02& \\
+			& $\theta_{\text{DG}}^\text{C}$ &0.15\, \sym{***}&0.02& & & & \\
+			& $\theta_{\text{DB}}^\text{C}$  &-0.14\, \sym{***}&0.02& & & & \\
+			Milk SC-IAT & Full model&\multicolumn{3}{l}{\emph{D-Milk} $\sim$ $\theta_{\text{MG}}^\text{C} + \theta_{\text{MB}}^\text{C} + \tau_{\text{MG}}^\text{C} + \tau_{\text{MB}}^\text{C}$} & & \multicolumn{3}{l}{\emph{D-Milk} $\sim$ $(\theta_{\text{MG}}^\text{C} - \theta_{\text{MB}}^\text{C}) + (\tau_{\text{MB}}^\text{C} - \tau_{\text{MG}}^\text{C})$} \\
+			& Intercept  &-0.38\, \sym{*}&0.15&0.31 & Intercept  &0.21\, \sym{***}&0.02&0.25\\
+			& $\tau_{\text{MB}}^\text{C}$ &1.67\, \sym{***}&0.28&& $(\tau_{\text{MB}}^\text{C} - \tau_{\text{MG}}^\text{C})$ &1.82\, \sym{***}&0.29& \\
+			& $\tau_{\text{MG}}^\text{C}$&-2.27\, \sym{***}&0.32&& $(\theta_{\text{MG}}^\text{C} - \theta_{\text{MB}}^\text{C})$  &0.12 \, \sym{***}&0.03& \\
+			& $\theta_{\text{MB}}^\text{C}$ &-0.08\, \sym{*}&0.04& & & & \\
+			& $\theta_{\text{MG}}^\text{C}$ &0.17\, \sym{***}&0.04& & & & \\
+			\bottomrule
+			\multicolumn{9}{p{20cm}}{\emph{Note:} $\sym{***}$ $p<.001$, $\sym{**}$ $p<.01$. $\theta$ Ability estimates, $\tau$: Speed estimates, DGMB: Dark/Good-Milk/Bad condition (IAT), MGDB: Milk/Good-Dark/Bad condition(IAT), DG: Dark/Good condition (Dark SC-IAT), DB: Dark/Bad condition (Dark SC-IAT), MG: Milk/Good condition (Milk SC-IAT), MB: Milk/Bad condition (Milk SC-IAT), C: Estimates obtained with the Comprehensive models.}
+		\end{longtable}
+	\end{onehalfspacing}
+	
+\end{landscape}
+
+The estimates of the intercepts of the Null models were significantly different from 0. The estimates of the intercepts of the \emph{D-Milk} and that of the \emph{D} score showed larger effect sizes than that of the \emph{D-Dark} . 
+
+Forward selection always pointed the full models as the models best accounting for the typical scoring. Ability estimates were always retained in the models. 
+However, the effect size of their coefficients was smaller than that of the coefficients of the speed estimates.
+
+The linear combination of estimates of the Single measure models and their differential measures explained the same amount of variance of both the \emph{D} score and the \emph{D-Dark} . 
+Differential measures explained a lesser proportion of variance of the \emph{D-Milk} than that explain by the linear combination of their single components. Additionally, the \emph{D-Milk} showed the smallest proportion of explained variance, regardless of the type of predictors.
+
+Similar results were obtained for the estimates of the Comprehensive model. 
+	The proportion of variance of the \emph{D-Dark} explained by Comprehensive model estimates was slightly lower that that explained by the estimates of the Single measure model. This result held for both the linear combination of the condition--specific estimates and their differential measures.
+	Concerning the \emph{D} score and the \emph{D} Milk, the proportion of explained variance was almost identical to that explained by the estimates of the Single measure model.
+
+\subsection{Prediction of a behavioral outcome}
+
+The predictive ability of the Rasch model and the log-normal model estimates and that of the typical scoring were investigated and compared. 
+Since condition--specific ability estimates and condition--specific speed estimates were available for both the Single measure models and the Comprehensive models, the predictive ability of the differential measures was investigated as well. 
+
+
+Results of the stepwise logistic regressions are reported in Table~\ref{tab:regChoice}.
+\begin{table}[h!]
+	\centering \onehalfspacing
+	\caption{\label{tab:regChoice} Stepwise forward selection results: Choice prediction.}
+	\begin{tabular}{p{1.3cm}p{3cm}d{3.2}d{2.2}d{1.2}d{1.2}d{1.2}d{1.2}}
+		\toprule
+		\multicolumn{1}{c}{Model}  & \multicolumn{1}{c}{} & \multicolumn{1}{c}{\emph{log-odds}} & \multicolumn{1}{c}{\emph{se} } &\multicolumn{1}{c}{\emph{Nagelkerke R}\textsuperscript{2}} & \multicolumn{1}{c}{\emph{Gen}}  & \multicolumn{1}{c}{\emph{DCC}}  & \multicolumn{1}{c}{\emph{MCC}}\\
+		\midrule
+		Null &Intercept&-0.08 & 0.16 & 0.00 & 0.48 & 0.00 & 1.00\\
+		\midrule 
+		\multicolumn{8}{c}{Typical scoring}\\
+	1 & Intercept &-1.03\, \sym{***} & 0.31 & 0.16 & 0.64 & 0.62 &0.67\\
+		& \emph{D} score &-1.55\, \sym{***} & 0.39 &  &  &  &\\
+	2 & Intercept & -0.36 & 0.91 & 0.12 & 0.62 & 0.67 & 0.56 \\
+		& $M_{\text{DGMB}}$ & 0.01 $\sym{**}$ & 0.01 &  &  &  & \\
+		& $M_{\text{MGDB}}$ & -0.01 $\sym{*}$ & 0.01 & &  &  &   \\
+		\midrule
+		\multicolumn{8}{c}{Single measure models}\\
+	 3 & Intercept & -0.97 \, \sym{***} & 0.29 &0.16 & 0.64 & 0.68 & 0.60 \\
+	   & ($\tau_{\text{MGDB}} - \tau_{\text{DGMB}}$) & -3.66 \, \sym{***} & 0.93 &  &  & &\\
+	  4 & Intercept &0.14 & 0.73 & 0.19 & 0.64 & 0.66 &0.63\\
+	   & $\tau_{\text{DGMB}}$  &2.83\, \sym{**} & 1.04 &  &  &  &\\
+	   & $\tau_{\text{MGDB}}$ &-5.77\, \sym{***} & 1.66 &  &  &  &\\
+	   & $\tau_{\text{DG}}$ &4.49\, \sym{*} & 2.23 &  &  &  &\\
+	   	   	\midrule
+	   \multicolumn{8}{c}{Comprehensive models}\\
+	   5 & Intercept & -0.95 \, \sym{***} & 0.29 &0.15 & 0.64 & 0.67 & 0.60 \\
+	   & ($\tau_{\text{MGDB}}^\text{C} - \tau_{\text{DGMB}}^\text{C}$) & -3.57 \, \sym{***} & 0.91 &  &  & &\\
+6  &Intercept &0.44 & 0.81 & 0.19 & 0.64 & 0.65 &0.63\\
+		& $\tau_{\text{DGMB}}^\text{C}$ &2.45\, \sym{*} & 1.08 &  &  &  &\\
+		& $\tau_{\text{MGDB}}^\text{C}$ &-5.99\, \sym{***} & 1.76 &  &  &  &\\
+		& $\tau_{\text{DG}}^\text{C}$  &5.29\, \sym{*} & 2.59 &  &  &  &\\
+		\bottomrule
+		\multicolumn{8}{p{\textwidth}}{\emph{Note:} $\sym{***}$ $p<.001$, $\sym{**}$ $p<.01$, $\sym{*}$ $p<.05$. $\theta$: Ability estimates, $\tau$: Speed estimates, DGMB: Dark/Good-Milk/Bad condition (IAT), MGDB: Milk/Good-Dark/Bad condition (IAT), DG: Dark/Good condition (Dark SC-IAT), DB: Dark/Bad condition (Dark SC-IAT), MG: Milk/Good condition (Milk SC-IAT), MB: Milk/Bad condition (Milk SC-IAT), \emph{Gen}: General accuracy, \emph{DCC}: Dark chocolate choice accuracy, \emph{MCC}: Milk chocolate choice accuracy, C: Estimates obtained with a comprehensive modeling of IAT and SC-IAT responses.}
+	\end{tabular}
+\end{table}
+Forward selection retained only the IAT \emph{D} score, regardless of whether it was paired with the scores of each SC-IAT or with the \emph{D-Sciat}.
+Also when considering the single components of the typical scoring methods, only the single components of the IAT were retained in the model. This model explained the lowest proportion of variance, and it resulted in the lowest MCC of all models. 
+
+The differential measures obtained from the difference between the condition--specific speed estimates of the IAT were retained by forward selection, both for the Single measure models and for the Comprehensive model.
+These models explained a slightly lower proportion of variance than that explained by the models including their linear components counterparts.  
+
+For both the Single measure models and the Comprehensive model, forward selection retained the speed estimates of the IAT associative conditions (i.e., $\tau_{\text{DGMB}}$ and $\tau_{\text{MGDB}}$) and that of DG associative condition (i.e., $\tau_{\text{DG}}$). 
+These models explained a higher proportion of variance than that explained by the \emph{D} score and its linear components. 
+
+With the only exception of the model including the single components of the IAT \emph{D} score, all other models showed the same General accuracy of prediction. 
+
+
+
+\section{Final remarks}
+
+The approach presented in this study represents a first attempt at a comprehensive modeling of the IAT and the SC-IAT. 
+The Rasch model and the log-normal model estimates resulting from the application of the (G)LMMs provided interesting insights on the functioning of these implicit measures, and on the consequences of not accounting for the non-independence of the observations. 
+
+The stimuli estimates obtained with both the Single measure models and the Comprehensive models allowed for identifying stimuli with estimates far away from the estimates of the stimuli belonging to the same category. In the Single measure models, measure--specific stimuli estimates allowed for highlighting stimuli with a different functioning in all implicit measures. However, the pattern of these stimuli was not consistent between implicit measures. 
+For example,  stimulus \emph{good} was a particularly easy stimulus in the IAT as well as a particularly demanding one in both SC-IATs.  
+The stimuli estimates obtained with the Comprehensive models were less extreme than the ones obtained with the Single measure models.
+The estimates obtained with the latter approach might be artificially inflated by unaccounted and uncontrolled sources of error variance. 
+By controlling for the sources of error variance between implicit measures, the stimuli estimates of the comprehensive modeling approach might provide more reliable stimuli estimates, describing the stimuli functioning across implicit measures.
+
+Having measure--specific stimuli is useful nonetheless, and allows for investigating the stimuli functioning according to the specific measure in which they are administered. 
+However, the Single measure approach risks for resulting in biased stimuli estimates, that might end in misleading inferences on the stimuli functioning. 
+Potentially, measure--specific stimuli estimates can be obtained by specifying stimuli random slopes in  each implicit measure. 
+Since also respondents' variability is of interest, their random slopes in the associative conditions should be specified. 
+Besides not being identified in a Rasch modeling framework (i.e., either respondents or stimuli have to be centered to 0), it is highly unlikely that a model of this complexity would converge because it would require a high within--stimuli between--measures variability.
+
+%Understanding how and why some stimuli are getting estimates far away from the estimates of the stimuli belonging to the same category is of particular relevance for the investigation of stimuli representativeness of their category. Additionally, these estimates allow for a better and deeper understanding on the IAT (SC-IAT) effect, specifically as it is expressed by the \emph{D} score. 
+%If a stimulus obtains a correct response but requires a longer time, it influences the average response time, hence skewing the result. If a stimulus obtains an incorrect response, its response time is replaced by the average response time in that condition added with a penalty. Either way, the effect size of the \emph{D} score will be artificially inflated by the response time of just some of the stimuli, and the inferences based on that should be taken with caution. 
+%Nonetheless, in considering the results on the stimuli functioning it was not possible to rule out the effect of the associative conditions. 
+
+\textcolor{blue}{Regardless of whether they were obtained with the Single measure models or the Comprehensive model, the ability estimates provided a lower contribution to the prediction of the typical scoring methods than speed estimates. 
+ Considering that the typical scoring methods are mostly based on time responses, this result is not surprising. 
+Nonetheless, since each incorrect response is replaced with an inflated response time, also the accuracy performance of the respondents play a role in determining the final score. }
+%The higher the number of incorrect responses, the higher the number of response times replaced with the inflated times, the higher the average in the condition. 
+
+
+The IAT \emph{D} score was the classic score with the best predictive ability of the behavioral outcome. 
+This result is not surprising given that the data are the same as those in Chapter \ref{chap:classicscore}.
+When the linear components of the typical scoring procedures were used to predict the choice, only the average response times of the two associative conditions of the IAT were retained in the model. 
+This model resulted to be the one with the lowest predictive ability in respect to the Milk chocolate choice. 
+Grounding on the results obtained with typical scoring procedures, it appears that only the IAT provides the information needed for predicting the choice. 
+
+The results obtained with the estimates of the Single measure models and those obtained with the Comprehensive models move in another direction. 
+Regarding differential measures, forward selection only retained the differential measure computed with the condition--specific speed estimates of the IAT. 
+This result held for estimates obtained with the Single measure models and the Comprehensive models. 
+However, when the linear combination of their single components was used to predict the choice, the contribution of the speed in the Dark-Good condition of the Dark SC-IAT was highlighted.
+Consequently, it can be speculated that the behavioral choice is driven more by the liking for Dark chocolate than by the dislike for Milk chocolate. 
+By only considering the typical scoring methods, that are affected by different sources of error variance, or the differential measures, which are known to confound the contribution of their components \cite{fiedler2006}, it was not possible to disentagle the automatic association mostly involved in the prediction of the behavior.
+
+ Although the prediction 
+ provided by the Single measure model estimates and that provided by the Comprehensive model estimates do not result in higher accuracy of the choice, they do explain an higher proportion of variance of the choice. 
+ Most importantly, they allow for a deeper understanding of the processes underlying the actual choice. 
+ 
+%Finally, the predictive ability of implicit measures was always outperformed by that of explicit measures. It must be considered that the investigation of the explicit preference for dark and milk chocolate was asked right before the actual choice. Consequently, the preferred chocolate category might have been made salient and respondents might have chosen the chocolate bar according to the reported preference.
+%This result should not be surprising for at least two reasons. Firstly, the explicit chocolate preference was investigated right before the choice task. Consequently, the preferred chocolate category might have been made salient and respondents might have chosen the chocolate bar according to the reported preference. Moreover, as highlighted by \citeA{meissner2019}, implicit measures like the IAT are specifically designed for assessing the \emph{liking} component (i.e., how much an object is negatively or positively evaluated), while behaviors and choices are mostly driven by a \emph{wanting} component (i.e., how much an object is desired and behaviors are oriented towards obtaining it). As such, implicit measures might have an intrinsic issue that make them less able to predict behaviors.
+
+\textcolor{blue}{In this study, implicit measures were used for the assessment of a quite trivial preference, namely the chocolate preference. It would be interesting to investigate whether this approach would replicate on implicit measures for the assessment of other preferences, like the Coke vs Pepsi one  in \citeA{karpinski2006}, but, most importantly, of socially relevant constructs, such as implicit prejudice. 
+	Given that the model estimates provide a deeper and more thorough understating of the processes underlying people's behaviors, this modeling framework might be used for shedding a new light on inter group behaviors such as the decision to affiliate with people belonging to socially stigmatized out-groups. 
+}
+
+Finally, the validity of this approach could be directly tested by designing implicit measures with \emph{a priori} malfunctioning stimuli. If the approach is valid, it should be able to pinpoint the malfunctioning stimuli. 
+%When there is a bias towards one of the target objects (i.e., the intercepts of the classic measures are significantly different from zero), the differential measures computed on the speed estimates explain a lesser proportion of variance than that explained by the linear combination of the single estimates. 
+%The estimates of the classic measures for both the IAT and SC-IAT are indicating that one of the two associative conditions has a higher influence on the final score (i.e., the intercepts estimates significantly different from zero). This violates an implicit assumption of differential measures, namely that both the components are giving the same contribution to the final score \cite{fiedler2006}. Additionally, computing a differential measure implies that systematic and unsystematic error variances are affecting the two conditions in the same way. When the three implicit measures are modeled separately (i.e., Single measure model), the method variance due to within--respondents and between--measures variability is not accounted for, hence potentially affecting the reliability of the parameter estimates. Conversely, when within--respondents and between--measures variability is modeled, the method variance is accounted for, hence controlling for any sources of unwanted error variance. This leads to more reliable parameter estimates, hence to a better prediction of the classic score. Consequently, by confounding the weight that each associative condition has in determining the final score, differential measures are concealing part of the information that can be gathered from the data.
+
+%By computing a differential measure, it is implicitly assumed that the preference/dislike for the two objects have the same weight in determining the final score \cite{fiedler2006}. The estimates of the classic measures for both the IAT and the Milk SC-IAT are indicating that this is not the case, and that one of the two associative conditions has a higher influence on the final score. 
+%Additionally, the computation of a differential measure assumes that systematic and unsystematic error variances are affecting the two conditions in the same way. When the three implicit measures are modeled separately (i.e., Single measure model), the method variance due to the within--respondents and between--measures variability is not accounted for, and hence potentially affecting the reliability of the parameter estimates. Conversely, when the within--respondents and between--measures variability is modeled, the method variance is accounted for, hence controlling for any sources of unwanted error variance. This leads to more reliable parameter estimates, and hence a better prediction of the classic score. Consequently, by confounding the weight that each associative condition has in determining the final score, differential measures are concealing part of the information that can be gathered from the data.
+
+
+
+\newpage
+%\bibliographystyle{apacite} 
+%\bibliography{biblioTesi}
+\end{document}

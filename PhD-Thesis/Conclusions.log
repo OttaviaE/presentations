@@ -1,0 +1,321 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.14)  20 NOV 2020 16:34
+entering extended mode
+**./Conclusions.tex
+(Conclusions.tex
+LaTeX2e <2020-10-01> patch level 1
+L3 programming layer <2020-10-05> xparse <2020-03-03>
+(C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/base\book.cls
+Document Class: book 2020/04/10 v1.4m Standard LaTeX document class
+(C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/base\bk12.clo
+File: bk12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+)
+\c@part=\count175
+\c@chapter=\count176
+\c@section=\count177
+\c@subsection=\count178
+\c@subsubsection=\count179
+\c@paragraph=\count180
+\c@subparagraph=\count181
+\c@figure=\count182
+\c@table=\count183
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/apacite\apacite.sty
+Package: apacite 2013/07/21 v6.03 APA citation
+\c@BibCnt=\count184
+\bibleftmargin=\skip49
+\bibindent=\skip50
+\bibparsep=\skip51
+\bibitemsep=\skip52
+\biblabelsep=\skip53
+)
+(C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pd
+ftex.def
+File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
+\l__kernel_color_stack_int=\count185
+\l__pdf_internal_box=\box47
+) (Conclusions.aux)
+\openout1 = `Conclusions.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+\c@maskedRefs=\count186
+
+(C:\Users\huawei\AppData\Local\Programs\MiKTeX\tex/latex/apacite\english.apc
+File: english.apc 2013/07/21 v6.03 apacite language file
+LaTeX Info: Redefining \BPBI on input line 129.
+LaTeX Info: Redefining \BHBI on input line 130.
+)
+Chapter 1.
+
+LaTeX Warning: Citation `bluemke2006' undefined on input line 16.
+
+[1
+
+
+{C:/Users/huawei/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+
+LaTeX Warning: Citation `Conrey2005' undefined on input line 24.
+
+
+LaTeX Warning: Citation `Klauer2007' undefined on input line 24.
+
+
+LaTeX Warning: Citation `Meissner2013' undefined on input line 24.
+
+! Undefined control sequence.
+l.32 \textcolor
+               {blue}{Results in the literature already showed the effective...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[2]
+! Undefined control sequence.
+l.44 \textcolor
+               {blue}{Despite the shortcomings highlighted for the applicati...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (5.92369pt too wide) in paragraph at lines 44--50
+[]\OT1/cmr/m/n/12 blueDespite the short-com-ings high-lighted for the ap-pli-ca
+-tion of the MFRM,
+ []
+
+! Undefined control sequence.
+l.55 \textcolor
+               {blue}{A less obvious and less straightforward feature of LMM...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.56 \textcolor
+               {blue}{However, it must be considered that both the Rasch mod...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 57.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 57.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 57.
+[3]
+
+LaTeX Warning: Citation `van2006' undefined on input line 70.
+
+
+LaTeX Warning: Reference `chap:IATempirical' on page 4 undefined on input line 
+76.
+
+
+LaTeX Warning: Citation `anselmi2013' undefined on input line 87.
+
+[4] [5]
+! Undefined control sequence.
+l.108 Moreover, \textcolor
+                          {blue}{the Rasch and log-normal model estimates ob...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[6]
+! Undefined control sequence.
+l.121 \textcolor
+                {blue}{By using dark and milk chocolate as target objects of...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `meissner2019' undefined on input line 124.
+
+[7]
+! Undefined control sequence.
+l.142 \textcolor
+                {blue}{This result might indicate that, despite respondents ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[8]
+! Undefined control sequence.
+l.151 \textcolor
+                {blue}{In this case, the difference is not entirely related ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[9]
+
+LaTeX Warning: Reference `chap:comprehensiveApplications' on page 10 undefined 
+on input line 172.
+
+
+LaTeX Warning: Reference `chap:IATempirical' on page 10 undefined on input line
+ 172.
+
+
+LaTeX Warning: Reference `chap:IATempirical' on page 10 undefined on input line
+ 175.
+
+
+LaTeX Warning: Reference `chap:comprehensiveApplications' on page 10 undefined 
+on input line 176.
+
+
+LaTeX Warning: Citation `fiedler2006' undefined on input line 187.
+
+[10] [11]
+
+LaTeX Warning: Reference `chap:formalModel' on page 12 undefined on input line 
+207.
+
+! Undefined control sequence.
+l.213 \textcolor
+                {blue}{The former approach does result in measure--specific ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.215 \textcolor
+                {blue}{A comparison between the respondents' performance in ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.222 \textcolor
+                {blue}{The resulting scores are then used for further analys...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
+
+LaTeX Warning: Reference `chap:classicscore' on page 13 undefined on input line
+ 234.
+
+[13]
+! Undefined control sequence.
+l.238 \textcolor
+                {blue}{The modeling framework introduced in this thesis prov...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.244 \textcolor
+                {blue}{However, the information yielded from the accuracy re...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.251 \textcolor
+                {blue}{The separate modeling of accuracy and time responses ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `VanDerLinden2007' undefined on input line 255.
+
+[14]
+! Undefined control sequence.
+l.266 \textcolor
+                {blue}{Undoubtedly, the second level of modeling introduced ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `VanDerLinden2007' undefined on input line 266.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15]
+
+LaTeX Warning: Reference `chap:IATempirical' on page 16 undefined on input line
+ 280.
+
+[16] [17] (Conclusions.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 909 strings out of 480236
+ 13893 string characters out of 2880082
+ 294633 words of memory out of 3000000
+ 17526 multiletter control sequences out of 15000+200000
+ 540042 words of font info for 45 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 41i,5n,47p,853b,141s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/huawei/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmbx12.pfb><C:/Users/huawei/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmmi12.pfb><C:/Users/huawei/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmr12.pfb><C:/Users/huawei/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/huawei/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Users/huawei/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/huawei/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on Conclusions.pdf (17 pages, 123773 bytes).
+PDF statistics:
+ 85 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

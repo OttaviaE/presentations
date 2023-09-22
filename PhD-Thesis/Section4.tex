@@ -1,0 +1,667 @@
+\documentclass[12pt]{book}
+\usepackage{standalone}
+\usepackage{apacite}
+\usepackage{etoolbox}% for the \patchcmd
+\makeatletter
+% Patch after apacite got loaded!
+\patchcmd{\nocite}{\@onlypreamble\document}{\documentclass\sa@documentclass}{}{}
+\makeatother
+\usepackage{graphicx}
+\usepackage{subcaption}
+\graphicspath{{C:/Users/huawei/Desktop/images/}} 
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{pdflscape}
+\usepackage[margin=3cm]{geometry}
+\usepackage{multirow}
+\usepackage{times}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{dcolumn}
+\usepackage{siunitx}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{bm}
+\raggedbottom
+
+\renewcommand\baselinestretch{1.5}
+
+
+\newcolumntype{d}[1]{D{.}{.}{#1}}
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+
+\begin{document}
+\chapter[Rasch model, Log-normal model, and LMMs]{Rasch model, log-normal model, and their specification for analyzing IAT data}\label{chap:modelsIAT}
+This chapter is organized in two main sections. 
+In the first section, the Rasch model and the log-normal model are briefly outlined. 
+Then, the similarities between the Rasch model and the Generalized Linear (Mixed-Effects) model are described. 
+The procedure for the estimation of the Rasch model parameters by using Generalized Linear Mixed-Effects Models (GLMMs) with a \emph{logit} link function is illustrated, as well as the procedure for estimating the log-normal model parameters from Linear Mixed-Effects Models (LMMS). 
+
+In the second section, the random structures of the GLMMs and the LMMs used for estimating the Rasch model and the log-normal parameters from IAT accuracy and log-time data, respectively, are presented. 
+Three random structures for accuracy responses (Rasch model), as well as three random structures for log-time responses (log-normal model) are introduced. The first one is the simplest one, and it is considered as the Null model against which the models with the other two random structures are compared. 
+The second and third models have the same level of complexity. They differentiate each other according to the random factor on which the multidimensionality of the associative condition is allowed, that can be either the respondents (Model 2) or the stimuli (Model 3). 
+The best fitting model, and consequently the Rasch model and the log-normal model parameters that can be estimated, depend on the observed data.
+
+For illustration purposes, the Rasch model is initially presented with the typical notation for its parameters, namely $\beta$, indicating persons' abilities, and $\delta$, indicating item difficulties. 
+However, since also the item parameter of the log-normal model is indicated with $\delta$, a different notation for the Rasch model is employed. The new notation of the Rasch model resembles the one typically used in Item Response Theory in general. 
+The respondents' parameters are indicated with the Greek letter $\theta$. The item parameters are denoted with the Latin letter $b$. 
+The respondents are indicated with the subscript $p$ ($p \in \{1, \ldots, P\}$) and the stimuli/items with the subscript $s$ ($s \in \{1, \ldots, S\}$).
+In the specification of Linear Mixed-Effects Models, the single observation on each respondent $p$ on each stimulus $s$ in each associative condition $c$ ($c \in \{1, \ldots, C\}$) is indicated as $i$ ($i \in \{1,\ldots, I\}$).
+
+
+\section{Modeling dichotomous responses} \label{sec:rasch}
+
+According to Item Response Theory (IRT) models, the observed response to an item can be explained by a common characteristic shared by both the person and the item, which lie on the same latent trait \cite{demars}. 
+IRT scoring accounts for the moderation of item characteristics in explaining the relationship between the person's latent trait, often identified with $\theta$, and the observed response. 
+IRT models can be distinguished according to the number of parameters used for describing the item characteristics \cite<e.g.,>{demars}. 
+
+The simplest model is the 1-Parameter Logistic model (1PL, Equation \ref{eq:1pl}). 
+The 1PL model ad the Rasch model \cite{rasch1960} are mathematically equivalent. According to the 1PL model, the probability of a correct response to an item is a function of the respondent's characteristic $\theta$ and an item characteristic, defined as difficulty, $b$: 
+
+\begin{equation}\label{eq:1pl}
+		P(x_{ps} = 1 | \theta_p, b_s) = \frac{exp(\theta_p - b_s)}{1 + exp(\theta_p - b_s)}
+\end{equation}
+
+The difficulty $b$ is defined as the amount of latent trait  $\theta$ that a person needs for having a higher probability of choosing the correct response over the incorrect response. 
+%The discriminatory power of the item (i.e., parameter $a$, the power of the item to distinguish between respondents with a high level of $\theta$ from those with a low level of $\theta$) does not have a subscript indicating the specific items because it is equal for all the items \cite{demars}.
+%In the Rasch model, parameter $a$ is set equal to 1 \cite{demars}. 
+%Besides the difference in the notation of the parameters ($\theta_p$ and $b_s$ in the 1PL, $\beta_p$ and $\delta_s$ in the Rasch model, for identifying the respondents' ability and item difficulty, respectively), 1PL model and Rasch model are mathematically equivalent.
+
+The 2PL model (Equation \ref{eq:2pl}) \cite{birnbaum1968} also considers the influence of each item discrimination power (parameter $a$) in explaining the relationship between the respondent's ability and the observed response: 
+
+\begin{equation}\label{eq:2pl}
+	P(x_{ps} = 1 | \theta_p, b_s, a_s) = \frac{exp[a_s(\theta_p - b_s)]}{1 + exp[a_s(\theta_p - b_s)]}
+\end{equation}
+
+As it can be seen from Equation \ref{eq:2pl}, parameter $a$ changes the relationship between respondent's parameter $\theta$ and the item difficulty parameter $b$. The larger the value of $a_s$, the lower the overlap between the distributions of the response variables of two respondents with different values of $\theta$. In this sense, parameter $a_s$ can be interpreted as the discriminating power of the item. Items with large value of $a_s$ are best able to discriminate between respondents with different levels of $\theta$.
+
+Both the 1PL and the 2PL models assume a lower asymptote at 0 (i.e., the value taken by the function as $\theta$ approaches $- \infty$) and an upper asymptote of 1 (i.e., the value taken by the function as $\theta$ approaches $+ \infty$). The Rasch model assumes a lower asymptote at 0 as well. 
+The assumption of the lower asymptote approaching zero implies that respondents with extremely low levels of ability have an extremely low probability of endorsing the correct response. 
+Conversely, assuming an upper asymptote of 1 implies that respondents with extremely high levels of ability have an extremely high probability of endorsing the correct responses. 
+
+However, there might be cases in which respondents with an extremely low level of ability endorse the right response just out of luck (lucky guess), or that respondents with an extremely high level of ability endorse the incorrect response just out of distraction (careless error). 
+In the first case, the lower asymptote cannot approach zero anymore, since even respondents with a level of ability that approaches $- \infty$ have a probability of providing the correct response higher than 0. 
+In the latter one, the upper asymptote has to be moved downward because even respondents with a level of ability that approaches $+ \infty$ have a probability of correctly endorsing the correct response lower than 1. 
+
+The 3PL and 4PL models have been introduced for modeling these occurrences, respectively.
+
+The 3PL model (Equation \ref{eq:3pl}) \cite{lord}  adds a third parameter ($c$) to explain the response behavior: 
+
+\begin{equation}\label{eq:3pl}
+		P(x_{ps} = 1 | \theta_p, b_s, a_s, c_s) = c_s + (1-c_s)\frac{exp[a_s(\theta_p - b_s)]}{1 + exp[a_s(\theta_p - b_s)]},
+\end{equation}
+
+where $c_s$ is the probability that a respondent with a low level of ability guesses the correct response. Parameter $c_s$ hence moves upward the lower asymptote, and it represents the probability that a respondent with an extremely low ability will correctly answer an item with difficulty $b$ 
+
+The 4PL model (Equation \ref{eq:4pl}) \cite{4plbarton} adds a fourth item parameter ($e$) to describe the response behavior:
+
+\begin{equation}\label{eq:4pl}
+P(x_{ps} = 1 | \theta_p, b_s, a_s, c_s, e_s) = c_s + (e_s-c_s)\frac{exp[a_s(\theta_p - b_s)]}{1 + exp[a_s(\theta_p - b_s)]},
+\end{equation} 
+
+where $e_s$ represents the probability that a respondent with an extremely high level of ability will incorrectly answer an easy item (i.e., careless error). As it can be seen from $(e_s-c_s)$ of Equation \ref{eq:4pl}, the upper asympote is defined by parameter $e_s$. 
+
+
+\subsection{The Rasch model}
+
+%The Rasch model \cite{rasch1960} is not a special case of the 2PL model, even though it is mathematically equivalent to the 1PL model \cite{demars}.
+%The Rasch model is specified in terms of \emph{log-odds} (i.e., \emph{logits}, the natural logarithm of the odds).
+Despite the 1PL IRT model and the Rasch model are mathematically equivalent, the notational system used for their parameters is different. In the Rasch model, the item parameter is described by the Greek letter $\delta$ and the person's parameter is described by $\beta$. 
+In this section, the typical notation of the Rasch model is used. However, in Section \ref{sec:random} the notation typical of IRT models is used to distinguish the Rasch model parameter estimates from the estimates of the log-normal model and those of the GLMMs.
+
+The starting point for the development of the dichotomous Rasch model \cite{rasch1960} involves the engagement of a person $p$ on an item $s$ to produce a response $x_{ps}$ \cite{andrich}. 
+The engagement between the person and the item results from a single variable that is a common property shared by both the person and the item. The item variable is supposed to trigger the same person variable in all respondents.
+%Therefore, the same person property is triggered in all persons administered with that specific set of items.
+For instance, for assessing mathematics proficiency the items must contain some degree of mathematics ability. To give the correct response, persons must engage with the mathematics proficiency required by the item.   
+%The properties of the items should trigger the same variable in all persons. For example, in a math proficiency test, the person's property under investigation is the math ability, which is the variable that should be used for giving the correct response to each item. Each item should be able to trigger this ability in each person.
+
+The engagement between persons and items results in the observed responses $x_{ps}$, which can be represented in a $P$ ($p \in \{1, \ldots, P\}$, persons) $\times$ items $S$ ($s\in \{1, \ldots, S\}$, items) response matrix $\bm{X}$ (Table \ref{tab:rasch}). 
+
+\begin{table}[h!]
+	\centering
+	\caption{\label{tab:rasch} Response matrix $P \times S$, starting point for estimating the Rasch model.}
+	\begin{tabular}{p{1cm}  p{1cm}  |p{1.5cm}  p{1.5cm} p{1.5cm} p{1.5cm} p{1.5cm} p{1.5cm} | p{1.5cm}}
+		& \multicolumn{1}{l}{} & \multicolumn{6}{c}{Items} & \multicolumn{1}{c}{} \\
+		& \multicolumn{1}{c}{} & \multicolumn{1}{l}{1} & \multicolumn{1}{l}{2} & \multicolumn{1}{l}{$\ldots$} & 
+		\multicolumn{1}{l}{$k$} & \multicolumn{1}{l}{$\ldots$} & \multicolumn{1}{l}{$s$}& \\
+		\cline{3-8}
+		\multirow{8}{*}{Persons} & 1 & $x_{11}$ & $x_{12}$ & $\ldots$& $x_{1k}$ & $\ldots$ & $x_{1k}$ & $r_1$ \\
+		&	2 & $x_{21}$ & $x_{22}$ & $\ldots$& $x_{2k}$ & $\ldots$ & $x_{2k}$ & $r_2$ \\
+		&	$\vdots$ & $\ldots$ & $\ldots$ & $\ldots$ & $\ldots$ & $\ldots$ & $\ldots$ & $\vdots$ \\
+		&	$v$ & $x_{v1}$ & $x_{v2}$ & $\ldots$& $x_{vk}$ & $\ldots$ & $x_{vk}$ & $r_v$ \\
+		&	$\vdots$ & $\ldots$ & $\ldots$ & $\ldots$ & $\ldots$ & $\ldots$ & $\ldots$ & $\vdots$ \\
+		&	$p$ & $x_{p1}$ & $x_{p2}$ & $\ldots$& $x_{pk}$ & $\ldots$ & $x_{ps}$ & $r_p$ \\
+		\cline{3-8}
+		& \multicolumn{1}{c}{} & $s_1$ &  $s_2$ & $\ldots$ & $s_k$ & $\ldots$  & \multicolumn{2}{l}{$s_s$}\\ 
+	\end{tabular}
+\end{table}
+
+Each cell represents the response of person $p$ to item $s$. 
+The response is a dichotomous response that can take only the values $x_{ps} = 0$ (incorrect response) or $x_{ps} = 1$ (correct response). 
+
+The across-columns sum $r_p$ (i.e., number-correct) represents the total score of each respondent (i.e., the total number of correct responses given by the respondent), regardless of the specific pattern with which the correct responses were given.
+The number-correct is a sufficient statistic for estimating the person's parameter $\beta$ \cite{wright1979, wright1997}. 
+Two respondents might have the same number-correct obtained with different patterns of correct responses. Since the specific pattern does not matter for the determination of the number-correct, the two respondents with same number-correct obtained with different pattern will have the same person estimate $\beta$. 
+This feature is one of the peculiarities that distinguish the Rasch model from other IRT models. For instance, in the 2PL two respondents with the same number-correct might not have the same level of $\theta$ because the relationship between the item and the respondent's estimate is moderated by the discrimination parameter $a$.
+
+Similarly, the across-rows sum $s_s$ (i.e., proportion-correct) represents the total score of each item (i.e., number of correct responses obtained by each stimulus), regardless of the specific pattern with which the responses were obtained.  The proportion-correct is a sufficient statistic for estimating the item difficulty parameter $\delta$.
+Two items might have the same proportion-correct resulting from different pattern of responses, but since the specific pattern is not relevant for the determination of the proportion correct, the two items will have the same item estimate $\delta$.
+The concept of sufficient statistics is directly related to that of Local independence, which is further illustrated in paragraph $\ref{par:local}$.
+
+The observed response in each cell $x_{ps}$ hence depends on both persons’ characteristics and items characteristics. 
+Characteristics of both persons and stimuli can be located on a specific point of the latent trait, which is the common variable they share. 
+The locations
+ of each respondent $p$ on the latent trait are described by parameter $\beta_p$. The location of each stimulus on the latent trait is described by parameter $\delta_s$. 
+While the observed response for each combination of $p \times s$ can take only the value 0 and 1, the parameters $\beta_p$ and $\delta_s$ can take any real values from $- \infty$ to $+ \infty$. 
+ 
+The fact that persons and items are located on the same latent traits is the great advantage of the Rasch model. By sharing the same latent trait, it is possible to directly compare persons' estimates with items estimates, and hence a measure of the distance between them can be obtained. Therefore, it is possible to predict the probability that a person with a certain level of $\beta$ has of correctly respond to an item with a certain level of $\delta$. 
+Since the observed response is a function of respondents' and stimuli characteristics located on the same latent trait, it is possible to speculate that a respondent would correctly respond to stimuli below his/her level of ability $\beta_p$ (i.e., the probability of a correct response is higher than 50\%): 
+
+\begin{equation}\label{eq:rasch1}
+	\text{If} \, (\beta_p - \delta_s) > 0 \, \text{then} \, P(x_{ps} = 1) > 0.50.
+\end{equation}
+
+Also the opposite holds true. When the location of the item is above the location of the person, the probability that a correct response is given is below 50\%: 
+
+\begin{equation}\label{eq:rasch2}
+	\text{If} \, (\beta_p - \delta_s) < 0 \, \text{then} \, P(x_{ps} = 1) < 0.50.
+\end{equation}
+
+Assuming that respondents and items lie on the same latent variable implies that the probability of a correct response can be related with the difference between respondents parameters and item parameters, as shown in Equation \ref{eq:rasch1} and Equation \ref{eq:rasch2}. 
+
+However, the probability of a correct response is bounded between 0 and 1, while the parameters, and hence their difference, can vary between $- \infty$ and $+ \infty$. 
+The difference between respondents' and items parameters can be forced to only positive numbers by using the exponential distribution: 
+
+\begin{equation}\label{eq:raschprob}
+	0 \leq exp(\beta_p - \delta_s) < + \infty
+\end{equation}
+
+Still, the difference between person's ability and item difficulty cannot be used to predict a probability, because it is allowed to take any positive value from 0 to $+ \infty$. 
+To map the difference between respondents and item parameters on the same scale of the probability, and hence to use them for predicting the probability of a response given respondents' ability and item difficulty, Equation \ref{eq:raschprob} can be standardized by $1 + exp(\beta_p - \delta_s)$. 
+The probability for a correct response for a given $\beta_p$ and a given $\delta_s$ can hence be expressed as: 
+
+\begin{equation}\label{eq:raschcorrect}
+	P(x_{ps} = 1 | \beta_p, \delta_s) = \frac{exp(\beta_p - \delta_s)}{1 + exp(\beta_p - \delta_s)},
+\end{equation}
+which is the typical formulation of the Rasch model for the probability of a correct response. 
+
+As said before, the Rasch model was originally formulated in terms of odds and \emph{log-odds}. Equation \ref{eq:raschcorrect} can hence be rewritten in terms of \emph{log-odds}:
+
+\begin{equation}\label{eq:raschcorrectlog}
+	\beta_p - \delta_s = \text{ln}\left(\frac{P(x =1|\beta_p, \delta_s)}{1 - P(x =1|\beta_p, \delta_s)}\right),
+\end{equation} 
+or, by applying the properties of logarithms to Equation \ref{eq:raschcorrect}, the Rasch model can be rewritten as: 
+
+\begin{equation}\label{eq:inverseraschInverse}
+	P(x_{ps} = 1 |\beta_p, \delta_s) = \frac{1}{exp(\delta_s - \theta_p)}
+\end{equation}
+
+The formulation in Equation \ref{eq:raschcorrect} makes clear that the only thing that matters for the estimation of the expected probabilities is the difference between $\beta_p$ and $\delta_s$. 
+This difference expresses the distance between the location of respondent $p$ from the location of stimulus $s$ on the latent trait. 
+The   probability  of a correct (incorrect) response changes according to the distance between respondent's and item locations. The probability of a correct response is 50\% when the respondent's location is equal to the item location. 
+The variance for the the expected probabilities of responses when the locations of the respondent and that of the stimulus corresponds is maximized.
+
+The more the location of a respondent on the latent trait is above the location of the item, the higher the probability of observing a correct response (see Equation \ref{eq:rasch1}). 
+Similarly, the less the distance between the location of the respondent and that of the item on the latent trait, the lower the probability of observing a correct response.
+Also the opposite holds true. 
+The more the location of the respondent is below the item location, the higher  the probability of an incorrect response (see Equation \ref{eq:rasch2}), and, conversely, the less the location of the respondent is below the location of the item, the lower the probability of an incorrect response.
+The relationship between the respondent's parameter and the item parameter defines the cumulative nature of the Rasch model. 
+
+The Rasch model assumes a logistic probability function, and the measurement units of the respondents' parameters, the item parameters, and their difference, are the \emph{logits} (i.e., \emph{log-odds} of the probability of giving the correct response).
+%The measurement units of the difference between respondents and stimuli parameters are the \emph{logits}, and the RThe logistic probability function is the probability function on which the Rasch model rests. 
+
+%The implications and assumptions of the Rasch model are briefly outlined in the following Paragraphs.
+%The Rasch model implies both a single dimension, where respondents' and items characteristics can be placed, and, related to that, the statistical independence of responses (i.e., the probability of giving the correct response to different items is equal to the product of the probability of correctly answering each of them). 
+
+The Rasch model is based on three main assumptions, namely linearity, comparison invariance, and local independence. These assumptions are briefly outlined in the following paragraphs, with a specific focus on conditional independence and on the consequences of its violation. 
+
+\paragraph{Linearity of the scores.}
+The linearity of the scores is obtained with the logarithm transformation of the odds. By applying this transformation, person’s parameters and item parameters are placed on the same continuous latent latent trait. The measurement units of the latent trait are the \emph{logits}, which define an interval scale for the interpretation of the scores.
+
+This linear transformation allows for setting the lowest parameter observed equal to 0, without losing the original relationship between the estimates. Consequently, comparison invariance (described in the following paragraph) assumption is satisfied.
+
+\paragraph{Comparison invariance.}
+The comparison between any two persons is independent from the set of stimuli on which the comparison is based, as well as independent from the comparison between any other two persons. 
+The same holds for the stimuli, so that the comparison between any two items is independent from the respondents on which the comparison in made, as well as from the comparison between any other two persons.
+
+The comparisons are invariant in the sense that the comparison between persons only depends on the ability parameters of those two persons, and the comparison between stimuli only depends on the stimuli properties. 
+
+
+\paragraph{Local independence.}\label{par:local}
+
+According to the Rasch model, a person with a  level of ability $\beta$ greater than the item difficulty $\delta$ has a greater probability of responding  correctly than incorrectly to that item. 
+Conversely, a person with a level of ability $\beta$ lower than the item difficulty $\delta$ has a higher probability of responding incorrectly than correctly to theta item. 
+The variability between the item responses can hence be explained in terms of the person's level of ability $\beta$. 
+%The estimation of item parameters $\delta$ does not depend on respondents' ability parameter $\beta$. 
+As such, ability $\beta$ can be considered as the source of general dependence between the items, and, once it is accounted for, any other relationship between the items should disappear. 
+The capacity of the persons' parameters $\beta$ to explain all the variability between the responses, is called local independence \cite{andrich}.  In other words, local independence assumes that, once the effect of person parameter is accounted for, any other relationship between the stimuli should disappear.
+
+The statistical independence of responses implies that the probability of correctly responding to different items is equal to the product of the probabilities of answering each of them correctly. The local independence of the responses can be formalized as follows: 
+ 
+\begin{equation}\label{eq:local}
+	P(\bm{X}) = \prod_p \prod_s \, P(x_{ps}),
+\end{equation}
+
+where $\bm{X}$ is the $P \times S$ matrix of the responses. 
+
+The violation of local independence can happen in two main instances, either by involving multidimensionality or response dependence. 
+The consequences of the local independence violation due to either multidimensionality or response dependence move in opposite directions but they both result in less reliable parameters estimates and predictions.
+ 
+Unidimensionality posits that item responses are explained by only one latent trait dimension, shared by both respondents and stimuli, and it is the basic underlying assumption of the Rasch model.
+Multidimensionality refers to those cases where there are unexpected person's parameters other than $\beta$ involved in the responses to the items. 
+
+Multidimensionality is indeed a property of many different scales used for psychological assessment. For instance, the Big Five Questionnaire \cite{bigfive} is a questionnaire for the assessment of the Big Five personality traits, composed of different subscales. 
+The items in each of the 5 subscales are aimed at assessing one of the 5 personality traits posited by the Big Five theory (i.e., agreeableness, extraversion, openness to experience, neuroticism, conscientiousness), and they can be grouped according to the personality trait they aim for. 
+As such, they show a between--subscale variability which cannot be explained by only the person’s parameter $\beta$. 
+
+Multidimensionality can also raise from stimuli linked by common attributes such as a common item stems, common stimulus materials, or common item structures \cite{andrich}. 
+Consequently, stimuli will display a variability that cannot be understood just in terms of ability parameters $\beta$. 
+
+Response dependence \cite<i.e., for a fixed person, hence for a fixed level of ability $\beta$, the response to an item might depend to the response to a previous item;>{andrich} violates the local independence assumption as formulated in Equation \ref{eq:local}. 
+The probability associated to the responses to each item are not independent events anymore, hence their probabilities cannot be multiplied. 
+Consequently, it is not possible to state that the probability of correctly responding the entire set of items corresponds to the product of the probabilities of responding correctly to each of them.
+
+Response dependence can happen when the response given to an item is used as a clue for responding to the following item. 
+Response dependence might also arise during the performance at computerized task, when the response to a previous stimulus might leave a carry-over effect on the response to the following stimulus \cite{Westfall2014}. Specifically, in the second case, the variability at the item level is affected by new sources of variability which are mostly composed of error variance. 
+
+Violating local independence affects the fit of the data to the model \cite{andrich}, and produces unreliable parameter estimates \cite<e.g.,>{Barr2013, judd2012}. 
+When local dependence is due to multidimensionality, extra sources of random noise are added to data. The error variance is hence increased, producing less accurate and reliable predictions. 
+When local dependence is due to response dependence, the similarity of responses of persons across items is higher, leading to a lower error variability in the data. 
+
+
+\section{Modeling time responses}\label{sec:lognormal}
+
+By modeling response times within an IRT approach, an interaction between the parameters defining persons' accuracy responses and time responses is implicitly assumed. 
+This is nothing else than the speed-accuracy trade-off also reported in previous analysis of the IAT data \cite<e.g.,>{Klauer2007}. 
+
+
+Traditionally, in IRT modeling the speed-accuracy trade-off has been expressed by adopting a regression parameter for respondents' ability on their response times. 
+Consistently with IRT models in general, also items are fundamental in determining the time responses. It is commonly assumed that more difficult items do need for more time to get a response. An item parameter is needed to describe the time absorbing power of the item \cite{van2006}.
+
+
+\subsection{The log-normal model}
+
+A log-normal model for the analysis of the response times to a test has been introduced by \citeA{van2006}. This model is part of a hierarchical model for the modeling of accuracy and time responses in an IRT framework \cite{VanDerLinden2009}. 
+As also stated by \citeA{van2006} and \citeA{VanDerLinden2009}, the models used for accuracy responses (i.e., any of the IRT models presented in the previous section) and for  time responses can be employed separately for the analysis of  accuracy and time responses to a test. 
+The advantage of using the hierarchical approach in \citeA{VanDerLinden2009} is that the relationship between the parameters of the IRT model and and the time parameters can be studied and understood at a second (combined) level of modeling. 
+
+The log-normal model, as its name suggests, assumes a normal density distribution for the logarithm of the time responses. 
+The use of a log-normal family can be traced to its good fit to the observed data already observed in previous work \cite<e.g.,>{thissen, van2006}. More trivially, it comes natural to model with a normal distribution (defined over the entire real continuum) the log transformation of a variable that is a non-negative variable by definition (the response times) \cite{van2006}.
+
+The structure of the original formulation of the log-normal model is analogous to the one of the 2PL IRT model in Equation \ref{eq:2pl} for mainly three reasons. 
+
+First, both the 2PL and the log-normal models impose the same structure on the mean of the distribution of the binary response variable and on the mean of the distribution of the continuous variable, respectively. 
+In both cases, the mean is represented by the difference between the respondents' and the items parameters operating in opposite directions.
+
+Second, both models assume a parameter that changes the relationship between the item parameter and the respondent's parameter, namely a discrimination parameter. Further details on the effect and the interpretation of the discrimination parameter are illustrated after the mathematical specification of the log-normal model. 
+
+Finally, given the nature of the distribution of the response times (it is bounded at 0), the log-normal model does not need the definition of a lower asymptote (i.e., a guessing parameter like in 3PL model in Equation \ref{eq:3pl}).
+
+The response time $t$ (i.e., the realization of a random variable $T$) of a person $p$ to an item $s$ can be expressed by positing the normal density distribution of the log-response time: 
+%
+\begin{equation}\label{eq:log}
+	f(t_{ps}| \tau_p, \delta_s) = \frac{\alpha_s}{t_{ps}\sqrt{2\pi}}exp\left\{ -\frac{1}{2}[\alpha_s(ln\;t_{ps} - (\delta_s - \tau_p))]^2 \right\}.
+\end{equation} 
+%
+As in IRT models, both respondents' parameters $\tau_p$ and $\delta_s$ are allowed to vary between $- \infty$ and $+ \infty$. Although the sign of the persons' parameters is reversed, the mean of the distribution of Equation \ref{eq:log} resembles the one of the 2PL in Equation \ref{eq:2pl}. 
+The change in the sign of respondents' parameters allows for interpreting the parameter as a speed parameter, according to which, the larger the value of $\tau_p$, the faster the responses given across items (i.e., the respondent tends to spend less time on the items). 
+
+Parameter $\delta_s$ describes the time intensity (or time consumingness)  of an item, which is the time the stimulus requires to be responded. The larger the value of $\delta_s$, the higher the amount of time respondents need to give the response.
+Parameter $\alpha$ (i.e., the reciprocal of the standard deviation of the normal distribution) is the discrimination parameter of the model. A larger value of $\alpha_s$ means less dispersion for the log-response time distribution on item $s$. Consequently, it can be said that the item has a better discrimintating ability between different respondents with different levels of speed. 
+Parameter $\alpha_s$ affects the relationship between respondents' speed $\tau_p$ and item time intensity $\delta_s$, similarly to what happens when parameter $a_s$ changes in the 2PL model. 
+If the value of $\alpha_s$ increases, the distributions of the log-time for any two values of the speed parameter show less overlap. 
+
+The 1PL model in Equation \ref{eq:1pl} can be considered as a constrained model deriving from the 2PL model in Equation \ref{eq:2pl}. 
+The constraint is imposed on the discrimination parameter $a$, which is forced to be equal across all items (1PL, Rasch model). 
+A similar reasoning can be done for the log-normal model, by forcing $\alpha_s$ to be one for all items $s$ ($\alpha_s = 1$ for all $s$, $s \in \{1, \ldots S\}$).
+These constraints bring a parametrization similar to that of the 1PL/Rasch model.
+%The former constraint brings a parametrization similar to the one of the 1PL model, the latter one can be equated to the parametrization provided by the Rasch model. 
+In the empirical application in \citeA{van2006}, both a non-constrained and a constrained version of the log-normal model were tested in terms of goodness of fit to the data. 
+The normal analogs of the non-constrained and constrained models were tested as well. 
+The normal models were the ones showing the worst goodness of fit, while constraining $\alpha$ to be equal across all items did not affect much the  goodness of fit of the log-normal models. 
+
+
+\section{Linear Mixed Effects Models}
+
+As illustrated in the previous sections, an IRT (or Rasch) approach for modeling both accuracy and  time responses provides a detailed information on the parameters that determine the observed responses. 
+
+
+The use of a log-normal model can indeed overcome the issue related to the discretization of the response times for the application of the Many Facet Rasch Model in Section \ref{sec:mfrm}. 
+The use of a separate model for accuracy responses, always under an IRT or Rasch framework, allows for obtaining useful and detailed information also from accuracy data, with a similar parameterization as that obtained from the log-time responses. 
+Potentially, the estimates obtained from the two models can be combined at a second level of modeling by using a hierarchical approach as that illustrated in \citeA{VanDerLinden2009}. 
+
+Despite this approach sounds promising, it cannot account for the fully-crossed design of IAT data, and the sources of dependency related to it. As thoroughly illustrated in the introduction, the fully-crossed design of the IAT comes with several sources of variability at different levels. These sources of variability generate dependencies at the level of the single observations, which violate the assumption of conditional independence. 
+Conditional independence is not only a necessary assumption for the application of the Rasch model, but a basic assumption needed for obtaining reliable results with any statistical analysis.
+Violating the assumption of conditional independence brings to biased parameter estimates which can in turn lead to an inflated probability of committing Type I error or to an underestimation of the importance of the experimental condition \cite{Barr2013, judd2012,mc1989}. 
+
+Linear Mixed Effects models (LMMs) are the most straightforward way to deal with this data structure.
+Moreover, both respondents and stimuli can be conceptualized as random factors by specifying the appropriate random structure. 
+As such, the issues concerning the decision to follow either  a \emph{by-participant} approach or a \emph{by-stimulus} approach for performing the analyses is overcome.
+
+LMMs allow for decomposing the error variance by specifying an appropriate random structure with different levels, that are the levels where uncontrolled random variation can be reasonably found \cite{Doran2007}. 
+The error variance can be partitioned into random effects that reflect the assumption on the structure of dependency created by the random variability at  different levels. 
+By doing so, the multilevel structure of the data, which reflects the random variability of the population from which the various levels are drawn, is accounted for \cite{Barr2013}.
+
+Finally, LMMs can be applied to both continuous data, such as the log-transformation of the response times, and to dichotomous responses. In the latter case, a Generalized Linear Mixed-Effects Model (GLMMs) is needed, with the appropriate link function expressing the relationship between the linear combination of the predictors (i.e., linear component of the model) and the observed response. 
+
+
+\subsection{Generalized Linear Mixed-Effects Model and Rasch Model}
+
+In a Generalized Linear Model (GLM), the linear predictors are not directly related with the observed response. They need to be linked together with a specific function, which goes under the name of \emph{link function}. 
+The type of link function that needs to be used depends on the nature of the observed variables \cite{{mc1989}}.
+
+For the illustration of the structure of the GLM, and of its expansion for including random effects, we focus on the case of binomial responses $x_{ps} \in \{0, 1\}$, describing the accuracy responses at the IAT. 
+
+The linear combination of the predictors is defined by the form of the model expressed by the model matrix $\bm{X}$, and it determines the linear component of the model. 
+The linear component is defined for each cell of the $P \times S$ $\bm{X}$ matrix, and it is denoted with $\eta_{ps}$. 
+
+The natural link function $g$ that relates observed binomial responses with the linear component of the model $\eta_{ps}$ is the \emph{logit} \cite<the logarithm of the odds,>{mc1989}, and it yields a probability value $\mu_{ps}$:
+%When the observed responses are binomial responses, the natural link function $g$ \cite{mc1989} that relates the linear component $\eta_{ps}$ with the expected values of $x_{ps}$ is the \emph{logit}. 
+ 	\begin{equation}\label{eq:logit}
+ 		\eta_{ps} = logit(\mu_{ps}) = ln\left( \frac{\mu_{ps}}{1 - \mu_{ps}}\right),
+ 	\end{equation}
+where $\mu_{ps}$ is the probability of a correct response associated to each observed response $x_{ps}$.
+
+Each link function is an invertible function, and the inverse for the \emph{logit} link function is expressed as:
+\begin{equation}\label{eq:inverse}
+	\mu_{ps} = logit^{-1}(\eta_{ps}) = \frac{1}{1 + exp(-\eta_{ps})}.
+\end{equation}
+The structure of the inverse \emph{logit} link in Equation \ref{eq:inverse} can be equated to the Rasch formulation in Equation \ref{eq:inverseraschInverse}, and, consequently, it is possible to obtain a Rasch parametrization of the data by using a GLM on binomial responses with a \emph{logit} link function \cite{DeBoeck2011, Doran2007, Gelman2007}. 
+
+From now on, to distinguish the parameters of the Rasch model from the parameters obtained with the LMMs the former ones will be denoted with $\theta_p$ and $b_s$, and they will refer to respondents' ability and item difficulty, respectively.
+%the parameters of the Rasch model will be referred to as $\theta_p$ and $b_s$, referring to respondents' ability and stimuli difficulty, respectively, to distinguish them from the parameters obtained with the LMMs.
+
+%The interpretation of the stimulus parameter $\delta_s$ is nonetheless reversed. 
+%In the inverse \emph{logit} function of Equation \ref{eq:inverse}, the relationship between respondent's charactertis and item difficulty has changed becoming and additive, rather than a differential, relationship. 
+%As such, the item parameter $\delta$ can no longer be interpreted as an impediment property (difficulty) of the stimulus but it should be interpreted as a facilitation property of the stimulus (easiness) \cite{DeBoeck2011, Doran2007}.
+
+When there are reasons to believe that sources of variability can generate dependencies between the observations, such as in the IAT case, random effects accounting for the random factors generating the uncontrolled  random variability should be included in the model matrix of the linear component. 
+By doing so, the error variance is partitioned in different levels that are defined by the factors considered as random. 
+The partitioning of error variance into specific factors makes it controllable and accountable for \cite{Doran2007}.
+
+The $\bm{X}$ matrix that defines the linear component of the GLM needs to be extended to include the random factors. 
+The linear component hence takes on the form:
+%Including the random factors in the GLM is quite easy and it brings to the formulation of the GLMM. Random factors are included by expanding the matrix that defines the model matrix (and any eventual covariate), so that the linear predictor takes on the form: 
+\begin{equation}
+	\eta = \bm{X}\beta + \bm{Z}d,
+\end{equation}
+
+where $\beta$ indicates the coefficients for the fixed effects, $\bm{X}$ is the model matrix of the fixed effects $\beta$, $\bm{Z}$ is the $P \times Q$ matrix of the random effects (i.e., $Q$ is the dimension of the random effects vector), and $d$ is the vector of random effects predictors. 
+
+The dimension $q$ of $d$ is defined by the number of levels of each random factor, and their eventual combinations. For instance, if respondents are specified as a random factor, the dimension $q$ of the random effects vector will have as many levels as the number of respondents. 
+Consequently, the dimension of $d$ can be potentially very large \cite{Doran2007}.
+The distribution of the random effects is estimated as a multivariate normal distribution (i.e., $\mathcal{MVN}$) with mean 0 and a $Q \times Q$ variance-covariance matrix $\bm{\Sigma}$, which is determined by a single vector parameter $\Gamma$ \cite{Doran2007}. 
+The dimension of $\Gamma$ is usually rather small, and its size is determined by the number of random factors specified in the model, regardless of the number of levels they include.  
+For instance, consider a model in which respondents' variability, items variability, and items variability in three different conditions are accounted for. In this model, five random factors are specified, one for respondents' variability, one for items variability, and one allowing for the multidimensionality of the stimuli variability in the three conditions. 
+	The dimension of the vector parameter $\Gamma$ for this model is 5, and it remains 5, regardless of the number of respondents or items used.
+
+The objective of LMMs is then to estimate the parameters of the fixed effects as defined by vector $\beta$ and the parameters of the random effects, defined by vector $\Gamma$. Consequently, the parameters estimated for the random factors are not the parameters associated to each level of each factor, but the variance of the populations from which the random factors are drawn. This is the reason why $d$ is indicated with a Latin letter, because it does not indicate population parameters.
+%The parameters of the random effects are the variance of the populations to which the groups defining the levels of the random effects belongs.
+ 
+Nonetheless, a measure for each level of each random factor is obtained in the form of \emph{conditional modes}, which are the values that maximize the conditional density of the random effects given the vector of parameters (fixed and random) and the observed data \cite{Doran2007}. 
+The conditional modes that describe the deviation from the fixed factors of each level of each random factors are meta-parameters \cite{pastore}, and are usually referred to as \emph{Best Lineaer Unbiased Predictors} \cite<BLUP,>{pinheiro2006}. 
+
+BLUP are used for the estimation of the Rasch model parameters. 
+
+Concerning the stimuli, the easiness estimates $b_s$ are obtained by adding the conditional mode of each stimulus, considered as a random factor, to the estimates of the fixed effects. 
+In the IAT case, the higher the value of stimuli easiness $b_s$, the easier the stimulus, meaning that it is easily recognized and sorted to the category to which it belongs.  
+
+Similarly, adding the conditional mode of each respondent to the estimates of the fixed effects results in the  respondents' ability estimates $\theta_p$. 
+In the IAT case, the higher the value of $\theta_p$, the higher the ability of the respondent in correctly categorizing the stimuli. 
+
+In the Rasch model,  the respondents' parameters and the stimuli parameters move in opposite directions. 
+When the respondents' parameters and the stimuli parameters are obtained by using the GLMMs, their estimates move in the same direction, hence resulting in an additive effect.
+The item parameter $b_s$ can no longer be interpreted as an impediment property (difficulty) of the item but it should be interpreted as a facilitation property of the stimulus (easiness) \cite{DeBoeck2011, Doran2007}. 
+When both $\theta_p$ and $b_s$ are high, then the probability of a correct response is high. 
+When high values of $\theta_p$ are combined with low values of $b_s$, the probability of a correct response for each respondent is as much penalized as their ability cannot balance out easiness of the stimulus. 
+
+\paragraph{Log-normal model estimates.}
+
+The Rasch model estimates can be obtained by combining together the fixed component and the random component of the GLMMs applied on accuracy responses. 
+Instead of being governed by the difference between the respondents' ability and the stimuli easiness, the probability of a correct response is governed by the additive effect of the respondents' ability and the item easiness. Consequently, the interpretation of the stimuli parameters $b_s$ changes.
+
+In a similar vein, log-normal model estimates can be obtained by combining the fixed factors to the random factors of the LMMs applied to the log-time responses.  
+In the typical formulation of the log-normal model (Equation \ref{eq:log}), the mean of the distribution of the expected log-time responses is expressed by the difference between the time intensity parameters of the stimuli $\delta_s$ and the speed parameters of the respondents $\tau_p$ (i.e., $\delta_s - \tau_{p}$). 
+In the LMMs, the mean of the distribution is defined by the additive effect between the respondents' and the stimuli characteristics, which move in the same direction. Consistently, the lower the value of speed parameter $\tau_p$, the  higher the speed, and the lower the value of $\delta_p$, the lower the time each stimulus requires for getting a response. 
+
+When respondents with a low value of $\tau_p$ (i.e., high speed) respond to items with a low $\delta_s$ (i.e., low time intensity), the response times are fast. 
+When a respondent with a low value of $\tau_p$ encounters a stimulus with a high value of $\delta_s$, th speed of the response depends on the distance between the respondent's speed and the item time intensity.
+
+\section{Random structures}\label{sec:random}
+The random structures of the GLMMs and those of the LMMs are the same. The features differentiating the models are the assumptions on the error term $\varepsilon$ and the dependent variable. 
+In the GLMMs, the error term is supposed to follow a logistic distribution (i.e., $\varepsilon \sim \mathcal{L}(0, \sigma^2)$, where $\mathcal{L}$ is used to denote the logistic distribution of the disturbance as in \citeA{Doran2007}) and the dependent variable is the accuracy response to each trial of the IAT. 
+In the LMMs, the error term is supposed to follow a normal distribution (i.e., $\varepsilon \sim \mathcal{N}(0, \sigma^2)$), and the dependent variable $y$ is the log transformation of the time response to each trial of the IAT, regardless of whether the answer is correct or not.
+The expected response $y$ for each observation $i$ ($i \in \{1, \ldots, n\}$)  for participant $p$ ($p \in \{1,\ldots, P\}$) on stimulus $s$ ($s \in \{1,\ldots, S\}$) in condition $c$ ($c\in \{1,\ldots, C\}$) can hence be either the \emph{log-odds} of the probability of a correct response (GLMMs) or the log-time of the response (LMMs).
+
+In both GLMMs and LMMs, the fixed intercept $\alpha$ is set at $0$. The IAT associative conditions $c$ are specified as the fixed effect $\beta_cX_c$. Since the intercept is set at $0$, none of the levels of the fixed effect is taken as reference value. Consequently, the marginal \emph{log-odds} of a correct response for each condition (GLMMs) and the marginal average log-time for each condition (LMMs) are estimated.
+The fixed part of the models is kept constant, only the random structures change across models.
+
+The GLMMs applied on accuracy responses are identified by a capital ``A''. The LMMs applied on log-time responses are identified by a capital ``T''. 
+
+The \verb*|R| code that can be used for estimating the Rasch model and the log-nromal estimates from IAT data is illustrated in Appendix \ref{chap:appendixA}.
+
+
+\subsection[GLMMs]{Generalized Linear Mixed-Effects Models}\label{sec:accuracymodels}
+
+Model A1 presents the simplest random structure, where only the between--respondents across--conditions variability and the between--stimuli across--conditions variability are considered by specifying both respondents and stimuli as random intercepts across associative conditions: 
+\begin{equation}\label{AccuracyMin}
+	y_{i} = logit^{-1}(\alpha + \beta_cX_c + \alpha_{p[i]} +  \alpha_{s[i]} + \varepsilon_{i}),
+\end{equation}
+with
+\begin{align}
+	\alpha_{p} \sim  \mathcal{N} ( 0, \sigma_{\alpha_p}^2) \, \text{and} \, \alpha_{s}  \sim  \mathcal{N} (0,\sigma_{\alpha_s}^2).
+\end{align}
+The random structure of Model A1 results in the estimation of overall respondents' ability estimates $\theta_{p}$ and overall stimuli easiness estimates $b_s$. This model should be preferred when a low within--respondents between--conditions variability, as well as a low within--stimuli between--conditions variability, are observed. The lack of variability at the levels of both the respondents and the stimuli might indicate a lack of the IAT effect at both levels. 
+
+Respondents' ability estimates inform about the overall ability of the respondents in performing the categorization task, and they can be used as a measure of individual differences for further analysis. 
+Stimuli overall easiness estimates provide information on the stimuli functioning in respect to their own category. Stimuli belonging to the same category are supposed to be prototypical exemplars of their own category, and, as such, to be easily recognized and correctly assigned to their category. Consequently, they should have similar easiness estimates.
+If a stimulus is not recognized as a prototypical exemplar of its alleged category, it will have a higher chance of getting incorrect responses (i.e., being assigned to the incorrect category), from which a lower easiness estimate follows. By comparing the easiness estimates of the stimuli belonging to the same category, it is possible to investigate whether the stimuli belonging to the same category are all easily recognizable as prototypical exemplars or not.
+
+
+Model A2 accounts for the within--stimuli between--conditions variability and the between--respondents across--conditions variability. Stimuli are specified as random slopes in the associative conditions, respondents are specified as random intercepts across associative conditions, as follows: 
+\begin{equation}\label{Accuracy2}
+	y_{i} = logit^{-1}(\alpha + \beta_cX_c + \alpha_{p[i]} +  \beta_{s[i]}c_{i} + \varepsilon_{i}),
+\end{equation}
+with:
+%\begin{align}
+%	\beta_{k} \sim  \mathcal{N}
+%	\begin{pmatrix}
+%		0,&
+%		\begin{pmatrix}
+%			\sigma_{\beta_{sc_1}}^2 & \sigma_{\beta_ {sc_1}, \beta_{sc_2}}^2 \\
+%			\sigma_{{\beta_{sc_1}}, \beta_{sc_2}}^2& \sigma_{\beta_{sc_2}}^2
+%		\end{pmatrix}
+%	\end{pmatrix},
+%\end{align}
+\begin{align}
+	\beta_{sc} \sim \mathcal{MVN}(\bm{0}, \bm{\Sigma}_{sc})
+\end{align}
+\begin{align}
+	\alpha_{p} \sim  \mathcal{N} (0, \sigma_{\alpha_p}^2), 
+\end{align}
+where $\bm{\Sigma}_{sc}$ represents the variance-covariance matrix of the population of the stimuli. It expresses the by-stimulus variability in the associative conditions. The higher the covariance of the stimuli in the two conditions, the more similar is their functioning in the two conditions.
+Model A2 results in condition--specific stimuli easiness estimates $b_{sc}$ and overall ability estimates $\theta_{p}$.
+This model would be the the best fitting model when a high within--stimuli between--conditions variability is observed and respondents have a low between--conditions variability. 
+
+The low variability at the respondents' level might already indicate a lack of the IAT effect on their accuracy performance (i.e., ability remains constant across conditions). In other words, the IAT associative condition does not have an effect on the respondents' ability to sort the stimuli. As for the overall ability estimates obtained with Model A1, these estimates can be used as a measure of individual differences in performing the categorization task for further analysis.
+Conversely, the high within--stimuli between--conditions variability indicate that the stimuli functioning is in some way affected by the specific associative condition and that stimuli characteristics (i.e., the category to which they belong) make them more easily categorizable in one condition than in the opposite one. Thus, condition--specific stimuli easiness estimates allow for investigating whether stimuli functioning differs between conditions. 
+
+Consider a stimulus representing a can of coke in a Coke-Pepsi IAT. If the stimulus presents a higher easiness estimate in the Coke-Good/Pepsi-Bad condition than in the opposite one, it implies that it was more easily sorted when it shared the response key with \emph{Good} rather than \emph{Bad} attributes. Consequently, the differential measures computed on the condition--specific stimuli estimates inform about the contribution of each stimulus to the IAT effect, which in turn leads to a better understanding of the automatic associations driving the effect. 
+
+The random structure of Model A3 has the same level of complexity as that of Model A2. However, the multidimensionality on the error term is specified for the respondents and not for the stimuli. 
+Model A3 accounts for the within--respondents between--conditions variability and between--stimuli across--conditions variability by specifying respondents as random slopes in the associative conditions and stimuli as random intercepts across associative conditions: 
+%
+\begin{equation}\label{Accuracy1}
+	y_{i} = logit^{-1}(\alpha + \beta_cX_c + \alpha_{s[i]} +  \beta_{p[i]}c_{i} + \epsilon_{i}),
+\end{equation}
+with:
+%\begin{align}
+%	\beta_{j} \sim  \mathcal{N}
+%	\begin{pmatrix}
+%		0,&
+%		\begin{pmatrix}
+%			\sigma_{\beta_{pc_1}}^2 & \sigma_{\beta_ {pc_1}, \beta_{pc_2}}^2 \\
+%			\sigma_{{\beta_{pc_1}}, \beta_{pc_2}}^2& \sigma_{\beta_{pc_2}}^2
+%		\end{pmatrix}
+%	\end{pmatrix},
+%\end{align}
+\begin{align}
+	\beta_{pc} \sim \mathcal{MVN}(\bm{0}, \bm{\Sigma}_{pc})
+\end{align}
+\begin{align}
+	\alpha_s \sim \mathcal{N} (0, \alpha_s^2),
+\end{align}
+where $\bm{\Sigma}_{pc}$ represents the variance-covariance matrix of the population of the respondents. It expresses the by-respondent variability according to the associative conditions. The high covariance does not necessarily implies that the performance is not affected by the associative condition. For instance, a respondent with a high ability might have a high ability in both conditions, although his performance might be affected by the associative conditions.
+Model A3 results in condition--specific respondents' ability estimates $\theta_{pc}$ and overall easiness estimates $b_s$. This model would be the best fitting model when a low within--stimuli between--conditions variability and a high within--respondents between--conditions variability are observed.
+
+As in Model A1, the lack of within--stimuli between--conditions variability might indicate that the stimuli functioning is not affected by the associative condition in which they are presented. The overall easiness estimates can still inform about the stimuli functioning in respect to their own category. 
+
+The high within--respondents between--conditions variability at the respondents level indicate that the IAT associative conditions affect the accuracy performance of the respondents, or, in other words, that their ability level is in some way hindered by one of the associative conditions.
+A measure of the bias due to the associative conditions can be obtained by computing the difference between each respondent condition--specific ability estimate. 
+ 
+
+\subsection[LMMs]{Linear Mixed-Effects Models}\label{sub:logtimemodels}
+
+Model T1 presents the simplest random structure. Only the between--respondents across-conditions variability and the between--stimuli across--conditions variability are considered by specifying both respondents and stimuli as random intercepts across associative conditions: 
+
+\begin{equation}\label{LogtimeMin}
+	y_{i} = \alpha + \beta_cX_c + \alpha_{p[i]} +  \alpha_{s[i]} + \varepsilon_{i},
+\end{equation}
+with
+\begin{align}
+	\alpha_{p} \sim  \mathcal{N} ( 0, \sigma_{\alpha_p}^2) \, \text{and} \, \alpha_{s}  \sim  \mathcal{N} (0,\sigma_{\alpha_s}^2)
+\end{align}
+%\begin{align}
+%	\alpha_{k}  \sim  \mathcal{N} (0,\sigma_{\alpha_k}^2)
+%\end{align}
+Model T1 allows for estimating overall respondents' speed estimates $\tau_{p}$ and overall stimuli time intensity estimates $\delta_s$. 
+Respondents' speed estimates inform about the overall speed with which they have performed the categorization task. As the ability estimates obtained from Model A1, the overall speed estimates can be used as a measure of individual differences in further analysis. This model should be preferred when a low within--respondents between--conditions variability and a low within--stimuli between--conditions variability are observed. 
+The lack of variability at both respondents and stimuli levels might indicate that there is no IAT effect at both levels. 
+
+As overall easiness estimates, stimuli overall time intensity estimates inform about the stimuli functioning in respect to their own category. 
+If the stimuli belonging to the same category are equally recognized as prototypical exemplars of their own category, they should require a similar amount of time for getting a response, and hence they should have a similar time intensity estimate. 
+If a stimulus presents characteristics that make it less recognizable as a prototypical exemplars of a specific category (e.g., a picture of a can of soda that is not immediately recognizable as either Coke or Pepsi), it might require more time for being identified and sorted. Consequently, it should have a higher time intensity estimate. 
+By comparing the time intensity estimates of the stimuli belonging to the same category, it is possible to investigate whether the stimuli belonging to the same category require a similar time for getting a response. 
+In doing so, other stimuli characteristics should be taken into account. 
+For instance, images stimuli require less time to be processed than attribute stimuli \cite<e.g.,>{houwer1994}.
+Moreover, the familiarity with a specific term might play an import role in its recognition and sorting, hence positively (if it is a familiar term) or negatively (if it is an unfamiliar term) affecting its time intensity. Also the length of the word itself might influence stimuli time intensity. 
+
+
+Model T2 accounts for the within--stimuli between--conditions variability and the between--respondents across--conditions variability. 
+The random slopes of the stimuli in the associative conditions and the random intercepts of the respondents across associative conditions are specified:  
+\begin{equation}\label{Logtime2}
+	y_{i} = \alpha + \beta_cX_c + \alpha_{p[i]} +  \beta_{s[i]}c_{i} + \varepsilon_{i},
+\end{equation}
+with:
+%\begin{align}
+%	\beta_{s} \sim  \mathcal{N}
+%	\begin{pmatrix}
+%		0,&
+%		\begin{pmatrix}
+%			\sigma_{\beta_{sc_1}}^2 & \sigma_{\beta_ {sc_1}, \beta_{sc_2}}^2 \\
+%			\sigma_{{\beta_{sc_1}}, \beta_{sc_2}}^2& \sigma_{\beta_{sc_2}}^2
+%		\end{pmatrix}
+%	\end{pmatrix},
+%\end{align}
+\begin{align}
+	\beta_{sc} \sim \mathcal{MVN}(\bm{0}, \bm{\Sigma}_{sc})
+\end{align}
+\begin{align}
+	\alpha_{p} \sim  \mathcal{N} (0, \sigma_{\alpha_p}^2),
+\end{align}
+where $\bm{\Sigma}_{sc}$ represents the variance-covariance matrix of the population of the stimuli, and it expresses the by-stimuli variation according to the associative condition. As for accuracy models, the higher the covariance, the more similar the stimuli functioning in the two conditions.
+Model T2 results in condition--specific stimuli time intensity estimates $\delta_{sc}$ and overall speed estimates $\tau_{p}$. This model should result as the best fitting model when a high within--stimuli between--conditions variability is observed and respondents have a low between--conditions variability. 
+
+The low variability at the respondents' level might already indicate a lack of the IAT effect on their speed performance (i.e., speed remains the same across conditions). In other words, the speed of the respondents does not change according to the specific associative condition. As for the overall speed estimates obtained with Model T1, these estimates can be used as a measure of individual differences in performing the categorization task for further analysis.
+
+Conversely, the high within--stimuli between--conditions variability indicate that the stimuli do require a different amount of time to be sorted according to the associative condition in which they are presented. Their functioning is hence affected by the associative conditions, and the condition--specific time intensity allow for investigating how and how much. 
+The differential measure computed between the condition--specific time intensity estimates provide a measure of the bias on the time each stimulus require for getting a response due to the associative conditions. Consequently, the contribution of each stimulus to the IAT effect can be investigated. 
+
+The random structure of Model T3 has the same level of complexity as that of Model T2. However, the multidimensionality on the error term is specified for the respondents and not for the stimuli. 
+Model T3 accounts for the within--respondents between--conditions variability and the between--stimuli across--conditions variability by specifying the respondents as random slopes in the associative conditions and the stimuli as random intercepts across associative conditions: 
+%
+\begin{equation}\label{logtime3}
+	y_{i} = \alpha + \beta_cX_c + \alpha_{k[i]} +  \beta_{j[i]}l_{i} + \varepsilon_{i},
+\end{equation}
+with:
+%\begin{align}
+%	\beta_{j} \sim  \mathcal{N}
+%	\begin{pmatrix}
+%		0,&
+%		\begin{pmatrix}
+%			\sigma_{\beta_{pc_1}}^2 & \sigma_{\beta_ {pc_1}, \beta_{pc_2}}^2 \\
+%			\sigma_{{\beta_{pc_1}}, \beta_{pc_2}}^2& \sigma_{\beta_{pc_2}}^2
+%		\end{pmatrix}
+%	\end{pmatrix},
+%\end{align}
+\begin{align}
+	\beta_{pc} \sim \mathcal{MVN}(\bm{0}, \bm{\Sigma}_{pc}),
+\end{align}
+\begin{align}
+	\alpha_s \sim \mathcal{N} (0, \alpha_s^2),
+\end{align}
+%
+where $\bm{\Sigma}_{pc}$ is the variance-covariance matrix of the population of the respondents, and it expresses the by-respondents variability according to the associative condition. Similarly to accuracy models, a high covariance does not imply that respondents' performance is not affected by the associative conditions but that their baseline speed is making them having a similar performance in both conditions.
+This model results in condition--specific respondents' speed estimates $\tau_{pc}$ and overall time intensity estimates $\delta_s$. 
+Model T3 should result as the best fitting model when a low within--stimuli between--conditions variability and a high within--respondents between--conditions variability are observed. 
+As in Model T1, the lack of within--stimuli between--conditions variability might indicate that the stimuli functioning is not affected by the associative condition in which they are presented. The overall time intensity estimates can still inform about the stimuli functioning in respect to their own category. 
+
+The high within--respondents between--conditions variability at the respondents level indicates that the IAT associative conditions affect the speed performance of the respondents, or, in other words, that their speed is lower in one of the associative conditions.
+A measure of the bias due to the associative conditions can be obtained by computing the difference between each respondent condition--specific speed estimate. 
+
+
+\section{Other random structures}
+
+The random structures presented in the previous sections are just some of the possible random structures that can be specified for analyzing IAT data. 
+Indeed, since IAT data has a specific structure (illustrated in Section \ref{sec:cross}), a model with a random structure that decomposes error variance into each of the sources of variation can be specified \cite<Maximal Model, MM;>{Barr2013}. 
+
+In the MM, both between--respondents across--conditions variability and within--respondents between--conditions variability is accounted for by specifying respondents random intercepts across conditions and their random slopes in the associative conditions. 
+The same can be done for the stimuli, so that they are specified as random intercepts across conditions and as random slopes in the associative conditions. 
+Moreover, the variability due to the interaction between the stimuli and the respondents variability (i.e., respondents' individual reactions to each stimulus) can be accounted for by specifying the interaction effect between respondents and stimuli random intercepts.
+
+The MM results in the estimation of the weights associated with each level of the fixed effect, as well as in the estimation of the variance of the population to which each factor considered as random belongs. In this case, the stimuli, the respondents, and their interaction. This interaction can be considered as the variability due to the idiosyncratic reactions of each respondent to each stimulus. 
+Also the variance-covariance matrix for each level on which the multidimensionality of the error variance is allowed are estimated. 
+Therefore, the variance of the respondents in each level of the associative condition variable, as well as their covariance, are estimated. The same is done for the stimuli. 
+
+By considering the two levels of the fixed effect of the associative conditions and removing the intercept by setting it at 0, this model results in the estimation of 18 parameters, two of which are the weights of the fixed effects. 
+Three parameters refer to the estimated variances of the population of the respondents, that of the stimuli, and the interaction between them. 
+Three parameters are estimated for the multidimensionality of the associative conditions  on the respondents (the variance in the two conditions and their covariance), as well as three parameters for the multidimensionality of the associative conditions on the stimuli (the variance in the two conditions and their covariance).
+Finally, one parameter refers to the estimated residual variance.
+
+A model of such a complexity needs an extremely high variability at each level of the random structure to converge. 
+Beyond being at risk of convergence failure, it is also at risk of over-fitting the data \cite{Bates2015}, hence resulting in biased and not-interpretable estimates. 
+
+A model with the random structure of the MM is neither needed nor appropriate for the estimation of the Rasch model and the log-normal model estimates from IAT data. 
+By specifying both respondents and stimuli as random intercepts and random slopes in the associative conditions, overall and condition--specific estimates can be obtained for each factor. 
+The difference between each of the condition specific estimates and the overall estimates provides information about the bias due to each condition on either the respondents or the stimuli. 
+The difference between condition--specific estimates results in a measure of the bias due to the IAT associative conditions. Consequently, it allows for investigating the impact of the IAT associative conditions on either respondents' performance or stimuli functioning. 
+When the IAT is used, the focus is usually on this difference, expressing the IAT effect. 
+Therefore, the estimation of the overall estimates for both the respondents and the stimuli can be dropped without losing important information.
+
+
+For the Rasch model or the log-normal model to be identified, either respondents or stimuli have to be centered around 0 \cite<e.g.,>{Gelman2007}. 
+This can be done by setting the fixed intercept at 0 and by specifying either respondents or stimuli as random variation (i.e., random intercepts) around it. As such, each respondents or stimuli BLUP defines the deviation of each level of the considered factor from 0, that is, the average of the respondents or the stimuli estimates. 
+Consequently, only either respondents or stimuli can be specified as random slopes in the associative conditions, while the other must be specified as random intercepts. 
+The decision on where to allow for the multidimensionality of the associative condition, whether on the respondents or on the stimuli, should be driven by the observed variability in the data, also according to the hypotheses og the researcher. 
+
+Finally, the estimation of the interaction effect between stimuli and respondents random intercepts  does require an high respondents $\times$ stimuli variability to avoid convergence failure. Consequently, it can be dropped and added to the model only in those cases in which the error variance is still high after the estimation of all the other parameters \cite{judd2012, Westfall2014}.
+
+Clearly, also other fixed effects could have been included in the model.
+For instance, the belonging category of the stimuli, which is indeed an independent variable as illustrated in Section \ref{sec:cross}, could have been included as a fixed effect.
+However, we decided to focus on the effect of the IAT associative condition, and on the deviation from it of each of the levels of  the stimuli or the respondents.
+In our opinion, the information yielded from a model with this structure is more useful in gaining insights on the IAT functioning, for example by highlighting the stimuli giving the highest contribution to the IAT effect. 
+Indeed, by specifying the fixed effect of the stimuli categories, an information on the respondents' or the stimuli deviations from their mean could have been obtained. However, while this information is useful and meaningful for the stimuli functioning, it is not so for the respondents. What does it mean that the respondent $p$ has an impairment of $1.06$ on stimulus \emph{pain} of \emph{Bad} category? 
+This information might be more useful if also the interaction between the stimuli categories and the associative conditions is specified. However, this interaction would need an extremely high variability for the model to converge and to provide meaningful estimates. 
+
+We decided to keep a more parsimonious model by including as a fixed effect a factor that would have provided useful information regarding both respondents and stimuli, namely, the associative condition. Nothing is preventing anyone for including other fixed effects, and to check whether the model does converge or not. Since the aim of the thesis was to provide a general modeling framework for implicit measures data, we decided to go for a more parsimonious but generalizable model.
+
+Finally, considering only the fixed effect of the condition, hence allowing for the multidimensionality only according to this effect, is in line with previous applications of the Rasch model to IAT data \cite<e.g.,>{anselmi2013}. 
+
+\newpage
+%\bibliographystyle{apacite} 
+%\bibliography{biblioTesi}
+\end{document}

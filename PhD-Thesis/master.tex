@@ -1,0 +1,185 @@
+\documentclass[12pt]{book}
+\usepackage{standalone}
+\usepackage{apacite}
+\usepackage{etoolbox}% for the \patchcmd
+\makeatletter
+% Patch after apacite got loaded!
+\patchcmd{\nocite}{\@onlypreamble\document}{\documentclass\sa@documentclass}{}{}
+\makeatother
+\usepackage{graphicx}
+\usepackage{subcaption}
+\graphicspath{{/Users/huawei/Desktop/images/}} 
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{pdflscape}
+\usepackage[margin=3cm]{geometry}
+\usepackage{multirow}
+\usepackage{times}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{dcolumn}
+\usepackage{siunitx}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{tikzsymbols}
+\usepackage{bm}
+\usepackage{subcaption}
+\usepackage{listings}
+\usepackage{array}
+\usepackage{siunitx}
+
+\lstset{language=R,
+	basicstyle=\small\ttfamily,
+	stringstyle=\color{black},
+	%otherkeywords={0,1,2,3,4,5,6,7,8,9},
+	morekeywords={TRUE,FALSE, glmer, lmer},
+	deletekeywords={data,frame,length,as,character},
+	keywordstyle=\color{black}\bfseries,
+	commentstyle=\color{black},
+}
+
+
+\usetikzlibrary{shapes.geometric, arrows}
+\tikzstyle{startstop} = [rectangle, minimum width=1.5cm, minimum height=1cm,text centered, draw=black]
+\tikzstyle{process} = [rectangle, rounded corners, minimum width=0.5cm, minimum height=1cm, text width =2.5cm, text centered, draw=black]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+\usepackage{titlesec}    
+\titleformat{\chapter}[display]
+{\normalfont%
+	\Huge% %change this size to your needs for the first line
+	\bfseries}{\chaptertitlename\ \thechapter}{20pt}{%
+	\huge %change this size to your needs for the second line
+}
+
+\raggedbottom
+
+\renewcommand\baselinestretch{1.5}
+
+\newcolumntype{d}[1]{D{.}{.}{#1}}
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+\title{Inglorious Measures: \\ A Linear Mixed-Effects Models approach for modeling implicit measures data within a Rasch framework}
+\author{Ottavia M. Epifania}
+
+\begin{document}
+	
+	
+	\frontmatter
+	
+	%\vspace*{3mm}
+	\thispagestyle{empty}
+	
+	\begin{center}
+		\includegraphics[width=0.25\linewidth]{unipd.png}
+	\end{center}
+	
+	\begin{center}
+		\begin{Large}
+			\textbf{University of Padova}
+			
+			Department of Philosophy, Sociology, Education, and Applied Psychology (FISPPA)
+		\end{Large}
+		
+	\end{center}
+	
+	\vspace{3mm}
+	\begin{center}
+		\begin{large}
+			Ph.D. Course in Psychological Sciences (XXXIII Cycle)
+		\end{large}
+		
+		\begin{huge}
+			\bfseries
+			Inglorious Measures: \\ A Linear Mixed-Effects Model approach for modeling implicit measures data within a Rasch framework
+		\end{huge}
+		
+		
+	\end{center}
+	
+	\vspace{2cm}
+	\begin{multicols}{2}
+		\begin{flushleft}
+%			\begin{large}
+				\textbf{Advisor:} Prof. Egidio Robusto
+				
+				\textbf{Co-Advisor:} Prof. Gianmarco Altoè
+	%		\end{large}
+			
+		\end{flushleft}
+		\columnbreak
+		\begin{flushright}
+			\vspace{1.5cm}
+			
+				\textbf{Ph.D. Candidate:} Ottavia M. Epifania 
+			
+		\end{flushright}
+		
+	\end{multicols}
+
+\vspace{2cm}
+	
+	\begin{center}
+		Academic Year: 2019/2020
+	\end{center}
+	
+	
+\newpage 
+
+\ 
+\thispagestyle{empty}
+
+\newpage
+	
+	
+	\vspace*{5cm}
+	\thispagestyle{empty}
+	
+	\begin{multicols}{2}
+		\vspace*{\textheight}
+		\columnbreak
+		\begin{flushright}
+			\slshape \onehalfspacing
+			Muchos años después, frente al pelotón de fusilamiento, el coronel Aureliano Buendía había de recordar aquella tarde remota en que su padre lo llevó a conocer el hielo.
+			\\ \vspace{2cm} A Francesco Epifania, \\ che ha trovato il modo di scampare alla lettura di questa Tesi.
+		\end{flushright}
+		
+	\end{multicols}
+	
+	\begin{center}
+	\emph{This page is NOT intentionally left blank. Please help.  }	
+	\end{center}
+	\
+	
+	\tableofcontents
+	
+
+\input{preface.tex}
+%
+%
+\mainmatter
+\thispagestyle{empty}
+%	\input{Section1.tex}
+%	\input{Section2.tex}
+%    \input{Section3.tex}
+%	\input{Section4.tex}
+%	\input{Section6.tex}
+%	\input{Section7.tex}
+%	\input{Section8.tex}
+	\input{Conclusions.tex}
+	\appendix
+	\input{appendixA.tex}
+	\input{appendixB.tex}
+\backmatter
+	\bibliographystyle{apacite} 
+	\bibliography{biblioTesi}
+%\end{thebibliography}
+
+
+
+
+\end{document}

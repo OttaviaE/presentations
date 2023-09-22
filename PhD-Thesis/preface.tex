@@ -1,0 +1,191 @@
+\documentclass[12pt]{book}
+\usepackage{apacite}
+\begin{document}
+\chapter{Preface} \label{chap:preface}
+
+The advent of measures able to infer mental processes from the speed of respondents to computerized categorization tasks opened the access to  processes that lie beyond people's awareness, but that can still influence their attitudes and social behaviors. 
+These measure go under the name of implicit measures, and their use became more and more popular in social sciences, also thanks to the availability of accessible software for the administration of computerized categorization tasks.
+Despite the popularity implicit measures gained throughout the past decades, a lot of work still needs to be done to find a psychometrically sound approach to their modeling.
+
+
+Usually, implicit measures are scored by averaging the response times across stimuli to obtain respondent-specific scores employed in further analyses. 
+This approach has the clear advantage of being extremely easy and to provide a clear and interpretable measure of the implicit construct under investigation.  
+However, the systematic variability between the stimuli, as well as the variability between the observations on the same respondent, are overlooked. 
+These sources of uncontrolled error variance may generate statistically significant mean results that cannot be replicated when different samples of respondents and/or stimuli are used \cite{judd2012}. 
+Given the replicability crisis that has been hitting psychology, and specifically social psychology, from the past few years, the need for more sound, accurate, and reliable analyses of data sets obtained with typical social psychology experiments (e.g., implicit measures) is of the uttermost importance. 
+
+The main objective of the Thesis is to provide new methods for more rigorous analyses of implicit measure data. 
+In the long run, the repercussions of more rigorous data analyses can be observed in the replicability of the results.
+%One fo the repercussions of more rigorous methods is the improvement of the results replicability. 
+For pursuing this aim, three paths are followed, one for a more sound approach to implicit measures data (sound path), one for a fairer comparison between implicit measures (fair path), and one for an easier (and more rigorous) way to compute implicit measure scores (easy path).
+% for analyzing implicit measures data within a statistically more sound approach (i.e., sound objective), for providing a fairer comparison between implicit measures (i.e., ), and for an easier (and more rigorous) scoring of implicit measures
+
+The sound path constitutes the main part of the Thesis. It is an attempt at finding new approaches for the analysis of implicit measures data. 
+This is done by combining a classic of Psychometric Theories, the Rasch model, with a Linear Mixed-Effects Model approach. The focus is mostly on one of the most popular, used, and studied implicit measures, the Implicit Association Test \cite<IAT;>{Greenwald1998}, and on its single category version, the Single Category IAT \cite<SC-IAT;>{karpinski2006}.
+%pursuing this aim by presenting a Rasch analysis of implicit measures within a Linear Mixed Effects models approach. 
+Their accuracy and time responses are modeled separately with distinct models.
+Consequently, the parameters either explain the processes leading to the accuracy responses or those leading to the time responses. 
+The relationship linking these parameters can be explained and understood at a second (higher) level of modeling \cite{VanDerLinden2009}.
+%\textcolor{blue}{However, this second level of modeling is needed only if the aim is to investigate a population of respondents. In this case, the estimates explaining the accuracy and time performance are dependent between each other, hence the need of a second level of modeling to account for that \cite{van2006}.}
+%\textcolor{blue}{In case of a fixed person, conditional independence is granted by the speed-accuracy trade-off. In other words, the person operates at a constant ability and speed, constrained by the speed-accuracy trade-off, and they are not left free to vary. Once a speed-accuracy trad-off is decided, the response times distribution is solely influenced by person's speed.}
+
+Traditionally, Item Response Theory and Rasch modeling treat items (stimuli) as fixed factors (i.e., unknown constants that do not vary as a function of the observational units), while respondents are treated as random factors (i.e., effects that vary according to the observational units, drawn from a larger distribution) \cite{DeBoeck2011}.
+In this work, a slightly different approach was followed, also grounding on the data structure characterizing implicit measures. 
+The fully-crossed design characterizing the IAT (see Chapter \ref{sec:cross}) allows one to conceptualize the stimuli as a manifestation of the super-ordered category they represent. Consequently, the specific set of stimuli used in an IAT is just one the possible set of stimuli that can be drawn from the same population of stimuli.  
+Following this line of reasoning, it makes more sense to consider the stimuli as random factors and to treat them as random effects to make inferences on the larger population to which they belong, than to treat them as fixed factors.
+
+
+Besides being a statistically more sound approach,
+%stimuli were assumed to be the manifestations of the category they represent
+%stimuli have been considered as random factors, hence they were assumed to be just a set of all the possible stimuli belonging to their same population. This approach is particularly sound given both the peculiar data structure characterizing implicit measures and the conceptualization of the stimuli as manifestations of the category they represent (see Chapter \ref{sec:cross}).}
+acknowledging for the sampling variability of the stimuli implies that each stimulus has a potentially different functioning, and, consequently, a different impact on the observed responses.
+Therefore, if stimuli are treated as random and their random variability is accounted for, it is possible to exploit it for the best to gather all the information they convey, to investigate their functioning, and their impact on the observed responses \cite{wols2017}.
+
+Linear Mixed-Effects Models allow for considering both respondents and stimuli as samples drawn from larger populations (and hence treating both of them as random factors) at the same time, resulting in more detailed and generalizable information at both levels. 
+%Consequently, they result in more detailed and generalizable information at both respondents' and stimuli levels. Moreover, it allows for considering and investigating the functioning of each stimulus and its impact on the observed responses.
+
+
+Despite its wide use, the IAT is not the only available implicit measure and sometimes its use is not in line with one's aims. 
+Given its structure, the IAT always results in a relative measure of the preference towards one target object contrasted to its (alleged) opposite. 
+However, there are cases in which the object under investigation does not have a ``natural'' category to which it can be contrasted to. There might be also cases in which the focus is not on the relative preference but on the absolute positive or negative evaluation of one object. 
+
+In these occurrences, the IAT is not able to provide the measure of interest. 
+%Other implicit measures have been introduced with the aim of providing an absolute measure of a target object. 
+The SC-IAT \cite{karpinski2006}  is often used as an alternative to the IAT when the aim is to obtain an absolute measure towards one object. The SC-IAT procedure results from a direct modification of the IAT one, where one of the target objects is dropped. 
+Not infrequently, the IAT and the SC-IAT are administered together to obtain both a comparative and absolute evaluation of different attitude objects.
+%In such cases, new sources of variability are added to the one already present in each implicit measure. 
+By exploiting the flexibility of Linear Mixed-Effects Models, a comprehensive modeling of multiple implicit measures within a Rasch approach is possible and can be used for gaining more reliable and comparable estimates at both the respondents and stimuli levels, for each implicit measure. 
+
+However, the use of Linear Mixed-Effects Models for the conjoint analysis of multiple implicit measures within a Rasch framework is not a common approach. 
+%The approach followed in the fair path is more in line with the typical analyses performed on implicit measures data.
+Effect size measures are the most popular and used scoring procedures for the IAT and the SC-IAT, referred to as \emph{D} scores.  
+These are often employed for comparing the performance of the IAT and of the SC-IAT on several variables used as criteria, such as the prediction of behavioral outcomes. 
+The scoring procedures of both the IAT and the SC-IAT are affected by several artifacts, the most outstanding one being the lack of control on the sources of random variability in the data. 
+Additionally, the IAT and the SC-IAT scoring and  administration procedures present minor differences, such as the inclusion of a response time window or not, that might still influence the comparison in their predictive ability. 
+Taken together, the differences between the procedures potentially end up in misleading results.
+The fair path is an attempt at providing scoring methods for a fairer comparison between the IAT and the SC-IAT in terms of their capacity of predicting behavioral outcomes. 
+New scoring algorithms for the IAT and the SC-IAT are introduced in the attempt of minimizing (non-necessary) procedural differences potentially affecting the comparison between the two measures.
+The procedures with which effect size measures are computed cannot overcome the issues of the sources of random variability characterizing implicit measures data. 
+However, by aligning the differences in the procedures for scoring the IAT and the SC-IAT, the new alternatives should at least provide a means for a fairer comparison between the IAT and the SC-IAT. 
+Consequently, the new, aligned, scoring algorithms produce (potentially) more reliable results regarding the comparison between the two measures on different criteria, such as the prediction of behavioral outcomes.
+
+Finally, the easy path is oriented at providing open source and easy-to-use tools for the computation of the IAT and the SC-IAT scores. By automating the computational procedure and providing it open source, computational mistakes are prevented, the algorithms always end in the same results, which can be easily and openly replicated. In the long term, this would help for the replicability of the results obtained with implicit measures.
+
+The structure of the thesis is outlined.
+
+In Chapter \ref{chap:intro}, brief definitions of automatic and controlled processes are provided, and the main theoretical frameworks that have been proposed for conceptualizing the distinction between the two processes are outlined.  
+The description of the IAT follows, along with the results of a literature review where the IAT use in different fields of application was investigated.
+%of one of the most popular measures used for the implicit assessment of psychological constructs, the Implicit Association Test \cite<IAT;>{Greenwald1998} is presented. 
+%As the results of a recent literature review point out, the IAT has seen a growth in its use in a constantly wider and more varied range of topics throughout the past two decades.
+ The description of the SC-IAT is provided in Chapter \ref{chap:intro} as well. 
+%IAT and SC-IAT can also be administered together when the interest is in investigating both the relative preference between two objects and the absolute positive or negative evaluation towards each of them
+The chapter ends with a description of the fully-crossed design characterizing implicit measures, and with the reasons why this structure might undermine the replicatibility of the results if it is not correctly accounted for. 
+
+Both the fair and easy paths are presented in Chapter \ref{chap:classicscore}.  
+The typical and modified scoring procedures of the IAT and the SC-IAT are illustrated.
+Usually, the comparison between the IAT and the SC-IAT is based on their predictive ability of behavioral outcomes, and the IAT tends to outperform the SC-IAT.
+The alignment of the administration procedure of the IAT and Sc-IAT, as well as of their scoring algorithms, should provide a comparison between the predictive ability of the two measures more centered on the implicit measures themselves than on the differences ascribable to the scoring and/or administration procedure.
+%Since results of previous study where the IAT and the SC-IAT have been compared might have been biased by avoidable difference concerning both the scoring and administration procedure, the new scoring methods are introduced to provide a comparison between the IAT and the SC-IAT more centered on the implicit measure itself than on scoring artifacts. 
+
+%The new scoring procedures were introduced to provide a fairer comparison between the predictive ability of the IAT and the SC-IAT. 
+%Previous studies \cite<e.g.,>{karpinski2006} found that the measure obtained from the IAT outperforms the one obtained from the SC-IAT in predicting behavioral outcomes. 
+%However, the comparison between the predictive performance might have been affected by many differences concerning both the administration and the scoring of the procedures. 
+%In this Chapter, both the typical scoring procedures of the IAT and the SC-IAT are presented, along with the introduction of new scoring procedures aimed at smoothing the differences between the IAT and the SC-IAT. 
+
+%The rationale for the introduction of the new scoring algorithms is that, if by aligning the administration and scoring procedures of the two implicit measures, while acknowledging their main features, the IAT still outperforms the SC-IAT, its better performance should be ascribable to the measure itself, and not to procedural artifacts.
+The results of an empirical study where the predictive ability of the typical scoring procedures and that of the modified scoring procedures were compared are reported. Regardless of the algorithms used for scoring the implicit measures, the measure obtained from the IAT always outperformed the one obtained from the SC-IAT.% Limitations of these results might be related to the choice task considered as a behavioral outcome, as further illustrated in the Chapter.
+
+The easy component of Chapter \ref{chap:classicscore} is composed of the presentation of two open source alternatives for the computation of the IAT and the SC-IAT typical scoring procedures. 
+One of them is a Shiny app  \cite<i.e., DscoreApp;>{dscoreapp} for the computation of the IAT \emph{D} score, while the other is an \verb*|R| package for the computation of the IAT and the SC-IAT \emph{D} scores \cite<the \texttt{implicitMeasures} package; >{implicitMeasures}. 
+DscoreApp was developed with the aim of providing researchers using the IAT an open source tools able to make the \emph{D} score computation easier, without requiring for any programming experience.
+Moreover, DscoreApp also fosters the replicability of the results by providing a clear labeling and description for each scoring algorithm to which researchers can refer to.
+Additionally, the replicability of the results is undermined by the many steps that are required for cleaning and preparing the data \cite{ellithorpe2015}.
+% Despite the actual computation of the \emph{D} score is not complicated \emph{per se}, many steps are required for cleaning and preparing the data. 
+%The overall procedure for computing the \emph{D} score is a long and error-prone procedure, which can easily raise issues related to the reproducibibility of the results \cite{ellithorpe2015}. 
+By automating the procedure and providing clear labels and descriptions for the identification of each scoring algorithm, these errors should be prevented, and the results replicability should be enhanced.
+
+DscoreApp presents two main shortcomings. One of them is an intrinsic limitation of Shiny apps. 
+Since the code is put into the shiny interface, it is not possible to call it and run it from the command line, hence making it impossible to reproduce. 
+While this might not constitute a problem for the average users, it is indeed a huge issue in an open science framework, according to which all the codes used for the analyses should be accessible at any time.
+Nevertheless, this issue can be overcome by storing the code in a public repository, such as GitHub, as it was done for DscoreApp.
+Another important issue is that DscoreApp only computes the score for the IAT. 
+
+The \verb*|implicitMeasures| package is an \verb*|R| package developed for overcoming the two main limitations of DscoreApp. The package also comes with functions for cleaning the data sets of both the IAT and the SC-IAT and for plotting their results at either individual level or sample level.
+
+Chapter \ref{chap:formalModel} provides an overview of the main modeling frameworks that have been introduced for modeling IAT data. 
+These frameworks can be distinguished according to the type of responses used for the estimation of the parameters. 
+The Quad model \cite{Conrey2005} and the ReAL model \cite{Meissner2013} are based on accuracy responses, while the Diffusion model \cite{Klauer2007} and the Discrimination-Association model \cite{stefanutti2013} account for both accuracy and time responses. 
+Regardless of the type of responses they consider, these models are able to disentangle the most automatic processes from the most controlled ones intervening during the performance at the IAT. 
+A common finding of these models is that the automatic associations are just one of the possible processes intervening during the performance at the IAT, and that other controlled processes, such as the recoding of the stimuli (ReAL, Diffusion Model) or the suppression of the automatically activated response (Quad model), play an important role as well. 
+Despite their usefulness for the disentanglement of the IAT effect, these models come with some limitations. Most importantly, none of them can provide a detailed information at the level of the individual stimulus. This is a crucial point, also given that previous studies highlighted the importance of stimuli selection for a correct functioning of the IAT \cite<e.g.,>{bluemke2006}. Moreover, they overlook the fully-crossed structure of the IAT.
+
+A Rasch modeling of the IAT does provide a detailed information on the stimuli functioning. By pinpointing the stimuli that give the highest contribution to the IAT effect, it is possible to delve deeper on the automatic associations driving the IAT effect, and hence to have a better understanding of the measure itself. 
+However, the applications of the Rasch model to the IAT data performed so far are not save from criticisms. The most outstanding one is related to the discretization of the time responses, which might cause a large loss of information.
+Moreover, also the Rasch modeling does not account for the random noise in the data due to the different sources of variability in the IAT data, which brings sources of dependency that are very likely breaking the local independence assumption. 
+
+An introduction to the Rasch model is provided in the first section of Chapter \ref{chap:modelsIAT}. 
+The limitation of the Rasch model when it comes to its application to complex data structures, such as that of the IAT, and its similarities with the structure of Generalized Linear (Mixed-Effects) Models are presented as well. 
+Given that the Rasch model is equivalent to a Generalized Linear Model (GLM) with a \emph{logit} link function (i.e., the natural link function for binomial responses), the model matrix of the GLM can be extended to include the random effects able to address the sources of variability in the IAT data. This allows for obtaining Rasch model estimates from IAT data by employing Generalized Linear Mixed-Effects Models (GLMMs). 
+The use of GLMMs for estimating Rasch model parameters accounts for the sources of random variability generating local dependence at the trial levels, hence resulting in more reliable estimates of the model parameters. 
+
+The log-normal model is introduced in the first section of Chapter \ref{chap:modelsIAT} as well. By considering the normal density distribution of the log-time responses, the log-normal model allows for obtaining a parametrization of the data analogous to that provided by the Rasch model. 
+Therefore, the discretization of the time responses needed for the application of the Many Facet Rasch Model (Chapter \ref{chap:formalModel}) can be avoided. 
+The estimates of the log-normal model parameters can be obtained by applying Linear Mixed-Effects Models (LMMs) to the IAT log-transformed time responses.
+%Moreover, by applying Linear Mixed Effects Models on the log-time responses of the IAT, the non-independence of the observations is accounted for, resulting in more reliable estimates of the log-normal model parameters.  
+
+
+The estimates of the Rasch model and the log-normal parameters do not directly result from the application of the (G)LMMs to either the accuracy responses or the log-time responses. 
+They are obtained by adding the marginal modes of each level of the random factors (Best Linear Unbiased Predictors, BLUP) to the estimated fixed effects. The specification of  models with different random structures allows for obtaining information at different levels of granularity on either the respondents or the stimuli.
+
+The second section of Chapter \ref{chap:modelsIAT} presents the specification of models with different random structures for a meaningful Rasch and log-normal analysis of the IAT data. 
+Three models for accuracy responses and three models for log-time responses are specified for obtaining the estimates of Rasch model and those of the log-normal, respectively. 
+Besides the assumption on the distribution of the error term, the random structures of the accuracy and the log-time models are the same. 
+The error term for the accuracy responses is modeled by assuming a logistic distribution, while the one for the log-time responses is supposed to follow a normal distribution. 
+The random structures of the models are ordered according to their complexity, with the first one being the simplest one (i.e., Null model). 
+The second and third models do have the same degree of complexity. They differ from each other according to the random factor on which they allow for the multidimensionality of the error variance, either the stimuli or the respondents. 
+
+Two empirical applications of the models presented in the second section of Chapter \ref{chap:modelsIAT} are illustrated in Chapter \ref{chap:IATempirical}.
+The first application was aimed at investigating the validity of the proposed models for the analysis of IAT data. To pursue this aim, a Race IAT was employed and the relationship between the estimates obtained from the Rasch and the log-normal models and the typical IAT scoring was investigated. By obtaining condition--specific stimuli estimates of the Rasch model, it was possible to investigate the contribution given by each stimulus to the IAT effect, resulting in a better understanding of the measure itself and in the identification of the malfunctioning stimuli that should be replaced or removed. The condition--specific respondents' estimates of the log-normal model, combined with the overall respondents' estimates of the Rasch model, brought further evidence in favor of the speed-accuracy trade-off and allowed for a better understanding of the IAT measure as expressed by the typical scoring algorithm. 
+
+The second application was aimed at understanding whether the estimates provided by the proposed modeling framework do result in a better inference of the implicit construct under investigation. As such, it is expected to lead to a better prediction of behavioral outcomes than the one given by the typical scoring procedure of the IAT. 
+The second application was also aimed at testing the usefulness of the condition--specific stimuli estimates. If the stimuli estimates truly allow for pinpointing the most informative stimuli, as well as the least informative ones, a higher amount of information should be obtained by selecting only the most informative stimuli. A smaller but highly informative data set can be obtained.
+The \emph{D} score computed on the reduced data set should be more reliable than the one computed on the entire data set, and it potentially results in a better prediction of behavioral outcomes.  
+An IAT for the implicit assessment of the preference for Dark or Milk chocolate (Chocolate IAT) was employed for pursuing these aims. 
+
+ 
+The Rasch model and the log-normal estimates did result in a better inference of the implicit preference, which in turn led to a better prediction of the behavioral outcome than the one provided by the typical scoring procedure. 
+Moreover, the information on the contribution of each stimulus to the IAT effect allowed for pinpointing the most informative stimuli and for reducing the across-trial variability. 
+The \emph{D} scores computed on the reduced data set did result in a better prediction than those computed on the entire data set. Interestingly, even the \emph{D} score computed on a reduced data set obtained by selecting only the least informative stimuli provided a better prediction than the one computed on the entire data set. 
+These results pointed at the sensitivity of the \emph{D} score to the across-trial variability. 
+The reduction of the across-trial variability by selecting a smaller pool of stimuli leads to \emph{D} score more related with external variables, even when the selected stimuli are the least informative ones.
+
+
+The typical scoring methods of both the IAT and the SC-IAT have been presented, and their predictive ability in respect to a behavioral outcome has been investigated and compared with that provided by new scoring methods (Chapter \ref{chap:classicscore}). 
+The new scoring methods do allow for a fairer comparison between the IAT and the SC-IAT, pointing at a better predictive ability of the IAT. 
+However, the approach used in Chapter \ref{chap:classicscore} has a main, outstanding fallacy, that is, the \emph{post-hoc} separation of implicit measures administered concurrently to the same respondents. 
+
+ When multiple measures are administered concurrently, each of them comes with its peculiar data structure and its method variance. 
+Additionally, other sources of dependency have to be expected, namely the within--respondents between--measures variability. Moreover, since usually different implicit measures employ the same set of stimuli, also the within--stimuli between--measures variability should be expected.
+Therefore, on top of the method specific variance of each measures, also other sources of variability should be taken into account to obtain reliable estimates.  
+
+Chapter \ref{chap:comprehensiveModels} presents a comprehensive approach to the modeling of multiple implicit measures administered concurrently. 
+The chapter firstly introduces the use of the models already presented in Chapter \ref{chap:modelsIAT} for the separate modeling of the IAT and the SC-IAT. 
+Despite this approach overlooks the within--respondents between--measures variability, it should still result in more reliable estimates than the \emph{D} score.
+However, the estimates from the application of distinct models are not directly comparable between each other. Consequently, it is not possible to compare respondents' performance between implicit measures. 
+The extension of the models to account for other sources of variability, hence allowing for the inclusion of multiple implicit measures in the same model, is illustrated. 
+
+An empirical application of the modeling approach in Chapter \ref{chap:comprehensiveModels} is presented in Chapter \ref{chap:comprehensiveApplications}. Data are the same as those in Chapter \ref{chap:classicscore}, hence including one IAT and two SC-IATs. 
+The IAT and the SC-IAT data have been modeled separately with the (G)LMMS of Chapter \ref{chap:modelsIAT} for obtaining the Rasch model and the log-normal estimates from each of them singularly. 
+This was done for mainly two reasons. Firstly, to investigate the soundness of the proposed approach for modeling measures other than the IAT. Secondly, to investigate whether and how model estimates change if the within--respondents between--measures variability and the within--stimuli between--measures variability are not accounted for. 
+
+Results pointed out that, just by accounting for the method specific variance of each implicit measure, it is possible to obtain estimates that are more reliable than the \emph{D} score, as it can be inferred from their better prediction of a behavioral outcome. 
+Nonetheless, by analyzing the data from each implicit measure separately, the estimates at the stimuli level might be misleading (e.g., it is not possible to rule out whether the different functioning of the stimuli between measures is ascribable to an actual different functioning or to uncontrolled error variance). 
+Moreover, the estimates at the respondents' level cannot be compared between implicit measures.
+The estimates obtained from the comprehensive modeling are similar to those obtained with the separate modeling of each measure. However, the comprehensive modeling allows for directly comparing the estimates at the levels of both respondents and stimuli. Consequently, a better understating of the functioning of each implicit measure is obtained, and more meaningful inferences can be made.  
+Besides a better prediction of the behavioral outcome than that provided by the typical \emph{D} score, the estimates obtained from both the single modeling of implicit measures and those obtained from their comprehensive modeling allow for highlight the contribution of one of the SC-IATs to the prediction of the behavior. The contribution of the SC-IAT to the prediction of the behavior was completely lost when the typical scoring methods were used. 
+
+
+Finally, Chapter \ref{chap:conclusions} summarizes the findings of all other chapters, and draws general conclusions based on the evidence reported in all the studies.
+%\bibliographystyle{apacite} 
+%\bibliography{biblioTesi}
+\end{document}

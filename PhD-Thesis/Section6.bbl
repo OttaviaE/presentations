@@ -1,0 +1,403 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Anselmi%
+, Vianello%
+\BCBL {}\ \BBA {} Robusto%
+}{%
+Anselmi%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2011}}%
+}]{%
+Anselmi2011}
+\APACinsertmetastar {%
+Anselmi2011}%
+\begin{APACrefauthors}%
+Anselmi, P.%
+, Vianello, M.%
+\BCBL {}\ \BBA {} Robusto, E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2011}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Positive associations primacy in the IAT : A Many-Facet
+  Rasch Measurement analysis}} {{Positive associations primacy in the IAT : A
+  Many-Facet Rasch Measurement analysis}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Experimental Psychology}{58}{5}{376--384}.
+\newblock
+\begin{APACrefDOI} \doi{10.1027/1618-3169/a000106} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Bates%
+, M{\"a}chler%
+, Bolker%
+\BCBL {}\ \BBA {} Walker%
+}{%
+Bates%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2015}}%
+}]{%
+lme4}
+\APACinsertmetastar {%
+lme4}%
+\begin{APACrefauthors}%
+Bates, D.%
+, M{\"a}chler, M.%
+, Bolker, B.%
+\BCBL {}\ \BBA {} Walker, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Fitting Linear Mixed-Effects Models Using lme4} {Fitting
+  linear mixed-effects models using lme4}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Statistical Software}{67}{1}{1--48}.
+\newblock
+\begin{APACrefDOI} \doi{10.18637/jss.v067.i01} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Epifania%
+, Anselmi%
+\BCBL {}\ \BBA {} Robusto%
+}{%
+Epifania%
+, Anselmi%
+\BCBL {}\ \BBA {} Robusto%
+}{%
+{\protect \APACyear {2020}}%
+}]{%
+implicitMeasures}
+\APACinsertmetastar {%
+implicitMeasures}%
+\begin{APACrefauthors}%
+Epifania, O\BPBI M.%
+, Anselmi, P.%
+\BCBL {}\ \BBA {} Robusto, E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Implicit measures with reproducible results: The
+  implicitMeasures package}} {{Implicit measures with reproducible results: The
+  implicitMeasures package}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Open Source Software}{5}{52}{2394}.
+\newblock
+\begin{APACrefDOI} \doi{10.21105/joss.02394} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Epifania%
+, Robusto%
+\BCBL {}\ \BBA {} Anselmi%
+}{%
+Epifania%
+, Robusto%
+\BCBL {}\ \BBA {} Anselmi%
+}{%
+{\protect \APACyear {2020}}%
+}]{%
+epifania2020}
+\APACinsertmetastar {%
+epifania2020}%
+\begin{APACrefauthors}%
+Epifania, O\BPBI M.%
+, Robusto, E.%
+\BCBL {}\ \BBA {} Anselmi, P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{2}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Implicit social cognition through years: The Implicit
+  Association Test at age 21}} {{Implicit social cognition through years: The
+  Implicit Association Test at age 21}}.{\BBCQ}
+\newblock
+
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Greenwald%
+, Nosek%
+\BCBL {}\ \BBA {} Banaji%
+}{%
+Greenwald%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2003}}%
+}]{%
+Greenwald2003}
+\APACinsertmetastar {%
+Greenwald2003}%
+\begin{APACrefauthors}%
+Greenwald, A\BPBI G.%
+, Nosek, B\BPBI A.%
+\BCBL {}\ \BBA {} Banaji, M\BPBI R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2003}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Understanding and Using the Implicit Association Test:
+  I. An Improved Scoring Algorithm}} {{Understanding and Using the Implicit
+  Association Test: I. An Improved Scoring Algorithm}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Personality and Social
+  Psychology}{85}{2}{197--216}.
+\newblock
+\begin{APACrefDOI} \doi{10.1037/0022-3514.85.2.197} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Klauer%
+, Voss%
+, Schmitz%
+\BCBL {}\ \BBA {} Teige-Mocigemba%
+}{%
+Klauer%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2007}}%
+}]{%
+Klauer2007}
+\APACinsertmetastar {%
+Klauer2007}%
+\begin{APACrefauthors}%
+Klauer, K\BPBI C.%
+, Voss, A.%
+, Schmitz, F.%
+\BCBL {}\ \BBA {} Teige-Mocigemba, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2007}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Process Components of the Implicit Association Test: A
+  Diffusion-Model Analysis}} {{Process Components of the Implicit Association
+  Test: A Diffusion-Model Analysis}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Personality and Social
+  Psychology}{93}{3}{353--368}.
+\newblock
+\begin{APACrefDOI} \doi{10.1037/0022-3514.93.3.353} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Linacre%
+}{%
+Linacre%
+}{%
+{\protect \APACyear {2002}}%
+}]{%
+linacre2002}
+\APACinsertmetastar {%
+linacre2002}%
+\begin{APACrefauthors}%
+Linacre, J\BPBI M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2002}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {What do infit and outfit, mean-square and standardized
+  mean} {What do infit and outfit, mean-square and standardized mean}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Rasch Measurement Transactions}{16}{2}{878}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Nagelkerke%
+}{%
+Nagelkerke%
+}{%
+{\protect \APACyear {1991}}%
+}]{%
+nagel}
+\APACinsertmetastar {%
+nagel}%
+\begin{APACrefauthors}%
+Nagelkerke, N\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1991}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A note on a general definition of the coefficient of
+  determination} {A note on a general definition of the coefficient of
+  determination}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Biometrika}{78}{3}{691--692}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Nosek%
+, Banaji%
+\BCBL {}\ \BBA {} Greenwald%
+}{%
+Nosek%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2002}}%
+}]{%
+Nosek2002}
+\APACinsertmetastar {%
+Nosek2002}%
+\begin{APACrefauthors}%
+Nosek, B\BPBI A.%
+, Banaji, M\BPBI R.%
+\BCBL {}\ \BBA {} Greenwald, A\BPBI G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2002}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Harvesting implicit group attitudes and beliefs from a
+  demonstration web site}} {{Harvesting implicit group attitudes and beliefs
+  from a demonstration web site}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Group Dynamics}{6}{1}{101--115}.
+\newblock
+\begin{APACrefDOI} \doi{10.1037/1089-2699.6.1.101} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Nosek%
+, Greenwald%
+\BCBL {}\ \BBA {} Banaji%
+}{%
+Nosek%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2005}}%
+}]{%
+nosek2005}
+\APACinsertmetastar {%
+nosek2005}%
+\begin{APACrefauthors}%
+Nosek, B\BPBI A.%
+, Greenwald, A\BPBI G.%
+\BCBL {}\ \BBA {} Banaji, M\BPBI R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2005}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Understanding and using the Implicit Association Test:
+  II. Method variables and construct validity}} {{Understanding and using the
+  Implicit Association Test: II. Method variables and construct
+  validity}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Personality and Social Psychology
+  Bulletin}{31}{2}{166-180}.
+\newblock
+\begin{APACrefDOI} \doi{10.1177/0146167204271418} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+{R Core Team}%
+}{%
+{R Core Team}%
+}{%
+{\protect \APACyear {2018}}%
+}]{%
+rsoft}
+\APACinsertmetastar {%
+rsoft}%
+\begin{APACrefauthors}%
+{R Core Team}.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2018}.
+\newblock
+\APACrefbtitle {{R}: A Language and Environment for Statistical Computing}
+  {{R}: A language and environment for statistical computing}.
+\newblock
+\APACaddressPublisher{Vienna, Austria}{}.
+\newblock
+\begin{APACrefURL} \url{https://www.R-project.org/} \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+van~der Linden%
+}{%
+van~der Linden%
+}{%
+{\protect \APACyear {2006}}%
+}]{%
+van2006}
+\APACinsertmetastar {%
+van2006}%
+\begin{APACrefauthors}%
+van~der Linden, W\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2006}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A lognormal model for response times on test items} {A
+  lognormal model for response times on test items}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Educational and Behavioral
+  Statistics}{31}{2}{181--204}.
+\newblock
+\begin{APACrefDOI} \doi{10.3102/10769986031002181} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+van~der Linden%
+}{%
+van~der Linden%
+}{%
+{\protect \APACyear {2009}}%
+}]{%
+VanDerLinden2009}
+\APACinsertmetastar {%
+VanDerLinden2009}%
+\begin{APACrefauthors}%
+van~der Linden, W\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2009}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Conceptual issues in response-time modeling}}
+  {{Conceptual issues in response-time modeling}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Educational Measurement}{46}{3}{247--272}.
+\newblock
+\begin{APACrefDOI} \doi{10.1111/j.1745-3984.2009.00080.x} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Wolsiefer%
+, Westfall%
+\BCBL {}\ \BBA {} Judd%
+}{%
+Wolsiefer%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+wols2017}
+\APACinsertmetastar {%
+wols2017}%
+\begin{APACrefauthors}%
+Wolsiefer, K.%
+, Westfall, J.%
+\BCBL {}\ \BBA {} Judd, C\BPBI M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Modeling stimulus variation in three common implicit
+  attitude tasks} {Modeling stimulus variation in three common implicit
+  attitude tasks}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Behavior Research Methods}{49}{4}{1193--1209}.
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}

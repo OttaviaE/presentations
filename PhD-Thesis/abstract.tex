@@ -1,0 +1,101 @@
+%\documentclass[a4paper,man]{apa6}
+\documentclass[12pt, a4paper, titilepage]{article}
+
+\usepackage{setspace}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{apacite}
+\usepackage{titlesec}
+\usepackage{dcolumn}
+\usepackage{lscape}
+\usepackage{pdflscape}
+\usepackage{tabularx}
+\usepackage[svgnames]{xcolor}
+\usepackage{multirow}
+\usepackage{times}
+\usepackage{booktabs}
+\usepackage{fancyhdr}
+\usepackage[margin=1in]{geometry}
+\usepackage{dcolumn}
+\usepackage[toc, page]{appendix}
+\usepackage{listings}
+\usepackage{array}
+\usepackage{siunitx}
+
+\titleformat*{\section}{\bfseries\centering}
+\titleformat*{\subsection}{\bfseries\flushleft}
+\titleformat*{\subsubsection}{\bfseries\itshape\flushleft}
+\titleformat*{\paragraph}{\bfseries}
+\titleformat*{\subparagraph}{\large\bfseries}
+
+\newcolumntype{d}[1]{D{.}{.}{#1}}
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\title{Filling the gap between implicit and behavior: A Rasch modeling of the Implicit Association Test}
+
+\author{Ottavia M. Epifania, Egidio Robusto, and Pasquale Anselmi}
+\date{
+%
+Department of Philosophy, Sociology, Education, and Applied Psychology, University of Padova
+}
+
+
+
+\renewcommand\baselinestretch{1.5}
+
+\begin{document}
+
+\begin{center}
+	\begin{large}
+		\textbf{Inglorious Measures: \\ A Linear Mixed-Effects Model approach for a Rasch analysis of implicit measure accuracy and time responses}
+	\end{large}
+
+	\vspace{5mm}
+Ottavia M. Epifania, University of Padova
+\end{center}
+
+	
+	The use of implicit measures (i.e., measures able to infer mental processes beyond awareness from speed-categorization tasks) became vastly popular in social sciences. Despite the wide use of implicit measures, a psychometrically sound approach to their modeling is still needed. 
+	
+	Implicit measures are usually scored by averaging the response times across stimuli to obtain respondent-specific scores. This approach is extremely easy and provide a clear and interpretable measure of the construct of interest. However, the variability between the stimuli and the variability between the respondents are overlooked. The resulting uncontrolled error variance may generate statistically significant results that cannot be replicated when different samples of respondents and/or stimuli are used. As such, replicability issues emerge. 
+	
+	The main objective of the Thesis is to provide new methods for more rigorous analyses of implicit measure data.  To purse this aim, three paths are followed: (i) the sound path for a psychometrically more sound approach to implicit measure data, (ii) the fair path for a fairer comparison between implicit measures, and (iii) the easy path for an easier and more rigorous way to score implicit measures.
+	
+	The sound path is the main focus of the Thesis. It aims at finding new approaches for the analysis of implicit measures data by combining a classic of Psychometric Theories, the Rasch model, with a Linear Mixed-Effects Model approach. The attention is mostly on one of the most used implicit measures, the Implicit Association Test \cite<IAT;>{Greenwald1998}, and on its single category version, the Single Category IAT \cite<SC-IAT;>{karpinski2006}. In some cases, the IAT and the SC-IAT are administered together to obtain both a comparative and an absolute evaluation towards different objects. By exploiting the flexibility of Linear Mixed-Effects Models, a comprehensive modeling of multiple implicit measures within a Rasch approach is introduced to gain more reliable estimates at both the respondent and stimulus levels. The proposed modeling framework results in more reliable estimates of the constructs of interest and in a better prediction of behavioral outcomes than that resulting from the typical scoring of implicit measures.  Moreover, it provides a fine-grained information at the stimulus level which can be used for better understanding the automatic associations involved in the performance at the IAT/SC-IAT.
+	
+	Nonetheless, effect size measures are the most used procedures for scoring the IAT and the SC-IAT. They are often employed for comparing the performance of the IAT and the SC-IAT in predicting behavioral outcomes. Beyond the lack of control on the error variance, the IAT and SC-IAT scoring procedures are affected by other artifacts that can influence the comparison between the two implicit measures, thus leading to puzzling results. The fair path is an attempt at providing scoring methods for a fairer comparison between the IAT and the SC-IAT. New algorithms are introduced to minimize the scoring differences affecting the comparison between the IAT and the SC-IAT. The new scoring algorithms provide a means for a fairer comparison and allow for obtaining more reliable results regarding the predictive performance of the IAT and the SC-IAT.
+	
+	The easy path is oriented at providing open source and easy-to-use tools for the computation of the IAT and the SC-IAT scores. By automating the scoring procedure, computational mistakes are prevented, the algorithms always result in the same scores that can be easily replicated. In the long term, this is expected to have beneficial effects on the replicability of the results obtained with implicit measures. 
+	
+
+\newpage
+
+\begin{center}
+	\begin{large}
+		\textbf{Misure senza gloria: \\ L’uso dei Modelli Lineari a Effetti misti per un’analisi di Rasch delle accuratezze e dei tempi di risposta delle misure implicite}
+	\end{large}
+	
+	\vspace{5mm}
+	Ottavia M. Epifania, University of Padova
+\end{center}
+
+L’uso di misure in grado di inferire processi mentali oltre la consapevolezza delle persone (le cosiddette misure implicite) è sempre più diffuso. Nonostante il loro ampio utilizzo, le misure implicite necessitano ancora dello sviluppo di modelli psicometrici validi per la loro analisi. In genere, i punteggi individuali alle misure implicite sono ottenuti calcolando la media dei tempi di risposta attraverso gli stimoli. Questo approccio fornisce una misura chiara del costrutto di interesse, ma non è in grado di tenere in considerazione la variabilità a livello del singolo trial per quanto riguarda sia gli stimoli sia i soggetti. La risultante varianza d’errore può portare a risultati statisticamente significativi ma non replicabili con altri campioni di stimoli e/o persone. La replicabilità dei risultati risulta quindi compromessa. 
+
+Lo scopo della Tesi è quello di fornire nuove metodologie per un’analisi più rigorosa delle misure implicite, seguendo tre vie: (i) il sound path per un approccio più appropriato all’analisi delle misure implicite, (ii) il fair path per un confronto più “equo” tra diverse misure implicite e (iii) l’easy path per uno scoring più semplice e preciso delle misure implicite. 
+
+Il sound path è il focus principale della tesi. È volto a individuare nuovi approcci per l’analisi delle misure implicite combinando un classico delle Teorie Psicometriche, il modello di Rasch, con i Modelli Lineari a Effetti Misti.  Le misure implicite prese in considerazione sono l’Implicit Association Test \cite<IAT;>{Greenwald1998} e il Single Category IAT \cite<SC-IAT;>{karpinski2006}. Lo IAT e il SC-IAT sono talvolta somministrati insieme per ottenere sia una misura comparativa sia una misura assoluta dell’atteggiamento verso diversi target. Grazie alla flessibilità dei Modelli Lineari a Effetti Misti, è stato possibile sviluppare un modello per un’analisi di Rasch congiunta dello IAT e del SC-IAT. Le stime ottenute con questo approccio sono risultate essere più attendibili e in grado di fornire una migliore predizione dei comportamenti rispetto alle misure classiche di scoring.  Inoltre, questi modelli forniscono un’informazione dettagliata a livello del singolo stimolo che può essere usata per una migliore comprensione delle associazioni automatiche coinvolte nella performance allo IAT/SC-IAT.
+
+Le misure di dimensione dell’effetto sono le procedure di scoring più comuni per lo IAT e il SC-IAT e sono spesso usate per confrontare le due misure rispetto a diverse variabili criterio (ad es., la predizione di una scelta comportamentale). Oltre ad essere influenzate dalla varianza d’errore, le procedure classiche di scoring dello IAT e del SC-IAT risentono anche di altri artefatti che possono compromettere il confronto tra le due misure implicite, portando a risultati fuorvianti. Il fair path è orientato al miglioramento delle strategie di scoring delle due misure implicite tramite lo sviluppo di nuovi algoritmi che minimizzino le differenze delle strategie classiche di scoring. I nuovi metodi di scoring risultano in un confronto più equo della capacità predittiva dello IAT e del SC-IAT, portando quindi a risultati più attendibili e permettendo inferenze più precise.
+
+L’easy path fornisce strumenti open source e user-friendly per lo scoring dello IAT e del SC-IAT. Dato che la procedura di calcolo viene automatizzata dal software, a sua volta distribuito con licenza open source, gli errori di calcolo vengono evitati e i risultati ottenuti diventano facilmente replicabili. Si può supporre che nel lungo termine l’automatizzazione delle procedure di scoring possa avere un effetto positivo sulla replicabilità dei risultati delle misure implicite. 
+
+Le tre vie illustrate migliorano la replicabilità dei risultati delle misure implicite o tramite l’introduzione di nuovi approcci di analisi o tramite il raffinamento di quelli già esistenti. 
+
+\newpage
+
+\bibliographystyle{apacite} 
+\doublespacing
+\bibliography{biblioTesi}
+
+\end{document}

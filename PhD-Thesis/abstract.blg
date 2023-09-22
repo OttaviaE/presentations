@@ -1,0 +1,67 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: abstract.aux
+Reallocating 'name_of_file' (item size: 1) to 8 items.
+The style file: apacite.bst
+Reallocating 'name_of_file' (item size: 1) to 11 items.
+Reallocating 'glb_str_end' (item size: 4) to 20 items.
+Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
+Reallocating 'global_strs' (item size: 1) to 4000000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 9000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: biblioTesi.bib
+"{" immediately follows a field part---line 230 of file biblioTesi.bib
+ : url = \url
+ :           {http://linguistica.sns.it/esploracolfis/home.htm},
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 368 of file biblioTesi.bib
+ :   publisher={American Psychological Association}
+ :                                                 .
+I'm skipping whatever remains of this entry
+apacite.bst [2013/07/21 v6.03 APA bibliography style]
+You've used 2 entries,
+            6951 wiz_defined-function locations,
+            1285 strings with 11140 characters,
+and the built_in function-call counts, 4400 in all, are:
+= -- 541
+> -- 33
+< -- 227
++ -- 256
+- -- 4
+* -- 305
+:= -- 875
+add.period$ -- 8
+call.type$ -- 2
+change.case$ -- 34
+chr.to.int$ -- 0
+cite$ -- 4
+duplicate$ -- 110
+empty$ -- 151
+format.name$ -- 56
+if$ -- 793
+int.to.chr$ -- 0
+int.to.str$ -- 6
+missing$ -- 0
+newline$ -- 58
+num.names$ -- 16
+pop$ -- 53
+preamble$ -- 1
+purify$ -- 8
+quote$ -- 0
+skip$ -- 257
+stack$ -- 0
+substring$ -- 279
+swap$ -- 67
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 160
+warning$ -- 0
+while$ -- 19
+width$ -- 0
+write$ -- 72
+(There were 2 error messages)

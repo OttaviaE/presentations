@@ -1,0 +1,73 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Section6.aux
+Reallocating 'name_of_file' (item size: 1) to 8 items.
+The style file: apacite.bst
+Reallocating 'name_of_file' (item size: 1) to 11 items.
+Reallocating 'glb_str_end' (item size: 4) to 20 items.
+Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
+Reallocating 'global_strs' (item size: 1) to 4000000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 9000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: biblioTesi.bib
+"{" immediately follows a field part---line 224 of file biblioTesi.bib
+ : url = \url
+ :           {http://linguistica.sns.it/esploracolfis/home.htm},
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 362 of file biblioTesi.bib
+ :   publisher={American Psychological Association}
+ :                                                 .
+I'm skipping whatever remains of this entry
+You're missing a field name---line 415 of file biblioTesi.bib
+ : 
+ : %url = \url{https://advance.sagepub.com/articles/Implicit_social_cognition_through_years_The_Implicit_Association_Test_at_age_21/11914416},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+apacite.bst [2013/07/21 v6.03 APA bibliography style]
+Warning--No journal in epifania2020
+You've used 14 entries,
+            6951 wiz_defined-function locations,
+            1376 strings with 13373 characters,
+and the built_in function-call counts, 27376 in all, are:
+= -- 3332
+> -- 229
+< -- 1377
++ -- 1426
+- -- 30
+* -- 1842
+:= -- 5128
+add.period$ -- 56
+call.type$ -- 14
+change.case$ -- 240
+chr.to.int$ -- 0
+cite$ -- 29
+duplicate$ -- 710
+empty$ -- 1043
+format.name$ -- 380
+if$ -- 5098
+int.to.chr$ -- 0
+int.to.str$ -- 42
+missing$ -- 0
+newline$ -- 375
+num.names$ -- 112
+pop$ -- 375
+preamble$ -- 1
+purify$ -- 58
+quote$ -- 0
+skip$ -- 1733
+stack$ -- 0
+substring$ -- 1534
+swap$ -- 445
+text.length$ -- 31
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 1120
+warning$ -- 1
+while$ -- 141
+width$ -- 0
+write$ -- 473
+(There were 3 error messages)

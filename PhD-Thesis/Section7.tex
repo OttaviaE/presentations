@@ -1,0 +1,268 @@
+\documentclass[12pt]{book}
+\usepackage{standalone}
+\usepackage{apacite}
+\usepackage{etoolbox}% for the \patchcmd
+\makeatletter
+% Patch after apacite got loaded!
+\patchcmd{\nocite}{\@onlypreamble\document}{\documentclass\sa@documentclass}{}{}
+\makeatother
+\usepackage{graphicx}
+\usepackage{subcaption}
+\graphicspath{{C:/Users/huawei/Desktop/images/}} 
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{pdflscape}
+\usepackage[margin=3cm]{geometry}
+\usepackage{multirow}
+\usepackage{times}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{dcolumn}
+\usepackage{siunitx}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{bm}
+\raggedbottom
+
+\renewcommand\baselinestretch{2}
+
+
+\newcolumntype{d}[1]{D{.}{.}{#1}}
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+
+\begin{document}
+\chapter[Multiple implicit measures: Models specification]{Multiple implicit measures: Models specification} \label{chap:comprehensiveModels}
+
+\textcolor{blue}{As already illustrated in Chapter \ref{chap:classicscore}, the IAT and the SC-IAT can be administered together for obtaining both a comparative measure of the preference for one target object over the other and an absolute evaluation towards each of them. 
+	Their data are usually analyzed separately, and separate \emph{D} scores are computed for each measure, following an approach such as that in Chapter \ref{chap:classiscore}. 
+	By doing so, neither the sources of variability due the fully-crossed structure of each implicit measure nor those due to the presentation of the implicit measures to the same respondents are accounted for.}
+\textcolor{blue}{Additionally, no attempts of modeling the SC-IAT data within a Rasch framework or of having a comprehensive model for the IAT and the SC-IAT have been made so far.} 
+In this chapter, we aim to fill these gaps by introducing a comprehensive modeling approach for multiple implicit measures (i.e., the IAT and the SC-IAT). This modeling framework is obtained by exploiting the flexibility of Linear Mixed-Effects Models (LMMs) for obtaining the estimates of the Rasch model and the log-normal model parameters. 
+
+Two levels of model complexity are presented. 
+At a first level, each implicit measure is modeled separately by employing the models presented in Chapter \ref{chap:modelsIAT}. 
+These models will not be further illustrated here. Only a brief summary of the Rasch model and the log-normal model parameters that can be estimated is provided.
+At a second level, the between--measures variability is accounted for by considering the within--respondents between--measures variability (Model 2) or the within--respondents between--conditions variability across implicit measures (Model 3). 
+
+
+\section{Single measures models} \label{sec:singleModels}
+
+The models presented in Chapter \ref{chap:modelsIAT} for both accuracy and log-time responses can be used for modeling each implicit measure separately. 
+This implies that, even though the variability within each measure is accounted for, the between--measures variability at both the respondents and the stimuli levels can still affect the parameter estimates.
+Nonetheless, this approach is valid when implicit measures are administered as stand alone measures. 
+
+In this section, the IAT and the SC-IAT data have been analyzed separately mainly for two reasons: (i) to investigate whether the modeling approach for IAT data in Chapter \ref{chap:modelsIAT} can be extended to SC-IAT data, and (ii) to investigate whether and how these estimates are different from the ones obtained with a more sound approach accounting for the between--measures sources of variability.
+
+Irrespective of the implicit measure or the dependent variable (i.e., accuracy or log-time responses) under investigation, the fixed intercept was set at $0$. 
+The effect of the associative condition of each implicit measure was the fixed effect in all models. Since the fixed intercept was set at $0$, the fixed effects can be interpreted as the estimates of either the expected \emph{log-odds} of the probability of a correct response in each associative condition (Accuracy models) or the expected average log-time responses in each associative condition (Log-time models).
+
+Model 1 (the Null model) accounts for the between--respondents and between--stimuli variability across associative conditions by specifying them as random intercepts.
+For each separate implicit measure ($m \in \{1,\ldots, M$\}, where $m$ is the number of implicit measures), overall estimates at the respondents' ($\theta_{pm}$ and $\tau_{pm}$) and the stimuli ($b_{sm}$ and $\delta_{sm}$) levels can be obtained for the Rasch and the log-normal models.
+
+The random structure of Model 2 results in the estimation of condition--specific stimuli parameters ($b_{scm}$ and $\delta_{scm}$) and overall respondents' parameters ($\theta_{pm}$ and $\tau_{pm}$) for each implicit measure by considering the random slopes of the stimuli in the associative conditions and the random intercepts of the respondents across conditions. 
+This model accounts for the within--stimuli between--conditions variability and the between--respondents variability across conditions.
+
+Finally, the random structure of Model 3 results in the estimation of overall stimuli parameters ($b_{sm}$ and $\delta_{sm}$) and condition--specific respondents' parameters ($\theta_{pcm}$ and $\tau_{pcm}$) are obtained by considering the random intercepts of the stimuli across conditions and the random slopes of the respondents in the associative conditions. This model accounts for the between--stimuli across conditions variability and the within--respondents between--conditions variability. 
+ 
+By separately analyzing the data obtained from implicit measures originally administered together, the within--respondents between--measures variability, as well as the within--stimuli between--measures variability, are neglected. 
+Therefore, the estimates of the models parameters can still be affected by error variance components. 
+Moreover, since the estimates for both the respondents and the stimuli are obtained from separate, independent models, they cannot be directly compared between each other.
+
+The models presented in Section \ref{sec:modelType} overcome this issue by considering data from different implicit measures altogether. 
+
+\section{Comprehensive models} \label{sec:modelType}
+
+%The random structures for accuracy (Rasch) and log-time (log-normal) models are presented together. They are identified by a capital ``A'' and a capital ``T'', respectively.
+The models presented in this section are identified by the superscript ``C'' (i.e., ``Comprehensive'').
+Data from the IAT and the SC-IATs are considered and modeled together. 
+In all models, the fixed intercept is set at $0$, while the fixed effect varies. Specifically, in the Null model and in Model 2\textsuperscript{C}, the fixed effect $\beta$ is the type of implicit measure, while in Model 3\textsuperscript{C} the fixed effect $\beta$ is the effect of the associative condition of each implicit measure. 
+
+The only differences concerning the models applied on accuracy or log-time responses concern the dependent variable and the assumption on the distribution of the error terms. 
+GLMMs (Section \ref{sec:cglmms}) are applied on accuracy responses, and the error term $\varepsilon_{i}$ is assumed to follow a logistic distribution. These models are identified with a capital ``A''.
+LMMs (Section \ref{sec:clmms}) are applied on log-time responses and the error term $\varepsilon_{i}$ is assumed to follow a normal distribution. These models are identified with a capital ``T''.
+
+In all models, only the between--stimuli across--measures variability is considered. 
+The investigation of the stimuli functioning according to the specific implicit measure would indeed provide interesting information. For instance, the SC-IAT is known to be an easier task than the IAT. By having an information at the stimuli level, it would be possible to understand whether only some stimuli contribute to make the task easier. 
+Nonetheless, for specifying the random slopes of the stimuli in each implicit measure, a high within--stimuli between--measures variability is needed, but previous studies \cite<e.g.,>{rgm, filling} already highlighted a low within--stimuli between--conditions variability, especially for what concerns  time responses.
+Moreover, the focus is more oriented on understanding the intra- and inter-individuals differences in performing at different implicit measures. 
+Consequently, multidimensionality of the error variance was allowed only at the level of the respondents.
+
+
+%In both the Null model and Model 1, the type of measure is considered as the fixed effect ($\beta$).
+%In Models \ref{eq:typeNull} and \ref{eq:type1}, the type of measure is the fixed effect ($\beta$). Consequently, the fixed effect estimates can be considered as either the expected \emph{log-odds} of the probability of a correct response in each implicit measure (Accuracy models) or the expected average log-response time in each Implicit measure (Log-time models). 
+%In Model \ref{eq:type2}, the associative condition of each implicit measure is the effect ($\beta$). 
+%The estimates of each level of the fixed effect are hence either the expected \emph{log-odds} of the probability of a correct response in each associative condition or the expected average log-time in each associative condition. 
+
+\subsection{Comprehensive GLMMs}\label{sec:cglmms}
+
+Model A1\textsuperscript{C} is considered as the Null model: 
+%
+\begin{equation}\label{eq:typeNull}
+	y_{i} = logit^{-1}(\alpha + \beta_mX_m + \alpha_{p[i]} +  \alpha_{s[i]} + \varepsilon_{i}),
+\end{equation}
+with
+\begin{align}
+	\alpha_{p} \sim  \mathcal{N} ( 0, \sigma_{\alpha_p}^2) \, \text{and}  \,	\alpha_{s}  \sim  \mathcal{N} (0,\sigma_{\alpha_s}^2),
+\end{align}
+%\begin{align}
+%	\alpha_{s}  \sim  \mathcal{N} (0,\sigma_{\alpha_s}^2), 
+%\end{align}
+%\begin{align}
+%	\epsilon  \sim  \mathcal{N} (0,\sigma^2), 
+%\end{align}
+where both respondents' and stimuli are specified as random intercepts across associative conditions and type of implicit measure. 
+
+Model A1\textsuperscript{C} results in overall respondents ability estimates ($\theta_{p}^\text{C}$) and overall stimuli easiness estimates ($b_{s}^\text{C}$) of the Rasch model. 
+These estimates inform about the general ability of the respondents to perform the categorization task and the overall easiness of the stimuli across implicit measures. This model should be preferred when both a low within--respondents and between--measures variability and a low within--stimuli between--measures variability are observed. 
+The lack of variability at both levels might already indicate that respondents' ability is not affected by the specific implicit measure or, in other words, that their ability is constant across measures. 
+Similarly, stimuli easiness does not vary across implicit measures.
+
+In Model A2\textsuperscript{C}, between--stimuli variability across implicit measures and within--respondents between--measures variability are accounted for by specifying stimuli random intercepts and respondents' random slopes in the implicit measures: 
+%
+\begin{equation}\label{eq:type1}
+	y_{i} = logit^{-1}(\alpha + \beta_mX_m + \alpha_{k[i]} +  \beta_{p[i]}m_{i} + \varepsilon_{i}),
+\end{equation}
+with:
+%\begin{align}
+%	\beta_{p} \sim  \mathcal{N}
+%	\begin{pmatrix}
+%		0,&
+%		\begin{pmatrix}
+%			\sigma_{\beta_{pm_1}}^2 & \sigma_{\beta_ {pm_1}, \beta_{pm_2}}^2 \\
+%			\sigma_{{\beta_{pm_1}}, \beta_{pm_2}}^2& \sigma_{\beta_{pm_2}}^2
+%		\end{pmatrix}
+%	\end{pmatrix},
+%\end{align}
+\begin{align}
+	\beta_{pm} \sim \mathcal{MVN}(\bm{0}, \bm{\Sigma}_{pm}),
+\end{align}
+\begin{align}
+	\alpha_s \sim \mathcal{N} (0, \alpha_s^2),
+\end{align}
+where $\bm{\Sigma}_{pm}$ is the variance-covariance matrix of the population of the respondents and it expresses the by-respondents variability according to the implicit measure. 
+Model A2\textsuperscript{C} results in overall stimuli easiness estimates across implicit measures ($b_s^\text{C}$) and measure--specific respondents' ability estimates ($\theta_{pm}^\text{C}$). 
+A high within--respondents between--measures variability is needed for this model to be the best fitting one. This variability indicates that respondents' ability performance is affected by the specific implicit measure. \textcolor{blue}{The estimates provided by this model can hence inform about the change in the ability performance of the respondents in each implicit measure. However, no information on the effect of the associative condition is available.} 
+
+In both Model A1\textsuperscript{C} and Model A2\textsuperscript{C}, the fixed effect is the type of measure. Therefore, it provides the expected \emph{log-odds} of the probability of a correct response in each implicit measure. Since these estimates are obtained from the same model, they can be directly compared between each other.
+
+%These models inform about whether and how respondents' accuracy or speed performance is affected by the specific implicit measure, although they cannot provide any information about the effect of the associative conditions.
+
+The random structure of Model A3\textsuperscript{C} accounts for the between--stimuli variability across implicit measures and the within--respondents between--conditions variability. Stimuli random intercepts and respondents' random slopes in each associative condition of each implicit measure are specified: 
+%
+\begin{equation}\label{eq:type2}
+	y_{i} = logit^{-1}(\alpha + \beta_{c}X_{c} + \alpha_{s[i]} +  \beta_{p[i]}c_{i} + \varepsilon_{i}),
+\end{equation}
+with:
+%\begin{align}
+%	\beta_{p} \sim  \mathcal{N}
+%	\begin{pmatrix}
+%		0,&
+%		\begin{pmatrix}
+%			\sigma_{\beta_{pm_1}}^2 & \sigma_{\beta_ {pmc_1}, \beta_{pmc_2}}^2 \\
+%			\sigma_{{\beta_{pmc_1}}, \beta_{pmc_2}}^2& \sigma_{\beta_{pmc_2}}^2
+%		\end{pmatrix}
+%	\end{pmatrix},
+%\end{align}
+\begin{align}
+	\beta_{pc} \sim \mathcal{MVN}(\bm{0}, \bm{\Sigma}_{pc}),
+\end{align}
+\begin{align}
+	\alpha_s \sim \mathcal{N} (0, \alpha_s^2),
+\end{align}
+where $\bm{\Sigma}_{sc}$ is the variance-covariance matrix of the population of the respondents, expressing the by-respondent adjustment in each associative condition on each implicit measure.
+Model A3\textsuperscript{C} results in overall stimuli easiness estimates ($b_{s}^\text{C}$) and condition--specific respondents' ability estimates, for each implicit measure ($\theta_{pmc}^\text{C}$). 
+Model A3\textsuperscript{C} requires a high within--respondents between--conditions variability to result as the best fitting model.
+\textcolor{blue}{The high variability between the responses of the participants in each condition of each measure already stands for an effect of the associative conditions determined by each implicit measure on respondents' performance. 
+	By taking the difference between the condition--specific estimates of each implicit measure, a measure of the bias on respondents' performance due to the associative conditions can be obtained.} 
+ 
+\subsection{Comprehensive LMMs}\label{sec:clmms}
+
+Models with the same random structures as those presented in Section \ref{sec:clmms} are specified for obtaining the log-normal model estimates from the log-time responses.
+
+Model T1\textsuperscript{C} accounts for the between--respondents and the between--stimuli variability across implicit measures. As such, it is taken to be as the Null model: 
+%
+\begin{equation}\label{eq:typeNullt}
+	y_{i} = \alpha + \beta_mX_m + \alpha_{p[i]} +  \alpha_{s[i]} + \varepsilon_{i},
+\end{equation}
+with
+\begin{align}
+	\alpha_{p} \sim  \mathcal{N} ( 0, \sigma_{\alpha_p}^2), \, \text{and} \,	\alpha_{s}  \sim  \mathcal{N} (0,\sigma_{\alpha_s}^2). 
+\end{align}
+%\begin{align}
+%	\alpha_{s}  \sim  \mathcal{N} (0,\sigma_{\alpha_s}^2), 
+%\end{align}
+%\begin{align}
+%	\epsilon  \sim  \mathcal{N} (0,\sigma^2), 
+%\end{align}
+The random structure specification of Model T1\textsuperscript{C} results in the estimation of overall respondents' speed parameters ($\tau_p^\text{C}$) and overall stimuli time intensity parameters ($\delta_s^\text{C}$). Consequently, only general information about the respondents' performance and the stimuli functioning across implicit measures is available.
+
+Model T2\textsuperscript{C} accounts for the between--stimuli variability across implicit measures and the within--respondents between--measures variability by specifying the random intercepts of the stimuli and the random slopes of the respondents in the implicit measures: 
+%
+\begin{equation}\label{eq:type1t}
+	y_{i} = \alpha + \beta_mX_m + \alpha_{s[i]} +  \beta_{p[i]}m_{i} + \varepsilon_{i},
+\end{equation}
+with:
+%\begin{align}
+%	\beta_{p} \sim  \mathcal{N}
+%	\begin{pmatrix}
+%		0,&
+%		\begin{pmatrix}
+%			\sigma_{\beta_{pm_1}}^2 & \sigma_{\beta_ {pm_1}, \beta_{pm_2}}^2 \\
+%			\sigma_{{\beta_{pm_1}}, \beta_{pm_2}}^2& \sigma_{\beta_{pm_2}}^2
+%		\end{pmatrix}
+%	\end{pmatrix},
+%\end{align}
+\begin{align}
+	\beta_{pm} \sim \mathcal{MVN}(\bm{0}, \bm{\Sigma}_{pm}),
+\end{align}
+\begin{align}
+	\alpha_s \sim \mathcal{N} (0, \alpha_s^2),
+\end{align}
+where $\bm{\Sigma}_{pm}$ represents the variance-covariance of the population of the respondents, expressing their variability due the effect of the implicit measure. 
+Model T2\textsuperscript{C} results in overall stimuli time intensity estimates across implicit measures ($\delta_s^\text{C}$) and measure--specific respondents' speed estimates ($\tau_{pm}^\text{C}$). 
+A high within--respondents between--measures variability is needed for this model to be the best fitting one. This variability indicates that respondents' speed is affected by the specific implicit measure. However, it is not possible to rule out the possibility that this variability is due to the effect of the associative conditions.
+
+The fixed effect in both Model T1\textsuperscript{C} and Model T2\textsuperscript{C} is the type of implicit measure. Therefore, the expected average log-times in each implicit measure are obtained. 
+
+The variability due to the effect of the associative conditions of each implicit measure can be understood with the random structure specification of Model T3\textsuperscript{C}. By specifying the respondents' random slopes in each associative condition of each implicit measure, this model accounts for the within--respondents between--conditions and between--measures variability, as well as the between--stimuli across--measures variability: 
+%
+\begin{equation}\label{eq:type2t}
+	y_{i} = \alpha + \beta_{c}X_{c} + \alpha_{s[i]} +  \beta_{p[i]}c_{i} + \varepsilon_{i},
+\end{equation}
+with:
+%\begin{align}
+%	\beta_{p} \sim  \mathcal{N}
+%	\begin{pmatrix}
+%		0,&
+%		\begin{pmatrix}
+%			\sigma_{\beta_{pmc_1}}^2 & \sigma_{\beta_ {pmc_1}, \beta_{pmc_2}}^2 \\
+%			\sigma_{{\beta_{pmc_1}}, \beta_{pmc_2}}^2& \sigma_{\beta_{pmc_2}}^2
+%		\end{pmatrix}
+%	\end{pmatrix},
+%\end{align}
+\begin{align}
+	\beta_{pc} \sim \mathcal{MVN}(\bm{0}, \bm{\Sigma}_{pc}),
+\end{align}
+\begin{align}
+	\alpha_s \sim \mathcal{N} (0, \alpha_s^2),
+\end{align}
+where $\bm{\Sigma}_{pc}$ represents the variance-covariance matrix of the population of the respondents, expressing the variability due to their adjustments to each of the associative conditions in each of the implicit measures. 
+Model T3\textsuperscript{C} results in overall stimuli time intensity estimates ($\delta_{s}^\text{C}$) and condition--specific respondents' speed estimates, for each implicit measure ($\tau_{pmc}^\text{C}$). 
+Model T3\textsuperscript{C} should be preferred when a high within--respondents between--conditions variability is observed.
+The high variability between respondents' in each condition of each measure stands for an effect of the associative conditions determined by each implicit measure on respondents' performance. 
+By taking the difference between the condition--specific estimates of each implicit measure, a measure of the bias on respondents' performance due to the associative conditions can be obtained. 
+
+A measure of the bias due to the associative conditions of each implicit measure can be obtained from the estimates provided by the Single measures models in Section \ref{sec:singleModels} as well. However, as already stated, those estimates are affected by both the within--respondents between--measures variability and the within--stimuli between--measures variability. Conversely, these sources of variability are accounted for in the comprehensive modeling framework, potentially resulting in more reliable estimates. Moreover, the estimates obtained with the comprehensive modeling approach are directly comparable between each other because they are derived from the same model.
+
+\textcolor{blue}{In the next chapter, an empirical application of the comprehensive modeling framework and the separate modeling of each implicit measure is illustrated.
+	The estimates of the Rasch model parameters and those of the log-normal model parameters are used for predicting a behavioral outcome, and their predictive performances are compared with those of the typical scoring method of the IAT and the SC-IAT. 
+	The relationship between the model estimates and the typical scores of these implicit measures are investigated as well. }
+
+ 
+%\bibliographystyle{apacite} 
+%\bibliography{biblioTesi}
+\end{document}

@@ -1,0 +1,26 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: ThesisALL.aux
+Case mismatch error between cite keys Anselmi2011 and anselmi2011
+---line 264 of file ThesisALL.aux
+ : \citation{Anselmi2011
+ :                      }
+I'm skipping whatever remains of this command
+The style file: apacite.bst
+Database file #1: biblioTesi.bib
+I was expecting a `,' or a `}'---line 98 of file biblioTesi.bib
+ :   
+ :   year={1968},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 1091 of file biblioTesi.bib
+ : @book{ggplot2
+ :              ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "epifania2019"
+apacite.bst [2013/07/21 v6.03 APA bibliography style]
+Warning--No journal in DeBoeck2011
+Warning--No journal in Epifania2020
+ptr=1, stack=
+
+---the literal stack isn't empty for entry Epifania2020
+while executing---line 5079 of file apacite.bst
+(There were 4 error messages)

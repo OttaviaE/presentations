@@ -1,0 +1,64 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Greenwald%
+, McGhee%
+\BCBL {}\ \BBA {} Schwartz%
+}{%
+Greenwald%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {1998}}%
+}]{%
+Greenwald1998}
+\APACinsertmetastar {%
+Greenwald1998}%
+\begin{APACrefauthors}%
+Greenwald, A\BPBI G.%
+, McGhee, D\BPBI E.%
+\BCBL {}\ \BBA {} Schwartz, J\BPBI L\BPBI K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1998}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Measuring Individual Differences in Implicit Cognition:
+  The Implicit Association Test}} {{Measuring Individual Differences in
+  Implicit Cognition: The Implicit Association Test}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Personality and Soclal
+  Psychology}{74}{6}{1464--1480}.
+\newblock
+\begin{APACrefDOI} \doi{10.1037/0022-3514.74.6.1464} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Karpinski%
+\ \BBA {} Steinman%
+}{%
+Karpinski%
+\ \BBA {} Steinman%
+}{%
+{\protect \APACyear {2006}}%
+}]{%
+karpinski2006}
+\APACinsertmetastar {%
+karpinski2006}%
+\begin{APACrefauthors}%
+Karpinski, A.%
+\BCBT {}\ \BBA {} Steinman, R\BPBI B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2006}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{The Single Category Implicit Association Test as a
+  measure of implicit social cognition}} {{The Single Category Implicit
+  Association Test as a measure of implicit social cognition}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Personality and Social
+  Psychology}{91}{1}{16--32}.
+\newblock
+\begin{APACrefDOI} \doi{10.1037/0022-3514.91.1.16} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}

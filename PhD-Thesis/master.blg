@@ -1,0 +1,71 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: master.aux
+Reallocating 'name_of_file' (item size: 1) to 8 items.
+The style file: apacite.bst
+Reallocating 'name_of_file' (item size: 1) to 11 items.
+Reallocating 'glb_str_end' (item size: 4) to 20 items.
+Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
+Reallocating 'global_strs' (item size: 1) to 4000000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 9000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: biblioTesi.bib
+"{" immediately follows a field part---line 224 of file biblioTesi.bib
+ : url = \url
+ :           {http://linguistica.sns.it/esploracolfis/home.htm},
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 362 of file biblioTesi.bib
+ :   publisher={American Psychological Association}
+ :                                                 .
+I'm skipping whatever remains of this entry
+Repeated entry---line 1494 of file biblioTesi.bib
+ : @article{fiedler2006
+ :                     ,
+I'm skipping whatever remains of this entry
+apacite.bst [2013/07/21 v6.03 APA bibliography style]
+You've used 22 entries,
+            6951 wiz_defined-function locations,
+            1440 strings with 15511 characters,
+and the built_in function-call counts, 47764 in all, are:
+= -- 5715
+> -- 411
+< -- 2569
++ -- 2689
+- -- 44
+* -- 3376
+:= -- 9250
+add.period$ -- 88
+call.type$ -- 22
+change.case$ -- 374
+chr.to.int$ -- 0
+cite$ -- 44
+duplicate$ -- 1268
+empty$ -- 1701
+format.name$ -- 716
+if$ -- 8631
+int.to.chr$ -- 0
+int.to.str$ -- 66
+missing$ -- 0
+newline$ -- 617
+num.names$ -- 176
+pop$ -- 578
+preamble$ -- 1
+purify$ -- 88
+quote$ -- 0
+skip$ -- 2840
+stack$ -- 0
+substring$ -- 2863
+swap$ -- 787
+text.length$ -- 44
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 1760
+warning$ -- 0
+while$ -- 246
+width$ -- 0
+write$ -- 799
+(There were 3 error messages)

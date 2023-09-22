@@ -1,0 +1,81 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: TesiEntireDocument.aux
+Reallocating 'name_of_file' (item size: 1) to 8 items.
+The style file: apacite.bst
+Reallocating 'name_of_file' (item size: 1) to 11 items.
+Reallocating 'glb_str_end' (item size: 4) to 20 items.
+Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
+Reallocating 'global_strs' (item size: 1) to 4000000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 9000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: biblioTesi.bib
+"{" immediately follows a field part---line 230 of file biblioTesi.bib
+ : url = \url
+ :           {http://linguistica.sns.it/esploracolfis/home.htm},
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 368 of file biblioTesi.bib
+ :   publisher={American Psychological Association}
+ :                                                 .
+I'm skipping whatever remains of this entry
+Repeated entry---line 1195 of file biblioTesi.bib
+ : @book{ggplot2
+ :              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1498 of file biblioTesi.bib
+ : @article{fiedler2006
+ :                     ,
+I'm skipping whatever remains of this entry
+apacite.bst [2013/07/21 v6.03 APA bibliography style]
+Warning--No journal in filling
+Warning--No journal in Epifania2020
+ptr=1, stack=
+
+---the literal stack isn't empty for entry Epifania2020
+while executing---line 5079 of file apacite.bst
+You've used 95 entries,
+            6951 wiz_defined-function locations,
+            1866 strings with 27904 characters,
+and the built_in function-call counts, 187267 in all, are:
+= -- 22970
+> -- 1554
+< -- 9418
++ -- 9648
+- -- 197
+* -- 12479
+:= -- 34702
+add.period$ -- 385
+call.type$ -- 95
+change.case$ -- 1681
+chr.to.int$ -- 0
+cite$ -- 192
+duplicate$ -- 5047
+empty$ -- 7176
+format.name$ -- 2623
+if$ -- 35211
+int.to.chr$ -- 0
+int.to.str$ -- 301
+missing$ -- 0
+newline$ -- 2539
+num.names$ -- 762
+pop$ -- 2926
+preamble$ -- 1
+purify$ -- 380
+quote$ -- 0
+skip$ -- 11614
+stack$ -- 0
+substring$ -- 10407
+swap$ -- 2939
+text.length$ -- 197
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 7728
+warning$ -- 2
+while$ -- 900
+width$ -- 0
+write$ -- 3192
+(There were 5 error messages)

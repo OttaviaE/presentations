@@ -1,0 +1,241 @@
+\documentclass[12pt]{book}
+\usepackage{standalone}
+\usepackage{apacite}
+\usepackage{etoolbox}% for the \patchcmd
+\makeatletter
+% Patch after apacite got loaded!
+\patchcmd{\nocite}{\@onlypreamble\document}{\documentclass\sa@documentclass}{}{}
+\makeatother
+\usepackage{graphicx}
+\usepackage{subcaption}
+\graphicspath{{C:/Users/huawei/Desktop/images/}} 
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{pdflscape}
+\usepackage[margin=3cm]{geometry}
+\usepackage{multirow}
+\usepackage{times}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{dcolumn}
+\usepackage{siunitx}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{listings}
+
+\lstset{language=R,
+	basicstyle=\small\ttfamily,
+	stringstyle=\color{black},
+	%otherkeywords={0,1,2,3,4,5,6,7,8,9},
+	morekeywords={TRUE,FALSE, glmer, lmer},
+	deletekeywords={data,frame,length,as,character},
+	keywordstyle=\color{black}\bfseries,
+	commentstyle=\color{black},
+}
+
+
+\raggedbottom
+
+\renewcommand\baselinestretch{2}
+
+
+\newcolumntype{d}[1]{D{.}{.}{#1}}
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+
+\begin{document}
+\chapter[Appendix B]{\texttt{R} code for a comprehensive modeling of implicit measures.} \label{chap:appendixB}
+
+This appendix presents the \verb*|R| code used for obtaining the Rasch model and the log-normal model estimates from (Generalized) Linear Mixed-Effect models from IAT and SC-IAT data according to the comprehensive modeling approach presented in Chapter \ref{sec:modelType}
+
+The example is based on the Coke-Pepsi IAT and the Coke SC-IAT presented in Chapter \ref{chap:intro}. 
+For illustration purposes, a Pepsi SC-IAT is considered as well. 
+The associative conditions of the Pepsi SC-IAT are the Pepsi-Good/Bad one (PG condition) and the Pepsi-Bad/Good one (PB condition). 
+
+The data set should contain the following variables:
+
+\begin{itemize}
+	\item \texttt{subject}: Column containing the respondents' IDs (can be numeric, a factor, or a string, as long as it is unique for each respondent).
+	\item\texttt{measure}: Column containing the labels that identify the three implicit measures (e.g., \texttt{iat}, \texttt{cokesciat}, \texttt{pepsiciat}). This variable should be a factor with three levels.
+	\item\texttt{condition}: Column containing the labels of the six associative conditions of the three implicit measures (e.g., \texttt{CGPB} and \texttt{PGCB} for the IAT, \texttt{CG} and \texttt{CB} for the Coke SC-IAT, \texttt{PG} and \texttt{PB} for the Pepsi SC-IAT). This variable should be a factor with six levels.
+	\item \texttt{stimuli}: Column containing the labels identifying each stimulus (e.g., \texttt{good}, \texttt{bad}, \texttt{coke1}, \texttt{pepsi}).
+	\item \texttt{latency}: Column containing the latency of the IAT responses. Latency can be expressed in seconds or milliseconds.
+	\item \texttt{correct}: Column containing the accuracy of the responses, where 0 is the incorrect response and 1 is the correct response.
+\end{itemize}
+
+The data set must be in a long format. 
+This means that the response of each respondent on each stimulus in each associative condition of each implicit measure must be on a separate row, and the total number of observations (rows) for each subject must correspond to the total number of trials in the two associative conditions of each implicit measure. 
+For instance, in the IAT reported in Chapter \ref{chap:comprehensiveApplications}, respondents were presented with 60 trials in each associative condition. Each of the SC-IATs was composed by 72 trials in each associative condition. 
+The total number of observations (rows) for each respondent was 408 (i.e., 120 IAT observations, 144 Dark SC-IAT observations and 144 Milk SC-IAT observations).  
+
+Regardless of the dependent variable (i.e., either accuracy or log-time responses), the first model is the Null model in which both respondents and stimuli are specified as random intercepts across conditions and across implicit measures. The fixed effect is the effect of the implicit measure. 
+Since the fixed intercept is set at 0, the estimates for each level of the fixed effect can be considered as the marginal \emph{log-odds} (accuracy models) or the marginal expected average log-time response (log-time) models. 
+
+In the second model, the multidimensionality of the implicit measure is allowed at the respondents' level while stimuli are centered at 0. 
+In other words, the random slopes of the respondents in the implicit measures (\texttt{0 + measure|subject}) and the random intercepts of the stimuli (\texttt{1|stimuli}) are specified.
+
+Finally, in the third model the multidimensionality of the associative condition of the specific implicit measure is allowed at the respondents' level, by specifying their random slopes in the associative conditions of each measure (\texttt{0 + condition|respondent}). Stimuli are specified as random intercepts (\texttt{1|stimuli}).
+
+\section{Accuracy models specification}
+
+The code for the specification of the accuracy models is illustrated. 
+
+\subsection{Model estimation}
+
+\paragraph*{Model 1:} 
+The effect of the implicit measure is specified as a fixed effect.
+The between--subjects variability is specified as random intercepts (\texttt{(1|subject)}). 
+The between--stimuli variability is specified as random intercepts (\texttt{(1|stimuli)}).
+%
+\begin{lstlisting}
+	a1 <- glmer(correct ~ 0 + measure + (1|stimuli) + (1|subject), 
+		data = data, # IAT and SC-IAT data in long format
+		family = "binomial")
+	summary(a1) # summary of the results  
+\end{lstlisting}
+
+\paragraph*{Model 2:} The effect of the implicit measure is specified as a fixed effect.
+The between--stimuli variability is specified as random intercepts centered at 0 (\texttt{(1|stimuli)}). 
+The within--subjects between--measures variability is specified as the random slopes of the subjects in the implicit measures (\texttt{(0 + measure|subject)}).
+%
+\begin{lstlisting}
+	a2 <- glmer(correct ~ 0 + measure + (1|stimuli) + 
+		(0 + measure|stimuli), 
+		data = data, 
+		family = "binomial")
+	summary(a2) # summary of the results  
+\end{lstlisting}
+
+
+\paragraph*{Model 3:}  
+The between--stimuli variability is specified as random intercepts, centered at 0 (\texttt{(1|stimuli)}). 
+The within--subjects between-conditions variability is specified as the random slopes of the respondents in the conditions of each implicit measure (\texttt{(0 + condition|subject)}).
+The fixed effect is the associative condition of each implicit measure.
+%
+\begin{lstlisting}
+	a3 <- glmer(correct ~ 0 + condition + (1|stimuli) + 
+		(0 + condition|subject),
+		data = data, 
+		family = "binomial")
+	summary(a3) # summary of the results  
+\end{lstlisting}
+
+
+
+\subsection{Model comparison}
+
+Once the three models have been estimated, they can be compared with each other. 
+%
+\begin{lstlisting}
+	anova(a1, a2, a3)
+\end{lstlisting}
+
+Models 2 and 3 have the same degrees of freedom. As such, the $\chi^2$ statistics resulting from their comparison is meaningless, and only comparative fit indexes should be used instead. 
+
+\subsection{Rasch model parameters}
+Grounding on the results of model comparison, the best fitting model can be selected for extracting the estimates of the Rasch model parameters. 
+
+\textbf{Model 1} results in overall respondents' parameters and overall stimuli parameters. Respondents overall ability parameters can be extracted and stored in a data frame: 
+%
+\begin{lstlisting}
+	ability <- data.frame(
+		subject = rownames(coef(a1)$subject), # Respondents' IDs
+		ability = coef(a1)$subject[, 1] # Select only the random
+	)			# intercepts estimates
+\end{lstlisting}
+
+Stimuli overall easiness parameters can be extracted and stored as well: 
+%
+\begin{lstlisting}
+	easiness <- data.frame(
+		stimuli = rownames(coef(a1)$stimuli), # Stimuli labels
+		easiness = coef(a1)$stimuli[, -1] # Select only the random 
+	) 			# intercepts estimates	
+\end{lstlisting}
+
+
+\textbf{Model 2} results in measure--specific respondents' parameters and overall stimuli parameters. 
+Respondents' measure--specific ability parameters can be extracted as follows: 
+%
+\begin{lstlisting}
+	ability_measure <- coef(a2)$subject[, -1] # drop the first column 
+				# (fixed intercept set at 0)
+\end{lstlisting}
+
+Stimuli overall easiness parameters can be extracted and stored in a data frame: 
+%
+\begin{lstlisting}
+	easiness <- data.frame(
+	stimuli = rownames(coef(a2)$stimuli),
+	easiness = coef(a2)$subject[, 1] # select only the random 
+	)			# intercept estimates
+	
+\end{lstlisting}
+
+\textbf{Model 3} results in condition--specific respondents ability parameters and overall stimuli easiness parameters. 
+Respondents' condition--specific ability parameters can be extracted as follows: 
+%
+\begin{lstlisting}
+	cond_ability <- coef(a3)$subject[, -1] # drop the first column 
+				# (fixed intercepts set at 0)
+\end{lstlisting}
+
+Stimuli easiness parameters can be extracted and stored in a data frame as well: 
+%
+\begin{lstlisting}
+	easiness <- data.frame(
+	stimuli = rownames(coef(a3)$stimuli),
+	easiness = coef(a3)$stimuli[, 1] # select only the random
+	)			# intercept estimates
+	
+\end{lstlisting}
+
+\section{Log-time models specification}
+
+The code for the estimation of the log-time models is the same as the one used for the estimation of the accuracy models. The changes concern the name of the specific function to use (from \texttt{glmer()} to \texttt{lmer()}) and the dependent variable (from \texttt{correct} to \texttt{log(latency)}). 
+Consistently, the code for extracting the log-normal model estimates from the log-time models is the same as that used for extracting the Rasch model estimates from the accuracy models.
+For these reasons, only the code for the estimation of Model 3 and the related code for extracting the log-normal model estimates are reported.
+
+Model 3 can be estimated as follows: 
+%
+\begin{lstlisting}
+	t3 <- lmer(log(seconds) ~ 0 + condition + (1|stimuli) + 
+		(0 + condition|subject),
+		data = data,
+		REML = FALSE) # Maximum Likelihood estimation
+	summary(t3) # summary of the results
+\end{lstlisting}
+%
+For the comparison between log-time models, the same code as the one used for accuracy models comparison can be employed. 
+The names of the objects containing the models have to be changed accordingly, in this case from \texttt{a} to \texttt{t}.
+
+\subsection{Log-normal model parameters}
+	
+The code for extracting the log-normal model parameters from log-time Model 3 is reported. 
+The same code used for extracting the parameters for the accuracy models can be employed for extracting the parameters of the log-normal models. 
+The changes regard the name of the objects containing the models, from \texttt{a} to \texttt{t}, and the names of the new objects created for the parameters (e.g., from \texttt{easiness} to \texttt{intensity}).
+
+Respondents' condition--specific parameters can be obtained as follows: 
+%
+\begin{lstlisting}
+	cond_speed <- coef(t3)$subject[, -1] # drop the first column 
+					# (fixed interceptse set at 0)
+\end{lstlisting}
+
+Stimuli overall time intensity parameters can be obtained as follows: 
+%
+\begin{lstlisting}
+	intensity <- data.frame(
+		stimuli = rownames(coef(t3)$stimuli),
+		intensity = coef(t3)$stimuli[, 1] # select only the random
+	)				# intercept estimates
+\end{lstlisting}	
+
+
+\newpage
+%\bibliographystyle{apacite} 
+%\bibliography{biblioTesi}
+\end{document}
