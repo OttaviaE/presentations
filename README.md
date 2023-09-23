@@ -31,10 +31,10 @@ This repository hosts the PDF of my presentations at different National and Inte
 - AIP 2020, Online: [Non separare dopo quello che hai somministrato insieme prima: Un approccio misto per l'analisi congiunta delle misure implicite](2020/EpifaniaSimposioS4.pdf)
 - Cognitive Science Arena (CSA), Bressanone-Brixen (IT): [Filling the gap between implicit and behavior: A Rasch modeling of the Implicit Association Test](2020/brixen.pdf) **Third position as best presentation**
 
-  ## 2019
+## 2019
 
-  - AIP 2019, Milano San Raffaele (IT): [DscoreApp: Una Shiny Web application per il calcolo del *D* score](2019/aip_slides.html)
+- AIP 2019, Milano San Raffaele (IT): [DscoreApp: Una Shiny Web application per il calcolo del *D* score](2019/aip_slides.html)
 
-  ## 2018
+## 2018
 
-  - Meeting of the European Meeting of the Mathematical Psychology Group 2018, Genova (IT): [Rasch gone mixed: A mixed model approach the Implicit Association Test Responses](2018/empg2018.pdf)
+- Meeting of the European Meeting of the Mathematical Psychology Group 2018, Genova (IT): [Rasch gone mixed: A mixed model approach the Implicit Association Test Responses](2018/empg2018.pdf)
