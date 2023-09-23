@@ -1,7 +1,7 @@
 # Ottavia M. Epifania, Ph.D. 
 
-This repository hosts the PDF of my presentations at different National and International conferences. You can also find my updated [CV](cv/Epifania-CV.pdf) and my PhD thesis.
-]
+This repository hosts the PDF of my presentations at different National and International conferences. You can also find my updated [CV](cv/Epifania-CV.pdf) and my [PhD thesis](EpifaniaPhDThesis.pdf).
+
 ## 2023
  - Meeting of the European Group of Mathematical Psychology 2023, Amsterdam (NL): [matriKS: An R package for rule-based automatic generation of Raven-like matrices](empg2023/empg2023-Epifania.pdf)
  - Meeting of the Association of Applied Statistics (ASA) 2023, Bologna (IT): [Cut it short: A new item response theory-based approach for shortening tests](Bologna2023/Cut-it-short.pdf)
@@ -20,6 +20,10 @@ This repository hosts the PDF of my presentations at different National and Inte
 
 ## 2021
 
+- AIP 2021, Lecce-Ibrido 2021 (IT):
+     - [Less is more; Una procedura Item Response Theory per lo sviluppo di forme brevi di test](2021/Less is more.pdf)
+     - [Risposta sbagliata! Un'analisi di Rasch per la valutazione dell'effetto del feedback sulla perfomance all'Implicit Association Test](2021/Risposta sbagliata!.pdf)
+
 ## 2020 
 
 - Shiny demo @ eRum2020 (Online): [Scoring the Implicit Association Test has never been easier: DscoreApp](https://github.com/OttaviaE/eRum2020/blob/master/eRumShinyDemo-Epifania.Rmd)
@@ -28,6 +32,8 @@ This repository hosts the PDF of my presentations at different National and Inte
 - Cognitive Science Arena (CSA), Bressanone-Brixen (IT): [Filling the gap between implicit and behavior: A Rasch modeling of the Implicit Association Test](2020/brixen.pdf) **Third position as best presentation**
 
   ## 2019
+
+  - AIP 2019, Milano San Raffaele (IT): [DscoreApp: Una Shiny Web application per il calcolo del *D* score](2019/aip_slides.html)
 
   ## 2018
 
