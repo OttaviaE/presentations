@@ -21,8 +21,8 @@ This repository hosts the PDF of my presentations at different National and Inte
 ## 2021
 
 - AIP 2021, Lecce-Ibrido 2021 (IT):
-     - [Less is more; Una procedura Item Response Theory per lo sviluppo di forme brevi di test](2021/Less is more.pdf)
-     - [Risposta sbagliata! Un'analisi di Rasch per la valutazione dell'effetto del feedback sulla perfomance all'Implicit Association Test](2021/Risposta sbagliata!.pdf)
+     - [Less is more; Una procedura Item Response Theory per lo sviluppo di forme brevi di test](2021/Less-is-more.pdf)
+     - [Risposta sbagliata! Un'analisi di Rasch per la valutazione dell'effetto del feedback sulla perfomance all'Implicit Association Test](2021/Risposta-sbagliata!.pdf)
 
 ## 2020 
 
