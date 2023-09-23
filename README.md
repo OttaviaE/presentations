@@ -1,6 +1,6 @@
 # Ottavia M. Epifania, Ph.D. 
 
-This repository hosts the PDF of my presentations at different National and International conferences. You can also find my updated [CV](cv/Epifania-CV.pdf) and my [PhD thesis](EpifaniaPhDThesis.pdf).
+This repository hosts the PDF of my presentations at different National and International conferences. You can also find my updated [CV](cv/Epifania-CV.pdf) and my [PhD thesis](PhD-Thesis/EpifaniaPhDThesis.pdf).
 
 ## 2023
  - Meeting of the European Group of Mathematical Psychology 2023, Amsterdam (NL): [matriKS: An R package for rule-based automatic generation of Raven-like matrices](empg2023/empg2023-Epifania.pdf)
