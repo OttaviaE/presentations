@@ -1,0 +1,291 @@
+\documentclass[compress]{beamer}
+\usetheme{metropolis}
+\usepackage{multicol}
+\usecolortheme{dove}
+\useinnertheme{rounded}
+\useoutertheme{smoothbars}
+\usepackage{graphicx}
+\setbeamertemplate{navigation symbols}{}
+\setbeamersize{text margin left=5mm,text margin right=5mm} 
+\setbeamercolor{subsection name}{fg=white}
+\setbeamercolor{section name}{fg=white}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{spot}
+\usepackage{tikzsymbols}
+\usetikzlibrary{mindmap,calc,patterns,decorations.pathmorphing,decorations.markings, arrows, shapes.arrows, shapes, backgrounds}
+
+  \tikzset{
+	invisible/.style={opacity=0},
+	visible on/.style={alt={#1{}{invisible}}},
+	alt/.code args={<#1>#2#3}{%
+		\alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}} % \pgfkeysalso doesn't change the path
+	},
+	every overlay node/.style={
+		%draw=black,fill=white,rounded corners,
+		anchor=north west, inner sep=0pt,
+	},
+}
+
+ \title[]{When randomness opens new possibilities: Acknowledging the stimulus sampling variability in Experimental Psychology}
+\vspace{-1.5mm}\author[OME, PA, ER]{ Ottavia M. Epifania\textsuperscript{1,2,3}, Pasquale Anselmi\textsuperscript{1}, Egidio Robusto\textsuperscript{1}\\ \texttt{ottavia.epifania@unipd.it}}
+\institute[]{\small \textsuperscript{1} University of Padova (IT) \\
+\textsuperscript{2} Psicostat Group \\
+\textsuperscript{3} Catholic Univerisity of the Sacred Heart, Milan (IT) \\}
+\vspace*{-5mm}
+\date[CMS Conference]{\footnotesize Conference CMS Berlin \\ December 16}
+\titlegraphic{\vspace{-5mm}%
+	\includegraphics[width=1.5cm,height=1.5cm,keepaspectratio]{img/unipd.png}%\hspace*{9.75cm}~%
+	\includegraphics[width=2cm,height=2cm,keepaspectratio]{img/psicostat.png}%
+	\includegraphics[width=1.5cm,height=1.5cm,keepaspectratio]{img/unicatt.png}%
+}
+
+\definecolor{back}{RGB}{247, 251, 255}
+\definecolor{map}{RGB}{111, 172, 232}
+\definecolor{childmap}{RGB}{161, 200, 240}
+\definecolor{nodemap}{RGB}{141, 170, 199}
+\definecolor{rasch}{rgb}{0.0, 0.33, 0.71}
+\definecolor{log}{rgb}{0.0, 0.65, 0.58}
+\definecolor{diff}{RGB}{33, 113, 181}
+\definecolor{single}{RGB}{106, 81, 163}
+\definecolor{comp}{RGB}{35, 99, 70}
+\definecolor{inc}{RGB}{191, 13, 43}
+\definecolor{highlight}{rgb}{0.45, 0.31, 0.59}
+\definecolor{section}{RGB}{51,51,179}
+\definecolor{typical}{RGB}{8, 69, 148}
+\definecolor{model}{RGB}{74, 20, 134}
+\definecolor{orangered2}{RGB}{238,64,0}
+\definecolor{royalblue3}{RGB}{58,95,205}
+\definecolor{springgreen}{RGB}{0,205,102}
+\definecolor{magenta}{RGB}{255,0,255}
+\def\tikzoverlay{%
+	\tikz[remember picture, overlay]\node[every overlay node]
+}%
+
+\AtBeginSubsection{\frame{\subsectionpage}}
+ 
+\setbeamertemplate{subsection page}
+{
+	\begingroup
+	\begin{beamercolorbox}[sep=12pt,center]{section title}
+		\usebeamerfont{section title}\insertsection\par
+	\end{beamercolorbox}
+	\vspace*{5pt}
+	\begin{beamercolorbox}[sep=8pt,center]{subsection title}
+		\usebeamerfont{subsection title}\insertsubsection\par
+	\end{beamercolorbox}
+	\endgroup
+}
+
+\begin{document}
+\begin{frame}[plain]
+%    \maketitle
+\begin{center}
+	\large \bfseries When randomness opens new possibilities: \\ Acknowledging the stimulus sampling variability in Experimental Psychology
+\end{center}
+
+\vspace{2.5mm}
+\begin{center}
+	\textbf{Ottavia M. Epifania}\textsuperscript{1,2,3}, Pasquale Anselmi\textsuperscript{1}, Egidio Robusto\textsuperscript{1}
+	
+	\vspace{1.5mm}
+	\small \textsuperscript{1} University of Padova (IT) \\
+	\textsuperscript{2} Psicostat Group \\
+	\textsuperscript{3} Catholic Univerisity of the Sacred Heart, Milan (IT) \\
+\end{center}
+
+\vspace{5mm}
+\begin{columns}[T]
+\begin{column}{.33\linewidth}
+	\centering 	\includegraphics[width=1.5cm,height=1.5cm,keepaspectratio]{img/unipd.png}
+\end{column}
+\begin{column}{.33\linewidth}
+ \centering \includegraphics[width=2.5cm,height=2.5cm,keepaspectratio]{img/psicostat.png}
+\end{column}
+\begin{column}{.33\linewidth}
+	\centering  \includegraphics[width=1.5cm,height=1.5cm,keepaspectratio]{img/unicatt.png}
+\end{column}
+\end{columns}
+
+
+\end{frame}
+
+
+
+\section{Introduction}
+
+\subsection{Stimuli are fixed, respondents are random}
+
+\subsection{What if}
+
+
+
+\begin{frame}{Generalized linear model for dichotomous responses}
+	
+	\begin{figure}
+		\begin{overprint}
+			\onslide<1>\includegraphics[width=0.7\linewidth]{img/baseGLM.pdf}
+			\onslide<2>\includegraphics[width=0.7\linewidth]{img/linkGLM.pdf}
+		\end{overprint}
+	\end{figure}
+	
+	\onslide<2->
+	\tikzoverlay (n1) at (8cm, 5.6cm){%
+		\begin{minipage}{0.7\linewidth}
+			
+			\emph{Logit link function g}
+			
+			$g(\eta_{ps}) = log\left(\frac{\mu_{ps}}{1 - \mu_{ps}}\right)$
+			
+			\vspace{5mm}
+			
+			\emph{Inverse} $g^{-1}$
+			
+			\vspace{5mm}
+			
+			$g^{-1} = \frac{exp(\eta_{ps})}{1 + exp(\eta_{ps})} $
+			
+			\vspace{1.5mm}
+		%	where $\eta_{ps} = \theta_p + b_s$
+		\end{minipage}
+	}; 
+	
+\end{frame}
+
+\begin{frame}{Random effects and random factors}
+	Linear component in a (G)LM: 
+	\begin{equation}
+		\eta = \beta X,
+	\end{equation}
+	where $\beta$ indicates the coefficients of the fixed intercept and slope(s), and $X$ is the model-matrix.
+	
+	Linear components in a (Generalized) Linear Mixed-Effects Model (GLMM): 
+	
+	\begin{equation}
+		\eta = \beta X \, Zd,
+	\end{equation}
+	where $Z$ is the matrix and $d$ is the vector of the random effects (not parameters!)
+	
+	\onslide<2->
+	
+	\vspace{2.5mm}
+	\begin{center}
+		\emph{Best Linear Unbiased Predictors}
+	\end{center}
+\end{frame}
+
+\begin{frame}{The Rasch model}
+	\begin{equation*}
+		P(x_{ps} = 1| \theta_p, b_s) = \dfrac{\exp( \theta_p - b_s)}{1 + \exp(\theta_p - b_s)}
+	\end{equation*}
+	where: 
+	
+	$\theta_p$: ability of respondent $p$ (i.e., latent trait level of respondent $p$)\\
+	$b_s$: difficulty of stimulus $s$ (i.e., "challenging" power of stimulus $s$)\\
+	
+	\vspace{2.5mm}
+	\onslide<2-> 
+	\begin{columns}[T] % align columns
+		\begin{column}{.50\linewidth}
+			\textcolor{diff}{\rule{\linewidth}{2pt}}
+			\begin{center}
+				\textcolor{diff}{	\large{{Standard}}}
+			\end{center}
+			
+		\end{column}
+		
+		\hfill%
+		\begin{column}{.50\linewidth}
+			\textcolor{single}{\rule{\linewidth}{2pt}}
+			\begin{center}
+				\textcolor{single}{\large{{GLM}}}	
+			\end{center}
+			
+		\end{column}%
+	\end{columns}
+	
+	\vspace{2.5mm}
+	\begin{columns}[T]
+		\begin{column}{.50\linewidth}
+			\vspace*{2.5mm}
+			$P(x_{ps} = 1) = \displaystyle \frac{\exp(\theta_p \spot<3-3>[fill=rasch!50]{-} b_s)}{1 + \exp(\theta_p \spot<3-3>[fill=rasch!50]{-} b_s)}$
+		\end{column}
+		\hfill
+		
+		\begin{column}{.50\linewidth}
+			
+			
+			\vspace*{2.5mm}
+			$P(x_{ps} = 1) = \displaystyle \frac{\exp(\theta_p \, \spot<3-3>[fill=rasch!50]{+} \, b_s)}{1 + \exp(\theta_p \, \spot<3-3>[fill=rasch!50]{+} \, b_s)}$
+		\end{column}
+	\end{columns}	
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Method}
+	
+	\vspace{-0.7cm}
+	
+	\begin{block}{}
+		\centering{\textbf{Stimuli: }
+			
+			12 Object stimuli}
+		
+		
+		\begin{columns}
+			\column{.50\linewidth}
+			\textbf{\includegraphics[width=\linewidth]{img/white.png}}
+			
+			\column{.50\linewidth}
+			\textbf{\includegraphics[width=\linewidth]{img/black.png}}
+		\end{columns}
+		
+		\vspace{1.2mm}
+		
+	16 Attributes (\textcolor{magenta}{Good, laughter, pleasure, glory, peace, happy, joy, love and} and \textcolor{springgreen}{Evil, bad, horrible, terrible, nasty, pain, failure, hate})
+		
+	\end{block}
+	
+	\vspace{1.2mm}
+	Participants: 62 (F $=48.39$\%, Age = $24.92\pm2.11$ years)
+
+	\textbf{Conditions:}\\
+	\small
+	WGBB: White-Good/Black-Bad, 60 trials
+	
+	BGWB: Black-Good/White-Bad, 60 trials
+	
+\end{frame}
+
+\begin{frame}{Condition--specific easiness}
+	
+	\vspace{7mm}
+	\begin{columns}
+		
+		\column{.55\linewidth}
+		\centering{\textcolor{comp}{\textsc{High contribution stimuli}}}
+		
+		\vspace{5mm}
+		\onslide<1->\includegraphics[width=\textwidth]{img/RaceHigh.pdf}
+		
+		\column{.55\linewidth}
+		\centering{\textcolor{inc}{\textsc{Low contribution stimuli}}}
+		
+		\vspace{5mm}
+		\onslide<1->\includegraphics[width=\textwidth]{img/RaceLow.pdf}
+	\end{columns}
+	\tikzoverlay (n1) at (7.cm, 5.3cm){%
+		\begin{minipage}{0.12\linewidth}
+			\centering	\includegraphics[width=0.65\linewidth]{img/wm1.jpg}
+		\end{minipage}
+	}; %
+	\tikzoverlay (n2) at (10cm, 5.3cm){%
+		\begin{minipage}{0.12\linewidth}
+			\centering	\includegraphics[width=0.65\linewidth]{img/bf56.jpg}
+		\end{minipage}
+	}; %
+	%\vspace{\fill}
+\end{frame}
+\end{document}

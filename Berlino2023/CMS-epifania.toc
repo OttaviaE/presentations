@@ -1,0 +1,3 @@
+\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
+\beamer@subsectionintoc {1}{1}{Stimuli are fixed, respondents are random}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{What if}{4}{0}{1}
