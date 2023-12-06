@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.26)  2 DEC 2023 11:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.26)  6 DEC 2023 14:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -764,162 +764,39 @@ default.sty
 )
 (C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beameroutertheme
 default.sty)))
-(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamertheme-metropolis\
-beamerthememetropolis.sty
-Package: beamerthememetropolis 2017/01/23 v1.2 Metropolis Beamer theme
-
-(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/pgfopts\pgfopts.sty
-Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
-\pgfopts@list@add@a@toks=\toks46
-\pgfopts@list@add@b@toks=\toks47
-)
-(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamertheme-metropolis\
-beamerinnerthememetropolis.sty
-Package: beamerinnerthememetropolis 2017/01/23 Metropolis inner theme
-
-(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
-Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count335
-\calc@Bcount=\count336
-\calc@Adimen=\dimen294
-\calc@Bdimen=\dimen295
-\calc@Askip=\skip65
-\calc@Bskip=\skip66
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count337
-\calc@Cskip=\skip67
-)
-(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.
-sty
-(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
-Package: pgf 2023-01-15 v3.1.10 (3.1.10)
-
-(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
-shapes.code.tex
-File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodeparttextbox=\box76
-)
-(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
-plot.code.tex
-File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)
-(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
-mp-version-0-65.sty
-Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
-\pgf@nodesepstart=\dimen296
-\pgf@nodesepend=\dimen297
-)
-(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
-mp-version-1-18.sty
-Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
-))
-(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.st
-y
-(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.
-code.tex
-Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
-\pgffor@iter=\dimen298
-\pgffor@skip=\dimen299
-\pgffor@stack=\toks48
-\pgffor@toks=\toks49
-))
-(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
-z\tikz.code.tex
-Package: tikz 2023-01-15 v3.1.10 (3.1.10)
-
-(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
-aryplothandlers.code.tex
-File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count338
-\pgfplotmarksize=\dimen300
-)
-\tikz@lastx=\dimen301
-\tikz@lasty=\dimen302
-\tikz@lastxsaved=\dimen303
-\tikz@lastysaved=\dimen304
-\tikz@lastmovetox=\dimen305
-\tikz@lastmovetoy=\dimen306
-\tikzleveldistance=\dimen307
-\tikzsiblingdistance=\dimen308
-\tikz@figbox=\box77
-\tikz@figbox@bg=\box78
-\tikz@tempbox=\box79
-\tikz@tempbox@bg=\box80
-\tikztreelevel=\count339
-\tikznumberofchildren=\count340
-\tikznumberofcurrentchild=\count341
-\tikz@fig@count=\count342
-
-(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
-matrix.code.tex
-File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count343
-\pgfmatrixcurrentcolumn=\count344
-\pgf@matrix@numberofcolumns=\count345
-)
-\tikz@expandcount=\count346
-
-(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
-z/libraries\tikzlibrarytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)))
-\metropolis@titleseparator@linewidth=\skip68
-\metropolis@progressonsectionpage=\skip69
-\metropolis@progressonsectionpage@linewidth=\skip70
-\metropolis@blocksep=\skip71
-\metropolis@blockadjust=\skip72
-\metropolis@parskip=\skip73
-)
-(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamertheme-metropolis\
-beamerouterthememetropolis.sty
-Package: beamerouterthememetropolis 2017/01/23 Metropolis outer theme
-\metropolis@frametitle@padding=\skip74
-\metropolis@progressinheadfoot=\skip75
-\metropolis@progressinheadfoot@linewidth=\skip76
-)
-(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamertheme-metropolis\
-beamercolorthememetropolis.sty
-Package: beamercolorthememetropolis 2017/01/23 Metropolis color theme
-)
-(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamertheme-metropolis\
-beamerfontthememetropolis.sty
-Package: beamerfontthememetropolis 2017/01/23 Metropolis font theme
-
-(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifxetex.sty
-Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
-)
-(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifluatex.sty
-Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
-)
-
-Package beamerthememetropolis Warning: You need to compile with XeLaTeX or LuaL
-aTeX to use the Fira fonts on input line 95.
-
-)) (C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerthemeMontp
+ellier.sty
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beameroutertheme
+tree.sty))
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
 Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
-\c@tracingmulticols=\count347
-\mult@box=\box81
-\multicol@leftmargin=\dimen309
-\c@unbalance=\count348
-\c@collectmore=\count349
-\doublecol@number=\count350
-\multicoltolerance=\count351
-\multicolpretolerance=\count352
-\full@width=\dimen310
-\page@free=\dimen311
-\premulticols=\dimen312
-\postmulticols=\dimen313
-\multicolsep=\skip77
-\multicolbaselineskip=\skip78
-\partial@page=\box82
-\last@line=\box83
-\mc@boxedresult=\box84
-\maxbalancingoverflow=\dimen314
-\mult@rightbox=\box85
-\mult@grightbox=\box86
-\mult@firstbox=\box87
-\mult@gfirstbox=\box88
+\c@tracingmulticols=\count335
+\mult@box=\box76
+\multicol@leftmargin=\dimen294
+\c@unbalance=\count336
+\c@collectmore=\count337
+\doublecol@number=\count338
+\multicoltolerance=\count339
+\multicolpretolerance=\count340
+\full@width=\dimen295
+\page@free=\dimen296
+\premulticols=\dimen297
+\postmulticols=\dimen298
+\multicolsep=\skip65
+\multicolbaselineskip=\skip66
+\partial@page=\box77
+\last@line=\box78
+\mc@boxedresult=\box79
+\maxbalancingoverflow=\dimen299
+\mult@rightbox=\box80
+\mult@grightbox=\box81
+\mult@firstbox=\box82
+\mult@gfirstbox=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
 \@tempa=\box89
 \@tempa=\box90
 \@tempa=\box91
@@ -951,20 +828,15 @@ Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
 \@tempa=\box117
 \@tempa=\box118
 \@tempa=\box119
-\@tempa=\box120
-\@tempa=\box121
-\@tempa=\box122
-\@tempa=\box123
-\@tempa=\box124
-\c@minrows=\count353
-\c@columnbadness=\count354
-\c@finalcolumnbadness=\count355
-\last@try=\dimen315
-\multicolovershoot=\dimen316
-\multicolundershoot=\dimen317
-\mult@nat@firstbox=\box125
-\colbreak@box=\box126
-\mc@col@check@num=\count356
+\c@minrows=\count341
+\c@columnbadness=\count342
+\c@finalcolumnbadness=\count343
+\last@try=\dimen300
+\multicolovershoot=\dimen301
+\multicolundershoot=\dimen302
+\mult@nat@firstbox=\box120
+\colbreak@box=\box121
+\mc@col@check@num=\count344
 )
 (C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamercolortheme
 dove.sty)
@@ -972,21 +844,95 @@ dove.sty)
 rounded.sty)
 (C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beameroutertheme
 smoothbars.sty)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.
+sty
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+shapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box122
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+plot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen303
+\pgf@nodesepend=\dimen304
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.st
+y
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.
+code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen305
+\pgffor@skip=\dimen306
+\pgffor@stack=\toks46
+\pgffor@toks=\toks47
+))
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z\tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count345
+\pgfplotmarksize=\dimen307
+)
+\tikz@lastx=\dimen308
+\tikz@lasty=\dimen309
+\tikz@lastxsaved=\dimen310
+\tikz@lastysaved=\dimen311
+\tikz@lastmovetox=\dimen312
+\tikz@lastmovetoy=\dimen313
+\tikzleveldistance=\dimen314
+\tikzsiblingdistance=\dimen315
+\tikz@figbox=\box123
+\tikz@figbox@bg=\box124
+\tikz@tempbox=\box125
+\tikz@tempbox@bg=\box126
+\tikztreelevel=\count346
+\tikznumberofchildren=\count347
+\tikznumberofcurrentchild=\count348
+\tikz@fig@count=\count349
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+matrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count350
+\pgfmatrixcurrentcolumn=\count351
+\pgf@matrix@numberofcolumns=\count352
+)
+\tikz@expandcount=\count353
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
 (C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/textpos\textpos.sty
 Package: textpos 2022/07/23 v1.10.1
 Package textpos Info: choosing support for LaTeX3 on input line 60.
 \TP@textbox=\box127
 \TP@holdbox=\box128
-\TPHorizModule=\dimen318
-\TPVertModule=\dimen319
-\TP@margin=\dimen320
-\TP@absmargin=\dimen321
+\TPHorizModule=\dimen316
+\TPVertModule=\dimen317
+\TP@margin=\dimen318
+\TP@absmargin=\dimen319
 
 Grid set 16 x 16 = 22.7622pt x 17.07166pt
-\TPboxrulesize=\dimen322
-\TP@ox=\dimen323
-\TP@oy=\dimen324
-\TP@tbargs=\toks50
+\TPboxrulesize=\dimen320
+\TP@ox=\dimen321
+\TP@oy=\dimen322
+\TP@tbargs=\toks48
 TextBlockOrigin set to 0pt x 0pt
 ) (C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/spot\spot.sty
 Package: spot 2011/05/09 v1.1 Spotlight highlighting
@@ -1067,7 +1013,7 @@ File: tikzlibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
 aryfadings.code.tex
 File: pgflibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))
-\c@spot@spots=\count357
+\c@spot@spots=\count354
 )
 (C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/tikzsymbols\tikzsymbols
 .sty
@@ -1079,7 +1025,7 @@ Package: expl3 2023-11-09 L3 programming layer (loader)
 (C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2023-11-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count358
+\l__color_backend_stack_int=\count355
 \l__pdf_internal_box=\box149
 ))
 Package: xparse 2023-10-10 L3 Experimental document command parser
@@ -1101,7 +1047,7 @@ File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
 aryarrows.code.tex
 File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\arrowsize=\dimen325
+\arrowsize=\dimen323
 ))
 (C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z/libraries\tikzlibrarydecorations.pathmorphing.code.tex
@@ -1109,14 +1055,14 @@ z/libraries\tikzlibrarydecorations.pathmorphing.code.tex
 z/libraries\tikzlibrarydecorations.code.tex
 (C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 decorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen326
-\pgfdecoratedremainingdistance=\dimen327
-\pgfdecoratedinputsegmentcompleteddistance=\dimen328
-\pgfdecoratedinputsegmentremainingdistance=\dimen329
-\pgf@decorate@distancetomove=\dimen330
-\pgf@decorate@repeatstate=\count359
-\pgfdecorationsegmentamplitude=\dimen331
-\pgfdecorationsegmentlength=\dimen332
+\pgfdecoratedcompleteddistance=\dimen324
+\pgfdecoratedremainingdistance=\dimen325
+\pgfdecoratedinputsegmentcompleteddistance=\dimen326
+\pgfdecoratedinputsegmentremainingdistance=\dimen327
+\pgf@decorate@distancetomove=\dimen328
+\pgf@decorate@repeatstate=\count356
+\pgfdecorationsegmentamplitude=\dimen329
+\pgfdecorationsegmentlength=\dimen330
 )
 \tikz@lib@dec@box=\box150
 )
@@ -1126,88 +1072,88 @@ ions\pgflibrarydecorations.pathmorphing.code.tex))
 z/libraries\tikzlibrarytrees.code.tex
 File: tikzlibrarytrees.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-\l__tikzsymbols_Moai_thickness_dim=\dimen333
-\l__tikzsymbols_Kochtopf_nr_arguments_int=\count360
-\l__tikzsymbols_Bratpfanne_nr_arguments_int=\count361
-\l__tikzsymbols_Schneebesen_nr_arguments_int=\count362
-\l__tikzsymbols_Sieb_nr_arguments_int=\count363
-\l__tikzsymbols_Purierstab_nr_arguments_int=\count364
-\l__tikzsymbols_Dreizack_nr_arguments_int=\count365
-\l__tikzsymbols_Backblech_nr_arguments_int=\count366
-\l__tikzsymbols_Ofen_nr_arguments_int=\count367
-\l__tikzsymbols_Pfanne_nr_arguments_int=\count368
-\l__tikzsymbols_Herd_nr_arguments_int=\count369
-\l__tikzsymbols_Saftpresse_nr_arguments_int=\count370
-\l__tikzsymbols_Schussel_nr_arguments_int=\count371
-\l__tikzsymbols_Schaler_nr_arguments_int=\count372
-\l__tikzsymbols_Reibe_nr_arguments_int=\count373
-\l__tikzsymbols_Flasche_nr_arguments_int=\count374
-\l__tikzsymbols_Nudelholz_nr_arguments_int=\count375
-\l__tikzsymbols_Knoblauchpresse_nr_arguments_int=\count376
-\l__tikzsymbols_Sadey_nr_arguments_int=\count377
-\l__tikzsymbols_dSadey_nr_arguments_int=\count378
-\l__tikzsymbols_Changey_nr_arguments_int=\count379
-\l__tikzsymbols_dChangey_nr_arguments_int=\count380
-\l__tikzsymbols_cChangey_nr_arguments_int=\count381
-\l__tikzsymbols_dcChangey_nr_arguments_int=\count382
-\l__tikzsymbols_Annoey_nr_arguments_int=\count383
-\l__tikzsymbols_dAnnoey_nr_arguments_int=\count384
-\l__tikzsymbols_Smiley_nr_arguments_int=\count385
-\l__tikzsymbols_dSmiley_nr_arguments_int=\count386
-\l__tikzsymbols_Laughey_nr_arguments_int=\count387
-\l__tikzsymbols_dLaughey_nr_arguments_int=\count388
-\l__tikzsymbols_Neutrey_nr_arguments_int=\count389
-\l__tikzsymbols_dNeutrey_nr_arguments_int=\count390
-\l__tikzsymbols_Winkey_nr_arguments_int=\count391
-\l__tikzsymbols_oldWinkey_nr_arguments_int=\count392
-\l__tikzsymbols_dWinkey_nr_arguments_int=\count393
-\l__tikzsymbols_olddWinkey_nr_arguments_int=\count394
-\l__tikzsymbols_Sey_nr_arguments_int=\count395
-\l__tikzsymbols_dSey_nr_arguments_int=\count396
-\l__tikzsymbols_Xey_nr_arguments_int=\count397
-\l__tikzsymbols_dXey_nr_arguments_int=\count398
-\l__tikzsymbols_Innocey_nr_arguments_int=\count399
-\l__tikzsymbols_wInnocey_nr_arguments_int=\count400
-\l__tikzsymbols_dInnocey_nr_arguments_int=\count401
-\l__tikzsymbols_Cooley_nr_arguments_int=\count402
-\l__tikzsymbols_dCooley_nr_arguments_int=\count403
-\l__tikzsymbols_Tongey_nr_arguments_int=\count404
-\l__tikzsymbols_dTongey_nr_arguments_int=\count405
-\l__tikzsymbols_Nursey_nr_arguments_int=\count406
-\l__tikzsymbols_dNursey_nr_arguments_int=\count407
-\l__tikzsymbols_Vomey_nr_arguments_int=\count408
-\l__tikzsymbols_dVomey_nr_arguments_int=\count409
-\l__tikzsymbols_Walley_nr_arguments_int=\count410
-\l__tikzsymbols_rWalley_nr_arguments_int=\count411
-\l__tikzsymbols_dWalley_nr_arguments_int=\count412
-\l__tikzsymbols_drWalley_nr_arguments_int=\count413
-\l__tikzsymbols_Cat_nr_arguments_int=\count414
-\l__tikzsymbols_SchrodingersCat_nr_arguments_int=\count415
-\l__tikzsymbols_Ninja_nr_arguments_int=\count416
-\l__tikzsymbols_dNinja_nr_arguments_int=\count417
-\l__tikzsymbols_Sleepey_nr_arguments_int=\count418
-\l__tikzsymbols_dSleepey_nr_arguments_int=\count419
-\l__tikzsymbols_Maskey_nr_arguments_int=\count420
-\l__tikzsymbols_NiceReapey_nr_arguments_int=\count421
-\l__tikzsymbols_Strichmaxerl_nr_arguments_int=\count422
-\l__tikzsymbols_Person_nr_arguments_int=\count423
-\l__tikzsymbols_Heart_nr_arguments_int=\count424
-\l__tikzsymbols_dHeart_nr_arguments_int=\count425
-\l__tikzsymbols_HeartBroken_nr_arguments_int=\count426
-\l__tikzsymbols_Candle_nr_arguments_int=\count427
-\l__tikzsymbols_Fire_nr_arguments_int=\count428
-\l__tikzsymbols_Coffeecup_nr_arguments_int=\count429
-\l__tikzsymbols_Chair_nr_arguments_int=\count430
-\l__tikzsymbols_Bed_nr_arguments_int=\count431
-\l__tikzsymbols_Tribar_nr_arguments_int=\count432
-\l__tikzsymbols_Moai_nr_arguments_int=\count433
-\l__tikzsymbols_Snowman_nr_arguments_int=\count434
-\l__tikzsymbols_BasicTree_nr_arguments_int=\count435
-\l__tikzsymbols_WorstTree_nr_arguments_int=\count436
-\l__tikzsymbols_Springtree_nr_arguments_int=\count437
-\l__tikzsymbols_Summertree_nr_arguments_int=\count438
-\l__tikzsymbols_Autumntree_nr_arguments_int=\count439
-\l__tikzsymbols_Wintertree_nr_arguments_int=\count440
+\l__tikzsymbols_Moai_thickness_dim=\dimen331
+\l__tikzsymbols_Kochtopf_nr_arguments_int=\count357
+\l__tikzsymbols_Bratpfanne_nr_arguments_int=\count358
+\l__tikzsymbols_Schneebesen_nr_arguments_int=\count359
+\l__tikzsymbols_Sieb_nr_arguments_int=\count360
+\l__tikzsymbols_Purierstab_nr_arguments_int=\count361
+\l__tikzsymbols_Dreizack_nr_arguments_int=\count362
+\l__tikzsymbols_Backblech_nr_arguments_int=\count363
+\l__tikzsymbols_Ofen_nr_arguments_int=\count364
+\l__tikzsymbols_Pfanne_nr_arguments_int=\count365
+\l__tikzsymbols_Herd_nr_arguments_int=\count366
+\l__tikzsymbols_Saftpresse_nr_arguments_int=\count367
+\l__tikzsymbols_Schussel_nr_arguments_int=\count368
+\l__tikzsymbols_Schaler_nr_arguments_int=\count369
+\l__tikzsymbols_Reibe_nr_arguments_int=\count370
+\l__tikzsymbols_Flasche_nr_arguments_int=\count371
+\l__tikzsymbols_Nudelholz_nr_arguments_int=\count372
+\l__tikzsymbols_Knoblauchpresse_nr_arguments_int=\count373
+\l__tikzsymbols_Sadey_nr_arguments_int=\count374
+\l__tikzsymbols_dSadey_nr_arguments_int=\count375
+\l__tikzsymbols_Changey_nr_arguments_int=\count376
+\l__tikzsymbols_dChangey_nr_arguments_int=\count377
+\l__tikzsymbols_cChangey_nr_arguments_int=\count378
+\l__tikzsymbols_dcChangey_nr_arguments_int=\count379
+\l__tikzsymbols_Annoey_nr_arguments_int=\count380
+\l__tikzsymbols_dAnnoey_nr_arguments_int=\count381
+\l__tikzsymbols_Smiley_nr_arguments_int=\count382
+\l__tikzsymbols_dSmiley_nr_arguments_int=\count383
+\l__tikzsymbols_Laughey_nr_arguments_int=\count384
+\l__tikzsymbols_dLaughey_nr_arguments_int=\count385
+\l__tikzsymbols_Neutrey_nr_arguments_int=\count386
+\l__tikzsymbols_dNeutrey_nr_arguments_int=\count387
+\l__tikzsymbols_Winkey_nr_arguments_int=\count388
+\l__tikzsymbols_oldWinkey_nr_arguments_int=\count389
+\l__tikzsymbols_dWinkey_nr_arguments_int=\count390
+\l__tikzsymbols_olddWinkey_nr_arguments_int=\count391
+\l__tikzsymbols_Sey_nr_arguments_int=\count392
+\l__tikzsymbols_dSey_nr_arguments_int=\count393
+\l__tikzsymbols_Xey_nr_arguments_int=\count394
+\l__tikzsymbols_dXey_nr_arguments_int=\count395
+\l__tikzsymbols_Innocey_nr_arguments_int=\count396
+\l__tikzsymbols_wInnocey_nr_arguments_int=\count397
+\l__tikzsymbols_dInnocey_nr_arguments_int=\count398
+\l__tikzsymbols_Cooley_nr_arguments_int=\count399
+\l__tikzsymbols_dCooley_nr_arguments_int=\count400
+\l__tikzsymbols_Tongey_nr_arguments_int=\count401
+\l__tikzsymbols_dTongey_nr_arguments_int=\count402
+\l__tikzsymbols_Nursey_nr_arguments_int=\count403
+\l__tikzsymbols_dNursey_nr_arguments_int=\count404
+\l__tikzsymbols_Vomey_nr_arguments_int=\count405
+\l__tikzsymbols_dVomey_nr_arguments_int=\count406
+\l__tikzsymbols_Walley_nr_arguments_int=\count407
+\l__tikzsymbols_rWalley_nr_arguments_int=\count408
+\l__tikzsymbols_dWalley_nr_arguments_int=\count409
+\l__tikzsymbols_drWalley_nr_arguments_int=\count410
+\l__tikzsymbols_Cat_nr_arguments_int=\count411
+\l__tikzsymbols_SchrodingersCat_nr_arguments_int=\count412
+\l__tikzsymbols_Ninja_nr_arguments_int=\count413
+\l__tikzsymbols_dNinja_nr_arguments_int=\count414
+\l__tikzsymbols_Sleepey_nr_arguments_int=\count415
+\l__tikzsymbols_dSleepey_nr_arguments_int=\count416
+\l__tikzsymbols_Maskey_nr_arguments_int=\count417
+\l__tikzsymbols_NiceReapey_nr_arguments_int=\count418
+\l__tikzsymbols_Strichmaxerl_nr_arguments_int=\count419
+\l__tikzsymbols_Person_nr_arguments_int=\count420
+\l__tikzsymbols_Heart_nr_arguments_int=\count421
+\l__tikzsymbols_dHeart_nr_arguments_int=\count422
+\l__tikzsymbols_HeartBroken_nr_arguments_int=\count423
+\l__tikzsymbols_Candle_nr_arguments_int=\count424
+\l__tikzsymbols_Fire_nr_arguments_int=\count425
+\l__tikzsymbols_Coffeecup_nr_arguments_int=\count426
+\l__tikzsymbols_Chair_nr_arguments_int=\count427
+\l__tikzsymbols_Bed_nr_arguments_int=\count428
+\l__tikzsymbols_Tribar_nr_arguments_int=\count429
+\l__tikzsymbols_Moai_nr_arguments_int=\count430
+\l__tikzsymbols_Snowman_nr_arguments_int=\count431
+\l__tikzsymbols_BasicTree_nr_arguments_int=\count432
+\l__tikzsymbols_WorstTree_nr_arguments_int=\count433
+\l__tikzsymbols_Springtree_nr_arguments_int=\count434
+\l__tikzsymbols_Summertree_nr_arguments_int=\count435
+\l__tikzsymbols_Autumntree_nr_arguments_int=\count436
+\l__tikzsymbols_Wintertree_nr_arguments_int=\count437
 )
 (C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z/libraries\tikzlibrarymindmap.code.tex
@@ -1335,17 +1281,17 @@ LaTeX Font Info:    ... okay on input line 81.
 (C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count441
-\scratchdimen=\dimen334
+\scratchcounter=\count438
+\scratchdimen=\dimen332
 \scratchbox=\box153
-\nofMPsegments=\count442
-\nofMParguments=\count443
-\everyMPshowfont=\toks51
-\MPscratchCnt=\count444
-\MPscratchDim=\dimen335
-\MPnumerator=\count445
-\makeMPintoPDFobject=\count446
-\everyMPtoPDFconversion=\toks52
+\nofMPsegments=\count439
+\nofMParguments=\count440
+\everyMPshowfont=\toks49
+\MPscratchCnt=\count441
+\MPscratchDim=\dimen333
+\MPnumerator=\count442
+\makeMPintoPDFobject=\count443
+\everyMPtoPDFconversion=\toks50
 )
 (C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -1459,17 +1405,17 @@ erncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
-<img/unipd.png, id=79, 943.525pt x 949.5475pt>
+<img/unipd.png, id=115, 943.525pt x 949.5475pt>
 File: img/unipd.png Graphic file (type png)
 <use img/unipd.png>
 Package pdftex.def Info: img/unipd.png  used on input line 112.
 (pdftex.def)             Requested size: 42.3992pt x 42.66983pt.
-<img/psicostat.png, id=80, 3635.79607pt x 2727.03926pt>
+<img/psicostat.png, id=116, 3635.79607pt x 2727.03926pt>
 File: img/psicostat.png Graphic file (type png)
 <use img/psicostat.png>
 Package pdftex.def Info: img/psicostat.png  used on input line 112.
 (pdftex.def)             Requested size: 71.12242pt x 53.34557pt.
-<img/unicatt.png, id=82, 225.84375pt x 225.84375pt>
+<img/unicatt.png, id=118, 225.84375pt x 225.84375pt>
 File: img/unicatt.png Graphic file (type png)
 <use img/unicatt.png>
 Package pdftex.def Info: img/unicatt.png  used on input line 112.
@@ -1485,24 +1431,18 @@ ight cause out of memory (use non-interlaced PNG to fix this)
 
 ] [3
 
-] [4
-
 ]
-<img/baseGLM.pdf, id=180, 794.97pt x 614.295pt>
+<img/baseGLM.pdf, id=248, 794.97pt x 614.295pt>
 File: img/baseGLM.pdf Graphic file (type pdf)
 <use img/baseGLM.pdf>
 Package pdftex.def Info: img/baseGLM.pdf  used on input line 154.
 (pdftex.def)             Requested size: 235.01881pt x 181.59976pt.
-<img/linkGLM.pdf, id=181, 794.97pt x 614.295pt>
+<img/linkGLM.pdf, id=249, 794.97pt x 614.295pt>
 File: img/linkGLM.pdf Graphic file (type pdf)
 <use img/linkGLM.pdf>
 Package pdftex.def Info: img/linkGLM.pdf  used on input line 154.
 (pdftex.def)             Requested size: 235.01881pt x 181.59976pt.
-
-Overfull \vbox (10.1911pt too high) detected at line 154
- []
-
-[5
+ [4
 
  <./img/baseGLM.pdf>]
 File: img/baseGLM.pdf Graphic file (type pdf)
@@ -1513,85 +1453,117 @@ File: img/linkGLM.pdf Graphic file (type pdf)
 <use img/linkGLM.pdf>
 Package pdftex.def Info: img/linkGLM.pdf  used on input line 154.
 (pdftex.def)             Requested size: 235.01881pt x 181.59976pt.
-
-Overfull \vbox (10.1911pt too high) detected at line 154
- []
-
-[6
+ [5
 
  <./img/linkGLM.pdf>]
-Overfull \vbox (21.02876pt too high) detected at line 176
- []
+[6
 
-[7
-
-]
-Overfull \vbox (21.02876pt too high) detected at line 176
- []
-
-[8
+] [7
 
 ]
 \spot@box@i=\box154
 \spot@box@ii=\box155
 \spot@box@iii=\box156
 \spot@box@iv=\box157
- [9
+ [8
+
+] [9
 
 ] [10
 
 ] [11
 
 ]
-<img/white.png, id=345, 357.86711pt x 191.55904pt>
+<img/white.png, id=537, 357.86711pt x 191.55904pt>
 File: img/white.png Graphic file (type png)
 <use img/white.png>
-Package pdftex.def Info: img/white.png  used on input line 260.
+Package pdftex.def Info: img/white.png  used on input line 271.
 (pdftex.def)             Requested size: 167.8713pt x 89.85738pt.
-<img/black.png, id=346, 357.86711pt x 191.55904pt>
+<img/black.png, id=538, 357.86711pt x 191.55904pt>
 File: img/black.png Graphic file (type png)
 <use img/black.png>
-Package pdftex.def Info: img/black.png  used on input line 260.
+Package pdftex.def Info: img/black.png  used on input line 271.
 (pdftex.def)             Requested size: 167.8713pt x 89.85738pt.
 
-Overfull \vbox (23.03595pt too high) detected at line 260
+Overfull \vbox (17.46483pt too high) detected at line 271
  []
 
 [12
 
  <./img/white.png> <./img/black.png>]
+<img/wgbb.png, id=581, 941.481pt x 523.191pt>
+File: img/wgbb.png Graphic file (type png)
+<use img/wgbb.png>
+Package pdftex.def Info: img/wgbb.png  used on input line 295.
+(pdftex.def)             Requested size: 167.8713pt x 93.28416pt.
+<img/bgwb.png, id=582, 941.481pt x 523.191pt>
+File: img/bgwb.png Graphic file (type png)
+<use img/bgwb.png>
+Package pdftex.def Info: img/bgwb.png  used on input line 295.
+(pdftex.def)             Requested size: 167.8713pt x 93.28416pt.
+ [13
+
+ <./img/wgbb.png> <./img/bgwb.png>] [14
+
+]
+\spot@box@v=\box158
+\spot@box@vi=\box159
+\spot@box@vii=\box160
+\spot@box@viii=\box161
+ [15
+
+] [16
+
+] [17
+
+]
+<img/raceParaccuracy.pdf, id=780, 794.97pt x 614.295pt>
+File: img/raceParaccuracy.pdf Graphic file (type pdf)
+<use img/raceParaccuracy.pdf>
+Package pdftex.def Info: img/raceParaccuracy.pdf  used on input line 386.
+(pdftex.def)             Requested size: 268.59512pt x 207.55463pt.
+
+Overfull \vbox (25.19868pt too high) detected at line 386
+ []
+
+[18
+
+ <./img/raceParaccuracy.pdf>]
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <10.95> not available
-(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 290.
+(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 416.
 
-<img/RaceHigh.pdf, id=373, 794.97pt x 614.295pt>
+<img/RaceHigh.pdf, id=830, 794.97pt x 614.295pt>
 File: img/RaceHigh.pdf Graphic file (type pdf)
 <use img/RaceHigh.pdf>
-Package pdftex.def Info: img/RaceHigh.pdf  used on input line 290.
+Package pdftex.def Info: img/RaceHigh.pdf  used on input line 416.
 (pdftex.def)             Requested size: 184.65947pt x 142.69087pt.
-<img/RaceLow.pdf, id=374, 794.97pt x 614.295pt>
+<img/RaceLow.pdf, id=831, 794.97pt x 614.295pt>
 File: img/RaceLow.pdf Graphic file (type pdf)
 <use img/RaceLow.pdf>
-Package pdftex.def Info: img/RaceLow.pdf  used on input line 290.
+Package pdftex.def Info: img/RaceLow.pdf  used on input line 416.
 (pdftex.def)             Requested size: 184.65947pt x 142.69087pt.
 
-Overfull \hbox (5.12358pt too wide) detected at line 290
+Overfull \hbox (5.12358pt too wide) detected at line 416
 [][][] $[]$[][][][][][][][] $[]$[][][][][][] 
  []
 
-<img/wm1.jpg, id=375, 92.5056pt x 69.3792pt>
+<img/wm1.jpg, id=832, 92.5056pt x 69.3792pt>
 File: img/wm1.jpg Graphic file (type jpg)
 <use img/wm1.jpg>
-Package pdftex.def Info: img/wm1.jpg  used on input line 290.
+Package pdftex.def Info: img/wm1.jpg  used on input line 416.
 (pdftex.def)             Requested size: 26.1866pt x 19.63988pt.
-<img/bf56.jpg, id=376, 92.5056pt x 69.3792pt>
+<img/bf56.jpg, id=833, 92.5056pt x 69.3792pt>
 File: img/bf56.jpg Graphic file (type jpg)
 <use img/bf56.jpg>
-Package pdftex.def Info: img/bf56.jpg  used on input line 290.
+Package pdftex.def Info: img/bf56.jpg  used on input line 416.
 (pdftex.def)             Requested size: 26.1866pt x 19.63988pt.
-[13
+[19
 
  <./img/RaceHigh.pdf> <./img/RaceLow.pdf> <./img/wm1.jpg> <./img/bf56.jpg>]
+[20
+
+]
 \tf@nav=\write6
 \openout6 = `CMS-epifania.nav'.
 
@@ -1601,40 +1573,44 @@ Package pdftex.def Info: img/bf56.jpg  used on input line 290.
 \tf@snm=\write8
 \openout8 = `CMS-epifania.snm'.
 
-
-(CMS-epifania.aux)
+ (CMS-epifania.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-09>
  ***********
 Package rerunfilecheck Info: File `CMS-epifania.out' has not changed.
-(rerunfilecheck)             Checksum: 69067761F820707EF13F8974D6DE8FC4;475.
+(rerunfilecheck)             Checksum: 9B9C45130B7A59B072B215BFECBAA75B;1117.
  ) 
 Here is how much of TeX's memory you used:
- 29853 strings out of 474586
- 645696 string characters out of 5745680
- 1951558 words of memory out of 5000000
- 51374 multiletter control sequences out of 15000+600000
- 570753 words of font info for 81 fonts, out of 8000000 for 9000
+ 29561 strings out of 474586
+ 632096 string characters out of 5745680
+ 1965558 words of memory out of 5000000
+ 51077 multiletter control sequences out of 15000+600000
+ 572118 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,20n,123p,1881b,1085s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,20n,123p,420b,1072s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmcsc10.pfb><C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
 sfonts/cm/cmex10.pfb><C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/
 public/amsfonts/cm/cmmi10.pfb><C:/Users/ottae/AppData/Local/Programs/MiKTeX/fon
 ts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/ottae/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/ottae/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/ottae/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Users/ottae
-/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/
-Users/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi1
-0.pfb><C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmssi8.pfb><C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmsy10.pfb><C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/amsfonts/cm/cmsy8.pfb>
-Output written on CMS-epifania.pdf (13 pages, 1545493 bytes).
+KTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/ottae/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/ottae/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/ottae
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Use
+rs/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss9.pfb
+><C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mssbx10.pfb><C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmssi10.pfb><C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmssi8.pfb><C:/Users/ottae/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmssi9.pfb><C:/Users/ottae/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ottae/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/ottae/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/otta
+e/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
+Output written on CMS-epifania.pdf (20 pages, 2624111 bytes).
 PDF statistics:
- 465 PDF objects out of 1000 (max. 8388607)
- 30 named destinations out of 1000 (max. 500000)
- 266 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 996 PDF objects out of 1000 (max. 8388607)
+ 51 named destinations out of 1000 (max. 500000)
+ 333 words of extra memory for PDF output out of 10000 (max. 10000000)
 

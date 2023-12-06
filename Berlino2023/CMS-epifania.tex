@@ -1,5 +1,5 @@
 \documentclass[compress]{beamer}
-\usetheme{metropolis}
+\usetheme{Montpellier}
 \usepackage{multicol}
 \usecolortheme{dove}
 \useinnertheme{rounded}
@@ -82,7 +82,7 @@
 \begin{frame}[plain]
 %    \maketitle
 \begin{center}
-	\large \bfseries When randomness opens new possibilities: \\ Acknowledging the stimulus sampling variability in Experimental Psychology
+		\large \bfseries When randomness opens new possibilities: \\ Acknowledging the stimulus sampling variability in Experimental Psychology
 \end{center}
 
 \vspace{2.5mm}
@@ -91,7 +91,7 @@
 	
 	\vspace{1.5mm}
 	\small \textsuperscript{1} University of Padova (IT) \\
-	\textsuperscript{2} Psicostat Group \\
+	\textsuperscript{2} Psicostat Group, Univeristy of Padova (IT) \\
 	\textsuperscript{3} Catholic Univerisity of the Sacred Heart, Milan (IT) \\
 \end{center}
 
@@ -217,46 +217,172 @@
 			
 			
 			\vspace*{2.5mm}
-			$P(x_{ps} = 1) = \displaystyle \frac{\exp(\theta_p \, \spot<3-3>[fill=rasch!50]{+} \, b_s)}{1 + \exp(\theta_p \, \spot<3-3>[fill=rasch!50]{+} \, b_s)}$
+			$P(x_{ps} = 1) = \displaystyle \frac{\exp(\theta_p \, \spot<3-3>[fill=single!50]{+} \, b_s)}{1 + \exp(\theta_p \, \spot<3-3>[fill=single!50]{+} \, b_s)}$
 		\end{column}
 	\end{columns}	
 	
 \end{frame}
 
-\begin{frame}
-	\frametitle{Method}
+\section{Random stimuli in Experimental Psychology}
+
+\subsection{Experiment}
+\begin{frame}{The stimuli}
+
 	
-	\vspace{-0.7cm}
-	
-	\begin{block}{}
-		\centering{\textbf{Stimuli: }
-			
-			12 Object stimuli}
+	\begin{block}{12 Object stimuli}
+	\begin{columns}
+		\column{.50\linewidth}
+		\centering
+			White people faces
+		\includegraphics[width=\linewidth]{img/white.png}
 		
-		
-		\begin{columns}
-			\column{.50\linewidth}
-			\textbf{\includegraphics[width=\linewidth]{img/white.png}}
-			
-			\column{.50\linewidth}
-			\textbf{\includegraphics[width=\linewidth]{img/black.png}}
-		\end{columns}
-		
-		\vspace{1.2mm}
-		
-	16 Attributes (\textcolor{magenta}{Good, laughter, pleasure, glory, peace, happy, joy, love and} and \textcolor{springgreen}{Evil, bad, horrible, terrible, nasty, pain, failure, hate})
-		
+		\column{.50\linewidth}
+		\centering
+			Black people faces
+		\includegraphics[width=\linewidth]{img/black.png}
+	\end{columns}		
 	\end{block}
 	
+
+	
+	\begin{block}{16 Attribute stimuli}
+		
+	\begin{columns}[T]
+	\begin{column}{.50\linewidth}
+		\begin{center}
+			\color{rasch}Positive attributes
+		\end{center}
+		
+		Good, laughter, pleasure, glory, peace, happy, joy, love
+	\end{column}
+	
+	\begin{column}{.50\linewidth}
+		\begin{center}
+			\color{alert}Negative attributes
+		\end{center}
+		
+		Evil, bad, horrible, terrible, nasty, pain, failure, hate
+	\end{column}
+\end{columns}
+	\end{block}
 	\vspace{1.2mm}
 	Participants: 62 (F $=48.39$\%, Age = $24.92\pm2.11$ years)
 
-	\textbf{Conditions:}\\
-	\small
-	WGBB: White-Good/Black-Bad, 60 trials
+\end{frame}
+
+\begin{frame}{The task}
+
+\begin{block}{Two experimental conditions}
+	\begin{columns}[T]
+		\begin{column}{.50\linewidth}
+			\begin{center}
+				\textbf{White-Good/Black-Bad} (WGBB): \\60 trials
+			\end{center}
+			
+			\centering \includegraphics[width=\linewidth]{img/wgbb.png}
+		\end{column}
+		
+		\begin{column}{.50\linewidth}
+			\begin{center}
+				\textbf{Black-Good/White-Bad} (BGWB): \\ 60 trials
+			\end{center}
+			
+			\centering \includegraphics[width=\linewidth]{img/bgwb.png}
+		\end{column}
+	\end{columns}
+\end{block}
+
+\end{frame}
+
+\subsection{Models}
+
+\begin{frame}
+	\begin{footnotesize}
+		The expected response $y$ for the observation $i = 1, \ldots, I$ for respondent $p = 1,\ldots, P$ on stimulus $s = 1,\ldots, S$ in condition $c= 1,\ldots, C$:
+	\end{footnotesize}
+	\footnotesize
 	
-	BGWB: Black-Good/White-Bad, 60 trials
 	
+	\vspace{3mm}
+	Model 1:
+	\begin{equation*}\label{AccuracyMin}
+		y_{i} = \spot<2->[fill =blue!15]{logit^{-1}(\alpha + \beta_c X_c}  + \spot<2->[fill=yellow!20]{\alpha_{p[i]} +  \alpha_{s[i]} + \varepsilon_{i})}
+	\end{equation*}
+	\begin{centering}
+		
+		$\alpha_p \sim \mathcal{N}(0, \sigma_p^2)$,
+		
+	\end{centering}
+	
+	\begin{centering}
+		
+		$\alpha_s \sim \mathcal{N}(0, \sigma_s^2)$.
+		
+	\end{centering}
+	
+	
+	
+	Model 2: 
+	\begin{equation*}\label{Accuracy5}
+		y_{i} = \spot<2->[fill =blue!15]{logit^{-1}(\alpha + \beta_c X_c}  + \spot<2->[fill=yellow!20]{ \alpha_{p[i]} +  \beta_{s[i]}c_{i} + \varepsilon_{i})}
+	\end{equation*}
+	
+	\begin{centering}
+		$\alpha_p \sim \mathcal{N}(0, \sigma_p^2)$,
+		
+	\end{centering}
+	
+	\begin{centering}
+		
+		$\beta_s \sim \mathcal{MVN}(0, \Sigma_{sc})$.
+		
+	\end{centering}
+	
+	Model 3: 
+	
+	\begin{equation*}
+		y_{i} = \spot<2->[fill =blue!15]{logit^{-1}(\alpha + \beta_c X_c}  + \spot<2->[fill=yellow!20]{\alpha_{s[i]} +  \beta_{p[i]}c_{i} + \varepsilon_{i})}
+	\end{equation*}
+	
+	\begin{centering}
+		$\alpha_s \sim \mathcal{N}(0, \sigma_s^2)$,
+		
+	\end{centering}
+	
+	\begin{centering}
+		
+		$\beta_p \sim \mathcal{MVN}(0, \Sigma_{pc})$.
+		
+	\end{centering}
+	
+	
+	\vspace{1.5mm}
+	
+	\footnotesize{Accuracy: $\epsilon \sim Logistic (0, \sigma^2)$}
+	
+		\vspace{1.5mm}
+\pause
+\begin{columns}[T]
+	\begin{column}{.50\linewidth}
+		\centering
+		
+		\spot[fill = blue!15]{Fixed Effects}
+		
+	\end{column}
+		\begin{column}{.50\linewidth}
+				\centering
+	
+		\spot[fill = yellow!20]{Random structure}
+	\end{column}
+\end{columns}
+\end{frame}
+
+\subsection{Results}
+
+\begin{frame}{Model 2 is the least wrong model}
+		{\centering{\color{rasch}{Rasch model:}} \\ \small{Model 2} \\}
+	\centering
+	\includegraphics[width=0.8\linewidth]{img/raceParaccuracy.pdf}
 \end{frame}
 
 \begin{frame}{Condition--specific easiness}
@@ -265,13 +391,13 @@
 	\begin{columns}
 		
 		\column{.55\linewidth}
-		\centering{\textcolor{comp}{\textsc{High contribution stimuli}}}
+		\centering{\textcolor{comp}{\textsc{Highly contributing stimuli}}}
 		
 		\vspace{5mm}
 		\onslide<1->\includegraphics[width=\textwidth]{img/RaceHigh.pdf}
 		
 		\column{.55\linewidth}
-		\centering{\textcolor{inc}{\textsc{Low contribution stimuli}}}
+		\centering{\textcolor{inc}{\textsc{Lowly contributing stimuli}}}
 		
 		\vspace{5mm}
 		\onslide<1->\includegraphics[width=\textwidth]{img/RaceLow.pdf}
@@ -287,5 +413,20 @@
 		\end{minipage}
 	}; %
 	%\vspace{\fill}
+\end{frame}
+
+\section{Discussion}
+
+\begin{frame}
+	\begin{itemize}
+	\item Improve generalizability of the results to other sets of stimuli 
+
+\item Control for random variance in the data 
+
+\item Allow for obtaining a Rasch-like parametrization of the data 
+
+\item Possibility of extending the (linear) model to other dependent variables (e.g., response times)
+		
+	\end{itemize}
 \end{frame}
 \end{document}
