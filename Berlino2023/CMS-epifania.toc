@@ -1,8 +1,10 @@
 \beamer@sectionintoc {1}{Introduction}{2}{0}{1}
 \beamer@subsectionintoc {1}{1}{Stimuli are fixed, respondents are random}{2}{0}{1}
-\beamer@subsectionintoc {1}{2}{What if}{3}{0}{1}
-\beamer@sectionintoc {2}{Random stimuli in Experimental Psychology}{11}{0}{2}
-\beamer@subsectionintoc {2}{1}{Experiment}{11}{0}{2}
-\beamer@subsectionintoc {2}{2}{Models}{14}{0}{2}
-\beamer@subsectionintoc {2}{3}{Results}{17}{0}{2}
-\beamer@sectionintoc {3}{Discussion}{20}{0}{3}
+\beamer@subsectionintoc {1}{2}{What if the sampling variability is not acknowledged}{5}{0}{1}
+\beamer@sectionintoc {2}{Random effects for random factors}{7}{0}{2}
+\beamer@sectionintoc {3}{Random stimuli in Experimental Psychology}{14}{0}{3}
+\beamer@subsectionintoc {3}{1}{Experiment}{14}{0}{3}
+\beamer@subsectionintoc {3}{2}{Models}{17}{0}{3}
+\beamer@subsectionintoc {3}{3}{Results}{20}{0}{3}
+\beamer@sectionintoc {4}{Discussion}{23}{0}{4}
+\beamer@sectionintoc {5}{In the end}{23}{0}{5}

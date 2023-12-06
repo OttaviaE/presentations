@@ -94,6 +94,7 @@
 \begin{center}
 	\textbf{Ottavia M. Epifania}\textsuperscript{1,2,3}, Pasquale Anselmi\textsuperscript{1}, Egidio Robusto\textsuperscript{1}
 	
+	\vspace{1.5mm}
 	
 	\begin{columns}[T]
 		\begin{column}{.33\linewidth}
@@ -129,9 +130,74 @@
 
 \subsection{Stimuli are fixed, respondents are random}
 
-\subsection{What if}
+\begin{frame}
+	
+	\begin{exampleblock}{Respondents are random}
+		
+		Sampled from a lager population
+		
+		Need for acknowledging the sampling variability 
+		
+		Results can be generalized to other respondents belonging to the same population
+	\end{exampleblock}
 
+\begin{alertblock}{Stimuli/item are fixed}
+	
+	Taken to be entire population 
+	
+	There is no sampling variability
+	
+	There is no need to generalize the results because the stimuli are the population
+	
+\end{alertblock}
+\end{frame}
 
+\begin{frame}{However...}
+	
+	The stimuli can also represent a sample of a larger universe: 
+	
+	\begin{example}{{\color{rasch}{Positive}} vs. \alert{Negative} attributes in Linguistic}
+		
+		There is a universe of positive words 
+		
+		Only a sample of positive attributes (e.g., good, nice) and negative attributes (e.g., bad, evil) are administered 
+		
+		So... \textbf{there must be a sampling variability} 
+	\end{example}
+\end{frame}
+
+\subsection{What if the sampling variability is not acknowledged}
+
+\begin{frame}{}
+	
+	
+	\begin{block}{Generalizability}
+	
+	\small
+	The results can be generalized at the respondents level but not at the stimulus level $\rightarrow$ Results can be generalized if and only if the exact same set of stimuli is used 
+	
+	Generalizability is bounded to the specific set of stimuli used in the experiment
+	\end{block}
+ 
+	\begin{block}{Robustness of the results}
+		
+		\small
+		Random variability at the stimulus level might inflate the probability of committing Type I errors
+		
+		Averaging across stimuli to obtain a person-level score results in biased estimates due to the noise in the data
+	\end{block}
+	
+	\begin{block}{Loss of information}
+		
+		\small
+		Every stimulus is assumed to be equal $\rightarrow$ to have the same effect on the observed score
+		
+		All the variability is not considered as well as all the information that can be obtained from it 
+	\end{block}
+	
+\end{frame}
+
+\section{Random effects for random factors}
 
 \begin{frame}{Generalized linear model for dichotomous responses}
 	
@@ -394,7 +460,7 @@
 \begin{frame}{Model 2 is the least wrong model}
 		{\centering{\color{rasch}{Rasch model:}} \\ \small{Model 2} \\}
 	\centering
-	\includegraphics[width=0.8\linewidth]{img/raceParaccuracy.pdf}
+	\includegraphics[width=0.6\linewidth]{img/raceParaccuracy.pdf}
 \end{frame}
 
 \begin{frame}{Condition--specific easiness}
@@ -428,6 +494,7 @@
 \end{frame}
 
 \section{Discussion}
+\section{In the end}
 
 \begin{frame}
 	\begin{itemize}
