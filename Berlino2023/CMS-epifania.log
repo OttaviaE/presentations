@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.26)  7 DEC 2023 16:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.26)  7 DEC 2023 19:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1355,17 +1355,17 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 141
 (C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<img/unipd.png, id=111, 943.525pt x 949.5475pt>
+<img/unipd.png, id=113, 943.525pt x 949.5475pt>
 File: img/unipd.png Graphic file (type png)
 <use img/unipd.png>
 Package pdftex.def Info: img/unipd.png  used on input line 141.
 (pdftex.def)             Requested size: 42.3992pt x 42.66983pt.
-<img/psicostat.png, id=112, 3635.79607pt x 2727.03926pt>
+<img/psicostat.png, id=114, 3635.79607pt x 2727.03926pt>
 File: img/psicostat.png Graphic file (type png)
 <use img/psicostat.png>
 Package pdftex.def Info: img/psicostat.png  used on input line 141.
 (pdftex.def)             Requested size: 71.12242pt x 53.34557pt.
-<img/unicatt.png, id=114, 225.84375pt x 225.84375pt>
+<img/unicatt.png, id=116, 225.84375pt x 225.84375pt>
 File: img/unicatt.png Graphic file (type png)
 <use img/unicatt.png>
 Package pdftex.def Info: img/unicatt.png  used on input line 141.
@@ -1414,27 +1414,27 @@ ight cause out of memory (use non-interlaced PNG to fix this)
 ] [18
 
 ]
-<img/baseGLM.pdf, id=1259, 794.97pt x 614.295pt>
+<img/baseGLM.pdf, id=1284, 1011.78pt x 614.295pt>
 File: img/baseGLM.pdf Graphic file (type pdf)
 <use img/baseGLM.pdf>
 Package pdftex.def Info: img/baseGLM.pdf  used on input line 286.
-(pdftex.def)             Requested size: 235.01881pt x 181.59976pt.
-<img/linkGLM.pdf, id=1260, 794.97pt x 614.295pt>
+(pdftex.def)             Requested size: 235.01881pt x 142.69087pt.
+<img/linkGLM.pdf, id=1285, 1011.78pt x 614.295pt>
 File: img/linkGLM.pdf Graphic file (type pdf)
 <use img/linkGLM.pdf>
 Package pdftex.def Info: img/linkGLM.pdf  used on input line 286.
-(pdftex.def)             Requested size: 235.01881pt x 181.59976pt.
+(pdftex.def)             Requested size: 235.01881pt x 142.69087pt.
  [19
 
  <./img/baseGLM.pdf>]
 File: img/baseGLM.pdf Graphic file (type pdf)
 <use img/baseGLM.pdf>
 Package pdftex.def Info: img/baseGLM.pdf  used on input line 286.
-(pdftex.def)             Requested size: 235.01881pt x 181.59976pt.
+(pdftex.def)             Requested size: 235.01881pt x 142.69087pt.
 File: img/linkGLM.pdf Graphic file (type pdf)
 <use img/linkGLM.pdf>
 Package pdftex.def Info: img/linkGLM.pdf  used on input line 286.
-(pdftex.def)             Requested size: 235.01881pt x 181.59976pt.
+(pdftex.def)             Requested size: 235.01881pt x 142.69087pt.
  [20
 
  <./img/linkGLM.pdf>]
@@ -1454,28 +1454,28 @@ Package pdftex.def Info: img/linkGLM.pdf  used on input line 286.
 ] [25
 
 ]
-<img/white.png, id=1644, 357.86711pt x 191.55904pt>
+<img/white.png, id=1680, 357.86711pt x 191.55904pt>
 File: img/white.png Graphic file (type png)
 <use img/white.png>
-Package pdftex.def Info: img/white.png  used on input line 404.
+Package pdftex.def Info: img/white.png  used on input line 405.
 (pdftex.def)             Requested size: 167.8713pt x 89.85738pt.
-<img/black.png, id=1645, 357.86711pt x 191.55904pt>
+<img/black.png, id=1681, 357.86711pt x 191.55904pt>
 File: img/black.png Graphic file (type png)
 <use img/black.png>
-Package pdftex.def Info: img/black.png  used on input line 404.
+Package pdftex.def Info: img/black.png  used on input line 405.
 (pdftex.def)             Requested size: 167.8713pt x 89.85738pt.
  [26
 
  <./img/white.png> <./img/black.png>]
-<img/wgbb.png, id=1734, 941.481pt x 523.191pt>
+<img/wgbb.png, id=1772, 941.481pt x 523.191pt>
 File: img/wgbb.png Graphic file (type png)
 <use img/wgbb.png>
-Package pdftex.def Info: img/wgbb.png  used on input line 432.
+Package pdftex.def Info: img/wgbb.png  used on input line 433.
 (pdftex.def)             Requested size: 167.8713pt x 93.28416pt.
-<img/bgwb.png, id=1735, 941.481pt x 523.191pt>
+<img/bgwb.png, id=1773, 941.481pt x 523.191pt>
 File: img/bgwb.png Graphic file (type png)
 <use img/bgwb.png>
-Package pdftex.def Info: img/bgwb.png  used on input line 432.
+Package pdftex.def Info: img/bgwb.png  used on input line 433.
 (pdftex.def)             Requested size: 167.8713pt x 93.28416pt.
  [27
 
@@ -1493,40 +1493,40 @@ pdfTeX warning (ext4): destination with the same identifier (name{Accuracy5}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.528 \end{frame}
+l.529 \end{frame}
                  
-<img/raceParaccuracy.pdf, id=1924, 794.97pt x 614.295pt>
+<img/raceParaccuracy.pdf, id=1967, 794.97pt x 614.295pt>
 File: img/raceParaccuracy.pdf Graphic file (type pdf)
 <use img/raceParaccuracy.pdf>
-Package pdftex.def Info: img/raceParaccuracy.pdf  used on input line 528.
+Package pdftex.def Info: img/raceParaccuracy.pdf  used on input line 529.
 (pdftex.def)             Requested size: 201.44762pt x 155.66362pt.
  [30
 
  <./img/raceParaccuracy.pdf>]
-<img/RaceHigh.pdf, id=1996, 794.97pt x 614.295pt>
+<img/RaceHigh.pdf, id=2041, 794.97pt x 614.295pt>
 File: img/RaceHigh.pdf Graphic file (type pdf)
 <use img/RaceHigh.pdf>
-Package pdftex.def Info: img/RaceHigh.pdf  used on input line 558.
+Package pdftex.def Info: img/RaceHigh.pdf  used on input line 559.
 (pdftex.def)             Requested size: 184.65947pt x 142.69087pt.
-<img/RaceLow.pdf, id=1997, 794.97pt x 614.295pt>
+<img/RaceLow.pdf, id=2042, 794.97pt x 614.295pt>
 File: img/RaceLow.pdf Graphic file (type pdf)
 <use img/RaceLow.pdf>
-Package pdftex.def Info: img/RaceLow.pdf  used on input line 558.
+Package pdftex.def Info: img/RaceLow.pdf  used on input line 559.
 (pdftex.def)             Requested size: 184.65947pt x 142.69087pt.
 
-Overfull \hbox (5.12358pt too wide) detected at line 558
+Overfull \hbox (5.12358pt too wide) detected at line 559
 [][][] $[]$[][][][][][][][] $[]$[][][][][][] 
  []
 
-<img/wm1.jpg, id=1998, 92.5056pt x 69.3792pt>
+<img/wm1.jpg, id=2043, 92.5056pt x 69.3792pt>
 File: img/wm1.jpg Graphic file (type jpg)
 <use img/wm1.jpg>
-Package pdftex.def Info: img/wm1.jpg  used on input line 558.
+Package pdftex.def Info: img/wm1.jpg  used on input line 559.
 (pdftex.def)             Requested size: 26.1866pt x 19.63988pt.
-<img/bf56.jpg, id=1999, 92.5056pt x 69.3792pt>
+<img/bf56.jpg, id=2044, 92.5056pt x 69.3792pt>
 File: img/bf56.jpg Graphic file (type jpg)
 <use img/bf56.jpg>
-Package pdftex.def Info: img/bf56.jpg  used on input line 558.
+Package pdftex.def Info: img/bf56.jpg  used on input line 559.
 (pdftex.def)             Requested size: 26.1866pt x 19.63988pt.
 [31
 
@@ -1555,13 +1555,13 @@ L3 programming layer <2023-11-09>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `CMS-epifania.out' has not changed.
-(rerunfilecheck)             Checksum: 12A3DE3AFD6948C6FF2A32BDEBBB46AC;1581.
+(rerunfilecheck)             Checksum: AAF5696CF9700B57D3A04163C1D84F4B;1771.
  ) 
 Here is how much of TeX's memory you used:
- 29751 strings out of 474586
- 639248 string characters out of 5745680
+ 29753 strings out of 474586
+ 639264 string characters out of 5745680
  1983558 words of memory out of 5000000
- 51235 multiletter control sequences out of 15000+600000
+ 51237 multiletter control sequences out of 15000+600000
  568405 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,19n,123p,420b,1072s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1587,9 +1587,9 @@ ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/ottae/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users
 /ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
 
-Output written on CMS-epifania.pdf (33 pages, 2965244 bytes).
+Output written on CMS-epifania.pdf (33 pages, 2973367 bytes).
 PDF statistics:
- 2277 PDF objects out of 2487 (max. 8388607)
+ 2326 PDF objects out of 2487 (max. 8388607)
  78 named destinations out of 1000 (max. 500000)
  1235 words of extra memory for PDF output out of 10000 (max. 10000000)
 
