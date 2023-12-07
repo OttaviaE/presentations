@@ -3,14 +3,15 @@
 %\usecolortheme{dove}
 %\useinnertheme{rounded}
 %\useoutertheme{smoothbars}
-\usetheme{Montpellier}
+\usetheme{Madrid}
 \usefonttheme{serif}
 \usecolortheme{dove}
 \useinnertheme{rounded}
+\useoutertheme{miniframes}
 \setbeamersize{text margin left=5mm,text margin right=10mm}
 \usepackage{graphicx}
 \usepackage{multicol}
-\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{navigation symbols}[horizontal] 
 \setbeamersize{text margin left=5mm,text margin right=5mm} 
 \setbeamercolor{subsection name}{fg=white}
 \setbeamercolor{section name}{fg=white}
@@ -20,6 +21,21 @@
 \usepackage{spot}
 \usepackage{tikzsymbols}
 \usetikzlibrary{mindmap,calc,patterns,decorations.pathmorphing,decorations.markings, arrows, shapes.arrows, shapes, backgrounds}
+\definecolor{unipd}{RGB}{155, 0, 20}
+\definecolor{grigioPantano}{RGB}{72,79,89}
+
+
+\setbeamerfont{block title}{family=\bfseries}
+\setbeamercolor{block title}{use=structure,fg=unipd,bg=white}
+%\setbeamercolor{block body}{fg=black,use=block title,bg=grigioPantano!10}
+%
+%
+%\setbeamercolor{block title example}{use=example text,fg=white,bg=green!50!black}
+%\setbeamercolor{block body example}{fg=grigioPantano!60!black,use=block title example,bg=grigioPantano!10}
+%
+%\setbeamercolor{block title alerted}{use=alerted text,fg=white,bg=unipd}
+%\setbeamercolor{block body alerted}{fg=black,use=block title alerted,bg=grigioPantano!20}
+
 
   \tikzset{
 	invisible/.style={opacity=0},
@@ -68,7 +84,7 @@
 	\tikz[remember picture, overlay]\node[every overlay node]
 }%
 
-\AtBeginSubsection{\frame{\subsectionpage}}
+%\AtBeginSubsection{\frame{\subsectionpage}}
  
 \setbeamertemplate{subsection page}
 {
@@ -115,7 +131,7 @@
 	\begin{center}
 	\small \textsuperscript{1} University of Padova (IT) \\
 	\textsuperscript{2} Psicostat Group, Univeristy of Padova (IT) \\
-	\textsuperscript{3} Catholic Univerisity of the Sacred Heart, Milan (IT) \\
+	\textsuperscript{3} Università Cattolica del Sacro Cuore, Milan (IT) \\
 \end{center}
 
 \vspace{5mm}
@@ -132,38 +148,57 @@
 
 \begin{frame}
 	
-	\begin{exampleblock}{Respondents are random}
+	\begin{block}{Respondents are random}
 		
 		Sampled from a lager population
 		
+		\vspace{1.5mm}
+		\pause
 		Need for acknowledging the sampling variability 
 		
+		\vspace{1.5mm}
+		\pause
 		Results can be generalized to other respondents belonging to the same population
-	\end{exampleblock}
+	\end{block}
 
-\begin{alertblock}{Stimuli/item are fixed}
+\vspace{3mm}
+\pause
+\begin{block}{Stimuli/item are fixed}
 	
 	Taken to be entire population 
 	
+		\vspace{1.5mm}
+	\pause
 	There is no sampling variability
 	
+		\vspace{1.5mm}
+	\pause
 	There is no need to generalize the results because the stimuli are the population
 	
-\end{alertblock}
+\end{block}
 \end{frame}
 
 \begin{frame}{However...}
 	
-	The stimuli can also represent a sample of a larger universe: 
+	The stimuli can also represent a sample of a larger universe
 	
-	\begin{example}{{\color{rasch}{Positive}} vs. \alert{Negative} attributes in Linguistic}
+	\vspace{3mm}
+	\pause
+	
+	\begin{exampleblock}{Processing speed of positive and negative attributes}
 		
-		There is a universe of positive words 
+		\pause
+		\vspace{1.5mm}
+		There is a universe of {\color{rasch}{\textbf{positive attributes}}} as well as an universe of {\color{unipd}{\textbf{negative attributes}}}
 		
-		Only a sample of positive attributes (e.g., good, nice) and negative attributes (e.g., bad, evil) are administered 
+		\pause
+		\vspace{1.5mm}
+		Only samples of {\color{rasch}{\textbf{positive attributes}}} (e.g., good, nice, $\ldots$) and {\color{unipd}{\textbf{negative attributes}}} (e.g., bad, evil, $\ldots$) are administered 
 		
-		So... \textbf{there must be a sampling variability} 
-	\end{example}
+		\pause
+		\vspace{2.5mm}
+		So... \textbf{there must be a sampling variability!} 
+	\end{exampleblock}
 \end{frame}
 
 \subsection{What if the sampling variability is not acknowledged}
@@ -174,27 +209,46 @@
 	\begin{block}{Generalizability}
 	
 	\small
-	The results can be generalized at the respondents level but not at the stimulus level $\rightarrow$ Results can be generalized if and only if the exact same set of stimuli is used 
 	
 	Generalizability is bounded to the specific set of stimuli used in the experiment
+	 
+	 Results can be generalized if and only if the exact same set of stimuli is used 
+	
+
 	\end{block}
+	
+	\pause
  
 	\begin{block}{Robustness of the results}
 		
 		\small
 		Random variability at the stimulus level might inflate the probability of committing Type I errors
 		
-		Averaging across stimuli to obtain a person-level score results in biased estimates due to the noise in the data
+		Averaging across stimuli to obtain person-level scores results in biased estimates due to the noise in the data
 	\end{block}
+	
+	\pause
 	
 	\begin{block}{Loss of information}
 		
 		\small
-		Every stimulus is assumed to be equal $\rightarrow$ to have the same effect on the observed score
+		Every stimulus is assumed to be equally informative
 		
 		All the variability is not considered as well as all the information that can be obtained from it 
 	\end{block}
 	
+\end{frame}
+
+\begin{frame}{This contribution}
+	Focus on the loss of information...the other side of the coin 
+	
+	\vspace{2.5mm}
+	\pause
+	The information at the stimulus level that can be retrieved from the accuracy responses (correct vs. incorrect) from a typical experiment where the response times are usually employed for scoring the data
+	
+	\vspace{2.5mm}
+	\pause 
+	It can actually help in disentangling what is known to be a shortcoming of the score usually employed for analyzing the data of this experiment
 \end{frame}
 
 \section{Random effects for random factors}
@@ -304,8 +358,9 @@
 \section{Random stimuli in Experimental Psychology}
 
 \subsection{Experiment}
-\begin{frame}{The stimuli}
+\begin{frame}
 
+\small
 	
 	\begin{block}{12 Object stimuli}
 	\begin{columns}
@@ -348,13 +403,13 @@
 
 \end{frame}
 
-\begin{frame}{The task}
+\begin{frame}
 
 \begin{block}{Two experimental conditions}
 	\begin{columns}[T]
 		\begin{column}{.50\linewidth}
 			\begin{center}
-				\textbf{White-Good/Black-Bad} (WGBB): \\60 trials
+				\textbf{White-Good/Black-Bad} (WGBB): 60 trials
 			\end{center}
 			
 			\centering \includegraphics[width=\linewidth]{img/wgbb.png}
@@ -362,13 +417,17 @@
 		
 		\begin{column}{.50\linewidth}
 			\begin{center}
-				\textbf{Black-Good/White-Bad} (BGWB): \\ 60 trials
+				\textbf{Black-Good/White-Bad} (BGWB):   60 trials
 			\end{center}
 			
 			\centering \includegraphics[width=\linewidth]{img/bgwb.png}
 		\end{column}
 	\end{columns}
 \end{block}
+
+\begin{equation*}
+	D = \dfrac{M_{\text{BGWB}}-M_{\text{WGBB}}}{s_{\text{BGWB, WGBB}}}
+\end{equation*}
 
 \end{frame}
 
@@ -458,7 +517,12 @@
 \subsection{Results}
 
 \begin{frame}{Model 2 is the least wrong model}
-		{\centering{\color{rasch}{Rasch model:}} \\ \small{Model 2} \\}
+	%	{\centering{\color{rasch}{Rasch model:}} \\ \small{Model 2} \\}
+	
+		\begin{equation*}\label{Accuracy5}
+		y_{i} = logit^{-1}(\alpha + \beta_c X_c +  \alpha_{p[i]} +  \beta_{s[i]}c_{i} + \varepsilon_{i})
+	\end{equation*}
+	
 	\centering
 	\includegraphics[width=0.6\linewidth]{img/raceParaccuracy.pdf}
 \end{frame}
@@ -494,10 +558,10 @@
 \end{frame}
 
 \section{Discussion}
-\section{In the end}
 
 \begin{frame}
 	\begin{itemize}
+		\item Acknowledge and gather the information at the stimulus level
 	\item Improve generalizability of the results to other sets of stimuli 
 
 \item Control for random variance in the data 
@@ -507,5 +571,19 @@
 \item Possibility of extending the (linear) model to other dependent variables (e.g., response times)
 		
 	\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+	\begin{center}
+		\begin{Large}
+			Thank you!
+		\end{Large}
+		
+		ottavia.epifania@unipd.it
+	\end{center}
+	
+	Slides: https://ottaviae.github.io/presentations/Berlino2023/CMS-epifania.pdf
+	
 \end{frame}
 \end{document}
