@@ -2,8 +2,8 @@
 \beamer@subsectionintoc {1}{1}{Stimuli are fixed, respondents are random}{2}{0}{1}
 \beamer@subsectionintoc {1}{2}{What if the sampling variability is not acknowledged}{13}{0}{1}
 \beamer@sectionintoc {2}{Random effects for random factors}{19}{0}{2}
-\beamer@sectionintoc {3}{Random stimuli in Experimental Psychology}{26}{0}{3}
-\beamer@subsectionintoc {3}{1}{Experiment with the Implicit Association Test}{26}{0}{3}
-\beamer@subsectionintoc {3}{2}{Models}{28}{0}{3}
-\beamer@subsectionintoc {3}{3}{Results}{30}{0}{3}
-\beamer@sectionintoc {4}{Discussion}{32}{0}{4}
+\beamer@sectionintoc {3}{Random stimuli in Experimental Psychology}{25}{0}{3}
+\beamer@subsectionintoc {3}{1}{Experiment with the Implicit Association Test}{25}{0}{3}
+\beamer@subsectionintoc {3}{2}{Models}{27}{0}{3}
+\beamer@subsectionintoc {3}{3}{Results}{29}{0}{3}
+\beamer@sectionintoc {4}{Discussion}{31}{0}{4}

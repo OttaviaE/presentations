@@ -15,6 +15,9 @@
 \setbeamersize{text margin left=5mm,text margin right=5mm} 
 \setbeamercolor{subsection name}{fg=white}
 \setbeamercolor{section name}{fg=white}
+%\setbeamercolor{title}{bg=white, fg=rasch}
+%\setbeamercolor{frame title}{bg=white, fg=rasch}
+%\setbeamerfont{frame title}{family=\bfseries}
 \usepackage{xcolor}
 \usepackage{tikz}
 \usepackage[absolute,overlay]{textpos}
@@ -49,18 +52,18 @@
 	},
 }
 
- \title[Randomness and possibilities]{When randomness opens new possibilities: Acknowledging the stimulus sampling variability in Experimental Psychology}
-\vspace{-1.5mm}\author[OME, PA, ER]{ Ottavia M. Epifania\textsuperscript{1,2,3}, Pasquale Anselmi\textsuperscript{1}, Egidio Robusto\textsuperscript{1}\\ \texttt{ottavia.epifania@unipd.it}}
-\institute[]{\small \textsuperscript{1} University of Padova (IT) \\
-\textsuperscript{2} Psicostat Group \\
-\textsuperscript{3} Catholic Univerisity of the Sacred Heart, Milan (IT) \\}
-\vspace*{-5mm}
-\date[CMS Conference]{\footnotesize Conference CMS Berlin \\ December 16}
-\titlegraphic{\vspace{-5mm}%
-	\includegraphics[width=1.5cm,height=1.5cm,keepaspectratio]{img/unipd.png}%\hspace*{9.75cm}~%
-	\includegraphics[width=2cm,height=2cm,keepaspectratio]{img/psicostat.png}%
-	\includegraphics[width=1.5cm,height=1.5cm,keepaspectratio]{img/unicatt.png}%
-}
+% \title[Randomness and possibilities]{When randomness opens new possibilities: Acknowledging the stimulus sampling variability in Experimental Psychology}
+%\vspace{-1.5mm}\author[OME, PA, ER]{ Ottavia M. Epifania\textsuperscript{1,2,3}, Pasquale Anselmi\textsuperscript{1}, Egidio Robusto\textsuperscript{1}\\ \texttt{ottavia.epifania@unipd.it}}
+%\institute[]{\small \textsuperscript{1} University of Padova (IT) \\
+%\textsuperscript{2} Psicostat Group \\
+%\textsuperscript{3} Catholic Univerisity of the Sacred Heart, Milan (IT) \\}
+%\vspace*{-5mm}
+%\date[CMS Conference]{\footnotesize Conference CMS Berlin \\ December 16}
+%\titlegraphic{\vspace{-5mm}%
+%	\includegraphics[width=1.5cm,height=1.5cm,keepaspectratio]{img/unipd.png}%\hspace*{9.75cm}~%
+%	\includegraphics[width=2cm,height=2cm,keepaspectratio]{img/psicostat.png}%
+%	\includegraphics[width=1.5cm,height=1.5cm,keepaspectratio]{img/unicatt.png}%
+%}
 
 \definecolor{back}{RGB}{247, 251, 255}
 \definecolor{map}{RGB}{111, 172, 232}
@@ -98,47 +101,60 @@
 	\end{beamercolorbox}
 	\endgroup
 }
+\title[Randomness]{When randomness opens new possibilities: \\ Acknowledging the stimulus sampling variability in Experimental Psychology}
+\author[Epifania et al.]{\textbf{Ottavia M. Epifania}\textsuperscript{1,2,3}, Pasquale Anselmi \textsuperscript{1},  Egidio Robusto \textsuperscript{1}}
+\institute [] {
+\includegraphics[width=1.5cm,height=1.5cm,keepaspectratio]{img/unipd.png}%\hspace*{9.75cm}~%
+\includegraphics[width=2.5cm,height=2.5cm,keepaspectratio]{img/psicostat.png}%
+\includegraphics[width=1.5cm,height=1.5cm,keepaspectratio]{img/unicatt.png}\\ 
+	\textsuperscript{1} University of Padova, (IT)\\ \textsuperscript{2} Psicostat Group, University of Padova, (IT) \\ \textsuperscript{3} Università Cattolica del Sacro Cuore, Milano, (IT)}
+
+\date [CMStatistics 2023] {%\vspace{0.6cm}\\
+	\small
+	Computational and Methodological Statistics\\ 16--18 December 2023, University of Applied Sciences, \\ Berlin, Germany \\ \vspace{3mm}
+	December, 16\textsuperscript{th} 2023}
 
 \begin{document}
 \begin{frame}[plain]
-%    \maketitle
-\begin{center}
-		\large \bfseries When randomness opens new possibilities: \\ Acknowledging the stimulus sampling variability in Experimental Psychology
-\end{center}
+    \maketitle
+    \end{frame}
+%\begin{center}
+%		\large \bfseries When randomness opens new possibilities: \\ Acknowledging the stimulus sampling variability in Experimental Psychology
+%\end{center}
 
-\vspace{2.5mm}
-\begin{center}
-	\textbf{Ottavia M. Epifania}\textsuperscript{1,2,3}, Pasquale Anselmi\textsuperscript{1}, Egidio Robusto\textsuperscript{1}
-	
-	\vspace{1.5mm}
-	
-	\begin{columns}[T]
-		\begin{column}{.33\linewidth}
-			\centering 	\includegraphics[width=1.5cm,height=1.5cm,keepaspectratio]{img/unipd.png}
-		\end{column}
-		\begin{column}{.33\linewidth}
-			\centering \includegraphics[width=2.5cm,height=2.5cm,keepaspectratio]{img/psicostat.png}
-		\end{column}
-		\begin{column}{.33\linewidth}
-			\centering  \includegraphics[width=1.5cm,height=1.5cm,keepaspectratio]{img/unicatt.png}
-		\end{column}
-	\end{columns}
-	
-	\end{center}
-	
-	\vspace{1.5mm}
-	
-	\begin{center}
-	\small \textsuperscript{1} University of Padova (IT) \\
-	\textsuperscript{2} Psicostat Group, University of Padova (IT) \\
-	\textsuperscript{3} Università Cattolica del Sacro Cuore, Milan (IT) \\
-\end{center}
-
-\vspace{5mm}
-
-
-
-\end{frame}
+%\vspace{2.5mm}
+%\begin{center}
+%	\textbf{Ottavia M. Epifania}\textsuperscript{1,2,3}, Pasquale Anselmi\textsuperscript{1}, Egidio Robusto\textsuperscript{1}
+%	
+%	\vspace{1.5mm}
+%	
+%	\begin{columns}[T]
+%		\begin{column}{.33\linewidth}
+%			\centering 	\includegraphics[width=1.5cm,height=1.5cm,keepaspectratio]{img/unipd.png}
+%		\end{column}
+%		\begin{column}{.33\linewidth}
+%			\centering \includegraphics[width=2.5cm,height=2.5cm,keepaspectratio]{img/psicostat.png}
+%		\end{column}
+%		\begin{column}{.33\linewidth}
+%			\centering  \includegraphics[width=1.5cm,height=1.5cm,keepaspectratio]{img/unicatt.png}
+%		\end{column}
+%	\end{columns}
+%	
+%	\end{center}
+%	
+%	\vspace{1.5mm}
+%	
+%	\begin{center}
+%	\small \textsuperscript{1} University of Padova (IT) \\
+%	\textsuperscript{2} Psicostat Group, University of Padova (IT) \\
+%	\textsuperscript{3} Università Cattolica del Sacro Cuore, Milan (IT) \\
+%\end{center}
+%
+%\vspace{5mm}
+%
+%
+%
+%\end{frame}
 
 
 
@@ -253,6 +269,27 @@
 
 \section{Random effects for random factors}
 
+\begin{frame}{Random effects and random factors}
+	Linear combination of predictors in a Linear Model: 
+	\begin{equation}
+		\eta = \beta X,
+	\end{equation}
+	where $\beta$ indicates the coefficients of the fixed intercept and slope(s), and $X$ is the model-matrix.
+	
+Linear combination of predictors in a Linear Mixed-Effects Model (GLMM): 
+	
+	\begin{equation}
+		\eta = \beta X \, Zd,
+	\end{equation}
+	where $Z$ is the matrix and $d$ is the vector of the random effects (not parameters!)
+	
+	
+	\vspace{2.5mm}
+	\begin{center}
+		\emph{Best Linear Unbiased Predictors}
+	\end{center}
+\end{frame}
+
 \begin{frame}{Generalized linear model for dichotomous responses}
 	
 	\begin{figure}
@@ -285,27 +322,7 @@
 	
 \end{frame}
 
-\begin{frame}{Random effects and random factors}
-	Linear component in a (G)LM: 
-	\begin{equation}
-		\eta = \beta X,
-	\end{equation}
-	where $\beta$ indicates the coefficients of the fixed intercept and slope(s), and $X$ is the model-matrix.
-	
-	Linear components in a (Generalized) Linear Mixed-Effects Model (GLMM): 
-	
-	\begin{equation}
-		\eta = \beta X \, Zd,
-	\end{equation}
-	where $Z$ is the matrix and $d$ is the vector of the random effects (not parameters!)
-	
-	\onslide<2->
-	
-	\vspace{2.5mm}
-	\begin{center}
-		\emph{Best Linear Unbiased Predictors}
-	\end{center}
-\end{frame}
+
 
 \begin{frame}{The Rasch model}
 	\begin{equation*}
@@ -314,7 +331,7 @@
 	where: 
 	
 	$\theta_p$: ability of respondent $p$ (i.e., latent trait level of respondent $p$)\\
-	$b_s$: difficulty of stimulus $s$ (i.e., "challenging" power of stimulus $s$)\\
+	$b_s$: difficulty of stimulus $s$ (i.e., ``challenging'' power of stimulus $s$)\\
 	
 	\vspace{2.5mm}
 	\onslide<2-> 
@@ -399,8 +416,7 @@
 	\end{column}
 \end{columns}
 	\end{block}
-	\vspace{1.2mm}
-	Participants: 62 (F $=48.39$\%, Age = $24.92\pm2.11$ years)
+
 
 \end{frame}
 
@@ -430,6 +446,8 @@
 	D = \dfrac{M_{\text{BGWB}}-M_{\text{WGBB}}}{s_{\text{BGWB, WGBB}}}
 \end{equation*}
 
+	\vspace{1.2mm}
+Participants: 62 (F $=48.39$\%, Age = $24.92\pm2.11$ years)
 \end{frame}
 
 \subsection{Models}
@@ -444,7 +462,7 @@
 	\vspace{3mm}
 	Model 1:
 	\begin{equation*}\label{AccuracyMin}
-		y_{i} = \spot<2->[fill =blue!15]{logit^{-1}(\alpha + \beta_c X_c}  + \spot<2->[fill=yellow!20]{\alpha_{p[i]} +  \alpha_{s[i]} + \varepsilon_{i})}
+		y_{i} = logit^{-1}(\spot<2->[fill =blue!15]{\alpha + \beta_c X_c}  + \spot<2->[fill=yellow!20]{\alpha_{p[i]} +  \alpha_{s[i]} + \varepsilon_{i})}
 	\end{equation*}
 	\begin{centering}
 		
@@ -462,7 +480,7 @@
 	
 	Model 2: 
 	\begin{equation*}\label{Accuracy5}
-		y_{i} = \spot<2->[fill =blue!15]{logit^{-1}(\alpha + \beta_c X_c}  + \spot<2->[fill=yellow!20]{ \alpha_{p[i]} +  \beta_{s[i]}c_{i} + \varepsilon_{i})}
+		y_{i} = logit^{-1}(\spot<2->[fill =blue!15]{\alpha + \beta_c X_c}  + \spot<2->[fill=yellow!20]{ \alpha_{p[i]} +  \beta_{s[i]}c_{i} + \varepsilon_{i})}
 	\end{equation*}
 	
 	\begin{centering}
@@ -479,7 +497,7 @@
 	Model 3: 
 	
 	\begin{equation*}
-		y_{i} = \spot<2->[fill =blue!15]{logit^{-1}(\alpha + \beta_c X_c}  + \spot<2->[fill=yellow!20]{\alpha_{s[i]} +  \beta_{p[i]}c_{i} + \varepsilon_{i})}
+		y_{i} = logit^{-1}(\spot<2->[fill =blue!15]{\alpha + \beta_c X_c}  + \spot<2->[fill=yellow!20]{\alpha_{s[i]} +  \beta_{p[i]}c_{i} + \varepsilon_{i})}
 	\end{equation*}
 	
 	\begin{centering}
@@ -581,8 +599,15 @@
 			Thank you!
 		\end{Large}
 		
+		\vspace{2.5mm}
 		ottavia.epifania@unipd.it
 	\end{center}
+	
+	\vspace{5mm}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.3\linewidth]{img/qr}
+	\end{figure}
 	
 	
 \end{frame}
