@@ -18,7 +18,7 @@
 %\setbeamercolor{title}{bg=white, fg=rasch}
 %\setbeamercolor{frame title}{bg=white, fg=rasch}
 %\setbeamerfont{frame title}{family=\bfseries}
-%\setbeamerfont{section title}{family=\bfseries}
+\setbeamerfont{section title}{family=\bfseries}
 \usepackage{xcolor}
 \usepackage{tikz}
 \usepackage[absolute,overlay]{textpos}
@@ -113,7 +113,7 @@
 
 \date [CMStatistics 2023] {%\vspace{0.6cm}\\
 	\small
-	Computational and Methodological Statistics\\ 16--18 December 2023, University of Applied Sciences, \\ Berlin, Germany \\ \vspace{3mm}
+	Computational and Methodological Statistics\\ Berlin, Germany \\ \vspace{3mm}
 	December, 16\textsuperscript{th} 2023}
 
 \begin{document}
@@ -250,9 +250,10 @@
 	\begin{block}{Loss of information}
 		
 		\small
-		Every stimulus is assumed to be equally informative
-		
+	
 		All the variability is not considered as well as all the information that can be obtained from it 
+		
+			Every stimulus is assumed to be equally informative
 	\end{block}
 	
 \end{frame}
@@ -293,7 +294,7 @@ Linear combination of predictors in a Linear Mixed-Effects Model (LMM):
 	\end{center}
 \end{frame}
 
-\begin{frame}{Generalized linear model for dichotomous responses}
+\begin{frame}{Generalized linear model (GLM) for dichotomous responses}
 	
 	\begin{figure}
 		\begin{overprint}
@@ -306,13 +307,13 @@ Linear combination of predictors in a Linear Mixed-Effects Model (LMM):
 	\tikzoverlay (n1) at (8cm, 5.6cm){%
 		\begin{minipage}{0.7\linewidth}
 			
-			\emph{Logit link function g}
+		Logit link function $g$:
 			
 			$g(\eta_{ps}) = log\left(\frac{\mu_{ps}}{1 - \mu_{ps}}\right)$
 			
 			\vspace{5mm}
 			
-			\emph{Inverse} $g^{-1}$
+			Inverse $g^{-1}$
 			
 			\vspace{5mm}
 			
@@ -584,14 +585,16 @@ Participants: 62 (F $=48.39$\%, Age = $24.92\pm2.11$ years)
 \begin{frame}
 	\begin{itemize}
 		\item Acknowledge and gather the information at the stimulus level
+		
+		\vspace{2.5mm}
 	\item Improve generalizability of the results to other sets of stimuli 
+\vspace{2.5mm}
 
 \item Control for random variance in the data 
+\vspace{2.5mm}
 
 \item Allow for obtaining a Rasch-like parametrization of the data 
 
-\item Possibility of extending the (linear) model to other dependent variables (e.g., response times)
-		
 	\end{itemize}
 \end{frame}
 
