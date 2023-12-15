@@ -3,7 +3,7 @@
 %\usecolortheme{dove}
 %\useinnertheme{rounded}
 %\useoutertheme{smoothbars}
-\usetheme{metropolis}
+\usetheme{Madrid}
 \usefonttheme{serif}
 \usecolortheme{dove}
 \useinnertheme{rounded}
@@ -18,11 +18,13 @@
 %\setbeamercolor{title}{bg=white, fg=rasch}
 %\setbeamercolor{frame title}{bg=white, fg=rasch}
 %\setbeamerfont{frame title}{family=\bfseries}
+%\setbeamerfont{section title}{family=\bfseries}
 \usepackage{xcolor}
 \usepackage{tikz}
 \usepackage[absolute,overlay]{textpos}
 \usepackage{spot}
 \usepackage{tikzsymbols}
+%\usepackage[raggedright]{titlesec}
 \usetikzlibrary{mindmap,calc,patterns,decorations.pathmorphing,decorations.markings, arrows, shapes.arrows, shapes, backgrounds}
 \definecolor{unipd}{RGB}{155, 0, 20}
 \definecolor{grigioPantano}{RGB}{72,79,89}
@@ -88,7 +90,7 @@
 }%
 
 %\AtBeginSubsection{\frame{\subsectionpage}}
- 
+ \AtBeginSection{\frame{\sectionpage}}
 \setbeamertemplate{subsection page}
 {
 	\begingroup
