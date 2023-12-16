@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.26)  15 DEC 2023 15:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.26)  16 DEC 2023 13:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1189,39 +1189,39 @@ File: tikzlibrarybackgrounds.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 107.
+(hyperref)                removing `\mathsurround' on input line 109.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 107.
+(hyperref)                removing `\z@' on input line 109.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 107.
+(hyperref)                removing `superscript' on input line 109.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 107.
+(hyperref)                removing `\mathsurround' on input line 109.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 107.
+(hyperref)                removing `\z@' on input line 109.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 107.
+(hyperref)                removing `superscript' on input line 109.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 107.
+(hyperref)                removing `\mathsurround' on input line 109.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 107.
+(hyperref)                removing `\z@' on input line 109.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 107.
+(hyperref)                removing `superscript' on input line 109.
 
 (CMS-epifania.aux
 
@@ -1230,24 +1230,24 @@ LaTeX Warning: Label `Accuracy5' multiply defined.
 )
 \openout1 = `CMS-epifania.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1309,7 +1309,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 119.
+Package hyperref Info: Link coloring OFF on input line 121.
  (CMS-epifania.out) (CMS-epifania.out)
 \@outlinefile=\write5
 \openout5 = `CMS-epifania.out'.
@@ -1339,13 +1339,13 @@ Dictionary: translator-numbers-dictionary, Language: English
 heorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 ) (CMS-epifania.nav)
-LaTeX Font Info:    Trying to load font information for U+msa on input line 122
+LaTeX Font Info:    Trying to load font information for U+msa on input line 124
 .
 
 (C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 122
+LaTeX Font Info:    Trying to load font information for U+msb on input line 124
 .
 
 (C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -1354,17 +1354,17 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <img/unipd.png, id=121, 943.525pt x 949.5475pt>
 File: img/unipd.png Graphic file (type png)
 <use img/unipd.png>
-Package pdftex.def Info: img/unipd.png  used on input line 122.
+Package pdftex.def Info: img/unipd.png  used on input line 124.
 (pdftex.def)             Requested size: 42.3992pt x 42.66983pt.
 <img/psicostat.png, id=122, 3635.79607pt x 2727.03926pt>
 File: img/psicostat.png Graphic file (type png)
 <use img/psicostat.png>
-Package pdftex.def Info: img/psicostat.png  used on input line 122.
+Package pdftex.def Info: img/psicostat.png  used on input line 124.
 (pdftex.def)             Requested size: 71.12242pt x 53.34557pt.
 <img/unicatt.png, id=124, 225.84375pt x 225.84375pt>
 File: img/unicatt.png Graphic file (type png)
 <use img/unicatt.png>
-Package pdftex.def Info: img/unicatt.png  used on input line 122.
+Package pdftex.def Info: img/unicatt.png  used on input line 124.
 (pdftex.def)             Requested size: 42.67642pt x 42.67642pt.
 
 [1
@@ -1421,23 +1421,23 @@ ight cause out of memory (use non-interlaced PNG to fix this)
 <img/baseGLM.pdf, id=1647, 1011.78pt x 614.295pt>
 File: img/baseGLM.pdf Graphic file (type pdf)
 <use img/baseGLM.pdf>
-Package pdftex.def Info: img/baseGLM.pdf  used on input line 327.
+Package pdftex.def Info: img/baseGLM.pdf  used on input line 329.
 (pdftex.def)             Requested size: 235.01881pt x 142.69087pt.
 <img/linkGLM.pdf, id=1648, 1011.78pt x 614.295pt>
 File: img/linkGLM.pdf Graphic file (type pdf)
 <use img/linkGLM.pdf>
-Package pdftex.def Info: img/linkGLM.pdf  used on input line 327.
+Package pdftex.def Info: img/linkGLM.pdf  used on input line 329.
 (pdftex.def)             Requested size: 235.01881pt x 142.69087pt.
  [23
 
  <./img/baseGLM.pdf>]
 File: img/baseGLM.pdf Graphic file (type pdf)
 <use img/baseGLM.pdf>
-Package pdftex.def Info: img/baseGLM.pdf  used on input line 327.
+Package pdftex.def Info: img/baseGLM.pdf  used on input line 329.
 (pdftex.def)             Requested size: 235.01881pt x 142.69087pt.
 File: img/linkGLM.pdf Graphic file (type pdf)
 <use img/linkGLM.pdf>
-Package pdftex.def Info: img/linkGLM.pdf  used on input line 327.
+Package pdftex.def Info: img/linkGLM.pdf  used on input line 329.
 (pdftex.def)             Requested size: 235.01881pt x 142.69087pt.
  [24
 
@@ -1458,12 +1458,12 @@ Package pdftex.def Info: img/linkGLM.pdf  used on input line 327.
 <img/white.png, id=2034, 357.86711pt x 191.55904pt>
 File: img/white.png Graphic file (type png)
 <use img/white.png>
-Package pdftex.def Info: img/white.png  used on input line 425.
+Package pdftex.def Info: img/white.png  used on input line 427.
 (pdftex.def)             Requested size: 167.8713pt x 89.85738pt.
 <img/black.png, id=2035, 357.86711pt x 191.55904pt>
 File: img/black.png Graphic file (type png)
 <use img/black.png>
-Package pdftex.def Info: img/black.png  used on input line 425.
+Package pdftex.def Info: img/black.png  used on input line 427.
 (pdftex.def)             Requested size: 167.8713pt x 89.85738pt.
  [29
 
@@ -1471,12 +1471,12 @@ Package pdftex.def Info: img/black.png  used on input line 425.
 <img/wgbb.png, id=2134, 941.481pt x 523.191pt>
 File: img/wgbb.png Graphic file (type png)
 <use img/wgbb.png>
-Package pdftex.def Info: img/wgbb.png  used on input line 455.
+Package pdftex.def Info: img/wgbb.png  used on input line 457.
 (pdftex.def)             Requested size: 167.8713pt x 93.28416pt.
 <img/bgwb.png, id=2135, 941.481pt x 523.191pt>
 File: img/bgwb.png Graphic file (type png)
 <use img/bgwb.png>
-Package pdftex.def Info: img/bgwb.png  used on input line 455.
+Package pdftex.def Info: img/bgwb.png  used on input line 457.
 (pdftex.def)             Requested size: 167.8713pt x 93.28416pt.
 
 [30
@@ -1495,12 +1495,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{Accuracy5}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.551 \end{frame}
+l.553 \end{frame}
                  
 <img/raceParaccuracy.pdf, id=2350, 794.97pt x 614.295pt>
 File: img/raceParaccuracy.pdf Graphic file (type pdf)
 <use img/raceParaccuracy.pdf>
-Package pdftex.def Info: img/raceParaccuracy.pdf  used on input line 551.
+Package pdftex.def Info: img/raceParaccuracy.pdf  used on input line 553.
 (pdftex.def)             Requested size: 201.44762pt x 155.66362pt.
  [33
 
@@ -1508,27 +1508,27 @@ Package pdftex.def Info: img/raceParaccuracy.pdf  used on input line 551.
 <img/RaceHigh.pdf, id=2432, 794.97pt x 614.295pt>
 File: img/RaceHigh.pdf Graphic file (type pdf)
 <use img/RaceHigh.pdf>
-Package pdftex.def Info: img/RaceHigh.pdf  used on input line 581.
+Package pdftex.def Info: img/RaceHigh.pdf  used on input line 583.
 (pdftex.def)             Requested size: 184.65947pt x 142.69087pt.
 <img/RaceLow.pdf, id=2433, 794.97pt x 614.295pt>
 File: img/RaceLow.pdf Graphic file (type pdf)
 <use img/RaceLow.pdf>
-Package pdftex.def Info: img/RaceLow.pdf  used on input line 581.
+Package pdftex.def Info: img/RaceLow.pdf  used on input line 583.
 (pdftex.def)             Requested size: 184.65947pt x 142.69087pt.
 
-Overfull \hbox (5.12358pt too wide) detected at line 581
+Overfull \hbox (5.12358pt too wide) detected at line 583
 [][][] $[]$[][][][][][][][] $[]$[][][][][][] 
  []
 
 <img/wm1.jpg, id=2434, 92.5056pt x 69.3792pt>
 File: img/wm1.jpg Graphic file (type jpg)
 <use img/wm1.jpg>
-Package pdftex.def Info: img/wm1.jpg  used on input line 581.
+Package pdftex.def Info: img/wm1.jpg  used on input line 583.
 (pdftex.def)             Requested size: 26.1866pt x 19.63988pt.
 <img/bf56.jpg, id=2435, 92.5056pt x 69.3792pt>
 File: img/bf56.jpg Graphic file (type jpg)
 <use img/bf56.jpg>
-Package pdftex.def Info: img/bf56.jpg  used on input line 581.
+Package pdftex.def Info: img/bf56.jpg  used on input line 583.
 (pdftex.def)             Requested size: 26.1866pt x 19.63988pt.
 [34
 
@@ -1541,7 +1541,7 @@ Package pdftex.def Info: img/bf56.jpg  used on input line 581.
 <img/qr.png, id=2663, 1152.305pt x 1152.305pt>
 File: img/qr.png Graphic file (type png)
 <use img/qr.png>
-Package pdftex.def Info: img/qr.png  used on input line 619.
+Package pdftex.def Info: img/qr.png  used on input line 621.
 (pdftex.def)             Requested size: 100.7238pt x 100.7139pt.
  [37
 
@@ -1568,10 +1568,10 @@ Package rerunfilecheck Info: File `CMS-epifania.out' has not changed.
 (rerunfilecheck)             Checksum: D7595E9ACF6E803E256BED7F1AF8C058;1771.
  ) 
 Here is how much of TeX's memory you used:
- 29868 strings out of 474586
- 641691 string characters out of 5745680
+ 29869 strings out of 474586
+ 641703 string characters out of 5745680
  1985558 words of memory out of 5000000
- 51344 multiletter control sequences out of 15000+600000
+ 51345 multiletter control sequences out of 15000+600000
  568712 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,19n,123p,420b,1072s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1597,7 +1597,7 @@ ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/ottae/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users
 /ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
 
-Output written on CMS-epifania.pdf (37 pages, 3157827 bytes).
+Output written on CMS-epifania.pdf (37 pages, 3157275 bytes).
 PDF statistics:
  2813 PDF objects out of 2984 (max. 8388607)
  86 named destinations out of 1000 (max. 500000)
