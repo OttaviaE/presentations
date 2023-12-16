@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.26)  16 DEC 2023 13:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.26)  16 DEC 2023 14:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1538,11 +1538,15 @@ Package pdftex.def Info: img/bf56.jpg  used on input line 583.
 ] [36
 
 ]
-<img/qr.png, id=2663, 1152.305pt x 1152.305pt>
+<img/qr.png, id=2664, 1152.305pt x 1152.305pt>
 File: img/qr.png Graphic file (type png)
 <use img/qr.png>
-Package pdftex.def Info: img/qr.png  used on input line 621.
+Package pdftex.def Info: img/qr.png  used on input line 629.
 (pdftex.def)             Requested size: 100.7238pt x 100.7139pt.
+File: img/psicostat.png Graphic file (type png)
+<use img/psicostat.png>
+Package pdftex.def Info: img/psicostat.png  used on input line 629.
+(pdftex.def)             Requested size: 71.12242pt x 53.34557pt.
  [37
 
  <./img/qr.png>]
@@ -1568,11 +1572,11 @@ Package rerunfilecheck Info: File `CMS-epifania.out' has not changed.
 (rerunfilecheck)             Checksum: D7595E9ACF6E803E256BED7F1AF8C058;1771.
  ) 
 Here is how much of TeX's memory you used:
- 29869 strings out of 474586
- 641703 string characters out of 5745680
+ 29871 strings out of 474586
+ 641727 string characters out of 5745680
  1985558 words of memory out of 5000000
- 51345 multiletter control sequences out of 15000+600000
- 568712 words of font info for 77 fonts, out of 8000000 for 9000
+ 51346 multiletter control sequences out of 15000+600000
+ 568880 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,19n,123p,420b,1072s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
@@ -1596,10 +1600,11 @@ grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/ottae/AppData/L
 ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/ottae/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users
 /ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-
-Output written on CMS-epifania.pdf (37 pages, 3157275 bytes).
+<C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
+tt10.pfb>
+Output written on CMS-epifania.pdf (37 pages, 3165432 bytes).
 PDF statistics:
- 2813 PDF objects out of 2984 (max. 8388607)
+ 2797 PDF objects out of 2984 (max. 8388607)
  86 named destinations out of 1000 (max. 500000)
  1240 words of extra memory for PDF output out of 10000 (max. 10000000)
 
