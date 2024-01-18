@@ -58,8 +58,6 @@ header-includes:
       {
         \begin{frame}
           \tableofcontents[currentsection]
-        \end{frame}
-      }
 editor_options: 
   chunk_output_type: console
 ---
