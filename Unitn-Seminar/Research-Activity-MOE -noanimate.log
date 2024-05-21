@@ -1,0 +1,1894 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.26)  17 MAY 2024 12:37
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**"./Research-Activity-MOE -noanimate.tex"
+(Research-Activity-MOE -noanimate.tex
+LaTeX2e <2023-11-01>
+L3 programming layer <2023-11-09>
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamer.cls
+Document Class: beamer 2023/05/15 v3.70 A class for typesetting presentations
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasemodes.
+sty
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count186
+)
+\beamer@tempbox=\box51
+\beamer@tempcount=\count187
+\c@beamerpauses=\count188
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasedecode
+.sty
+\beamer@slideinframe=\count189
+\beamer@minimum=\count190
+\beamer@decode@box=\box52
+)
+\beamer@commentbox=\box53
+\beamer@modecount=\count191
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+)
+\headdp=\dimen140
+\footheight=\dimen141
+\sidebarheight=\dimen142
+\beamer@tempdim=\dimen143
+\beamer@finalheight=\dimen144
+\beamer@animht=\dimen145
+\beamer@animdp=\dimen146
+\beamer@animwd=\dimen147
+\beamer@leftmargin=\dimen148
+\beamer@rightmargin=\dimen149
+\beamer@leftsidebar=\dimen150
+\beamer@rightsidebar=\dimen151
+\beamer@boxsize=\dimen152
+\beamer@vboxoffset=\dimen153
+\beamer@descdefault=\dimen154
+\beamer@descriptionwidth=\dimen155
+\beamer@lastskip=\skip48
+\beamer@areabox=\box54
+\beamer@animcurrent=\box55
+\beamer@animshowbox=\box56
+\beamer@sectionbox=\box57
+\beamer@logobox=\box58
+\beamer@linebox=\box59
+\beamer@sectioncount=\count192
+\beamer@subsubsectionmax=\count193
+\beamer@subsectionmax=\count194
+\beamer@sectionmax=\count195
+\beamer@totalheads=\count196
+\beamer@headcounter=\count197
+\beamer@partstartpage=\count198
+\beamer@sectionstartpage=\count199
+\beamer@subsectionstartpage=\count266
+\beamer@animationtempa=\count267
+\beamer@animationtempb=\count268
+\beamer@xpos=\count269
+\beamer@ypos=\count270
+\beamer@ypos@offset=\count271
+\beamer@showpartnumber=\count272
+\beamer@currentsubsection=\count273
+\beamer@coveringdepth=\count274
+\beamer@sectionadjust=\count275
+\beamer@toclastsection=\count276
+\beamer@tocsectionnumber=\count277
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbaseoption
+s.sty
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+))
+\beamer@paperwidth=\skip49
+\beamer@paperheight=\skip50
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count278
+\Gm@cntv=\count279
+\c@Gm@tempcnt=\count280
+\Gm@bindingoffset=\dimen156
+\Gm@wd@mp=\dimen157
+\Gm@odd@mp=\dimen158
+\Gm@even@mp=\dimen159
+\Gm@layoutwidth=\dimen160
+\Gm@layoutheight=\dimen161
+\Gm@layouthoffset=\dimen162
+\Gm@layoutvoffset=\dimen163
+\Gm@dimlist=\toks18
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.st
+y
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-common.tex
+\pgfutil@everybye=\toks19
+\pgfutil@tempdima=\dimen164
+\pgfutil@tempdimb=\dimen165
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-latex.def
+\pgfutil@abb=\box60
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
+code.tex
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.s
+ty
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex
+\pgfkeys@pathtoks=\toks20
+\pgfkeys@temptoks=\toks21
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+libraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks22
+)))
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.
+code.tex
+\pgf@x=\dimen166
+\pgf@xa=\dimen167
+\pgf@xb=\dimen168
+\pgf@xc=\dimen169
+\pgf@y=\dimen170
+\pgf@ya=\dimen171
+\pgf@yb=\dimen172
+\pgf@yc=\dimen173
+\c@pgf@counta=\count281
+\c@pgf@countb=\count282
+\c@pgf@countc=\count283
+\c@pgf@countd=\count284
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
+r.code.tex
+\pgfmath@dimen=\dimen174
+\pgfmath@count=\count285
+\pgfmath@box=\box61
+\pgfmath@toks=\toks23
+\pgfmath@stack@operand=\toks24
+\pgfmath@stack@operation=\toks25
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.code.tex)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.basic.code.tex)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.trigonometric.code.tex)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.random.code.tex)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.comparison.code.tex)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.base.code.tex)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.round.code.tex)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.misc.code.tex)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.integerarithmetics.code.tex)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.
+code.tex)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
+.code.tex
+\c@pgfmathroundto@lastzeros=\count286
+)))
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/base\size11.clo
+File: size11.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.
+sty
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen175
+\Gin@req@width=\dimen176
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.
+sty
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+\pgf@x=\dimen177
+\pgf@y=\dimen178
+\pgf@xa=\dimen179
+\pgf@ya=\dimen180
+\pgf@xb=\dimen181
+\pgf@yb=\dimen182
+\pgf@xc=\dimen183
+\pgf@yc=\dimen184
+\pgf@xd=\dimen185
+\pgf@yd=\dimen186
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count287
+\c@pgf@countb=\count288
+\c@pgf@countc=\count289
+\c@pgf@countd=\count290
+\t@pgf@toka=\toks26
+\t@pgf@tokb=\toks27
+\t@pgf@tokc=\toks28
+\pgf@sys@id@count=\count291
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
+fg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-pdftex.def
+File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+)))
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+ssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count292
+\pgfsyssoftpath@bigbuffer@items=\count293
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+sprotocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
+Package xcolor Info: Model `RGB' extended on input line 1366.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
+) (C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
+Package: colortbl 2022/06/20 v1.0f Color table columns (DPC)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen187
+\ar@mcellbox=\box62
+\extrarowheight=\dimen188
+\NC@list=\toks29
+\extratabsurround=\skip51
+\backup@length=\skip52
+\ar@cellbox=\box63
+)
+\everycr=\toks30
+\minrowclearance=\skip53
+\rownum=\count294
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+e.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
+tex)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epoints.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen189
+\pgf@picmaxx=\dimen190
+\pgf@picminy=\dimen191
+\pgf@picmaxy=\dimen192
+\pgf@pathminx=\dimen193
+\pgf@pathmaxx=\dimen194
+\pgf@pathminy=\dimen195
+\pgf@pathmaxy=\dimen196
+\pgf@xx=\dimen197
+\pgf@xy=\dimen198
+\pgf@yx=\dimen199
+\pgf@yy=\dimen256
+\pgf@zx=\dimen257
+\pgf@zy=\dimen258
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen259
+\pgf@path@lasty=\dimen260
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathusage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen261
+\pgf@shorten@start@additional=\dimen262
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+escopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box64
+\pgf@hbox=\box65
+\pgf@layerbox@main=\box66
+\pgf@picture@serial@count=\count295
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+egraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen263
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransformations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen264
+\pgf@pt@y=\dimen265
+\pgf@pt@temp=\dimen266
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+equick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eobjects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+earrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen267
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eshade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen268
+\pgf@sys@shading@range@num=\count296
+\pgf@shadingcount=\count297
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eimage.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eexternal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box67
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+elayers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransparency.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epatterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+erdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\xxcolor.s
+ty
+Package: xxcolor 2003/10/24 ver 0.1
+\XC@nummixins=\count298
+\XC@countmixins=\count299
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2023-11-09 v7.01f Hypertext links for LaTeX
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+ty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmacro
+.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2023-11-09 v2.55 Cross-referencing by name of section
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
+lestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count300
+)
+\@linkdim=\dimen269
+\Hy@linkcounter=\count301
+\Hy@pagecounter=\count302
+ (C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2023-11-09 v7.01f Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count303
+ (C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2023-11-09 v7.01f Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `bookmarks' set `true' on input line 4054.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 4054.
+Package hyperref Info: Option `implicit' set `false' on input line 4054.
+Package hyperref Info: Hyper figures OFF on input line 4171.
+Package hyperref Info: Link nesting OFF on input line 4176.
+Package hyperref Info: Hyper index ON on input line 4179.
+Package hyperref Info: Plain pages OFF on input line 4186.
+Package hyperref Info: Backreferencing OFF on input line 4191.
+Package hyperref Info: Implicit mode OFF; no redefinition of LaTeX internals.
+Package hyperref Info: Bookmarks ON on input line 4438.
+\c@Hy@tempcnt=\count304
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4776.
+\XeTeXLinkMargin=\dimen270
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
+.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count305
+\Field@Width=\dimen271
+\Fld@charsize=\dimen272
+Package hyperref Info: Hyper figures OFF on input line 6055.
+Package hyperref Info: Link nesting OFF on input line 6060.
+Package hyperref Info: Hyper index ON on input line 6063.
+Package hyperref Info: backreferencing OFF on input line 6070.
+Package hyperref Info: Link coloring OFF on input line 6075.
+Package hyperref Info: Link coloring with OCG OFF on input line 6080.
+Package hyperref Info: PDF/A mode OFF on input line 6085.
+\Hy@abspage=\count306
+
+
+Package hyperref Message: Stopped early.
+
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2023-11-09 v7.01f Hyperref driver for pdfTeX
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count307
+\c@bookmark@seq@number=\count308
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+echeck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
+ounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+))
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbaserequir
+es.sty
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasecompat
+ibility.sty)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasefont.s
+ty (C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks31
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/sansmathaccent\sansmath
+accent.sty
+Package: sansmathaccent 2020/01/31
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile.st
+y
+Package: scrlfile 2023/07/07 v3.41 KOMA-Script package (file load hooks)
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile-ho
+ok.sty
+Package: scrlfile-hook 2023/07/07 v3.41 KOMA-Script package (using LaTeX hooks)
+
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlogo.sty
+Package: scrlogo 2023/07/07 v3.41 KOMA-Script package (logo)
+)))))
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasetransl
+ator.sty
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator.s
+ty
+Package: translator 2021-05-31 v1.12d Easy translation of strings in LaTeX
+))
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasemisc.s
+ty)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasetwoscr
+eens.sty)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbaseoverla
+y.sty
+\beamer@argscount=\count309
+\beamer@lastskipcover=\skip54
+\beamer@trivlistdepth=\count310
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasetitle.
+sty)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasesectio
+n.sty
+\c@lecture=\count311
+\c@part=\count312
+\c@section=\count313
+\c@subsection=\count314
+\c@subsubsection=\count315
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbaseframe.
+sty
+\beamer@framebox=\box68
+\beamer@frametitlebox=\box69
+\beamer@zoombox=\box70
+\beamer@zoomcount=\count316
+\beamer@zoomframecount=\count317
+\beamer@frametextheight=\dimen273
+\c@subsectionslide=\count318
+\beamer@frametopskip=\skip55
+\beamer@framebottomskip=\skip56
+\beamer@frametopskipautobreak=\skip57
+\beamer@framebottomskipautobreak=\skip58
+\beamer@envbody=\toks32
+\framewidth=\dimen274
+\c@framenumber=\count319
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbaseverbat
+im.sty
+\beamer@verbatimfileout=\write4
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbaseframes
+ize.sty
+\beamer@splitbox=\box71
+\beamer@autobreakcount=\count320
+\beamer@autobreaklastheight=\dimen275
+\beamer@frametitletoks=\toks33
+\beamer@framesubtitletoks=\toks34
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbaseframec
+omponents.sty
+\beamer@footins=\box72
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasecolor.
+sty)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasenotes.
+sty
+\beamer@frameboxcopy=\box73
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasetoc.st
+y)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasetempla
+tes.sty
+\beamer@sbttoks=\toks35
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbaseauxtem
+plates.sty
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbaseboxes.
+sty
+\bmb@box=\box74
+\bmb@colorbox=\box75
+\bmb@boxwidth=\dimen276
+\bmb@boxheight=\dimen277
+\bmb@prevheight=\dimen278
+\bmb@temp=\dimen279
+\bmb@dima=\dimen280
+\bmb@dimb=\dimen281
+\bmb@prevheight=\dimen282
+)
+\beamer@blockheadheight=\dimen283
+))
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbaselocals
+tructure.sty
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/tools\enumerate.sty
+Package: enumerate 2023/07/04 v3.00 enumerate extensions (DPC)
+\@enLab=\toks36
+)
+\beamer@bibiconwidth=\skip59
+\c@figure=\count321
+\c@table=\count322
+\abovecaptionskip=\skip60
+\belowcaptionskip=\skip61
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasenaviga
+tion.sty
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasenaviga
+tionsymbols.tex)
+\beamer@section@min@dim=\dimen284
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasetheore
+ms.sty
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2023/05/13 v2.17o AMS math features
+\@mathmargin=\skip62
+
+For additional information on amsmath, use the `?' option.
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks37
+\ex@=\dimen285
+))
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen286
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count323
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count324
+\leftroot@=\count325
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count326
+\DOTSCASE@=\count327
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box76
+\strutbox@=\box77
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen287
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count328
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count329
+\dotsspace@=\muskip17
+\c@parentequation=\count330
+\dspbrk@lvl=\count331
+\tag@help=\toks38
+\row@=\count332
+\column@=\count333
+\maxfields@=\count334
+\andhelp@=\toks39
+\eqnshift@=\dimen288
+\alignsep@=\dimen289
+\tagshift@=\dimen290
+\tagwidth@=\dimen291
+\totwidth@=\dimen292
+\lineht@=\dimen293
+\@envbody=\toks40
+\multlinegap=\skip63
+\multlinetaggap=\skip64
+\mathdisplay@stack=\toks41
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks42
+\thm@bodyfont=\toks43
+\thm@headfont=\toks44
+\thm@notefont=\toks45
+\thm@headpunct=\toks46
+\thm@preskip=\skip65
+\thm@postskip=\skip66
+\thm@headsep=\skip67
+\dth@everypar=\toks47
+)
+\c@theorem=\count335
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasethemes
+.sty))
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerthemedefau
+lt.sty
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerfontthemed
+efault.sty)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamercolortheme
+default.sty)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerinnertheme
+default.sty
+\beamer@dima=\dimen294
+\beamer@dimb=\dimen295
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beameroutertheme
+default.sty)))
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerthemeMadri
+d.sty
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamercolortheme
+whale.sty)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamercolortheme
+orchid.sty)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerinnertheme
+rounded.sty)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beameroutertheme
+infolines.sty))
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerfontthemes
+erif.sty)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamercolortheme
+dove.sty)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beameroutertheme
+miniframes.sty)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen296
+\lightrulewidth=\dimen297
+\cmidrulewidth=\dimen298
+\belowrulesep=\dimen299
+\belowbottomsep=\dimen300
+\aboverulesep=\dimen301
+\abovetopsep=\dimen302
+\cmidrulesep=\dimen303
+\cmidrulekern=\dimen304
+\defaultaddspace=\dimen305
+\@cmidla=\count336
+\@cmidlb=\count337
+\@aboverulesep=\dimen306
+\@belowrulesep=\dimen307
+\@thisruleclass=\count338
+\@lastruleclass=\count339
+\@thisrulewidth=\dimen308
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
+Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
+\c@tracingmulticols=\count340
+\mult@box=\box78
+\multicol@leftmargin=\dimen309
+\c@unbalance=\count341
+\c@collectmore=\count342
+\doublecol@number=\count343
+\multicoltolerance=\count344
+\multicolpretolerance=\count345
+\full@width=\dimen310
+\page@free=\dimen311
+\premulticols=\dimen312
+\postmulticols=\dimen313
+\multicolsep=\skip68
+\multicolbaselineskip=\skip69
+\partial@page=\box79
+\last@line=\box80
+\mc@boxedresult=\box81
+\maxbalancingoverflow=\dimen314
+\mult@rightbox=\box82
+\mult@grightbox=\box83
+\mult@firstbox=\box84
+\mult@gfirstbox=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\@tempa=\box109
+\@tempa=\box110
+\@tempa=\box111
+\@tempa=\box112
+\@tempa=\box113
+\@tempa=\box114
+\@tempa=\box115
+\@tempa=\box116
+\@tempa=\box117
+\@tempa=\box118
+\@tempa=\box119
+\@tempa=\box120
+\@tempa=\box121
+\c@minrows=\count346
+\c@columnbadness=\count347
+\c@finalcolumnbadness=\count348
+\last@try=\dimen315
+\multicolovershoot=\dimen316
+\multicolundershoot=\dimen317
+\mult@nat@firstbox=\box122
+\colbreak@box=\box123
+\mc@col@check@num=\count349
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/animate\animate.sty
+Package: animate 2023/06/18 PDF & SVG animations from files and inline graphics
+
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/oberdiek\ifdraft.sty
+Package: ifdraft 2016/05/16 v1.4 Detect class options draft and final (HO)
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count350
+\calc@Bcount=\count351
+\calc@Adimen=\dimen318
+\calc@Bdimen=\dimen319
+\calc@Askip=\skip70
+\calc@Bskip=\skip71
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count352
+\calc@Cskip=\skip72
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/media9\pdfbase.sty
+Package: pdfbase 2022/08/04 v0.55 driver independent access to low-level PDF fe
+atures
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2023-11-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count353
+\l__pdf_internal_box=\box124
+)
+\g_pbs_page_int=\count354
+\g_pbs_oc_int=\count355
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/zref\zref-abspage.sty
+Package: zref-abspage 2023-09-14 v2.35 Module abspage for zref (HO)
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/zref\zref-base.sty
+Package: zref-base 2023-09-14 v2.35 Module base for zref (HO)
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+Package zref Info: New property list: main on input line 767.
+Package zref Info: New property: default on input line 768.
+Package zref Info: New property: page on input line 769.
+)
+\c@abspage=\count356
+Package zref Info: New property: abspage on input line 67.
+) (C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/ocgx2\ocgbase.sty
+Package: ocgbase 2022/08/04 v0.22 support package for ocgx2.sty
+\g_ocgbase_nd_int=\count357
+)
+\@anim@box=\box125
+\@anim@measbox=\box126
+\@anim@tmpdima=\dimen320
+\@anim@tmpdimb=\dimen321
+\@anim@num=\count358
+\@anim@curframe=\count359
+\@anim@curframe@zb=\count360
+\@anim@resizeflags=\count361
+\@anim@skipfram=\count362
+\@anim@mulframecnt=\count363
+\@anim@@tmlnfile=\read3
+\@anim@tmpcnt=\count364
+\c@@anim@ltxcnt=\count365
+\@anim@curlayer=\count366
+\@anim@lineno=\count367
+\@anim@curfield=\count368
+\@anim@@resizeflags=\count369
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/appendixnumberbeamer\ap
+pendixnumberbeamer.sty)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.
+sty
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+shapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box127
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+plot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen322
+\pgf@nodesepend=\dimen323
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.st
+y
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.
+code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen324
+\pgffor@skip=\dimen325
+\pgffor@stack=\toks48
+\pgffor@toks=\toks49
+))
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z\tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count370
+\pgfplotmarksize=\dimen326
+)
+\tikz@lastx=\dimen327
+\tikz@lasty=\dimen328
+\tikz@lastxsaved=\dimen329
+\tikz@lastysaved=\dimen330
+\tikz@lastmovetox=\dimen331
+\tikz@lastmovetoy=\dimen332
+\tikzleveldistance=\dimen333
+\tikzsiblingdistance=\dimen334
+\tikz@figbox=\box128
+\tikz@figbox@bg=\box129
+\tikz@tempbox=\box130
+\tikz@tempbox@bg=\box131
+\tikztreelevel=\count371
+\tikznumberofchildren=\count372
+\tikznumberofcurrentchild=\count373
+\tikz@fig@count=\count374
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+matrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count375
+\pgfmatrixcurrentcolumn=\count376
+\pgf@matrix@numberofcolumns=\count377
+)
+\tikz@expandcount=\count378
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/textpos\textpos.sty
+Package: textpos 2022/07/23 v1.10.1
+Package textpos Info: choosing support for LaTeX3 on input line 60.
+\TP@textbox=\box132
+\TP@holdbox=\box133
+\TPHorizModule=\dimen335
+\TPVertModule=\dimen336
+\TP@margin=\dimen337
+\TP@absmargin=\dimen338
+
+Grid set 16 x 16 = 24.89615pt x 16.00467pt
+\TPboxrulesize=\dimen339
+\TP@ox=\dimen340
+\TP@oy=\dimen341
+\TP@tbargs=\toks50
+TextBlockOrigin set to 0pt x 0pt
+) (C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/spot\spot.sty
+Package: spot 2011/05/09 v1.1 Spotlight highlighting
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryshapes.code.tex
+File: tikzlibraryshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\
+pgflibraryshapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryshapes.misc.code.tex
+File: tikzlibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\
+pgflibraryshapes.misc.code.tex
+File: pgflibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryshapes.symbols.code.tex
+File: tikzlibraryshapes.symbols.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\
+pgflibraryshapes.symbols.code.tex
+File: pgflibraryshapes.symbols.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryshapes.arrows.code.tex
+File: tikzlibraryshapes.arrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\
+pgflibraryshapes.arrows.code.tex
+File: pgflibraryshapes.arrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryshapes.callouts.code.tex
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\
+pgflibraryshapes.callouts.code.tex))
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryshapes.multipart.code.tex
+File: tikzlibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\
+pgflibraryshapes.multipart.code.tex
+File: pgflibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodepartlowerbox=\box134
+\pgfnodeparttwobox=\box135
+\pgfnodepartthreebox=\box136
+\pgfnodepartfourbox=\box137
+\pgfnodeparttwentybox=\box138
+\pgfnodepartnineteenbox=\box139
+\pgfnodeparteighteenbox=\box140
+\pgfnodepartseventeenbox=\box141
+\pgfnodepartsixteenbox=\box142
+\pgfnodepartfifteenbox=\box143
+\pgfnodepartfourteenbox=\box144
+\pgfnodepartthirteenbox=\box145
+\pgfnodeparttwelvebox=\box146
+\pgfnodepartelevenbox=\box147
+\pgfnodeparttenbox=\box148
+\pgfnodepartninebox=\box149
+\pgfnodeparteightbox=\box150
+\pgfnodepartsevenbox=\box151
+\pgfnodepartsixbox=\box152
+\pgfnodepartfivebox=\box153
+)))
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryfadings.code.tex
+File: tikzlibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryfadings.code.tex
+File: pgflibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+\c@spot@spots=\count379
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/tikzsymbols\tikzsymbols
+.sty
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
+e.sty
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2023-11-09 L3 programming layer (loader) 
+)
+Package: xparse 2023-10-10 L3 Experimental document command parser
+)
+Package: tikzsymbols 2021/12/14 v4.12a Some symbols created using tikz and LaTe
+X3.
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/tools\xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3k
+eys2e.sty
+Package: l3keys2e 2023-10-10 LaTeX2e option processing using LaTeX3 keys
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryarrows.code.tex
+File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\arrowsize=\dimen342
+))
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarydecorations.pathmorphing.code.tex
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarydecorations.code.tex
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+decorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen343
+\pgfdecoratedremainingdistance=\dimen344
+\pgfdecoratedinputsegmentcompleteddistance=\dimen345
+\pgfdecoratedinputsegmentremainingdistance=\dimen346
+\pgf@decorate@distancetomove=\dimen347
+\pgf@decorate@repeatstate=\count380
+\pgfdecorationsegmentamplitude=\dimen348
+\pgfdecorationsegmentlength=\dimen349
+)
+\tikz@lib@dec@box=\box154
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorat
+ions\pgflibrarydecorations.pathmorphing.code.tex))
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarytrees.code.tex
+File: tikzlibrarytrees.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+\l__tikzsymbols_Moai_thickness_dim=\dimen350
+\l__tikzsymbols_Kochtopf_nr_arguments_int=\count381
+\l__tikzsymbols_Bratpfanne_nr_arguments_int=\count382
+\l__tikzsymbols_Schneebesen_nr_arguments_int=\count383
+\l__tikzsymbols_Sieb_nr_arguments_int=\count384
+\l__tikzsymbols_Purierstab_nr_arguments_int=\count385
+\l__tikzsymbols_Dreizack_nr_arguments_int=\count386
+\l__tikzsymbols_Backblech_nr_arguments_int=\count387
+\l__tikzsymbols_Ofen_nr_arguments_int=\count388
+\l__tikzsymbols_Pfanne_nr_arguments_int=\count389
+\l__tikzsymbols_Herd_nr_arguments_int=\count390
+\l__tikzsymbols_Saftpresse_nr_arguments_int=\count391
+\l__tikzsymbols_Schussel_nr_arguments_int=\count392
+\l__tikzsymbols_Schaler_nr_arguments_int=\count393
+\l__tikzsymbols_Reibe_nr_arguments_int=\count394
+\l__tikzsymbols_Flasche_nr_arguments_int=\count395
+\l__tikzsymbols_Nudelholz_nr_arguments_int=\count396
+\l__tikzsymbols_Knoblauchpresse_nr_arguments_int=\count397
+\l__tikzsymbols_Sadey_nr_arguments_int=\count398
+\l__tikzsymbols_dSadey_nr_arguments_int=\count399
+\l__tikzsymbols_Changey_nr_arguments_int=\count400
+\l__tikzsymbols_dChangey_nr_arguments_int=\count401
+\l__tikzsymbols_cChangey_nr_arguments_int=\count402
+\l__tikzsymbols_dcChangey_nr_arguments_int=\count403
+\l__tikzsymbols_Annoey_nr_arguments_int=\count404
+\l__tikzsymbols_dAnnoey_nr_arguments_int=\count405
+\l__tikzsymbols_Smiley_nr_arguments_int=\count406
+\l__tikzsymbols_dSmiley_nr_arguments_int=\count407
+\l__tikzsymbols_Laughey_nr_arguments_int=\count408
+\l__tikzsymbols_dLaughey_nr_arguments_int=\count409
+\l__tikzsymbols_Neutrey_nr_arguments_int=\count410
+\l__tikzsymbols_dNeutrey_nr_arguments_int=\count411
+\l__tikzsymbols_Winkey_nr_arguments_int=\count412
+\l__tikzsymbols_oldWinkey_nr_arguments_int=\count413
+\l__tikzsymbols_dWinkey_nr_arguments_int=\count414
+\l__tikzsymbols_olddWinkey_nr_arguments_int=\count415
+\l__tikzsymbols_Sey_nr_arguments_int=\count416
+\l__tikzsymbols_dSey_nr_arguments_int=\count417
+\l__tikzsymbols_Xey_nr_arguments_int=\count418
+\l__tikzsymbols_dXey_nr_arguments_int=\count419
+\l__tikzsymbols_Innocey_nr_arguments_int=\count420
+\l__tikzsymbols_wInnocey_nr_arguments_int=\count421
+\l__tikzsymbols_dInnocey_nr_arguments_int=\count422
+\l__tikzsymbols_Cooley_nr_arguments_int=\count423
+\l__tikzsymbols_dCooley_nr_arguments_int=\count424
+\l__tikzsymbols_Tongey_nr_arguments_int=\count425
+\l__tikzsymbols_dTongey_nr_arguments_int=\count426
+\l__tikzsymbols_Nursey_nr_arguments_int=\count427
+\l__tikzsymbols_dNursey_nr_arguments_int=\count428
+\l__tikzsymbols_Vomey_nr_arguments_int=\count429
+\l__tikzsymbols_dVomey_nr_arguments_int=\count430
+\l__tikzsymbols_Walley_nr_arguments_int=\count431
+\l__tikzsymbols_rWalley_nr_arguments_int=\count432
+\l__tikzsymbols_dWalley_nr_arguments_int=\count433
+\l__tikzsymbols_drWalley_nr_arguments_int=\count434
+\l__tikzsymbols_Cat_nr_arguments_int=\count435
+\l__tikzsymbols_SchrodingersCat_nr_arguments_int=\count436
+\l__tikzsymbols_Ninja_nr_arguments_int=\count437
+\l__tikzsymbols_dNinja_nr_arguments_int=\count438
+\l__tikzsymbols_Sleepey_nr_arguments_int=\count439
+\l__tikzsymbols_dSleepey_nr_arguments_int=\count440
+\l__tikzsymbols_Maskey_nr_arguments_int=\count441
+\l__tikzsymbols_NiceReapey_nr_arguments_int=\count442
+\l__tikzsymbols_Strichmaxerl_nr_arguments_int=\count443
+\l__tikzsymbols_Person_nr_arguments_int=\count444
+\l__tikzsymbols_Heart_nr_arguments_int=\count445
+\l__tikzsymbols_dHeart_nr_arguments_int=\count446
+\l__tikzsymbols_HeartBroken_nr_arguments_int=\count447
+\l__tikzsymbols_Candle_nr_arguments_int=\count448
+\l__tikzsymbols_Fire_nr_arguments_int=\count449
+\l__tikzsymbols_Coffeecup_nr_arguments_int=\count450
+\l__tikzsymbols_Chair_nr_arguments_int=\count451
+\l__tikzsymbols_Bed_nr_arguments_int=\count452
+\l__tikzsymbols_Tribar_nr_arguments_int=\count453
+\l__tikzsymbols_Moai_nr_arguments_int=\count454
+\l__tikzsymbols_Snowman_nr_arguments_int=\count455
+\l__tikzsymbols_BasicTree_nr_arguments_int=\count456
+\l__tikzsymbols_WorstTree_nr_arguments_int=\count457
+\l__tikzsymbols_Springtree_nr_arguments_int=\count458
+\l__tikzsymbols_Summertree_nr_arguments_int=\count459
+\l__tikzsymbols_Autumntree_nr_arguments_int=\count460
+\l__tikzsymbols_Wintertree_nr_arguments_int=\count461
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarymindmap.code.tex
+File: tikzlibrarymindmap.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarypatterns.code.tex
+File: tikzlibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+arypatterns.code.tex
+File: pgflibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarydecorations.markings.code.tex
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorat
+ions\pgflibrarydecorations.markings.code.tex))
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarybackgrounds.code.tex
+File: tikzlibrarybackgrounds.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@layerbox@background=\box155
+\pgf@layerboxsaved@background=\box156
+)
+(Research-Activity-MOE -noanimate.aux)
+\openout1 = `"Research-Activity-MOE -noanimate.aux"'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: includehead includefoot 
+* h-part:(L,W,R)=(14.22636pt, 369.88585pt, 14.22636pt)
+* v-part:(T,H,B)=(0.0pt, 256.0748pt, 0.0pt)
+* \paperwidth=398.33858pt
+* \paperheight=256.0748pt
+* \textwidth=369.88585pt
+* \textheight=227.62207pt
+* \oddsidemargin=-58.04362pt
+* \evensidemargin=-58.04362pt
+* \topmargin=-72.26999pt
+* \headheight=14.22636pt
+* \headsep=0.0pt
+* \topskip=11.0pt
+* \footskip=14.22636pt
+* \marginparwidth=4.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count462
+\scratchdimen=\dimen351
+\scratchbox=\box157
+\nofMPsegments=\count463
+\nofMParguments=\count464
+\everyMPshowfont=\toks51
+\MPscratchCnt=\count465
+\MPscratchDim=\dimen352
+\MPnumerator=\count466
+\makeMPintoPDFobject=\count467
+\everyMPtoPDFconversion=\toks52
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+Package hyperref Info: Link coloring OFF on input line 139.
+ (Research-Activity-MOE -noanimate.out)
+(Research-Activity-MOE -noanimate.out)
+\@outlinefile=\write5
+\openout5 = `"Research-Activity-MOE -noanimate.out"'.
+
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator-b
+asic-dictionary-English.dict
+Dictionary: translator-basic-dictionary, Language: English 
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator-b
+ibliography-dictionary-English.dict
+Dictionary: translator-bibliography-dictionary, Language: English 
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator-e
+nvironment-dictionary-English.dict
+Dictionary: translator-environment-dictionary, Language: English 
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator-m
+onths-dictionary-English.dict
+Dictionary: translator-months-dictionary, Language: English 
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator-n
+umbers-dictionary-English.dict
+Dictionary: translator-numbers-dictionary, Language: English 
+)
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator-t
+heorem-dictionary-English.dict
+Dictionary: translator-theorem-dictionary, Language: English 
+) (Research-Activity-MOE -noanimate.nav)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 139
+.
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 139
+.
+
+(C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+<img/psicostat.png, id=103, 3635.79607pt x 2727.03926pt>
+File: img/psicostat.png Graphic file (type png)
+<use img/psicostat.png>
+Package pdftex.def Info: img/psicostat.png  used on input line 142.
+(pdftex.def)             Requested size: 99.58249pt x 74.69212pt.
+
+[1
+
+{C:/Users/ottae/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./img/psicos
+tat.png
+
+pdfTeX warning: pdflatex.exe (file ./img/psicostat.png): large interlaced PNG m
+ight cause out of memory (use non-interlaced PNG to fix this)
+>]
+Runaway argument?
+ 
+! Paragraph ended before \@xverbatim was complete.
+<to be read again> 
+                   \par 
+l.181 \end{frame}
+                 
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+<img/wordcloud.png, id=165, 483.8075pt x 365.365pt>
+File: img/wordcloud.png Graphic file (type png)
+<use img/wordcloud.png>
+Package pdftex.def Info: img/wordcloud.png  used on input line 181.
+(pdftex.def)             Requested size: 129.45947pt x 97.76343pt.
+[2
+
+ <./img/wordcloud.png>]
+<freq-year.pdf, id=260, 1011.78pt x 614.295pt>
+File: freq-year.pdf Graphic file (type pdf)
+<use freq-year.pdf>
+Package pdftex.def Info: freq-year.pdf  used on input line 189.
+(pdftex.def)             Requested size: 295.9098pt x 179.65947pt.
+ [3
+
+ <./freq-year.pdf>]
+(Research-Activity-MOE -noanimate.toc) [4
+
+] [5
+
+]
+<img/bart.png, id=487, 200.75pt x 299.1175pt>
+File: img/bart.png Graphic file (type png)
+<use img/bart.png>
+Package pdftex.def Info: img/bart.png  used on input line 288.
+(pdftex.def)             Requested size: 66.57797pt x 99.202pt.
+<img/lisa.png, id=488, 541.02126pt x 611.28375pt>
+File: img/lisa.png Graphic file (type png)
+<use img/lisa.png>
+Package pdftex.def Info: img/lisa.png  used on input line 288.
+(pdftex.def)             Requested size: 59.18105pt x 66.859pt.
+ [6
+
+ <./img/bart.png> <./img/lisa.png>]
+File: img/bart.png Graphic file (type png)
+<use img/bart.png>
+Package pdftex.def Info: img/bart.png  used on input line 288.
+(pdftex.def)             Requested size: 66.57797pt x 99.202pt.
+File: img/lisa.png Graphic file (type png)
+<use img/lisa.png>
+Package pdftex.def Info: img/lisa.png  used on input line 288.
+(pdftex.def)             Requested size: 59.18105pt x 66.859pt.
+ [7
+
+]
+File: img/bart.png Graphic file (type png)
+<use img/bart.png>
+Package pdftex.def Info: img/bart.png  used on input line 288.
+(pdftex.def)             Requested size: 66.57797pt x 99.202pt.
+File: img/lisa.png Graphic file (type png)
+<use img/lisa.png>
+Package pdftex.def Info: img/lisa.png  used on input line 288.
+(pdftex.def)             Requested size: 59.18105pt x 66.859pt.
+ [8
+
+]
+<img/base.pdf, id=665, 1011.78pt x 614.295pt>
+File: img/base.pdf Graphic file (type pdf)
+<use img/base.pdf>
+Package pdftex.def Info: img/base.pdf  used on input line 328.
+(pdftex.def)             Requested size: 295.9098pt x 179.65947pt.
+<img/lisa.pdf, id=666, 1011.78pt x 614.295pt>
+File: img/lisa.pdf Graphic file (type pdf)
+<use img/lisa.pdf>
+Package pdftex.def Info: img/lisa.pdf  used on input line 328.
+(pdftex.def)             Requested size: 295.9098pt x 179.65947pt.
+<img/bart.pdf, id=667, 1011.78pt x 614.295pt>
+File: img/bart.pdf Graphic file (type pdf)
+<use img/bart.pdf>
+Package pdftex.def Info: img/bart.pdf  used on input line 328.
+(pdftex.def)             Requested size: 295.9098pt x 179.65947pt.
+
+Overfull \vbox (6.95685pt too high) detected at line 328
+ []
+
+[9
+
+]
+File: img/base.pdf Graphic file (type pdf)
+<use img/base.pdf>
+Package pdftex.def Info: img/base.pdf  used on input line 328.
+(pdftex.def)             Requested size: 295.9098pt x 179.65947pt.
+File: img/lisa.pdf Graphic file (type pdf)
+<use img/lisa.pdf>
+Package pdftex.def Info: img/lisa.pdf  used on input line 328.
+(pdftex.def)             Requested size: 295.9098pt x 179.65947pt.
+File: img/bart.pdf Graphic file (type pdf)
+<use img/bart.pdf>
+Package pdftex.def Info: img/bart.pdf  used on input line 328.
+(pdftex.def)             Requested size: 295.9098pt x 179.65947pt.
+
+Overfull \vbox (6.95685pt too high) detected at line 328
+ []
+
+[10
+
+ <./img/base.pdf>]
+File: img/base.pdf Graphic file (type pdf)
+<use img/base.pdf>
+Package pdftex.def Info: img/base.pdf  used on input line 328.
+(pdftex.def)             Requested size: 295.9098pt x 179.65947pt.
+File: img/lisa.pdf Graphic file (type pdf)
+<use img/lisa.pdf>
+Package pdftex.def Info: img/lisa.pdf  used on input line 328.
+(pdftex.def)             Requested size: 295.9098pt x 179.65947pt.
+File: img/bart.pdf Graphic file (type pdf)
+<use img/bart.pdf>
+Package pdftex.def Info: img/bart.pdf  used on input line 328.
+(pdftex.def)             Requested size: 295.9098pt x 179.65947pt.
+
+Overfull \vbox (6.95685pt too high) detected at line 328
+ []
+
+[11
+
+ <./img/lisa.pdf>]
+File: img/base.pdf Graphic file (type pdf)
+<use img/base.pdf>
+Package pdftex.def Info: img/base.pdf  used on input line 328.
+(pdftex.def)             Requested size: 295.9098pt x 179.65947pt.
+File: img/lisa.pdf Graphic file (type pdf)
+<use img/lisa.pdf>
+Package pdftex.def Info: img/lisa.pdf  used on input line 328.
+(pdftex.def)             Requested size: 295.9098pt x 179.65947pt.
+File: img/bart.pdf Graphic file (type pdf)
+<use img/bart.pdf>
+Package pdftex.def Info: img/bart.pdf  used on input line 328.
+(pdftex.def)             Requested size: 295.9098pt x 179.65947pt.
+
+Overfull \vbox (6.95685pt too high) detected at line 328
+ []
+
+[12
+
+ <./img/bart.pdf>]
+<img/baseGLM.pdf, id=916, 1011.78pt x 614.295pt>
+File: img/baseGLM.pdf Graphic file (type pdf)
+<use img/baseGLM.pdf>
+Package pdftex.def Info: img/baseGLM.pdf  used on input line 375.
+(pdftex.def)             Requested size: 258.91896pt x 157.20087pt.
+<img/linkGLM.pdf, id=917, 1011.78pt x 614.295pt>
+File: img/linkGLM.pdf Graphic file (type pdf)
+<use img/linkGLM.pdf>
+Package pdftex.def Info: img/linkGLM.pdf  used on input line 375.
+(pdftex.def)             Requested size: 258.91896pt x 157.20087pt.
+ [13
+
+ <./img/baseGLM.pdf>]
+File: img/baseGLM.pdf Graphic file (type pdf)
+<use img/baseGLM.pdf>
+Package pdftex.def Info: img/baseGLM.pdf  used on input line 375.
+(pdftex.def)             Requested size: 258.91896pt x 157.20087pt.
+File: img/linkGLM.pdf Graphic file (type pdf)
+<use img/linkGLM.pdf>
+Package pdftex.def Info: img/linkGLM.pdf  used on input line 375.
+(pdftex.def)             Requested size: 258.91896pt x 157.20087pt.
+ [14
+
+ <./img/linkGLM.pdf>]
+[15
+
+]
+\g__tikzsymbols_savebox_F_0 g 0 G_10.95_Smiley_3_none_box=\box158
+\g__tikzsymbols_savebox_F_0 g 0 G_10.95_Sleepey_3_none_none_black_box=\box159
+ [16
+
+] [17
+
+] [18
+
+]
+<img/ICC-2pl.pdf, id=1389, 1011.78pt x 614.295pt>
+File: img/ICC-2pl.pdf Graphic file (type pdf)
+<use img/ICC-2pl.pdf>
+Package pdftex.def Info: img/ICC-2pl.pdf  used on input line 674.
+(pdftex.def)             Requested size: 258.91896pt x 157.20087pt.
+<img/IIF-2pl.pdf, id=1390, 1011.78pt x 614.295pt>
+File: img/IIF-2pl.pdf Graphic file (type pdf)
+<use img/IIF-2pl.pdf>
+Package pdftex.def Info: img/IIF-2pl.pdf  used on input line 674.
+(pdftex.def)             Requested size: 258.91896pt x 157.20087pt.
+<img/TIF-2pl.pdf, id=1391, 1011.78pt x 614.295pt>
+File: img/TIF-2pl.pdf Graphic file (type pdf)
+<use img/TIF-2pl.pdf>
+Package pdftex.def Info: img/TIF-2pl.pdf  used on input line 674.
+(pdftex.def)             Requested size: 258.91896pt x 157.20087pt.
+
+Overfull \vbox (2.08127pt too high) detected at line 674
+ []
+
+[19
+
+ <./img/ICC-2pl.pdf>]
+File: img/ICC-2pl.pdf Graphic file (type pdf)
+<use img/ICC-2pl.pdf>
+Package pdftex.def Info: img/ICC-2pl.pdf  used on input line 674.
+(pdftex.def)             Requested size: 258.91896pt x 157.20087pt.
+File: img/IIF-2pl.pdf Graphic file (type pdf)
+<use img/IIF-2pl.pdf>
+Package pdftex.def Info: img/IIF-2pl.pdf  used on input line 674.
+(pdftex.def)             Requested size: 258.91896pt x 157.20087pt.
+File: img/TIF-2pl.pdf Graphic file (type pdf)
+<use img/TIF-2pl.pdf>
+Package pdftex.def Info: img/TIF-2pl.pdf  used on input line 674.
+(pdftex.def)             Requested size: 258.91896pt x 157.20087pt.
+
+Overfull \vbox (2.08127pt too high) detected at line 674
+ []
+
+[20
+
+ <./img/IIF-2pl.pdf>]
+File: img/ICC-2pl.pdf Graphic file (type pdf)
+<use img/ICC-2pl.pdf>
+Package pdftex.def Info: img/ICC-2pl.pdf  used on input line 674.
+(pdftex.def)             Requested size: 258.91896pt x 157.20087pt.
+File: img/IIF-2pl.pdf Graphic file (type pdf)
+<use img/IIF-2pl.pdf>
+Package pdftex.def Info: img/IIF-2pl.pdf  used on input line 674.
+(pdftex.def)             Requested size: 258.91896pt x 157.20087pt.
+File: img/TIF-2pl.pdf Graphic file (type pdf)
+<use img/TIF-2pl.pdf>
+Package pdftex.def Info: img/TIF-2pl.pdf  used on input line 674.
+(pdftex.def)             Requested size: 258.91896pt x 157.20087pt.
+
+Overfull \vbox (2.08127pt too high) detected at line 674
+ []
+
+[21
+
+ <./img/TIF-2pl.pdf>]
+Overfull \vbox (0.60004pt too high) detected at line 753
+ []
+
+[22
+
+]
+Overfull \vbox (0.60004pt too high) detected at line 753
+ []
+
+[23
+
+]
+Overfull \vbox (0.60004pt too high) detected at line 753
+ []
+
+[24
+
+]
+Overfull \vbox (0.60004pt too high) detected at line 753
+ []
+
+[25
+
+]
+Overfull \vbox (0.60004pt too high) detected at line 753
+ []
+
+[26
+
+]
+Overfull \vbox (0.60004pt too high) detected at line 753
+ []
+
+[27
+
+]
+Overfull \vbox (0.60004pt too high) detected at line 753
+ []
+
+[28
+
+]
+Overfull \vbox (0.60004pt too high) detected at line 753
+ []
+
+[29
+
+]
+<img/TIF-target.pdf, id=2006, 1011.78pt x 614.295pt>
+File: img/TIF-target.pdf Graphic file (type pdf)
+<use img/TIF-target.pdf>
+Package pdftex.def Info: img/TIF-target.pdf  used on input line 776.
+(pdftex.def)             Requested size: 295.9098pt x 179.65947pt.
+<img/TIF-first.pdf, id=2007, 1011.78pt x 614.295pt>
+File: img/TIF-first.pdf Graphic file (type pdf)
+<use img/TIF-first.pdf>
+Package pdftex.def Info: img/TIF-first.pdf  used on input line 776.
+(pdftex.def)             Requested size: 295.9098pt x 179.65947pt.
+<img/TIF-second.pdf, id=2008, 1011.78pt x 614.295pt>
+File: img/TIF-second.pdf Graphic file (type pdf)
+<use img/TIF-second.pdf>
+Package pdftex.def Info: img/TIF-second.pdf  used on input line 776.
+(pdftex.def)             Requested size: 295.9098pt x 179.65947pt.
+<img/TIF-third.pdf, id=2009, 1011.78pt x 614.295pt>
+File: img/TIF-third.pdf Graphic file (type pdf)
+<use img/TIF-third.pdf>
+Package pdftex.def Info: img/TIF-third.pdf  used on input line 776.
+(pdftex.def)             Requested size: 295.9098pt x 179.65947pt.
+ [30
+
+ <./img/TIF-target.pdf>]
+File: img/TIF-target.pdf Graphic file (type pdf)
+<use img/TIF-target.pdf>
+Package pdftex.def Info: img/TIF-target.pdf  used on input line 776.
+(pdftex.def)             Requested size: 295.9098pt x 179.65947pt.
+File: img/TIF-first.pdf Graphic file (type pdf)
+<use img/TIF-first.pdf>
+Package pdftex.def Info: img/TIF-first.pdf  used on input line 776.
+(pdftex.def)             Requested size: 295.9098pt x 179.65947pt.
+File: img/TIF-second.pdf Graphic file (type pdf)
+<use img/TIF-second.pdf>
+Package pdftex.def Info: img/TIF-second.pdf  used on input line 776.
+(pdftex.def)             Requested size: 295.9098pt x 179.65947pt.
+File: img/TIF-third.pdf Graphic file (type pdf)
+<use img/TIF-third.pdf>
+Package pdftex.def Info: img/TIF-third.pdf  used on input line 776.
+(pdftex.def)             Requested size: 295.9098pt x 179.65947pt.
+ [31
+
+ <./img/TIF-first.pdf>]
+File: img/TIF-target.pdf Graphic file (type pdf)
+<use img/TIF-target.pdf>
+Package pdftex.def Info: img/TIF-target.pdf  used on input line 776.
+(pdftex.def)             Requested size: 295.9098pt x 179.65947pt.
+File: img/TIF-first.pdf Graphic file (type pdf)
+<use img/TIF-first.pdf>
+Package pdftex.def Info: img/TIF-first.pdf  used on input line 776.
+(pdftex.def)             Requested size: 295.9098pt x 179.65947pt.
+File: img/TIF-second.pdf Graphic file (type pdf)
+<use img/TIF-second.pdf>
+Package pdftex.def Info: img/TIF-second.pdf  used on input line 776.
+(pdftex.def)             Requested size: 295.9098pt x 179.65947pt.
+File: img/TIF-third.pdf Graphic file (type pdf)
+<use img/TIF-third.pdf>
+Package pdftex.def Info: img/TIF-third.pdf  used on input line 776.
+(pdftex.def)             Requested size: 295.9098pt x 179.65947pt.
+ [32
+
+ <./img/TIF-second.pdf>]
+File: img/TIF-target.pdf Graphic file (type pdf)
+<use img/TIF-target.pdf>
+Package pdftex.def Info: img/TIF-target.pdf  used on input line 776.
+(pdftex.def)             Requested size: 295.9098pt x 179.65947pt.
+File: img/TIF-first.pdf Graphic file (type pdf)
+<use img/TIF-first.pdf>
+Package pdftex.def Info: img/TIF-first.pdf  used on input line 776.
+(pdftex.def)             Requested size: 295.9098pt x 179.65947pt.
+File: img/TIF-second.pdf Graphic file (type pdf)
+<use img/TIF-second.pdf>
+Package pdftex.def Info: img/TIF-second.pdf  used on input line 776.
+(pdftex.def)             Requested size: 295.9098pt x 179.65947pt.
+File: img/TIF-third.pdf Graphic file (type pdf)
+<use img/TIF-third.pdf>
+Package pdftex.def Info: img/TIF-third.pdf  used on input line 776.
+(pdftex.def)             Requested size: 295.9098pt x 179.65947pt.
+ [33
+
+ <./img/TIF-third.pdf>] [34
+
+]
+<img/WrightMap.pdf, id=2360, 1011.78pt x 614.295pt>
+File: img/WrightMap.pdf Graphic file (type pdf)
+<use img/WrightMap.pdf>
+Package pdftex.def Info: img/WrightMap.pdf  used on input line 823.
+(pdftex.def)             Requested size: 184.94292pt x 112.28365pt.
+ [35
+
+ <./img/WrightMap.pdf>] [36
+
+]
+[37
+
+] [38
+
+] [39
+
+] [40
+
+] [41
+
+] [42
+
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\translate ' on input line 953.
+
+<img/OME.png, id=2890, 1026.83624pt x 1026.83624pt>
+File: img/OME.png Graphic file (type png)
+<use img/OME.png>
+Package pdftex.def Info: img/OME.png  used on input line 966.
+(pdftex.def)             Requested size: 147.95207pt x 147.93951pt.
+[43
+
+ <./img/OME.png>]
+\tf@nav=\write6
+\openout6 = `"Research-Activity-MOE -noanimate.nav"'.
+
+\tf@toc=\write7
+\openout7 = `"Research-Activity-MOE -noanimate.toc"'.
+
+\tf@snm=\write8
+\openout8 = `"Research-Activity-MOE -noanimate.snm"'.
+
+ (Research-Activity-MOE -noanimate.aux)
+ ***********
+LaTeX2e <2023-11-01>
+L3 programming layer <2023-11-09>
+ ***********
+Package rerunfilecheck Info: File `"Research-Activity-MOE -noanimate".out' has 
+not changed.
+(rerunfilecheck)             Checksum: 88FE97937D3B12C5C5E874B1F8C60473;1062.
+ ) 
+Here is how much of TeX's memory you used:
+ 31758 strings out of 474586
+ 680695 string characters out of 5745680
+ 1970558 words of memory out of 5000000
+ 53181 multiletter control sequences out of 15000+600000
+ 569093 words of font info for 79 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 128i,19n,123p,442b,1225s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmbx10.pfb><C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmbx12.pfb><C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmex10.pfb><C:/Users/ottae/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/ottae/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/ottae/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/ottae/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/ottae/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/User
+s/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb>
+<C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
+r5.pfb><C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
+s/cm/cmr6.pfb><C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmr7.pfb><C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmr8.pfb><C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ottae/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/ottae/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/ottae/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/ottae/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/User
+s/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+
+Output written on "Research-Activity-MOE -noanimate.pdf" (43 pages, 2723968 byt
+es).
+PDF statistics:
+ 3022 PDF objects out of 3580 (max. 8388607)
+ 92 named destinations out of 1000 (max. 500000)
+ 514 words of extra memory for PDF output out of 10000 (max. 10000000)
+

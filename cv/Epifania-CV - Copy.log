@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.26)  18 JAN 2024 12:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.26)  21 MAR 2024 16:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -321,7 +321,7 @@ LaTeX Font Info:    Trying to load font information for U+lasy on input line 86
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 136.
+(Font)              <10.95> on input line 125.
 
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -331,18 +331,14 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 [1
 
 {C:/Users/ottae/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 229.
-
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\footskip}{14.49998pt}.
 
 [2]
-Overfull \hbox (9.17737pt too wide) in alignment at lines 280--280
-[] []
- []
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 250.
 
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -350,6 +346,15 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{14.49998pt}.
 
 [3]
+Overfull \hbox (9.17737pt too wide) in alignment at lines 313--313
+[] []
+ []
+
+
+Overfull \hbox (0.79301pt too wide) in alignment at lines 334--334
+[] []
+ []
+
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -385,7 +390,13 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\footskip}{14.49998pt}.
 
-[9] 
+[9]
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\footskip}{14.49998pt}.
+
+[10] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (Epifania-CV - Copy.aux)
  ***********
@@ -393,14 +404,14 @@ LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-09>
  ***********
 Package rerunfilecheck Info: File `"Epifania-CV - Copy".out' has not changed.
-(rerunfilecheck)             Checksum: 91BE8CB07B9DCBA27594E52A4A429EE7;1816.
+(rerunfilecheck)             Checksum: 0BFEC974779342248B06B3AB9E56BE09;1938.
  ) 
 Here is how much of TeX's memory you used:
  9618 strings out of 474586
- 151084 string characters out of 5745680
+ 151075 string characters out of 5745680
  1942558 words of memory out of 5000000
- 31667 multiletter control sequences out of 15000+600000
- 566197 words of font info for 66 fonts, out of 8000000 for 9000
+ 31666 multiletter control sequences out of 15000+600000
+ 565899 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,12n,79p,608b,601s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\ottae\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
@@ -419,9 +430,9 @@ e/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtcsc10.pfb><C:
 /amsfonts/cm/cmti8.pfb><C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts/type
 1/public/amsfonts/cm/cmtt10.pfb><C:/Users/ottae/AppData/Local/Programs/MiKTeX/f
 onts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on "Epifania-CV - Copy.pdf" (9 pages, 237540 bytes).
+Output written on "Epifania-CV - Copy.pdf" (10 pages, 244226 bytes).
 PDF statistics:
- 228 PDF objects out of 1000 (max. 8388607)
- 22 named destinations out of 1000 (max. 500000)
+ 241 PDF objects out of 1000 (max. 8388607)
+ 23 named destinations out of 1000 (max. 500000)
  97 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,81 @@
+STRUTTURA SLIDE CMS 
+
+STIMULI AS FIXED EFFECTS
+
+Tendency to consdier stimuli as fixed effects and participants as random 
+The generalizbuility is at the respondent level 
+The stimuli/item are taken to exahust the entire population they represent 
+
+This conceptualization might be appropriate when consdieringquestoonnaire and tests but might 
+need a reframing when considering experiments where stimuli representing different categories are employed 
+
+In these instances, the stimuli used in the experiment are clearly just a random sample representing the larger 
+population, that is the categories to which the stimulus belong 
+
+So why not considering the sampling variability also at the stimulus level? 
+Not considering the sampling variability at the stimulus level might have two main consequences: 
+
+- biased estimates 
+- the implication on the generalizability of the results 
+- Loss of information because a large part of information in the data is simply overlooked 
+
+
+## Biased estimates 
+
+Tutta la parte della tesi dove dico che ignorare la variabuilità dello stimolo per calcolare dei opunteggi 
+della persona rende le stinme ottenute piene di errore 
+(il paper di barr) 
+
+## Implication for the generalizability of the results 
+
+Results can be generalized at the respodents level not at the stimulus level --> only if the experiment
+is replicated with the exact same set of stimuli 
+
+very limting also in the sense of integrating ther euslts of the study with theoretical considerations 
+
+## Loss of information 
+
+There is so much information in the data that we are simply ignoring 
+
+## How to solve this issue? 
+
+Considering both respondents and stimuli as random factors from larger populations 
+
+And pratcically? LMMS 
+
+Also categorical responses become exteremly informative... and connected with a classical model in psychometrics when statistics
+meets psychoemtrics 
+
+## Rasch model, GLMMS and random effects 
+
+Rasch model 
+Link function 
+Random effects 
+
+Why is it useful in psycghology? 
+
+Experiments where the same stimulus is presented over and over again to the same respondents in at least 
+two conditions 
+
+the stimuli are indeed random realizations of a larger population 
+The rasch model could not be applied per se given the local dependence between the trials due to the random noise in the data 
+
+## An application
+
+The implicit association test commonly used for evaluating the preference for one category over an opposite one 
+Stimuli representing 4 different categories that have to be sorted correclty in the least amount of time by the respondents 
+in two contrasting conditions 
+
+The usual score is the stadarduized difference between the respone times in the two conditions --> categorical response correct/wrong 
+are almost completely overlooked 
+
+cannot understand whether it is the peference towrads one of the category or the dislike towards its opposite category 
+
+# application of random effects models on the accuracy data 
+data drive --> the best moddeel is chosen according to the actual vraibility  in the data 
+
+
+# i grafici
+ Highly and lowly contiburing stimuli, quelli che ho messo in rasch gone mixed 
+
+

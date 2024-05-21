@@ -1,0 +1,4 @@
+\beamer@sectionintoc {1}{Rasch modeling of complex data structures}{5}{0}{1}
+\beamer@sectionintoc {2}{Item Response Theory \\and short test forms development}{18}{0}{2}
+\beamer@sectionintoc {3}{Latent variables and measurement theory}{34}{0}{3}
+\beamer@sectionintoc {4}{Teaching Activity}{41}{0}{4}

@@ -1,5 +1,5 @@
-\babel@toc {italian}{}
-\babel@toc {italian}{}
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
 \beamer@sectionintoc {1}{Meaningfulness}{2}{0}{1}
 \beamer@sectionintoc {2}{The case in point}{7}{0}{2}
 \beamer@subsectionintoc {2}{1}{Tower of London}{8}{0}{2}
