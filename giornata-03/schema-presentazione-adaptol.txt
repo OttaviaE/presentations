@@ -1,0 +1,21 @@
+
+descrizione del test
+  - spazio problema
+  - caratteristiche degli item del test 
+
+descrizione del campione di ciascun test
+  - età, genere, (provenienza geografica) 
+  
+statistiche descrittive delle performance di accuratezza 
+  - distribuzione punteggi tutti i soggetti 
+  - distribuzione punteggi x anni di scolarità x genere (curva di crescita) 
+  - tempi di risposta corretta vs errata x numero di mosse x fasce d'età (quelle dei test)
+  
+metodi di analisi dei dati
+  - TCT   -> distruzioni dei percentili  (Ottavia prova a fittare di nuovo, se no si dice che non va)
+  - RASCH -> distribuzioni su tratto latente dei soggetti raggruppati per anni di scolarità (Ottavia prova a fittare di nuovo, se no si dice che non va)
+  - KST   -> Lo sa Andrea
+  
+conclusioni 
+
+  
