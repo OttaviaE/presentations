@@ -1,13 +1,12 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
 \beamer@sectionintoc {1}{Meaningfulness}{2}{0}{1}
-\beamer@sectionintoc {2}{The case in point}{10}{0}{2}
-\beamer@subsectionintoc {2}{1}{Tower of London}{11}{0}{2}
-\beamer@subsectionintoc {2}{3}{Attempt-based scoring methods}{14}{0}{2}
-\beamer@subsectionintoc {2}{4}{Latency-based scoring methods}{18}{0}{2}
-\beamer@sectionintoc {3}{Real data application}{21}{0}{3}
-\beamer@subsectionintoc {3}{1}{Individual differences}{22}{0}{3}
-\beamer@subsectionintoc {3}{2}{Group differences}{27}{0}{3}
-\beamer@subsectionintoc {3}{3}{Results: Individual differences}{29}{0}{3}
-\beamer@subsectionintoc {3}{4}{Results: Group differences}{36}{0}{3}
-\beamer@sectionintoc {4}{Food for thoughts}{45}{0}{4}
+\beamer@sectionintoc {2}{The case in point}{8}{0}{2}
+\beamer@subsectionintoc {2}{2}{Attempt-based scoring methods}{10}{0}{2}
+\beamer@subsectionintoc {2}{3}{Latency-based scoring methods}{13}{0}{2}
+\beamer@sectionintoc {3}{Real data application}{15}{0}{3}
+\beamer@subsectionintoc {3}{1}{Methods: Individual differences}{15}{0}{3}
+\beamer@subsectionintoc {3}{2}{Results: Individual differences}{19}{0}{3}
+\beamer@subsectionintoc {3}{3}{Methods: Group differences}{23}{0}{3}
+\beamer@subsectionintoc {3}{4}{Results: Group differences}{24}{0}{3}
+\beamer@sectionintoc {4}{Food for thoughts}{33}{0}{4}

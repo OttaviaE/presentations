@@ -111,20 +111,20 @@
 \newcommand{\@gooble@cellcolor@}[1][]{\@gooble@cellcolor@@}
 \newcommand{\@gooble@cellcolor@@}[1][]{\ignorespaces}
 \makeatother
-
-\AtBeginSection[]
-{
-	\begin{frame}
-		\tableofcontents[currentsection, currentsubsection]
-	\end{frame}
-}
-
-\AtBeginSubsection[]
-{
-	\begin{frame}
-		\tableofcontents[currentsection, currentsubsection]
-	\end{frame}
-}
+%
+%\AtBeginSection[]
+%{
+%	\begin{frame}
+%		\tableofcontents[currentsection, currentsubsection]
+%	\end{frame}
+%}
+%
+%\AtBeginSubsection[]
+%{
+%	\begin{frame}
+%		\tableofcontents[currentsection, currentsubsection]
+%	\end{frame}
+%}
 
 
 \title[Meaningfulness]{L'importanza di essere significante:\\ Un esempio basato sul test della Torre di Londra}
@@ -135,7 +135,7 @@ Dipartimento di Filosofia, Sociologia, Pedagogia e Psicologia Applicata,\\	Unive
 	
 	\date [Giornata 03] {%\vspace{0.6cm}\\
 	La psicometria tra oggi e domani: \\ Sfide e nuovi orizzonti \\ \vspace{3mm}
-		20 Giugno 2023}
+		20 Giugno 2024}
 \begin{document}
 	
 	\begin{frame}[plain]
@@ -152,7 +152,7 @@ Dipartimento di Filosofia, Sociologia, Pedagogia e Psicologia Applicata,\\	Unive
 	\frac{\varphi(a)}{\varphi(b)} = \frac{\varphi'(a)}{\varphi'(b)},
 	\]
 	
-	where $\varphi$ and $\varphi'$ are two different scales of measurement of the same variable.
+	where $\varphi$ and $\varphi'$ are two different scales of measurement of the same variable \footnote{Strictly referring to physical measures}.
 	
 	\pause
 	\begin{block}{Meaningful comparisons}
@@ -162,7 +162,7 @@ Dipartimento di Filosofia, Sociologia, Pedagogia e Psicologia Applicata,\\	Unive
 	\end{block}
 	
 	\pause
-	\begin{block}{Beyond meaningful comparison}
+	\begin{block}{Meaningful comparisons 2.0}
 		Given that there is a difference between $a$ and $b$, is this difference significant (or not) regardless of the scales of measurement?
 	\end{block}
 	\color{blue}
@@ -182,44 +182,47 @@ Dipartimento di Filosofia, Sociologia, Pedagogia e Psicologia Applicata,\\	Unive
 		$\varphi' (P) = [0, 2, 4, 10]$ 
 		\end{column}
 		
-		\onslide<3->
-			\begin{column}{.30\linewidth}
 	
-	$\varepsilon (P) = [0, 2, 3]$ 
+			\begin{column}{.30\linewidth}
+$\varepsilon (P) = [0, 2, 2, 3]$ 
+
 		\end{column}
 	\end{columns}
 
-\onslide<2->
+\pause
 	\vspace{3.5mm}
 	\begin{minipage}{.7\linewidth}
 
 			\scalebox{.8}{
 			\begin{tabular}{l rrr rrr rrr}
-				\multicolumn{10}{c}{$\varphi$} \\
-				&	it01	&	it02	&	it03	&	it04	&	it05	&	it06	&	it07	&	it08	&	it09			\\
+				\hline
+			
+				&	$q_1$	&	$q_2$	&	$q_3$	&	$q_4$	&	$q_5$	&	$q_6$	&	$q_7$	&	$q_8$	&	$q_9$			\\ \hline
+					\multicolumn{10}{c}{$\varphi$} \\
 				\color{Joe}Joe\normalcolor	&	0	&	1	&	2	&	2	&	2	&	3	&	3	&	3	&	3			\\
 				\color{Jane}Jane\normalcolor	&	0	&	2	&	2	&	2	&	3	&	3	&	3	&	3	&	3			\\
-				\color{Max}Max\normalcolor	&	0	&	1	&	0	&	2	&	3	&	3	&	3	&	3	&	3			\\
+				\color{Max}Max\normalcolor	&	0	&	1	&	0	&	2	&	3	&	3	&	3	&	3	&	3			\\\hline
 				
 				\multicolumn{10}{c}{$\varphi'$} \\
 				%		&	it01	&	it02	&	it03	&	it04	&	it05	&	it06	&	it07	&	it08	&	it09			\\
-				Joe	&	0	&	2	&	4	&	4	&	4	&	10	&	10	&	10	&	10			\\
-				Jane	&	0	&	4	&	4	&	4	&	10	&	10	&	10	&	10	&	10			\\
-				Max	&	0	&	2	&	0	&	4	&	10	&	10	&	10	&	10	&	10			\\
-				\multicolumn{10}{c}{\onslide<4->$\epsilon$} \\
-			%		&	it01	&	it02	&	it03	&	it04	&	it05	&	it06	&	it07	&	it08	&	it09			\\
-			\onslide<4->Joe	&	\onslide<4->0	&	\onslide<4->2	&	\onslide<4->2	&	\onslide<4->2	&	\onslide<4->2	&	\onslide<4->3	&	\onslide<4->3	&	\onslide<4->3	&	\onslide<4->3			\\
-			\onslide<4->Jane	&	\onslide<4->0	&	\onslide<4->2	&	\onslide<4->2	&	\onslide<4->2	&	\onslide<4->3	&	\onslide<4->3	&	\onslide<4->3	&	\onslide<4->3	&	\onslide<4->3			\\
-			\onslide<4->Max	&	\onslide<4->0	&	\onslide<4->2	&	\onslide<4->0	&	\onslide<4->2	&	\onslide<4->3	&	\onslide<4->3	&	\onslide<4->3	&	\onslide<4->3	&	\onslide<4->3			\\
-			
+				\color{Joe}Joe	&	0	&	2	&	4	&	4	&	4	&	10	&	10	&	10	&	10			\\
+			\color{Jane}Jane	&	0	&	4	&	4	&	4	&	10	&	10	&	10	&	10	&	10			\\
+				\color{Max}Max	&	0	&	2	&	0	&	4	&	10	&	10	&	10	&	10	&	10			\\\hline
+			\multicolumn{10}{c}{$\epsilon$} \\
+%		&	it01	&	it02	&	it03	&	it04	&	it05	&	it06	&	it07	&	it08	&	it09			\\
+\color{Joe}Joe\normalcolor	&	0	&	2	&	2	&	2	&	2	&	3	&	3	&	3	&	3			\\
+\color{Jane}Jane\normalcolor 	&	0	&	2	&	2	&	2	&	3	&	3	&	3	&	3	&	3			\\
+\color{Max}Max\normalcolor 	&	0	&	2	&	0	&	2	&	3	&	3	&	3	&	3	&	3			\\ \hline
 			\end{tabular}	
 }
-	\end{minipage}%
+	\end{minipage}% 
+	\pause
 \begin{minipage}{.30\linewidth}
 	\begin{columns}[T]
-\onslide<2->
+
 		\begin{column}{.30\linewidth}
 			\centering
+		
 				\begin{tikzpicture}
 				
 				% Coordinates for the dots
@@ -242,8 +245,9 @@ Dipartimento di Filosofia, Sociologia, Pedagogia e Psicologia Applicata,\\	Unive
 		\end{column}
 		\begin{column}{.30\linewidth}
 				\centering
+			
 			\begin{tikzpicture}
-				
+			
 				% Coordinates for the dots
 				\coordinate (A) at (0, 0);
 				\coordinate (B) at (0, 1);
@@ -265,9 +269,7 @@ Dipartimento di Filosofia, Sociologia, Pedagogia e Psicologia Applicata,\\	Unive
 
 		\begin{column}{.30\linewidth}
 				\centering
-				
 			\begin{tikzpicture}
-			
 			% Coordinates for the dots
 			\coordinate (A) at (0, 0);
 			\coordinate (B) at (0, 1);
@@ -277,9 +279,9 @@ Dipartimento di Filosofia, Sociologia, Pedagogia e Psicologia Applicata,\\	Unive
 			\draw[thick] (0, 0) -- (0, 2);
 			
 			% Drawing the dots with labels
-			\fill[Max] (A) circle (3pt) node[right] {22};
-			\fill[Joe] (B) circle (3pt) node[right] {23};
-			\fill[Jane] (C) circle (3pt) node[right] {24};
+			\fill[Max] (A) circle (3pt) node[right] {19};
+			\fill[Joe] (B) circle (3pt) node[right] {20};
+			\fill[Jane] (C) circle (3pt) node[right] {21};
 			
 			% Adding the title
 			\node at (0, 3) {\centering $\varepsilon$};
@@ -370,7 +372,9 @@ Dipartimento di Filosofia, Sociologia, Pedagogia e Psicologia Applicata,\\	Unive
 %\end{frame}
 
 \section{The case in point}
-\subsection{Tower of London}
+
+
+\subsection*{The Tower of London Test (ToL Test)}
 \begin{frame}
 	
 	\begin{columns}
@@ -393,83 +397,31 @@ Dipartimento di Filosofia, Sociologia, Pedagogia e Psicologia Applicata,\\	Unive
 		\end{center}
 		\column{0.45\textwidth}
 		\begin{center}
-			\begin{tikzpicture}[scale=1.2]
-				\node (goal) [mark=diamond,inner sep = 0pt, minimum size = 4pt] (23) at (  -1.5,  3.5*1.73) {
-					\begin{tikzpicture}[scale=.6]
-						\draw[draw=black!20,fill=black!20] (0,5) rectangle (6,5.3);
-						\draw[draw=black!20,fill=black!20] (0.85,5) rectangle (1.15,8.5);
-						\draw[draw=black!20,fill=black!20] (2.85,5) rectangle (3.15,7.5);
-						\draw[draw=black!20,fill=black!20] (4.85,5) rectangle (5.15,6.5);
-						\draw[fill=yellow] (1,5.8) circle (15pt);
-						\draw[fill=red] (1,6.85) circle (15pt);
-						\draw[fill=blue] (3,5.8) circle (15pt);
-					\end{tikzpicture}
-				};
-				
-			\end{tikzpicture}\\
-			Goal configuration 
+					\begin{tikzpicture}[scale=1.2]
+					\node (goal) [mark=diamond,inner sep = 0pt, minimum size = 4pt] (23) at (  -1.5,  3.5*1.73) {
+						\begin{tikzpicture}[scale=.6]
+							\draw[draw=black!20,fill=black!20] (0,5) rectangle (6,5.3);
+							\draw[draw=black!20,fill=black!20] (0.85,5) rectangle (1.15,8.5);
+							\draw[draw=black!20,fill=black!20] (2.85,5) rectangle (3.15,7.5);
+							\draw[draw=black!20,fill=black!20] (4.85,5) rectangle (5.15,6.5);
+							\draw[fill=yellow] (1,5.8) circle (15pt);
+							\draw[fill=red] (1,6.85) circle (15pt);
+							\draw[fill=blue] (3,5.8) circle (15pt);
+						\end{tikzpicture}
+					};
+					
+				\end{tikzpicture}\\
+				Goal configuration 
+	
 		\end{center}
 	\end{columns}
-
-	\vspace{3mm}
 	
-	Problem complexity influenced by: 
-	
-	\begin{itemize}
-		\item Number of moves
-		\item Number of alternative paths
-		\item Hierarchy of the starting/goal configuration
-	\end{itemize}
-	
-	
-
-	
-
-\end{frame}
-
-
-
-\subsection*{The Tower of London Test (ToL Test)}
-\begin{frame}
-	
-	
-	
-	\begin{columns}[T]
-		\column{0.45\textwidth}
+	\pause
+	\begin{center}    
+		\scriptsize
 		
-		\begin{center}
-			\small
-			\begin{itemize}
-				\item 12 problems    
-				\vspace{.2cm}
-				\item Same starting configuration
-				\vspace{.2cm}
-				\item More than one attempt per item 
-			\end{itemize}
-			
-			\vspace{.3cm}
-			\begin{tikzpicture}[scale=1.2]
-				\node[mark=diamond,inner sep = 0pt, minimum size = 4pt] (23) at (  -1.5,  3.5*1.73) {
-					\begin{tikzpicture}[scale=.4]
-						\draw[draw=black!20,fill=black!20] (0,5) rectangle (6,5.3);
-						\draw[draw=black!20,fill=black!20] (0.85,5) rectangle (1.15,8.5);
-						\draw[draw=black!20,fill=black!20] (2.85,5) rectangle (3.15,7.5);
-						\draw[draw=black!20,fill=black!20] (4.85,5) rectangle (5.15,6.5);
-						\draw[fill=yellow] (1,5.8) circle (15pt);
-						\draw[fill=red] (1,6.85) circle (15pt);
-						\draw[fill=blue] (3,5.8) circle (15pt);
-					\end{tikzpicture}
-				};
-			\end{tikzpicture}
-		\end{center}
-		
-		\column{0.45\textwidth}
-		\vspace{- .5cm}
-		\begin{center}    
-			\scriptsize
-			
-			\scalebox{.80}{
-				\begin{tabular}{ccc}
+		\scalebox{.80}{
+			\begin{tabular}{ccc}
 				\hline
 				Problem	&	Minimum moves	&	Alternative paths	\\
 				\hline
@@ -488,11 +440,10 @@ Dipartimento di Filosofia, Sociologia, Pedagogia e Psicologia Applicata,\\	Unive
 				12	&	5	&	2	\\
 				\hline
 			\end{tabular}
-			}
-
+		}
 		
-		\end{center}
-	\end{columns}
+	\end{center}
+	
 \end{frame}
 
 \subsection[Attempt-based SMs]{Attempt-based scoring methods}
@@ -700,7 +651,7 @@ Dipartimento di Filosofia, Sociologia, Pedagogia e Psicologia Applicata,\\	Unive
 
 \section{Real data application}
 
-\subsection{Individual differences}
+\subsection{Methods: Individual differences}
 
 \begin{frame}
 
@@ -733,36 +684,7 @@ Dipartimento di Filosofia, Sociologia, Pedagogia e Psicologia Applicata,\\	Unive
 	
 \end{frame}
 
-\subsection{Group differences}
 
-
-\begin{frame}
-	
-	
-	\begin{center}
-		\begin{itemize}
-			\item[] $H_0$: $\mu_{g1} -\mu_{g2} = 0$
-			\item[] $H_1$: $\mu_{g1} -\mu_{g2} \neq 0$
-		\end{itemize}
-		
-	\end{center}
-
-$t$-test on the standardized scores considering different grouping variables: 
-\begin{table}
-	\centering
-	\begin{tabular}{l r r}
-		\hline
-		Grouping variable	&	$n_1$	&	$n_2$	\\\hline
-		Gender	&	199	&	196	\\
-		Administration order	&	202	&	193	\\
-		Administration modality	&	211	&	184	\\
-		Schooling years	&	171	&	224	\\
-		\hline
-	\end{tabular}
-\end{table}
-
-
-\end{frame}
 
 
 \subsection{Results: Individual differences}
@@ -795,10 +717,10 @@ $t$-test on the standardized scores considering different grouping variables:
  		
  		\begin{column}{.50\linewidth}
  			\begin{overprint}
- 				\onslide<1>
- 				\centering
- 				\includegraphics[width=\linewidth]{img/butterfly-SH1-KR}
- 				\onslide<2>
+% 				\onslide<1>
+% 				\centering
+% 				\includegraphics[width=\linewidth]{img/butterfly-SH1-KR}
+% 				\onslide<2>
  				\centering
  				\includegraphics[width=\linewidth]{img/butterfly-SH1-KR-01}
  			\end{overprint}
@@ -806,10 +728,10 @@ $t$-test on the standardized scores considering different grouping variables:
  		\end{column}
  		\begin{column}{.50\linewidth}
  			 			\begin{overprint}
- 				\onslide<1>
- 				\centering
- 				\includegraphics[width=\linewidth]{img/butterfly-P1-P1p}
- 				\onslide<2>
+% 				\onslide<1>
+% 				\centering
+% 				\includegraphics[width=\linewidth]{img/butterfly-P1-P1p}
+% 				\onslide<2>
  				\centering
  				\includegraphics[width=\linewidth]{img/butterfly-P1-P1p-01}
  			\end{overprint}
@@ -819,6 +741,8 @@ $t$-test on the standardized scores considering different grouping variables:
  	
  \end{frame}
  
+ 
+
  \begin{frame}{Latency-based SM: Monotonic relation}
  	
  	\begin{columns}[T]
@@ -845,20 +769,20 @@ $t$-test on the standardized scores considering different grouping variables:
  		
  		\begin{column}{.50\linewidth}
  			\begin{overprint}
- 				\onslide<1>
- 				\centering
- 				\includegraphics[width=\linewidth]{img/butterfly-AN-SH2}
- 				\onslide<2>
+% 				\onslide<1>
+% 				\centering
+% 				\includegraphics[width=\linewidth]{img/butterfly-AN-SH2}
+% 				\onslide<2>
                 \includegraphics[width=\linewidth]{img/butterfly-AN-SH2-01}
  			\end{overprint}
 
  		\end{column}
  		\begin{column}{.50\linewidth}
  			\begin{overprint}
-	\onslide<1>
-	\centering
-	\includegraphics[width=\linewidth]{img/butterfly-PHI-AN}
-	\onslide<2>
+%	\onslide<1>
+%	\centering
+%	\includegraphics[width=\linewidth]{img/butterfly-PHI-AN}
+%	\onslide<2>
 	\includegraphics[width=\linewidth]{img/butterfly-PHI-AN-01}
 \end{overprint}
  		\end{column}
@@ -869,7 +793,36 @@ $t$-test on the standardized scores considering different grouping variables:
  
 
 
+\subsection{Methods: Group differences}
 
+
+\begin{frame}
+	
+	
+	\begin{center}
+		\begin{itemize}
+			\item[] $H_0$: $\mu_{g1} -\mu_{g2} = 0$
+			\item[] $H_1$: $\mu_{g1} -\mu_{g2} \neq 0$
+		\end{itemize}
+		
+	\end{center}
+	
+	$t$-test on the standardized scores considering different grouping variables: 
+	\begin{table}
+		\centering
+		\begin{tabular}{l r r}
+			\hline
+			Grouping variable	&	$n_1$	&	$n_2$	\\\hline
+			Gender	&	199	&	196	\\
+			Administration order	&	202	&	193	\\
+			Administration modality	&	211	&	184	\\
+			Schooling years	&	171	&	224	\\
+			\hline
+		\end{tabular}
+	\end{table}
+	
+	
+\end{frame}
 
  
  \subsection{Results: Group differences}
@@ -884,9 +837,9 @@ $t$-test on the standardized scores considering different grouping variables:
 		
 		&	\multicolumn{1}{c}{\color{black!40}\emph{d}}	&	\multicolumn{1}{c}{\color{black!40}\emph{d}}	&	\multicolumn{1}{c}{\color{black!40}\emph{d}}	&	\multicolumn{1}{c}{\color{black!40}\emph{d}} 		\\\hline 
 
-	Gender	&	1.84\phantom{\sym{***}}	&	$2.11\sym{*}$\phantom{\sym{**}}	& \cellcolor<5-5>{red!70}	1.69\phantom{\sym{***}}	&	2.03\sym{*}\phantom{\sym{**}}	\\
+	Gender	&	1.84\phantom{\sym{***}}	&	$2.11\sym{*}$\phantom{\sym{**}}	& \cellcolor<6-6>{red!70}	1.69\phantom{\sym{***}}	&	2.03\sym{*}\phantom{\sym{**}}	\\
 &	\color{black!40}0.19\phantom{\sym{***}}	&	\color{black!40}0.21\phantom{\sym{***}}	&	\color{black!40}0.17\phantom{\sym{***}}	&	\color{black!40}0.20\phantom{\sym{***}}	\\
-\cellcolor<2-2>{green!20}	Test order	& \cellcolor<3-3>{red!70}	$-0.15$\phantom{\sym{***}}	&	0.80\phantom{\sym{***}}	& \cellcolor<3-3>{white} \cellcolor<4-4>{red!70}	$-0.48$\phantom{\sym{***}}	&	0.28\phantom{\sym{***}}	\\
+\cellcolor<3-3>{yellow!20}	Test order	& \cellcolor<4-4>{red!70}	$-0.15$\phantom{\sym{***}}	&	0.80\phantom{\sym{***}}	& \cellcolor<4-4>{white} \cellcolor<5-5>{red!70}	$-0.48$\phantom{\sym{***}}	&	0.28\phantom{\sym{***}}	\\
 &	\color{black!40}$-0.01$\phantom{\sym{***}}	&	\color{black!40}0.08\phantom{\sym{***}}	&	\color{black!40}$-0.05$\phantom{\sym{***}}	&	\color{black!40}0.03\phantom{\sym{***}}	\\
 Adm. Modality	&	$-2.85\sym{**}$\phantom{\sym{*}}	&	$-1.93$\phantom{\sym{***}}	&	$-2.69\sym{**}$\phantom{\sym{*}}	&	$-2.35\sym{*}$\phantom{\sym{**}}	\\
 &	\color{black!40}$-0.29$\phantom{\sym{***}}	&	\color{black!40}$-0.19$\phantom{\sym{***}}	&	\color{black!40}$-0.27$\phantom{\sym{***}}	&	\color{black!40}$-0.24$\phantom{\sym{***}}	\\

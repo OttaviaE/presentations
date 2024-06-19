@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.26)  18 JUN 2024 12:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.26)  19 JUN 2024 16:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1143,7 +1143,7 @@ italian.ldf    See the documentation concerning the babel-italian typesetting
 italian.ldf    on input line 139.
 
 (epifania-giornata-03.nav)
-<unipd.png, id=130, 943.525pt x 949.5475pt>
+<unipd.png, id=102, 943.525pt x 949.5475pt>
 File: unipd.png Graphic file (type png)
 <use unipd.png>
 Package pdftex.def Info: unipd.png  used on input line 143.
@@ -1151,8 +1151,6 @@ Package pdftex.def Info: unipd.png  used on input line 143.
  [1
 
 {C:/Users/ottae/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./unipd.png>
-] (epifania-giornata-03.toc) [2
-
 ]
 LaTeX Font Info:    Trying to load font information for U+msa on input line 169
 .
@@ -1166,421 +1164,320 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 169
 (C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-[3
+[2
+
+] [3
 
 ] [4
 
 ] [5
 
-]
-Overfull \hbox (1.9223pt too wide) in paragraph at lines 291--291
-[][] 
- []
+] [6
 
-[6
+] [7
 
 ]
-Overfull \hbox (1.9223pt too wide) in paragraph at lines 291--291
-[][] 
- []
-
-[7
-
-]
-Overfull \hbox (1.9223pt too wide) in paragraph at lines 291--291
-[][] 
+Overfull \vbox (1.01666pt too high) detected at line 447
  []
 
 [8
 
 ]
-Overfull \hbox (1.9223pt too wide) in paragraph at lines 291--291
-[][] 
+Overfull \vbox (1.01666pt too high) detected at line 447
  []
 
 [9
 
-] (epifania-giornata-03.toc) [10
+]
+Overfull \hbox (10.8643pt too wide) in paragraph at lines 496--496
+ [][] 
+ []
 
-] (epifania-giornata-03.toc) [11
 
-] [12
+Overfull \hbox (10.8643pt too wide) in paragraph at lines 496--496
+[][] 
+ []
+
+
+Overfull \hbox (10.8643pt too wide) in paragraph at lines 496--496
+[][] 
+ []
+
+[10
 
 ]
+Overfull \hbox (10.8643pt too wide) in paragraph at lines 496--496
+ [][] 
+ []
+
+
+Overfull \hbox (10.8643pt too wide) in paragraph at lines 496--496
+[][] 
+ []
+
+
+Overfull \hbox (10.8643pt too wide) in paragraph at lines 496--496
+[][] 
+ []
+
+[11
+
+]
+Overfull \hbox (10.8643pt too wide) in paragraph at lines 496--496
+ [][] 
+ []
+
+
+Overfull \hbox (10.8643pt too wide) in paragraph at lines 496--496
+[][] 
+ []
+
+
+Overfull \hbox (10.8643pt too wide) in paragraph at lines 496--496
+[][] 
+ []
+
+[12
+
+]
+Overfull \hbox (438.63081pt too wide) in paragraph at lines 572--572
+[][] 
+ []
+
+
+Overfull \hbox (436.9579pt too wide) in paragraph at lines 572--572
+ [] 
+ []
+
+
+Overfull \hbox (432.66302pt too wide) in paragraph at lines 572--572
+ [] 
+ []
+
 [13
 
-] (epifania-giornata-03.toc) [14
-
 ]
-Overfull \hbox (10.8643pt too wide) in paragraph at lines 545--545
- [][] 
- []
-
-
-Overfull \hbox (10.8643pt too wide) in paragraph at lines 545--545
+Overfull \hbox (438.63081pt too wide) in paragraph at lines 572--572
 [][] 
  []
 
 
-Overfull \hbox (10.8643pt too wide) in paragraph at lines 545--545
-[][] 
- []
-
-[15
-
-]
-Overfull \hbox (10.8643pt too wide) in paragraph at lines 545--545
- [][] 
- []
-
-
-Overfull \hbox (10.8643pt too wide) in paragraph at lines 545--545
-[][] 
- []
-
-
-Overfull \hbox (10.8643pt too wide) in paragraph at lines 545--545
-[][] 
- []
-
-[16
-
-]
-Overfull \hbox (10.8643pt too wide) in paragraph at lines 545--545
- [][] 
- []
-
-
-Overfull \hbox (10.8643pt too wide) in paragraph at lines 545--545
-[][] 
- []
-
-
-Overfull \hbox (10.8643pt too wide) in paragraph at lines 545--545
-[][] 
- []
-
-[17
-
-] (epifania-giornata-03.toc) [18
-
-]
-Overfull \hbox (438.63081pt too wide) in paragraph at lines 621--621
-[][] 
- []
-
-
-Overfull \hbox (436.9579pt too wide) in paragraph at lines 621--621
+Overfull \hbox (436.9579pt too wide) in paragraph at lines 572--572
  [] 
  []
 
 
-Overfull \hbox (432.66302pt too wide) in paragraph at lines 621--621
+Overfull \hbox (432.66302pt too wide) in paragraph at lines 572--572
  [] 
  []
 
-[19
+[14
 
 ]
-Overfull \hbox (438.63081pt too wide) in paragraph at lines 621--621
-[][] 
- []
-
-
-Overfull \hbox (436.9579pt too wide) in paragraph at lines 621--621
- [] 
- []
-
-
-Overfull \hbox (432.66302pt too wide) in paragraph at lines 621--621
- [] 
- []
-
-[20
-
-] (epifania-giornata-03.toc) [21
-
-] (epifania-giornata-03.toc) [22
-
-]
-<img/mono-relation.pdf, id=1980, 1011.78pt x 614.295pt>
+<img/mono-relation.pdf, id=894, 1011.78pt x 614.295pt>
 File: img/mono-relation.pdf Graphic file (type pdf)
 <use img/mono-relation.pdf>
-Package pdftex.def Info: img/mono-relation.pdf  used on input line 734.
+Package pdftex.def Info: img/mono-relation.pdf  used on input line 685.
 (pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
-<img/empty-butterfly.pdf, id=1981, 1011.78pt x 614.295pt>
+<img/empty-butterfly.pdf, id=895, 1011.78pt x 614.295pt>
 File: img/empty-butterfly.pdf Graphic file (type pdf)
 <use img/empty-butterfly.pdf>
-Package pdftex.def Info: img/empty-butterfly.pdf  used on input line 734.
+Package pdftex.def Info: img/empty-butterfly.pdf  used on input line 685.
 (pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
-<img/butterfly-01.pdf, id=1982, 1011.78pt x 614.295pt>
+<img/butterfly-01.pdf, id=896, 1011.78pt x 614.295pt>
 File: img/butterfly-01.pdf Graphic file (type pdf)
 <use img/butterfly-01.pdf>
-Package pdftex.def Info: img/butterfly-01.pdf  used on input line 734.
+Package pdftex.def Info: img/butterfly-01.pdf  used on input line 685.
 (pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
-<img/butterfly-02.pdf, id=1983, 1011.78pt x 614.295pt>
+<img/butterfly-02.pdf, id=897, 1011.78pt x 614.295pt>
 File: img/butterfly-02.pdf Graphic file (type pdf)
 <use img/butterfly-02.pdf>
-Package pdftex.def Info: img/butterfly-02.pdf  used on input line 734.
+Package pdftex.def Info: img/butterfly-02.pdf  used on input line 685.
 (pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
- [23
+ [15
 
  <./img/mono-relation.pdf>]
 File: img/mono-relation.pdf Graphic file (type pdf)
 <use img/mono-relation.pdf>
-Package pdftex.def Info: img/mono-relation.pdf  used on input line 734.
+Package pdftex.def Info: img/mono-relation.pdf  used on input line 685.
 (pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
 File: img/empty-butterfly.pdf Graphic file (type pdf)
 <use img/empty-butterfly.pdf>
-Package pdftex.def Info: img/empty-butterfly.pdf  used on input line 734.
+Package pdftex.def Info: img/empty-butterfly.pdf  used on input line 685.
 (pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
 File: img/butterfly-01.pdf Graphic file (type pdf)
 <use img/butterfly-01.pdf>
-Package pdftex.def Info: img/butterfly-01.pdf  used on input line 734.
+Package pdftex.def Info: img/butterfly-01.pdf  used on input line 685.
 (pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
 File: img/butterfly-02.pdf Graphic file (type pdf)
 <use img/butterfly-02.pdf>
-Package pdftex.def Info: img/butterfly-02.pdf  used on input line 734.
+Package pdftex.def Info: img/butterfly-02.pdf  used on input line 685.
 (pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
- [24
+ [16
 
  <./img/empty-butterfly.pdf>]
 File: img/mono-relation.pdf Graphic file (type pdf)
 <use img/mono-relation.pdf>
-Package pdftex.def Info: img/mono-relation.pdf  used on input line 734.
+Package pdftex.def Info: img/mono-relation.pdf  used on input line 685.
 (pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
 File: img/empty-butterfly.pdf Graphic file (type pdf)
 <use img/empty-butterfly.pdf>
-Package pdftex.def Info: img/empty-butterfly.pdf  used on input line 734.
+Package pdftex.def Info: img/empty-butterfly.pdf  used on input line 685.
 (pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
 File: img/butterfly-01.pdf Graphic file (type pdf)
 <use img/butterfly-01.pdf>
-Package pdftex.def Info: img/butterfly-01.pdf  used on input line 734.
+Package pdftex.def Info: img/butterfly-01.pdf  used on input line 685.
 (pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
 File: img/butterfly-02.pdf Graphic file (type pdf)
 <use img/butterfly-02.pdf>
-Package pdftex.def Info: img/butterfly-02.pdf  used on input line 734.
+Package pdftex.def Info: img/butterfly-02.pdf  used on input line 685.
 (pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
- [25
+ [17
 
  <./img/butterfly-01.pdf>]
 File: img/mono-relation.pdf Graphic file (type pdf)
 <use img/mono-relation.pdf>
-Package pdftex.def Info: img/mono-relation.pdf  used on input line 734.
+Package pdftex.def Info: img/mono-relation.pdf  used on input line 685.
 (pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
 File: img/empty-butterfly.pdf Graphic file (type pdf)
 <use img/empty-butterfly.pdf>
-Package pdftex.def Info: img/empty-butterfly.pdf  used on input line 734.
+Package pdftex.def Info: img/empty-butterfly.pdf  used on input line 685.
 (pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
 File: img/butterfly-01.pdf Graphic file (type pdf)
 <use img/butterfly-01.pdf>
-Package pdftex.def Info: img/butterfly-01.pdf  used on input line 734.
+Package pdftex.def Info: img/butterfly-01.pdf  used on input line 685.
 (pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
 File: img/butterfly-02.pdf Graphic file (type pdf)
 <use img/butterfly-02.pdf>
-Package pdftex.def Info: img/butterfly-02.pdf  used on input line 734.
+Package pdftex.def Info: img/butterfly-02.pdf  used on input line 685.
 (pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
- [26
+ [18
 
- <./img/butterfly-02.pdf>] (epifania-giornata-03.toc) [27
-
-] [28
-
-]
-(epifania-giornata-03.toc) [29
-
-]
-<img/cor-KR-SH1.pdf, id=2607, 1011.78pt x 614.295pt>
+ <./img/butterfly-02.pdf>]
+<img/cor-KR-SH1.pdf, id=1161, 1011.78pt x 614.295pt>
 File: img/cor-KR-SH1.pdf Graphic file (type pdf)
 <use img/cor-KR-SH1.pdf>
-Package pdftex.def Info: img/cor-KR-SH1.pdf  used on input line 788.
+Package pdftex.def Info: img/cor-KR-SH1.pdf  used on input line 710.
 (pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
-<img/cor-P1-P1p.pdf, id=2608, 1011.78pt x 614.295pt>
+<img/cor-P1-P1p.pdf, id=1162, 1011.78pt x 614.295pt>
 File: img/cor-P1-P1p.pdf Graphic file (type pdf)
 <use img/cor-P1-P1p.pdf>
-Package pdftex.def Info: img/cor-P1-P1p.pdf  used on input line 788.
+Package pdftex.def Info: img/cor-P1-P1p.pdf  used on input line 710.
 (pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
- [30
+ [19
 
  <./img/cor-KR-SH1.pdf> <./img/cor-P1-P1p.pdf
 
 pdfTeX warning: pdflatex.exe (file ./img/cor-P1-P1p.pdf): PDF inclusion: multip
 le pdfs with page group included in a single page
 >]
-<img/butterfly-SH1-KR.pdf, id=2717, 1011.78pt x 614.295pt>
-File: img/butterfly-SH1-KR.pdf Graphic file (type pdf)
-<use img/butterfly-SH1-KR.pdf>
-Package pdftex.def Info: img/butterfly-SH1-KR.pdf  used on input line 820.
-(pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
-<img/butterfly-SH1-KR-01.pdf, id=2718, 1011.78pt x 614.295pt>
+<img/butterfly-SH1-KR-01.pdf, id=1248, 1011.78pt x 614.295pt>
 File: img/butterfly-SH1-KR-01.pdf Graphic file (type pdf)
 <use img/butterfly-SH1-KR-01.pdf>
-Package pdftex.def Info: img/butterfly-SH1-KR-01.pdf  used on input line 820.
+Package pdftex.def Info: img/butterfly-SH1-KR-01.pdf  used on input line 742.
 (pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
-<img/butterfly-P1-P1p.pdf, id=2719, 1011.78pt x 614.295pt>
-File: img/butterfly-P1-P1p.pdf Graphic file (type pdf)
-<use img/butterfly-P1-P1p.pdf>
-Package pdftex.def Info: img/butterfly-P1-P1p.pdf  used on input line 820.
-(pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
-<img/butterfly-P1-P1p-01.pdf, id=2720, 1011.78pt x 614.295pt>
+<img/butterfly-P1-P1p-01.pdf, id=1249, 1011.78pt x 614.295pt>
 File: img/butterfly-P1-P1p-01.pdf Graphic file (type pdf)
 <use img/butterfly-P1-P1p-01.pdf>
-Package pdftex.def Info: img/butterfly-P1-P1p-01.pdf  used on input line 820.
+Package pdftex.def Info: img/butterfly-P1-P1p-01.pdf  used on input line 742.
 (pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
- [31
-
- <./img/butterfly-SH1-KR.pdf> <./img/butterfly-P1-P1p.pdf
-
-pdfTeX warning: pdflatex.exe (file ./img/butterfly-P1-P1p.pdf): PDF inclusion: 
-multiple pdfs with page group included in a single page
->]
-File: img/butterfly-SH1-KR.pdf Graphic file (type pdf)
-<use img/butterfly-SH1-KR.pdf>
-Package pdftex.def Info: img/butterfly-SH1-KR.pdf  used on input line 820.
-(pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
-File: img/butterfly-SH1-KR-01.pdf Graphic file (type pdf)
-<use img/butterfly-SH1-KR-01.pdf>
-Package pdftex.def Info: img/butterfly-SH1-KR-01.pdf  used on input line 820.
-(pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
-File: img/butterfly-P1-P1p.pdf Graphic file (type pdf)
-<use img/butterfly-P1-P1p.pdf>
-Package pdftex.def Info: img/butterfly-P1-P1p.pdf  used on input line 820.
-(pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
-File: img/butterfly-P1-P1p-01.pdf Graphic file (type pdf)
-<use img/butterfly-P1-P1p-01.pdf>
-Package pdftex.def Info: img/butterfly-P1-P1p-01.pdf  used on input line 820.
-(pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
- [32
+ [20
 
  <./img/butterfly-SH1-KR-01.pdf> <./img/butterfly-P1-P1p-01.pdf
 
 pdfTeX warning: pdflatex.exe (file ./img/butterfly-P1-P1p-01.pdf): PDF inclusio
 n: multiple pdfs with page group included in a single page
 >]
-<img/cor-AN-SH2.pdf, id=2927, 1011.78pt x 614.295pt>
+<img/cor-AN-SH2.pdf, id=1345, 1011.78pt x 614.295pt>
 File: img/cor-AN-SH2.pdf Graphic file (type pdf)
 <use img/cor-AN-SH2.pdf>
-Package pdftex.def Info: img/cor-AN-SH2.pdf  used on input line 838.
+Package pdftex.def Info: img/cor-AN-SH2.pdf  used on input line 762.
 (pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
-<img/cor-T-AN.pdf, id=2928, 1011.78pt x 614.295pt>
+<img/cor-T-AN.pdf, id=1346, 1011.78pt x 614.295pt>
 File: img/cor-T-AN.pdf Graphic file (type pdf)
 <use img/cor-T-AN.pdf>
-Package pdftex.def Info: img/cor-T-AN.pdf  used on input line 838.
+Package pdftex.def Info: img/cor-T-AN.pdf  used on input line 762.
 (pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
- [33
+ [21
 
  <./img/cor-AN-SH2.pdf> <./img/cor-T-AN.pdf
 
 pdfTeX warning: pdflatex.exe (file ./img/cor-T-AN.pdf): PDF inclusion: multiple
  pdfs with page group included in a single page
 >]
-<img/butterfly-AN-SH2.pdf, id=3036, 1011.78pt x 614.295pt>
-File: img/butterfly-AN-SH2.pdf Graphic file (type pdf)
-<use img/butterfly-AN-SH2.pdf>
-Package pdftex.def Info: img/butterfly-AN-SH2.pdf  used on input line 868.
-(pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
-<img/butterfly-AN-SH2-01.pdf, id=3037, 1011.78pt x 614.295pt>
+<img/butterfly-AN-SH2-01.pdf, id=1430, 1011.78pt x 614.295pt>
 File: img/butterfly-AN-SH2-01.pdf Graphic file (type pdf)
 <use img/butterfly-AN-SH2-01.pdf>
-Package pdftex.def Info: img/butterfly-AN-SH2-01.pdf  used on input line 868.
+Package pdftex.def Info: img/butterfly-AN-SH2-01.pdf  used on input line 792.
 (pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
-<img/butterfly-PHI-AN.pdf, id=3038, 1011.78pt x 614.295pt>
-File: img/butterfly-PHI-AN.pdf Graphic file (type pdf)
-<use img/butterfly-PHI-AN.pdf>
-Package pdftex.def Info: img/butterfly-PHI-AN.pdf  used on input line 868.
-(pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
-<img/butterfly-PHI-AN-01.pdf, id=3039, 1011.78pt x 614.295pt>
+<img/butterfly-PHI-AN-01.pdf, id=1431, 1011.78pt x 614.295pt>
 File: img/butterfly-PHI-AN-01.pdf Graphic file (type pdf)
 <use img/butterfly-PHI-AN-01.pdf>
-Package pdftex.def Info: img/butterfly-PHI-AN-01.pdf  used on input line 868.
+Package pdftex.def Info: img/butterfly-PHI-AN-01.pdf  used on input line 792.
 (pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
- [34
-
- <./img/butterfly-AN-SH2.pdf> <./img/butterfly-PHI-AN.pdf
-
-pdfTeX warning: pdflatex.exe (file ./img/butterfly-PHI-AN.pdf): PDF inclusion: 
-multiple pdfs with page group included in a single page
->]
-File: img/butterfly-AN-SH2.pdf Graphic file (type pdf)
-<use img/butterfly-AN-SH2.pdf>
-Package pdftex.def Info: img/butterfly-AN-SH2.pdf  used on input line 868.
-(pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
-File: img/butterfly-AN-SH2-01.pdf Graphic file (type pdf)
-<use img/butterfly-AN-SH2-01.pdf>
-Package pdftex.def Info: img/butterfly-AN-SH2-01.pdf  used on input line 868.
-(pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
-File: img/butterfly-PHI-AN.pdf Graphic file (type pdf)
-<use img/butterfly-PHI-AN.pdf>
-Package pdftex.def Info: img/butterfly-PHI-AN.pdf  used on input line 868.
-(pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
-File: img/butterfly-PHI-AN-01.pdf Graphic file (type pdf)
-<use img/butterfly-PHI-AN-01.pdf>
-Package pdftex.def Info: img/butterfly-PHI-AN-01.pdf  used on input line 868.
-(pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
- [35
+ [22
 
  <./img/butterfly-AN-SH2-01.pdf> <./img/butterfly-PHI-AN-01.pdf
 
 pdfTeX warning: pdflatex.exe (file ./img/butterfly-PHI-AN-01.pdf): PDF inclusio
 n: multiple pdfs with page group included in a single page
->] (epifania-giornata-03.toc) [36
+>] [23
 
-] [37
+] [24
 
-] [38
+] [25
 
-] [39
+] [26
 
-] [40
+] [27
 
-] [41
+] [28
 
-] [42
+] [29
 
-] [43
+] [30
 
-] [44
+] [31
+
+] [32
 
 ]
-(epifania-giornata-03.toc) [45
-
-]
-<img/sum-scores.png, id=3986, 963.6pt x 490.08093pt>
+<img/sum-scores.png, id=2062, 963.6pt x 490.08093pt>
 File: img/sum-scores.png Graphic file (type png)
 <use img/sum-scores.png>
-Package pdftex.def Info: img/sum-scores.png  used on input line 966.
+Package pdftex.def Info: img/sum-scores.png  used on input line 919.
 (pdftex.def)             Requested size: 284.52866pt x 144.70723pt.
- [46
+ [33
 
  <./img/sum-scores.png>]
 File: img/sum-scores.png Graphic file (type png)
 <use img/sum-scores.png>
-Package pdftex.def Info: img/sum-scores.png  used on input line 966.
+Package pdftex.def Info: img/sum-scores.png  used on input line 919.
 (pdftex.def)             Requested size: 284.52866pt x 144.70723pt.
- [47
+ [34
 
 ]
-<img/iceberg.png, id=4137, 610.791pt x 542.025pt>
+<img/iceberg.png, id=2177, 610.791pt x 542.025pt>
 File: img/iceberg.png Graphic file (type png)
 <use img/iceberg.png>
-Package pdftex.def Info: img/iceberg.png  used on input line 975.
+Package pdftex.def Info: img/iceberg.png  used on input line 928.
 (pdftex.def)             Requested size: 177.82973pt x 157.80351pt.
- [48
+ [35
 
  <./img/iceberg.png>]
-<img/food00.jpeg, id=4229, 1027.84pt x 1027.84pt>
+<img/food00.jpeg, id=2245, 1027.84pt x 1027.84pt>
 File: img/food00.jpeg Graphic file (type jpg)
 <use img/food00.jpeg>
-Package pdftex.def Info: img/food00.jpeg  used on input line 1003.
+Package pdftex.def Info: img/food00.jpeg  used on input line 956.
 (pdftex.def)             Requested size: 53.34674pt x 53.33977pt.
- [49
+ [36
 
  <./img/food00.jpeg>]
 File: img/food00.jpeg Graphic file (type jpg)
 <use img/food00.jpeg>
-Package pdftex.def Info: img/food00.jpeg  used on input line 1003.
+Package pdftex.def Info: img/food00.jpeg  used on input line 956.
 (pdftex.def)             Requested size: 53.34674pt x 53.33977pt.
- [50
+ [37
 
 ]
 \tf@nav=\write6
@@ -1592,39 +1489,40 @@ Package pdftex.def Info: img/food00.jpeg  used on input line 1003.
 \tf@snm=\write8
 \openout8 = `epifania-giornata-03.snm'.
 
- (epifania-giornata-03.aux)
+
+(epifania-giornata-03.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-09>
  ***********
 Package rerunfilecheck Info: File `epifania-giornata-03.out' has not changed.
-(rerunfilecheck)             Checksum: 876868853D4DBFAFC614667DB9B96E2E;2377.
+(rerunfilecheck)             Checksum: C2A78609A2C7A8E9ABCE8D290E2EB908;2332.
  ) 
 Here is how much of TeX's memory you used:
- 27962 strings out of 474586
- 567782 string characters out of 5745680
- 1977558 words of memory out of 5000000
- 49460 multiletter control sequences out of 15000+600000
- 566732 words of font info for 68 fonts, out of 8000000 for 9000
+ 27781 strings out of 474586
+ 562636 string characters out of 5745680
+ 1969558 words of memory out of 5000000
+ 49326 multiletter control sequences out of 15000+600000
+ 567656 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,19n,123p,424b,1293s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,19n,123p,424b,1255s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmbx10.pfb><C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmbx12.pfb><C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmbx8.pfb><C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/ottae/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/ottae/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ottae/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ottae/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/o
-ttae/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/
-Users/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10
-.pfb><C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmsy8.pfb><C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
-msfonts/cm/cmti10.pfb>
-Output written on epifania-giornata-03.pdf (50 pages, 7226528 bytes).
+ublic/amsfonts/cm/cmmi10.pfb><C:/Users/ottae/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/ottae/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ottae/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ottae/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/ottae/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/ot
+tae/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/U
+sers/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.
+pfb><C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmsy8.pfb><C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmti10.pfb>
+Output written on epifania-giornata-03.pdf (37 pages, 6582769 bytes).
 PDF statistics:
- 4423 PDF objects out of 5155 (max. 8388607)
- 114 named destinations out of 1000 (max. 500000)
- 277 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2410 PDF objects out of 2487 (max. 8388607)
+ 87 named destinations out of 1000 (max. 500000)
+ 225 words of extra memory for PDF output out of 10000 (max. 10000000)
 
