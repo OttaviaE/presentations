@@ -32,36 +32,36 @@
 \headcommand {\slideentry {3}{1}{1}{15/18}{Methods: Individual differences}{0}}
 \headcommand {\beamer@framepages {15}{18}}
 \headcommand {\beamer@subsectionpages {15}{18}}
-\headcommand {\beamer@subsectionentry {0}{3}{2}{19}{Results: Individual differences}}
-\headcommand {\slideentry {3}{2}{1}{19/19}{Results: Individual differences}{0}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{19}{Results: Monotonic relation}}
+\headcommand {\slideentry {3}{2}{1}{19/19}{Results: Monotonic relation}{0}}
 \headcommand {\beamer@framepages {19}{19}}
-\headcommand {\slideentry {3}{2}{2}{20/20}{Results: Individual differences}{0}}
+\headcommand {\beamer@subsectionpages {19}{19}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{20}{Results: Differences and distances}}
+\headcommand {\slideentry {3}{3}{1}{20/20}{Results: Differences and distances}{0}}
 \headcommand {\beamer@framepages {20}{20}}
-\headcommand {\slideentry {3}{2}{3}{21/21}{Results: Individual differences}{0}}
+\headcommand {\beamer@subsectionpages {20}{20}}
+\headcommand {\beamer@subsectionentry {0}{3}{4}{21}{Methods: Group differences}}
+\headcommand {\slideentry {3}{4}{1}{21/21}{Methods: Group differences}{0}}
 \headcommand {\beamer@framepages {21}{21}}
-\headcommand {\slideentry {3}{2}{4}{22/22}{Results: Individual differences}{0}}
-\headcommand {\beamer@framepages {22}{22}}
-\headcommand {\beamer@subsectionpages {19}{22}}
-\headcommand {\beamer@subsectionentry {0}{3}{3}{23}{Methods: Group differences}}
-\headcommand {\slideentry {3}{3}{1}{23/23}{Methods: Group differences}{0}}
-\headcommand {\beamer@framepages {23}{23}}
-\headcommand {\beamer@subsectionpages {23}{23}}
-\headcommand {\beamer@subsectionentry {0}{3}{4}{24}{Results: Group differences}}
-\headcommand {\slideentry {3}{4}{1}{24/29}{Results: Group differences}{0}}
-\headcommand {\beamer@framepages {24}{29}}
-\headcommand {\slideentry {3}{4}{2}{30/32}{Results: Group differences}{0}}
-\headcommand {\beamer@framepages {30}{32}}
-\headcommand {\beamer@sectionpages {15}{32}}
-\headcommand {\beamer@subsectionpages {24}{32}}
-\headcommand {\sectionentry {4}{Food for thoughts}{33}{Food for thoughts}{0}}
-\headcommand {\slideentry {4}{0}{1}{33/33}{}{0}}
-\headcommand {\beamer@framepages {33}{33}}
-\headcommand {\slideentry {4}{0}{2}{34/35}{}{0}}
+\headcommand {\beamer@subsectionpages {21}{21}}
+\headcommand {\beamer@subsectionentry {0}{3}{5}{22}{Results: Attempt-based SM}}
+\headcommand {\slideentry {3}{5}{1}{22/27}{Results: Attempt-based SM}{0}}
+\headcommand {\beamer@framepages {22}{27}}
+\headcommand {\beamer@subsectionpages {22}{27}}
+\headcommand {\beamer@subsectionentry {0}{3}{6}{28}{Results: Latency-based SM}}
+\headcommand {\slideentry {3}{6}{1}{28/30}{Results: Latency-based SM}{0}}
+\headcommand {\beamer@framepages {28}{30}}
+\headcommand {\beamer@sectionpages {15}{30}}
+\headcommand {\beamer@subsectionpages {28}{30}}
+\headcommand {\sectionentry {4}{Food for thoughts}{31}{Food for thoughts}{0}}
+\headcommand {\slideentry {4}{0}{1}{31/31}{}{0}}
+\headcommand {\beamer@framepages {31}{31}}
+\headcommand {\slideentry {4}{0}{2}{32/33}{}{0}}
+\headcommand {\beamer@framepages {32}{33}}
+\headcommand {\slideentry {4}{0}{3}{34/35}{}{0}}
 \headcommand {\beamer@framepages {34}{35}}
-\headcommand {\slideentry {4}{0}{3}{36/37}{}{0}}
-\headcommand {\beamer@framepages {36}{37}}
-\headcommand {\beamer@partpages {1}{37}}
-\headcommand {\beamer@subsectionpages {33}{37}}
-\headcommand {\beamer@sectionpages {33}{37}}
-\headcommand {\beamer@documentpages {37}}
-\headcommand {\gdef \inserttotalframenumber {17}}
+\headcommand {\beamer@partpages {1}{35}}
+\headcommand {\beamer@subsectionpages {31}{35}}
+\headcommand {\beamer@sectionpages {31}{35}}
+\headcommand {\beamer@documentpages {35}}
+\headcommand {\gdef \inserttotalframenumber {15}}

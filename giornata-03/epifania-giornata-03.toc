@@ -6,7 +6,9 @@
 \beamer@subsectionintoc {2}{3}{Latency-based scoring methods}{13}{0}{2}
 \beamer@sectionintoc {3}{Real data application}{15}{0}{3}
 \beamer@subsectionintoc {3}{1}{Methods: Individual differences}{15}{0}{3}
-\beamer@subsectionintoc {3}{2}{Results: Individual differences}{19}{0}{3}
-\beamer@subsectionintoc {3}{3}{Methods: Group differences}{23}{0}{3}
-\beamer@subsectionintoc {3}{4}{Results: Group differences}{24}{0}{3}
-\beamer@sectionintoc {4}{Food for thoughts}{33}{0}{4}
+\beamer@subsectionintoc {3}{2}{Results: Monotonic relation}{19}{0}{3}
+\beamer@subsectionintoc {3}{3}{Results: Differences and distances}{20}{0}{3}
+\beamer@subsectionintoc {3}{4}{Methods: Group differences}{21}{0}{3}
+\beamer@subsectionintoc {3}{5}{Results: Attempt-based SM}{22}{0}{3}
+\beamer@subsectionintoc {3}{6}{Results: Latency-based SM}{28}{0}{3}
+\beamer@sectionintoc {4}{Food for thoughts}{31}{0}{4}
