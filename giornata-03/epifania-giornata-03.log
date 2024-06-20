@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.26)  19 JUN 2024 18:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.26)  20 JUN 2024 09:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1152,7 +1152,7 @@ Package pdftex.def Info: unipd.png  used on input line 145.
 File: img/psicostat.png Graphic file (type png)
 <use img/psicostat.png>
 Package pdftex.def Info: img/psicostat.png  used on input line 145.
-(pdftex.def)             Requested size: 56.86464pt x 42.65149pt.
+(pdftex.def)             Requested size: 71.12242pt x 53.34557pt.
  [1
 
 {C:/Users/ottae/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./unipd.png>
@@ -1450,40 +1450,41 @@ n: multiple pdfs with page group included in a single page
 ] [32
 
 ]
-<img/sum-scores.png, id=2065, 963.6pt x 490.08093pt>
+<img/iceberg.png, id=2065, 610.791pt x 542.025pt>
+File: img/iceberg.png Graphic file (type png)
+<use img/iceberg.png>
+Package pdftex.def Info: img/iceberg.png  used on input line 887.
+(pdftex.def)             Requested size: 177.82973pt x 157.80351pt.
+ [33
+
+ <./img/iceberg.png>]
+<img/sum-scores.png, id=2133, 963.6pt x 490.08093pt>
 File: img/sum-scores.png Graphic file (type png)
 <use img/sum-scores.png>
-Package pdftex.def Info: img/sum-scores.png  used on input line 921.
+Package pdftex.def Info: img/sum-scores.png  used on input line 929.
 (pdftex.def)             Requested size: 284.52866pt x 144.70723pt.
- [33
+
+[34
 
  <./img/sum-scores.png>]
 File: img/sum-scores.png Graphic file (type png)
 <use img/sum-scores.png>
-Package pdftex.def Info: img/sum-scores.png  used on input line 921.
+Package pdftex.def Info: img/sum-scores.png  used on input line 929.
 (pdftex.def)             Requested size: 284.52866pt x 144.70723pt.
- [34
-
-]
-<img/iceberg.png, id=2179, 610.791pt x 542.025pt>
-File: img/iceberg.png Graphic file (type png)
-<use img/iceberg.png>
-Package pdftex.def Info: img/iceberg.png  used on input line 930.
-(pdftex.def)             Requested size: 177.82973pt x 157.80351pt.
  [35
 
- <./img/iceberg.png>]
+]
 <img/food00.jpeg, id=2247, 1027.84pt x 1027.84pt>
 File: img/food00.jpeg Graphic file (type jpg)
 <use img/food00.jpeg>
-Package pdftex.def Info: img/food00.jpeg  used on input line 958.
+Package pdftex.def Info: img/food00.jpeg  used on input line 960.
 (pdftex.def)             Requested size: 53.34674pt x 53.33977pt.
  [36
 
  <./img/food00.jpeg>]
 File: img/food00.jpeg Graphic file (type jpg)
 <use img/food00.jpeg>
-Package pdftex.def Info: img/food00.jpeg  used on input line 958.
+Package pdftex.def Info: img/food00.jpeg  used on input line 960.
 (pdftex.def)             Requested size: 53.34674pt x 53.33977pt.
  [37
 
@@ -1508,7 +1509,7 @@ Package rerunfilecheck Info: File `epifania-giornata-03.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  27788 strings out of 474586
- 562803 string characters out of 5745680
+ 562805 string characters out of 5745680
  1969558 words of memory out of 5000000
  49333 multiletter control sequences out of 15000+600000
  567656 words of font info for 72 fonts, out of 8000000 for 9000
@@ -1528,7 +1529,7 @@ sers/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.
 pfb><C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
 m/cmsy8.pfb><C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
 sfonts/cm/cmti10.pfb>
-Output written on epifania-giornata-03.pdf (37 pages, 7556914 bytes).
+Output written on epifania-giornata-03.pdf (37 pages, 7556908 bytes).
 PDF statistics:
  2412 PDF objects out of 2487 (max. 8388607)
  87 named destinations out of 1000 (max. 500000)
