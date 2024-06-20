@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.26)  20 JUN 2024 10:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.26)  20 JUN 2024 10:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1510,7 +1510,7 @@ Package rerunfilecheck Info: File `epifania-giornata-03.out' has not changed.
 Here is how much of TeX's memory you used:
  27786 strings out of 474586
  562712 string characters out of 5745680
- 1969558 words of memory out of 5000000
+ 1970558 words of memory out of 5000000
  49331 multiletter control sequences out of 15000+600000
  567656 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1529,7 +1529,7 @@ sers/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.
 pfb><C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
 m/cmsy8.pfb><C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
 sfonts/cm/cmti10.pfb>
-Output written on epifania-giornata-03.pdf (37 pages, 7556707 bytes).
+Output written on epifania-giornata-03.pdf (37 pages, 7557735 bytes).
 PDF statistics:
  2412 PDF objects out of 2487 (max. 8388607)
  87 named destinations out of 1000 (max. 500000)
