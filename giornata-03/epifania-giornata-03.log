@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.26)  20 JUN 2024 09:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.26)  20 JUN 2024 10:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1418,17 +1418,17 @@ File: img/butterfly-AN-SH2-01.pdf Graphic file (type pdf)
 <use img/butterfly-AN-SH2-01.pdf>
 Package pdftex.def Info: img/butterfly-AN-SH2-01.pdf  used on input line 794.
 (pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
-<img/butterfly-PHI-AN-01.pdf, id=1434, 1011.78pt x 614.295pt>
-File: img/butterfly-PHI-AN-01.pdf Graphic file (type pdf)
-<use img/butterfly-PHI-AN-01.pdf>
-Package pdftex.def Info: img/butterfly-PHI-AN-01.pdf  used on input line 794.
+<img/butterfly-T-AN.pdf, id=1434, 1011.78pt x 614.295pt>
+File: img/butterfly-T-AN.pdf Graphic file (type pdf)
+<use img/butterfly-T-AN.pdf>
+Package pdftex.def Info: img/butterfly-T-AN.pdf  used on input line 794.
 (pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
  [22
 
- <./img/butterfly-AN-SH2-01.pdf> <./img/butterfly-PHI-AN-01.pdf
+ <./img/butterfly-AN-SH2-01.pdf> <./img/butterfly-T-AN.pdf
 
-pdfTeX warning: pdflatex.exe (file ./img/butterfly-PHI-AN-01.pdf): PDF inclusio
-n: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./img/butterfly-T-AN.pdf): PDF inclusion: mu
+ltiple pdfs with page group included in a single page
 >] [23
 
 ] [24
@@ -1508,10 +1508,10 @@ Package rerunfilecheck Info: File `epifania-giornata-03.out' has not changed.
 (rerunfilecheck)             Checksum: C2A78609A2C7A8E9ABCE8D290E2EB908;2332.
  ) 
 Here is how much of TeX's memory you used:
- 27788 strings out of 474586
- 562805 string characters out of 5745680
+ 27786 strings out of 474586
+ 562712 string characters out of 5745680
  1969558 words of memory out of 5000000
- 49333 multiletter control sequences out of 15000+600000
+ 49331 multiletter control sequences out of 15000+600000
  567656 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,19n,123p,424b,1255s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1529,7 +1529,7 @@ sers/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.
 pfb><C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
 m/cmsy8.pfb><C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
 sfonts/cm/cmti10.pfb>
-Output written on epifania-giornata-03.pdf (37 pages, 7556908 bytes).
+Output written on epifania-giornata-03.pdf (37 pages, 7556707 bytes).
 PDF statistics:
  2412 PDF objects out of 2487 (max. 8388607)
  87 named destinations out of 1000 (max. 500000)
