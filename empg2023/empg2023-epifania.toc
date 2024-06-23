@@ -1,6 +1,5 @@
 \babel@toc {english}{}\relax 
-\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
-\beamer@sectionintoc {2}{Generating rules}{17}{0}{2}
-\beamer@sectionintoc {3}{The mat\texttt {R}iks package}{19}{0}{3}
-\beamer@sectionintoc {4}{Why?}{40}{0}{4}
-\beamer@sectionintoc {5}{Final remarks}{46}{0}{5}
+\beamer@sectionintoc {1}{In the begininng}{3}{0}{1}
+\beamer@sectionintoc {2}{Time goes by\ldots {}}{20}{0}{2}
+\beamer@sectionintoc {3}{The mat\texttt {R}iks package}{22}{0}{3}
+\beamer@sectionintoc {4}{Why?}{44}{0}{4}

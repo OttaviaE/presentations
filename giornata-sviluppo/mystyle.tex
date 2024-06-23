@@ -1,0 +1,41 @@
+\newcommand{\imagenode}[2][1]% [scale], filename
+{   \node[above right,inner sep=0] (myimage) {\includegraphics[scale=#1]{#2}};
+    \path (myimage.north east);
+    \pgfgetlastxy{\myimagex}{\myimagey}
+    \pgfmathsetmacro{\myimagewidth}{\myimagex/28.453}
+    \pgfmathsetmacro{\myimageheight}{\myimagey/28.453}
+}
+\newcommand{\imagegrid}[4][help lines]% [options], steps, font, precision
+{   \pgfkeys{/pgf/number format/.cd,fixed,precision=#4}
+    \foreach \x in {0,...,#2}
+    {   \draw[#1] (\x/#2*\myimagewidth,\myimageheight) -- (\x/#2*\myimagewidth,0) node[below] {#3\pgfmathparse{\x/#2}\pgfmathprintnumber{\pgfmathresult}};
+        \draw[#1] (\myimagewidth,\x/#2*\myimageheight) -- (0,\x/#2*\myimageheight) node[left] {#3\pgfmathparse{\x/#2}\pgfmathprintnumber{\pgfmathresult}};
+    }
+}
+
+\newcommand{\highlightbox}[8][densely dashed,thick]% [options], left, low, right, up, node options, node text, overlay spec
+{   \only<#8>{\draw[#1] (#2*\myimagewidth, #3*\myimageheight) rectangle node[#6] {#7} (#4*\myimagewidth, #5*\myimageheight);}
+}
+
+\newcommand{\highlighttext}[8][densely dashed,thick]% [options], left, low, right, up, node options, node text, overlay spec
+{   \only<#8>{\path[#1] (#2*\myimagewidth, #3*\myimageheight) rectangle node[#6] {#7} (#4*\myimagewidth, #5*\myimageheight);}
+}
+%colonne 
+
+\newenvironment{cols}[1][]{}{}
+
+\newenvironment{col}[1]{\begin{minipage}{#1}\ignorespaces}{%
+\end{minipage}
+\ifhmode\unskip\fi
+\aftergroup\useignorespacesandallpars}
+
+\def\useignorespacesandallpars#1\ignorespaces\fi{%
+#1\fi\ignorespacesandallpars}
+
+\makeatletter
+\def\ignorespacesandallpars{%
+  \@ifnextchar\par
+    {\expandafter\ignorespacesandallpars\@gobble}%
+    {}%
+}
+\makeatother

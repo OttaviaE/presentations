@@ -13,7 +13,7 @@ header-includes:
   - \AtBeginDocument{\author[Epifania et al.]{\textbf{Ottavia M. Epifania}, Andrea Brancaccio, Debora de Chiusole, Pasquale Anselmi, Luca Stefanutti}}
   - \AtBeginDocument{\date[EMPG2023]{European Meeting of the Matemathical Psychology Group}}
   - \AtBeginDocument{\institute[UniPD]{University of Padova}}
-  - \useinnertheme{circles}
+  - \useinnertheme{rounded}
   - \usetheme[compressed]{Singapore}
   - \usepackage{graphicx}
   - \usepackage{setspace}
@@ -58,6 +58,8 @@ header-includes:
       {
         \begin{frame}
           \tableofcontents[currentsection]
+        \end{frame}
+      }
 editor_options: 
   chunk_output_type: console
 ---
@@ -105,32 +107,26 @@ library(matRiks)
 
 \tableofcontents
 
-# Introduction
+# In the begininng 
 
-## Raven and Raven-like matrices 
+## Raven and the generative rules
 
-Assessment of fluid intelligence or abstract reasoning 
+Measuring fluid intelligence without tapping into prior knowledge and by-passing what is learnt through acculturation... How? 
+
+\vspace{1.5mm}
+
+Visual analogies... But how? 
 
 
-\begin{textblock*}{2cm}(2cm,5cm)
-	\includegraphics[width =\linewidth]{img/think1.png}
-\end{textblock*}
-
-\begin{textblock*}{2cm}(8cm,2cm)
-	\includegraphics[width =\linewidth]{img/think2.png}
-\end{textblock*}
-
-Job recruitment, clinical assessment
-
+\centering 
+\Large
+Generative rules used for manipulating the visual and/or logical relationship between figures and objects 
 
 ## An example 
 
 \centering
 \begin{tikzpicture}
         \imagenode[0.5]{img/completeExample.png}
-
- 
- 
 
 \highlightbox[red,very thick]{0.12}{0.49}{0.85}{0.98}{red}{}{2-3}
 \highlightbox[myGreen,very thick]{0.57}{0.52}{0.75}{.66}{myGreen}{}{3}
@@ -139,87 +135,151 @@ Job recruitment, clinical assessment
 
 
 
-## An example: The matrix
+## The matrix
 
 \centering
 \begin{tikzpicture}
-        \imagenode[0.5]{img/matrix.png}
-
-
-\highlighttext{0.2}{0.9}{0.8}{1}{red}{Change shapes \& numeric progression}{2}
-\highlightbox[red,very thick]{0.18}{0.65}{0.85}{0.9}{red}{}{2}
-\highlightbox[red,very thick]{0.18}{0.1}{0.38}{0.9}{red}{}{3}
-\highlighttext{0.1}{0.9}{0.4}{1}{red}{Numeric progression}{3}
+			\imagenode[0.5]{img/matrix.png}
+			\highlighttext{0.2}{0.9}{0.8}{1}{red}{Change shapes \& Numeric Progression}{2}
+			\highlightbox[red,very thick]{0.18}{0.65}{0.85}{0.9}{red}{}{2}
+			\highlightbox[red,very thick]{0.18}{0.37}{0.85}{0.62}{red}{}{2}
+			\highlightbox[red,very thick]{0.18}{0.11}{0.85}{0.35}{red}{}{2}
+			\highlightbox[red,very thick]{0.18}{0.1}{0.36}{0.9}{red}{}{3}
+			\highlightbox[red,very thick]{0.40}{0.1}{0.60}{0.9}{red}{}{3}
+			\highlightbox[red,very thick]{0.64}{0.1}{0.83}{0.9}{red}{}{3}
+			\highlighttext{0.1}{0.9}{0.4}{1}{red}{Numeric Progression}{3}
 \end{tikzpicture}
 
 
-## An example: The response options 
+## The response options
 
-\centering
+\onslide<1->
+\begin{textblock*}{4cm}(8.5cm,1cm)
+\includegraphics[width =\linewidth]{img/matrix.png}
+\end{textblock*}
+
 \begin{tikzpicture}
-        \imagenode[0.5]{img/responses.png}
-
-
-
-
-\highlightbox[myGreen,very thick]{0.52}{0.05}{0.69}{.35}{circle,myGreen}{}{2-}
-\highlightbox[repetition,very thick]{0.52}{0.55}{0.69}{.82}{circle,myGreen}{}{3-}
-\highlightbox[repetition,very thick]{0.8}{0.05}{0.95}{.35}{circle,myGreen}{}{3-}
-\highlightbox[difference,very thick]{0.28}{0.55}{0.45}{.82}{circle,myGreen}{}{4-}
-\highlightbox[difference,very thick]{0.02}{0.05}{0.18}{.35}{circle,myGreen}{}{4-}
-\highlightbox[wp,very thick]{0.8}{0.55}{0.95}{.82}{circle,myGreen}{}{5-}
-\highlightbox[wp,very thick]{0.28}{0.05}{0.45}{.35}{circle,myGreen}{}{5-}
-\highlightbox[ic,very thick]{0.02}{0.55}{0.18}{.82}{circle,myGreen}{}{6-}
+\imagenode[0.4]{img/responses.png}
+\highlightbox[myGreen,very thick]{0.52}{0.02}{0.73}{.4}{circle,myGreen}{}{2-}
+\highlightbox[repetition,very thick]{0.52}{0.52}{0.73}{.86}{circle,myGreen}{}{3-}
+\highlightbox[repetition,very thick]{0.78}{0.02}{0.98}{.4}{circle,myGreen}{}{3-}
+\highlightbox[difference,very thick]{0.26}{0.52}{0.48}{.86}{circle,myGreen}{}{6-}
+\highlightbox[wp,very thick]{0.01}{0.02}{0.21}{.4}{circle,myGreen}{}{5-}
+\highlightbox[wp,very thick]{0.78}{0.52}{0.98}{.86}{circle,myGreen}{}{5-}
+\highlightbox[wp,very thick]{0.28}{0.02}{0.48}{.4}{circle,myGreen}{}{5-}
+\highlightbox[ic,very thick]{0.01}{0.52}{0.21}{.86}{circle,myGreen}{}{4-}
 \end{tikzpicture}
 
-\small 
+\small
+\vspace{5mm}
 
-\begin{table}
-
+\onslide<3->
 \centering
-\begin{tabular}{p{3cm}p{8cm}}
+\scalebox{.95}{
+\begin{tabular}{p{3cm}p{10cm}}
 
-\onslide<3->\textcolor{repetition}{Repetition} & Repetition of a cell \textbf{adjacent} to the blank space \\
-\onslide<4->\textcolor{difference}{Difference} & Different in appearance from every element of the matrix\\
-\onslide<5->\textcolor{wp}{Wrong Principle} & Copy of a cell or combination of cells \\
-\onslide<6->\textcolor{ic}{Incomplete Correlate} & \textbf{Almost} the correct response \\
-
-
+\textcolor<3->{repetition}{Repetition} & Repetition of a cell adjacent to the empty cell\\
+\textcolor<4->{ic}{Incomplete Correlate} & "Almost" the correct answer \\
+\textcolor<5->{wp}{Wrong Principle} & An incorrect rule is used to solve the matrix \\
+\textcolor<6->{difference}{Difference} & Pop-up effect\\
 \end{tabular}
+}
 
-\end{table}
+<!-- \centering -->
+<!-- \begin{tikzpicture} -->
+<!--         \imagenode[0.5]{img/responses.png} -->
 
-# Generating rules 
+<!-- \highlightbox[myGreen,very thick]{0.52}{0.05}{0.69}{.35}{circle,myGreen}{}{2-} -->
+<!-- \highlightbox[repetition,very thick]{0.52}{0.55}{0.69}{.82}{circle,myGreen}{}{3-} -->
+<!-- \highlightbox[repetition,very thick]{0.8}{0.05}{0.95}{.35}{circle,myGreen}{}{3-} -->
+<!-- \highlightbox[difference,very thick]{0.28}{0.55}{0.45}{.82}{circle,myGreen}{}{4-} -->
+<!-- \highlightbox[difference,very thick]{0.02}{0.05}{0.18}{.35}{circle,myGreen}{}{4-} -->
+<!-- \highlightbox[wp,very thick]{0.8}{0.55}{0.95}{.82}{circle,myGreen}{}{5-} -->
+<!-- \highlightbox[wp,very thick]{0.28}{0.05}{0.45}{.35}{circle,myGreen}{}{5-} -->
+<!-- \highlightbox[ic,very thick]{0.02}{0.55}{0.18}{.82}{circle,myGreen}{}{6-} -->
+<!-- \end{tikzpicture} -->
 
-## Rules 
+## Generative rules 
 
-
-\begin{tabular}{p{2cm}p{2.5cm} p{9cm}}
+\scalebox{.65}{
+\begin{tabular}{p{3.2cm}p{4cm} p{9.5cm}}
 \hline
-Category	&	Rule name	&	Definition	\\
+\textbf{Category} & \textbf{Rule} & \textbf{Definition} \\
 \hline
-Visuospatial rules	&	Object addition/subtraction	&	Visually merge two elements 	\\
-	&	Movement	&	With a steady background, the movement is created by changing the position of an object across the cells	\\
-	&	Rotation	&	The spatial orientation of the figure changes across the cells	\\
-	&	Mental transformation	&	The third cell results from the application of the characteristics in the second cell to the figures in the fist cell.	\\
-	&	Completeness	&	????	\\
-	&	Numeric progression	&	Quantitative increase or decrease in the number of features from cell to cell	\\
-	&	Changes in shape	&	The figures change across cells 	\\
-	&	Changes in shade	&	The shading of the figures changes across cells 	\\
-	&	Changes in size	&	The size of the figures changes across cells 	\\
-	&	Changes in margins	&	The margins of the figures change across cells 	\\
+Visuospatial & Completion & Identification of the missing portion of a figure \\
+& Orientation & Manipulation of spatial orientation \\
+& Shape & Manipulation of shape \\
+& Filling & Manipulation of filling \\
+& Size & Manipulation of size \\
+&& \\
+\hline
+Pre-inference & Object Addition & Overlapping objects present in different cells \\
+& Object Subtraction & Deleting objects present in different cells \\
+&& \\
+\hline
+Logic & AND & The third cell is obtained from the intersection of the first two \\
+& OR & The third cell is obtained from the union of the first two \\
+& XOR & The third cell is obtained from the union of the first two but only for the elements that do not repeat \\
+&& \\
+\hline
+Directional Logic & Horizontal & The rules are applied horizontally \\
+& Vertical & The rules are applied vertically \\
+& Diagonal & The rules are applied simultaneously in vertical and horizontal \\
+\hline
+\end{tabular}}
 
-	\hline
-Logical rules	&	AND	&	The third cell contains ONLY the elements that appeared in both the first and second cells 	\\
-	&	OR	&	The third cell contains ALL the elements in the first and second cells	\\
-	&	XOR	&	The third cell contains the elements in the first cell not present in the second cell and viceversa	\\
+
+## Distractors 
+
+\scalebox{.65}{
+\begin{tabular}{p{3cm}p{4cm}p{2cm} p{8cm}}
+\hline
+\textbf{Category} & \textbf{Definition} & \textbf{Specific} & \textbf{Definition} \\\hline
+Repetition & Repetition of a cell adjacent to the empty cell & R-Left & Repetition of the cell to the left of the empty cell \\
+& & R-Top & Repetition of the cell above the empty cell \\
+& & R-Diag & Repetition of the top-left cell relative to the empty cell \\
+& & & \\\hline
+Incomplete correlate & Correct answer with one element missing or modified & IC-Neg & Negative of the correct answer \\
+& & IC-Flip & Rotation of the correct answer (or one of its elements) \\
+& & IC-Size & Change in size of the correct answer (or one of its elements) \\
+& & IC-Inc & Correct answer with one element missing \\
+& & & \\\hline
+Wrong Principle & Use of the wrong rule to solve the matrix & WP-Copy & Copy of a cell not adjacent to the empty cell \\
+& & WP-Matrix & Overlapping of two cells in the matrix \\
+& & & \\\hline
+Difference & Pop-up effect & & \\
+\hline
 \end{tabular}
+}
 
+
+# Time goes by... 
+
+## 
+
+Time has passed... but few open and easy-to-use resources are availaible for the generation of Raven's like matrices
+
+Corvus 
+
+Sandia (prendi lo screenshot di Dedra)
+
+A parte che sono brutte, i generatori o non funzionano o sono difficili da usare ma hanno tutti una roba in comune: 
+
+NON permettono le riproducibilità degli stimoli in modo semplice 
 
 
 # The mat`R`iks package
 
 ## mat`R`iks
+
+```{r eval =FALSE, echo = TRUE}
+install.packages("matRiks")
+library(matRiks)
+# how to generate an RMarkdown file with your matrices!
+vignette("generate_matriks")
+```
+
+\footnotesize
 
 Generates $2 \times 2$ and $3 \times 3$ Raven-like matrices and the related set of distractors 
 
@@ -245,7 +305,7 @@ Size
 \begin{figure}
 \centering
 
-```{r, echo = F, eval = T, out.width="70%"}
+```{r, echo = F, eval = T, out.width="40%"}
 a = mat_apply(maxi(), hrules = "size")
 
 par(mfrow =c(1, 3) ,
@@ -266,7 +326,7 @@ Shade
 \begin{figure}
 \centering
 
-```{r, echo = F, eval = T, out.width="70%"}
+```{r, echo = F, eval = T, out.width="40%"}
 a = mat_apply(maxi(), hrules = "shade")
 
 par(mfrow =c(1, 3) ,
