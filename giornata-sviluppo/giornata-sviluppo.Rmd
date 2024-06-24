@@ -10,9 +10,10 @@ output:
     # theme: metropolis
     # colortheme: spruce
 header-includes: 
+  - \AtBeginDocument{\title[matRiks]{Perché non generare test e questionari open…\\ dal principio?}}
   - \AtBeginDocument{\author[Epifania et al.]{\textbf{Ottavia M. Epifania}, Andrea Brancaccio, Debora de Chiusole}}
-  - \AtBeginDocument{\date[]{European Meeting of the Matemathical Psychology Group}}
-  - \AtBeginDocument{\institute[UniPD]{University of Padova}}
+  - \AtBeginDocument{\date[]{Prospettive interdisciplinari\\ nella misura di competenze e capacità linguistiche in età scolare,\\\vspace{3mm} Padova, 25 Giugno 2025}}
+  - \AtBeginDocument{\institute[UniPD]{Psicostat}}
   - \useinnertheme{rounded}
   - \usetheme[compressed]{Singapore}
   - \usepackage{graphicx}
@@ -53,6 +54,7 @@ header-includes:
   - \definecolor{wp}{RGB}{197, 151, 0}
   - \definecolor{difference}{RGB}{181, 18, 27}
   - \definecolor{ic}{RGB}{106, 81, 163}
+  - \definecolor{unipd}{RGB}{155, 0, 20}
   - \setbeamercolor{item}{fg=myGreen!20}
   - \AtBeginSection[]
       {
@@ -135,7 +137,7 @@ Regole generative che vengono utilizzate per manipolare i rapporti visuo-spazial
 
 
 
-## The matrix
+## La matrice
 
 \centering
 \begin{tikzpicture}
@@ -151,7 +153,8 @@ Regole generative che vengono utilizzate per manipolare i rapporti visuo-spazial
 \end{tikzpicture}
 
 
-## The response options
+## Le opzioni di risposta
+
 \onslide<1->
 \begin{textblock*}{4cm}(8.5cm,1cm)
 \includegraphics[width =\linewidth]{img/matrix.png}
@@ -251,29 +254,41 @@ Regole generative che vengono utilizzate per manipolare i rapporti visuo-spazial
 
 ##
 
-Time has passed... but few open and easy-to-use resources are available for the generation of Raven's like matrices
+$$\text{Regole generative} + \text{Regole dei distrattori} = \text{Infinte matrici}$$
 
+\pause
+
+Il tempo passa... ma non è stato fatto un grande sforzo per rendere questo processo realmente accessibile
+
+\pause
 
 \begin{block}{Corvus}
 
-It's on \href{GitHub}{https://github.com/Thimbleby/Corvus} (and the maintainer is super nice :)!
+Su \href{GitHub}{https://github.com/Thimbleby/Corvus} (e il maintainer è super carino :)!
 
-Based in Javascript but provided with with an intuitive UI
+Scritto in Javascript con una UI intuitiva... ma spostarsi dai default non è banale
 
 \end{block}
 
+\pause
 
 \begin{block}{Sandia}
 
-No longer maintained
+Non molto intuitiva
 
-"Rudimentary stimuli"
+Non è più manutenuta
+
+Gli stimoli prodotti sono molto basici
 \end{block}
 
 
+\pause
+
 \begin{center}
 
-They don't allow for reproducing the stimuli generation process
+\color{unipd}
+Non permettono la generalizzabiltà del processo generativo!
+
 
 \end{center}
 
@@ -294,8 +309,8 @@ vignette("generate_matriks")
 
 
 
-```{r out.width="70%"}
-knitr::include_graphics("img/pkg.png")
+```{r out.width="90%", fig.align='center'}
+knitr::include_graphics("img/pkg.jpeg")
 ```
 
 <!-- Generates $2 \times 2$ and $3 \times 3$ Raven-like matrices and the related set of distractors  -->
@@ -401,6 +416,27 @@ draw(a$Sq1); draw(a$Sq2); draw(a$Sq3)
 
 
 :::: column
+
+\centering
+
+Cambi di margini, `lty`
+
+
+\begin{figure}
+\centering
+
+```{r, echo = F, eval = T, out.width="35%"}
+a = mat_apply(maxi(), hrules = "lty")
+
+par(mfrow =c(1, 3) ,
+        mar = c(6,5,5,5))
+
+draw(a$Sq1); draw(a$Sq2); draw(a$Sq3)
+
+```
+
+
+\end{figure}
 
 \centering
 
@@ -516,12 +552,10 @@ draw(a$Sq1); draw(a$Sq2); draw(a$Sq3)
 \scriptsize
 
 ```{r  echo = T, eval = F, out.width="80%"}
-# genera una matrice
 my_mat1 = mat_apply(cof(pentagon(),square(size.x = 16, size.y = 16), 
                         circle(size.x = 15)),
           hrules = "shape", # regola applicata attraverso le colonne
           vrules = "lty") # regola applicata attraverso le righe
-# disegna la matrice
 draw(my_mat1, hide = TRUE)
 
 ```
@@ -571,17 +605,37 @@ draw(the_mat, hide = TRUE)
 ## A ogni stimolo i suoi distrattori 
 \scriptsize
 ```{r, echo =TRUE, eval = FALSE, out.width="80%"}
-my_responses = response_list(the_mat)
+my_responses = response_list(the_mat, seed = 5)
 draw(my_responses, main = T)
 ```
 
 \begin{figure}
 ```{r, out.width="80%"}
-my_responses = response_list(the_mat)
+my_responses = response_list(the_mat, seed = 5)
 draw(my_responses, main = T)
 ```
 \end{figure}
 
+## Tutto insieme
+
+
+```{r, out.width="60%", fig.align='center'}
+draw(the_mat, hide = TRUE)
+```
+
+\scriptsize
+```{r, out.width="50%", fig.align='center'}
+par(mfrow = c(1, 5))
+draw(my_responses$correct) 
+draw(my_responses$ic_flip)
+draw(my_responses$difference)
+draw(my_responses$r_left)
+draw(my_responses$wp_matrix)
+```
+
+
+
+:::
 
 
 # Perché?

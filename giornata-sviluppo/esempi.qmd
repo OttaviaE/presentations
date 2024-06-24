@@ -1,0 +1,197 @@
+---
+title: "Le mie matrici"
+format: 
+  html: 
+    code-fold: true
+    code-tools: 
+      source: true
+      toggle: false
+      caption: "Intero codice"
+lang: it
+execute: 
+  warning: false
+  fig-align: center
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| include: false
+library(matRiks)
+```
+
+
+
+## Visuo 1
+
+```{r}
+m1aa = mat_apply(cof(square(size.x = 16, size.y = 16), pentagon(), hexagon()), 
+                "shape", "lty")
+m1ab = mat_apply(pacman(size.x=9), c("rotate", "rotate"), "shade")
+m1ac = mat_apply(circle(size.x = 5, shd = "white"), c( "size"))
+m1a = com(m1aa, m1ab, m1ac)
+draw(m1a, hide = TRUE)
+```
+
+
+```{r}
+#| out-width: 70%
+#| fig-align: "center"
+resp_m1a = response_list(m1a, seed = 5)
+draw(resp_m1a, main = T, distractors = c("correct", "r_top", "wp_copy", "difference", 
+                                        "ic_flip"))
+```
+
+
+
+## Visuo 2 
+
+```{r}
+m2aa =  mat_apply(cof(square(size.x = 16, size.y = 16), 
+                     pentagon(size.x=16, size.y=16), hexagon()), 
+                 "shape", c( "shape"))
+m2ab = mat_apply(size(malta()),vrules = c("size"))
+m2ac = mat_apply(cof(dot(pos.y = 9), 
+                        dot(pos.y = -9), 
+                        dot(pos.x = 9), dot(pos.x =-9), 
+                    single = TRUE, name = "m"), vrules = "shade.inv", "shade.inv")
+m2a = com(m2aa, m2ab, m2ac)
+draw(m2a, hide = TRUE)
+
+
+```
+
+
+
+```{r}
+#| fig-align: "center"
+#| out-width: 70%
+
+
+resp_m2a = response_list(m2a, seed = 5)
+resp_m2a$ic_flip = replace(resp_m2a$correct, 3, rotate(hexagon(), 3))
+
+draw(resp_m2a, main = T, distractors = c("correct", "r_diag", "wp_copy", "difference", 
+                                      "ic_neg"))
+```
+
+
+
+
+
+## Visuo 3 
+
+```{r}
+myhex = cof(hexagon(shd = "grey", lty = 0), 
+            rotate(hexagon(shd = "grey", lty = 0), 3), 
+            single = T, name ="myhex")
+m3aa =  mat_apply(cof(s_ninja(shd ="grey"), 
+                     myhex, 
+                     s_star(shd = "grey")), 
+                 "shape")
+
+m3ab = mat_apply(size(axe(shd = "black"), 2), c("rotate", "shade"), "rotate.inv")
+m3ac = mat_apply(cof(size(square(shd = "white"), 3), 
+                    size(triangle(shd = "white"),3), 
+                    dot(shd = "white")), "shape", "shape.inv")
+m3a = com(m3aa, m3ab, m3ac)
+draw(m3a, hide = TRUE)
+
+```
+
+
+```{r}
+#| out-width: 70%
+#| fig-align: "center"
+
+
+resp_m3a = response_list(m3a, seed = 2)
+draw(resp_m3a, distractors = c("correct", "r_left", "wp_copy", "difference", 
+                              "ic_flip"), main = TRUE)
+```
+
+
+
+## Logic 1
+
+```{r}
+logic1aa = mat_apply(luck4(), "AND")
+logic1ab = mat_apply(cof(miley(), dot(), dice()), 
+                    vrules = "AND")
+logic1a = com(logic1aa, logic1ab)
+draw(logic1a, hide = TRUE)
+
+
+```
+
+
+```{r}
+#| out-width: 70%
+#| fig-align: "center"
+
+
+resp_l1a = response_list(logic1a, seed = 1)
+resp_l1a$ic_inc = replace(resp_l1a$ic_inc, 10, cof(dot(pos.x = 13, pos.y = -13), 
+                                                 dot(pos.x = -13, pos.y = -13), single = TRUE, name = "M"))
+draw(resp_l1a, distractors = c("correct", "r_left", "wp_copy", "difference", 
+              "ic_inc"), main = TRUE)
+```
+
+
+## Logic 2 
+
+```{r}
+logic2a = mat_apply(pizza_4(), hrules = "OR")
+logic2b = mat_apply(cof(dot(pos.y = 8), 
+                        dot(pos.y = -8), 
+                        dot(pos.x = 8), dot(pos.x =-8)), 
+                    vrules = "AND")
+logic2 = com(logic2a, logic2b)
+draw(logic2, hide = TRUE)
+```
+
+
+```{r}
+#| out-width: 70%
+#| fig-align: "center"
+myfig = cof(slice(), rotate(slice(), 3), single = T, name = "F")
+resp_l2 = response_list(logic2)
+resp_l2$ic_flip =cof(dot(pos.y = 8), 
+                     dot(pos.y = -8), 
+                     dot(pos.x = 8), dot(pos.x =-8), rotate(myfig, 5))
+draw(resp_l2, distractors = c("correct", "r_left", "wp_copy", "difference", 
+                              "ic_flip"), main = TRUE)
+```
+
+
+## Logic 3
+
+
+```{r}
+
+
+logic3a = mat_apply(cof(phantom(), miley(), 
+                       dot(), square4()), vrules = "XOR")
+
+draw(logic3a, hide = TRUE)
+
+```
+
+```{r}
+
+#| out-width: 70%
+#| fig-align: "center"
+
+
+resp_l3a = response_list(logic3a, seed =8)
+resp_l3a$ic_inc = replace(resp_l3a$correct, 6, phantom())
+draw(resp_l3a, distractors = c("correct", "r_top", "wp_copy", "difference", "ic_inc"), main = TRUE)
+
+```
+
+
+
+
+
+
+
