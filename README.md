@@ -7,7 +7,7 @@ This repository hosts the PDF files of my presentations at different National an
 I am a proud member of the Core Team of [Psicostat](https://psicostat.dpss.psy.unipd.it/) and you should definitely check it out :)
 
 ### 2024 
-- Giornata "Prospettive interdisciplinari nella misura di competenze e capacità linguistiche in età scolare", Padova (IT): [Perché non generare test e questionari open… dal principio?](giornata-sviluppo/giornata-sviluppo.pdf)
+- Giornata "Prospettive interdisciplinari nella misura di competenze e capacità linguistiche in età scolare", Padova (IT): [Perché non generare test e questionari open… dal principio?](giornata-sviluppo/giornata-sviluppo.pdf) [Some examples](giornata-sviluppo/esempi.html) 
 - Giornata "La psicometria tra oggi e domani: Sfide e nuovi orizzonti", Florence (IT): [L'importanza di essere significante](giornata-03/epifania-giornata-03.pdf)
 
 
