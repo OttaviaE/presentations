@@ -122,7 +122,7 @@ Analogie visive.. ma come?
 
 \centering 
 \Large
-Regole generative che vengono utilizzate per manipolare i rapporti visuo-spaziali o logici tra figure e oggetti
+Regole generative per manipolare i rapporti visuo-spaziali o logici tra figure e oggetti
 
 ## Un esempio
 
