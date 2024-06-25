@@ -7,14 +7,15 @@ output:
   beamer_presentation: 
     includes: 
       in_header: "mystyle.tex"
-    # theme: metropolis
-    # colortheme: spruce
+  #  theme: metropolis
+  #  colortheme: monarca
 header-includes: 
   - \AtBeginDocument{\title[matRiks]{Perché non generare test e questionari open…\\ dal principio?}}
   - \AtBeginDocument{\author[Epifania et al.]{\textbf{Ottavia M. Epifania}, Andrea Brancaccio, Debora de Chiusole}}
   - \AtBeginDocument{\date[]{Prospettive interdisciplinari\\ nella misura di competenze e capacità linguistiche in età scolare,\\\vspace{3mm} Padova, 25 Giugno 2025}}
   - \AtBeginDocument{\institute[UniPD]{Psicostat}}
   - \useinnertheme{rounded}
+  #- \useoutertheme{miniframes}
   - \usetheme[compressed]{Singapore}
   - \usepackage{graphicx}
   - \usepackage{setspace}
@@ -56,12 +57,12 @@ header-includes:
   - \definecolor{ic}{RGB}{106, 81, 163}
   - \definecolor{unipd}{RGB}{155, 0, 20}
   - \setbeamercolor{item}{fg=myGreen!20}
-  - \AtBeginSection[]
-      {
-        \begin{frame}
-          \tableofcontents[currentsection]
-        \end{frame}
-      }
+  # - \AtBeginSection[]
+  #     {
+  #       \begin{frame}
+  #         \tableofcontents[currentsection]
+  #       \end{frame}
+  #     }
 editor_options: 
   chunk_output_type: console
 ---
@@ -105,9 +106,7 @@ x <- paste(x, collapse = "\n")
 library(matRiks)
 ```
 
-## {.plain}
 
-\tableofcontents
 
 # All'inizio di tutto
 
@@ -115,10 +114,11 @@ library(matRiks)
 
 Misurare l'intelligenza fluida senza andare a toccare le conoscenze pregresse e bypassando tutto quello che si è appreso con il processo di acculturazione...ma come?
 
-
+\pause
 \vspace{1.5mm}
 Analogie visive.. ma come? 
 
+\pause
 
 \centering 
 \Large
@@ -309,7 +309,7 @@ vignette("generate_matriks")
 
 
 
-```{r out.width="90%", fig.align='center'}
+```{r out.width="100%", fig.align='center'}
 knitr::include_graphics("img/pkg.jpeg")
 ```
 
@@ -646,7 +646,7 @@ Estremante facile da usare, rende la generazione degli stimoli accessibile a tut
 
 Costringe a pensare a livello teorico agli stimoli che si vogliono generare, alla loro complessità, alle loro caratteristiche
 
-Il codice rimane e si può inserire all'interno di un RMarkdown per avere stimoli e distrattori sempre insieme 
+Il codice rimane e si può inserire all'interno di un RMarkdown o [quarto](https://ottaviae.github.io/presentations/giornata-sviluppo/esempi.html) per avere stimoli e distrattori sempre insieme 
 
 
 
