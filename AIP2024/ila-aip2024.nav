@@ -21,38 +21,38 @@
 \headcommand {\sectionentry {3}{Item Selection Procedures}{8}{Item Selection Procedures}{0}}
 \headcommand {\beamer@subsectionpages {8}{7}}
 \headcommand {\beamer@subsectionentry {0}{3}{1}{8}{Item Locating Algorithm -- ILA}}
-\headcommand {\slideentry {3}{1}{1}{8/12}{Item Locating Algorithm -- ILA}{0}}
-\headcommand {\beamer@framepages {8}{12}}
-\headcommand {\slideentry {3}{1}{2}{13/13}{Item Locating Algorithm -- ILA}{0}}
+\headcommand {\slideentry {3}{1}{1}{8/11}{Item Locating Algorithm -- ILA}{0}}
+\headcommand {\beamer@framepages {8}{11}}
+\headcommand {\slideentry {3}{1}{2}{12/12}{Item Locating Algorithm -- ILA}{0}}
+\headcommand {\beamer@framepages {12}{12}}
+\headcommand {\beamer@sectionpages {8}{12}}
+\headcommand {\beamer@subsectionpages {8}{12}}
+\headcommand {\sectionentry {4}{Simulation Study}{13}{Simulation Study}{0}}
+\headcommand {\beamer@subsectionpages {13}{12}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{13}{Simulation design}}
+\headcommand {\slideentry {4}{1}{1}{13/13}{Simulation design}{0}}
 \headcommand {\beamer@framepages {13}{13}}
-\headcommand {\beamer@sectionpages {8}{13}}
-\headcommand {\beamer@subsectionpages {8}{13}}
-\headcommand {\sectionentry {4}{Simulation Study}{14}{Simulation Study}{0}}
+\headcommand {\beamer@subsectionpages {13}{13}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{14}{Results}}
 \headcommand {\beamer@subsectionpages {14}{13}}
-\headcommand {\beamer@subsectionentry {0}{4}{1}{14}{Simulation design}}
-\headcommand {\slideentry {4}{1}{1}{14/14}{Simulation design}{0}}
+\headcommand {\beamer@subsectionentry {0}{4}{3}{14}{$||Q_{BFP}||$ vs. $||Q_{ILA}||$}}
+\headcommand {\slideentry {4}{3}{1}{14/14}{$||Q_{BFP}||$ vs. $||Q_{ILA}||$}{0}}
 \headcommand {\beamer@framepages {14}{14}}
 \headcommand {\beamer@subsectionpages {14}{14}}
-\headcommand {\beamer@subsectionentry {0}{4}{2}{15}{Results}}
-\headcommand {\beamer@subsectionpages {15}{14}}
-\headcommand {\beamer@subsectionentry {0}{4}{3}{15}{$||Q_{BFP}||$ vs. $||Q_{ILA}||$}}
-\headcommand {\slideentry {4}{3}{1}{15/15}{$||Q_{BFP}||$ vs. $||Q_{ILA}||$}{0}}
+\headcommand {\beamer@subsectionentry {0}{4}{4}{15}{Distance}}
+\headcommand {\slideentry {4}{4}{1}{15/15}{Distance}{0}}
 \headcommand {\beamer@framepages {15}{15}}
 \headcommand {\beamer@subsectionpages {15}{15}}
-\headcommand {\beamer@subsectionentry {0}{4}{4}{16}{Distance}}
-\headcommand {\slideentry {4}{4}{1}{16/16}{Distance}{0}}
+\headcommand {\beamer@subsectionentry {0}{4}{5}{16}{TIF comparison}}
+\headcommand {\slideentry {4}{5}{1}{16/16}{TIF comparison}{0}}
 \headcommand {\beamer@framepages {16}{16}}
+\headcommand {\beamer@sectionpages {13}{16}}
 \headcommand {\beamer@subsectionpages {16}{16}}
-\headcommand {\beamer@subsectionentry {0}{4}{5}{17}{TIF comparison}}
-\headcommand {\slideentry {4}{5}{1}{17/17}{TIF comparison}{0}}
+\headcommand {\sectionentry {5}{Conclusions}{17}{Conclusions}{0}}
+\headcommand {\slideentry {5}{0}{1}{17/17}{}{0}}
 \headcommand {\beamer@framepages {17}{17}}
-\headcommand {\beamer@sectionpages {14}{17}}
+\headcommand {\beamer@partpages {1}{17}}
 \headcommand {\beamer@subsectionpages {17}{17}}
-\headcommand {\sectionentry {5}{Conclusions}{18}{Conclusions}{0}}
-\headcommand {\slideentry {5}{0}{1}{18/18}{}{0}}
-\headcommand {\beamer@framepages {18}{18}}
-\headcommand {\beamer@partpages {1}{18}}
-\headcommand {\beamer@subsectionpages {18}{18}}
-\headcommand {\beamer@sectionpages {18}{18}}
-\headcommand {\beamer@documentpages {18}}
+\headcommand {\beamer@sectionpages {17}{17}}
+\headcommand {\beamer@documentpages {17}}
 \headcommand {\gdef \inserttotalframenumber {11}}

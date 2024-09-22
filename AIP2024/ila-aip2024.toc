@@ -5,7 +5,7 @@
 \beamer@subsectionintoc {2}{2}{Item and Test Information Functions}{7}{0}{2}
 \beamer@sectionintoc {3}{Item Selection Procedures}{8}{0}{3}
 \beamer@subsectionintoc {3}{1}{Item Locating Algorithm -- ILA}{8}{0}{3}
-\beamer@sectionintoc {4}{Simulation Study}{14}{0}{4}
-\beamer@subsectionintoc {4}{1}{Simulation design}{14}{0}{4}
-\beamer@subsectionintoc {4}{2}{Results}{15}{0}{4}
-\beamer@sectionintoc {5}{Conclusions}{18}{0}{5}
+\beamer@sectionintoc {4}{Simulation Study}{13}{0}{4}
+\beamer@subsectionintoc {4}{1}{Simulation design}{13}{0}{4}
+\beamer@subsectionintoc {4}{2}{Results}{14}{0}{4}
+\beamer@sectionintoc {5}{Conclusions}{17}{0}{5}

@@ -142,7 +142,7 @@
 	\includegraphics[width=1.8cm,height=1.8cm,keepaspectratio]{img/logoUnipd.jpg}%
 }
 
-\author{ \vspace{-5mm} Ottavia M. Epifiania\textsuperscript{1,2}, Pasquale Anselmi\textsuperscript{3}, Egidio Robusto\textsuperscript{3}}
+\author{ \vspace{-5mm} Ottavia M. Epifania\textsuperscript{1,2}, Pasquale Anselmi\textsuperscript{3}, Egidio Robusto\textsuperscript{3}}
 
 
 \institute [UniPd] {
@@ -152,7 +152,7 @@
 	\textsuperscript{3} Department of Philosophy, Sociology, Education, and Applied Psychology,	University of Padova, Italy}
 
 \date [ASA2024] {%\vspace{0.6cm}\\
-	Convegno ASA 2024, Contributed session: \\ Developing, administering and refining measurement instruments in Social Sciences}
+	Convegno AIP 2024 \\ Sezione Sperimentale}
 \begin{document}
 \begin{frame}[plain]
     \maketitle
@@ -371,74 +371,51 @@ Manually inspecting the item characteristics to recreate the desired characteris
 %		
 %		\end{column}
 %	\end{columns}
-	\footnotesize
-	
-		Item bank $B$, $||B|| = N$, items $i = \{1,2, \ldots, N\}$
-		
-		$\mathbf{TIF^*}$: TIF target describing the desired characteristic of a test
-		
-		$Q_{\text{ILA}}^k\subset B$: Set of items selected by ILA up to iteration $k$
+
 		
 		\begin{overprint}
-			\centering
-%			\onslide<1>
-%				\scalebox{.5}{
-%					\centering
-%				\begin{tikzpicture}[node distance=2cm]
-%					
-%					% Nodes
-%					\node (start) [startstop] {Start, for $k \geq 1$};
-%					\node (target) [process, below of=start] {$\theta_{target} = \arg\max |\mathbf{TIF}^* - \mathbf{TIF}^{k-1}|$};
-%					\node (additem) [process, below of=target] {$Q^{k} = Q^{k-1} \cup \arg\min |\theta_{target} - b_i|$};
-%					\node (update) [process, below of=additem] {$\mathbf{TIF}^{k} = \frac{\sum_{i \in Q^k} \mathbf{IIF}_i}{||Q^k||}$};
-%					\node (check) [decision, right of=update, xshift=4cm] {$|\mathbf{TIF}^* - \mathbf{TIF}^k| \geq |\mathbf{TIF}^* - \mathbf{TIF}^{k-1}|$?};
-%					\node (stop) [startstop, below of=check, yshift=-3.5cm] {Stop \& Return $Q_{ILA} = Q^{k-1}$};
-%					
-%					% Arrows
-%					\draw [arrow] (start) -- (target);
-%					\draw [arrow] (target) -- (additem);
-%					\draw [arrow] (additem) -- (update);
-%					\draw [arrow] (update) -- (check);
-%					\draw [arrow] (check) -- node[anchor=east] {Yes} (stop);
-%					\draw [arrow] (check.east) -- ++(1,0) -- ++(0,4) -- node[anchor=north] {No} (target.east);
-%					
-%				\end{tikzpicture}
-%			}
-%			
-			\onslide<2>
+				\footnotesize
+			
+			$B$: Set of items of the item bank , items $i = \{1,2, \ldots, ||B||\}$
+			
+			$\mathbf{TIF^*}$: TIF target describing the desired characteristic of a test
+			
+			$Q_{\text{ILA}}^k\subset B$: Set of items selected by ILA up to iteration $k$
+			\onslide<1>
 			\centering
 			\includegraphics[width=.60\textwidth]{img/TIF-target.pdf}
 			
-			$Q^0 = \emptyset$ \\
+		$k = 0$,	$Q^0 = \emptyset$, \\ $\theta_{target} := \arg\max |\mathbf{TIF}^* - \mathbf{TIF}^{0}|$, where $\mathbf{TIF^0} = (0, 0, \ldots, 0)$ \\
 			
 			
-			\onslide<3>
+			\onslide<2>
 			\centering
 			\includegraphics[width=.60\textwidth]{img/TIF-first.pdf}
 			
-		     $Q^1 = Q^{0} \cup \arg\min_{i \in B\setminus Q^0} |\theta_{target} - b_i|$, 	$||Q^1|| = 1$ \\
-		     $|\mathbf{TIF}^* - \mathbf{TIF}^1| \geq |\mathbf{TIF}^* - \mathbf{TIF}^{0}|$ $\rightarrow$ \texttt{false}, $k = 2$
+		    $k = 1$, $Q^1 = Q^{0} \cup \arg\min_{i \in B\setminus Q^0} |\theta_{target} - b_i|$, 	$||Q^1|| = 1$ 
+		     $|\mathbf{TIF}^* - \mathbf{TIF}^1| \geq |\mathbf{TIF}^* - \mathbf{TIF}^{0}|$ $\rightarrow$ \texttt{false}, $k = 2$\\
+		     $\theta_{target} := \arg\max |\mathbf{TIF}^* - \mathbf{TIF}^{1}|$\\
 			
-			\onslide<4>\centering
+			\onslide<3>\centering
 			\includegraphics[width=.60\textwidth]{img/TIF-second.pdf}
 			
 			 $Q^2 = Q^{1} \cup \arg\min_{i \in B\setminus Q^1} |\theta_{target} - b_i|$, 	$||Q^2|| = 2$
-			 
-			  $|\mathbf{TIF}^* - \mathbf{TIF}^2| \geq |\mathbf{TIF}^* - \mathbf{TIF}^{1}|$ $\rightarrow$ \texttt{false}, $k = 3$
-			\onslide<5>
+			  $|\mathbf{TIF}^* - \mathbf{TIF}^2| \geq |\mathbf{TIF}^* - \mathbf{TIF}^{1}|$ $\rightarrow$ \texttt{false}, $k = 3$\\
+			  $\theta_{target} := \arg\max |\mathbf{TIF}^* - \mathbf{TIF}^{2}|$\\
+			\onslide<4>
 			\centering
 			\includegraphics[width=.60\textwidth]{img/TIF-third.pdf}
 			
 			$Q^3 = Q^{2} \cup \arg\min_{i \in B\setminus Q^2} |\theta_{target} - b_i|$, 	$||Q^3|| = 3$ \\
-			 $|\mathbf{TIF}^* - \mathbf{TIF}^3| \geq |\mathbf{TIF}^* - \mathbf{TIF}^{2}|$ $\rightarrow$ \texttt{false} $\rightarrow$ \textbf{end}, $Q_{\textbf{ILA}} = Q^2$
+			 $|\mathbf{TIF}^* - \mathbf{TIF}^3| \geq |\mathbf{TIF}^* - \mathbf{TIF}^{2}|$ $\rightarrow$ \texttt{true} $\rightarrow$ \textbf{end}, $Q_{\textbf{ILA}} = Q^2$
 		\end{overprint}
 	\end{frame}
 
 \begin{frame}{Brute Force Procedure -- BFP}
 	
 	\footnotesize
-	Item bank $B$, $||B|| = N$\\
-	Possible $Q_m \subset B$ item combinations of different lengths $l = 1, 2, \ldots, N-1$\\
+	Item bank $B$\\
+	 $Q_m \subset B$ item combinations of different lengths $l = 1, 2, \ldots, N-1$\\ Total number of item combinations $2^{||B||-2}$\\
 	$\overline{\Delta}_{\mathbf{TIF}^{Q_m}} =  \mathit{mean}(|\mathbf{TIF}^* - \dfrac{\sum_{i \in Q_m} IIF_i}{||Q_m||}|)$ \\
 		$Q_{BFP} = \argmin_{\emptyset \neq Q_m \subset Q} \overline{\Delta}_{\mathbf{TIF}^{Q_m}}$
 
