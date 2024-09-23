@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.26)  22 SEP 2024 14:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.26)  23 SEP 2024 09:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1242,17 +1242,17 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 159
 (C:\Users\ottae\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<img/unitn.png, id=100, 153.57375pt x 144.54pt>
+<img/unitn.png, id=86, 153.57375pt x 144.54pt>
 File: img/unitn.png Graphic file (type png)
 <use img/unitn.png>
 Package pdftex.def Info: img/unitn.png  used on input line 159.
 (pdftex.def)             Requested size: 51.21376pt x 48.20119pt.
-<img/psicostat.jpg, id=101, 642.4pt x 642.4pt>
+<img/psicostat.jpg, id=87, 642.4pt x 642.4pt>
 File: img/psicostat.jpg Graphic file (type jpg)
 <use img/psicostat.jpg>
 Package pdftex.def Info: img/psicostat.jpg  used on input line 159.
 (pdftex.def)             Requested size: 51.2068pt x 51.2068pt.
-<img/logoUnipd.jpg, id=102, 377.4903pt x 375.3222pt>
+<img/logoUnipd.jpg, id=88, 377.4903pt x 375.3222pt>
 File: img/logoUnipd.jpg Graphic file (type jpg)
 <use img/logoUnipd.jpg>
 Package pdftex.def Info: img/logoUnipd.jpg  used on input line 159.
@@ -1270,48 +1270,40 @@ png> <./img/psicostat.jpg> <./img/logoUnipd.jpg>] [2
 ] [5
 
 ]
-<img/ICC-2pl.pdf, id=342, 1011.78pt x 614.295pt>
-File: img/ICC-2pl.pdf Graphic file (type pdf)
-<use img/ICC-2pl.pdf>
-Package pdftex.def Info: img/ICC-2pl.pdf  used on input line 221.
-(pdftex.def)             Requested size: 213.39784pt x 129.55878pt.
- [6
-
- <./img/ICC-2pl.pdf>]
-<img/IIF-2pl.pdf, id=411, 1011.78pt x 614.295pt>
+<img/IIF-2pl.pdf, id=308, 1011.78pt x 614.295pt>
 File: img/IIF-2pl.pdf Graphic file (type pdf)
 <use img/IIF-2pl.pdf>
 Package pdftex.def Info: img/IIF-2pl.pdf  used on input line 244.
 (pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
-<img/TIF-2pl.pdf, id=412, 1011.78pt x 614.295pt>
+<img/TIF-2pl.pdf, id=309, 1011.78pt x 614.295pt>
 File: img/TIF-2pl.pdf Graphic file (type pdf)
 <use img/TIF-2pl.pdf>
 Package pdftex.def Info: img/TIF-2pl.pdf  used on input line 244.
 (pdftex.def)             Requested size: 177.82973pt x 107.96252pt.
- [7
+ [6
 
  <./img/IIF-2pl.pdf> <./img/TIF-2pl.pdf>]
-<img/TIF-target.pdf, id=482, 1011.78pt x 614.295pt>
+<img/TIF-target.pdf, id=375, 1011.78pt x 614.295pt>
 File: img/TIF-target.pdf Graphic file (type pdf)
 <use img/TIF-target.pdf>
 Package pdftex.def Info: img/TIF-target.pdf  used on input line 412.
 (pdftex.def)             Requested size: 213.39784pt x 129.55878pt.
-<img/TIF-first.pdf, id=483, 1011.78pt x 614.295pt>
+<img/TIF-first.pdf, id=376, 1011.78pt x 614.295pt>
 File: img/TIF-first.pdf Graphic file (type pdf)
 <use img/TIF-first.pdf>
 Package pdftex.def Info: img/TIF-first.pdf  used on input line 412.
 (pdftex.def)             Requested size: 213.39784pt x 129.55878pt.
-<img/TIF-second.pdf, id=484, 1011.78pt x 614.295pt>
+<img/TIF-second.pdf, id=377, 1011.78pt x 614.295pt>
 File: img/TIF-second.pdf Graphic file (type pdf)
 <use img/TIF-second.pdf>
 Package pdftex.def Info: img/TIF-second.pdf  used on input line 412.
 (pdftex.def)             Requested size: 213.39784pt x 129.55878pt.
-<img/TIF-third.pdf, id=485, 1011.78pt x 614.295pt>
+<img/TIF-third.pdf, id=378, 1011.78pt x 614.295pt>
 File: img/TIF-third.pdf Graphic file (type pdf)
 <use img/TIF-third.pdf>
 Package pdftex.def Info: img/TIF-third.pdf  used on input line 412.
 (pdftex.def)             Requested size: 213.39784pt x 129.55878pt.
- [8
+ [7
 
  <./img/TIF-target.pdf>]
 File: img/TIF-target.pdf Graphic file (type pdf)
@@ -1330,7 +1322,7 @@ File: img/TIF-third.pdf Graphic file (type pdf)
 <use img/TIF-third.pdf>
 Package pdftex.def Info: img/TIF-third.pdf  used on input line 412.
 (pdftex.def)             Requested size: 213.39784pt x 129.55878pt.
- [9
+ [8
 
  <./img/TIF-first.pdf>]
 File: img/TIF-target.pdf Graphic file (type pdf)
@@ -1349,7 +1341,7 @@ File: img/TIF-third.pdf Graphic file (type pdf)
 <use img/TIF-third.pdf>
 Package pdftex.def Info: img/TIF-third.pdf  used on input line 412.
 (pdftex.def)             Requested size: 213.39784pt x 129.55878pt.
- [10
+ [9
 
  <./img/TIF-second.pdf>]
 File: img/TIF-target.pdf Graphic file (type pdf)
@@ -1368,631 +1360,629 @@ File: img/TIF-third.pdf Graphic file (type pdf)
 <use img/TIF-third.pdf>
 Package pdftex.def Info: img/TIF-third.pdf  used on input line 412.
 (pdftex.def)             Requested size: 213.39784pt x 129.55878pt.
- [11
+ [10
 
  <./img/TIF-third.pdf>]
-<gif/frame_000.png, id=726, 451.6875pt x 225.84375pt>
+<gif/frame_000.png, id=608, 451.6875pt x 225.84375pt>
 File: gif/frame_000.png Graphic file (type png)
 <use gif/frame_000.png>
 Package pdftex.def Info: gif/frame_000.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_000.png> <a0,fr0>
-<gif/frame_001.png, id=730, 451.6875pt x 225.84375pt>
+<gif/frame_001.png, id=612, 451.6875pt x 225.84375pt>
 File: gif/frame_001.png Graphic file (type png)
 <use gif/frame_001.png>
 Package pdftex.def Info: gif/frame_001.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_001.png> <a0,fr1>
-<gif/frame_002.png, id=734, 451.6875pt x 225.84375pt>
+<gif/frame_002.png, id=616, 451.6875pt x 225.84375pt>
 File: gif/frame_002.png Graphic file (type png)
 <use gif/frame_002.png>
 Package pdftex.def Info: gif/frame_002.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_002.png> <a0,fr2>
-<gif/frame_003.png, id=738, 451.6875pt x 225.84375pt>
+<gif/frame_003.png, id=620, 451.6875pt x 225.84375pt>
 File: gif/frame_003.png Graphic file (type png)
 <use gif/frame_003.png>
 Package pdftex.def Info: gif/frame_003.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_003.png> <a0,fr3>
-<gif/frame_004.png, id=742, 451.6875pt x 225.84375pt>
+<gif/frame_004.png, id=624, 451.6875pt x 225.84375pt>
 File: gif/frame_004.png Graphic file (type png)
 <use gif/frame_004.png>
 Package pdftex.def Info: gif/frame_004.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
- <./gif/frame_004.png>
-<a0,fr4>
-<gif/frame_005.png, id=746, 451.6875pt x 225.84375pt>
+ <./gif/frame_004.png> <a0,fr4>
+<gif/frame_005.png, id=628, 451.6875pt x 225.84375pt>
 File: gif/frame_005.png Graphic file (type png)
 <use gif/frame_005.png>
 Package pdftex.def Info: gif/frame_005.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_005.png> <a0,fr5>
-<gif/frame_006.png, id=750, 451.6875pt x 225.84375pt>
+<gif/frame_006.png, id=632, 451.6875pt x 225.84375pt>
 File: gif/frame_006.png Graphic file (type png)
 <use gif/frame_006.png>
 Package pdftex.def Info: gif/frame_006.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_006.png> <a0,fr6>
-<gif/frame_007.png, id=754, 451.6875pt x 225.84375pt>
+<gif/frame_007.png, id=636, 451.6875pt x 225.84375pt>
 File: gif/frame_007.png Graphic file (type png)
 <use gif/frame_007.png>
 Package pdftex.def Info: gif/frame_007.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_007.png> <a0,fr7>
-<gif/frame_008.png, id=758, 451.6875pt x 225.84375pt>
+<gif/frame_008.png, id=640, 451.6875pt x 225.84375pt>
 File: gif/frame_008.png Graphic file (type png)
 <use gif/frame_008.png>
 Package pdftex.def Info: gif/frame_008.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_008.png> <a0,fr8>
-<gif/frame_009.png, id=762, 451.6875pt x 225.84375pt>
+<gif/frame_009.png, id=644, 451.6875pt x 225.84375pt>
 File: gif/frame_009.png Graphic file (type png)
 <use gif/frame_009.png>
 Package pdftex.def Info: gif/frame_009.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
- <./gif/frame_009.png>
-<a0,fr9>
-<gif/frame_010.png, id=766, 451.6875pt x 225.84375pt>
+ <./gif/frame_009.png> <a0,fr9>
+<gif/frame_010.png, id=648, 451.6875pt x 225.84375pt>
 File: gif/frame_010.png Graphic file (type png)
 <use gif/frame_010.png>
 Package pdftex.def Info: gif/frame_010.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
- <./gif/frame_010.png> <a0,fr10>
-<gif/frame_011.png, id=770, 451.6875pt x 225.84375pt>
+ <./gif/frame_010.png>
+<a0,fr10>
+<gif/frame_011.png, id=652, 451.6875pt x 225.84375pt>
 File: gif/frame_011.png Graphic file (type png)
 <use gif/frame_011.png>
 Package pdftex.def Info: gif/frame_011.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_011.png> <a0,fr11>
-<gif/frame_012.png, id=774, 451.6875pt x 225.84375pt>
+<gif/frame_012.png, id=656, 451.6875pt x 225.84375pt>
 File: gif/frame_012.png Graphic file (type png)
 <use gif/frame_012.png>
 Package pdftex.def Info: gif/frame_012.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_012.png> <a0,fr12>
-<gif/frame_013.png, id=778, 451.6875pt x 225.84375pt>
+<gif/frame_013.png, id=660, 451.6875pt x 225.84375pt>
 File: gif/frame_013.png Graphic file (type png)
 <use gif/frame_013.png>
 Package pdftex.def Info: gif/frame_013.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_013.png> <a0,fr13>
-<gif/frame_014.png, id=782, 451.6875pt x 225.84375pt>
+<gif/frame_014.png, id=664, 451.6875pt x 225.84375pt>
 File: gif/frame_014.png Graphic file (type png)
 <use gif/frame_014.png>
 Package pdftex.def Info: gif/frame_014.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_014.png> <a0,fr14>
-<gif/frame_015.png, id=786, 451.6875pt x 225.84375pt>
+<gif/frame_015.png, id=668, 451.6875pt x 225.84375pt>
 File: gif/frame_015.png Graphic file (type png)
 <use gif/frame_015.png>
 Package pdftex.def Info: gif/frame_015.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_015.png> <a0,fr15>
-<gif/frame_016.png, id=790, 451.6875pt x 225.84375pt>
+<gif/frame_016.png, id=672, 451.6875pt x 225.84375pt>
 File: gif/frame_016.png Graphic file (type png)
 <use gif/frame_016.png>
 Package pdftex.def Info: gif/frame_016.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_016.png> <a0,fr16>
-<gif/frame_017.png, id=794, 451.6875pt x 225.84375pt>
+<gif/frame_017.png, id=676, 451.6875pt x 225.84375pt>
 File: gif/frame_017.png Graphic file (type png)
 <use gif/frame_017.png>
 Package pdftex.def Info: gif/frame_017.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_017.png> <a0,fr17>
-<gif/frame_018.png, id=798, 451.6875pt x 225.84375pt>
+<gif/frame_018.png, id=680, 451.6875pt x 225.84375pt>
 File: gif/frame_018.png Graphic file (type png)
 <use gif/frame_018.png>
 Package pdftex.def Info: gif/frame_018.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_018.png> <a0,fr18>
-<gif/frame_019.png, id=802, 451.6875pt x 225.84375pt>
+<gif/frame_019.png, id=684, 451.6875pt x 225.84375pt>
 File: gif/frame_019.png Graphic file (type png)
 <use gif/frame_019.png>
 Package pdftex.def Info: gif/frame_019.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_019.png> <a0,fr19>
-<gif/frame_020.png, id=806, 451.6875pt x 225.84375pt>
+<gif/frame_020.png, id=688, 451.6875pt x 225.84375pt>
 File: gif/frame_020.png Graphic file (type png)
 <use gif/frame_020.png>
 Package pdftex.def Info: gif/frame_020.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_020.png> <a0,fr20>
-<gif/frame_021.png, id=810, 451.6875pt x 225.84375pt>
+<gif/frame_021.png, id=692, 451.6875pt x 225.84375pt>
 File: gif/frame_021.png Graphic file (type png)
 <use gif/frame_021.png>
 Package pdftex.def Info: gif/frame_021.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_021.png> <a0,fr21>
-<gif/frame_022.png, id=814, 451.6875pt x 225.84375pt>
+<gif/frame_022.png, id=696, 451.6875pt x 225.84375pt>
 File: gif/frame_022.png Graphic file (type png)
 <use gif/frame_022.png>
 Package pdftex.def Info: gif/frame_022.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_022.png> <a0,fr22>
-<gif/frame_023.png, id=818, 451.6875pt x 225.84375pt>
+<gif/frame_023.png, id=700, 451.6875pt x 225.84375pt>
 File: gif/frame_023.png Graphic file (type png)
 <use gif/frame_023.png>
 Package pdftex.def Info: gif/frame_023.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_023.png> <a0,fr23>
-<gif/frame_024.png, id=822, 451.6875pt x 225.84375pt>
+<gif/frame_024.png, id=704, 451.6875pt x 225.84375pt>
 File: gif/frame_024.png Graphic file (type png)
 <use gif/frame_024.png>
 Package pdftex.def Info: gif/frame_024.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_024.png> <a0,fr24>
-<gif/frame_025.png, id=826, 451.6875pt x 225.84375pt>
+<gif/frame_025.png, id=708, 451.6875pt x 225.84375pt>
 File: gif/frame_025.png Graphic file (type png)
 <use gif/frame_025.png>
 Package pdftex.def Info: gif/frame_025.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_025.png> <a0,fr25>
-<gif/frame_026.png, id=830, 451.6875pt x 225.84375pt>
+<gif/frame_026.png, id=712, 451.6875pt x 225.84375pt>
 File: gif/frame_026.png Graphic file (type png)
 <use gif/frame_026.png>
 Package pdftex.def Info: gif/frame_026.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_026.png> <a0,fr26>
-<gif/frame_027.png, id=834, 451.6875pt x 225.84375pt>
+<gif/frame_027.png, id=716, 451.6875pt x 225.84375pt>
 File: gif/frame_027.png Graphic file (type png)
 <use gif/frame_027.png>
 Package pdftex.def Info: gif/frame_027.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
- <./gif/frame_027.png> <a0,fr27>
-<gif/frame_028.png, id=838, 451.6875pt x 225.84375pt>
+ <./gif/frame_027.png>
+<a0,fr27>
+<gif/frame_028.png, id=720, 451.6875pt x 225.84375pt>
 File: gif/frame_028.png Graphic file (type png)
 <use gif/frame_028.png>
 Package pdftex.def Info: gif/frame_028.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_028.png> <a0,fr28>
-<gif/frame_029.png, id=842, 451.6875pt x 225.84375pt>
+<gif/frame_029.png, id=724, 451.6875pt x 225.84375pt>
 File: gif/frame_029.png Graphic file (type png)
 <use gif/frame_029.png>
 Package pdftex.def Info: gif/frame_029.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_029.png> <a0,fr29>
-<gif/frame_030.png, id=846, 451.6875pt x 225.84375pt>
+<gif/frame_030.png, id=728, 451.6875pt x 225.84375pt>
 File: gif/frame_030.png Graphic file (type png)
 <use gif/frame_030.png>
 Package pdftex.def Info: gif/frame_030.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_030.png> <a0,fr30>
-<gif/frame_031.png, id=850, 451.6875pt x 225.84375pt>
+<gif/frame_031.png, id=732, 451.6875pt x 225.84375pt>
 File: gif/frame_031.png Graphic file (type png)
 <use gif/frame_031.png>
 Package pdftex.def Info: gif/frame_031.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
- <./gif/frame_031.png>
-<a0,fr31>
-<gif/frame_032.png, id=854, 451.6875pt x 225.84375pt>
+ <./gif/frame_031.png> <a0,fr31>
+<gif/frame_032.png, id=736, 451.6875pt x 225.84375pt>
 File: gif/frame_032.png Graphic file (type png)
 <use gif/frame_032.png>
 Package pdftex.def Info: gif/frame_032.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_032.png> <a0,fr32>
-<gif/frame_033.png, id=858, 451.6875pt x 225.84375pt>
+<gif/frame_033.png, id=740, 451.6875pt x 225.84375pt>
 File: gif/frame_033.png Graphic file (type png)
 <use gif/frame_033.png>
 Package pdftex.def Info: gif/frame_033.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_033.png> <a0,fr33>
-<gif/frame_034.png, id=862, 451.6875pt x 225.84375pt>
+<gif/frame_034.png, id=744, 451.6875pt x 225.84375pt>
 File: gif/frame_034.png Graphic file (type png)
 <use gif/frame_034.png>
 Package pdftex.def Info: gif/frame_034.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_034.png> <a0,fr34>
-<gif/frame_035.png, id=866, 451.6875pt x 225.84375pt>
+<gif/frame_035.png, id=748, 451.6875pt x 225.84375pt>
 File: gif/frame_035.png Graphic file (type png)
 <use gif/frame_035.png>
 Package pdftex.def Info: gif/frame_035.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_035.png> <a0,fr35>
-<gif/frame_036.png, id=870, 451.6875pt x 225.84375pt>
+<gif/frame_036.png, id=752, 451.6875pt x 225.84375pt>
 File: gif/frame_036.png Graphic file (type png)
 <use gif/frame_036.png>
 Package pdftex.def Info: gif/frame_036.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_036.png> <a0,fr36>
-<gif/frame_037.png, id=874, 451.6875pt x 225.84375pt>
+<gif/frame_037.png, id=756, 451.6875pt x 225.84375pt>
 File: gif/frame_037.png Graphic file (type png)
 <use gif/frame_037.png>
 Package pdftex.def Info: gif/frame_037.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_037.png> <a0,fr37>
-<gif/frame_038.png, id=878, 451.6875pt x 225.84375pt>
+<gif/frame_038.png, id=760, 451.6875pt x 225.84375pt>
 File: gif/frame_038.png Graphic file (type png)
 <use gif/frame_038.png>
 Package pdftex.def Info: gif/frame_038.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_038.png> <a0,fr38>
-<gif/frame_039.png, id=882, 451.6875pt x 225.84375pt>
+<gif/frame_039.png, id=764, 451.6875pt x 225.84375pt>
 File: gif/frame_039.png Graphic file (type png)
 <use gif/frame_039.png>
 Package pdftex.def Info: gif/frame_039.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_039.png> <a0,fr39>
-<gif/frame_040.png, id=886, 451.6875pt x 225.84375pt>
+<gif/frame_040.png, id=768, 451.6875pt x 225.84375pt>
 File: gif/frame_040.png Graphic file (type png)
 <use gif/frame_040.png>
 Package pdftex.def Info: gif/frame_040.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_040.png> <a0,fr40>
-<gif/frame_041.png, id=890, 451.6875pt x 225.84375pt>
+<gif/frame_041.png, id=772, 451.6875pt x 225.84375pt>
 File: gif/frame_041.png Graphic file (type png)
 <use gif/frame_041.png>
 Package pdftex.def Info: gif/frame_041.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_041.png> <a0,fr41>
-<gif/frame_042.png, id=894, 451.6875pt x 225.84375pt>
+<gif/frame_042.png, id=776, 451.6875pt x 225.84375pt>
 File: gif/frame_042.png Graphic file (type png)
 <use gif/frame_042.png>
 Package pdftex.def Info: gif/frame_042.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_042.png> <a0,fr42>
-<gif/frame_043.png, id=898, 451.6875pt x 225.84375pt>
+<gif/frame_043.png, id=780, 451.6875pt x 225.84375pt>
 File: gif/frame_043.png Graphic file (type png)
 <use gif/frame_043.png>
 Package pdftex.def Info: gif/frame_043.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_043.png> <a0,fr43>
-<gif/frame_044.png, id=902, 451.6875pt x 225.84375pt>
+<gif/frame_044.png, id=784, 451.6875pt x 225.84375pt>
 File: gif/frame_044.png Graphic file (type png)
 <use gif/frame_044.png>
 Package pdftex.def Info: gif/frame_044.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
- <./gif/frame_044.png> <a0,fr44>
-<gif/frame_045.png, id=906, 451.6875pt x 225.84375pt>
+ <./gif/frame_044.png>
+<a0,fr44>
+<gif/frame_045.png, id=788, 451.6875pt x 225.84375pt>
 File: gif/frame_045.png Graphic file (type png)
 <use gif/frame_045.png>
 Package pdftex.def Info: gif/frame_045.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_045.png> <a0,fr45>
-<gif/frame_046.png, id=910, 451.6875pt x 225.84375pt>
+<gif/frame_046.png, id=792, 451.6875pt x 225.84375pt>
 File: gif/frame_046.png Graphic file (type png)
 <use gif/frame_046.png>
 Package pdftex.def Info: gif/frame_046.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_046.png> <a0,fr46>
-<gif/frame_047.png, id=914, 451.6875pt x 225.84375pt>
+<gif/frame_047.png, id=796, 451.6875pt x 225.84375pt>
 File: gif/frame_047.png Graphic file (type png)
 <use gif/frame_047.png>
 Package pdftex.def Info: gif/frame_047.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_047.png> <a0,fr47>
-<gif/frame_048.png, id=918, 451.6875pt x 225.84375pt>
+<gif/frame_048.png, id=800, 451.6875pt x 225.84375pt>
 File: gif/frame_048.png Graphic file (type png)
 <use gif/frame_048.png>
 Package pdftex.def Info: gif/frame_048.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
- <./gif/frame_048.png>
-<a0,fr48>
-<gif/frame_049.png, id=922, 451.6875pt x 225.84375pt>
+ <./gif/frame_048.png> <a0,fr48>
+<gif/frame_049.png, id=804, 451.6875pt x 225.84375pt>
 File: gif/frame_049.png Graphic file (type png)
 <use gif/frame_049.png>
 Package pdftex.def Info: gif/frame_049.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_049.png> <a0,fr49>
-<gif/frame_050.png, id=926, 451.6875pt x 225.84375pt>
+<gif/frame_050.png, id=808, 451.6875pt x 225.84375pt>
 File: gif/frame_050.png Graphic file (type png)
 <use gif/frame_050.png>
 Package pdftex.def Info: gif/frame_050.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_050.png> <a0,fr50>
-<gif/frame_051.png, id=930, 451.6875pt x 225.84375pt>
+<gif/frame_051.png, id=812, 451.6875pt x 225.84375pt>
 File: gif/frame_051.png Graphic file (type png)
 <use gif/frame_051.png>
 Package pdftex.def Info: gif/frame_051.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_051.png> <a0,fr51>
-<gif/frame_052.png, id=934, 451.6875pt x 225.84375pt>
+<gif/frame_052.png, id=816, 451.6875pt x 225.84375pt>
 File: gif/frame_052.png Graphic file (type png)
 <use gif/frame_052.png>
 Package pdftex.def Info: gif/frame_052.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_052.png> <a0,fr52>
-<gif/frame_053.png, id=938, 451.6875pt x 225.84375pt>
+<gif/frame_053.png, id=820, 451.6875pt x 225.84375pt>
 File: gif/frame_053.png Graphic file (type png)
 <use gif/frame_053.png>
 Package pdftex.def Info: gif/frame_053.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_053.png> <a0,fr53>
-<gif/frame_054.png, id=942, 451.6875pt x 225.84375pt>
+<gif/frame_054.png, id=824, 451.6875pt x 225.84375pt>
 File: gif/frame_054.png Graphic file (type png)
 <use gif/frame_054.png>
 Package pdftex.def Info: gif/frame_054.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_054.png> <a0,fr54>
-<gif/frame_055.png, id=946, 451.6875pt x 225.84375pt>
+<gif/frame_055.png, id=828, 451.6875pt x 225.84375pt>
 File: gif/frame_055.png Graphic file (type png)
 <use gif/frame_055.png>
 Package pdftex.def Info: gif/frame_055.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_055.png> <a0,fr55>
-<gif/frame_056.png, id=950, 451.6875pt x 225.84375pt>
+<gif/frame_056.png, id=832, 451.6875pt x 225.84375pt>
 File: gif/frame_056.png Graphic file (type png)
 <use gif/frame_056.png>
 Package pdftex.def Info: gif/frame_056.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_056.png> <a0,fr56>
-<gif/frame_057.png, id=954, 451.6875pt x 225.84375pt>
+<gif/frame_057.png, id=836, 451.6875pt x 225.84375pt>
 File: gif/frame_057.png Graphic file (type png)
 <use gif/frame_057.png>
 Package pdftex.def Info: gif/frame_057.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_057.png> <a0,fr57>
-<gif/frame_058.png, id=958, 451.6875pt x 225.84375pt>
+<gif/frame_058.png, id=840, 451.6875pt x 225.84375pt>
 File: gif/frame_058.png Graphic file (type png)
 <use gif/frame_058.png>
 Package pdftex.def Info: gif/frame_058.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_058.png> <a0,fr58>
-<gif/frame_059.png, id=962, 451.6875pt x 225.84375pt>
+<gif/frame_059.png, id=844, 451.6875pt x 225.84375pt>
 File: gif/frame_059.png Graphic file (type png)
 <use gif/frame_059.png>
 Package pdftex.def Info: gif/frame_059.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_059.png> <a0,fr59>
-<gif/frame_060.png, id=966, 451.6875pt x 225.84375pt>
+<gif/frame_060.png, id=848, 451.6875pt x 225.84375pt>
 File: gif/frame_060.png Graphic file (type png)
 <use gif/frame_060.png>
 Package pdftex.def Info: gif/frame_060.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_060.png> <a0,fr60>
-<gif/frame_061.png, id=970, 451.6875pt x 225.84375pt>
+<gif/frame_061.png, id=852, 451.6875pt x 225.84375pt>
 File: gif/frame_061.png Graphic file (type png)
 <use gif/frame_061.png>
 Package pdftex.def Info: gif/frame_061.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
- <./gif/frame_061.png> <a0,fr61>
-<gif/frame_062.png, id=974, 451.6875pt x 225.84375pt>
+ <./gif/frame_061.png>
+<a0,fr61>
+<gif/frame_062.png, id=856, 451.6875pt x 225.84375pt>
 File: gif/frame_062.png Graphic file (type png)
 <use gif/frame_062.png>
 Package pdftex.def Info: gif/frame_062.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_062.png> <a0,fr62>
-<gif/frame_063.png, id=978, 451.6875pt x 225.84375pt>
+<gif/frame_063.png, id=860, 451.6875pt x 225.84375pt>
 File: gif/frame_063.png Graphic file (type png)
 <use gif/frame_063.png>
 Package pdftex.def Info: gif/frame_063.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_063.png> <a0,fr63>
-<gif/frame_064.png, id=982, 451.6875pt x 225.84375pt>
+<gif/frame_064.png, id=864, 451.6875pt x 225.84375pt>
 File: gif/frame_064.png Graphic file (type png)
 <use gif/frame_064.png>
 Package pdftex.def Info: gif/frame_064.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_064.png> <a0,fr64>
-<gif/frame_065.png, id=986, 451.6875pt x 225.84375pt>
+<gif/frame_065.png, id=868, 451.6875pt x 225.84375pt>
 File: gif/frame_065.png Graphic file (type png)
 <use gif/frame_065.png>
 Package pdftex.def Info: gif/frame_065.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
- <./gif/frame_065.png>
-<a0,fr65>
-<gif/frame_066.png, id=990, 451.6875pt x 225.84375pt>
+ <./gif/frame_065.png> <a0,fr65>
+<gif/frame_066.png, id=872, 451.6875pt x 225.84375pt>
 File: gif/frame_066.png Graphic file (type png)
 <use gif/frame_066.png>
 Package pdftex.def Info: gif/frame_066.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_066.png> <a0,fr66>
-<gif/frame_067.png, id=994, 451.6875pt x 225.84375pt>
+<gif/frame_067.png, id=876, 451.6875pt x 225.84375pt>
 File: gif/frame_067.png Graphic file (type png)
 <use gif/frame_067.png>
 Package pdftex.def Info: gif/frame_067.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_067.png> <a0,fr67>
-<gif/frame_068.png, id=998, 451.6875pt x 225.84375pt>
+<gif/frame_068.png, id=880, 451.6875pt x 225.84375pt>
 File: gif/frame_068.png Graphic file (type png)
 <use gif/frame_068.png>
 Package pdftex.def Info: gif/frame_068.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_068.png> <a0,fr68>
-<gif/frame_069.png, id=1002, 451.6875pt x 225.84375pt>
+<gif/frame_069.png, id=884, 451.6875pt x 225.84375pt>
 File: gif/frame_069.png Graphic file (type png)
 <use gif/frame_069.png>
 Package pdftex.def Info: gif/frame_069.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_069.png> <a0,fr69>
-<gif/frame_070.png, id=1006, 451.6875pt x 225.84375pt>
+<gif/frame_070.png, id=888, 451.6875pt x 225.84375pt>
 File: gif/frame_070.png Graphic file (type png)
 <use gif/frame_070.png>
 Package pdftex.def Info: gif/frame_070.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_070.png> <a0,fr70>
-<gif/frame_071.png, id=1010, 451.6875pt x 225.84375pt>
+<gif/frame_071.png, id=892, 451.6875pt x 225.84375pt>
 File: gif/frame_071.png Graphic file (type png)
 <use gif/frame_071.png>
 Package pdftex.def Info: gif/frame_071.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_071.png> <a0,fr71>
-<gif/frame_072.png, id=1014, 451.6875pt x 225.84375pt>
+<gif/frame_072.png, id=896, 451.6875pt x 225.84375pt>
 File: gif/frame_072.png Graphic file (type png)
 <use gif/frame_072.png>
 Package pdftex.def Info: gif/frame_072.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_072.png> <a0,fr72>
-<gif/frame_073.png, id=1018, 451.6875pt x 225.84375pt>
+<gif/frame_073.png, id=900, 451.6875pt x 225.84375pt>
 File: gif/frame_073.png Graphic file (type png)
 <use gif/frame_073.png>
 Package pdftex.def Info: gif/frame_073.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_073.png> <a0,fr73>
-<gif/frame_074.png, id=1022, 451.6875pt x 225.84375pt>
+<gif/frame_074.png, id=904, 451.6875pt x 225.84375pt>
 File: gif/frame_074.png Graphic file (type png)
 <use gif/frame_074.png>
 Package pdftex.def Info: gif/frame_074.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_074.png> <a0,fr74>
-<gif/frame_075.png, id=1026, 451.6875pt x 225.84375pt>
+<gif/frame_075.png, id=908, 451.6875pt x 225.84375pt>
 File: gif/frame_075.png Graphic file (type png)
 <use gif/frame_075.png>
 Package pdftex.def Info: gif/frame_075.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_075.png> <a0,fr75>
-<gif/frame_076.png, id=1030, 451.6875pt x 225.84375pt>
+<gif/frame_076.png, id=912, 451.6875pt x 225.84375pt>
 File: gif/frame_076.png Graphic file (type png)
 <use gif/frame_076.png>
 Package pdftex.def Info: gif/frame_076.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_076.png> <a0,fr76>
-<gif/frame_077.png, id=1034, 451.6875pt x 225.84375pt>
+<gif/frame_077.png, id=916, 451.6875pt x 225.84375pt>
 File: gif/frame_077.png Graphic file (type png)
 <use gif/frame_077.png>
 Package pdftex.def Info: gif/frame_077.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_077.png> <a0,fr77>
-<gif/frame_078.png, id=1038, 451.6875pt x 225.84375pt>
+<gif/frame_078.png, id=920, 451.6875pt x 225.84375pt>
 File: gif/frame_078.png Graphic file (type png)
 <use gif/frame_078.png>
 Package pdftex.def Info: gif/frame_078.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
- <./gif/frame_078.png> <a0,fr78>
-<gif/frame_079.png, id=1042, 451.6875pt x 225.84375pt>
+ <./gif/frame_078.png>
+<a0,fr78>
+<gif/frame_079.png, id=924, 451.6875pt x 225.84375pt>
 File: gif/frame_079.png Graphic file (type png)
 <use gif/frame_079.png>
 Package pdftex.def Info: gif/frame_079.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_079.png> <a0,fr79>
-<gif/frame_080.png, id=1046, 451.6875pt x 225.84375pt>
+<gif/frame_080.png, id=928, 451.6875pt x 225.84375pt>
 File: gif/frame_080.png Graphic file (type png)
 <use gif/frame_080.png>
 Package pdftex.def Info: gif/frame_080.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_080.png> <a0,fr80>
-<gif/frame_081.png, id=1050, 451.6875pt x 225.84375pt>
+<gif/frame_081.png, id=932, 451.6875pt x 225.84375pt>
 File: gif/frame_081.png Graphic file (type png)
 <use gif/frame_081.png>
 Package pdftex.def Info: gif/frame_081.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_081.png> <a0,fr81>
-<gif/frame_082.png, id=1054, 451.6875pt x 225.84375pt>
+<gif/frame_082.png, id=936, 451.6875pt x 225.84375pt>
 File: gif/frame_082.png Graphic file (type png)
 <use gif/frame_082.png>
 Package pdftex.def Info: gif/frame_082.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
- <./gif/frame_082.png>
-<a0,fr82>
-<gif/frame_083.png, id=1058, 451.6875pt x 225.84375pt>
+ <./gif/frame_082.png> <a0,fr82>
+<gif/frame_083.png, id=940, 451.6875pt x 225.84375pt>
 File: gif/frame_083.png Graphic file (type png)
 <use gif/frame_083.png>
 Package pdftex.def Info: gif/frame_083.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_083.png> <a0,fr83>
-<gif/frame_084.png, id=1062, 451.6875pt x 225.84375pt>
+<gif/frame_084.png, id=944, 451.6875pt x 225.84375pt>
 File: gif/frame_084.png Graphic file (type png)
 <use gif/frame_084.png>
 Package pdftex.def Info: gif/frame_084.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_084.png> <a0,fr84>
-<gif/frame_085.png, id=1066, 451.6875pt x 225.84375pt>
+<gif/frame_085.png, id=948, 451.6875pt x 225.84375pt>
 File: gif/frame_085.png Graphic file (type png)
 <use gif/frame_085.png>
 Package pdftex.def Info: gif/frame_085.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_085.png> <a0,fr85>
-<gif/frame_086.png, id=1070, 451.6875pt x 225.84375pt>
+<gif/frame_086.png, id=952, 451.6875pt x 225.84375pt>
 File: gif/frame_086.png Graphic file (type png)
 <use gif/frame_086.png>
 Package pdftex.def Info: gif/frame_086.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_086.png> <a0,fr86>
-<gif/frame_087.png, id=1074, 451.6875pt x 225.84375pt>
+<gif/frame_087.png, id=956, 451.6875pt x 225.84375pt>
 File: gif/frame_087.png Graphic file (type png)
 <use gif/frame_087.png>
 Package pdftex.def Info: gif/frame_087.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_087.png> <a0,fr87>
-<gif/frame_088.png, id=1078, 451.6875pt x 225.84375pt>
+<gif/frame_088.png, id=960, 451.6875pt x 225.84375pt>
 File: gif/frame_088.png Graphic file (type png)
 <use gif/frame_088.png>
 Package pdftex.def Info: gif/frame_088.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_088.png> <a0,fr88>
-<gif/frame_089.png, id=1082, 451.6875pt x 225.84375pt>
+<gif/frame_089.png, id=964, 451.6875pt x 225.84375pt>
 File: gif/frame_089.png Graphic file (type png)
 <use gif/frame_089.png>
 Package pdftex.def Info: gif/frame_089.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_089.png> <a0,fr89>
-<gif/frame_090.png, id=1086, 451.6875pt x 225.84375pt>
+<gif/frame_090.png, id=968, 451.6875pt x 225.84375pt>
 File: gif/frame_090.png Graphic file (type png)
 <use gif/frame_090.png>
 Package pdftex.def Info: gif/frame_090.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_090.png> <a0,fr90>
-<gif/frame_091.png, id=1090, 451.6875pt x 225.84375pt>
+<gif/frame_091.png, id=972, 451.6875pt x 225.84375pt>
 File: gif/frame_091.png Graphic file (type png)
 <use gif/frame_091.png>
 Package pdftex.def Info: gif/frame_091.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_091.png> <a0,fr91>
-<gif/frame_092.png, id=1094, 451.6875pt x 225.84375pt>
+<gif/frame_092.png, id=976, 451.6875pt x 225.84375pt>
 File: gif/frame_092.png Graphic file (type png)
 <use gif/frame_092.png>
 Package pdftex.def Info: gif/frame_092.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_092.png> <a0,fr92>
-<gif/frame_093.png, id=1098, 451.6875pt x 225.84375pt>
+<gif/frame_093.png, id=980, 451.6875pt x 225.84375pt>
 File: gif/frame_093.png Graphic file (type png)
 <use gif/frame_093.png>
 Package pdftex.def Info: gif/frame_093.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_093.png> <a0,fr93>
-<gif/frame_094.png, id=1102, 451.6875pt x 225.84375pt>
+<gif/frame_094.png, id=984, 451.6875pt x 225.84375pt>
 File: gif/frame_094.png Graphic file (type png)
 <use gif/frame_094.png>
 Package pdftex.def Info: gif/frame_094.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_094.png> <a0,fr94>
-<gif/frame_095.png, id=1106, 451.6875pt x 225.84375pt>
+<gif/frame_095.png, id=988, 451.6875pt x 225.84375pt>
 File: gif/frame_095.png Graphic file (type png)
 <use gif/frame_095.png>
 Package pdftex.def Info: gif/frame_095.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
- <./gif/frame_095.png> <a0,fr95>
-<gif/frame_096.png, id=1110, 451.6875pt x 225.84375pt>
+ <./gif/frame_095.png>
+<a0,fr95>
+<gif/frame_096.png, id=992, 451.6875pt x 225.84375pt>
 File: gif/frame_096.png Graphic file (type png)
 <use gif/frame_096.png>
 Package pdftex.def Info: gif/frame_096.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_096.png> <a0,fr96>
-<gif/frame_097.png, id=1114, 451.6875pt x 225.84375pt>
+<gif/frame_097.png, id=996, 451.6875pt x 225.84375pt>
 File: gif/frame_097.png Graphic file (type png)
 <use gif/frame_097.png>
 Package pdftex.def Info: gif/frame_097.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_097.png> <a0,fr97>
-<gif/frame_098.png, id=1118, 451.6875pt x 225.84375pt>
+<gif/frame_098.png, id=1000, 451.6875pt x 225.84375pt>
 File: gif/frame_098.png Graphic file (type png)
 <use gif/frame_098.png>
 Package pdftex.def Info: gif/frame_098.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_098.png> <a0,fr98>
-<gif/frame_099.png, id=1122, 451.6875pt x 225.84375pt>
+<gif/frame_099.png, id=1004, 451.6875pt x 225.84375pt>
 File: gif/frame_099.png Graphic file (type png)
 <use gif/frame_099.png>
 Package pdftex.def Info: gif/frame_099.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
- <./gif/frame_099.png>
-<a0,fr99>
-<gif/frame_100.png, id=1126, 451.6875pt x 225.84375pt>
+ <./gif/frame_099.png> <a0,fr99>
+<gif/frame_100.png, id=1008, 451.6875pt x 225.84375pt>
 File: gif/frame_100.png Graphic file (type png)
 <use gif/frame_100.png>
 Package pdftex.def Info: gif/frame_100.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
  <./gif/frame_100.png> <a0,fr100>
-<gif/frame_101.png, id=1130, 451.6875pt x 225.84375pt>
+<gif/frame_101.png, id=1012, 451.6875pt x 225.84375pt>
 File: gif/frame_101.png Graphic file (type png)
 <use gif/frame_101.png>
 Package pdftex.def Info: gif/frame_101.png  used on input line 425.
 (pdftex.def)             Requested size: 451.68639pt x 225.84319pt.
- <./gif/frame_101.png> <a0,fr101>
-[12
+ <./gif/frame_101.png> <a0,fr101> [11
 
-] [13
+] [12
 
 ]
 
@@ -2019,43 +2009,35 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 492.
 
-<img/bfp-ila.pdf, id=1361, 1011.78pt x 614.295pt>
-File: img/bfp-ila.pdf Graphic file (type pdf)
-<use img/bfp-ila.pdf>
-Package pdftex.def Info: img/bfp-ila.pdf  used on input line 501.
-(pdftex.def)             Requested size: 284.52866pt x 172.75128pt.
-[14
-
- <./img/bfp-ila.pdf>]
-<img/rp.pdf, id=1431, 1011.78pt x 614.295pt>
+<img/rp.pdf, id=1230, 1011.78pt x 614.295pt>
 File: img/rp.pdf Graphic file (type pdf)
 <use img/rp.pdf>
 Package pdftex.def Info: img/rp.pdf  used on input line 510.
 (pdftex.def)             Requested size: 355.65947pt x 215.93443pt.
- [15
+[13
 
  <./img/rp.pdf>]
-<img/equalClose.pdf, id=1501, 1011.78pt x 614.295pt>
+<img/equalClose.pdf, id=1295, 1011.78pt x 614.295pt>
 File: img/equalClose.pdf Graphic file (type pdf)
 <use img/equalClose.pdf>
 Package pdftex.def Info: img/equalClose.pdf  used on input line 549.
 (pdftex.def)             Requested size: 142.26431pt x 86.37564pt.
-<img/moreClose.pdf, id=1502, 1011.78pt x 614.295pt>
+<img/moreClose.pdf, id=1296, 1011.78pt x 614.295pt>
 File: img/moreClose.pdf Graphic file (type pdf)
 <use img/moreClose.pdf>
 Package pdftex.def Info: img/moreClose.pdf  used on input line 549.
 (pdftex.def)             Requested size: 142.26431pt x 86.37564pt.
-<img/lessClose.pdf, id=1503, 1011.78pt x 614.295pt>
+<img/lessClose.pdf, id=1297, 1011.78pt x 614.295pt>
 File: img/lessClose.pdf Graphic file (type pdf)
 <use img/lessClose.pdf>
 Package pdftex.def Info: img/lessClose.pdf  used on input line 549.
 (pdftex.def)             Requested size: 142.26431pt x 86.37564pt.
-<img/lessFar.pdf, id=1504, 1011.78pt x 614.295pt>
+<img/lessFar.pdf, id=1298, 1011.78pt x 614.295pt>
 File: img/lessFar.pdf Graphic file (type pdf)
 <use img/lessFar.pdf>
 Package pdftex.def Info: img/lessFar.pdf  used on input line 549.
 (pdftex.def)             Requested size: 142.26431pt x 86.37564pt.
- [16
+ [14
 
  <./img/equalClose.pdf> <./img/moreClose.pdf
 
@@ -2069,7 +2051,7 @@ e pdfs with page group included in a single page
 
 pdfTeX warning: pdflatex.exe (file ./img/lessFar.pdf): PDF inclusion: multiple 
 pdfs with page group included in a single page
->] [17
+>] [15
 
 ]
 \tf@nav=\write6
@@ -2087,13 +2069,13 @@ LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-09>
  ***********
 Package rerunfilecheck Info: File `ila-aip2024.out' has not changed.
-(rerunfilecheck)             Checksum: E75A5F09C591400D3ED9127B072E68C9;2039.
+(rerunfilecheck)             Checksum: 4B82939023D4E90CC6D68F90AC7D45FF;1556.
  ) 
 Here is how much of TeX's memory you used:
- 30422 strings out of 474586
- 620873 string characters out of 5745680
- 1945558 words of memory out of 5000000
- 51974 multiletter control sequences out of 15000+600000
+ 30388 strings out of 474586
+ 620248 string characters out of 5745680
+ 1944558 words of memory out of 5000000
+ 51946 multiletter control sequences out of 15000+600000
  572825 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,19n,123p,408b,793s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2123,14 +2105,13 @@ fb><C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
 onts/cm/cmsy10.pfb><C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts/type1/pu
 blic/amsfonts/cm/cmsy6.pfb><C:/Users/ottae/AppData/Local/Programs/MiKTeX/fonts/
 type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/ottae/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/ottae/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/ottae/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/ottae/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Users/o
-ttae/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on ila-aip2024.pdf (17 pages, 4645896 bytes).
+X/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/ottae/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/ottae/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Users/ottae/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on ila-aip2024.pdf (15 pages, 4553149 bytes).
 PDF statistics:
- 1783 PDF objects out of 2073 (max. 8388607)
- 48 named destinations out of 1000 (max. 500000)
- 1397 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1563 PDF objects out of 1728 (max. 8388607)
+ 42 named destinations out of 1000 (max. 500000)
+ 1371 words of extra memory for PDF output out of 10000 (max. 10000000)
 
