@@ -3,47 +3,48 @@
 \headcommand {\beamer@sectionpages {1}{1}}
 \headcommand {\beamer@subsectionpages {1}{1}}
 \headcommand {\sectionentry {1}{Aim}{2}{Aim}{0}}
-\headcommand {\slideentry {1}{0}{1}{2/5}{}{0}}
-\headcommand {\beamer@framepages {2}{5}}
-\headcommand {\beamer@subsectionpages {2}{5}}
-\headcommand {\beamer@subsectionentry {0}{1}{1}{6}{Information Functions}}
-\headcommand {\slideentry {1}{1}{1}{6/6}{Information Functions}{0}}
-\headcommand {\beamer@framepages {6}{6}}
-\headcommand {\beamer@sectionpages {2}{6}}
-\headcommand {\beamer@subsectionpages {6}{6}}
-\headcommand {\sectionentry {2}{Item Selection Procedures}{7}{Item Selection Procedures}{0}}
-\headcommand {\beamer@subsectionpages {7}{6}}
-\headcommand {\beamer@subsectionentry {0}{2}{1}{7}{Item Locating Algorithm -- ILA}}
-\headcommand {\slideentry {2}{1}{1}{7/10}{Item Locating Algorithm -- ILA}{0}}
-\headcommand {\beamer@framepages {7}{10}}
-\headcommand {\slideentry {2}{1}{2}{11/11}{Item Locating Algorithm -- ILA}{0}}
+\headcommand {\slideentry {1}{0}{1}{2/2}{}{0}}
+\headcommand {\beamer@framepages {2}{2}}
+\headcommand {\beamer@sectionpages {2}{2}}
+\headcommand {\beamer@subsectionpages {2}{2}}
+\headcommand {\sectionentry {2}{IRT and Information Functions}{3}{Item Response Theory and Information Functions}{0}}
+\headcommand {\beamer@subsectionpages {3}{2}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{3}{Information Functions}}
+\headcommand {\slideentry {2}{1}{1}{3/3}{Information Functions}{0}}
+\headcommand {\beamer@framepages {3}{3}}
+\headcommand {\beamer@sectionpages {3}{3}}
+\headcommand {\beamer@subsectionpages {3}{3}}
+\headcommand {\sectionentry {3}{Item Selection Procedures}{4}{Item Selection Procedures}{0}}
+\headcommand {\beamer@subsectionpages {4}{3}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{4}{Item Locating Algorithm -- ILA}}
+\headcommand {\slideentry {3}{1}{1}{4/7}{Item Locating Algorithm -- ILA}{0}}
+\headcommand {\beamer@framepages {4}{7}}
+\headcommand {\slideentry {3}{1}{2}{8/8}{Item Locating Algorithm -- ILA}{0}}
+\headcommand {\beamer@framepages {8}{8}}
+\headcommand {\beamer@sectionpages {4}{8}}
+\headcommand {\beamer@subsectionpages {4}{8}}
+\headcommand {\sectionentry {4}{Simulation Study}{9}{Simulation Study}{0}}
+\headcommand {\beamer@subsectionpages {9}{8}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{9}{Simulation design}}
+\headcommand {\slideentry {4}{1}{1}{9/9}{Simulation design}{0}}
+\headcommand {\beamer@framepages {9}{9}}
+\headcommand {\beamer@subsectionpages {9}{9}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{10}{Results}}
+\headcommand {\beamer@subsectionpages {10}{9}}
+\headcommand {\beamer@subsectionentry {0}{4}{3}{10}{$||Q_{BFP}||$ vs. $||Q_{ILA}||$}}
+\headcommand {\beamer@subsectionpages {10}{9}}
+\headcommand {\beamer@subsectionentry {0}{4}{4}{10}{Distance}}
+\headcommand {\beamer@subsectionpages {10}{9}}
+\headcommand {\beamer@subsectionentry {0}{4}{5}{10}{TIF comparison}}
+\headcommand {\slideentry {4}{5}{1}{10/10}{TIF comparison}{0}}
+\headcommand {\beamer@framepages {10}{10}}
+\headcommand {\beamer@sectionpages {9}{10}}
+\headcommand {\beamer@subsectionpages {10}{10}}
+\headcommand {\sectionentry {5}{Conclusions}{11}{Conclusions}{0}}
+\headcommand {\slideentry {5}{0}{1}{11/11}{}{0}}
 \headcommand {\beamer@framepages {11}{11}}
-\headcommand {\beamer@sectionpages {7}{11}}
-\headcommand {\beamer@subsectionpages {7}{11}}
-\headcommand {\sectionentry {3}{Simulation Study}{12}{Simulation Study}{0}}
-\headcommand {\beamer@subsectionpages {12}{11}}
-\headcommand {\beamer@subsectionentry {0}{3}{1}{12}{Simulation design}}
-\headcommand {\slideentry {3}{1}{1}{12/12}{Simulation design}{0}}
-\headcommand {\beamer@framepages {12}{12}}
-\headcommand {\beamer@subsectionpages {12}{12}}
-\headcommand {\beamer@subsectionentry {0}{3}{2}{13}{Results}}
-\headcommand {\beamer@subsectionpages {13}{12}}
-\headcommand {\beamer@subsectionentry {0}{3}{3}{13}{$||Q_{BFP}||$ vs. $||Q_{ILA}||$}}
-\headcommand {\beamer@subsectionpages {13}{12}}
-\headcommand {\beamer@subsectionentry {0}{3}{4}{13}{Distance}}
-\headcommand {\slideentry {3}{4}{1}{13/13}{Distance}{0}}
-\headcommand {\beamer@framepages {13}{13}}
-\headcommand {\beamer@subsectionpages {13}{13}}
-\headcommand {\beamer@subsectionentry {0}{3}{5}{14}{TIF comparison}}
-\headcommand {\slideentry {3}{5}{1}{14/14}{TIF comparison}{0}}
-\headcommand {\beamer@framepages {14}{14}}
-\headcommand {\beamer@sectionpages {12}{14}}
-\headcommand {\beamer@subsectionpages {14}{14}}
-\headcommand {\sectionentry {4}{Conclusions}{15}{Conclusions}{0}}
-\headcommand {\slideentry {4}{0}{1}{15/15}{}{0}}
-\headcommand {\beamer@framepages {15}{15}}
-\headcommand {\beamer@partpages {1}{15}}
-\headcommand {\beamer@subsectionpages {15}{15}}
-\headcommand {\beamer@sectionpages {15}{15}}
-\headcommand {\beamer@documentpages {15}}
-\headcommand {\gdef \inserttotalframenumber {9}}
+\headcommand {\beamer@partpages {1}{11}}
+\headcommand {\beamer@subsectionpages {11}{11}}
+\headcommand {\beamer@sectionpages {11}{11}}
+\headcommand {\beamer@documentpages {11}}
+\headcommand {\gdef \inserttotalframenumber {8}}

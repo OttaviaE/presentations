@@ -160,35 +160,36 @@
 
 \section{Aim}
 \begin{frame}
-	\small
-	\emph{Item Response Theory (IRT) for the development of Short Test Form (STF):}
-	\vspace{3mm}
-	
-	\onslide<2->
-	\textbf{Typical procedure:}
-Manually inspecting the item characteristics to recreate the desired characteristics of a test 
-	
-	\vspace{1.5mm}
-	\onslide<3->
-\textbf{\textcolor{unipd}{Issue}}
-		
-		Not an automated procedure $\rightarrow$ depends on the subjectivity of the researcher
-
-		\vspace{1.5mm}
-	\onslide<2->
-		\textbf{Automated (new) procedure:}
- A priori definition of latent trait levels of interest on which the STF should be focusing the most
-	
-		\vspace{1.5mm}
-	\onslide<3->
-\textbf{\textcolor{unipd}{Issue}}
-		
-		 Punctual definition of the specific latent trait levels of interest influences the number of selected items
-
-\onslide<4->
+%	\small
+%	\emph{Item Response Theory (IRT) for the development of Short Test Form (STF):}
+%	\vspace{3mm}
+%	
+%	\onslide<2->
+%	\textbf{Typical procedure:}
+%Manually inspecting the item characteristics to recreate the desired characteristics of a test 
+%	
+%	\vspace{1.5mm}
+%	\onslide<3->
+%\textbf{\textcolor{unipd}{Issue}}
+%		
+%		Not an automated procedure $\rightarrow$ depends on the subjectivity of the researcher
+%
+%		\vspace{1.5mm}
+%	\onslide<2->
+%		\textbf{Automated (new) procedure:}
+% A priori definition of latent trait levels of interest on which the STF should be focusing the most
+%	
+%		\vspace{1.5mm}
+%	\onslide<3->
+%\textbf{\textcolor{unipd}{Issue}}
+%		
+%		 Punctual definition of the specific latent trait levels of interest influences the number of selected items
+%
+%\onslide<4->
 \begin{center}
 	\color{myGreen}\textsc{AIM}
 	
+	\vspace{5mm}
 	 New automated procedure for item selection in IRT that only requires the definition of the desired characteristics of a test 
 \end{center}
 	
@@ -196,7 +197,7 @@ Manually inspecting the item characteristics to recreate the desired characteris
 
 \end{frame}
 
-%\section{Item Response Theory and Information Functions}
+\section[IRT and Information Functions]{Item Response Theory and Information Functions}
 %\subsection{2-Parameter Logistic Model}
 %
 %\begin{frame}{2-Parameter Logistic Model}
@@ -374,6 +375,7 @@ Manually inspecting the item characteristics to recreate the desired characteris
 
 		
 		\begin{overprint}
+				\onslide<1>
 				\footnotesize
 			
 			$B$: Set of items of the item bank , items $i = \{1,2, \ldots, ||B||\}$
@@ -381,7 +383,7 @@ Manually inspecting the item characteristics to recreate the desired characteris
 			$\mathbf{TIF^*}$: TIF target describing the desired characteristic of a test
 			
 			$Q_{\text{ILA}}^k\subset B$: Set of items selected by ILA up to iteration $k$
-			\onslide<1>
+		
 			\centering
 			\includegraphics[width=.60\textwidth]{img/TIF-target.pdf}
 			
@@ -415,7 +417,7 @@ Manually inspecting the item characteristics to recreate the desired characteris
 	
 	\footnotesize
 	Item bank $B$\\
-	 $Q_m \subset B$ item combinations of different lengths $l = 1, 2, \ldots, N-1$\\ Total number of item combinations $2^{||B||-2}$\\
+	 $Q_m \subset B$ item combinations of different lengths $l = 1, 2, \ldots, N-1$\\ Total number of item combinations $2^{||B||}-2$\\
 	$\overline{\Delta}_{\mathbf{TIF}^{Q_m}} =  \mathit{mean}(|\mathbf{TIF}^* - \dfrac{\sum_{i \in Q_m} IIF_i}{||Q_m||}|)$ \\
 		$Q_{BFP} = \argmin_{\emptyset \neq Q_m \subset Q} \overline{\Delta}_{\mathbf{TIF}^{Q_m}}$
 
@@ -502,12 +504,12 @@ Manually inspecting the item characteristics to recreate the desired characteris
 
 \subsection*{Distance}
 
-\begin{frame}
-	\begin{figure}
-		\centering
-		\includegraphics[width=\linewidth]{img/rp}
-	\end{figure}
-\end{frame}
+%\begin{frame}
+%	\begin{figure}
+%		\centering
+%		\includegraphics[width=\linewidth]{img/rp}
+%	\end{figure}
+%\end{frame}
 
 \subsection*{TIF comparison}
 

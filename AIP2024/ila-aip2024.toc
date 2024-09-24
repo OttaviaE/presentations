@@ -1,9 +1,10 @@
 \babel@toc {nil}{}\relax 
 \beamer@sectionintoc {1}{Aim}{2}{0}{1}
-\beamer@subsectionintoc {1}{1}{Item and Test Information Functions}{6}{0}{1}
-\beamer@sectionintoc {2}{Item Selection Procedures}{7}{0}{2}
-\beamer@subsectionintoc {2}{1}{Item Locating Algorithm -- ILA}{7}{0}{2}
-\beamer@sectionintoc {3}{Simulation Study}{12}{0}{3}
-\beamer@subsectionintoc {3}{1}{Simulation design}{12}{0}{3}
-\beamer@subsectionintoc {3}{2}{Results}{13}{0}{3}
-\beamer@sectionintoc {4}{Conclusions}{15}{0}{4}
+\beamer@sectionintoc {2}{Item Response Theory and Information Functions}{3}{0}{2}
+\beamer@subsectionintoc {2}{1}{Item and Test Information Functions}{3}{0}{2}
+\beamer@sectionintoc {3}{Item Selection Procedures}{4}{0}{3}
+\beamer@subsectionintoc {3}{1}{Item Locating Algorithm -- ILA}{4}{0}{3}
+\beamer@sectionintoc {4}{Simulation Study}{9}{0}{4}
+\beamer@subsectionintoc {4}{1}{Simulation design}{9}{0}{4}
+\beamer@subsectionintoc {4}{2}{Results}{10}{0}{4}
+\beamer@sectionintoc {5}{Conclusions}{11}{0}{5}
