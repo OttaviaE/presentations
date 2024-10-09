@@ -1,5 +1,5 @@
 # Ottavia M. Epifania, Ph.D. 
-## The horror persists, and so do I
+## The horror persists, but so do I
 
 This repository hosts the PDF files of my presentations at different National and International conferences. You can also find my (fairly) updated [CV](cv/Epifania-CV.pdf) and my [PhD thesis](PhD-Thesis/EpifaniaPhDThesis.pdf).
 [Here](Unitn-Seminar/Research-Activity-MOE.pdf) you can find a summary of my research activity. 
@@ -49,3 +49,5 @@ I am a proud member of the Core Team of [Psicostat](https://psicostat.dpss.psy.u
 ### 2018
 
 - Meeting of the European Meeting of the Mathematical Psychology Group 2018, Genova (IT): [Rasch gone mixed: A mixed model approach the Implicit Association Test Responses](2018/empg2018.pdf)
+
+[unitnLogo](AIP2024/img/unitn.png)
