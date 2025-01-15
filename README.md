@@ -1,8 +1,8 @@
 # Ottavia M. Epifania, Ph.D. 
-## The horror persists, but so do I
+## The horror persists, and so do I
 
-This repository hosts the PDF files of my presentations at different National and International conferences. You can also find my (fairly) updated [CV](cv/Epifania-CV.pdf) and my [PhD thesis](PhD-Thesis/EpifaniaPhDThesis.pdf).
-[Here](Unitn-Seminar/Research-Activity-MOE.pdf) you can find a summary of my research activity. 
+This repository hosts the PDF files of my presentations at different National and International conferences. 
+You can also find my (fairly) updated [CV](cv/Epifania-CV - Copy.pdf) and my [PhD thesis](PhD-Thesis/EpifaniaPhDThesis.pdf).
 
 I am a proud member of the Core Team of [Psicostat](https://psicostat.dpss.psy.unipd.it/) and you should definitely check it out :)
 
