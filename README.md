@@ -8,6 +8,10 @@ You can also find my (fairly) updated [CV](cv/Epifania-CV - Copy.pdf) and my [Ph
 
 I am a proud member of the Core Team of [Psicostat](https://psicostat.dpss.psy.unipd.it/) and you should definitely check it out :)
 
+### 2025
+
+Predoc Camp @ DiPSCo [presentation](predoc2025/predoc-ottavia.pdf)
+
 ### 2024
 - Symposium at the Meeting the Association of Applied Statistics (ASA) 2024, Rome (IT): [Developing, administering and refining measurement instruments in Social Sciences](https://ottaviae.github.io/ASA2024/)
 - AIP 2024, Noto: [Test length doesn’t matter, it’s how you use the items that counts: An intelligent procedure for item selection in Item Response Theory](AIP2024/ila-aip2024.pdf) 
