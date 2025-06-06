@@ -1,0 +1,17 @@
+---
+title: |
+  Rasch 2.0
+  
+  A Linear Mixed-Effects Models approach to obtain Rasch-like estimates of accuracies and response times from fully-crossed design data
+author: "Ottavia M. Epifania, University of Trento"
+format:
+  pdf:
+    pdf-engine: xelatex
+    title-block-style: banner
+---
+
+
+The Rasch model is a widely used psychometric model that enables the direct comparison between item properties and respondent characteristics. However, its strict assumptions can limit its applicability in experimental psychology. Given its mathematical equivalence to the inverse logit link function in generalized linear models (GLMs) for binomially distributed response variables, Rasch-like parametrizations can be derived through a GLM approach. This contribution illustrates how (generalized) linear mixed-effects models can be used to obtain Rasch-like parametrization of both accuracy and response time data in two typical experiments with fully-crossed structures from cognitive and social psychology. The modelling framework accounts for the variability at multiple levels (i.e., respondents, stimuli, experimental conditions), allowing for more robust inferences than traditional scoring methods. Furthermore, it provides stimulus-level information that can reveal new aspects of the functioning of the experiments. The approach yields meaningful insights across different aims, from detecting group-level effects (e.g., the SNARC effect in cognitive psychology) to individual differences (i.e., the implicit association test in social psychology). The applicability of this approach, its limits, and its potentials are further discussed.  
+
+**Keywords**: Rasch-like Parametrization, Accuracy, Response Times, Linear Mixed-Effects Models
+
