@@ -12,7 +12,7 @@ I am a proud member of the Core Team of [Psicostat](https://psicostat.dpss.psy.u
 
 Predoc Camp @ DiPSCo [presentation](predoc2025/predoc-ottavia.pdf)
 
-SIS Genova [Presentation](sis2025/algorithms.html)
+SIS Genova [Presentation](sis2025/algortithms.html)
 
 ### 2024
 - Symposium at the Meeting the Association of Applied Statistics (ASA) 2024, Rome (IT): [Developing, administering and refining measurement instruments in Social Sciences](https://ottaviae.github.io/ASA2024/)
