@@ -54,7 +54,10 @@ library(gganimate)
 anim <- giif +
   transition_states(name, transition_length = 1, state_length = 1) + 
   labs(subtitle = "rank: {closest_state}") +
-  shadow_mark(past = TRUE)
+  shadow_mark(past = TRUE) +
+  theme(
+    plot.subtitle = element_text(size = 24)  # Cambia qui la dimensione
+  )
 
 animate(anim, renderer = gifski_renderer("iifgif.gif"))
 
@@ -71,7 +74,7 @@ iilong$name = as.integer(gsub("X", "", iilong$name))
 gicc = ggplot() + 
   geom_line(data = iilong, aes(x = theta, y = value, color = factor(name)), 
             linewidth = 1.2) + 
-  theme_light() + ylab("P") + xlab(expression(theta)) + 
+  theme_light() + ylab("P( x = 1)") + xlab(expression(theta)) + 
   theme(axis.text = element_text(size = 20), 
         axis.title = element_text(size = 22), 
         legend.position = "none")
@@ -79,7 +82,10 @@ gicc = ggplot() +
 anim <- gicc +
   transition_states(name, transition_length = 1, state_length = 1) + 
   labs(subtitle = "rank: {closest_state}") +
-  shadow_mark(past = TRUE)
+  shadow_mark(past = TRUE)+
+  theme(
+    plot.subtitle = element_text(size = 24)  # Cambia qui la dimensione
+  )
 
 animate(anim, renderer = gifski_renderer("iccgif.gif"))
 

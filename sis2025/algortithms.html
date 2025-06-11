@@ -388,15 +388,15 @@ Ottavia M. Epifania &amp; Livio Finos
 </div>
 </section></section>
 <section>
-<section id="response-fatigue" class="title-slide slide level1 center">
-<h1>Response fatigue</h1>
+<section id="the-4-parameters-logistic-model-4-pl" class="title-slide slide level1 center">
+<h1>The 4-Parameters Logistic Model (4-PL)</h1>
 
 </section>
-<section id="the-4-parameters-logistic-model-4-pl" class="slide level2">
-<h2>The 4-Parameters Logistic Model (4-PL)</h2>
+<section id="pl---item-response-function" class="slide level2">
+<h2>4-PL - Item Response Function</h2>
+<p><span class="math display">\[P(x_{pi}= 1| \theta_p, b_i, a_i, c_i, d_i) = c_i + (d_i -c_i) \dfrac{\exp[a_i(\theta_p - b_i)]}{1 + \exp[a_i(\theta_p - b_i)]}\]</span></p>
 <div class="r-stack">
 <div class="fragment fade-in-then-out">
-<p><span class="math display">\[P(x_{pi}= 1| \theta_p, b_i, a_i, c_i, d_i) = c_i + (d_i -c_i) \dfrac{\exp[a_i(\theta_p - b_i)]}{1 + \exp[a_i(\theta_p - b_i)]}\]</span></p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -408,7 +408,6 @@ Ottavia M. Epifania &amp; Livio Finos
 </div>
 </div>
 <div class="fragment fade-in-then-out">
-<p><span class="math display">\[P(x_{pi}= 1| \theta_p, b_i, a_i, c_i, d_i) = c_i + (d_i -c_i) \dfrac{\exp[a_i(\theta_p - b_i)]}{1 + \exp[a_i(\theta_p - b_i)]}\]</span></p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -419,8 +418,13 @@ Ottavia M. Epifania &amp; Livio Finos
 </div>
 </div>
 </div>
-<div class="fragment fade-in-then-out">
+</div>
+</section>
+<section id="pl---item-information-function" class="slide level2">
+<h2>4-PL - Item Information Function</h2>
 <p><span class="math display">\[  \text{IIF}_{i}(\theta) = \dfrac{a_i^2[P(\theta)-c_i]^2[d_i - P(\theta)]^2}{(d_{i}-c_i)^2 P(\theta)Q(\theta)}\]</span></p>
+<div class="r-stack">
+<div class="fragment fade-in-then-out">
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -432,7 +436,6 @@ Ottavia M. Epifania &amp; Livio Finos
 </div>
 </div>
 <div class="fragment fade-in-then-out">
-<p><span class="math display">\[  \text{IIF}_{i}(\theta) = \dfrac{a_i^2[P(\theta)-c_i]^2[d_i - P(\theta)]^2}{(d_{i}-c_i)^2 P(\theta)Q(\theta)}\]</span></p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -443,8 +446,13 @@ Ottavia M. Epifania &amp; Livio Finos
 </div>
 </div>
 </div>
-<div class="fragment fade-in-then-out">
+</div>
+</section>
+<section id="pl---test-information-function" class="slide level2">
+<h2>4-PL - Test Information Function</h2>
 <p><span class="math display">\[TIF = \sum_{i = 1}^{||B||} IIF_i\]</span> <font size="4"> (<span class="math inline">\(B\)</span>: Set of items in a test (<span class="math inline">\(||X||\)</span> cardinality of set <span class="math inline">\(X\)</span>)) </font></p>
+<div class="r-stack">
+<div class="fragment fade-in-then-out">
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -456,7 +464,6 @@ Ottavia M. Epifania &amp; Livio Finos
 </div>
 </div>
 <div class="fragment fade-in-then-out">
-<p><span class="math display">\[TIF = \sum_{i = 1}^{||B||} IIF_i\]</span> <font size="4"> (<span class="math inline">\(B\)</span>: Set of items in a test (<span class="math inline">\(||X||\)</span> cardinality of set <span class="math inline">\(X\)</span>)) </font></p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -489,7 +496,14 @@ Ottavia M. Epifania &amp; Livio Finos
 <ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">The logic</a></li><li><a href="#tabset-1-2">The algorithms</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1">
+<div class="r-stack">
+<div class="fragment fade-in-then-out">
 <p><img data-src="www/mia_animazione.gif" style="display: block; margin-left: auto; margin-right: auto;"></p>
+</div>
+<div class="fragment fade-in-then-out">
+<p><img data-src="www/firstk.gif" style="display: block; margin-left: auto; margin-right: auto;"></p>
+</div>
+</div>
 </div>
 <div id="tabset-1-2">
 <div class="columns">
@@ -586,7 +600,7 @@ Ottavia M. Epifania &amp; Livio Finos
 <section id="results" class="slide level2">
 <h2>Results</h2>
 <div class="panel-tabset">
-<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">Distance</a></li><li><a href="#tabset-3-2">Number of items</a></li></ul>
+<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">Distance</a></li><li><a href="#tabset-3-2">Number of items</a></li><li><a href="#tabset-3-3">Distance &amp; Number of Items</a></li></ul>
 <div class="tab-content">
 <div id="tabset-3-1">
 <div class="cell">
@@ -605,6 +619,17 @@ Ottavia M. Epifania &amp; Livio Finos
 <div>
 <figure>
 <p><img data-src="algortithms_files/figure-revealjs/unnamed-chunk-9-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-3-3">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="algortithms_files/figure-revealjs/unnamed-chunk-10-1.png" width="960"></p>
 </figure>
 </div>
 </div>

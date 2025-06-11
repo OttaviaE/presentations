@@ -130,15 +130,15 @@ Works on the definition of the desired characteristics that the STF should have 
 > maxmin algorithm: maximize the minimum information for the defined levels of the latent trait
 
 
-# Response fatigue 
+# The 4-Parameters Logistic Model (4-PL)
 
-## The 4-Parameters Logistic Model (4-PL)
+## 4-PL - Item Response Function
+
+$$P(x_{pi}= 1| \theta_p, b_i, a_i, c_i, d_i) = c_i + (d_i -c_i) \dfrac{\exp[a_i(\theta_p - b_i)]}{1 + \exp[a_i(\theta_p - b_i)]}$$
 
 ::: {.r-stack}
 ::: {.fragment .fade-in-then-out}
 
-
-$$P(x_{pi}= 1| \theta_p, b_i, a_i, c_i, d_i) = c_i + (d_i -c_i) \dfrac{\exp[a_i(\theta_p - b_i)]}{1 + \exp[a_i(\theta_p - b_i)]}$$
 
 
 ```{r}
@@ -151,7 +151,7 @@ plot(theta, IRT(theta, a = 1.5, b = 0),
      ylab = expression(paste("P(", x[p][i],  "= 1|", theta[p], ", ", 
                              b[i], ", ", a[i], ", ", c[i], ", ", d[i],  ")")),, 
      ylim = c(0,1 ), cex.lab= 2, 
-     cex.axis =1.5, xlab = expression(theta), lwd = 3, col = "seagreen", main = "Item Response Function")
+     cex.axis =1.5, xlab = expression(theta), lwd = 3, col = "seagreen", main = "Item Characteristic Curve - ICC")
 abline(h = 1, lwd = 2, lty = 3, col = "darkgray")
 segments(-7, exp(1.5 *(0))/(1+exp(1.5 *(0))), 
          0, exp(1.5 *(0))/(1+exp(1.5 *(0))), 
@@ -165,8 +165,6 @@ segments(0, -exp(1.5 *(0))/(1+exp(1.5 *(0))),
 
 ::: {.fragment .fade-in-then-out}
 
-
-$$P(x_{pi}= 1| \theta_p, b_i, a_i, c_i, d_i) = c_i + (d_i -c_i) \dfrac{\exp[a_i(\theta_p - b_i)]}{1 + \exp[a_i(\theta_p - b_i)]}$$
 
 
 ```{r}
@@ -201,11 +199,14 @@ abline(h = .90, lwd = 2, lty = 3, col = "darkgray")
 
 
 :::
+:::
 
-::: {.fragment .fade-in-then-out}
+## 4-PL - Item Information Function
 
 $$	\text{IIF}_{i}(\theta) = \dfrac{a_i^2[P(\theta)-c_i]^2[d_i - P(\theta)]^2}{(d_{i}-c_i)^2 P(\theta)Q(\theta)}$$
 
+::: {.r-stack}
+::: {.fragment .fade-in-then-out}
 ```{r}
 itempar = data.frame(a = c(1.5, 1.5), 
                      b = c(0, 0), 
@@ -235,8 +236,6 @@ segments(0, -max(iifs[,1]),
 ::: {.fragment .fade-in-then-out}
 
 
-$$	\text{IIF}_{i}(\theta) = \dfrac{a_i^2[P(\theta)-c_i]^2[d_i - P(\theta)]^2}{(d_{i}-c_i)^2 P(\theta)Q(\theta)}$$
-
 ```{r}
 plot(theta, iifs[,1], cex.lab= 2, 
          main = "Item Information Functions - IIFs",
@@ -264,14 +263,15 @@ segments(iifs$theta[iifs$`2` == max(iifs$`2`)], -max(iifs[,2]),
          col = "darkorchid", lty = 3, lwd = 1)
 ```
 :::
+:::
 
-
-::: {.fragment .fade-in-then-out}
+## 4-PL - Test Information Function
 
 
 $$TIF = \sum_{i = 1}^{||B||} IIF_i$$ <font size="4"> ($B$: Set of items in a test ($||X||$ cardinality of set $X$)) </font>
 
-
+::: {.r-stack}
+::: {.fragment .fade-in-then-out}
 
 ```{r}
 itempargoood = data.frame(a = c(1.5, 1.5), 
@@ -298,9 +298,6 @@ plot(theta, tif$tif, cex.lab= 2,
 :::
 
 ::: {.fragment .fade-in-then-out}
-
-$$TIF = \sum_{i = 1}^{||B||} IIF_i$$ <font size="4"> ($B$: Set of items in a test ($||X||$ cardinality of set $X$)) </font>
-
 
 ```{r}
 plot(theta, tif$tif, cex.lab= 2, 
@@ -349,7 +346,20 @@ $d$ depends on the rank $r$ of item in the administration:
 
 ## The logic
 
+::: {.r-stack}
+
+::: {.fragment .fade-in-then-out}
 ![](www/mia_animazione.gif){style="display: block; margin-left: auto; margin-right: auto;"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](www/firstk.gif){style="display: block; margin-left: auto; margin-right: auto;"}
+:::
+
+
+:::
+
+
 
 
 
@@ -510,6 +520,31 @@ ggplot(long_num,
   scale_color_manual(values = mycolor[2:3])
 
 ```
+
+## Distance & Number of Items
+
+```{r}
+myNum = res_tot[!res_tot$iteration %in% "all", c("iteration", "theta", "n_frank", "n_leon",  "difference")]
+
+myNum = pivot_longer(myNum, cols = !c("iteration", "difference", "theta"))
+sumSum = myNum %>% 
+  group_by(name, value) %>%  
+  summarise(m = mean(difference), s = sd(difference))
+ggplot(sumSum, 
+       aes(x = factor(value), 
+           y = m, color = name, 
+           group = name)) + geom_point(size = 3, 
+                                       alpha = .7) + geom_line(linewidth=1.2) + theme_light()+ ylab(expression(bar(Delta))) +
+  theme(axis.text = element_text(size = 22), 
+        axis.title.y = element_text(size = 24), 
+        axis.title.x = element_blank(), 
+        legend.position = c(.8,.7), 
+        legend.title = element_blank(), 
+        legend.text = element_text(size = 20)) + 
+  scale_color_manual(values = mycolor[2:3], 
+                     labels = c("Frank", "Léon"))
+```
+
 
 :::
 
