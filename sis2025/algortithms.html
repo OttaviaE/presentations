@@ -354,24 +354,26 @@ Ottavia M. Epifania<span class="math inline">\(^{1,2}\)</span> &amp; Livio Finos
 </div>
 <div class="fragment">
 <p><br></p>
-<p>People might get tired and frustrated</p>
+<p>People might get tired</p>
+</div>
+<div class="fragment">
+<p>The aim:</p>
+<p><span class="math display">\[Q \subset B\]</span></p>
+</div>
+<div class="fragment">
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>IRT models for the win</strong></p>
+<p><strong>Item Response Theory models for the win</strong></p>
 </div>
 <div class="callout-content">
 <p>Being focused on the item information and on the ability of each item to measure different levels of the latent trait, IRT models provide an ideal framework for developing STF (and not torturing people)</p>
 </div>
 </div>
 </div>
-</div>
-<div class="fragment">
-<p>The aim:</p>
-<p><span class="math display">\[Q \subset B\]</span></p>
 <!-- ## Automated Test Assembly -->
 <!-- Works on the definition of the desired characteristics that the STF should have in the form of *target information function*:  -->
 <!-- . . .  -->
@@ -474,6 +476,7 @@ Ottavia M. Epifania<span class="math inline">\(^{1,2}\)</span> &amp; Livio Finos
 <section id="not-a-property-of-the-item" class="slide level2">
 <h2>Not a property of the item!</h2>
 <p><span class="math inline">\(d\)</span> depends on the <span class="math inline">\(r\)</span> rank of the item presentation during the administration, <span class="math inline">\(d_r\)</span>:</p>
+<div class="fragment">
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><img data-src="www/iccgif.gif" style="display: block; margin-left: auto; margin-right: auto;"></p>
@@ -484,6 +487,7 @@ Ottavia M. Epifania<span class="math inline">\(^{1,2}\)</span> &amp; Livio Finos
 <!-- ```{r} -->
 <!-- knitr::include_app("https://ottaviae.shinyapps.io/app-tired/", height = "800px") -->
 <!-- ``` -->
+</div>
 </section>
 <section id="competing-algorithms" class="slide level2">
 <h2>Competing algorithms</h2>
@@ -646,7 +650,7 @@ Ottavia M. Epifania<span class="math inline">\(^{1,2}\)</span> &amp; Livio Finos
 <li><p>Termination criterion: <span class="math inline">\(|\text{TIF}_B - \text{pTIF}_{i^*}^k| \geq |\text{TIF}_B - \text{TIF}^{k}|\)</span>:</p>
 <ul>
 <li><p>FALSE: <span class="math inline">\(Q^{k+1} = Q^{k} \cup \{i^*\}\)</span>, <span class="math inline">\(\text{TIF}^{k+1} = p\text{TIF}_{i^*}\)</span>, iterates 1-4</p></li>
-<li><p>TRUE: Stop, <span class="math inline">\(Q_{\text{Léon}} = Q^k\)</span></p></li>
+<li><p>TRUE: Stop, <span class="math inline">\(Q_{\text{Frank}} = Q^k\)</span></p></li>
 </ul></li>
 </ol>
 </font><p><font size="4"></font></p>
@@ -770,7 +774,7 @@ Ottavia M. Epifania<span class="math inline">\(^{1,2}\)</span> &amp; Livio Finos
 <p><br></p>
 <ul>
 <li><p>The better performance of the short test forms might be due only to the fact that there are less item: What happens if we select random items? We don’t know</p></li>
-<li><p>The response fatigue varies as the number of items in the full-length test varie</p></li>
+<li><p>The response fatigue varies as the number of items in the full-length test varies</p></li>
 <li><p>Approximating the TIF target is not enough: We need to estimate <span class="math inline">\(\theta\)</span></p></li>
 <li><p>Does it work? I don’t know. I do hope it does.</p></li>
 </ul>
