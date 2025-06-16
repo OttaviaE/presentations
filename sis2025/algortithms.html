@@ -371,6 +371,7 @@ Ottavia M. Epifania<span class="math inline">\(^{1,2}\)</span> &amp; Livio Finos
 </div>
 <div class="callout-content">
 <p>Being focused on the item information and on the ability of each item to measure different levels of the latent trait, IRT models provide an ideal framework for developing STF (and not torturing people)</p>
+<p>Automated test assembly and maxmin algorithms</p>
 </div>
 </div>
 </div>
@@ -646,8 +647,8 @@ Ottavia M. Epifania<span class="math inline">\(^{1,2}\)</span> &amp; Livio Finos
 </ol>
 </div>
 <ol start="3" type="1">
-<li><p><span class="math inline">\(i^* = \arg \min_{i \in A^k} (|\text{TIF}_B - \text{pTIF}_i^k|)\)</span></p></li>
-<li><p>Termination criterion: <span class="math inline">\(|\text{TIF}_B - \text{pTIF}_{i^*}^k| \geq |\text{TIF}_B - \text{TIF}^{k}|\)</span>:</p>
+<li><p><span class="math inline">\(i^* = \arg \min_{i \in A^k} (|\text{TIF}^* - \text{pTIF}_i^k|)\)</span></p></li>
+<li><p>Termination criterion: <span class="math inline">\(|\text{TIF}^* - \text{pTIF}_{i^*}^k| \geq |\text{TIF}_B - \text{TIF}^{k}|\)</span>:</p>
 <ul>
 <li><p>FALSE: <span class="math inline">\(Q^{k+1} = Q^{k} \cup \{i^*\}\)</span>, <span class="math inline">\(\text{TIF}^{k+1} = p\text{TIF}_{i^*}\)</span>, iterates 1-4</p></li>
 <li><p>TRUE: Stop, <span class="math inline">\(Q_{\text{Frank}} = Q^k\)</span></p></li>
@@ -669,8 +670,8 @@ Ottavia M. Epifania<span class="math inline">\(^{1,2}\)</span> &amp; Livio Finos
 </ol>
 </div>
 <ol start="3" type="1">
-<li><p><span class="math inline">\(i^* = \arg \min_{i \in A^k} (|\text{TIF}_B - \text{pTIF}_i^k|)\)</span></p></li>
-<li><p>Termination criterion: <span class="math inline">\(|\text{TIF}_B - \text{pTIF}_{i^*}^k| \geq |\text{TIF}_B - \text{TIF}^{k}|\)</span>:</p>
+<li><p><span class="math inline">\(i^* = \arg \min_{i \in A^k} (|\text{TIF}^* - \text{pTIF}_i^k|)\)</span></p></li>
+<li><p>Termination criterion: <span class="math inline">\(|\text{TIF}^* - \text{pTIF}_{i^*}^k| \geq |\text{TIF}_B - \text{TIF}^{k}|\)</span>:</p>
 <ul>
 <li><p>FALSE: <span class="math inline">\(Q^{k+1} = Q^{k} \cup \{i^*\}\)</span>, <span class="math inline">\(\text{TIF}^{k+1} = p\text{TIF}_{i^*}\)</span>, iterates 1-4</p></li>
 <li><p>TRUE: Stop, <span class="math inline">\(Q_{\text{Léon}} = Q^k\)</span></p></li>
@@ -776,11 +777,9 @@ Ottavia M. Epifania<span class="math inline">\(^{1,2}\)</span> &amp; Livio Finos
 <li><p>The better performance of the short test forms might be due only to the fact that there are less item: What happens if we select random items? We don’t know</p></li>
 <li><p>The response fatigue varies as the number of items in the full-length test varies</p></li>
 <li><p>Approximating the TIF target is not enough: We need to estimate <span class="math inline">\(\theta\)</span></p></li>
-<li><p>Does it work? I don’t know. I do hope it does.</p></li>
 </ul>
 <p><br></p>
 <div class="quarto-auto-generated-content">
-<p><img src="www/psicostat.jpg" class="slide-logo"></p>
 <div class="footer footer-default">
 <p>SIS 2025, Genova</p>
 </div>

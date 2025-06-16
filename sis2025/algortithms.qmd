@@ -5,7 +5,7 @@ institute: "$^1$ University of Trento, $^2$ Psicostat, $^3$ University of Padova
 format: 
   revealjs: 
     theme: mytheme.scss
-    logo: "www/psicostat.jpg"
+    # logo: "www/psicostat.jpg"
     footer: "SIS 2025, Genova"
     transition: none
     transition-speed: slow
@@ -121,6 +121,8 @@ $$Q \subset B$$
 ## Item Response Theory models for the win
 		
 Being focused on the item information and on the ability of each item to measure different levels of the latent trait, IRT models provide an ideal framework for developing STF (and not torturing people)	
+
+Automated test assembly and maxmin algorithms
 :::
 
 <!-- ## Automated Test Assembly -->
@@ -489,9 +491,9 @@ For $k \geq 0$,
 2. $\forall i \in A^k$, $p\text{TIF}_{i}^k = \frac{\text{TIF}^k + \text{IIF}_{i}}{||Q^k||+1}$, with $d_i = 1$, $\forall i$
 :::
 
-3. $i^* = \arg \min_{i \in A^k} (|\text{TIF}_B - \text{pTIF}_i^k|)$
+3. $i^* = \arg \min_{i \in A^k} (|\text{TIF}^* - \text{pTIF}_i^k|)$
 
-4. Termination criterion: $|\text{TIF}_B - \text{pTIF}_{i^*}^k| \geq |\text{TIF}_B - \text{TIF}^{k}|$: 
+4. Termination criterion: $|\text{TIF}^* - \text{pTIF}_{i^*}^k| \geq |\text{TIF}_B - \text{TIF}^{k}|$: 
 
 	- FALSE:  $Q^{k+1} = Q^{k} \cup \{i^*\}$, $\text{TIF}^{k+1} = p\text{TIF}_{i^*}$, iterates 1-4 
 		
@@ -521,9 +523,9 @@ For $k \geq 0$,
 :::
 
 
-3. $i^* = \arg \min_{i \in A^k} (|\text{TIF}_B - \text{pTIF}_i^k|)$
+3. $i^* = \arg \min_{i \in A^k} (|\text{TIF}^* - \text{pTIF}_i^k|)$
 
-4. Termination criterion: $|\text{TIF}_B - \text{pTIF}_{i^*}^k| \geq |\text{TIF}_B - \text{TIF}^{k}|$: 
+4. Termination criterion: $|\text{TIF}^* - \text{pTIF}_{i^*}^k| \geq |\text{TIF}_B - \text{TIF}^{k}|$: 
 
 	- FALSE:  $Q^{k+1} = Q^{k} \cup \{i^*\}$, $\text{TIF}^{k+1} = p\text{TIF}_{i^*}$, iterates 1-4 
 		
@@ -667,8 +669,6 @@ ggplot(sumSum,
 - The response fatigue varies as the number of items in the full-length test varies
 
 - Approximating the TIF target is not enough: We need to estimate $\theta$ 
-
-- Does it work? I don't know. I do hope it does.
 
 
 
