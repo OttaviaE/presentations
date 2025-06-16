@@ -1,5 +1,5 @@
 ---
-title: "Nothing lasts forever– only item administration: An Item Response Theory algorithm to shorten tests"
+title: "Nothing lasts forever – only item administration: An Item Response Theory algorithm to shorten tests"
 author: "Ottavia M. Epifania$^{1,2}$ & Livio Finos$^{2,3}$"
 institute: "$^1$ University of Trento, $^2$ Psicostat, $^3$ University of Padova"
 format: 
