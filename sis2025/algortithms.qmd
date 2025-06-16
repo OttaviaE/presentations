@@ -105,19 +105,23 @@ Not always!
 
 <br>
 
-People might get tired and frustrated 
-	 
-::: {.callout-tip}
-## IRT models for the win
-		
-Being focused on the item information and on the ability of each item to measure different levels of the latent trait, IRT models provide an ideal framework for developing STF (and not torturing people)	
-:::
+People might get tired
+
 
 . . . 
 
 The aim: 
 
 $$Q \subset B$$
+
+. . . 
+
+	 
+::: {.callout-tip}
+## Item Response Theory models for the win
+		
+Being focused on the item information and on the ability of each item to measure different levels of the latent trait, IRT models provide an ideal framework for developing STF (and not torturing people)	
+:::
 
 <!-- ## Automated Test Assembly -->
 
@@ -326,6 +330,8 @@ lines(theta, tif$tiftired, col = "firebrick", lwd =2)
 
 $d$ depends on the $r$ rank of the item presentation during the  administration, $d_r$: 
 
+. . . 
+
 :::: {.columns}
 
 ::: {.column width="50%"}
@@ -490,7 +496,7 @@ For $k \geq 0$,
 	- FALSE:  $Q^{k+1} = Q^{k} \cup \{i^*\}$, $\text{TIF}^{k+1} = p\text{TIF}_{i^*}$, iterates 1-4 
 		
 	- TRUE: Stop, 
-		$Q_{\text{Léon}} = Q^k$
+		$Q_{\text{Frank}} = Q^k$
 
 </font>
 :::
@@ -658,7 +664,7 @@ ggplot(sumSum,
 
 - The better performance of the short test forms might be due only to the fact that there are less item: What happens if we select random items? We don't know
 
-- The response fatigue varies as the number of items in the full-length test varie
+- The response fatigue varies as the number of items in the full-length test varies
 
 - Approximating the TIF target is not enough: We need to estimate $\theta$ 
 
