@@ -10,7 +10,7 @@
 <link href="algortithms_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.57">
 
-  <meta name="author" content="Ottavia M. Epifania &amp; Livio Finos">
+  <meta name="author" content="Ottavia M. Epifania^{1,2} &amp; Livio Finos^{2,3}">
   <title>Nothing lasts forever– only item administration: An Item Response Theory algorithm to shorten tests</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -331,9 +331,12 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Ottavia M. Epifania &amp; Livio Finos 
+Ottavia M. Epifania<span class="math inline">\(^{1,2}\)</span> &amp; Livio Finos<span class="math inline">\(^{2,3}\)</span> 
 </div>
-</div>
+        <p class="quarto-title-affiliation">
+            <span class="math inline">\(^1\)</span> University of Trento, <span class="math inline">\(^2\)</span> Psicostat, <span class="math inline">\(^3\)</span> University of Padova
+          </p>
+    </div>
 </div>
 
 </section>
@@ -342,8 +345,8 @@ Ottavia M. Epifania &amp; Livio Finos
 <h1>Short Test Forms</h1>
 
 </section>
-<section id="short-test-forms-why" class="slide level2">
-<h2>Short Test Forms – Why?</h2>
+<section id="why" class="slide level2">
+<h2>Why?</h2>
 <p><br></p>
 <p>Many items <span class="math inline">\(\rightarrow\)</span> good measurement precision, great reliability and so on</p>
 <div class="r-stack">
@@ -366,30 +369,22 @@ Ottavia M. Epifania &amp; Livio Finos
 </div>
 </div>
 </div>
-</section>
-<section id="automated-test-assembly" class="slide level2">
-<h2>Automated Test Assembly</h2>
-<p>Works on the definition of the desired characteristics that the STF should have in the form of <em>target information function</em>:</p>
 <div class="fragment">
-<ul>
-<li>Absolute Information: Both the shape (regions os the latent trait) and the height (amount of information) are defined</li>
-</ul>
-<blockquote>
-<p>minmax algorithm: minimize the maximum distance between the target information function and the information function of the STF</p>
-</blockquote>
-</div>
-<div class="fragment">
-<ul>
-<li>Relative Information: Only the shape is defined through the definition of discrete latent trait levels of interest for which the information needs to be maximized</li>
-</ul>
-<blockquote>
-<p>maxmin algorithm: maximize the minimum information for the defined levels of the latent trait</p>
-</blockquote>
+<p>The aim:</p>
+<p><span class="math display">\[Q \subset B\]</span></p>
+<!-- ## Automated Test Assembly -->
+<!-- Works on the definition of the desired characteristics that the STF should have in the form of *target information function*:  -->
+<!-- . . .  -->
+<!-- - Absolute Information: Both the shape (regions os the latent trait) and the height (amount of information) are defined  -->
+<!-- > minmax algorithm: minimize the maximum distance between the target information function and the information function of the STF -->
+<!-- . . .  -->
+<!-- - Relative Information: Only the shape is defined through the definition of discrete latent trait levels of interest for which the information needs to be maximized -->
+<!-- > maxmin algorithm: maximize the minimum information for the defined levels of the latent trait -->
 </div>
 </section></section>
 <section>
-<section id="the-4-parameters-logistic-model-4-pl" class="title-slide slide level1 center">
-<h1>The 4-Parameters Logistic Model (4-PL)</h1>
+<section id="the-4-parameter-logistic-model-4-pl" class="title-slide slide level1 center">
+<h1>The 4-Parameter Logistic Model (4-PL)</h1>
 
 </section>
 <section id="pl---item-response-function" class="slide level2">
@@ -478,7 +473,7 @@ Ottavia M. Epifania &amp; Livio Finos
 </section>
 <section id="not-a-property-of-the-item" class="slide level2">
 <h2>Not a property of the item!</h2>
-<p><span class="math inline">\(d\)</span> depends on the rank <span class="math inline">\(r\)</span> of item in the administration:</p>
+<p><span class="math inline">\(d\)</span> depends on the <span class="math inline">\(r\)</span> rank of the item presentation during the administration, <span class="math inline">\(d_r\)</span>:</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><img data-src="www/iccgif.gif" style="display: block; margin-left: auto; margin-right: auto;"></p>
@@ -498,10 +493,136 @@ Ottavia M. Epifania &amp; Livio Finos
 <div id="tabset-1-1">
 <div class="r-stack">
 <div class="fragment fade-in-then-out">
-<p><img data-src="www/mia_animazione.gif" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><span class="math display">\[\text{TIF}^*\]</span></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="www/target0.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+</figure>
+</div>
+</div>
+</div>
 </div>
 <div class="fragment fade-in-then-out">
-<p><img data-src="www/firstk.gif" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><span class="math display">\[k = 0\]</span></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="www/grafico_fino_a_1.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment fade-in-then-out">
+<p><span class="math display">\[k = 0\]</span></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="www/grafico_fino_a_2.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment fade-in-then-out">
+<p><span class="math display">\[k = 0\]</span></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="www/grafico_fino_a_3.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment fade-in-then-out">
+<p><span class="math display">\[k = 0\]</span></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="www/grafico_fino_a_4.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment fade-in-then-out">
+<p><span class="math display">\[k = 0\]</span></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="www/grafico_fino_a_5.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment fade-in-then-out">
+<p><span class="math display">\[k = 0\]</span></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="www/firstK_0.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment fade-in-then-out">
+<p><span class="math display">\[k = 1\]</span></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="www/firstK_1.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment fade-in-then-out">
+<p><span class="math display">\[k = 1\]</span></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="www/firstK_2.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment fade-in-then-out">
+<p><span class="math display">\[k = 1\]</span></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="www/firstK_4.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment fade-in-then-out">
+<p><span class="math display">\[k = 1\]</span></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="www/firstK_5.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+</figure>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -607,7 +728,7 @@ Ottavia M. Epifania &amp; Livio Finos
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="algortithms_files/figure-revealjs/unnamed-chunk-8-1.png" width="960"></p>
+<p><img data-src="algortithms_files/figure-revealjs/unnamed-chunk-19-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -618,7 +739,7 @@ Ottavia M. Epifania &amp; Livio Finos
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="algortithms_files/figure-revealjs/unnamed-chunk-9-1.png" width="960"></p>
+<p><img data-src="algortithms_files/figure-revealjs/unnamed-chunk-20-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -629,7 +750,7 @@ Ottavia M. Epifania &amp; Livio Finos
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="algortithms_files/figure-revealjs/unnamed-chunk-10-1.png" width="960"></p>
+<p><img data-src="algortithms_files/figure-revealjs/unnamed-chunk-21-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -643,15 +764,16 @@ Ottavia M. Epifania &amp; Livio Finos
 <h1>In the end</h1>
 
 </section>
-<section id="what-is-missing" class="slide level2">
-<h2>What is missing</h2>
-<ul>
-<li><p>The estimation of the latent trait</p></li>
-<li><p>The inclusion of “qualitative” criteria like ATA</p></li>
-<li><p>A real data application</p></li>
-</ul>
-<p>But they are promising :)</p>
+<section id="section" class="slide level2">
+<h2></h2>
 <p><br></p>
+<p><br></p>
+<ul>
+<li><p>The better performance of the short test forms might be due only to the fact that there are less item: What happens if we select random items? We don’t know</p></li>
+<li><p>The response fatigue varies as the number of items in the full-length test varie</p></li>
+<li><p>Approximating the TIF target is not enough: We need to estimate <span class="math inline">\(\theta\)</span></p></li>
+<li><p>Does it work? I don’t know. I do hope it does.</p></li>
+</ul>
 <p><br></p>
 <div class="quarto-auto-generated-content">
 <p><img src="www/psicostat.jpg" class="slide-logo"></p>

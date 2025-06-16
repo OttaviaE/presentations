@@ -1,6 +1,7 @@
 ---
 title: "Nothing lasts forever– only item administration: An Item Response Theory algorithm to shorten tests"
-author: "Ottavia M. Epifania & Livio Finos"
+author: "Ottavia M. Epifania$^{1,2}$ & Livio Finos$^{2,3}$"
+institute: "$^1$ University of Trento, $^2$ Psicostat, $^3$ University of Padova"
 format: 
   revealjs: 
     theme: mytheme.scss
@@ -90,7 +91,7 @@ set.seed(999)
 
 # Short Test Forms
 
-## Short Test Forms -- Why?
+## Why?
 
 <br>
 
@@ -112,25 +113,30 @@ People might get tired and frustrated
 Being focused on the item information and on the ability of each item to measure different levels of the latent trait, IRT models provide an ideal framework for developing STF (and not torturing people)	
 :::
 
-
-## Automated Test Assembly
-
-Works on the definition of the desired characteristics that the STF should have in the form of *target information function*: 
-
 . . . 
 
-- Absolute Information: Both the shape (regions os the latent trait) and the height (amount of information) are defined 
+The aim: 
 
-> minmax algorithm: minimize the maximum distance between the target information function and the information function of the STF
+$$Q \subset B$$
 
-. . . 
+<!-- ## Automated Test Assembly -->
 
-- Relative Information: Only the shape is defined through the definition of discrete latent trait levels of interest for which the information needs to be maximized
+<!-- Works on the definition of the desired characteristics that the STF should have in the form of *target information function*:  -->
 
-> maxmin algorithm: maximize the minimum information for the defined levels of the latent trait
+<!-- . . .  -->
+
+<!-- - Absolute Information: Both the shape (regions os the latent trait) and the height (amount of information) are defined  -->
+
+<!-- > minmax algorithm: minimize the maximum distance between the target information function and the information function of the STF -->
+
+<!-- . . .  -->
+
+<!-- - Relative Information: Only the shape is defined through the definition of discrete latent trait levels of interest for which the information needs to be maximized -->
+
+<!-- > maxmin algorithm: maximize the minimum information for the defined levels of the latent trait -->
 
 
-# The 4-Parameters Logistic Model (4-PL)
+# The 4-Parameter Logistic Model (4-PL)
 
 ## 4-PL - Item Response Function
 
@@ -318,7 +324,7 @@ lines(theta, tif$tiftired, col = "firebrick", lwd =2)
 
 ## Not a property of the item! 
 
-$d$ depends on the rank $r$ of item in the administration: 
+$d$ depends on the $r$ rank of the item presentation during the  administration, $d_r$: 
 
 :::: {.columns}
 
@@ -347,15 +353,108 @@ $d$ depends on the rank $r$ of item in the administration:
 ## The logic
 
 ::: {.r-stack}
-
 ::: {.fragment .fade-in-then-out}
-![](www/mia_animazione.gif){style="display: block; margin-left: auto; margin-right: auto;"}
+
+$$\text{TIF}^*$$
+```{r}
+#| out-width: 60%
+#| fig-align: center
+knitr::include_graphics("www/target0.png")
+```
 :::
 
 ::: {.fragment .fade-in-then-out}
-![](www/firstk.gif){style="display: block; margin-left: auto; margin-right: auto;"}
+
+$$k = 0$$
+```{r}
+#| out-width: 60%
+#| fig-align: center
+knitr::include_graphics("www/grafico_fino_a_1.png")
+```
 :::
 
+::: {.fragment .fade-in-then-out}
+$$k = 0$$
+```{r}
+#| out-width: 60%
+#| fig-align: center
+knitr::include_graphics("www/grafico_fino_a_2.png")
+```
+:::
+
+::: {.fragment .fade-in-then-out}
+$$k = 0$$
+```{r}
+#| out-width: 60%
+#| fig-align: center
+knitr::include_graphics("www/grafico_fino_a_3.png")
+```
+:::
+
+::: {.fragment .fade-in-then-out}
+$$k = 0$$
+```{r}
+#| out-width: 60%
+#| fig-align: center
+knitr::include_graphics("www/grafico_fino_a_4.png")
+```
+:::
+
+
+::: {.fragment .fade-in-then-out}
+$$k = 0$$
+```{r}
+#| out-width: 60%
+#| fig-align: center
+knitr::include_graphics("www/grafico_fino_a_5.png")
+```
+:::
+
+::: {.fragment .fade-in-then-out}
+$$k = 0$$
+```{r}
+#| out-width: 60%
+#| fig-align: center
+knitr::include_graphics("www/firstK_0.png")
+```
+:::
+
+::: {.fragment .fade-in-then-out}
+$$k = 1$$
+```{r}
+#| out-width: 60%
+#| fig-align: center
+knitr::include_graphics("www/firstK_1.png")
+```
+:::
+
+::: {.fragment .fade-in-then-out}
+$$k = 1$$
+```{r}
+#| out-width: 60%
+#| fig-align: center
+knitr::include_graphics("www/firstK_2.png")
+```
+:::
+
+
+::: {.fragment .fade-in-then-out}
+$$k = 1$$
+```{r}
+#| out-width: 60%
+#| fig-align: center
+knitr::include_graphics("www/firstK_4.png")
+```
+:::
+
+::: {.fragment .fade-in-then-out}
+$$k = 1$$
+```{r}
+#| out-width: 60%
+#| fig-align: center
+knitr::include_graphics("www/firstK_5.png")
+```
+:::
 
 :::
 
@@ -550,18 +649,22 @@ ggplot(sumSum,
 
 # In the end 
 
-## What is missing 
-
-- The estimation of the latent trait 
-
-- The inclusion of "qualitative" criteria like ATA 
-
-- A real data application 
-
-But they are promising :) 
+## 
 
 
 <br>
+
+<br>
+
+- The better performance of the short test forms might be due only to the fact that there are less item: What happens if we select random items? We don't know
+
+- The response fatigue varies as the number of items in the full-length test varie
+
+- Approximating the TIF target is not enough: We need to estimate $\theta$ 
+
+- Does it work? I don't know. I do hope it does.
+
+
 
 <br>
 
