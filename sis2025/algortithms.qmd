@@ -96,7 +96,9 @@ set.seed(999)
 <br>
 
 Many items $\rightarrow$ good measurement precision, great reliability and so on
-	
+
+. . . 
+
 ::: {.r-stack}
 Not always!
 :::
