@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.12.30)  17 MAR 2025 22:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.12.30)  22 APR 2025 11:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**"./Epifania-CV - Copy.tex"
-(Epifania-CV - Copy.tex
+**./Epifania-CV-short.tex
+(Epifania-CV-short.tex
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-11-02>
 (C:\Users\Ottavia\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -269,8 +269,8 @@ dftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count285
 \l__pdf_internal_box=\box54
-) (Epifania-CV - Copy.aux)
-\openout1 = `"Epifania-CV - Copy.aux"'.
+) (Epifania-CV-short.aux)
+\openout1 = `Epifania-CV-short.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
 LaTeX Font Info:    ... okay on input line 83.
@@ -307,9 +307,9 @@ mkii
 \everyMPtoPDFconversion=\toks26
 )
 Package hyperref Info: Link coloring OFF on input line 83.
- (Epifania-CV - Copy.out) (Epifania-CV - Copy.out)
+ (Epifania-CV-short.out) (Epifania-CV-short.out)
 \@outlinefile=\write3
-\openout3 = `"Epifania-CV - Copy.out"'.
+\openout3 = `Epifania-CV-short.out'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 86.
@@ -324,7 +324,14 @@ LaTeX Font Info:    Trying to load font information for U+lasy on input line 86
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 111.
+(Font)              <10.95> on input line 110.
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 161.
+
+Overfull \hbox (0.79301pt too wide) in alignment at lines 181--181
+[] []
+ []
+
 
 
 
@@ -341,93 +348,24 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\footskip}{14.49998pt}.
 
-[2]
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 255.
-
-
-
-Package fancyhdr Warning: \footskip is too small (0.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\footskip}{14.49998pt}.
-
-[3]
-Overfull \hbox (9.17737pt too wide) in alignment at lines 318--318
-[] []
- []
-
-
-Overfull \hbox (0.79301pt too wide) in alignment at lines 339--339
-[] []
- []
-
-
-
-
-Package fancyhdr Warning: \footskip is too small (0.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\footskip}{14.49998pt}.
-
-[4]
-
-
-Package fancyhdr Warning: \footskip is too small (0.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\footskip}{14.49998pt}.
-
-[5]
-
-
-Package fancyhdr Warning: \footskip is too small (0.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\footskip}{14.49998pt}.
-
-[6]
-
-
-Package fancyhdr Warning: \footskip is too small (0.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\footskip}{14.49998pt}.
-
-[7]
-
-
-Package fancyhdr Warning: \footskip is too small (0.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\footskip}{14.49998pt}.
-
-[8]
-
-
-Package fancyhdr Warning: \footskip is too small (0.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\footskip}{14.49998pt}.
-
-[9]
-
-
-Package fancyhdr Warning: \footskip is too small (0.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\footskip}{14.49998pt}.
-
-[10] 
+[2] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
-(Epifania-CV - Copy.aux)
+(Epifania-CV-short.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-11-02>
  ***********
-Package rerunfilecheck Info: File `"Epifania-CV - Copy".out' has not changed.
-(rerunfilecheck)             Checksum: EE3A006D5EABC32D07E53391958C4926;2170.
+Package rerunfilecheck Info: File `Epifania-CV-short.out' has not changed.
+(rerunfilecheck)             Checksum: EF02FBF8CE6809E68232771A882FAB3E;812.
  ) 
 Here is how much of TeX's memory you used:
- 9770 strings out of 473650
- 154279 string characters out of 5716970
- 567844 words of memory out of 5000000
- 32743 multiletter control sequences out of 15000+600000
- 566197 words of font info for 66 fonts, out of 8000000 for 9000
+ 9743 strings out of 473650
+ 153954 string characters out of 5716970
+ 569832 words of memory out of 5000000
+ 32731 multiletter control sequences out of 15000+600000
+ 565899 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,12n,79p,608b,602s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,79p,462b,601s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Ottavia\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tc
 rm1095.pk> <C:\Users\Ottavia\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
 pi600\tcrm1200.pk><C:/Users/Ottavia/AppData/Local/Programs/MiKTeX/fonts/type1/p
@@ -444,9 +382,9 @@ ic/amsfonts/cm/cmti10.pfb><C:/Users/Ottavia/AppData/Local/Programs/MiKTeX/fonts
 iKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/Ottavia/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/Ottavia/App
 Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on "Epifania-CV - Copy.pdf" (10 pages, 249694 bytes).
+Output written on Epifania-CV-short.pdf (2 pages, 186645 bytes).
 PDF statistics:
- 255 PDF objects out of 1000 (max. 8388607)
- 24 named destinations out of 1000 (max. 500000)
- 105 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 132 PDF objects out of 1000 (max. 8388607)
+ 9 named destinations out of 1000 (max. 500000)
+ 49 words of extra memory for PDF output out of 10000 (max. 10000000)
 
