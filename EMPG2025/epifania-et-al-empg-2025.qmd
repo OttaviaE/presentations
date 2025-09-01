@@ -1,0 +1,730 @@
+---
+title: "Say 'when': An item response theory algorithm for shortening tests while accounting for response fatigue"
+author: "Ottavia M. Epifania$^{1,2}$, Livio Finos$^{2,3}$, Luigi Lombardi$^{1}$"
+institute: "$^1$ University of Trento, Rovereto (IT), $^2$ Psicostat, Padova (IT) $^3$ University of Padova, Padova (IT)"
+format: 
+  revealjs: 
+    theme: mytheme.scss
+    # logo: "www/psicostat.jpg"
+    footer: "EMPG 2025, Padova"
+    transition: none
+    transition-speed: slow
+    background-transition: fade
+    slide-number: true
+    show-slide-number: print
+    self-contained: true
+# background-opacity: "0.45"
+#    data-background-size: 400px, cover
+#    data-background-position: 50% 10%, center
+# server: shiny
+editor_options: 
+  chunk_output_type: console
+---
+
+
+```{css include = FALSE}
+.reveal .slide-logo {
+  height: 100px !important;
+  width: 100px !important;
+  max-width: unset !important;
+  max-height: unset !important;
+}
+.title-hex{
+  height: 10px;
+  align: right;
+  float: right;
+}
+.h3 {
+text-align: center;
+}
+```
+
+
+
+```{r, setup, include=FALSE}
+library(knitr)
+library(shiny)
+library(ggplot2)
+library(tidyverse)
+library(emoji)
+library(wesanderson)
+hexes <- function(x) {
+  x <- rev(sort(x))
+  markup <- function(img) glue::glue('<img width="10%" height="10%" src="www/{img}.jpg" class="title-hex">')
+  res <- purrr::map_chr(x, markup)
+  paste0(res, collapse = "")
+}
+IRT <- function(theta, a = 1, b = 0, c = 0,e = 1) {
+  y <- c + (e - c) * exp(a * (theta - b)) / (1 + exp(a * (theta - b)))
+  return(y)
+}
+# calcola l'IIF per un item specifico
+  i_info <- function(b, a=1,c=0, e= 1,  theta = seq(-5,5,length.out=1000)){
+      P = IRT(theta, b = b, a = a, e = e, c=c)
+      Q = 1 - P 
+      # Ii = (a^2)*(Q/P)*((P-c)/(e-c))^2
+      # Ii = (a^2)*(Q*P/e^2)
+      num = (a^2)*((P-c)^2)*((e-P)^2)
+      den = ((e-c)^2)*P*Q
+      Ii = num/den
+      return(Ii)
+    }
+    
+    item_info <- function(ipar, 
+                          theta = seq(-5,5,length.out=1000)){
+      item <- NULL
+      for(i in 1:nrow(ipar)){
+        item[[i]] <- i_info(b = ipar[i, "b"],a = ipar[i, "a"], c = ipar[i, "c"], e = ipar[i, "e"], theta = theta)
+      }
+      item = data.frame(do.call("cbind", item))
+      colnames(item) = rownames(ipar)
+      return(item)
+    }
+set.seed(999)
+
+
+# load("H:/Il mio Drive/frank-unitn/sim-psychometrika.RData")
+```
+
+
+
+
+# Short Test Forms
+
+## Why?
+
+Many items $\rightarrow$ good measurement precision, great reliability and so on
+
+. . . 
+
+::: {.r-stack}
+Not always!
+:::
+
+
+People might get tired & frustrated
+
+
+. . . 
+
+
+$$Q \subset B$$
+
+. . . 
+
+	 
+::: {.callout-tip}
+## Item Response Theory models for the win
+		
+Being focused on the item information and on the ability of each item to measure different levels of the latent trait, IRT models provide an ideal framework for developing STF (and not torturing people)	
+
+Automated test assembly and maxmin algorithms
+:::
+
+. . .
+
+::: {.callout-note}
+## AIM
+
+Size matters: How well can we estimate the latent trait with less and less items? 
+
+:::
+
+
+# The 4-Parameter Logistic Model (4-PL)
+
+## 4-PL - Item Response Function
+
+$$P(x_{pi}= 1| \theta_p, b_i, a_i, c_i, d_i) = c_i + (d_i -c_i) \dfrac{\exp[a_i(\theta_p - b_i)]}{1 + \exp[a_i(\theta_p - b_i)]}$$
+
+::: {.r-stack}
+::: {.fragment .fade-in-then-out}
+
+
+
+```{r}
+#| out-width: "70%"
+#| fig-align: "center"
+theta = seq(-4,4, length.out = 1000)
+par(mar = c(5,7,4,2) + 0.1) 
+plot(theta, IRT(theta, a = 1.5, b = 0), 
+     type = "l", 
+     ylab = expression(paste("P(", x[p][i],  "= 1|", theta[p], ", ", 
+                             b[i], ", ", a[i], ", ", c[i], ", ", d[i],  ")")),, 
+     ylim = c(0,1 ), cex.lab= 2, 
+     cex.axis =1.5, xlab = expression(theta), lwd = 3, col = "seagreen", main = "Item Characteristic Curve - ICC")
+abline(h = 1, lwd = 2, lty = 3, col = "darkgray")
+segments(-7, exp(1.5 *(0))/(1+exp(1.5 *(0))), 
+         0, exp(1.5 *(0))/(1+exp(1.5 *(0))), 
+         col = "seagreen", lty = 3, lwd = 1)
+segments(0, -exp(1.5 *(0))/(1+exp(1.5 *(0))), 
+        0, exp(1.5 *(0))/(1+exp(1.5 *(0))), 
+         col = "seagreen", lty = 3, lwd = 1)
+```
+
+:::
+
+::: {.fragment .fade-in-then-out}
+
+
+
+```{r}
+#| out-width: "70%"
+#| fig-align: "center"
+theta = seq(-4,4, length.out = 1000)
+par(mar = c(5,7,4,2) + 0.1) 
+plot(theta, IRT(theta, a = 1.5, b = 0), 
+     type = "l", 
+     ylab = expression(paste("P(", x[p][i],  "= 1|", theta[p], ", ", 
+                             b[i], ", ", a[i], ", ", c[i], ", ", d[i],  ")")), 
+     ylim = c(0,1 ), cex.lab= 2, 
+     cex.axis =1.5, xlab = expression(theta), lwd = 3, col = "seagreen", 
+     main = "Item Characteristic Curve - ICC")
+abline(h = 1, lwd = 2, lty = 3, col = "darkgray")
+segments(-7, exp(1.5 *(0))/(1+exp(1.5 *(0))), 
+         0, exp(1.5 *(0))/(1+exp(1.5 *(0))), 
+         col = "seagreen", lty = 3, lwd = 1)
+segments(0, -exp(1.5 *(0))/(1+exp(1.5 *(0))), 
+        0, exp(1.5 *(0))/(1+exp(1.5 *(0))), 
+         col = "seagreen", lty = 3, lwd = 1)
+# item careless 
+lines(theta, IRT(theta, a = 1.5, b = 0, e = .9), col = "darkorchid", lwd = 3)
+segments(-7, IRT(0, a = 1.5, b = 0, e = .9), 
+         0, IRT(0, a = 1.5, b = 0, e = .9), 
+         col = "darkorchid", lty = 3, lwd = 1)
+segments(0, -IRT(0, a = 1.5, b = 0, e = .9), 
+        0, IRT(0, a = 1.5, b = 0, e = .9), 
+         col = "darkorchid", lty = 3, lwd = 1)
+abline(h = .90, lwd = 2, lty = 3, col = "darkgray")
+```
+
+
+:::
+:::
+
+## 4-PL - Item Information Function
+
+$$	\text{IIF}_{i}(\theta) = \dfrac{a_i^2[P(\theta)-c_i]^2[d_i - P(\theta)]^2}{(d_{i}-c_i)^2 P(\theta)Q(\theta)}$$
+
+::: {.r-stack}
+::: {.fragment .fade-in-then-out}
+```{r}
+itempar = data.frame(a = c(1.5, 1.5), 
+                     b = c(0, 0), 
+                     c = c(0,0), 
+                     e = c(1,.9))
+iifs = item_info(itempar, theta = theta)
+iifs$theta = theta    
+plot(theta, iifs[,1], cex.lab= 2, 
+         main = "Item Information Functions - IIFs",
+         cex.lab = 1.2, 
+         cex.main = 1.5, 
+ cex.axis=1,
+         xlab = expression(theta), ylab = expression(paste("IIF"[i])),
+         type = "l", lwd =2,
+         col = "seagreen", ylim = c(0,1))
+segments(-7, max(iifs[,1]), 
+         iifs$theta[iifs$`1` == max(iifs$`1`)], max(iifs[,1]), 
+         col = "seagreen", lty = 3, lwd = 1)
+segments(0, -max(iifs[,1]), 
+        0, max(iifs[,1]), 
+         col = "seagreen", lty = 3, lwd = 1)
+
+```
+:::
+
+
+::: {.fragment .fade-in-then-out}
+
+
+```{r}
+plot(theta, iifs[,1], cex.lab= 2, 
+         main = "Item Information Functions - IIFs",
+         cex.lab = 1.2, 
+         cex.main = 1.5, 
+ cex.axis=1,
+         xlab = expression(theta), ylab = expression(paste("IIF"[i])),
+         type = "l", lwd =2,
+         col = "seagreen", ylim = c(0,1))
+lines(theta, iifs[,2], lwd =2,
+          col = "darkorchid", lty = 4)
+
+segments(-7, max(iifs[,1]), 
+         iifs$theta[iifs$`1` == max(iifs$`1`)], max(iifs[,1]), 
+         col = "seagreen", lty = 3, lwd = 1)
+segments(0, -max(iifs[,1]), 
+        iifs$theta[iifs$`1` == max(iifs$`1`)], max(iifs[,1]), 
+         col = "seagreen", lty = 3, lwd = 1)
+
+segments(-7, max(iifs[,2]), 
+         iifs$theta[iifs$`2` == max(iifs$`2`)], max(iifs[,2]), 
+         col = "darkorchid", lty = 3, lwd = 1)
+segments(iifs$theta[iifs$`2` == max(iifs$`2`)], -max(iifs[,2]), 
+        iifs$theta[iifs$`2` == max(iifs$`2`)], max(iifs[,2]), 
+         col = "darkorchid", lty = 3, lwd = 1)
+```
+:::
+:::
+
+## 4-PL - Test Information Function
+
+
+$$TIF = \sum_{i = 1}^{||B||} IIF_i$$ <font size="4"> ($B$: Set of items in a test ($||X||$ cardinality of set $X$)) </font>
+
+::: {.r-stack}
+::: {.fragment .fade-in-then-out}
+
+```{r}
+itempargoood = data.frame(a = c(1.5, 1.5), 
+                     b = c(0, 0), 
+                     c = c(0,0), 
+                     e = c(1, 1))
+iifsgood = item_info(itempargoood, theta)
+
+tif =  data.frame(theta = theta, 
+                      tif = rowSums(iifsgood), 
+                  tiftired = rowSums(iifs[,-3]))
+
+plot(theta, tif$tif, cex.lab= 2, 
+         main = "Test Information Function - TIF",
+         cex.lab = 1.2, 
+         cex.main = 1.5, 
+ cex.axis=1,
+         xlab = expression(theta), ylab = expression(paste("TIF"[theta])),
+         type = "l", lwd =2,
+         col = "royalblue3")
+
+```
+
+:::
+
+::: {.fragment .fade-in-then-out}
+
+```{r}
+plot(theta, tif$tif, cex.lab= 2, 
+         main = "Test Information Function - TIF",
+         cex.lab = 1.2, 
+         cex.main = 1.5, 
+ cex.axis=1,
+         xlab = expression(theta), ylab = expression(paste("TIF"[theta])),
+         type = "l", lwd =2,
+         col = "royalblue3")
+lines(theta, tif$tiftired, col = "firebrick", lwd =2)
+```
+
+
+:::
+
+:::
+
+## Not a property of the item! 
+
+$d$ depends on the $r$ rank of the item presentation during the  administration, $d_r$: 
+
+. . . 
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![](www/iccgif.gif){style="display: block; margin-left: auto; margin-right: auto;"}
+:::
+
+::: {.column width="50%"}
+![](www/iifgif.gif){style="display: block; margin-left: auto; margin-right: auto;"}
+:::
+
+::::
+
+
+
+## Léon
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+The logic
+
+::: {.r-stack}
+::: {.fragment .fade-in-then-out}
+
+$$\text{TIF}^*$$ (Target Test Information Function)
+
+```{r}
+#| out-width: 100%
+#| fig-align: center
+knitr::include_graphics("www/target0.png")
+```
+:::
+
+::: {.fragment .fade-in-then-out}
+
+$$k = 0$$
+```{r}
+#| out-width: 100%
+#| fig-align: center
+knitr::include_graphics("www/grafico_fino_a_1.png")
+```
+:::
+
+::: {.fragment .fade-in-then-out}
+$$k = 0$$
+```{r}
+#| out-width: 100%
+#| fig-align: center
+knitr::include_graphics("www/grafico_fino_a_2.png")
+```
+:::
+
+::: {.fragment .fade-in-then-out}
+$$k = 0$$
+```{r}
+#| out-width: 100%
+#| fig-align: center
+knitr::include_graphics("www/grafico_fino_a_3.png")
+```
+:::
+
+::: {.fragment .fade-in-then-out}
+$$k = 0$$
+```{r}
+#| out-width: 100%
+#| fig-align: center
+knitr::include_graphics("www/grafico_fino_a_4.png")
+```
+:::
+
+
+::: {.fragment .fade-in-then-out}
+$$k = 0$$
+```{r}
+#| out-width: 100%
+#| fig-align: center
+knitr::include_graphics("www/grafico_fino_a_5.png")
+```
+:::
+
+::: {.fragment .fade-in-then-out}
+$$k = 0$$
+```{r}
+#| out-width: 100%
+#| fig-align: center
+knitr::include_graphics("www/firstK_0.png")
+```
+:::
+
+::: {.fragment .fade-in-then-out}
+$$k = 1$$
+```{r}
+#| out-width: 100%
+#| fig-align: center
+knitr::include_graphics("www/firstK_1.png")
+```
+:::
+
+::: {.fragment .fade-in-then-out}
+$$k = 1$$
+```{r}
+#| out-width: 100%
+#| fig-align: center
+knitr::include_graphics("www/firstK_2.png")
+```
+:::
+
+
+::: {.fragment .fade-in-then-out}
+$$k = 1$$
+```{r}
+#| out-width: 100%
+#| fig-align: center
+knitr::include_graphics("www/firstK_4.png")
+```
+:::
+
+::: {.fragment .fade-in-then-out}
+$$k = 1$$
+```{r}
+#| out-width: 100%
+#| fig-align: center
+knitr::include_graphics("www/firstK_5.png")
+```
+:::
+
+:::
+:::
+
+
+::: {.column width="50%"}
+The algorithm
+<font size ="4">
+
+
+
+
+
+At $k = 0$: $\text{TIF}^0(\theta) = 0 \, \forall \theta$, $Q^0 = \emptyset$. 
+
+For $k \geq 0$,
+
+1. $A^k = B \setminus Q^k$ 
+
+2. $\forall i \in A^k$, $p\text{TIF}_{i}^k = \frac{\text{TIF}^k + \text{IIF}_{i}}{||Q^k||+1}$, with $r = \{0, 1, \ldots, ||Q^k||-1\}$
+
+
+3. $i^* = \arg \min_{i \in A^k} (|\text{TIF}^* - \text{pTIF}_i^k|)$
+
+4. Termination criterion: $|\text{TIF}^* - \text{pTIF}_{i^*}^k| \geq |\text{TIF}_B - \text{TIF}^{k}|$: 
+
+	- FALSE:  $Q^{k+1} = Q^{k} \cup \{i^*\}$, $\text{TIF}^{k+1} = p\text{TIF}_{i^*}$, iterates 1-4 
+		
+	- TRUE: Stop, 
+		$Q_{\text{Léon}} = Q^k$
+
+</font>
+:::
+::::
+
+
+
+# Simulation Study
+
+## Design 
+
+:::{.panel-tabset}
+
+## Step 1
+
+1000 respondents with $\theta \sim \mathcal{U}(-3,3)$ 
+
+Item bank $B$ of 70 items:
+
+<font size="5">
+
+- $b \sim \mathcal{U}(-3, 3)$
+
+- $a \sim \mathcal{U}(.90, 2.0)$
+
+- $c_i = 0$, $\forall i \in B$
+
+- $d_r = \exp(-0.01 r)$, with $r = \{0, \ldots, ||B|| -1\}$
+
+</font>
+
+$\text{TIF}^* = \sum_{i = 1}^{||B||} \frac{\text{IIF}_i}{||B||}$, with $d_i = 1$, $\forall i \in B$ `r emoji("1st_place_medal")`
+
+
+Considering $TIF^*$, $B$, and $d_r$: 100 replications to find $Q_{\text{Léon}} \subset B$ 
+
+:::{.callout-warning}
+## Minimum number of items
+10%, 25%, 50% of $||B||$
+:::
+
+
+## Step 2
+
+Responses are generated for: 
+
+* $Q_{\text{Léon}}$
+* $Q_{\text{Random}}$, where $||Q_{\text{Léon}}|| = Q_{\text{Random}}||$
+* $B$ 
+
+:::{.callout-warning}
+## Latent trait estimation: Two conditions
+
+
+1. Condition $d$: 
+    Accounts for the response fatigue
+
+2. Condition $\lnot d$:
+    Does not account for the response fatigue
+:::
+
+:::
+
+# Results
+
+```{r}
+library(tidyverse)
+load("sim-psychometrika.RData")
+step1 = rbind(both, tif) 
+step1$type = factor(step1$type, levels = c("target", "tired", "leon", "random"), labels = c("Target", "All items", "Léon", "Random"))
+step1$percent = ifelse(step1$nitem == 9, "10%", 
+                       ifelse(step1$nitem == 20, "25%", 
+                              ifelse(step1$nitem == 35, "50%", 
+                                     "100%")))
+step1$percent = factor(step1$percent, 
+                       levels = c("10%", "25%", "50%", "100%"))
+```
+
+
+## Step 1 
+
+::: {.r-stack}
+
+
+
+:::{.fragment .fade-in}
+
+```{r}
+ggplot(
+  step1[step1$type %in% c("Target", "All items", "Léon", "Random"), ], 
+  aes(x = theta, y = tif, 
+      colour = percent,  
+      linetype = (type),
+      linewidth = (type))) +
+  geom_line() +
+  scale_linewidth_manual(values = c(1, 1, 2, 1,1)) +
+  scale_linetype_manual(values = c(1, 5, 2, 3,2)) + 
+  scale_color_manual(values = c("gray78",
+                                "magenta",
+                                "gray78",
+                                "gray78",
+                                "gray78",
+                                "black")) +
+  theme_light() + 
+  xlab(expression(theta)) + ylab("TIF") +
+  theme(
+    # legend.position = "inside",
+    # legend.position.inside = c(.30, .80), 
+    legend.title = element_blank(), 
+    legend.text = element_text(size = 22),
+    axis.text = element_text(size = 20),
+    axis.title = element_text(size = 24), # make the legend line longer
+    legend.key.height = unit(1, "null"),
+    legend.margin = margin(0, 0, 0, 0), # turned off for alignment
+    legend.justification.top = "left",
+    legend.justification.left = "top",
+    legend.justification.bottom = "right",
+    legend.justification.inside = c(1, 1),
+    legend.location = "plot",
+    plot.title.position = "plot",
+      legend.key.width = unit(1, "cm"),
+  )  
+```
+:::
+
+:::{.fragment .fade-out}
+
+```{r}
+
+ggplot(
+  step1[step1$type %in% c("Target", "All items", "Léon", "Random"), ], 
+  aes(x = theta, y = tif, 
+      color = percent,  
+      linetype = factor(type),
+      linewidth = factor(type))) +
+  geom_line() +
+  scale_linewidth_manual(values = c(2, 1, 1.2, 1.2)) +
+  scale_linetype_manual(values = c(1, 5, 2, 3)) + 
+  scale_color_manual(values = c("springgreen3", 
+                                "magenta", 
+                                "orange", 
+                                "royalblue3", 
+                                "magenta", 
+                                "black")) + 
+  theme_light() + 
+  xlab(expression(theta)) + ylab("TIF") +
+  theme(
+      legend.title = element_blank(), 
+    legend.text = element_text(size = 22),
+    axis.text = element_text(size = 20),
+    axis.title = element_text(size = 24), # make the legend line longer
+    legend.key.height = unit(1, "null"),
+    legend.margin = margin(0, 0, 0, 0), # turned off for alignment
+    legend.justification.top = "left",
+    legend.justification.left = "top",
+    legend.justification.bottom = "right",
+    legend.justification.inside = c(1, 1),
+    legend.location = "plot",
+    plot.title.position = "plot",
+      legend.key.width = unit(1, "cm"),) 
+```
+
+:::
+
+:::
+
+
+## Step 2
+
+
+```{r}
+ohmy = NULL
+
+for (i in 1:length(res)) {
+  temp = res[[i]] %>%  
+    group_by(theta) %>%  
+    summarise(random = mean(hat_random), 
+              random_clean = mean(hat_random_clean),
+              leon = mean(hat_leon), 
+              leon_clean = mean(hat_leon_clean),
+              frank = mean(hat_frank), 
+              frank_clean = mean(hat_frank_clean),
+              all = mean(hat_all), 
+              tired = mean(hat_tired), 
+              tired_clean = mean(hat_tired_clean))
+  temp =  pivot_longer(temp, cols = !theta)
+  temp$percentage = percent[i]
+  ohmy = rbind(ohmy, temp)
+}
+
+df <- ohmy %>%
+  mutate(
+    is_clean = str_detect(name, "_clean"),          # TRUE se contiene "_clean"
+    name = str_replace(name, "_clean", "")          # rimuove "_clean" da name
+  ) 
+df$is_clean = ifelse(df$is_clean == TRUE, "No D", "D")
+df$name = factor(df$name, levels = c("all", "tired", "leon", "frank", "random"), 
+                 labels = c("Model", "All items", "Léon", "Frank", "Random"))
+ggplot(df[!df$name %in% c("Model", "Frank"), ], 
+       aes(x = theta, y = value, 
+           color = name)) + geom_point() + 
+  geom_abline(slope = 1, intercept = 0, size = 1, alpha = .5) + 
+  facet_grid(is_clean~percentage, 
+             labeller = labeller(
+             is_clean = c("E" = "d", "No e" = "\u00ACd"), 
+             percentage = c("0.1" = "10% (9 items)", "0.25" = "25% (20 item)", "0.5" = "50% (35 item)"))) + 
+  theme_bw() + xlab(expression(theta)) + ylab(expression(hat(theta))) + 
+  scale_color_manual(values = c("royalblue", "orange", "springgreen4")) +
+  theme(legend.position = "top", 
+        legend.title = element_blank(), 
+        legend.text = element_text(size = 20), 
+        axis.text = element_text(size =22), 
+        axis.title = element_text(size =24), 
+        strip.text = element_text(size = 18, face = "bold", color = "#9B0014"), 
+        strip.background = element_rect(color = "black", fill = "gray78") , 
+          legend.key.width = unit(1, "in"),   
+  legend.key.height = unit(0.5, "in")   ) +
+  guides(color = guide_legend(override.aes = list(size = 6)))
+```
+
+# Final remarks 
+
+## 
+
+<br>
+
+::: {.callout-tip}
+
+Administering less, well chosen items is better than administering all items 
+
+:::
+
+<br>
+
+::: {.callout-warning}
+
+The order of the items selected by Léon cannot be randomized
+
+:::
+
+<br>
+
+. . . 
+
+:::{.r-stack}
+
+ottavia.epifania@untin.it 
+
+:::
