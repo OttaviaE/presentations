@@ -526,7 +526,7 @@ Considering $TIF^*$, $B$, and $d_r$: 100 replications to find $Q_{\text{Léon}} 
 Responses are generated for: 
 
 * $Q_{\text{Léon}}$
-* $Q_{\text{Random}}$, where $||Q_{\text{Léon}}|| = Q_{\text{Random}}||$
+* $Q_{\text{Random}}$, where $||Q_{\text{Léon}}|| = ||Q_{\text{Random}}||$
 * $B$ 
 
 :::{.callout-warning}
