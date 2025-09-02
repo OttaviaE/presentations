@@ -525,9 +525,9 @@ Considering $TIF^*$, $B$, and $d_r$: 100 replications to find $Q_{\text{Léon}} 
 
 Responses are generated for: 
 
-* $Q_{\text{Léon}}$
-* $Q_{\text{Random}}$, where $||Q_{\text{Léon}}|| = ||Q_{\text{Random}}||$
-* $B$ 
+* $Q_{\text{Léon}}$, with $d_r = \exp(-0.01 r)$, and $r = \{0, \ldots, ||Q_{\text{Léon}}|| -1\}$
+* $Q_{\text{Random}}$, where $||Q_{\text{Léon}}|| = ||Q_{\text{Random}}||$ and with $d_r = \exp(-0.01 r)$, and $r = \{0, \ldots, ||Q_{\text{Léon}}|| -1\}$ 
+* $B$ with $d_r = \exp(-0.01 r)$, and $r = \{0, \ldots, ||B|| -1\}$
 
 :::{.callout-warning}
 ## Latent trait estimation: Two conditions
@@ -712,6 +712,8 @@ Administering less, well chosen items is better than administering all items
 :::
 
 <br>
+
+. . . 
 
 ::: {.callout-warning}
 
