@@ -202,13 +202,29 @@ abline(h = .90, lwd = 2, lty = 3, col = "darkgray")
 :::
 :::
 
-## 4-PL - Item Information Function
+## 4-PL - Information Functions
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
 
 $$	\text{IIF}_{i}(\theta) = \dfrac{a_i^2[P(\theta)-c_i]^2[d_i - P(\theta)]^2}{(d_{i}-c_i)^2 P(\theta)Q(\theta)}$$
 
-::: {.r-stack}
+:::
+
+:::{.column width="50%"}
+
+$$TIF = \sum_{i = 1}^{||B||} IIF_i$$ <font size="4"> ($B$: Set of items in a test ($||X||$ cardinality of set $X$)) </font>
+
+:::
+::::
+
+:::{.r-stack}
 ::: {.fragment .fade-in-then-out}
 ```{r}
+#| layout-ncol: 2
+#| column: screen-inset-shaded
 itempar = data.frame(a = c(1.5, 1.5), 
                      b = c(0, 0), 
                      c = c(0,0), 
@@ -230,6 +246,25 @@ segments(0, -max(iifs[,1]),
         0, max(iifs[,1]), 
          col = "seagreen", lty = 3, lwd = 1)
 
+itempargoood = data.frame(a = c(1.5, 1.5), 
+                     b = c(0, 0), 
+                     c = c(0,0), 
+                     e = c(1, 1))
+iifsgood = item_info(itempargoood, theta)
+
+tif =  data.frame(theta = theta, 
+                      tif = rowSums(iifsgood), 
+                  tiftired = rowSums(iifs[,-3]))
+
+plot(theta, tif$tif, cex.lab= 2, 
+         main = "Test Information Function - TIF",
+         cex.lab = 1.2, 
+         cex.main = 1.5, 
+ cex.axis=1,
+         xlab = expression(theta), ylab = expression(paste("TIF"[theta])),
+         type = "l", lwd =2,
+         col = "royalblue3")
+
 ```
 :::
 
@@ -238,6 +273,8 @@ segments(0, -max(iifs[,1]),
 
 
 ```{r}
+#| layout-ncol: 2
+#| column: screen-inset-shaded
 plot(theta, iifs[,1], cex.lab= 2, 
          main = "Item Information Functions - IIFs",
          cex.lab = 1.2, 
@@ -262,45 +299,7 @@ segments(-7, max(iifs[,2]),
 segments(iifs$theta[iifs$`2` == max(iifs$`2`)], -max(iifs[,2]), 
         iifs$theta[iifs$`2` == max(iifs$`2`)], max(iifs[,2]), 
          col = "darkorchid", lty = 3, lwd = 1)
-```
-:::
-:::
 
-## 4-PL - Test Information Function
-
-
-$$TIF = \sum_{i = 1}^{||B||} IIF_i$$ <font size="4"> ($B$: Set of items in a test ($||X||$ cardinality of set $X$)) </font>
-
-::: {.r-stack}
-::: {.fragment .fade-in-then-out}
-
-```{r}
-itempargoood = data.frame(a = c(1.5, 1.5), 
-                     b = c(0, 0), 
-                     c = c(0,0), 
-                     e = c(1, 1))
-iifsgood = item_info(itempargoood, theta)
-
-tif =  data.frame(theta = theta, 
-                      tif = rowSums(iifsgood), 
-                  tiftired = rowSums(iifs[,-3]))
-
-plot(theta, tif$tif, cex.lab= 2, 
-         main = "Test Information Function - TIF",
-         cex.lab = 1.2, 
-         cex.main = 1.5, 
- cex.axis=1,
-         xlab = expression(theta), ylab = expression(paste("TIF"[theta])),
-         type = "l", lwd =2,
-         col = "royalblue3")
-
-```
-
-:::
-
-::: {.fragment .fade-in-then-out}
-
-```{r}
 plot(theta, tif$tif, cex.lab= 2, 
          main = "Test Information Function - TIF",
          cex.lab = 1.2, 
@@ -311,11 +310,12 @@ plot(theta, tif$tif, cex.lab= 2,
          col = "royalblue3")
 lines(theta, tif$tiftired, col = "firebrick", lwd =2)
 ```
-
-
 :::
 
 :::
+
+
+
 
 ## Not a property of the item! 
 
