@@ -337,9 +337,42 @@ $d$ depends on the $r$ rank of the item presentation during the  administration,
 
 
 
-## Léon
+# Léon
+
+##
 
 :::: {.columns}
+
+
+
+::: {.column width="50%"}
+The algorithm
+<font size ="4">
+
+
+
+
+
+At $k = 0$: $\text{TIF}^0(\theta) = 0 \, \forall \theta$, $Q^0 = \emptyset$. 
+
+For $k \geq 0$,
+
+1. $A^k = B \setminus Q^k$ 
+
+2. $\forall i \in A^k$, $p\text{TIF}_{i}^k = \frac{\text{TIF}^k + \text{IIF}_{i}}{||Q^k||+1}$, with $r = \{0, 1, \ldots, ||Q^k||-1\}$
+
+
+3. $i^* = \arg \min_{i \in A^k} (|\text{TIF}^* - \text{pTIF}_i^k|)$
+
+4. Termination criterion: $|\text{TIF}^* - \text{pTIF}_{i^*}^k| \geq |\text{TIF}_B - \text{TIF}^{k}|$: 
+
+	- FALSE:  $Q^{k+1} = Q^{k} \cup \{i^*\}$, $\text{TIF}^{k+1} = p\text{TIF}_{i^*}$, iterates 1-4 
+		
+	- TRUE: Stop, 
+		$Q_{\text{Léon}} = Q^k$
+
+</font>
+:::
 
 ::: {.column width="50%"}
 
@@ -453,35 +486,6 @@ knitr::include_graphics("www/firstK_5.png")
 :::
 :::
 
-
-::: {.column width="50%"}
-The algorithm
-<font size ="4">
-
-
-
-
-
-At $k = 0$: $\text{TIF}^0(\theta) = 0 \, \forall \theta$, $Q^0 = \emptyset$. 
-
-For $k \geq 0$,
-
-1. $A^k = B \setminus Q^k$ 
-
-2. $\forall i \in A^k$, $p\text{TIF}_{i}^k = \frac{\text{TIF}^k + \text{IIF}_{i}}{||Q^k||+1}$, with $r = \{0, 1, \ldots, ||Q^k||-1\}$
-
-
-3. $i^* = \arg \min_{i \in A^k} (|\text{TIF}^* - \text{pTIF}_i^k|)$
-
-4. Termination criterion: $|\text{TIF}^* - \text{pTIF}_{i^*}^k| \geq |\text{TIF}_B - \text{TIF}^{k}|$: 
-
-	- FALSE:  $Q^{k+1} = Q^{k} \cup \{i^*\}$, $\text{TIF}^{k+1} = p\text{TIF}_{i^*}$, iterates 1-4 
-		
-	- TRUE: Stop, 
-		$Q_{\text{Léon}} = Q^k$
-
-</font>
-:::
 ::::
 
 
