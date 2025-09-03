@@ -674,7 +674,7 @@ df <- ohmy %>%
     is_clean = str_detect(name, "_clean"),          # TRUE se contiene "_clean"
     name = str_replace(name, "_clean", "")          # rimuove "_clean" da name
   ) 
-df$is_clean = ifelse(df$is_clean == TRUE, "No D", "D")
+df$is_clean = ifelse(df$is_clean == TRUE, "No d", "d")
 df$name = factor(df$name, levels = c("all", "tired", "leon", "frank", "random"), 
                  labels = c("Model", "All items", "Léon", "Frank", "Random"))
 ggplot(df[!df$name %in% c("Model", "Frank"), ], 
