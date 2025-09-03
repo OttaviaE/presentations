@@ -376,8 +376,6 @@ For $k \geq 0$,
 
 ::: {.column width="50%"}
 
-The logic
-
 ::: {.r-stack}
 ::: {.fragment .fade-in-then-out}
 
