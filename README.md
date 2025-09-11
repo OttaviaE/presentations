@@ -12,7 +12,7 @@ I am a proud member of the Core Team of [Psicostat](https://psicostat.dpss.psy.u
 
 AIP 2025: 
 
-- Simposio "New perspectives for developing short forms of tests" [slides](AIP2025/short-form/epifania/epifania-et-al-AIP-2025.html)
+- Simposio "New perspectives for developing short forms of tests" [simposio](AIP2025/short-form/epifania/general/simposio-epifania.pdf) [slides](AIP2025/short-form/epifania/epifania-et-al-AIP-2025.html)
 - Altro simposio [slides](AIP2025/short-form/psychMeth/so-simple.pdf)
 
 EMPG 2025 [presentation](EMPG2025/epifania-et-al-empg-2025.html)
