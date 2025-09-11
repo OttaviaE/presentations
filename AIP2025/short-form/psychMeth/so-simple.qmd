@@ -17,6 +17,7 @@ header-includes:
     - \AtBeginDocument{\author[Ottavia M. Epifania]{Ottavia M. Epifania \\ University of Trento \\\texttt{ottavia.epifania@unitn.it}}}
     - \AtBeginDocument{\institute[]{AIP 2025, Torino} }
     - \AtBeginSubsection{}
+    - \AtBeginSection{}
     - \AtBeginDocument{\date[]{September, 12, 2025}}
     - \usecolortheme{dove}
     - \useinnertheme{rounded}
@@ -114,10 +115,6 @@ The Implicit Association Test
 
 ### 
 
-Sample of stimuli 
-
-Two conditions: 
-
 1. The "natural" one (so called *compatible* condition)
 
     I love Coke and its easier to associate these stimuli to positive attributes
@@ -125,6 +122,73 @@ Two conditions:
 2. The "innatural" one (so *incompatible* condition)
 
     I love Coke and its harder to associate these stimuli to negative stimuli
+
+\pause
+
+
+```{=latex}
+\tikzstyle{respondent} = [rectangle, minimum width=1.5cm, minimum height=1cm,text centered, draw=white]
+\tikzstyle{stimulus} = [rectangle, minimum width=1.5cm, minimum height=1cm,text centered, draw=white]
+\tikzstyle{trial} = [rectangle, minimum width=1cm, minimum height=1cm,text centered, draw=black]
+\tikzstyle{process} = [rectangle, rounded corners, minimum width=0.5cm, minimum height=1cm, text width =2.5cm, text centered, draw=black]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+\tikzstyle{condition} = [rectangle, rounded corners,draw=black,text width=2cm, text height=6.5cm]
+
+\centering
+\scalebox{.26}{
+	\begin{tikzpicture}[inner sep=1pt,auto=left, node distance=2cm,>=latex']
+ 				 
+ 				\node(s1) at(2, 16)  [respondent]  {$p_1$};
+ 				\node(s2) at (2, 11) [respondent] {$p_2$};
+ 				\node(s3) at (2, 5.5) [respondent] {$p_3$};
+ 				\node(t1) at (12, 17) [ trial] {};
+ 				\node(t2) at (12, 15.5) [trial] {};
+ 				\node(t3) at (12, 14) [trial] {};
+ 				\node(t4) at (12, 12.5) [trial] {};
+ 				\node(t5) at (12, 9) [trial] {};
+ 				\node(t6) at (12, 7.5) [trial] {};
+ 				\node(t7) at (12, 6) [trial] {};
+ 				\node(t8) at (12, 4.5) [trial] {};
+ 				\node(stim1) at(22, 13)  [stimulus]  {\Smiley[3]};
+ 				\node(stim2) at (22, 7) [stimulus] {\Sleepey[3]};
+ 				\node at (12, 14.8) [condition, dashed,ultra thick] {};  
+ 				\node at (12, 6.8) [condition, black,ultra thick] {};  
+ 				\draw [->, shorten >= +3pt] (s1.east) -- (t1.west);
+ 				\draw [->, shorten >= +3pt] (s2.east) -- (t1.west);
+ 				\draw [->, shorten >= +3pt] (s3.east) -- (t1.west);
+ 				\draw [->, shorten >= +3pt] (s1.east) -- (t2.west);
+ 				\draw [->, shorten >= +3pt] (s2.east) -- (t2.west);
+ 				\draw [->, shorten >= +3pt] (s3.east) -- (t2.west);
+ 				\draw [->, shorten >= +3pt] (s1.east) -- (t3.west);
+ 				\draw [->, shorten >= +3pt] (s2.east) -- (t3.west);
+ 				\draw [->, shorten >= +3pt] (s3.east) -- (t3.west);
+ 				\draw [->, shorten >= +3pt] (s1.east) -- (t4.west);
+ 				\draw [->, shorten >= +3pt] (s2.east) -- (t4.west);
+ 				\draw [->, shorten >= +3pt] (s3.east) -- (t4.west);
+ 				\draw [->, shorten >= +3pt] (s1.east) -- (t5.west);
+ 				\draw [->, shorten >= +3pt] (s2.east) -- (t5.west);
+ 				\draw [->, shorten >= +3pt] (s3.east) -- (t5.west);
+ 				\draw [->, shorten >= +3pt] (s1.east) -- (t6.west);
+ 				\draw [->, shorten >= +3pt] (s2.east) -- (t6.west);
+ 				\draw [->, shorten >= +3pt] (s3.east) -- (t6.west);
+ 				\draw [->, shorten >= +3pt] (s1.east) -- (t7.west);
+ 				\draw [->, shorten >= +3pt] (s2.east) -- (t7.west);
+ 				\draw [->, shorten >= +3pt] (s3.east) -- (t7.west);
+ 				\draw [->, shorten >= +3pt] (s1.east) -- (t8.west);
+ 				\draw [->, shorten >= +3pt] (s2.east) -- (t8.west);
+ 				\draw [->, shorten >= +3pt] (s3.east) -- (t8.west);
+ 				\draw [<-, shorten <= +3pt] (t1.east)  -- (stim1.west); 
+ 				\draw [<-, shorten <= +3pt] (t2.east)  -- (stim2.west); 
+ 	  			\draw [<-, shorten <= +3pt] (t3.east)  -- (stim1.west); 
+ 	 			\draw [<-, shorten <= +3pt] (t4.east)  -- (stim2.west); 
+ 	  			\draw [<-, shorten <= +3pt] (t5.east)  -- (stim1.west); 
+ 	 \draw [<-, shorten <= +3pt] (t6.east)  -- (stim2.west); 
+ 	  	\draw [<-, shorten <= +3pt] (t7.east)  -- (stim1.west); 
+ 	 \draw [<-, shorten <= +3pt] (t8.east)  -- (stim2.west); 
+ 			\end{tikzpicture}
+}
+
+```
 
 
 ## Scoring
@@ -201,7 +265,7 @@ There is no need to generalize the results because the stimuli are the populatio
 
 
 
-### With long lasting consequences
+### 
 
 - Generalization of the results is impaired
 
@@ -253,103 +317,6 @@ Rasch model
 
 Rasch-like parametrization estimated with Linear Mixed Effects Models
 
-## When?
-
-###
-
-
-```{=latex}
-\tikzstyle{respondent} = [rectangle, minimum width=1.5cm, minimum height=1cm,text centered, draw=white]
-\tikzstyle{stimulus} = [rectangle, minimum width=1.5cm, minimum height=1cm,text centered, draw=white]
-\tikzstyle{trial} = [rectangle, minimum width=1cm, minimum height=1cm,text centered, draw=black]
-\tikzstyle{process} = [rectangle, rounded corners, minimum width=0.5cm, minimum height=1cm, text width =2.5cm, text centered, draw=black]
-\tikzstyle{arrow} = [thick,->,>=stealth]
-\tikzstyle{condition} = [rectangle, rounded corners,draw=black,text width=2cm, text height=6.5cm]
-
-\centering
-\scalebox{.30}{
-	\begin{tikzpicture}[inner sep=1pt,auto=left, node distance=2cm,>=latex']
- 				 
- 				\node(s1) at(2, 16)  [respondent]  {$p_1$};
- 				\node(s2) at (2, 11) [respondent] {$p_2$};
- 				\node(s3) at (2, 5.5) [respondent] {$p_3$};
- 				\node(t1) at (12, 17) [ trial] {};
- 				\node(t2) at (12, 15.5) [trial] {};
- 				\node(t3) at (12, 14) [trial] {};
- 				\node(t4) at (12, 12.5) [trial] {};
- 				\node(t5) at (12, 9) [trial] {};
- 				\node(t6) at (12, 7.5) [trial] {};
- 				\node(t7) at (12, 6) [trial] {};
- 				\node(t8) at (12, 4.5) [trial] {};
- 				\node(stim1) at(22, 13)  [stimulus]  {\Smiley[3]};
- 				\node(stim2) at (22, 7) [stimulus] {\Sleepey[3]};
- 				\node at (12, 14.8) [condition, dashed,ultra thick] {};  
- 				\node at (12, 6.8) [condition, black,ultra thick] {};  
- 				\draw [->, shorten >= +3pt] (s1.east) -- (t1.west);
- 				\draw [->, shorten >= +3pt] (s2.east) -- (t1.west);
- 				\draw [->, shorten >= +3pt] (s3.east) -- (t1.west);
- 				\draw [->, shorten >= +3pt] (s1.east) -- (t2.west);
- 				\draw [->, shorten >= +3pt] (s2.east) -- (t2.west);
- 				\draw [->, shorten >= +3pt] (s3.east) -- (t2.west);
- 				\draw [->, shorten >= +3pt] (s1.east) -- (t3.west);
- 				\draw [->, shorten >= +3pt] (s2.east) -- (t3.west);
- 				\draw [->, shorten >= +3pt] (s3.east) -- (t3.west);
- 				\draw [->, shorten >= +3pt] (s1.east) -- (t4.west);
- 				\draw [->, shorten >= +3pt] (s2.east) -- (t4.west);
- 				\draw [->, shorten >= +3pt] (s3.east) -- (t4.west);
- 				\draw [->, shorten >= +3pt] (s1.east) -- (t5.west);
- 				\draw [->, shorten >= +3pt] (s2.east) -- (t5.west);
- 				\draw [->, shorten >= +3pt] (s3.east) -- (t5.west);
- 				\draw [->, shorten >= +3pt] (s1.east) -- (t6.west);
- 				\draw [->, shorten >= +3pt] (s2.east) -- (t6.west);
- 				\draw [->, shorten >= +3pt] (s3.east) -- (t6.west);
- 				\draw [->, shorten >= +3pt] (s1.east) -- (t7.west);
- 				\draw [->, shorten >= +3pt] (s2.east) -- (t7.west);
- 				\draw [->, shorten >= +3pt] (s3.east) -- (t7.west);
- 				\draw [->, shorten >= +3pt] (s1.east) -- (t8.west);
- 				\draw [->, shorten >= +3pt] (s2.east) -- (t8.west);
- 				\draw [->, shorten >= +3pt] (s3.east) -- (t8.west);
- 				\draw [<-, shorten <= +3pt] (t1.east)  -- (stim1.west); 
- 				\draw [<-, shorten <= +3pt] (t2.east)  -- (stim2.west); 
- 	  			\draw [<-, shorten <= +3pt] (t3.east)  -- (stim1.west); 
- 	 			\draw [<-, shorten <= +3pt] (t4.east)  -- (stim2.west); 
- 	  			\draw [<-, shorten <= +3pt] (t5.east)  -- (stim1.west); 
- 	 \draw [<-, shorten <= +3pt] (t6.east)  -- (stim2.west); 
- 	  	\draw [<-, shorten <= +3pt] (t7.east)  -- (stim1.west); 
- 	 \draw [<-, shorten <= +3pt] (t8.east)  -- (stim2.west); 
- 			\end{tikzpicture}
-}
-
-```
-
-
-:::: {.columns}
-
-::: {.column width="50%"}
-\centering
-
-\textcolor{latenti}{Sample-level differences}:
-
-Compatible and incompatible can be defined *a priori*
-
-(SNARC effect)
-
-:::
-
-::: {.column width="50%"}
-
-\centering
-
-\textcolor{manifeste}{Individual differences}:
-
-Compatible and incompatible are defined within each respondent
-
-(Implicit Association Test)
-
-:::
-
-::::
-
 # The proposed workaround
 
 ## Statistics meets  Psychomterics
@@ -364,16 +331,10 @@ Compatible and incompatible are defined within each respondent
 
 \footnotesize
 
-$P(x_{ps} = 1) = \dfrac{\exp(\theta_p - b_z)}{1+ \exp(\theta_p - b_z)}$
+$P(x_{ps} = 1) = \dfrac{\exp(\theta_p - b_s)}{1+ \exp(\theta_p - b_s)}$
 :::
 
-::: {.callout-note}
-## Log-normal
 
-\footnotesize
-
-$E(t_{ps}| \tau_p, \delta_s) = \delta_s - \tau_p + \varepsilon$
-:::
 :::
 
 :::{.column width="50%"}
@@ -388,19 +349,35 @@ $E(t_{ps}| \tau_p, \delta_s) = \delta_s - \tau_p + \varepsilon$
 $P(x_{ps} = 1) = \displaystyle \frac{\exp(\theta_p \, + \, b_s)}{1 + \exp(\theta_p \, + \, b_s)}$
 
 :::
-
-::: {.callout-important}
-## LM (identity function)
-
-$E(t_{ps}| \tau_p, \delta_s) = \delta_s + \tau_p + \varepsilon$
-:::
-
 :::
 
 ::::
 
+. . . 
 
+::::{.columns}
 
+:::{.column width="50%"}
+::: {.callout-note}
+## Log-normal
+
+\footnotesize
+
+$E(t_{ps}) = \delta_s - \tau_p$
+:::
+:::
+
+:::{.column width="50%"}
+::: {.callout-important}
+## LM (identity function)
+
+\footnotesize
+
+$E(t_{ps}) = \delta_s + \tau_p + \varepsilon$
+:::
+:::
+
+::::
 
 
 
@@ -445,15 +422,15 @@ $\Gamma$: Parameters estimated for the random factors in the model (variances an
 
 Model 1
 
-$$y = \beta_c X_c + \alpha_p[i] + \alpha_s[i]$$
+$$y = \beta_c X_c + \alpha_{p[i]} + \alpha_{s[i]}$$
 
 Model 2
 
-$$y = \beta_c X_c + \alpha_p[i] + \beta_s[i]c_i$$
+$$y = \beta_c X_c + \alpha_{p[i]} + \beta_{s[i]}c_i$$
 
 Model 3
 
-$$y = \beta_c X_c + \beta_p[i]c_i + \alpha_s[i]$$
+$$y = \beta_c X_c + \beta_{p[i]}c_i + \alpha_{s[i]}$$
 
 :::
 :::
