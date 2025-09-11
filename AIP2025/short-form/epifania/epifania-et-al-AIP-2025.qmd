@@ -10,7 +10,7 @@ format:
     transition: none
     transition-speed: slow
     background-transition: fade
-    slide-number: true
+    slide-number: c/t
     show-slide-number: print
     self-contained: true
 # background-opacity: "0.45"
@@ -626,7 +626,7 @@ The order of the items selected by Léon cannot be randomized
 . . . 
 
 
-### {footer="false"}
+## {footer="false"}
 
 
 
