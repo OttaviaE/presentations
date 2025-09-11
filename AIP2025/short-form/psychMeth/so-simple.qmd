@@ -383,7 +383,7 @@ $E(t_{ps}) = \delta_s + \tau_p + \varepsilon$
 
 
 
-# Random Factors and Effects
+## Random Factors and Effects
 
 ###
 
