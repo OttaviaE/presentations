@@ -1,0 +1,236 @@
+---
+title: "Development of Short Test Forms within Item Response Theory: The shortIRT Package"
+author: "**Livio Finos**$^{1,2}$, Ottavia M. Epifania$^{2, 3}$, Pasquale Anselmi$^{1}$, Egidio Robusto$^{1}$"
+institute: "$^1$ University of Padova, Padova $^2$ Psicostat, Padova $^3$  University of Trento, Rovereto"
+format: 
+  revealjs: 
+    theme: mytheme.scss
+    logo: "www/psicostat.jpg"
+    footer: "Psychoco 2026 - Padova"
+    transition: none
+    transition-speed: slow
+    background-transition: fade
+    slide-number: c/t
+    show-slide-number: print
+    self-contained: true
+# background-opacity: "0.45"
+#    data-background-size: 400px, cover
+#    data-background-position: 50% 10%, center
+# server: shiny
+editor_options: 
+  chunk_output_type: console
+---
+
+
+```{css include = FALSE}
+.reveal .slide-logo {
+  height: 100px !important;
+  width: 100px !important;
+  max-width: unset !important;
+  max-height: unset !important;
+}
+.title-hex{
+  height: 10px;
+  align: right;
+  float: right;
+}
+.h3 {
+text-align: center;
+}
+```
+
+
+
+```{r, setup, include=FALSE}
+library(knitr)
+library(shiny)
+library(ggplot2)
+library(tidyverse)
+library(emoji)
+library(wesanderson)
+hexes <- function(x) {
+  x <- rev(sort(x))
+  markup <- function(img) glue::glue('<img width="10%" height="10%" src="www/{img}.jpg" class="title-hex">')
+  res <- purrr::map_chr(x, markup)
+  paste0(res, collapse = "")
+}
+IRT <- function(theta, a = 1, b = 0, c = 0,e = 1) {
+  y <- c + (e - c) * exp(a * (theta - b)) / (1 + exp(a * (theta - b)))
+  return(y)
+}
+# calcola l'IIF per un item specifico
+  i_info <- function(b, a=1,c=0, e= 1,  theta = seq(-5,5,length.out=1000)){
+      P = IRT(theta, b = b, a = a, e = e, c=c)
+      Q = 1 - P 
+      # Ii = (a^2)*(Q/P)*((P-c)/(e-c))^2
+      # Ii = (a^2)*(Q*P/e^2)
+      num = (a^2)*((P-c)^2)*((e-P)^2)
+      den = ((e-c)^2)*P*Q
+      Ii = num/den
+      return(Ii)
+    }
+    
+    item_info <- function(ipar, 
+                          theta = seq(-5,5,length.out=1000)){
+      item <- NULL
+      for(i in 1:nrow(ipar)){
+        item[[i]] <- i_info(b = ipar[i, "b"],a = ipar[i, "a"], c = ipar[i, "c"], e = ipar[i, "e"], theta = theta)
+      }
+      item = data.frame(do.call("cbind", item))
+      colnames(item) = rownames(ipar)
+      return(item)
+    }
+set.seed(999)
+
+
+# load("H:/Il mio Drive/frank-unitn/sim-psychometrika.RData")
+```
+
+
+# Item Response Theory
+
+## Item Response Function
+
+According to the 4-Parameter Logistic Model: 
+
+$$P(x_{pi}=1|\theta_p, b_i, a_i, c_i, e_i) = c_i + (e_i-c_i)\dfrac{\exp[a_i(\theta_p - b_i)]}{1 + \exp[a_i(\theta_p - b_i)]}$$
+
+
+## Information Functions
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+$$	\text{IIF}_{i}(\theta) = \dfrac{a_i^2[P(\theta)-c_i]^2[d_i - P(\theta)]^2}{(d_{i}-c_i)^2 P(\theta)Q(\theta)}$$
+
+:::
+
+:::{.column width="50%"}
+
+$$TIF = \sum_{i = 1}^{|B|} IIF_i$$ <font size="4"> ($B$: Set of items in a test ($|X|$ cardinality of set $X$)) </font>
+
+:::
+::::
+
+# Development of short test forms (STFs)
+
+## Brevissimi accenni ad ata (?)
+
+# Some proposed alternatives 
+
+## Benchmark Procedure 
+
+:::: {.columns}
+
+:::{.column width=40%}
+Create a short test form composed of $N$ items from an item bank $B$ $\rightarrow$  Select the $N$ items with the highest *IIF*s: 
+	
+
+The *IIF*s of the items of item bank are sorted in decreasing order: 
+		
+	
+$$\mathit{iif} = (\displaystyle \max_{1 < i < B} IIF_i, \ldots \displaystyle, \min_{1 < i < B} IIF_i) $$
+
+Items with IIFs from 1 to $N$, $N < ||B||$, are selected to be included in the short test form
+
+:::
+
+:::{.column width=40%}
+
+
+:::{.r-stack}
+
+::: {.fragment .fade-in-then-out}
+Aim: STF with $N = 3$ items from a full-length test of 10 items: 
+
+```{r}
+library(knitr)
+library(kableExtra)
+
+# Create the data frame
+data <- data.frame(
+  item = 1:10,
+  b_i = c(-0.67, 0.50, -2.43, 2.12, 1.72, -2.28, 0.64, -2.51, -0.66, 0.72),
+  a_i = c(0.71, 1.19, 0.25, 1.98, 0.39, 1.62, 0.50, 1.68, 0.44, 0.33),
+  IIF_i = c(0.08, 0.15, 0.01, 0.24, 0.03, 0.19, 0.05, 0.19, 0.04, 0.02)
+)
+
+# Generate the table with kable
+kable(data, "html", digits = 2,  col.names = c("item", "\\( b_i \\)", "\\( a_i \\)", "\\( \\text{IIF}_i \\)"))  %>%
+  kable_styling(full_width = F, font_size = 24) %>%
+  row_spec(0, bold = TRUE) %>% 
+      row_spec(0, extra_css = "border-top: 1px solid;") %>%
+      row_spec(0, extra_css = "border-bottom: 1px solid;") %>%
+  row_spec(1, extra_css = "border-top: 1px solid;") %>%
+    row_spec(10, extra_css = "border-bottom: 1px solid;") 
+```
+:::
+
+
+::: {.fragment .fade-in-then-out}
+Aim: STF with $N = 3$ items from a full-length test of 10 items: 
+
+```{r}
+kable(data[order(data$IIF_i, decreasing = T),], "html", digits = 2,   booktabs=TRUE, 
+      row.names = FALSE,
+      col.names = c("item", "\\( b_i \\)", "\\( a_i \\)", "\\( \\text{IIF}_i \\)"))  %>%
+  kable_styling(full_width = F, font_size = 24) %>%
+  row_spec(0, bold = TRUE) %>% 
+    row_spec(0, extra_css = "border-top: 1px solid;") %>%
+      row_spec(0, extra_css = "border-bottom: 1px solid;") %>%
+  row_spec(1, extra_css = "border-top: 1px solid;") %>%
+    row_spec(10, extra_css = "border-bottom: 1px solid;") 
+```
+:::
+
+
+::: {.fragment .fade-in-then-out}
+
+Aim: STF with $N = 3$ items from a full-length test of 10 items: 
+
+```{r}
+kable(data[order(data$IIF_i, decreasing = T),], "html", digits = 2,   row.names = FALSE,
+      booktabs = TRUE, 
+      col.names = c("item", "\\( b_i \\)", "\\( a_i \\)", "\\( \\text{IIF}_i \\)")) %>%
+  kable_styling(full_width = F, font_size = 24) %>%
+  row_spec(0, bold = TRUE) %>%
+ row_spec(0, extra_css = "border-top: 1px solid;") %>%
+      row_spec(0, extra_css = "border-bottom: 1px solid;") %>%
+  row_spec(1, extra_css = "border-top: 1px solid;") %>%
+    row_spec(10, extra_css = "border-bottom: 1px solid;")  %>%
+    row_spec(c(1, 2, 3), background = "#DB7C26")
+```
+:::
+
+:::
+:::
+
+::::
+## $\theta$-target procedure 
+
+:::: {.columns}
+
+:::{.column width=40%}
+
+:::
+
+:::{.column width=60%}
+
+:::
+
+::::
+
+
+# The `shortIRT` package
+
+## 
+
+General package structure, available on CRAN 
+
+Methods for S3 classes 
+
+## `bench()`
+
+## `theta_target()`
+

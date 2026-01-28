@@ -1,0 +1,28 @@
+/*-- scss:defaults --*/
+
+
+
+// colors
+$body-bg: 		#fff4df !default;
+$body-color: #000 !default;
+$link-color: #005b96 !default;
+$selection-bg: #26351c !default;
+$presentation-font-size-root:	30px;
+
+// headings
+$presentation-heading-color: #fb8500 !default;
+$presentation-h1-font-size: 1.8em;
+$presentation-h2-font-size: 1.4em;
+$presentation-h3-font-size: 1.2em;
+
+
+$callout-style-font-size: .5em;
+$callout-style-font-weight: 400;
+
+$slide-logo-size: 200px;
+
+/*-- scss:rules --*/
+
+.reveal a {
+  line-height: 1.3em;
+}
