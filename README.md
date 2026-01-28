@@ -8,6 +8,11 @@ You can also find my (fairly) updated [CV](cv/Epifania-CV - Copy.pdf) and my [Ph
 
 I am a proud member of the Core Team of [Psicostat](https://psicostat.dpss.psy.unipd.it/) and you should definitely check it out :)
 
+### 2026
+
+Psychoco @ Padova: 
+  - The shortIRT package [slides](psychoco2026/psychoco-2026.html)
+
 ### 2025
 
 AIP 2025: 
