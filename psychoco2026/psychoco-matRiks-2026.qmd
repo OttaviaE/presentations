@@ -1,0 +1,48 @@
+---
+title: "Automatic Generation of Rule-Based Raven-Like Stimuli: The mat`R`iks Package"
+author: "**Ottavia Epifania**, A. Brancaccio, P. Anselmi, D. de Chiusole"
+institute: "$^1$ University of Padova, Padova $^2$ Psicostat, Padova $^3$  University of Trento, Rovereto"
+format: 
+  revealjs: 
+    theme: matrikstheme.scss
+    logo: "www/psicostat.jpg"
+    footer: "Psychoco 2026 - Padova"
+    transition: none
+    transition-speed: slow
+    background-transition: fade
+    slide-number: c/t
+    show-slide-number: print
+    self-contained: true
+# background-opacity: "0.45"
+#    data-background-size: 400px, cover
+#    data-background-position: 50% 10%, center
+# server: shiny
+editor_options: 
+  chunk_output_type: console
+execute: 
+  echo: true
+---
+
+# Raven-like matrices
+
+## An example 
+
+# Generative rules 
+
+# Response options 
+
+# The mat`R`iks package
+
+## 
+
+It's on CRAN! 
+
+```{r}
+#| eval: false
+
+install.packages("matRiks")
+library(matRiks)
+```
+
+<embed src="matRiks.pdf#page=1"
+       width="100%" height="800px">
