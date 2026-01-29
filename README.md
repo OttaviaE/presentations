@@ -12,6 +12,7 @@ I am a proud member of the Core Team of [Psicostat](https://psicostat.dpss.psy.u
 
 Psychoco @ Padova: 
   - The shortIRT package [slides](psychoco2026/psychoco-2026.html)
+  - The matRiks package [slides](psychoco2026/psychoco-matRiks-2026.html)
 
 ### 2025
 
