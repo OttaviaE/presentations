@@ -13,12 +13,10 @@ format:
     slide-number: c/t
     show-slide-number: print
     self-contained: true
-# background-opacity: "0.45"
-#    data-background-size: 400px, cover
-#    data-background-position: 50% 10%, center
 # server: shiny
 editor_options: 
   chunk_output_type: console
+code-annotations: hover
 ---
 
 
@@ -47,6 +45,7 @@ library(shiny)
 library(ggplot2)
 library(tidyverse)
 library(emoji)
+library(shortIRT)
 library(wesanderson)
 hexes <- function(x) {
   x <- rev(sort(x))
@@ -87,13 +86,209 @@ set.seed(999)
 ```
 
 
+# Short test forms 
+
+## 
+
+## Short Test Forms -- Why?
+
+<br>
+
+Many items $\rightarrow$ good measurement precision, great reliability and so on
+	
+::: {.r-stack}
+Not always!
+:::
+
+. . .
+
+<br>
+
+People might get tired and frustrated 
+	 
+::: {.callout-tip}
+## IRT models for the win
+		
+Being focused on the item information and on the ability of each item to measure different levels of the latent trait, IRT models provide an ideal framework for developing STF (and not torturing people)	
+:::
+
+. . . 
+
+Different approaches: Automated test assembly procedures
+
 # Item Response Theory
 
 ## Item Response Function
 
 According to the 4-Parameter Logistic Model: 
 
-$$P(x_{pi}=1|\theta_p, b_i, a_i, c_i, e_i) = c_i + (e_i-c_i)\dfrac{\exp[a_i(\theta_p - b_i)]}{1 + \exp[a_i(\theta_p - b_i)]}$$
+$$P(x_{pi}=1|\theta_p, b_i, a_i, c_i, e_i) = P(\theta) = c_i + (e_i-c_i)\dfrac{\exp[a_i(\theta_p - b_i)]}{1 + \exp[a_i(\theta_p - b_i)]}$$
+```{r}
+#| echo: false
+#| column: screen-inset-shaded
+#| layout-ncol: 2
+#| warning: false
+#| fig-cap: "Item Characteristics Curves (ICCs)"
+#| fig-subcap: 
+#|   - "$b_1 = b_2 = 0$,  $a_1 = a_2 = 1.2$"
+#|   - "$c_3 = c_4 = 0$, $e_3 = e_4 = 1$"
+library(tidyverse)
+library(RColorBrewer)
+myasy = brewer.pal(8, "Paired")[1:2]
+myitem = brewer.pal(8, "Paired")[7:8]
+theta = seq(-3,3, length.out=1000)
+item4 = data.frame(b = c(0,0), 
+                   a = c(1.2, 1.2),
+                   c = c(.10, .20), 
+                   e = c(.98, .95))
+myp4 = data.frame(mpirt(item4, theta))
+colnames(myp4) = c("Item1", "Item2")
+myp4$theta = theta
+p1 = IRT(0, b =0, a = 1.2, c=.10, e = .98)
+p2 = IRT(0, b =item4$b[2], a = item4$a[2], 
+         c=item4$c[2], e = item4$e[2])
+myp4 = pivot_longer(myp4, cols = !theta)
+item2 = data.frame(b = c(0,1), 
+                   a = c(1, 1.7),
+                   c = c(0, 0), 
+                   e = c(1, 1))
+myp2 = data.frame(mpirt(item2, theta))
+colnames(myp2) = c("Item3", "Item4")
+myp2$theta = theta
+p3 = IRT(0, b =0, a = 1, c=0, e = 1)
+p4 = IRT(0, b =item2$b[2], a = item2$a[2], 
+         c=item2$c[2], e = item2$e[2])
+myp2 = pivot_longer(myp2, cols = !theta)
+
+ggplot(myp4, 
+       aes(x = theta, y = value, col = name)) + geom_line(linewidth = 1.2) + 
+  scale_x_continuous(expand = c(0, 0)) +
+  scale_y_continuous(expand = c(0, 0))+ 
+    coord_cartesian(
+    xlim = c(-3, 3),
+    ylim = c(0, 1),
+    expand = FALSE
+  ) +theme_bw() + scale_color_manual(values = myasy) + geom_segment(aes(x=0, y = 0.0001, 
+                   xend = 0, 
+                   yend = p1), color = myasy[1], linewidth = 1.2, linetype = 3) + 
+  geom_segment(aes(x=-3,y = p1, 
+                   xend= 0, yend = p1 ),color = myasy[1], 
+               linewidth = 1.2, linetype = 3) +
+  geom_segment(aes(x=0, y = 0.0001, 
+                   xend = 0, 
+                   yend = p2), color = myasy[2], linewidth = 1.2, linetype = 3) + 
+  geom_segment(aes(x=-3,y = p2, 
+                   xend= 0, yend = p2 ),color = myasy[2], 
+               linewidth = 1.2, linetype = 3) + 
+ylab(expression(paste("P(", x[p][i],  "= 1|", theta[p], ", ", b[i], ", ", a[i], ", ", c[i], ", ", d[i],  ")"))) + 
+  xlab(expression(theta)) + 
+ annotate(
+  "text",
+  x = -1.5, y = 0.15,
+  label = as.character(expression(paste(c[1], " = ", 0.10))),
+  parse = TRUE,
+  hjust = 0,
+  size = 14,
+  color = myasy[1]
+) +
+   annotate(
+  "text",
+  x = .7, y = 0.90,
+  label = as.character(expression(paste(e[1], " = ", 0.98))),
+  parse = TRUE,
+  hjust = 0,
+  size = 14,
+  color = myasy[1]
+) + 
+   annotate(
+  "text",
+  x = -2.5, y = 0.35,
+  label = as.character(expression(paste(c[2], " = ", 0.20))),
+  parse = TRUE,
+  hjust = 0,
+  size = 14,
+  color = myasy[2]
+) +
+   annotate(
+  "text",
+  x = 1.5, y = 0.80,
+  label = as.character(expression(paste(e[2], " = ", 0.95))),
+  parse = TRUE,
+  hjust = 0,
+  size = 14,
+  color = myasy[2]
+) + 
+  theme(legend.position = "none", 
+        axis.text = element_text(size = 24), 
+        axis.title = element_text(size = 26))
+
+p3 = IRT(0, b =0, a = 1, c=0, e = 1)
+p4 = IRT(1, b =item2$b[2], a = item2$a[2], 
+         c=item2$c[2], e = item2$e[2])
+ggplot(myp2, 
+       aes(x = theta, y = value, col = name)) + geom_line(linewidth = 1.2) + 
+  scale_x_continuous(expand = c(0, 0)) +
+  scale_y_continuous(expand = c(0, 0))+ 
+    coord_cartesian(
+    xlim = c(-3, 3),
+    ylim = c(0, 1),
+    expand = FALSE
+  ) +theme_bw() + scale_color_manual(values = myitem) + geom_segment(aes(x=0, y = 0.0001, 
+                   xend = 0, 
+                   yend = p3), color = myitem[1], linewidth = 1.2, linetype = 3) + 
+  geom_segment(aes(x=-3,y = p3, 
+                   xend= 0, yend = p3 ),color = myitem[1], 
+               linewidth = 1.2, linetype = 3) +
+  geom_segment(aes(x=1, y = 0.0001, 
+                   xend = 1, 
+                   yend = p4), color = myitem[2], linewidth = 1.2, linetype = 3) + 
+  geom_segment(aes(x=-3,y = p4, 
+                   xend= 1, yend = p4 ),color = myitem[2], 
+               linewidth = 1.2, linetype = 3) + 
+ylab(expression(paste("P(", x[p][i],  "= 1|", theta[p], ", ", b[i], ", ", a[i], ", ", c[i], ", ", d[i],  ")"))) + 
+  xlab(expression(theta)) + 
+ annotate(
+  "text",
+  x = -1.5, y = 0.15,
+  label = as.character(expression(paste(b[3], " = ", 0))),
+  parse = TRUE,
+  hjust = 0,
+  size = 14,
+  color = myitem[1]
+) +
+   annotate(
+  "text",
+  x = -0.7, y = 0.50,
+  label = as.character(expression(paste(a[3], " = ", 1))),
+  parse = TRUE,
+  hjust = 0,
+  size = 14,
+  color = myitem[1]
+) + 
+   annotate(
+  "text",
+  x = 1.5, y = 0.15,
+  label = as.character(expression(paste(b[4], " = ", 1))),
+  parse = TRUE,
+  hjust = 0,
+  size = 14,
+  color = myitem[2]
+) +
+   annotate(
+  "text",
+  x = 1.5, y = 0.50,
+  label = as.character(expression(paste(a[4], " = ", 1.7))),
+  parse = TRUE,
+  hjust = 0,
+  size = 14,
+  color = myitem[2]
+) + 
+  theme(legend.position = "none", 
+        axis.text = element_text(size = 24), 
+        axis.title = element_text(size = 26))
+
+
+```
 
 
 ## Information Functions
@@ -102,41 +297,100 @@ $$P(x_{pi}=1|\theta_p, b_i, a_i, c_i, e_i) = c_i + (e_i-c_i)\dfrac{\exp[a_i(\the
 ::: {.column width="50%"}
 
 
-$$	\text{IIF}_{i}(\theta) = \dfrac{a_i^2[P(\theta)-c_i]^2[d_i - P(\theta)]^2}{(d_{i}-c_i)^2 P(\theta)Q(\theta)}$$
+$$	\text{IIF}_{i}(\theta) = \dfrac{a_i^2[P(\theta)-c_i]^2[e_i - P(\theta)]^2}{(e_{i}-c_i)^2 P(\theta)[1-P(\theta)]}$$
+
+<br>
+
+
+
+```{r}
+#| echo: false
+
+allitems = rbind(item2, item4)
+rownames(allitems) = paste("Item", 1:nrow(allitems))
+
+iifs = item_info(allitems, theta)
+iifs$theta = theta
+myiifs = pivot_longer(iifs, cols = !theta)
+ggplot(myiifs, 
+       aes(x = theta, y = value, color = name, group = name)) + geom_line(linewidth = 1.2) + theme_bw() +    scale_color_manual(values = c(myitem, myasy))+ geom_line(linewidth=1.2) + 
+  xlab(expression(theta)) + 
+  ylab(expression(paste(IIF[i], "(", theta, ")"))) +
+  theme(legend.position = c(.10, .8), 
+        legend.title = element_blank(), 
+        axis.title = element_text(size = 26), 
+        axis.text = element_text(size = 24), 
+        legend.text = element_text(size = 20)) + 
+  scale_x_continuous(expand = c(0, 0)) +
+  scale_y_continuous(expand = c(0, 0))+ 
+    coord_cartesian(
+    xlim = c(-3, 3),
+    ylim = c(0, 1.5),
+    expand = FALSE
+  ) 
+
+iifs = item_info(allitems, theta)
+mytif = data.frame(theta = theta, 
+                   name = "TIF", 
+                   value = rowSums(iifs) )
+
+myall = rbind(mytif, myiifs)
+
+```
+
 
 :::
 
 :::{.column width="50%"}
 
-$$TIF = \sum_{i = 1}^{|B|} IIF_i$$ <font size="4"> ($B$: Set of items in a test ($|X|$ cardinality of set $X$)) </font>
+$$TIF(\theta) = \sum_{i = 1}^{|B|} IIF_i(\theta)$$ <font size="4"> ($B$: Set of items in a test ($|X|$ cardinality of set $X$)) </font>
+
+
+```{r}
+#| echo: false
+ggplot(myall, 
+       aes(x = theta, y = value, color = name, linetype = name)) + 
+  geom_line(linewidth = 1.2) + scale_color_manual(values = c(rep("gray69", 4), "black")) + scale_linetype_manual(values = c(rep(3,4), 1)) +  scale_x_continuous(expand = c(0, 0)) +
+  scale_y_continuous(expand = c(0, 0))+ 
+    coord_cartesian(
+    xlim = c(-3, 3),
+    ylim = c(0, 1.5),
+    expand = FALSE
+  )  + 
+  xlab(expression(theta)) + 
+  ylab(expression(paste(TIF, "(", theta, ")"))) + 
+  theme_bw() + 
+  theme(legend.position = "none", 
+        axis.text = element_text(size = 24), 
+        axis.title = element_text(size = 26))
+
+```
+
 
 :::
 ::::
 
 # Development of short test forms (STFs)
 
-## Brevissimi accenni ad ata (?)
-
-# Some proposed alternatives 
-
 ## Benchmark Procedure 
 
 :::: {.columns}
 
-:::{.column width=40%}
+:::{.column width=50%}
+<font size="5">
 Create a short test form composed of $N$ items from an item bank $B$ $\rightarrow$  Select the $N$ items with the highest *IIF*s: 
 	
 
 The *IIF*s of the items of item bank are sorted in decreasing order: 
 		
 	
-$$\mathit{iif} = (\displaystyle \max_{1 < i < B} IIF_i, \ldots \displaystyle, \min_{1 < i < B} IIF_i) $$
+$$\mathit{iif} = (\displaystyle \max_{1 < i < B} IIF_i(\theta), \ldots \displaystyle, \min_{1 < i < B} IIF_i(\theta)) $$
 
 Items with IIFs from 1 to $N$, $N < ||B||$, are selected to be included in the short test form
-
+</font>
 :::
 
-:::{.column width=40%}
+:::{.column width=50%}
 
 
 :::{.r-stack}
@@ -148,16 +402,23 @@ Aim: STF with $N = 3$ items from a full-length test of 10 items:
 library(knitr)
 library(kableExtra)
 
+set.seed(666)
+n = 10
+item_par = data.frame(b = runif(n, -3,3), 
+                      a = runif(n, .7, 1.5), 
+                      c = runif(n, 0, .10), 
+                      e = 1)
+
 # Create the data frame
-data <- data.frame(
-  item = 1:10,
-  b_i = c(-0.67, 0.50, -2.43, 2.12, 1.72, -2.28, 0.64, -2.51, -0.66, 0.72),
-  a_i = c(0.71, 1.19, 0.25, 1.98, 0.39, 1.62, 0.50, 1.68, 0.44, 0.33),
-  IIF_i = c(0.08, 0.15, 0.01, 0.24, 0.03, 0.19, 0.05, 0.19, 0.04, 0.02)
-)
+data = apply(item_par,2, round, digits = 2 )
+data = data.frame(cbind(1:10), data)
+colnames(data)[1] = "Item"
+
+myiif = item_info(item_par)
+data$iif = round(apply(myiif,2, max), 2)
 
 # Generate the table with kable
-kable(data, "html", digits = 2,  col.names = c("item", "\\( b_i \\)", "\\( a_i \\)", "\\( \\text{IIF}_i \\)"))  %>%
+kable(data, "html", digits = 2,  col.names = c("Item", "\\( b_i \\)", "\\( a_i \\)", "\\( c_i \\)", "\\( e_i \\)", "\\( \\text{IIF}_i(\\theta) \\)"))  %>%
   kable_styling(full_width = F, font_size = 24) %>%
   row_spec(0, bold = TRUE) %>% 
       row_spec(0, extra_css = "border-top: 1px solid;") %>%
@@ -172,9 +433,8 @@ kable(data, "html", digits = 2,  col.names = c("item", "\\( b_i \\)", "\\( a_i \
 Aim: STF with $N = 3$ items from a full-length test of 10 items: 
 
 ```{r}
-kable(data[order(data$IIF_i, decreasing = T),], "html", digits = 2,   booktabs=TRUE, 
-      row.names = FALSE,
-      col.names = c("item", "\\( b_i \\)", "\\( a_i \\)", "\\( \\text{IIF}_i \\)"))  %>%
+x = data[order(data$iif, decreasing = TRUE), ]
+kable(x, "html", digits = 2, row.names = FALSE,  col.names = c("Item", "\\( b_i \\)", "\\( a_i \\)", "\\( c_i \\)", "\\( e_i \\)", "\\( \\text{IIF}_i(\\theta) \\)")) %>%
   kable_styling(full_width = F, font_size = 24) %>%
   row_spec(0, bold = TRUE) %>% 
     row_spec(0, extra_css = "border-top: 1px solid;") %>%
@@ -190,16 +450,14 @@ kable(data[order(data$IIF_i, decreasing = T),], "html", digits = 2,   booktabs=T
 Aim: STF with $N = 3$ items from a full-length test of 10 items: 
 
 ```{r}
-kable(data[order(data$IIF_i, decreasing = T),], "html", digits = 2,   row.names = FALSE,
-      booktabs = TRUE, 
-      col.names = c("item", "\\( b_i \\)", "\\( a_i \\)", "\\( \\text{IIF}_i \\)")) %>%
+kable(x, row.names = F, "html", digits = 2,  col.names = c("Item", "\\( b_i \\)", "\\( a_i \\)", "\\( c_i \\)", "\\( e_i \\)", "\\( \\text{IIF}_i(\\theta) \\)"))  %>%
   kable_styling(full_width = F, font_size = 24) %>%
   row_spec(0, bold = TRUE) %>%
  row_spec(0, extra_css = "border-top: 1px solid;") %>%
       row_spec(0, extra_css = "border-bottom: 1px solid;") %>%
   row_spec(1, extra_css = "border-top: 1px solid;") %>%
     row_spec(10, extra_css = "border-bottom: 1px solid;")  %>%
-    row_spec(c(1, 2, 3), background = "#DB7C26")
+    row_spec(c(1, 2, 3), background = "#F0B97A")
 ```
 :::
 
@@ -211,26 +469,496 @@ kable(data[order(data$IIF_i, decreasing = T),], "html", digits = 2,   row.names 
 
 :::: {.columns}
 
-:::{.column width=40%}
+:::{.column width=50%}
+<font size="4">
+$k = 0, \ldots, K$: Scalar denoting the iterations of the procedures ($K = N-1$)
 
+$S^k \subseteq \{1, \ldots, J\}$: Set of items selected to be included in the short test form up to iteration $k$
+
+$Q^k \subseteq \{1, \ldots, N\}$: Set of $\theta'$s satisfied up to iteration $k$;
+
+
+At $k=0$: $S^0 = \emptyset$, $Q^0 = \emptyset$
+
+The procedure cycles steps 1 to 3 until $k = K$:
+	
+
+1. Select $iif_{in}^k = \displaystyle  \max_{i \in B\setminus S^k, \, n  \in N \setminus Q^k} \mathbf{IIF}(i,n)$;
+2. Compute $S^{k+1} = S^k \cup \{i\}$ as the set of item selected at $k$; 
+3. Compute $Q^{k+1} = Q^k \cup \{n\}$ as the set of $\theta'$s satisfied at $k$; 
+	
+At iteration $K$, $|Q^{K + 1}| = N$ and   $|S^{K + 1}| = N$ 
+</font>
 :::
 
-:::{.column width=60%}
+:::{.column width=50%}
+<font size="4">
+```{r}
+library(knitr)
+library(kableExtra)
+
+# Crea il data frame con 8 colonne
+data <- data.frame(
+  item = c("", "1", "2", "\\(\\vdots\\)", "\\(i\\)", "\\(\\vdots\\)", "\\(B\\)"),
+  col1 = c("", "\\(\\mathit{iif}_{11}\\)", "\\(\\mathit{iif}_{21}\\)", "", "\\(\\ldots\\)", "", ""),
+  col2 = c("", "\\(iif_{12}\\)", "\\(\\mathit{iif}_{22}\\)", "", "\\(\\ldots\\)", "", ""),
+  col3 = c("", "", "", "", "\\(\\ldots\\)", "", ""),
+  col4 = c("", "\\(\\vdots\\)", "\\(\\vdots\\)", "\\(\\vdots\\)", "\\(\\mathit{iif}_{in}\\)", "\\(\\vdots\\)", "\\(\\vdots\\)"),
+  col5 = c("", "", "", "", "\\(\\ldots\\)", "", ""),
+  col6 = c("", "", "", "", "\\(\\ldots\\)", "", ""),
+  col7 = c("", "", "", "", "\\(\\ldots\\)", "", "\\(\\mathit{iif}_{BN}\\)"),
+  stringsAsFactors = FALSE
+)
+
+# Genera la tabella con 8 colonne e 8 colnames
+kable(data, "html", escape = F, 
+      col.names = c("", "1", "2", "\\(\\ldots\\)", "n", "\\(\\ldots\\)", "", "N")) %>%
+  kable_styling(full_width = F, font_size = 24) %>%
+  add_header_above(c(" " = 2, "\\(\\theta'\\)" = 6)) %>%
+  row_spec(0, extra_css = "border-bottom: 1px solid;") %>%
+  row_spec(3, extra_css = "border-top: 1px solid;") %>%
+  row_spec(7, extra_css = "border-top: 1px solid;") %>%
+  row_spec(7, extra_css = "border-bottom: 1px solid;") %>%
+  column_spec(1:8, border_left = TRUE, border_right = TRUE)
+```
+</font>
 
 :::
 
 ::::
 
 
+## 
+
+
+
+```{r}
+#| echo: false
+library(shortIRT)
+
+targets = c(-2, 0, 2)
+
+stf = theta_target(targets, item_par)
+start = t(item_info(item_par, targets))
+start=apply(start,2, round, digits=2)
+ipar = apply(item_par, 2, round, digits =2)
+ipar = cbind(1:10, ipar)
+colnames(ipar)[1] = "Item"
+```
+
+
+:::: {.columns}
+
+:::{.column width=40%}
+<font size = "5">
+Aim: Develop a STF of $N=3$ items from $B$ with $\theta' = (-2,0,2)$: 
+
+```{r}
+#| echo: false
+
+kable(ipar, algn ="cccc", 
+      caption = "Item bank B") %>%
+  kable_styling(full_width = F)
+
+```
+</font>
+:::
+
+:::{.column witdh=60%}
+:::{.r-stack}
+
+:::{.fragment .fade-in-then-out}
+```{r}
+#| echo: false
+
+dh = start
+rownames(dh) = 1:10
+highlight_cells <- c(1:10) 
+kable(dh, format = "html", escape = F, align = "ccc", caption = "IIF Matrix \\(k = 0\\)") %>%
+  kable_styling(full_width = F, font_size = 20) %>%
+  column_spec(1:3, border_left = TRUE, border_right = TRUE) %>%
+  row_spec(highlight_cells, extra_css = "background-color: #F0B97A;") %>% 
+  row_spec(1, extra_css = "border-top: 1px solid;") %>% 
+    row_spec(10, extra_css = "border-bottom: 1px solid;")
+```
+
+<font size="4">
+	
+$S^0 = \emptyset$
+
+$Q^0 = \emptyset$
+
+</font>
+:::
+
+
+:::{.fragment .fade-in-then-out}
+
+```{r}
+mymax = which(dh == max(dh), arr.ind = T)
+dh[mymax[1], mymax[2]] = cell_spec(dh[mymax[1], mymax[2]], "html", bold = T)
+kable(dh, format = "html", escape = F, align = "ccc", caption = "IIF Matrix \\(k = 0\\)") %>%
+  kable_styling(full_width = F, font_size = 20) %>%
+  column_spec(1:3, border_left = TRUE, border_right = TRUE) %>%
+  row_spec(highlight_cells, extra_css = "background-color: #F0B97A;") %>% 
+  row_spec(1, extra_css = "border-top: 1px solid;") %>% 
+    row_spec(10, extra_css = "border-bottom: 1px solid;")
+disph = start
+dh = start
+dh[mymax[1], ] = NA
+dh[, mymax[2]] = NA
+oldmax = mymax
+```
+
+<font size="4">
+
+$\mathit{iif}_{\text{max}}^0=\displaystyle \max_{j \in J\setminus S^0, \, n  \in N \setminus Q^0} \mathbf{IIF}= \mathbf{IIF}(8,2) = 0.44$
+	
+$S^{1} = S^0 \cup \{8\}$ = \{8\}
+
+$Q^{1} = Q^0 \cup \{3\}$ = \{2\} 
+
+</font>
+
+
+:::
+
+:::{.fragment .fade-in-then-out}
+
+```{r}
+mymax = which(dh == max(dh, na.rm=T), arr.ind = T)
+disph[mymax[1], mymax[2]] = cell_spec(dh[mymax[1], mymax[2]], "html", bold = T)
+highlight_cells = highlight_cells[-oldmax[1]]
+kable(disph, format = "html", escape = F, align = "ccc", caption = "IIF Matrix \\(k = 1\\)") %>%
+  kable_styling(full_width = F, font_size = 20) %>%
+  column_spec(1:3, border_left = TRUE, border_right = TRUE) %>%
+  column_spec(oldmax[2], background = "white") %>% 
+  row_spec(highlight_cells, extra_css = "background-color: #F0B97A;") %>% 
+  row_spec(1, extra_css = "border-top: 1px solid;") %>% 
+    row_spec(10, extra_css = "border-bottom: 1px solid;")
+disph = start
+dh = start
+dh[c(mymax[1], oldmax[1]), ] = NA
+dh[, c(mymax[2], oldmax[2])] = NA
+oldmax = mymax
+```
+
+
+<font size="4">
+
+$\mathit{iif}_{max}^1=\displaystyle \max_{j \in J\setminus S^1, \, n  \in N \setminus Q^1}  \mathbf{IIF} = \mathbf{IIF}(6,3)= 0.38$
+
+$S^{2} = S^1 \cup \{6\} = \{8, 6\}$
+
+$Q^{2} = Q^1 \cup \{3\} = \{2, 3\}$
+
+</font>
+
+:::
+
+:::{.fragment .fade-in-then-out}
+
+```{r}
+mymax = which(dh == max(dh, na.rm=T), arr.ind = T)
+disph[mymax[1], mymax[3]] = cell_spec(dh[mymax[1], mymax[3]], "html", bold = T)
+highlight_cells = highlight_cells[-oldmax[1]]
+kable(disph, format = "html", escape = F, align = "ccc", caption = "IIF Matrix \\(k = 2\\)") %>%
+  kable_styling(full_width = F, font_size = 20) %>%
+  column_spec(1:3, border_left = TRUE, border_right = TRUE) %>%
+  column_spec(c(2,oldmax[2]), background = "white") %>% 
+  row_spec(highlight_cells, extra_css = "background-color: #F0B97A;") %>% 
+  row_spec(1, extra_css = "border-top: 1px solid;") %>% 
+    row_spec(10, extra_css = "border-bottom: 1px solid;")
+disph = start
+```
+
+<font size="4">
+$\mathit{iif}_{max}^2=\displaystyle \max_{j \in J\setminus S^1, \, n  \in N \setminus Q^1}  \mathbf{IIF} = \mathbf{IIF}(9,1)= 0.21$
+
+$S^{3} = S^2 \cup \{9\} = \{8, 6, 9\}$
+
+$Q^{3} = Q^2 \cup \{1\} = \{2,3, 1\}$
+
+</font>
+
+:::
+
+
+:::{.fragment .fade-in-then-out}
+
+```{r}
+disph[c(8), c(2)] = cell_spec(disph[c(8), c(2)], "html", bold = T)
+disph[c(6), c(3)] = cell_spec(disph[c(6), c(3)], "html", bold = T)
+disph[c(9), c(1)] = cell_spec(disph[c(9), c(1)], "html", bold = T)
+
+
+kable(disph, format = "html", escape = F, align = "ccc", caption = "End") %>%
+  kable_styling(full_width = F, font_size = 20) %>%
+  column_spec(1:3, border_left = TRUE, border_right = TRUE) %>%
+  column_spec(1:3, background = "white") %>% 
+  row_spec(1, extra_css = "border-top: 1px solid;") %>% 
+    row_spec(10, extra_css = "border-bottom: 1px solid;")
+```
+
+<font size="4">			
+$|S^3| = 3$, $|Q^3| = 3$, $K = 2$ $\rightarrow$ `end`
+</font>
+
+:::
+:::
+:::
+
+::::
+
+
+
+
 # The `shortIRT` package
+
 
 ## 
 
-General package structure, available on CRAN 
+It's on CRAN! 
 
-Methods for S3 classes 
+```{r}
+#| eval: false
+#| echo: true
+install.packages("shortIRT")
+library(shortIRT)
+```
 
-## `bench()`
+
+<br>
+
+<embed src="shortIRT.pdf#page=1"
+       width="100%" height="800px">
+
+
+## `bench()` {auto-animate="true"}
+
+    bench(item_par, iifs = NULL, theta = NULL, num_item = NULL)
+
+. . . 
+
+```{r}
+#| echo: true
+
+set.seed(1312)
+n = 10 
+item_par = data.frame(b = runif(n, -3,3),          # <1>
+                      a = runif(n, .7, 1.5),       # <1>
+                      c = runif(n, 0, .10),        # <1>
+                      e = 1)                       # <1>
+theta = rnorm(1000) # <2> 
+stf = bench(item_par, theta = theta, num_item = 3)# <3>
+```
+
+1. Define the item parameters in the item bank
+2. Random values for the latent trait 
+3. Generate the STF with the benchmark procedure
+
+## `bench()` 
+
+    bench(item_par, iifs = NULL, theta = NULL, num_item = NULL)
+
+
+```{r}
+#| echo: true
+#| eval: false
+#| results: false
+set.seed(1312)
+n = 10 
+item_par = data.frame(b = runif(n, -3,3),          # <1>
+                      a = runif(n, .7, 1.5),       # <1>
+                      c = runif(n, 0, .10),        # <1>
+                      e = 1)                       # <1>
+theta = rnorm(1000) # <2> 
+stf = bench(item_par, theta = theta, num_item = 3)# <3>
+summary(stf)         # <4>
+plot(stf) + theme_bw() # <5>
+```
+
+1. Define the item parameters in the item bank
+2. Random values for the latent trait 
+3. Generate the STF with the benchmark procedure
+4. Summary of the obtained STF
+5. Plot the resulting TIF (as compared to the TIF obatined from $B$)
+
+. . . 
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+#| echo: false
+set.seed(1312)
+n = 10 
+item_par = data.frame(b = runif(n, -3,3),          
+                      a = runif(n, .7, 1.5),       
+                      c = runif(n, 0, .10),        
+                      e = 1)                       
+theta = rnorm(1000) 
+stf = bench(item_par, theta = theta, num_item = 3) 
+
+```
+
+
+```{r}
+#| echo: true
+summary(stf)         
+
+```
+
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| echo: true
+plot(stf)
+```
+
+
+:::
+
+::::
+
+
+## `define_targets()`
+
+    define_targets(theta, num_targets = NULL, method = c("equal", "clusters"))
+
+
+:::: {.columns}
+
+:::{.column width="50%"}
+
+```{r}
+#| echo: false
+
+x = data.frame(x = theta)
+x$dx = dnorm(x$x)
+myc = data.frame(define_targets(x$x, num_targets = 3, method = "clusters"))
+colnames(myc) = "centers"
+myc$height = .10
+mycenters  = data.frame(define_targets(x$x, 
+                          num_targets = 3, 
+                          method = "equal"))
+colnames(mycenters) = "centers"
+mycenters$height = .10
+
+ggplot(x, 
+       aes(x, y = dx)) + geom_line(linewidth = 1.2) + 
+  geom_point(data = myc, 
+             aes(x = centers, y = height, color = rownames(myc), 
+                 shape = rownames(myc)), 
+             size = 4) + 
+  theme_bw()+ 
+  xlab(expression(theta)) + 
+  ylab("Density") + 
+  theme(legend.position = "none", 
+        axis.text = element_text(size=22), 
+        axis.title = element_text(size=24))
+
+```
+
+```{r}
+#| echo: true
+#| code-line-numbers: "|1|2|3|4"
+targetsC = define_targets(theta, 
+                          num_targets = 3, 
+                          method = "clusters")
+targetsC
+```
+
+
+:::
+
+
+:::{.column width="50%"}
+
+
+```{r}
+#| echo: false
+
+ggplot(x, 
+       aes(x, y = dx)) + geom_line(linewidth = 1.2) + 
+  geom_point(data = mycenters, 
+             aes(x = centers, y = height, color = rownames(mycenters), 
+                 shape = rownames(mycenters)), 
+             size = 4) + 
+  theme_bw()+ 
+  xlab(expression(theta)) + 
+  ylab("Density") + 
+  theme(legend.position = "none", 
+        axis.text = element_text(size=22), 
+        axis.title = element_text(size=24))
+```
+
+```{r}
+#| echo: true
+#| code-line-numbers: "|1|2|3|4"
+targetsE = define_targets(theta, 
+                          num_targets = 3, 
+                          method = "equal")
+targetsE
+```
+
+
+:::
+
+
+::::
+
 
 ## `theta_target()`
+
+    theta_target(targets, item_par)
+    
+:::: {.columns}
+
+:::{.column width=50%}
+```{r}
+#| echo: true
+
+stfC = theta_target(targetsC, item_par)
+summary(stfC)
+plot(stfC, show_both = F)
+```
+
+:::
+
+
+:::{.column width=50%}
+```{r}
+#| echo: true
+
+stfE = theta_target(targetsE, item_par)
+summary(stfE)
+plot(stfE, show_both = F)
+```
+
+:::
+
+::::
+
+
+## User defined targets
+
+```{r}
+#| fig-align: center
+targets = rep(2, 3)
+stf = theta_target(targets, item_par)
+summary(stf)
+plot(stf, show_targets = F, show_both = F)
+```
+
+
+# Final remarks 
+
+## 
+
+Boh funziona si possono dire tante cose ma non so cosa dire 
+
 
