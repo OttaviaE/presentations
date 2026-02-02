@@ -1,5 +1,5 @@
 ---
-title: "Development of Short Test Forms within Item Response Theory: The shortIRT Package"
+title: "Development of Short Test Forms within Item Response Theory: The `shortIRT` Package"
 author: "**Livio Finos**$^{1,2}$, Ottavia M. Epifania$^{2, 3}$, Pasquale Anselmi$^{1}$, Egidio Robusto$^{1}$"
 institute: "$^1$ University of Padova, Padova $^2$ Psicostat, Padova $^3$  University of Trento, Rovereto"
 format: 
@@ -418,7 +418,7 @@ myiif = item_info(item_par)
 data$iif = round(apply(myiif,2, max), 2)
 
 # Generate the table with kable
-kable(data, "html", digits = 2,  col.names = c("Item", "\\( b_i \\)", "\\( a_i \\)", "\\( c_i \\)", "\\( e_i \\)", "\\( \\text{IIF}_i(\\theta) \\)"))  %>%
+kable(data, "html", digits = 2,  col.names = c("Item", "\\( b_i \\)", "\\( a_i \\)", "\\( c_i \\)", "\\( e_i \\)", "\\( \\max \\text{IIF}_i(\\theta) \\)"))  %>%
   kable_styling(full_width = F, font_size = 24) %>%
   row_spec(0, bold = TRUE) %>% 
       row_spec(0, extra_css = "border-top: 1px solid;") %>%
@@ -434,7 +434,7 @@ Aim: STF with $N = 3$ items from a full-length test of 10 items:
 
 ```{r}
 x = data[order(data$iif, decreasing = TRUE), ]
-kable(x, "html", digits = 2, row.names = FALSE,  col.names = c("Item", "\\( b_i \\)", "\\( a_i \\)", "\\( c_i \\)", "\\( e_i \\)", "\\( \\text{IIF}_i(\\theta) \\)")) %>%
+kable(x, "html", digits = 2, row.names = FALSE,  col.names = c("Item", "\\( b_i \\)", "\\( a_i \\)", "\\( c_i \\)", "\\( e_i \\)", "\\( \\max \\text{IIF}_i(\\theta) \\)")) %>%
   kable_styling(full_width = F, font_size = 24) %>%
   row_spec(0, bold = TRUE) %>% 
     row_spec(0, extra_css = "border-top: 1px solid;") %>%
@@ -450,7 +450,7 @@ kable(x, "html", digits = 2, row.names = FALSE,  col.names = c("Item", "\\( b_i 
 Aim: STF with $N = 3$ items from a full-length test of 10 items: 
 
 ```{r}
-kable(x, row.names = F, "html", digits = 2,  col.names = c("Item", "\\( b_i \\)", "\\( a_i \\)", "\\( c_i \\)", "\\( e_i \\)", "\\( \\text{IIF}_i(\\theta) \\)"))  %>%
+kable(x, row.names = F, "html", digits = 2,  col.names = c("Item", "\\( b_i \\)", "\\( a_i \\)", "\\( c_i \\)", "\\( e_i \\)", "\\( \\max \\text{IIF}_i(\\theta) \\)"))  %>%
   kable_styling(full_width = F, font_size = 24) %>%
   row_spec(0, bold = TRUE) %>%
  row_spec(0, extra_css = "border-top: 1px solid;") %>%
@@ -465,6 +465,32 @@ kable(x, row.names = F, "html", digits = 2,  col.names = c("Item", "\\( b_i \\)"
 :::
 
 ::::
+
+
+## 
+
+:::{.callout-warning}
+
+## Warning!
+
+```{r}
+
+my = x[1:3, 2:5]
+myex = item_info(my, theta)
+mytifex = data.frame(theta = theta, tif = rowSums(myex))
+
+ggplot(mytifex, 
+       aes(x = theta, y = tif)) + geom_line(linewidth = 1.2) +
+  ylab(expression(paste("TIF(", theta, ")"))) + 
+  xlab(expression(theta)) + theme_bw() +
+  theme(axis.title = element_text(size = 24), 
+        axis.text = element_text(size = 22))
+
+```
+:::
+
+
+
 ## $\theta$-target procedure 
 
 :::: {.columns}
@@ -522,6 +548,20 @@ kable(data, "html", escape = F,
   column_spec(1:8, border_left = TRUE, border_right = TRUE)
 ```
 </font>
+
+:::{.callout-note}
+
+## $\theta$-target definition 
+
+- Intervals of different width defined on the latent trait 
+
+- Cut-off based tests 
+
+- $\ldots$
+
+
+
+:::
 
 :::
 
@@ -709,6 +749,28 @@ $|S^3| = 3$, $|Q^3| = 3$, $K = 2$ $\rightarrow$ `end`
 :::
 
 ::::
+:::
+
+## 
+
+::: {.callout-tip}
+
+```{r}
+
+myttarget = item_par[c(8,6,9),]
+myextt = item_info(myttarget, theta)
+mytifextt = data.frame(theta = theta, tif = rowSums(myextt))
+
+ggplot(mytifextt, 
+       aes(x = theta, y = tif)) + geom_line(linewidth = 1.2) +
+  ylab(expression(paste("TIF(", theta, ")"))) + 
+  xlab(expression(theta)) + theme_bw() +
+  theme(axis.title = element_text(size = 24), 
+        axis.text = element_text(size = 22))
+
+```
+
+:::
 
 
 
@@ -944,21 +1006,51 @@ plot(stfE, show_both = F)
 ::::
 
 
-## User defined targets
+## Cut-off based STFs
 
 ```{r}
+#| echo: true
 #| fig-align: center
-targets = rep(2, 3)
+targets = rep(2, 3) 
 stf = theta_target(targets, item_par)
 summary(stf)
 plot(stf, show_targets = F, show_both = F)
 ```
 
 
+## Additional functions
+
+| Function        | Description                                              |
+|-----------------|-----------------------------------------------------------|
+| `IRT()`         | Compute expected probability for a single item            |
+| `mpirt()`       | Compute expected probability for multiple items           |
+| `obsirt()`      | Simulate responses according to IRT probabilities         |
+| `irt_estimate()`| Estimate of theta                                         |
+| `item_info()`   | Item Information Functions (multiple items, IIFs)         |
+| `tif()`         | Test Information Function (TIF)                            |
+
+
+& the methods defined for the S3 classes
+
 # Final remarks 
 
 ## 
 
-Boh funziona si possono dire tante cose ma non so cosa dire 
+:::{.callout-note}
+## In summary
+
+The benchmark procedure highly relies on the quality of the items on the item, does not allow for any control on the latent trait levels for which the information needs to be maximized
+
+Still affected by the quality of the items in the item bank, but the $\theta$-target procedure "forces" the item selection to consdier the entire latent trait or to focus on specific levels
+
+:::
 
 
+:::{.callout-warning}
+## Drawbacks
+
+The number of $\theta$-targets defines the number of items in the STF: The higher the measurement granularity and the higher the number of $\theta$-targets, the higher the number of items included in the STF
+
+The quality of the item bank is crucial, regardless of the procedure
+
+:::
