@@ -13,6 +13,7 @@ format:
     slide-number: c/t
     show-slide-number: print
     self-contained: true
+    highlight-style: tango
 # background-opacity: "0.45"
 #    data-background-size: 400px, cover
 #    data-background-position: 50% 10%, center
@@ -20,16 +21,247 @@ format:
 editor_options: 
   chunk_output_type: console
 execute: 
-  echo: true
+  echo: false
+code-annotations: hover
 ---
+
+```{r}
+#| include: false
+
+library(matRiks)
+library(data.table)
+library(kableExtra)
+library(knitr)
+```
+
+```{css, include=FALSE}
+.center-cols {
+  text-align: center;
+}
+
+.center-cols img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+```
+
 
 # Raven-like matrices
 
 ## An example 
 
+:::{.r-stack}
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: 80%
+knitr::include_graphics("img/example.png")
+```
+
+:::{.fragment .fade-in-then-out}
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: 80%
+knitr::include_graphics("img/example01.png")
+```
+
+:::
+
+:::{.fragment .fade-in-then-out}
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: 80%
+knitr::include_graphics("img/example02.png")
+```
+
+:::
+
+:::{.fragment .fade-in-then-out}
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: 80%
+knitr::include_graphics("img/example03.png")
+```
+
+:::
+
+
+:::
+
+
+##
+
+:::{.r-stack}
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: 120%
+knitr::include_graphics("img/matrix00.png")
+```
+
+
+::: {.fragment .fade-in-then-out}
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: 120%
+knitr::include_graphics("img/matrix01.png")
+```
+
+:::
+
+
+::: {.fragment .fade-in-then-out}
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: 120%
+knitr::include_graphics("img/matrix02.png")
+```
+
+:::
+:::
+
 # Generative rules 
 
+## {.smaller}
+
+```{r}
+# library(knitr)
+# library(kableExtra)
+# 
+# rules_table <- data.frame(
+#   Category = c(
+#     rep("Visuospatial rules", 8),
+#     rep("Logical rules", 3)
+#   ),
+#   `Rule name` = c(
+#     "Movement",
+#     "Rotation",
+#     "Completeness",
+#     "Numeric progression",
+#     "Changes in shape",
+#     "Changes in shade",
+#     "Changes in size",
+#     "Changes in margins",
+#     "AND",
+#     "OR",
+#     "XOR"
+#   ),
+#   Definition = c(
+#     "With a steady background, movement is created by changing the position of an object across cells.",
+#     "The spatial orientation of the figure changes across cells.",
+#     "The figure is completed across cells by adding missing elements.",
+#     "Quantitative increase or decrease in the number of features from cell to cell.",
+#     "The shape of the figures changes across cells.",
+#     "The shading of the figures changes across cells.",
+#     "The size of the figures changes across cells.",
+#     "The margins of the figures change across cells.",
+#     "The third cell contains only the elements that appear in both the first and second cells.",
+#     "The third cell contains all elements appearing in the first and second cells.",
+#     "The third cell contains elements present in one cell but not the other."
+#   )
+# )
+# 
+# rules_table %>%
+#   kable(
+#     format = "html",
+#     col.names = c("Category", "Rule name", "Definition"),
+#     escape = FALSE,
+#     align = c("l", "l", "l"), 
+#     full_width = TRUE
+#   ) 
+
+library(knitr)
+library(kableExtra)
+library(dplyr)
+
+rules_table <- tibble::tribble(
+  ~Category, ~Rule, ~Definition,
+  "Visuospatial", "Completion", "Identification of the missing portion of a figure",
+  "Visuospatial", "Orientation", "Manipulation of spatial orientation",
+  "Visuospatial", "Shape", "Manipulation of shape",
+  "Visuospatial", "Filling", "Manipulation of filling",
+  "Visuospatial", "Size", "Manipulation of size",
+  "Pre-inference", "Object Addition", "Overlapping objects present in different cells",
+  "Pre-inference", "Object Subtraction", "Deleting objects present in different cells",
+  "Logic", "AND", "The third cell is obtained from the intersection of the first two",
+  "Logic", "OR", "The third cell is obtained from the union of the first two",
+  "Logic", "XOR", "The third cell is obtained from the union of the first two but only for the elements that do not repeat",
+  "Directional Logic", "Horizontal", "The rules are applied horizontally",
+  "Directional Logic", "Vertical", "The rules are applied vertically",
+  "Directional Logic", "Diagonal", "The rules are applied simultaneously in vertical and horizontal"
+)
+
+# Simula collapse_rows (reveal-safe)
+rules_table <- rules_table %>%
+  mutate(Category_display = ifelse(duplicated(Category), "", Category)) %>%
+  select(Category_display, Rule, Definition)
+
+rules_table %>%
+  kable(
+    format = "html",
+    col.names = c("Category", "Rule", "Definition"),
+    align = c("l", "l", "l"),
+    escape = FALSE
+  )
+```
+
+
+<br>
+
+<br>
+
+$$\ldots$$
+
 # Response options 
+
+## 
+
+![](img/matrix00.png){.absolute bottom=0 left=0 width="300" height="250"}
+
+
+::::{.columns}
+
+:::{.column width=60%}
+```{r}
+#| out-width: 100%
+#| fig-align: center
+knitr::include_graphics("img/responses-difference.png")
+```
+
+
+:::
+
+:::{.column width=40%}
+
+
+<span style="color:#367259">Correct</span>
+
+<span style="color:#3A5FCD">Repetition</span> <font size="4"> Repetition of a cell adjacent to the blank space</font>
+
+<span style="color:#6A51A3">Incomplete Correlate</span> <font size="4"> Almost the correct response </font>
+
+<span style="color:#C59700">Wrong Principle</span> <font size="4"> The correct response... for other rules! </font>
+
+<span style="color:#B5121B">Difference</span> <font size="4"> Pop-up effect, designed to be out of context </font>
+
+:::
+
+::::
+
+
+
 
 # The mat`R`iks package
 
@@ -39,10 +271,524 @@ It's on CRAN!
 
 ```{r}
 #| eval: false
-
+#| echo: true
 install.packages("matRiks")
 library(matRiks)
 ```
 
+
+<br>
+
 <embed src="matRiks.pdf#page=1"
        width="100%" height="800px">
+       
+
+## Basic functions & workflow
+
+All functions are defined as methods for `S3` classes:
+
+
+`mat_apply()`: Matriks generator, applies transformation rules to generate a matriks
+
+`response_list()`: Response options generator, siven a matriks, generates the associated response list
+
+`draw()`: Draw whatever it is produced by the package
+
+
+```{mermaid, echo=FALSE}
+flowchart LR
+  A[Choose the figures] 
+  B(Choose the rules)
+  C(Choose the directional logic) 
+  A --> D{mat_apply}
+  B --> D
+  C --> D
+  D --> E(matriks)
+  E --> F{response_list}
+  E --> G{draw}
+  F --> G
+  G --> H[Final stimulus]
+```
+
+
+## Available rules {.smaller}
+
+
+:::{.panel-tabset}
+
+## Visuo-spatial rules
+
+:::: {.columns}
+
+:::{.column width=50%}
+
+$$\text{Size}$$
+
+```{r, echo = F, eval = T, out.width="70%"}
+#| fig-align: center
+a = mat_apply(maxi(), hrules = "size")
+
+par(mfrow =c(1, 3) ,
+        mar = c(6,5,5,5))
+
+draw(a$Sq1); draw(a$Sq2); draw(a$Sq3)
+
+```
+
+$$\text{Shape}$$
+```{r, echo = F, eval = T, out.width="70%"}
+#| fig-align: center
+a = mat_apply(cof(s_maxi(), 
+                  square(), 
+                  circle()), hrules = "shape")
+
+par(mfrow =c(1, 3) ,
+        mar = c(6,5,5,5))
+
+draw(a$Sq1); draw(a$Sq2); draw(a$Sq3)
+
+```
+
+:::
+
+:::{.column width=50%}
+
+$$\text{Shade}$$
+
+```{r, echo = F, eval = T, out.width="70%"}
+#| fig-align: center
+a = mat_apply(maxi(), hrules = "shade")
+
+par(mfrow =c(1, 3) ,
+        mar = c(6,5,5,5))
+
+draw(a$Sq1); draw(a$Sq2); draw(a$Sq3)
+
+```
+
+$$\text{Rotate}$$
+
+```{r, echo = F, eval = T, out.width="70%"}
+#| fig-align: center
+a = mat_apply(axe(), hrules = "rotate.inv")
+
+par(mfrow =c(1, 3) ,
+        mar = c(6,5,5,5))
+
+draw(a$Sq1); draw(a$Sq2); draw(a$Sq3)
+
+```
+
+
+
+:::
+
+
+::::
+
+$$\ldots$$
+
+## Logic rules
+
+:::: {.columns}
+
+:::{.column width=50%}
+
+$$\text{AND} \, (\cap)$$
+```{r, echo = F, eval = T, out.width="70%"}
+#| fig-align: center
+size.x = 8 
+size.y = 4 
+pos.x = 0 
+shd = NA 
+lty = 1 
+lwd = 3
+
+par(mfrow =c(1, 3) ,
+        mar = c(6,5,5,5))
+
+a = mat_apply(cof(luck(pos.x = pos.x + size.x, pos.y = pos.x, rot = pi, 
+        size.x = size.x, size.y = size.y, shd = shd, lty = lty, 
+        lwd = lwd), luck(pos.x = pos.x - size.x, pos.y = pos.x, 
+        rot = -pi, size.x = size.x, size.y = size.y, shd = shd, 
+        lty = lty, lwd = lwd), luck(pos.x = pos.x, pos.y = pos.x + 
+        size.x, rot = -pi, size.x = size.y, size.y = size.x, 
+        shd = shd, lty = lty, lwd = lwd), luck(pos.x = pos.x, 
+        pos.y = pos.x - size.x, rot = -pi, size.x = size.y, size.y = size.x, 
+        shd = shd, lty = lty, lwd = lwd)), hrules = "AND")
+
+draw(a$Sq1); draw(a$Sq2); draw(a$Sq3)
+
+```
+
+
+:::
+
+:::{.column width=50%}
+
+$$\text{OR} \, (\cup)$$
+
+```{r, echo = F, eval = T, out.width="70%"}
+#| fig-align: center
+size.x = 8 
+size.y = 4 
+pos.x = 0 
+shd = NA 
+lty = 1 
+lwd = 3
+
+par(mfrow =c(1, 3) ,
+        mar = c(6,5,5,5))
+
+a = mat_apply(cof(luck(pos.x = pos.x + size.x, pos.y = pos.x, rot = pi, 
+        size.x = size.x, size.y = size.y, shd = shd, lty = lty, 
+        lwd = lwd), luck(pos.x = pos.x - size.x, pos.y = pos.x, 
+        rot = -pi, size.x = size.x, size.y = size.y, shd = shd, 
+        lty = lty, lwd = lwd), luck(pos.x = pos.x, pos.y = pos.x + 
+        size.x, rot = -pi, size.x = size.y, size.y = size.x, 
+        shd = shd, lty = lty, lwd = lwd), luck(pos.x = pos.x, 
+        pos.y = pos.x - size.x, rot = -pi, size.x = size.y, size.y = size.x, 
+        shd = shd, lty = lty, lwd = lwd)), hrules = "OR")
+
+draw(a$Sq1); draw(a$Sq2); draw(a$Sq3)
+```
+
+
+
+:::
+
+
+::::
+
+$$\text{XOR} \, (\Delta)$$
+
+```{r}
+#| fig-align: center
+#| out-width: 40%
+size.x = 8 
+size.y = 4 
+pos.x = 0 
+shd = NA 
+lty = 1 
+lwd = 3
+
+par(mfrow =c(1, 3) ,
+        mar = c(6,5,5,5))
+
+a = mat_apply(cof(luck(pos.x = pos.x + size.x, pos.y = pos.x, rot = pi, 
+        size.x = size.x, size.y = size.y, shd = shd, lty = lty, 
+        lwd = lwd), luck(pos.x = pos.x - size.x, pos.y = pos.x, 
+        rot = -pi, size.x = size.x, size.y = size.y, shd = shd, 
+        lty = lty, lwd = lwd), luck(pos.x = pos.x, pos.y = pos.x + 
+        size.x, rot = -pi, size.x = size.y, size.y = size.x, 
+        shd = shd, lty = lty, lwd = lwd), luck(pos.x = pos.x, 
+        pos.y = pos.x - size.x, rot = -pi, size.x = size.y, size.y = size.x, 
+        shd = shd, lty = lty, lwd = lwd)), hrules = "XOR")
+
+draw(a$Sq1); draw(a$Sq2); draw(a$Sq3)
+
+```
+
+
+:::
+
+
+## Available figures 
+
+:::: {.columns}
+
+::: {.column width=33%}
+
+<!-- ### Black figures   -->
+
+<!-- [![](black-figures.png){width=80px}](https://cran.r-project.org/web/packages/matRiks/vignettes/black-figures.html) -->
+
+```{r}
+#| fig-align: center
+#| echo: true
+#| out-width: 30%
+#| fig-cap: " [Black Figures](https://cran.r-project.org/web/packages/matRiks/vignettes/black-figures.html)"
+draw(biscuit())
+```
+
+
+<!-- [![](circle-sections.png){width=80px}]() -->
+
+
+```{r}
+#| fig-align: center
+#| echo: true
+#| out-width: 30%
+#| fig-cap: " [Circle sections](https://cran.r-project.org/web/packages/matRiks/vignettes/circle-sections.html)"
+draw(pacman())
+```
+
+
+<!-- [![](other-figures.png){width=80px}](https://cran.r-project.org/web/packages/matRiks/vignettes/other-figures.html) -->
+
+
+```{r}
+#| fig-align: center
+#| echo: true
+#| out-width: 30%
+#| fig-cap: " [Other figures](https://cran.r-project.org/web/packages/matRiks/vignettes/other-figures.html)"
+draw(malta())
+```
+
+:::
+
+::: {.column width="33%"}
+
+
+<!-- [![](flowers.png){width=80px}](https://cran.r-project.org/web/packages/matRiks/vignettes/flowers-figures.html) -->
+
+```{r}
+#| fig-align: center
+#| echo: true
+#| out-width: 30%
+#| fig-cap: " [Flowers](https://cran.r-project.org/web/packages/matRiks/vignettes/flowers-figures.html)"
+draw(miley())
+```
+
+
+
+<!-- [![](eight-shapes-figures.png){width=80px}](https://cran.r-project.org/web/packages/matRiks/vignettes/eight-shapes-figures.html) -->
+
+```{r}
+#| fig-align: center
+#| echo: true
+#| out-width: 30%
+#| fig-cap: " [Eight-shaped figures](https://cran.r-project.org/web/packages/matRiks/vignettes/eight-shapes-figures.html)"
+draw(horizontal_eight())
+```
+
+:::
+::: {.column width="33%"}
+
+
+<!-- [![](closed-figures.png){width=80px}](https://cran.r-project.org/web/packages/matRiks/vignettes/closed-figures.html) -->
+
+```{r}
+#| fig-align: center
+#| echo: true
+#| out-width: 30%
+#| fig-cap: " [Closed figures](https://cran.r-project.org/web/packages/matRiks/vignettes/closed-figures.html)"
+draw(triangle())
+```
+
+
+<!-- [![](lines.png){width=80px}](https://cran.r-project.org/web/packages/matRiks/vignettes/lines.html) -->
+
+
+```{r}
+#| fig-align: center
+#| echo: true
+#| out-width: 30%
+#| fig-cap: " [Lines](https://cran.r-project.org/web/packages/matRiks/vignettes/lines.html)"
+draw(X())
+```
+
+
+:::
+::::
+
+```{r}
+#| eval: false
+#| echo: true
+vignette("flowers-figures", package = "matRiks")
+```
+
+
+## User-defined figures `cof()`
+
+```{r}
+#| echo: true
+#| fig-align: center
+myfigure <- cof(luck(),  # <1>
+                size(biscuit(), 2), # <2> 
+                dot(shd="white"),  # <3>
+                dice(),           # <4>
+                name = "figure")  # <5>
+draw(myfigure)  # <6>
+```
+
+1. `luck()` figure
+2. `biscuit()` figure reduced in size with function `size()`
+3. `dot()` figure with modified shade 
+4. `dice()` figure 
+5. name of the new generated figure
+6. draw the figure
+
+
+
+## Response options
+
+```{r}
+#| echo: false
+#| warning: false
+mymat = mat_apply(pacman(), hrules = "rotate")
+dist = response_list(mymat)
+mynames = names(dist)
+```
+
+
+| Category | Count | Items |
+|--------|-------|-------|
+| <span style="color:#367259">Correct</span> | $\times 1$ | ``r mynames[1]`` |
+| <span style="color:#3A5FCD">Repetition</span> | $\times 3$ | ``r mynames[2]``, `r mynames[3]`, `r mynames[4]` |
+| <span style="color:#6A51A3">Incomplete Correlate</span> | $\times 4$ | ``r mynames[8]``, ``r mynames[9]``, ``r mynames[10]``, ``r mynames[11]`` |
+| <span style="color:#C59700">Wrong Principle</span> | $\times 2$ | ``r mynames[5]``, ``r mynames[6]`` |
+| <span style="color:#B5121B">Difference</span> | $\times 1$ | ``r mynames[7]`` |
+       
+
+
+:::{.callout-warning}
+
+The generation of the distractors is constrained to the type of matriks and the rules applied for its generation!
+
+:::
+## Matriks generator: `mat_apply()` 
+
+```{r}
+#| echo: true
+#| eval: false
+mat <- mat_apply(pacman(),   # <1>
+                 hrules = "rotate", vrules = "rotate") # <2>
+draw(mat,    # <3>
+     hide = TRUE) # <3>
+```
+
+```{r}
+#| out-width: 40%
+#| fig-align: center
+mat <- mat_apply(pacman(), hrules = "rotate", vrules = "rotate")
+draw(mat, hide = TRUE)
+```
+
+1. Figure `pacman()`
+2. Rotation rules applied both horizontally and vertically
+3. Draw the matriks with `hide = TRUE` hiding the final cell of the matriks
+
+## Response generator: `response_list()`
+
+```{r}
+#| echo: true
+#| eval: false
+
+responses <- response_list(mat)  # <1>
+draw(responses,  # <2>
+     main = TRUE) # <3>
+```
+
+
+```{r}
+#| warning: true
+responses <- response_list(mat)
+draw(responses, 
+     main = TRUE)
+```
+
+1. The response options generator "eats" the matriks
+2. The response options are drawn
+3. The argument `main = TRUE` print the original label of the specific response option
+
+## Layering matriks: `com()`
+```{r}
+#| echo: true
+#| eval: false
+mat <- mat_apply(pacman(), hrules = "rotate", vrules = "rotate") # <1>
+mat1 <- mat_apply(dot(), hrules = "shade") # <2>
+themat <- com(mat, mat1) # <3>
+draw(themat, hide = TRUE) # <4>
+```
+
+```{r}
+#| out-width: 40%
+#| fig-align: center
+mat <- mat_apply(pacman(), hrules = "rotate", vrules = "rotate")
+mat1 <- mat_apply(dot(), hrules = "shade") 
+themat <- com(mat, mat1)
+draw(themat, hide = TRUE)
+```
+
+1. Generate the background matriks
+2. Generate the foreground matriks
+3. Generate the final matriks by concatenating the two matriks
+4. Draw & hide
+
+## 
+
+```{r}
+#| echo: true
+#| eval: false
+
+responses <- response_list(themat)  
+draw(responses,  
+     main = TRUE) # <3>
+```
+
+
+```{r}
+#| warning: true
+responses <- response_list(themat)
+draw(responses, 
+     main = TRUE)
+```
+
+
+## Select & Rename
+
+
+```{r}
+#| echo: true
+#| eval: false
+
+draw(responses,  
+     distractors = c("correct", "r_left", "r_top", "wp_copy",   # <1>
+                                 "difference", "ic_neg", "ic_inc"),  # <1>
+     labels = LETTERS[1:7], # <2> 
+     main = TRUE) # <3> 
+```
+
+
+```{r}
+#| warning: true
+draw(responses,  
+     distractors = c("correct", "r_left", "r_top", "wp_copy", 
+                                 "difference", "ic_neg", "ic_inc"),
+     labels = LETTERS[1:7],
+     main = TRUE) 
+```
+
+1. Select specific stimuli
+2. Assign labels
+3. Print the new labels 
+
+## 
+
+
+```{r}
+#| fig-align: center
+#| out-width: 70%
+#| echo: false
+draw(themat, hide = TRUE)
+```
+
+```{r}
+#| fig-align: center
+#| echo: false
+#| out-width: 60%
+draw(responses,  
+     distractors = c("correct", "r_left", "r_top", "wp_copy", 
+                                 "difference", "ic_neg", "ic_inc"),
+     labels = LETTERS[1:7],
+     main = TRUE) 
+```
+
+# Resources 
+
+##
+
+![](img/paper.png)
+
+       
