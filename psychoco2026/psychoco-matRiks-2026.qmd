@@ -789,6 +789,6 @@ draw(responses,
 
 ##
 
-![](img/paper.png)
+[![](img/paper.png)](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1698995/full)
 
        
