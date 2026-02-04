@@ -7,11 +7,12 @@ format:
     theme: mytheme.scss
     logo: "www/psicostat.jpg"
     footer: "Psychoco 2026 - Padova"
+    highlight-style: tango
     transition: none
     transition-speed: slow
     background-transition: fade
     slide-number: c/t
-    show-slide-number: print
+    show-slide-number: all
     self-contained: true
 # server: shiny
 editor_options: 
@@ -306,14 +307,14 @@ $$	\text{IIF}_{i}(\theta) = \dfrac{a_i^2[P(\theta)-c_i]^2[e_i - P(\theta)]^2}{(e
 ```{r}
 #| echo: false
 
-allitems = rbind(item2, item4)
+allitems = rbind(item4, item2)
 rownames(allitems) = paste("Item", 1:nrow(allitems))
 
 iifs = item_info(allitems, theta)
 iifs$theta = theta
 myiifs = pivot_longer(iifs, cols = !theta)
 ggplot(myiifs, 
-       aes(x = theta, y = value, color = name, group = name)) + geom_line(linewidth = 1.2) + theme_bw() +    scale_color_manual(values = c(myitem, myasy))+ geom_line(linewidth=1.2) + 
+       aes(x = theta, y = value, color = name, group = name)) + geom_line(linewidth = 1.2) + theme_bw() +    scale_color_manual(values = c(myasy, myitem))+ geom_line(linewidth=1.2) + 
   xlab(expression(theta)) + 
   ylab(expression(paste(IIF[i], "(", theta, ")"))) +
   theme(legend.position = c(.10, .8), 
@@ -547,7 +548,6 @@ kable(data, "html", escape = F,
   row_spec(7, extra_css = "border-bottom: 1px solid;") %>%
   column_spec(1:8, border_left = TRUE, border_right = TRUE)
 ```
-</font>
 
 :::{.callout-note}
 
@@ -559,9 +559,8 @@ kable(data, "html", escape = F,
 
 - $\ldots$
 
-
-
 :::
+</font>
 
 :::
 
@@ -614,12 +613,27 @@ kable(ipar, algn ="cccc",
 dh = start
 rownames(dh) = 1:10
 highlight_cells <- c(1:10) 
-kable(dh, format = "html", escape = F, align = "ccc", caption = "IIF Matrix \\(k = 0\\)") %>%
+kable(dh, 
+      row.names = TRUE,
+      format = "html", 
+      escape = F, 
+      align = "ccc", 
+      caption = "IIF Matrix \\(k = 0\\)",
+      col.names = c("-2", "0", "2")) %>%
   kable_styling(full_width = F, font_size = 20) %>%
-  column_spec(1:3, border_left = TRUE, border_right = TRUE) %>%
-  row_spec(highlight_cells, extra_css = "background-color: #F0B97A;") %>% 
+  
+  # Evidenzia le righe (come fai già)
+  row_spec(highlight_cells, extra_css = "background-color: #F0B97A;") %>%
+  
+  # Ripristina la prima colonna (nomi riga)
+  column_spec(1, 
+              bold = TRUE,
+              extra_css = "background-color: #FFF0CC !important;
+                           border: none !important;") %>%
+  
+  column_spec(2:4, border_left = TRUE, border_right = TRUE) %>%
   row_spec(1, extra_css = "border-top: 1px solid;") %>% 
-    row_spec(10, extra_css = "border-bottom: 1px solid;")
+  row_spec(10, extra_css = "border-bottom: 1px solid;")
 ```
 
 <font size="4">
@@ -637,12 +651,24 @@ $Q^0 = \emptyset$
 ```{r}
 mymax = which(dh == max(dh), arr.ind = T)
 dh[mymax[1], mymax[2]] = cell_spec(dh[mymax[1], mymax[2]], "html", bold = T)
-kable(dh, format = "html", escape = F, align = "ccc", caption = "IIF Matrix \\(k = 0\\)") %>%
+kable(dh, 
+      format = "html", escape = F, align = "ccc", 
+        caption = "IIF Matrix \\(k = 0\\)", 
+      col.names = c("-2", "0", "2"), 
+      row.names = T) %>%
   kable_styling(full_width = F, font_size = 20) %>%
-  column_spec(1:3, border_left = TRUE, border_right = TRUE) %>%
-  row_spec(highlight_cells, extra_css = "background-color: #F0B97A;") %>% 
+  row_spec(highlight_cells, extra_css = "background-color: #F0B97A;") %>%
+  
+  # Ripristina la prima colonna (nomi riga)
+  column_spec(1, 
+              bold = TRUE,
+              extra_css = "background-color: #FFF0CC !important;
+                           border: none !important;") %>%
+  
+  column_spec(2:4, border_left = TRUE, border_right = TRUE) %>%
   row_spec(1, extra_css = "border-top: 1px solid;") %>% 
-    row_spec(10, extra_css = "border-bottom: 1px solid;")
+  row_spec(10, extra_css = "border-bottom: 1px solid;")
+
 disph = start
 dh = start
 dh[mymax[1], ] = NA
@@ -656,7 +682,7 @@ $\mathit{iif}_{\text{max}}^0=\displaystyle \max_{j \in J\setminus S^0, \, n  \in
 	
 $S^{1} = S^0 \cup \{8\}$ = \{8\}
 
-$Q^{1} = Q^0 \cup \{3\}$ = \{2\} 
+$Q^{1} = Q^0 \cup \{2\}$ = \{2\} 
 
 </font>
 
@@ -669,13 +695,23 @@ $Q^{1} = Q^0 \cup \{3\}$ = \{2\}
 mymax = which(dh == max(dh, na.rm=T), arr.ind = T)
 disph[mymax[1], mymax[2]] = cell_spec(dh[mymax[1], mymax[2]], "html", bold = T)
 highlight_cells = highlight_cells[-oldmax[1]]
-kable(disph, format = "html", escape = F, align = "ccc", caption = "IIF Matrix \\(k = 1\\)") %>%
+kable(disph, 
+      format = "html", escape = F, align = "ccc", 
+      caption = "IIF Matrix \\(k = 1\\)", 
+      col.names = c("-2", "0", "2"), 
+      row.names = T)  %>%
   kable_styling(full_width = F, font_size = 20) %>%
-  column_spec(1:3, border_left = TRUE, border_right = TRUE) %>%
-  column_spec(oldmax[2], background = "white") %>% 
-  row_spec(highlight_cells, extra_css = "background-color: #F0B97A;") %>% 
+  row_spec(highlight_cells, extra_css = "background-color: #F0B97A;") %>%
+  
+  # Ripristina la prima colonna (nomi riga)
+  column_spec(1, 
+              bold = TRUE,
+              extra_css = "background-color:#FFF0CC !important;
+                           border: none !important;") %>%
+  
+  column_spec(2:4, border_left = TRUE, border_right = TRUE) %>%
   row_spec(1, extra_css = "border-top: 1px solid;") %>% 
-    row_spec(10, extra_css = "border-bottom: 1px solid;")
+  row_spec(10, extra_css = "border-bottom: 1px solid;")
 disph = start
 dh = start
 dh[c(mymax[1], oldmax[1]), ] = NA
@@ -702,13 +738,23 @@ $Q^{2} = Q^1 \cup \{3\} = \{2, 3\}$
 mymax = which(dh == max(dh, na.rm=T), arr.ind = T)
 disph[mymax[1], mymax[3]] = cell_spec(dh[mymax[1], mymax[3]], "html", bold = T)
 highlight_cells = highlight_cells[-oldmax[1]]
-kable(disph, format = "html", escape = F, align = "ccc", caption = "IIF Matrix \\(k = 2\\)") %>%
+kable(disph, 
+      format = "html", escape = F, align = "ccc", 
+      caption = "IIF Matrix \\(k = 2\\)", 
+      row.names = TRUE, 
+      col.names = c("-2", "0", "2"))  %>%
   kable_styling(full_width = F, font_size = 20) %>%
-  column_spec(1:3, border_left = TRUE, border_right = TRUE) %>%
-  column_spec(c(2,oldmax[2]), background = "white") %>% 
-  row_spec(highlight_cells, extra_css = "background-color: #F0B97A;") %>% 
+  row_spec(highlight_cells, extra_css = "background-color: #F0B97A;") %>%
+  
+  # Ripristina la prima colonna (nomi riga)
+  column_spec(1, 
+              bold = TRUE,
+              extra_css = "background-color: #FFF0CC !important;
+                           border: none !important;") %>%
+  
+  column_spec(2:4, border_left = TRUE, border_right = TRUE) %>%
   row_spec(1, extra_css = "border-top: 1px solid;") %>% 
-    row_spec(10, extra_css = "border-bottom: 1px solid;")
+  row_spec(10, extra_css = "border-bottom: 1px solid;")
 disph = start
 ```
 
@@ -732,12 +778,21 @@ disph[c(6), c(3)] = cell_spec(disph[c(6), c(3)], "html", bold = T)
 disph[c(9), c(1)] = cell_spec(disph[c(9), c(1)], "html", bold = T)
 
 
-kable(disph, format = "html", escape = F, align = "ccc", caption = "End") %>%
+kable(disph, 
+      format = "html", 
+      escape = F, align = "ccc", 
+      caption = "End", 
+      row.names = TRUE,
+      col.names = c("-2","0", "2")) %>%
   kable_styling(full_width = F, font_size = 20) %>%
-  column_spec(1:3, border_left = TRUE, border_right = TRUE) %>%
-  column_spec(1:3, background = "white") %>% 
+ column_spec(1, 
+              bold = TRUE,
+              extra_css = "background-color:  #FFF0CC  !important;
+                           border: none !important;") %>%
+  
+  column_spec(2:4, border_left = TRUE, border_right = TRUE) %>%
   row_spec(1, extra_css = "border-top: 1px solid;") %>% 
-    row_spec(10, extra_css = "border-bottom: 1px solid;")
+  row_spec(10, extra_css = "border-bottom: 1px solid;")
 ```
 
 <font size="4">			
@@ -837,14 +892,14 @@ item_par = data.frame(b = runif(n, -3,3),          # <1>
 theta = rnorm(1000) # <2> 
 stf = bench(item_par, theta = theta, num_item = 3)# <3>
 summary(stf)         # <4>
-plot(stf) + theme_bw() # <5>
+plot(stf)  # <5>
 ```
 
 1. Define the item parameters in the item bank
 2. Random values for the latent trait 
 3. Generate the STF with the benchmark procedure
 4. Summary of the obtained STF
-5. Plot the resulting TIF (as compared to the TIF obatined from $B$)
+5. Plot the resulting TIF (as compared to the TIF obtained from $B$)
 
 . . . 
 
@@ -927,7 +982,6 @@ ggplot(x,
 
 ```{r}
 #| echo: true
-#| code-line-numbers: "|1|2|3|4"
 targetsC = define_targets(theta, 
                           num_targets = 3, 
                           method = "clusters")
@@ -960,7 +1014,6 @@ ggplot(x,
 
 ```{r}
 #| echo: true
-#| code-line-numbers: "|1|2|3|4"
 targetsE = define_targets(theta, 
                           num_targets = 3, 
                           method = "equal")
@@ -1036,6 +1089,8 @@ plot(stf, show_targets = F, show_both = F)
 
 ## 
 
+<br>
+
 :::{.callout-note}
 ## In summary
 
@@ -1045,6 +1100,7 @@ Still affected by the quality of the items in the item bank, but the $\theta$-ta
 
 :::
 
+<br>
 
 :::{.callout-warning}
 ## Drawbacks
