@@ -5,7 +5,7 @@ institute: "$^1$ University of Trento, Rovereto (IT), $^2$ Psicostat, Padova (IT
 format: 
   revealjs: 
     theme: matrikstheme.scss
-    logo: "www/psicostat.jpg"
+    logo: "img/ab.jpeg"
     footer: "Psychoco 2026 - Padova"
     transition: none
     transition-speed: slow
