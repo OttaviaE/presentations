@@ -1,7 +1,7 @@
 ---
 title: "Development of Short Test Forms within Item Response Theory: The `shortIRT` Package"
-author: "**Livio Finos**$^{1,2}$, Ottavia M. Epifania$^{2, 3}$, Pasquale Anselmi$^{1}$, Egidio Robusto$^{1}$"
-institute: "$^1$ University of Padova, Padova $^2$ Psicostat, Padova $^3$  University of Trento, Rovereto"
+author: "Ottavia M. Epifania$^{1, 2}$, **Livio Finos**$^{1,3}$, Pasquale Anselmi$^{3}$, Egidio Robusto$^{3}$"
+institute: "$^1$ Psicostat, Padova $^2$ University of Trento, Rovereto  $^3$  University of Padova, Padova"
 format: 
   revealjs: 
     theme: mytheme.scss
