@@ -387,7 +387,7 @@ The *IIF*s of the items of item bank are sorted in decreasing order:
 	
 $$\mathit{iif} = (\displaystyle \max_{1 < i < B} IIF_i(\theta), \ldots \displaystyle, \min_{1 < i < B} IIF_i(\theta)) $$
 
-Items with IIFs from 1 to $N$, $N < ||B||$, are selected to be included in the short test form
+Items with IIFs from 1 to $N$, $N < |B|$, are selected to be included in the short test form
 </font>
 :::
 
@@ -431,7 +431,7 @@ kable(data, "html", digits = 2,  col.names = c("Item", "\\( b_i \\)", "\\( a_i \
 
 
 ::: {.fragment .fade-in-then-out}
-Aim: STF with $N = 3$ items from a full-length test of 10 items: 
+Aim: STF with $N = 3$ items from $B$ ($|B| = 10$): 
 
 ```{r}
 x = data[order(data$iif, decreasing = TRUE), ]
@@ -710,6 +710,8 @@ kable(disph,
                            border: none !important;") %>%
   
   column_spec(2:4, border_left = TRUE, border_right = TRUE) %>%
+  column_spec(3, 
+              extra_css = "background-color:#FFF0CC !important;") %>%
   row_spec(1, extra_css = "border-top: 1px solid;") %>% 
   row_spec(10, extra_css = "border-bottom: 1px solid;")
 disph = start
@@ -754,7 +756,9 @@ kable(disph,
   
   column_spec(2:4, border_left = TRUE, border_right = TRUE) %>%
   row_spec(1, extra_css = "border-top: 1px solid;") %>% 
-  row_spec(10, extra_css = "border-bottom: 1px solid;")
+  row_spec(10, extra_css = "border-bottom: 1px solid;")%>%
+  column_spec(3:4, 
+              extra_css = "background-color:#FFF0CC !important;")
 disph = start
 ```
 
@@ -1094,10 +1098,9 @@ plot(stf, show_targets = F, show_both = F)
 :::{.callout-note}
 ## In summary
 
-The benchmark procedure highly relies on the quality of the items on the item, does not allow for any control on the latent trait levels for which the information needs to be maximized
+The benchmark procedure highly relies on the quality of the items in the item bank, does not allow for any control on the latent trait levels for which the information needs to be maximized
 
-Still affected by the quality of the items in the item bank, but the $\theta$-target procedure "forces" the item selection to consdier the entire latent trait or to focus on specific levels
-
+Still affected by the quality of the items in the item bank, the $\theta$-target procedure "forces" the item selection to consider specific latent trait levels
 :::
 
 <br>
@@ -1108,5 +1111,14 @@ Still affected by the quality of the items in the item bank, but the $\theta$-ta
 The number of $\theta$-targets defines the number of items in the STF: The higher the measurement granularity and the higher the number of $\theta$-targets, the higher the number of items included in the STF
 
 The quality of the item bank is crucial, regardless of the procedure
+
+:::
+
+
+. . . 
+
+:::{.r-stack}
+
+For any further question, please ask Ottavia: `ottavia.epifania@unitn.it`
 
 :::
