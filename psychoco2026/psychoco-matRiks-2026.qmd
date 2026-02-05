@@ -1,7 +1,7 @@
 ---
 title: "Automatic Generation of Rule-Based Raven-Like Stimuli: The mat`R`iks Package"
-author: "**Ottavia Epifania**, A. Brancaccio, P. Anselmi, D. de Chiusole"
-institute: "$^1$ University of Padova, Padova $^2$ Psicostat, Padova $^3$  University of Trento, Rovereto"
+author: "**Ottavia Epifania**$^{1,2}$, A. Brancaccio$^{3}$, P. Anselmi$^{4}$, D. de Chiusole$^{4}$"
+institute: "$^1$ University of Trento, Rovereto (IT), $^2$ Psicostat, Padova (IT), $^3$ $3$ University of East Anglia, Norwich (UK) $4$ University of Padova, Padova (IT)"
 format: 
   revealjs: 
     theme: matrikstheme.scss
@@ -789,6 +789,25 @@ draw(responses,
 
 ##
 
-[![](img/paper.png)](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1698995/full)
+<br>
 
-       
+<br>
+
+::::{.columns}
+
+:::{.column width="50%"}
+![[10.3389/fpsyg.2025.1698995](https://doi.org/10.3389/fpsyg.2025.1698995)](img/paper.png){width="500" height="300"}
+:::
+
+:::{.column width="50%"}
+![[10.1177/0146621625137482](https://journals.sagepub.com/doi/10.1177/01466216251374826)](img/applied.png){width="500" height="300"}
+:::
+
+::::
+
+
+
+
+
+
+
