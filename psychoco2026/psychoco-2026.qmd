@@ -397,7 +397,7 @@ Items with IIFs from 1 to $N$, $N < |B|$, are selected to be included in the sho
 :::{.r-stack}
 
 ::: {.fragment .fade-in-then-out}
-Aim: STF with $N = 3$ items from a full-length test of 10 items: 
+Aim: STF with $N = 3$ items from $B$ ($|B| = 10$): 
 
 ```{r}
 library(knitr)
@@ -448,7 +448,7 @@ kable(x, "html", digits = 2, row.names = FALSE,  col.names = c("Item", "\\( b_i 
 
 ::: {.fragment .fade-in-then-out}
 
-Aim: STF with $N = 3$ items from a full-length test of 10 items: 
+Aim: STF with $N = 3$ items from $B$ ($|B| = 10$): 
 
 ```{r}
 kable(x, row.names = F, "html", digits = 2,  col.names = c("Item", "\\( b_i \\)", "\\( a_i \\)", "\\( c_i \\)", "\\( e_i \\)", "\\( \\max \\text{IIF}_i(\\theta) \\)"))  %>%
