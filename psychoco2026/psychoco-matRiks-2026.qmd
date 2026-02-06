@@ -48,7 +48,7 @@ library(knitr)
 ```
 
 
-# Raven-like matrices
+# Raven-like stimuli
 
 ## An example 
 
@@ -290,7 +290,7 @@ All functions are defined as methods for `S3` classes:
 
 `mat_apply()`: Matriks generator, applies transformation rules to generate a matriks
 
-`response_list()`: Response options generator, siven a matriks, generates the associated response list
+`response_list()`: Response options generator, given a matriks, generates the associated response list
 
 `draw()`: Draw whatever it is produced by the package
 
