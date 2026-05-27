@@ -1123,11 +1123,11 @@ A well-defined theory is 90% of the job
 Practical skills will eventually come...and if they don't, it's fine! You'll never walk alone
 
 
-. . . 
-
 > L’idea che la soluzione venga dall’intuizione del matto genio per natura e non dal lavoro complicato e ***collettivo*** di centinaia, migliaia di scienziati, questa idea è un’idea falsa e sbagliata, che toglie valore all’Università [...]
 >
 > Matteo Bordone, Febbraio 2025
+
+You can find the slides on my personal page [https://ottaviae.github.io/presentations](https://ottaviae.github.io/presentations)
 
 ## What is Psicostat?
 
