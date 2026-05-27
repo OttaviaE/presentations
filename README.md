@@ -10,6 +10,8 @@ I am a proud member of the Core Team of [Psicostat](https://psicostat.dpss.psy.u
 
 ### 2026
 
+PARS 2026: [slides](psicostatMeeting/pars2026.html)
+
 Psychoco @ Padova: 
   - The shortIRT package [slides](psychoco2026/psychoco-2026.html)
   - The matRiks package [slides](psychoco2026/psychoco-matRiks-2026.html)
