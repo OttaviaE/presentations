@@ -1,0 +1,1183 @@
+---
+title: "There's nothing more practical than a good theory"
+subtitle: "From theoretical conceptualization to practical implementation of item response theory algorithms for item selection"
+author: "**Ottavia M. Epifania**$^{1, 2}$"
+institute: "$^1$ Psicostat, $^2$ University of Trento, Rovereto"
+date: today
+format: 
+  revealjs: 
+    theme: mytheme.scss
+    logo: "www/psicostat.jpg"
+    footer: "PARS 2026"
+    highlight-style: tango
+    transition: none
+    transition-speed: slow
+    background-transition: fade
+    slide-number: c/t
+    show-slide-number: all
+    self-contained: true
+    callout-icon: false
+# server: shiny
+editor_options: 
+  chunk_output_type: console
+code-annotations: hover
+---
+
+
+```{css include = FALSE}
+.reveal .slide-logo {
+  height: 100px !important;
+  width: 100px !important;
+  max-width: unset !important;
+  max-height: unset !important;
+}
+.title-hex{
+  height: 10px;
+  align: right;
+  float: right;
+}
+.h3 {
+text-align: center;
+}
+```
+
+
+
+```{r, setup, include=FALSE}
+library(knitr)
+library(shiny)
+library(ggplot2)
+library(tidyverse)
+library(emoji)
+library(shortIRT)
+library(wesanderson)
+hexes <- function(x) {
+  x <- rev(sort(x))
+  markup <- function(img) glue::glue('<img width="10%" height="10%" src="www/{img}.jpg" class="title-hex">')
+  res <- purrr::map_chr(x, markup)
+  paste0(res, collapse = "")
+}
+IRT <- function(theta, a = 1, b = 0, c = 0,e = 1) {
+  y <- c + (e - c) * exp(a * (theta - b)) / (1 + exp(a * (theta - b)))
+  return(y)
+}
+# calcola l'IIF per un item specifico
+  i_info <- function(b, a=1,c=0, e= 1,  theta = seq(-5,5,length.out=1000)){
+      P = IRT(theta, b = b, a = a, e = e, c=c)
+      Q = 1 - P 
+      # Ii = (a^2)*(Q/P)*((P-c)/(e-c))^2
+      # Ii = (a^2)*(Q*P/e^2)
+      num = (a^2)*((P-c)^2)*((e-P)^2)
+      den = ((e-c)^2)*P*Q
+      Ii = num/den
+      return(Ii)
+    }
+    
+    item_info <- function(ipar, 
+                          theta = seq(-5,5,length.out=1000)){
+      item <- NULL
+      for(i in 1:nrow(ipar)){
+        item[[i]] <- i_info(b = ipar[i, "b"],a = ipar[i, "a"], c = ipar[i, "c"], e = ipar[i, "e"], theta = theta)
+      }
+      item = data.frame(do.call("cbind", item))
+      colnames(item) = rownames(ipar)
+      return(item)
+    }
+set.seed(999)
+
+
+# load("H:/Il mio Drive/frank-unitn/sim-psychometrika.RData")
+```
+
+
+```{r}
+#| eval: false
+
+library(magick)
+setwd("psicostatMeeting/img")
+files = dir()
+names = gsub(".pdf", ".png", files)
+for (i in 1:length(files)) {
+  img <- image_read_pdf(files[i], density = 300)
+image_write(img, names[i])
+}
+
+```
+
+
+# Test development from validated item banks 
+
+## Why Automatically Generated Tests Matter
+
+
+Large validated item banks ($B$) and automatic selection of items to obtain $Q \subseteq B$
+
+. . . 
+
+::: {.callout-tip}
+## IRT models for the win
+		
+Being focused on the item information and on the ability of each item to measure different levels of the latent trait, IRT models provide an ideal framework to find $$Q \subseteq B$$
+:::
+
+. . . 
+
+**Automated Test Assembly**
+
+::::{.columns}
+
+:::{.column width=50%}
+
+:::{.callout-caution}
+## Maximin algorithms
+
+**Max**mize the **min**imun measurement precision in specific regions of interest for the assessment provided by test $Q$
+
+:::
+
+:::
+
+:::{.column width=50%}
+
+:::{.callout-warning}
+## Minimax algorithms
+
+**Min**imize the **max**imum distance from a target function that describes the desired measurement precision of test $Q$ 
+
+:::
+:::
+
+::::
+
+# Item Response Theory
+
+## Item Response Function
+
+According to the 4-Parameter Logistic Model: 
+
+$$P(x_{pi}=1|\theta_p, b_i, a_i, c_i, e_i) = P(\theta) = c_i + (e_i-c_i)\dfrac{\exp[a_i(\theta_p - b_i)]}{1 + \exp[a_i(\theta_p - b_i)]}$$
+```{r}
+#| echo: false
+#| column: screen-inset-shaded
+#| layout-ncol: 2
+#| warning: false
+#| fig-cap: "Item Characteristics Curves (ICCs)"
+#| fig-subcap: 
+#|   - "$c_3 = c_4 = 0$, $e_3 = e_4 = 1$"
+#|   - "$b_1 = b_2 = 0$,  $a_1 = a_2 = 1.2$"
+library(tidyverse)
+library(RColorBrewer)
+myasy = brewer.pal(8, "Paired")[1:2]
+myitem = brewer.pal(8, "Paired")[7:8]
+theta = seq(-3,3, length.out=1000)
+item4 = data.frame(b = c(0,0), 
+                   a = c(1.2, 1.2),
+                   c = c(.10, .20), 
+                   e = c(.98, .95))
+myp4 = data.frame(mpirt(item4, theta))
+colnames(myp4) = c("Item1", "Item2")
+myp4$theta = theta
+p1 = IRT(0, b =0, a = 1.2, c=.10, e = .98)
+p2 = IRT(0, b =item4$b[2], a = item4$a[2], 
+         c=item4$c[2], e = item4$e[2])
+myp4 = pivot_longer(myp4, cols = !theta)
+item2 = data.frame(b = c(0,1), 
+                   a = c(1, 1.7),
+                   c = c(0, 0), 
+                   e = c(1, 1))
+myp2 = data.frame(mpirt(item2, theta))
+colnames(myp2) = c("Item3", "Item4")
+myp2$theta = theta
+p3 = IRT(0, b =0, a = 1, c=0, e = 1)
+p4 = IRT(0, b =item2$b[2], a = item2$a[2], 
+         c=item2$c[2], e = item2$e[2])
+myp2 = pivot_longer(myp2, cols = !theta)
+
+
+ggplot(myp2, 
+       aes(x = theta, y = value, col = name)) + geom_line(linewidth = 1.2) + 
+  scale_x_continuous(expand = c(0, 0)) +
+  scale_y_continuous(expand = c(0, 0))+ 
+    coord_cartesian(
+    xlim = c(-3, 3),
+    ylim = c(0, 1),
+    expand = FALSE
+  ) +theme_bw() + scale_color_manual(values = myitem) + geom_segment(aes(x=0, y = 0.0001, 
+                   xend = 0, 
+                   yend = p3), color = myitem[1], linewidth = 1.2, linetype = 3) + 
+  geom_segment(aes(x=-3,y = p3, 
+                   xend= 0, yend = p3 ),color = myitem[1], 
+               linewidth = 1.2, linetype = 3) +
+  geom_segment(aes(x=1, y = 0.0001, 
+                   xend = 1, 
+                   yend = p4), color = myitem[2], linewidth = 1.2, linetype = 3) + 
+  geom_segment(aes(x=-3,y = p4, 
+                   xend= 1, yend = p4 ),color = myitem[2], 
+               linewidth = 1.2, linetype = 3) + 
+ylab(expression(paste("P(", x[p][i],  "= 1|", theta[p], ", ", b[i], ", ", a[i], ", ", c[i], ", ", d[i],  ")"))) + 
+  xlab(expression(theta)) + 
+ annotate(
+  "text",
+  x = -1.5, y = 0.15,
+  label = as.character(expression(paste(b[1], " = ", 0))),
+  parse = TRUE,
+  hjust = 0,
+  size = 14,
+  color = myitem[1]
+) +
+   annotate(
+  "text",
+  x = -0.7, y = 0.50,
+  label = as.character(expression(paste(a[1], " = ", 1))),
+  parse = TRUE,
+  hjust = 0,
+  size = 14,
+  color = myitem[1]
+) + 
+   annotate(
+  "text",
+  x = 1.5, y = 0.15,
+  label = as.character(expression(paste(b[2], " = ", 1))),
+  parse = TRUE,
+  hjust = 0,
+  size = 14,
+  color = myitem[2]
+) +
+   annotate(
+  "text",
+  x = 1.5, y = 0.50,
+  label = as.character(expression(paste(a[2], " = ", 1.7))),
+  parse = TRUE,
+  hjust = 0,
+  size = 14,
+  color = myitem[2]
+) + 
+  theme(legend.position = "none", 
+        axis.text = element_text(size = 24), 
+        axis.title = element_text(size = 26))
+
+
+
+ggplot(myp4, 
+       aes(x = theta, y = value, col = name)) + geom_line(linewidth = 1.2) + 
+  scale_x_continuous(expand = c(0, 0)) +
+  scale_y_continuous(expand = c(0, 0))+ 
+    coord_cartesian(
+    xlim = c(-3, 3),
+    ylim = c(0, 1),
+    expand = FALSE
+  ) +theme_bw() + scale_color_manual(values = myasy) + geom_segment(aes(x=0, y = 0.0001, 
+                   xend = 0, 
+                   yend = p1), color = myasy[1], linewidth = 1.2, linetype = 3) + 
+  geom_segment(aes(x=-3,y = p1, 
+                   xend= 0, yend = p1 ),color = myasy[1], 
+               linewidth = 1.2, linetype = 3) +
+  geom_segment(aes(x=0, y = 0.0001, 
+                   xend = 0, 
+                   yend = p2), color = myasy[2], linewidth = 1.2, linetype = 3) + 
+  geom_segment(aes(x=-3,y = p2, 
+                   xend= 0, yend = p2 ),color = myasy[2], 
+               linewidth = 1.2, linetype = 3) + 
+ylab(expression(paste("P(", x[p][i],  "= 1|", theta[p], ", ", b[i], ", ", a[i], ", ", c[i], ", ", d[i],  ")"))) + 
+  xlab(expression(theta)) + 
+ annotate(
+  "text",
+  x = -1.5, y = 0.15,
+  label = as.character(expression(paste(c[3], " = ", 0.10))),
+  parse = TRUE,
+  hjust = 0,
+  size = 14,
+  color = myasy[1]
+) +
+   annotate(
+  "text",
+  x = .7, y = 0.90,
+  label = as.character(expression(paste(e[3], " = ", 0.98))),
+  parse = TRUE,
+  hjust = 0,
+  size = 14,
+  color = myasy[1]
+) + 
+   annotate(
+  "text",
+  x = -2.5, y = 0.35,
+  label = as.character(expression(paste(c[4], " = ", 0.20))),
+  parse = TRUE,
+  hjust = 0,
+  size = 14,
+  color = myasy[2]
+) +
+   annotate(
+  "text",
+  x = 1.5, y = 0.80,
+  label = as.character(expression(paste(e[4], " = ", 0.95))),
+  parse = TRUE,
+  hjust = 0,
+  size = 14,
+  color = myasy[2]
+) + 
+  theme(legend.position = "none", 
+        axis.text = element_text(size = 24), 
+        axis.title = element_text(size = 26))
+
+
+
+```
+
+
+## Information Functions
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+$$	\text{IIF}_{i}(\theta) = \dfrac{a_i^2[P(\theta)-c_i]^2[e_i - P(\theta)]^2}{(e_{i}-c_i)^2 P(\theta)[1-P(\theta)]}$$
+
+<br>
+
+
+
+```{r}
+#| echo: false
+
+allitems = rbind(item4, item2)
+rownames(allitems) = paste("Item", nrow(allitems):1)
+
+iifs = item_info(allitems, theta)
+iifs$theta = theta
+myiifs = pivot_longer(iifs, cols = !theta)
+ggplot(myiifs, 
+       aes(x = theta, y = value, color = name, group = name)) + geom_line(linewidth = 1.2) + theme_bw() +    scale_color_manual(values = c(myasy, myitem))+ geom_line(linewidth=1.2) + 
+  xlab(expression(theta)) + 
+  ylab(expression(paste(IIF[i], "(", theta, ")"))) +
+  theme(legend.position = c(.10, .8), 
+        legend.title = element_blank(), 
+        axis.title = element_text(size = 26), 
+        axis.text = element_text(size = 24), 
+        legend.text = element_text(size = 20)) + 
+  scale_x_continuous(expand = c(0, 0)) +
+  scale_y_continuous(expand = c(0, 0))+ 
+    coord_cartesian(
+    xlim = c(-3, 3),
+    ylim = c(0, 1.5),
+    expand = FALSE
+  ) 
+
+iifs = item_info(allitems, theta)
+mytif = data.frame(theta = theta, 
+                   name = "TIF", 
+                   value = rowSums(iifs) )
+
+myall = rbind(mytif, myiifs)
+
+```
+
+
+:::
+
+:::{.column width="50%"}
+
+$$TIF(\theta) = \sum_{i = 1}^{|B|} IIF_i(\theta)$$ <font size="4"> ($B$: Set of items in a test ($|X|$ cardinality of set $X$)) </font>
+
+
+```{r}
+#| echo: false
+ggplot(myall, 
+       aes(x = theta, y = value, color = name, linetype = name)) + 
+  geom_line(linewidth = 1.2) + scale_color_manual(values = c(rep("gray69", 4), "black")) + scale_linetype_manual(values = c(rep(3,4), 1)) +  scale_x_continuous(expand = c(0, 0)) +
+  scale_y_continuous(expand = c(0, 0))+ 
+    coord_cartesian(
+    xlim = c(-3, 3),
+    ylim = c(0, 1.5),
+    expand = FALSE
+  )  + 
+  xlab(expression(theta)) + 
+  ylab(expression(paste(TIF, "(", theta, ")"))) + 
+  theme_bw() + 
+  theme(legend.position = "none", 
+        axis.text = element_text(size = 24), 
+        axis.title = element_text(size = 26))
+
+```
+
+
+:::
+::::
+
+# Procedures for automatic test development
+
+## Benchmark Procedure 
+
+:::: {.columns}
+
+:::{.column width=50%}
+<font size="5">
+Create a short test form composed of $N$ items from an item bank $B$ $\rightarrow$  Select the $N$ items with the highest *IIF*s: 
+	
+
+The *IIF*s of the items of item bank are sorted in decreasing order: 
+		
+	
+$$\mathit{iif} = (\displaystyle \max_{1 < i < B} IIF_i(\theta), \ldots \displaystyle, \min_{1 < i < B} IIF_i(\theta)) $$
+
+Items with IIFs from 1 to $N$, $N < |B|$, are selected to be included in the short test form
+</font>
+:::
+
+:::{.column width=50%}
+
+
+:::{.r-stack}
+
+::: {.fragment .fade-in-then-out}
+Aim: Test with $N = 3$ items from $B$ ($|B| = 10$): 
+
+```{r}
+library(knitr)
+library(kableExtra)
+
+set.seed(666)
+n = 10
+item_par = data.frame(b = runif(n, -3,3), 
+                      a = runif(n, .7, 1.5), 
+                      c = runif(n, 0, .10), 
+                      e = 1)
+
+# Create the data frame
+data = apply(item_par,2, round, digits = 2 )
+data = data.frame(cbind(1:10), data)
+colnames(data)[1] = "Item"
+
+myiif = item_info(item_par)
+data$iif = round(apply(myiif,2, max), 2)
+
+# Generate the table with kable
+kable(data, "html", digits = 2,  col.names = c("Item", "\\( b_i \\)", "\\( a_i \\)", "\\( c_i \\)", "\\( e_i \\)", "\\( \\max \\text{IIF}_i(\\theta) \\)"))  %>%
+  kable_styling(full_width = F, font_size = 24) %>%
+  row_spec(0, bold = TRUE) %>% 
+      row_spec(0, extra_css = "border-top: 1px solid;") %>%
+      row_spec(0, extra_css = "border-bottom: 1px solid;") %>%
+  row_spec(1, extra_css = "border-top: 1px solid;") %>%
+    row_spec(10, extra_css = "border-bottom: 1px solid;") 
+```
+:::
+
+
+::: {.fragment .fade-in-then-out}
+Aim: Test with $N = 3$ items from $B$ ($|B| = 10$): 
+
+```{r}
+x = data[order(data$iif, decreasing = TRUE), ]
+kable(x, "html", digits = 2, row.names = FALSE,  col.names = c("Item", "\\( b_i \\)", "\\( a_i \\)", "\\( c_i \\)", "\\( e_i \\)", "\\( \\max \\text{IIF}_i(\\theta) \\)")) %>%
+  kable_styling(full_width = F, font_size = 24) %>%
+  row_spec(0, bold = TRUE) %>% 
+    row_spec(0, extra_css = "border-top: 1px solid;") %>%
+      row_spec(0, extra_css = "border-bottom: 1px solid;") %>%
+  row_spec(1, extra_css = "border-top: 1px solid;") %>%
+    row_spec(10, extra_css = "border-bottom: 1px solid;") 
+```
+:::
+
+
+::: {.fragment .fade-in-then-out}
+
+Aim: Test with $N = 3$ items from $B$ ($|B| = 10$): 
+
+```{r}
+kable(x, row.names = F, "html", digits = 2,  col.names = c("Item", "\\( b_i \\)", "\\( a_i \\)", "\\( c_i \\)", "\\( e_i \\)", "\\( \\max \\text{IIF}_i(\\theta) \\)"))  %>%
+  kable_styling(full_width = F, font_size = 24) %>%
+  row_spec(0, bold = TRUE) %>%
+ row_spec(0, extra_css = "border-top: 1px solid;") %>%
+      row_spec(0, extra_css = "border-bottom: 1px solid;") %>%
+  row_spec(1, extra_css = "border-top: 1px solid;") %>%
+    row_spec(10, extra_css = "border-bottom: 1px solid;")  %>%
+    row_spec(c(1, 2, 3), background = "#F0B97A")
+```
+:::
+
+:::
+:::
+
+::::
+
+
+## 
+
+:::{.callout-warning}
+
+## Warning!
+
+```{r}
+
+my = x[1:3, 2:5]
+myex = item_info(my, theta)
+mytifex = data.frame(theta = theta, tif = rowSums(myex))
+
+ggplot(mytifex, 
+       aes(x = theta, y = tif)) + geom_line(linewidth = 1.2) +
+  ylab(expression(paste("TIF(", theta, ")"))) + 
+  xlab(expression(theta)) + theme_bw() +
+  theme(axis.title = element_text(size = 24), 
+        axis.text = element_text(size = 22))
+
+```
+:::
+
+
+
+## $\theta$-target procedure 
+
+:::: {.columns}
+
+:::{.column width=50%}
+<font size="4">
+$k = 0, \ldots, K$: Scalar denoting the iterations of the procedures ($K = N-1$)
+
+$S^k \subseteq \{1, \ldots, J\}$: Set of items selected to be included in the short test form up to iteration $k$
+
+$Q^k \subseteq \{1, \ldots, N\}$: Set of $\theta'$s satisfied up to iteration $k$;
+
+
+At $k=0$: $S^0 = \emptyset$, $Q^0 = \emptyset$
+
+The procedure cycles steps 1 to 3 until $k = K$:
+	
+
+1. Select $iif_{in}^k = \displaystyle  \max_{i \in B\setminus S^k, \, n  \in N \setminus Q^k} \mathbf{IIF}(i,n)$;
+2. Compute $S^{k+1} = S^k \cup \{i\}$ as the set of item selected at $k$; 
+3. Compute $Q^{k+1} = Q^k \cup \{n\}$ as the set of $\theta'$s satisfied at $k$; 
+	
+At iteration $K$, $|Q^{K + 1}| = N$ and   $|S^{K + 1}| = N$ 
+</font>
+:::
+
+:::{.column width=50%}
+<font size="4">
+```{r}
+library(knitr)
+library(kableExtra)
+
+# Crea il data frame con 8 colonne
+data <- data.frame(
+  item = c("", "1", "2", "\\(\\vdots\\)", "\\(i\\)", "\\(\\vdots\\)", "\\(B\\)"),
+  col1 = c("", "\\(\\mathit{iif}_{11}\\)", "\\(\\mathit{iif}_{21}\\)", "", "\\(\\ldots\\)", "", ""),
+  col2 = c("", "\\(iif_{12}\\)", "\\(\\mathit{iif}_{22}\\)", "", "\\(\\ldots\\)", "", ""),
+  col3 = c("", "", "", "", "\\(\\ldots\\)", "", ""),
+  col4 = c("", "\\(\\vdots\\)", "\\(\\vdots\\)", "\\(\\vdots\\)", "\\(\\mathit{iif}_{in}\\)", "\\(\\vdots\\)", "\\(\\vdots\\)"),
+  col5 = c("", "", "", "", "\\(\\ldots\\)", "", ""),
+  col6 = c("", "", "", "", "\\(\\ldots\\)", "", ""),
+  col7 = c("", "", "", "", "\\(\\ldots\\)", "", "\\(\\mathit{iif}_{BN}\\)"),
+  stringsAsFactors = FALSE
+)
+
+# Genera la tabella con 8 colonne e 8 colnames
+kable(data, "html", escape = F, 
+      col.names = c("", "1", "2", "\\(\\ldots\\)", "n", "\\(\\ldots\\)", "", "N")) %>%
+  kable_styling(full_width = F, font_size = 24) %>%
+  add_header_above(c(" " = 2, "\\(\\theta'\\)" = 6)) %>%
+  row_spec(0, extra_css = "border-bottom: 1px solid;") %>%
+  row_spec(3, extra_css = "border-top: 1px solid;") %>%
+  row_spec(7, extra_css = "border-top: 1px solid;") %>%
+  row_spec(7, extra_css = "border-bottom: 1px solid;") %>%
+  column_spec(1:8, border_left = TRUE, border_right = TRUE)
+```
+
+:::{.callout-note}
+
+## $\theta$-target definition 
+
+- Intervals of different width defined on the latent trait 
+
+- Cut-off based tests 
+
+- $\ldots$
+
+:::
+</font>
+
+:::
+
+::::
+
+
+## 
+
+
+
+```{r}
+#| echo: false
+library(shortIRT)
+
+targets = c(-2, 0, 2)
+
+test = theta_target(targets, item_par)
+start = t(item_info(item_par, targets))
+start=apply(start,2, round, digits=2)
+ipar = apply(item_par, 2, round, digits =2)
+ipar = cbind(1:10, ipar)
+colnames(ipar)[1] = "Item"
+```
+
+
+:::: {.columns}
+
+:::{.column width=40%}
+<font size = "5">
+Aim: Develop a Test of $N=3$ items from $B$ with $\theta' = (-2,0,2)$: 
+
+```{r}
+#| echo: false
+
+kable(ipar, algn ="cccc", 
+      caption = "Item bank B") %>%
+  kable_styling(full_width = F)
+
+```
+</font>
+:::
+
+:::{.column witdh=60%}
+:::{.r-stack}
+
+:::{.fragment .fade-in-then-out}
+```{r}
+#| echo: false
+
+dh = start
+rownames(dh) = 1:10
+highlight_cells <- c(1:10) 
+kable(dh, 
+      row.names = TRUE,
+      format = "html", 
+      escape = F, 
+      align = "ccc", 
+      caption = "IIF Matrix \\(k = 0\\)",
+      col.names = c("-2", "0", "2")) %>%
+  kable_styling(full_width = F, font_size = 20) %>%
+  
+  # Evidenzia le righe (come fai già)
+  row_spec(highlight_cells, extra_css = "background-color: #F0B97A;") %>%
+  
+  # Ripristina la prima colonna (nomi riga)
+  column_spec(1, 
+              bold = TRUE,
+              extra_css = "background-color: #FFF0CC !important;
+                           border: none !important;") %>%
+  
+  column_spec(2:4, border_left = TRUE, border_right = TRUE) %>%
+  row_spec(1, extra_css = "border-top: 1px solid;") %>% 
+  row_spec(10, extra_css = "border-bottom: 1px solid;")
+```
+
+<font size="4">
+	
+$S^0 = \emptyset$
+
+$Q^0 = \emptyset$
+
+</font>
+:::
+
+
+:::{.fragment .fade-in-then-out}
+
+```{r}
+mymax = which(dh == max(dh), arr.ind = T)
+dh[mymax[1], mymax[2]] = cell_spec(dh[mymax[1], mymax[2]], "html", bold = T)
+kable(dh, 
+      format = "html", escape = F, align = "ccc", 
+        caption = "IIF Matrix \\(k = 0\\)", 
+      col.names = c("-2", "0", "2"), 
+      row.names = T) %>%
+  kable_styling(full_width = F, font_size = 20) %>%
+  row_spec(highlight_cells, extra_css = "background-color: #F0B97A;") %>%
+  
+  # Ripristina la prima colonna (nomi riga)
+  column_spec(1, 
+              bold = TRUE,
+              extra_css = "background-color: #FFF0CC !important;
+                           border: none !important;") %>%
+  
+  column_spec(2:4, border_left = TRUE, border_right = TRUE) %>%
+  row_spec(1, extra_css = "border-top: 1px solid;") %>% 
+  row_spec(10, extra_css = "border-bottom: 1px solid;")
+
+disph = start
+dh = start
+dh[mymax[1], ] = NA
+dh[, mymax[2]] = NA
+oldmax = mymax
+```
+
+<font size="4">
+
+$\mathit{iif}_{\text{max}}^0=\displaystyle \max_{j \in J\setminus S^0, \, n  \in N \setminus Q^0} \mathbf{IIF}= \mathbf{IIF}(8,2) = 0.44$
+	
+$S^{1} = S^0 \cup \{8\}$ = \{8\}
+
+$Q^{1} = Q^0 \cup \{2\}$ = \{2\} 
+
+</font>
+
+
+:::
+
+:::{.fragment .fade-in-then-out}
+
+```{r}
+mymax = which(dh == max(dh, na.rm=T), arr.ind = T)
+disph[mymax[1], mymax[2]] = cell_spec(dh[mymax[1], mymax[2]], "html", bold = T)
+highlight_cells = highlight_cells[-oldmax[1]]
+kable(disph, 
+      format = "html", escape = F, align = "ccc", 
+      caption = "IIF Matrix \\(k = 1\\)", 
+      col.names = c("-2", "0", "2"), 
+      row.names = T)  %>%
+  kable_styling(full_width = F, font_size = 20) %>%
+  row_spec(highlight_cells, extra_css = "background-color: #F0B97A;") %>%
+  
+  # Ripristina la prima colonna (nomi riga)
+  column_spec(1, 
+              bold = TRUE,
+              extra_css = "background-color:#FFF0CC !important;
+                           border: none !important;") %>%
+  
+  column_spec(2:4, border_left = TRUE, border_right = TRUE) %>%
+  column_spec(3, 
+              extra_css = "background-color:#FFF0CC !important;") %>%
+  row_spec(1, extra_css = "border-top: 1px solid;") %>% 
+  row_spec(10, extra_css = "border-bottom: 1px solid;")
+disph = start
+dh = start
+dh[c(mymax[1], oldmax[1]), ] = NA
+dh[, c(mymax[2], oldmax[2])] = NA
+oldmax = mymax
+```
+
+
+<font size="4">
+
+$\mathit{iif}_{max}^1=\displaystyle \max_{j \in J\setminus S^1, \, n  \in N \setminus Q^1}  \mathbf{IIF} = \mathbf{IIF}(6,3)= 0.38$
+
+$S^{2} = S^1 \cup \{6\} = \{8, 6\}$
+
+$Q^{2} = Q^1 \cup \{3\} = \{2, 3\}$
+
+</font>
+
+:::
+
+:::{.fragment .fade-in-then-out}
+
+```{r}
+mymax = which(dh == max(dh, na.rm=T), arr.ind = T)
+disph[mymax[1], mymax[3]] = cell_spec(dh[mymax[1], mymax[3]], "html", bold = T)
+highlight_cells = highlight_cells[-oldmax[1]]
+kable(disph, 
+      format = "html", escape = F, align = "ccc", 
+      caption = "IIF Matrix \\(k = 2\\)", 
+      row.names = TRUE, 
+      col.names = c("-2", "0", "2"))  %>%
+  kable_styling(full_width = F, font_size = 20) %>%
+  row_spec(highlight_cells, extra_css = "background-color: #F0B97A;") %>%
+  
+  # Ripristina la prima colonna (nomi riga)
+  column_spec(1, 
+              bold = TRUE,
+              extra_css = "background-color: #FFF0CC !important;
+                           border: none !important;") %>%
+  
+  column_spec(2:4, border_left = TRUE, border_right = TRUE) %>%
+  row_spec(1, extra_css = "border-top: 1px solid;") %>% 
+  row_spec(10, extra_css = "border-bottom: 1px solid;")%>%
+  column_spec(3:4, 
+              extra_css = "background-color:#FFF0CC !important;")
+disph = start
+```
+
+<font size="4">
+$\mathit{iif}_{max}^2=\displaystyle \max_{j \in J\setminus S^1, \, n  \in N \setminus Q^1}  \mathbf{IIF} = \mathbf{IIF}(9,1)= 0.21$
+
+$S^{3} = S^2 \cup \{9\} = \{8, 6, 9\}$
+
+$Q^{3} = Q^2 \cup \{1\} = \{2,3, 1\}$
+
+</font>
+
+:::
+
+
+:::{.fragment .fade-in-then-out}
+
+```{r}
+disph[c(8), c(2)] = cell_spec(disph[c(8), c(2)], "html", bold = T)
+disph[c(6), c(3)] = cell_spec(disph[c(6), c(3)], "html", bold = T)
+disph[c(9), c(1)] = cell_spec(disph[c(9), c(1)], "html", bold = T)
+
+
+kable(disph, 
+      format = "html", 
+      escape = F, align = "ccc", 
+      caption = "End", 
+      row.names = TRUE,
+      col.names = c("-2","0", "2")) %>%
+  kable_styling(full_width = F, font_size = 20) %>%
+ column_spec(1, 
+              bold = TRUE,
+              extra_css = "background-color:  #FFF0CC  !important;
+                           border: none !important;") %>%
+  
+  column_spec(2:4, border_left = TRUE, border_right = TRUE) %>%
+  row_spec(1, extra_css = "border-top: 1px solid;") %>% 
+  row_spec(10, extra_css = "border-bottom: 1px solid;")
+```
+
+<font size="4">			
+$|S^3| = 3$, $|Q^3| = 3$, $K = 2$ $\rightarrow$ `end`
+</font>
+
+:::
+:::
+:::
+
+::::
+:::
+
+## 
+
+::: {.callout-tip}
+
+```{r}
+
+myttarget = item_par[c(8,6,9),]
+myextt = item_info(myttarget, theta)
+mytifextt = data.frame(theta = theta, tif = rowSums(myextt))
+
+ggplot(mytifextt, 
+       aes(x = theta, y = tif)) + geom_line(linewidth = 1.2) +
+  ylab(expression(paste("TIF(", theta, ")"))) + 
+  xlab(expression(theta)) + theme_bw() +
+  theme(axis.title = element_text(size = 24), 
+        axis.text = element_text(size = 22))
+
+```
+
+:::
+
+
+
+
+# The `shortIRT` package
+
+
+## 
+
+It's on CRAN! 
+
+```{r}
+#| eval: false
+#| echo: true
+install.packages("shortIRT")
+library(shortIRT)
+```
+
+
+<br>
+
+<embed src="shortIRT.pdf#page=1"
+       width="100%" height="800px">
+
+
+## `bench()` {auto-animate="true"}
+
+    bench(item_par, iifs = NULL, theta = NULL, num_item = NULL)
+
+
+```{r}
+#| echo: true
+
+set.seed(1312)
+n = 10 
+item_par = data.frame(b = runif(n, -3,3),          # <1>
+                      a = runif(n, .7, 1.5),       # <1>
+                      c = runif(n, 0, .10),        # <1>
+                      e = 1)                       # <1>
+theta = rnorm(1000) # <2> 
+test = bench(item_par, theta = theta, num_item = 3)# <3>
+```
+
+1. Define the item parameters in the item bank
+2. Random values for the latent trait 
+3. Generate the test with the benchmark procedure
+
+## `bench()` 
+
+    bench(item_par, iifs = NULL, theta = NULL, num_item = NULL)
+
+
+```{r}
+#| echo: true
+#| eval: false
+#| results: false
+set.seed(1312)
+n = 10 
+item_par = data.frame(b = runif(n, -3,3),          # <1>
+                      a = runif(n, .7, 1.5),       # <1>
+                      c = runif(n, 0, .10),        # <1>
+                      e = 1)                       # <1>
+theta = rnorm(1000) # <2> 
+test = bench(item_par, theta = theta, num_item = 3)# <3>
+summary(test)         # <4>
+plot(test)  # <5>
+```
+
+1. Define the item parameters in the item bank
+2. Random values for the latent trait 
+3. Generate the test with the benchmark procedure
+4. Summary of the obtained test
+5. Plot the resulting TIF (as compared to the TIF obtained from $B$)
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+#| echo: false
+set.seed(1312)
+n = 10 
+item_par = data.frame(b = runif(n, -3,3),          
+                      a = runif(n, .7, 1.5),       
+                      c = runif(n, 0, .10),        
+                      e = 1)                       
+theta = rnorm(1000) 
+test = bench(item_par, theta = theta, num_item = 3) 
+
+```
+
+
+```{r}
+#| echo: true
+summary(test)         
+
+```
+
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| echo: true
+plot(test)
+```
+
+
+:::
+
+::::
+
+
+## `define_targets()`
+
+    define_targets(theta, num_targets = NULL, method = c("equal", "clusters"))
+
+
+:::: {.columns}
+
+:::{.column width="50%"}
+
+```{r}
+#| echo: false
+
+x = data.frame(x = theta)
+x$dx = dnorm(x$x)
+myc = data.frame(define_targets(x$x, num_targets = 3, method = "clusters"))
+colnames(myc) = "centers"
+myc$height = .10
+mycenters  = data.frame(define_targets(x$x, 
+                          num_targets = 3, 
+                          method = "equal"))
+colnames(mycenters) = "centers"
+mycenters$height = .10
+
+ggplot(x, 
+       aes(x, y = dx)) + geom_line(linewidth = 1.2) + 
+  geom_point(data = myc, 
+             aes(x = centers, y = height, color = rownames(myc), 
+                 shape = rownames(myc)), 
+             size = 4) + 
+  theme_bw()+ 
+  xlab(expression(theta)) + 
+  ylab("Density") + 
+  theme(legend.position = "none", 
+        axis.text = element_text(size=22), 
+        axis.title = element_text(size=24))
+
+```
+
+```{r}
+#| echo: true
+targetsC = define_targets(theta, 
+                          num_targets = 3, 
+                          method = "clusters")
+targetsC
+```
+
+
+:::
+
+
+:::{.column width="50%"}
+
+
+```{r}
+#| echo: false
+
+ggplot(x, 
+       aes(x, y = dx)) + geom_line(linewidth = 1.2) + 
+  geom_point(data = mycenters, 
+             aes(x = centers, y = height, color = rownames(mycenters), 
+                 shape = rownames(mycenters)), 
+             size = 4) + 
+  theme_bw()+ 
+  xlab(expression(theta)) + 
+  ylab("Density") + 
+  theme(legend.position = "none", 
+        axis.text = element_text(size=22), 
+        axis.title = element_text(size=24))
+```
+
+```{r}
+#| echo: true
+targetsE = define_targets(theta, 
+                          num_targets = 3, 
+                          method = "equal")
+targetsE
+```
+
+
+:::
+
+
+::::
+
+
+## `theta_target()`
+
+    theta_target(targets, item_par)
+    
+:::: {.columns}
+
+:::{.column width=50%}
+```{r}
+#| echo: true
+
+testC = theta_target(targetsC, item_par)
+summary(testC)
+plot(testC, show_both = F)
+```
+
+:::
+
+
+:::{.column width=50%}
+```{r}
+#| echo: true
+
+testE = theta_target(targetsE, item_par)
+summary(testE)
+plot(testE, show_both = F)
+```
+
+:::
+
+::::
+
+
+
+## Additional functions
+
+| Function        | Description                                              |
+|-----------------|-----------------------------------------------------------|
+| `IRT()`         | Compute expected probability for a single item            |
+| `mpirt()`       | Compute expected probability for multiple items           |
+| `obsirt()`      | Simulate responses according to IRT probabilities         |
+| `irt_estimate()`| Estimate of theta                                         |
+| `item_info()`   | Item Information Functions (multiple items, IIFs)         |
+| `tif()`         | Test Information Function (TIF)                            |
+
+
+& the methods defined for the `S3` classes
+
+
+# Final remarks 
+
+## Thinking before anything
+
+
+Without the theoretical foundations, this work would not have been possible :) 
+
+
+A well-defined theory is 90% of the job
+
+
+Practical skills will eventually come...and if they don't, it's fine! You'll never walk alone
+
+
+. . . 
+
+> L’idea che la soluzione venga dall’intuizione del matto genio per natura e non dal lavoro complicato e ***collettivo*** di centinaia, migliaia di scienziati, questa idea è un’idea falsa e sbagliata, che toglie valore all’Università [...]
+>
+> Matteo Bordone, Febbraio 2025
+
+## What is Psicostat?
+
+<br>
+
+![](img/chi_siamo_mod.png){fig-align="center" height="500px"}
+
+## Activities and Website
+
+:::{.smaller}
+- We meet twice a month on Zoom  
+- Each meeting lasts one hour and includes one presentation  
+- A lot of space is reserved for discussion (*the heart of Psicostat*)  
+- Topics: innovative statistical methods in Psychology, theoretical tutorials, projects, experimental designs, reflections on research, and societal impact  
+- **Anyone** is welcome to attend and present!  
+- **Omnia sunt communia!** – All materials are shared, presenters can be contacted for info or collaborations  
+- Presentations can serve as informal oral pre-registrations  
+- International mailing list with ~**300** members  
+- **Stay tuned!** [https://psicostat.dpss.psy.unipd.it/pages/meetings.html](https://psicostat.dpss.psy.unipd.it/pages/meetings.html)
+:::
+
+<center>
+[https://psicostat.dpss.psy.unipd.it](https://psicostat.dpss.psy.unipd.it)
+</center>
+
+## The Core Team
+
+::: {layout-nrow=3}
+![Gianmarco Altoè](img/altoe.png){height="100px"}
+
+![Massimiliano Pastore](img/pastore.png){ height="100px"}
+
+![Livio Finos](img/finos.png){fig-align="center" height="100px"}
+
+![Giulia Calignano](img/calignano.png){fig-align="center" height="100px"}
+
+![Ottavia Epifania](img/epifania.png){fig-align="center" height="100px"}
+
+![Filippo Gambarota](img/gambarota.jpg){fig-align="center" height="100px"}
+
+![Enrico Toffalini](img/toffalini.png){fig-align="center" height="100px"}
+
+![Luca Menghini](img/menghini.png){fig-align="center" height="100px"}
+
+![Ambra Perugini](img/perugini.png){fig-align="center" height="100px"}
+
+![Margherita Calderan](img/calderan.png){fig-align="center" height="100px"}
+
+![Marco Tullio Liuzza](img/liuzza.png){fig-align="center" height="100px"}
+
+![Tommaso Feraco](img/feraco.png){fig-align="center" height="100px"}
+:::
+
